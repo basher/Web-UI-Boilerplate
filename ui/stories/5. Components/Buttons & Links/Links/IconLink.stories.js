@@ -20,7 +20,7 @@ export default {
         iconRef: {
             control: {
                 type: 'select',
-                options: ['chevron-down', 'chevron-left', 'chevron-right', 'chevron-up'],
+                options: ['down', 'left', 'right', 'up'],
             },
         },
     },
@@ -43,6 +43,6 @@ export const IconLink = (args) => `
 </a>
 `
 IconLink.args = {
-    iconRef: 'chevron-down',
+    iconRef: 'down',
 }
 IconLink.storyName = 'Icon'

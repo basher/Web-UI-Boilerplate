@@ -20,7 +20,7 @@ export default {
         iconRef: {
             control: {
                 type: 'select',
-                options: ['chevron-down', 'chevron-left', 'chevron-right', 'chevron-up', 'close'],
+                options: ['down', 'left', 'right', 'up', 'close'],
             },
         },
         disabled: { control: 'boolean' },
@@ -45,6 +45,6 @@ export const IconButton = (args) => `
 </button>
 `
 IconButton.args = {
-    iconRef: 'chevron-down',
+    iconRef: 'down',
 }
 IconButton.storyName = 'Icon'

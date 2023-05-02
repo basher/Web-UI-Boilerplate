@@ -31,58 +31,133 @@ const style = `
 export const Icons = (args) => `
 ${style}
 <div class="grid">
-<svg
-    role="img"
-    focusable="false"
-    class="icon icon--${args.iconSize}"
->
-    <title>chevron down</title>
-    <use href="/sprite.svg#chevron-down" />
-</svg>
 
-<svg
-    role="img"
-    focusable="false"
-    class="icon icon--${args.iconSize}"
->
-    <title>chevron left</title>
-    <use href="/sprite.svg#chevron-left" />
-</svg>
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>search</title>
+        <use href="/sprite.svg#search" />
+    </svg>
 
-<svg
-    role="img"
-    focusable="false"
-    class="icon icon--${args.iconSize}"
->
-    <title>chevron right</title>
-    <use href="/sprite.svg#chevron-right" />
-</svg>
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>hamburger</title>
+        <use href="/sprite.svg#hamburger" />
+    </svg>
 
-<svg
-    role="img"
-    focusable="false"
-    class="icon icon--${args.iconSize}"
->
-    <title>chevron up</title>
-    <use href="/sprite.svg#chevron-up" />
-</svg>
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>close</title>
+        <use href="/sprite.svg#close" />
+    </svg>
 
-<svg
-    role="img"
-    focusable="false"
-    class="icon icon--${args.iconSize}"
->
-    <title>chevron up</title>
-    <use href="/sprite.svg#close" />
-</svg>
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>plus</title>
+        <use href="/sprite.svg#plus" />
+    </svg>
 
-<svg
-    role="img"
-    focusable="false"
-    class="icon icon--${args.iconSize}"
->
-    <title>chevron up</title>
-    <use href="/sprite.svg#hamburger" />
-</svg>
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>minus</title>
+        <use href="/sprite.svg#minus" />
+    </svg>
+
+
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>right</title>
+        <use href="/sprite.svg#right" />
+    </svg>
+
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>left</title>
+        <use href="/sprite.svg#left" />
+    </svg>
+
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>up</title>
+        <use href="/sprite.svg#up" />
+    </svg>
+
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>down</title>
+        <use href="/sprite.svg#down" />
+    </svg>
+
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>share</title>
+        <use href="/sprite.svg#share" />
+    </svg>
+
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>twitter</title>
+        <use href="/sprite.svg#twitter" />
+    </svg>
+
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>facebook</title>
+        <use href="/sprite.svg#facebook" />
+    </svg>
+
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>linkedin</title>
+        <use href="/sprite.svg#linkedin" />
+    </svg>
+
+    <svg
+        role="img"
+        focusable="false"
+        class="icon icon--${args.iconSize}"
+    >
+        <title>video</title>
+        <use href="/sprite.svg#video" />
+    </svg>
+
 </div>
 `

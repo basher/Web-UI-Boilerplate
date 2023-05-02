@@ -27,7 +27,7 @@ export default {
         iconRef: {
             control: {
                 type: 'select',
-                options: ['chevron-down', 'chevron-left', 'chevron-right', 'chevron-up', 'close'],
+                options: ['down', 'left', 'right', 'up', 'close'],
             },
         },
         swapIconPosition: { control: 'boolean' },
@@ -60,6 +60,6 @@ export const TextAndIconButton = (args) => `
 `
 TextAndIconButton.args = {
     label: 'Text & icon button',
-    iconRef: 'chevron-down',
+    iconRef: 'down',
 }
 TextAndIconButton.storyName = 'Text & Icon'

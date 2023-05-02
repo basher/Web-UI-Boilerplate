@@ -40,8 +40,8 @@ export const AccordionCustomIcon = () => `
                 focusable="false"
                 class="icon"
             >
-                <title>chevron down</title>
-                <use href="/sprite.svg#chevron-down" />
+                <title>open / close</title>
+                <use href="/sprite.svg#down" />
             </svg>
         </summary>
         <div class="accordion__copy">
@@ -57,8 +57,8 @@ export const AccordionCustomIcon = () => `
                 focusable="false"
                 class="icon"
             >
-                <title>chevron down</title>
-                <use href="/sprite.svg#chevron-down" />
+                <title>open / close</title>
+                <use href="/sprite.svg#down" />
             </svg>
         </summary>
         <div class="accordion__copy">
