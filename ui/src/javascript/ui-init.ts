@@ -4,6 +4,7 @@ import { isBrowserSupported } from './utils/browser-support';
 import Message from './modules/message';
 import Modal from './modules/modal';
 import Search from './modules/search';
+import Share from './modules/share';
 import Slider from './modules/slider';
 import Tabs from './modules/tabs';
 import Wysiwyg from './modules/wysiwyg';
@@ -22,6 +23,7 @@ export const uiInit = (): void => {
     Wysiwyg.start();
     Modal.start();
     Search.start();
+    Share.start();
     Slider.start();
     Tabs.start();
 
