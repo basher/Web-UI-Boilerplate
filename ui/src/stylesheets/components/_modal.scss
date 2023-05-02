@@ -1,0 +1,56 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+// Cannot use existing CSS variables defined on :root element for ::backdrop. See https://stackoverflow.com/questions/58818299/css-variables-not-working-in-dialogbackdrop
+::backdrop {
+    --color-backdrop: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+    // Browser already applies "position: fixed" and "width: fit-content".
+    &__dialog {
+        background: $white;
+        margin: auto;
+        padding: $gutter-m;
+
+        &::backdrop {
+            background: var(--color-backdrop);
+        }
+    }
+
+    &__header {
+        background: $white;
+        display: flex;
+        inset-block-start: 0;
+        justify-content: flex-end;
+        padding-block-end: $gutter-m;
+        position: sticky;
+    }
+
+    // "dialogPolyfill" styles.
+    .dialog-polyfill {
+        color: inherit;
+        inset: 0;
+        position: fixed;
+
+        &:not([open]) {
+            display: none;
+        }
+
+        + .backdrop {
+            background: var(--color-backdrop);
+            inset: 0;
+            position: fixed;
+        }
+
+        ~ ._dialog_overlay {
+            inset: 0;
+            position: fixed;
+        }
+    }
+}

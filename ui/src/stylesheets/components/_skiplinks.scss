@@ -1,0 +1,23 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+.skiplinks {
+    position: absolute;
+
+    &__link {
+        @include off-screen;
+        background-color: $brand;
+        color: $white;
+        display: inline-block;
+        left: $gutter-m;
+        min-inline-size: 10vw;
+        padding: $gutter-s;
+        text-align: center;
+        z-index: z('default') + 1;
+    }
+}

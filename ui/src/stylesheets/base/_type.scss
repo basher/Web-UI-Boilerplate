@@ -1,0 +1,97 @@
+/*
+----------------------------------------------------------------------------
+Typography settings.
+----------------------------------------------------------------------------
+*/
+
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use 'colors' as *;
+
+/*
+----------------------------------------------------------------------------
+Font-face rules.
+
+'font-display: swap;' ensures that all text will be rendered with a fallback system font until custom font is ready.
+----------------------------------------------------------------------------
+*/
+@font-face {
+    font-display: swap;
+    font-family: 'robotolight';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/roboto-light/roboto-light.woff') format('woff');
+}
+
+/*
+----------------------------------------------------------------------------
+Typefaces.
+----------------------------------------------------------------------------
+*/
+$font-stack-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif !default;
+$base-font-family: var(--type-font-family), $font-stack-fallback !default;
+$base-font-family-title: var(--type-font-family-title), $font-stack-fallback !default;
+$base-font-family-monospace: Menlo, Monaco, Consolas, 'Droid Sans Mono',
+    'Courier New', monospace !default;
+
+/*
+----------------------------------------------------------------------------
+Base font settings.
+----------------------------------------------------------------------------
+*/
+$base-color: $text-color !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.5 !default;
+
+/*
+----------------------------------------------------------------------------
+Heading settings.
+----------------------------------------------------------------------------
+*/
+$heading-font-family: $base-font-family-title !default;
+$heading-font-weight: 700 !default;
+
+/*
+----------------------------------------------------------------------------
+Font sizes.
+----------------------------------------------------------------------------
+*/
+$base-font-size: 1rem !default;
+$base-font-size-2k: 110% !default; // 2K screens
+$base-font-size-4k: 200% !default; // 4K screens
+
+$font-size-s: 0.875rem !default;
+$font-size-h6: 1rem !default;
+$font-size-h5: 1.125rem !default;
+
+// Sizes below based on perfect 4th scale = 1.333.
+$type-scale: 1.333 !default;
+$font-size-h4: $base-font-size * $type-scale !default;
+$font-size-h3: $font-size-h4 * $type-scale !default;
+$font-size-h2: $font-size-h3 * $type-scale !default;
+$font-size-h1: $font-size-h2 * $type-scale !default;
+$font-size-xl: $font-size-h1 * $type-scale !default;
+
+/*
+----------------------------------------------------------------------------
+Line heights.
+
+Only adjust values when fonts get large.
+----------------------------------------------------------------------------
+*/
+$line-height-h4: 1.3 !default;
+$line-height-h3: 1.3 !default;
+$line-height-h2: 1.2 !default;
+$line-height-h1: 1.2 !default;
+$line-height-xl: 1.2 !default;
+
+/*
+----------------------------------------------------------------------------
+Max line-length (aka measure) to improve readability of editorial content.
+----------------------------------------------------------------------------
+*/
+$max-line-length: var(--type-max-line-length) !default;

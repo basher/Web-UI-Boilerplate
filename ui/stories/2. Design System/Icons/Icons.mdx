@@ -1,0 +1,26 @@
+import { Preview, Story } from '@storybook/addon-docs/blocks';
+
+# Icons
+
+## Accessibility considerations
+
+- Accessible HTML markup for icons is based on these 3 articles:
+    - [Accessible SVG icons with inline sprites](https://www.24a11y.com/2018/accessible-svg-icons-with-inline-sprites/).
+    - [Accessible icon buttons](https://www.sarasoueidan.com/blog/accessible-icon-buttons/).
+    - [Contextually marking up accessible images and SVGs](https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html).
+- The `<title>` element in decorative icons and icon-only buttons provides additional textual context on mouse `:hover`.
+- Ensure `<title>` and/or `<span class="sr-only">` convey the correct meaning of the icon button or link.
+- However, if the icon is purely decorative and there is visible text associated with it, there is no need for `<title>` attribute, and the `role="img"` should be replaced with `aria-hidden="true"`.
+
+## Using external SVG sprites with `<use href=""/>"`
+
+- The SVG sprite needs to be copied from the `src/images` folder to the `public` folder in order for it to be used in Storybook.
+
+## Icon sizes
+
+- The default icon size is `1em` so that it inherits the font size of its parent container.
+- Selecting any of the available size variants will set a specific icon size in `rem` units.
+
+<Preview>
+    <Story id="design-system-icons--icons" />
+</Preview>

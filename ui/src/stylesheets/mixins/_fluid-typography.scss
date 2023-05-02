@@ -1,0 +1,33 @@
+/*
+----------------------------------------------------------------------------
+Uses 'clamp()' to set MIN|MAX values.
+
+See https://piccalil.li/tutorial/fluid-typography-with-css-clamp.
+----------------------------------------------------------------------------
+*/
+
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+
+$min-width: 30rem; // 480px = $bp-xsmall
+$max-width: 90rem; // 1440px = $bp-xlarge
+
+@mixin fluid-type(
+    $min-font: $font-size-s,
+    $max-font: $font-size-h5,
+    $line-height: $base-line-height
+) {
+    // See https://chrisburnell.com/clamp-calculator
+    $x: calc(($max-font - $min-font) / ($max-width - $min-width));
+    $y: $max-font - $max-width * $x;
+    $z: $x * 100;
+
+    $clamp-ideal: calc(#{$y} + #{$z}vw);
+
+    font-size: clamp($min-font, $clamp-ideal, $max-font);
+    line-height: $line-height;
+}

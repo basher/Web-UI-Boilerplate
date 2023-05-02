@@ -1,0 +1,74 @@
+/*
+----------------------------------------------------------------------------
+Config settings.
+----------------------------------------------------------------------------
+*/
+
+/*
+----------------------------------------------------------------------------
+Layout.
+----------------------------------------------------------------------------
+*/
+$site-width: null !default; // Replace NULL to set a max-width for site.
+
+/*
+----------------------------------------------------------------------------
+Spacing and gutters.
+Use for margin|padding, and gap in flex|grid layouts.
+----------------------------------------------------------------------------
+*/
+$gutter-xs: var(--gutter-xs) !default;
+$gutter-s: var(--gutter-s) !default;
+$gutter-m: var(--gutter-m) !default;
+$gutter-l: var(--gutter-l) !default;
+$gutter-xl: var(--gutter-xl) !default;
+
+$gutter-clamp-l: clamp(#{$gutter-m}, 4vw, #{$gutter-l}) !default;
+$gutter-clamp-xl: clamp(#{$gutter-m}, 5vw, #{$gutter-xl}) !default;
+
+/*
+----------------------------------------------------------------------------
+Grid / Flex.
+----------------------------------------------------------------------------
+*/
+$grid-item-min-width: 12.5rem !default; // Stop grid columns getting too small.
+$grid-item-max-width: 17.5rem !default; // Or too large.
+
+/*
+----------------------------------------------------------------------------
+Borders.
+----------------------------------------------------------------------------
+*/
+$border-width-s: 0.0625rem !default;
+$border-width-m: 0.125rem !default;
+$border-width-l: 0.25rem !default;
+
+/*
+----------------------------------------------------------------------------
+Icons.
+----------------------------------------------------------------------------
+*/
+$icon-size-s: 1rem !default;
+$icon-size-m: 1.5rem !default;
+$icon-size-l: 2rem !default;
+
+/*
+----------------------------------------------------------------------------
+Dark mode.
+
+Usage:
+    @if $allow-dark-mode {
+        @media (prefers-color-scheme: dark) {
+            // code...
+        }
+    }
+----------------------------------------------------------------------------
+*/
+$allow-dark-mode: true !default;
+
+/*
+----------------------------------------------------------------------------
+Miscellaneous.
+----------------------------------------------------------------------------
+*/
+$base-image-path: '../images/interface' !default;

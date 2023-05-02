@@ -1,0 +1,65 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+.banner {
+    --banner-gap: var(--gutter-m);
+
+    $this: &;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--banner-gap);
+
+    &--fullwidth {
+        @include bp-medium {
+            display: grid;
+            grid-template-areas: 'fullwidth';
+            place-items: center start;
+
+            > * {
+                grid-area: fullwidth;
+            }
+
+            #{$this}__content {
+                // Example, so text is legible above image.
+                background: #{rgba(var(--color-brand), 0.1)};
+                inline-size: 40vw;
+                margin-inline-start: $gutter-m;
+                padding: $gutter-m;
+            }
+        }
+    }
+
+    &__overlay {
+        @include bp-medium {
+            // Example, so text is legible above image.
+            background: linear-gradient(
+                to right,
+                #{rgba(var(--color-brand), 0.2)},
+                transparent
+            );
+            block-size: 100%;
+            inline-size: 50%;
+        }
+
+        + #{$this}__content {
+            @include bp-medium {
+                background: none;
+            }
+        }
+    }
+
+    // Inline banner uses fullwidth card HTML.
+    &--inline {
+        align-items: center;
+
+        .card__content {
+            --content-min-width: 45%;
+        }
+    }
+}

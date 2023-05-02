@@ -1,0 +1,22 @@
+import { Preview, Story } from '@storybook/addon-docs/blocks';
+
+# Tabs
+
+## Responsive behaviour & accessibility considerations
+- Rather than [Stacking tabs vertically on narrow viewports](https://inclusive-components.design/tabbed-interfaces/#responsivedesign), a simple horizontal overflow scrolling solution is used instead to make tabs responsive.
+- Tabs are fully keyboard accessible:
+    - Use `TAB | SHIFT TAB` key to focus on currently selected tab, and traverse the content inside the tab.
+    - Use `RIGHT` arrow key to focus on next tab.
+    - Use `LEFT` arrow key to focus on previous tab.
+    - Use `HOME | END` key to focus on first or last tab.
+- See the [ARIA tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/).
+
+<Preview>
+    <Story id="components-tabs--tabs" />
+</Preview>
+
+## Vertical tabs
+
+<Preview>
+    <Story id="components-tabs--tabs-vertical" />
+</Preview>

@@ -1,0 +1,154 @@
+/*
+----------------------------------------------------------------------------
+Reset.
+
+See:
+Eric Meyer = https://meyerweb.com/eric/tools/css/reset/
+Andy Bell = https://hankchizljaw.com/wrote/a-modern-css-reset/
+Josh Comeau = https://www.joshwcomeau.com/css/custom-css-reset/
+Kilian Valkhof = https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
+----------------------------------------------------------------------------
+*/
+
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+html {
+    // Remove the automatic text size adjustment that is provided by iOS.
+    text-size-adjust: none;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+html,
+body {
+    // Smooth scrolling IF user doesn't have a preference due to motion sensitivities.
+    @media (prefers-reduced-motion: no-preference) {
+        scroll-behavior: smooth;
+    }
+    background-color: $background-color;
+    color: $base-color;
+    min-block-size: 100vh;
+}
+
+ol[class],
+ul[class] {
+    list-style: none;
+}
+
+ol ol {
+    list-style-type: lower-alpha;
+}
+
+ol ol ol {
+    list-style-type: lower-roman;
+}
+
+ol:not([class]),
+ul:not([class]) {
+    padding-inline-start: $gutter-l;
+}
+
+[type='submit'],
+label {
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    @media (prefers-color-scheme: dark) {
+        opacity: 0.8;
+        transition: opacity 0.5s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+    block-size: auto; // Needed for overriding 'height' attribute in HTML.
+    display: block;
+    max-inline-size: 100%; // Needed for responsive widths.
+}
+
+svg {
+    flex-shrink: 0; // Stop icon shrinking when inside a flex container.
+    max-inline-size: 100%;
+}
+
+input,
+textarea,
+select {
+    color: inherit;
+    vertical-align: middle;
+}
+
+// <a> needs to be included here to remove the default tab focus.
+button,
+a {
+    appearance: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+    > * {
+        pointer-events: none;
+    }
+}
+
+a:not([class]) {
+    color: inherit;
+
+    // No need to set :focus styles as default browser behaviour is not being removed. However, there is a "_focus.scss" mixin to handle :focus styles on links with classes and other interactive elements.
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+sub,
+sup {
+    vertical-align: revert;
+}
+
+iframe {
+    border: 0;
+    display: block;
+    margin: 0 auto;
+    max-inline-size: 100%;
+}
+
+hr {
+    border: $border-width-s solid;
+    margin-block: $gutter-m;
+}
+
+// Remove all animations & transitions for people that prefer not to see them
+@media (prefers-reduced-motion: reduce) {
+    * {
+        /* stylelint-disable declaration-no-important */
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,63 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: $gutter-m;
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: $gutter-xs;
+
+        &:has(:disabled) {
+            .label {
+                cursor: not-allowed;
+                opacity: 0.6;
+            }
+        }
+
+        // Native HTML5 validation.
+        &:has(:valid:required),
+        &:has(:invalid:required:focus) {
+            .label,
+            .checkbox__label,
+            .radio__label {
+                padding-inline-end: $gutter-m;
+                position: relative;
+
+                /* stylelint-disable-next-line max-nesting-depth */
+                &::after {
+                    color: $error;
+                    content: '!';
+                    display: block;
+                    font-size: 1em;
+                    font-weight: bold;
+                    inset-block-start: 0;
+                    inset-inline-end: 0;
+                    position: absolute;
+                }
+            }
+        }
+
+        /* stylelint-disable no-descending-specificity */
+        &:has(:valid:required) {
+            .label,
+            .checkbox__label,
+            .radio__label {
+                /* stylelint-disable-next-line max-nesting-depth */
+                &::after {
+                    color: $success;
+                    content: '✓';
+                }
+            }
+        }
+        /* stylelint-enable no-descending-specificity */
+    }
+}

@@ -1,0 +1,33 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+.wrapper {
+    --wrapper-max-width: 64rem;
+
+    margin-inline: auto;
+    max-inline-size: var(--wrapper-max-width);
+    padding-inline: var(--gutter-m);
+
+    &--s {
+        --wrapper-max-width: 48rem;
+    }
+
+    &--l {
+        --wrapper-max-width: 75rem;
+    }
+
+    &--fullbleed {
+        --wrapper-max-width: 100vw;
+        padding-inline: 0;
+    }
+
+    &--fit-content {
+        --wrapper-max-width: unset;
+        inline-size: fit-content;
+    }
+}

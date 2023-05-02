@@ -1,0 +1,39 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+.message {
+    $this: &;
+
+    align-items: flex-start;
+    border: $border-width-s solid;
+    display: flex;
+    padding: $gutter-m;
+
+    .stack > * {
+        max-inline-size: none;
+    }
+
+    &--success {
+        background: #{rgba(var(--color-accent-positive), 0.2)};
+        border-color: $success;
+    }
+
+    &--warning {
+        background: #{rgba(var(--color-accent-neutral), 0.2)};
+        border-color: $notify;
+    }
+
+    &--error {
+        background: #{rgba(var(--color-accent-negative), 0.2)};
+        border-color: $error;
+    }
+
+    &__close {
+        font-size: $icon-size-l;
+    }
+}

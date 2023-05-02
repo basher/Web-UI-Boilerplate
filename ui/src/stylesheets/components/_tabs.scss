@@ -1,0 +1,82 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+.tabs {
+    $this: &;
+
+    &__tablist {
+        display: flex;
+        gap: $gutter-m;
+        margin-block-end: $gutter-m;
+        overflow-inline: auto;
+    }
+
+    &__link {
+        color: inherit;
+        white-space: nowrap;
+    }
+
+    &--vertical {
+        @include bp-medium {
+            display: grid;
+            gap: $gutter-m;
+            grid-template-areas: 'tabs content';
+            grid-template-columns: minmax(auto, 10rem) 1fr;
+
+            [role='tablist'] {
+                flex-direction: column;
+                grid-area: tabs;
+                margin: 0;
+                overflow-inline: unset;
+            }
+
+            [role='tab'] {
+                border-block-end: 0;
+                border-inline-end: $border-width-l solid $white;
+                padding-inline-end: $gutter-xs;
+            }
+
+            [role='tabpanel'] {
+                grid-area: content;
+            }
+
+            #{$this}__link {
+                white-space: unset;
+            }
+        }
+    }
+}
+
+[role='tab'] {
+    @include focus($inset: true);
+    border-block-end: $border-width-l solid $white;
+    text-decoration: none;
+    transition: border 150ms ease-in-out;
+
+    &[aria-selected='true'] {
+        border-color: $brand;
+        color: $brand;
+    }
+
+    /* stylelint-disable-next-line order/order */
+    @if $allow-dark-mode {
+        @media (prefers-color-scheme: dark) {
+            border-color: #{'rgba(var(--color-white), .5)'};
+            color: #{'rgba(var(--color-white), .5)'};
+
+            &[aria-selected='true'] {
+                border-color: inherit;
+                color: inherit;
+            }
+        }
+    }
+}
+
+[role='tabpanel'] {
+    @include focus;
+}

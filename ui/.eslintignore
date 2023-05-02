@@ -1,0 +1,3 @@
+# Ignore files/folders
+.eslintrc.js
+stories

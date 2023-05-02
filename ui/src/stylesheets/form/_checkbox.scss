@@ -1,0 +1,29 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+.checkbox {
+    align-items: center;
+    display: flex;
+    gap: $gutter-s;
+
+    &__input {
+        accent-color: $brand;
+        block-size: 1.5em;
+        inline-size: 1.5em;
+
+        &:disabled,
+        &:disabled + label {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        &:invalid:required:focus {
+            box-shadow: 0 0 0 $border-width-m $error;
+        }
+    }
+}

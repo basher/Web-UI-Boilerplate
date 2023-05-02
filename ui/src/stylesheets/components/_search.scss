@@ -1,0 +1,40 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+.search {
+    --search-grid-max-width: 10rem;
+
+    $this: &;
+
+    .form {
+        &__field {
+            flex-grow: 1;
+        }
+    }
+
+    .form,
+    .form__field {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .input {
+        flex-basis: 100%;
+    }
+
+    &__results {
+        margin-block-start: $gutter-m;
+    }
+
+    &__result {
+        &__link {
+            @include focus;
+            color: inherit;
+        }
+    }
+}

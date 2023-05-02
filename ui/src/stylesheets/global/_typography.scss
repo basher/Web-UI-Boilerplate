@@ -1,0 +1,145 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+/*
+----------------------------------------------------------------------------
+Element styles.
+
+No need for font smoothing - see https://ui.dev/rwd/articles/font-smoothing
+----------------------------------------------------------------------------
+*/
+
+html {
+    @include bp-2k {
+        font-size: $base-font-size-2k;
+    }
+    @include bp-4k {
+        font-size: $base-font-size-4k;
+    }
+
+    font-size: $base-font-size;
+}
+
+body {
+    @include fluid-type;
+    font-family: $base-font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+[class*='h--'] {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+}
+
+.h--xl {
+    @include fluid-type($font-size-h1, $font-size-xl, $line-height-xl);
+    margin-block-end: $gutter-clamp-xl;
+}
+
+h1,
+.h--1 {
+    @include fluid-type($font-size-h2, $font-size-h1, $line-height-h1);
+    margin-block-end: $gutter-clamp-l;
+}
+
+h2,
+.h--2 {
+    @include fluid-type($font-size-h3, $font-size-h2, $line-height-h2);
+    margin-block-end: $gutter-m;
+}
+
+h3,
+.h--3 {
+    @include fluid-type($font-size-h4, $font-size-h3, $line-height-h3);
+    margin-block-end: $gutter-m;
+}
+
+h4,
+.h--4 {
+    @include fluid-type($font-size-h5, $font-size-h4, $line-height-h4);
+    margin-block-end: $gutter-s;
+}
+
+h5,
+.h--5 {
+    font-size: $font-size-h5;
+    margin-block-end: $gutter-xs;
+}
+
+h6,
+.h--6 {
+    font-size: $font-size-h6;
+    margin-block-end: $gutter-xs;
+}
+
+/*
+----------------------------------------------------------------------------
+Margins on other prose elements.
+----------------------------------------------------------------------------
+*/
+p,
+ul:not([class]),
+ol:not([class]) {
+    margin-block-end: $gutter-m;
+}
+
+/*
+----------------------------------------------------------------------------
+Validation styles.
+----------------------------------------------------------------------------
+*/
+.error {
+    color: $error;
+}
+
+.success {
+    color: $success;
+}
+
+/*
+----------------------------------------------------------------------------
+Miscellaneous styles.
+----------------------------------------------------------------------------
+*/
+p:not([class]),
+li:not([class]),
+dd,
+small {
+    max-inline-size: $max-line-length;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+caption,
+th,
+td {
+    font-weight: normal;
+    text-align: start;
+}
+
+address {
+    font-style: normal;
+}
+
+small {
+    font-size: $font-size-s;
+}
+
+code {
+    font-family: $base-font-family-monospace;
+}

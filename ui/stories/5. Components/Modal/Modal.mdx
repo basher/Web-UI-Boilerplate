@@ -1,0 +1,27 @@
+import { Preview, Story } from '@storybook/addon-docs/blocks';
+
+# Modal
+- Uses the native HTML `<dialog>` element. Please see the [official MDN docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog).
+
+## Accessibility considerations
+- There are ongoing discussions about the [initial focus behaviour](https://github.com/whatwg/html/wiki/dialog--initial-focus,-a-proposal) for `<dialog>`.
+    - Keyboard `:focus` is currently being set on the `data-modal-content` using `tabindex="-1"` to ensure that content gets announced first, before the `close` button.
+- When modal is closed, focus is set back to the button that opened the modal.
+
+### Useful articles
+- [Is dialog ready to be used?](https://www.scottohara.me/blog/2019/03/05/open-dialog.html)
+- [Defending dialog](https://whistlr.info/2021/in-defence-of-dialog/) by the official polyfill maintainer.
+
+<Preview>
+    <Story id="components-modal--modal" />
+</Preview>
+
+## Modal with overflowing content
+<Preview>
+    <Story id="components-modal--modal-overflow" />
+</Preview>
+
+## Modal with multiple close buttons
+<Preview>
+    <Story id="components-modal--modal-multiple-close-buttons" />
+</Preview>

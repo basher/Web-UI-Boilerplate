@@ -1,0 +1,32 @@
+# Colour palette
+
+- Sass colours get automatically exported to a JSON file when Parcel server is started with `yarn start`.
+- Colours will be updated automatically:
+    - For example, when setting the operating system preference to `dark mode`, thereby triggering the CSS `prefers-color-scheme: dark` media query.
+    - Dark mode colours are defined in `src/stylesheets/settings/_root-css-vars.scss`.
+
+## Using the external `exported-colors.json` in this Storybook
+
+- The default export for this story contains an async loader which fetches the JSON before the story renders:
+```
+loaders: [() => fetch('http://localhost:9009/exported-colors.json').then(r => r.json()).then((json) => json)]
+```
+- The JSON is then passed as a `{loaded}` story argument, which can then be iterated:
+```
+export const Colours = (args, {loaded}) => `...`
+```
+
+## Why the 'funky' syntax for the CSS variables?
+
+- The CSS variable colour values are specified as a comma-separated list of individual `r`, `g` and `b` values:
+```
+:root { --color-brand: 255, 0, 98; }
+```
+- This enables us to use the CSS variables directly in the `rgba()` Sass function, providing access to the `alpha` channel for `opacity`:
+```
+.my-selector { background: #{rgba(var(--color-brand), 0.6)}; }
+```
+- This would be impossible if the CSS variables had been specified as `hex` or a single `rgb()` value.
+
+## TODO
+- Migrate to CSS Color 4, or maybe just `hsla()`.

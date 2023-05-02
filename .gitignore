@@ -1,0 +1,12 @@
+# UI
+node_modules
+dist/*
+build
+*.map
+yarn-error.log
+
+# Parcel bundler
+.parcel-cache
+
+# Storybook
+.cache

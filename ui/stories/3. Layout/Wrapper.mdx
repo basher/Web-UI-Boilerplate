@@ -1,0 +1,20 @@
+import { Preview, Story } from '@storybook/addon-docs/blocks';
+
+# Wrapper
+- Simple wrapper layout component whose only job is to constrain width of content and apply auto margins.
+- Normally, this would be used to divide content areas into _"slices"_, going down the page.
+- For more complex layouts (e.g. multi-column), use one of the [grid layouts](/story/layout-grid--grid).
+- Ideally, there should be **NO visual styles** applied to wrappers (e.g. background colour).
+
+## Override margin
+- Use [stack layout](/story/layout-stack--stack) to apply vertical `gutters` between sibling wrappers.
+
+## Override padding
+- Use [utility classes](/story/utilities-helpers-and-utilities--margin-padding).
+
+## Applying visual styles to wrapper
+- Add a [skin component](/story/components-skin--skin-wrapper) classname.
+
+<Preview>
+    <Story id="layout-wrapper--wrapper" />
+</Preview>

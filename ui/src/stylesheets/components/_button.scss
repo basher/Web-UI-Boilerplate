@@ -1,0 +1,91 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+.button {
+    @include button-reset;
+
+    &[class*='text'] {
+        border: $border-width-s solid;
+    }
+
+    &--text-icon {
+        align-items: center;
+        display: inline-flex;
+        gap: $gutter-s;
+        justify-content: space-between;
+
+        span {
+            text-align: start;
+        }
+    }
+
+    &--reverse {
+        flex-direction: row-reverse;
+    }
+
+    // Apply colours to button variants.
+    &--primary {
+        background-color: $brand;
+        color: $white;
+
+        &[class*='text'] {
+            border-color: $brand;
+        }
+    }
+
+    &--secondary {
+        color: $brand;
+
+        &[class*='text'] {
+            border-color: $brand;
+        }
+
+        /* stylelint-disable-next-line order/order */
+        @if $allow-dark-mode {
+            @media (prefers-color-scheme: dark) {
+                color: inherit;
+            }
+        }
+    }
+
+    &--positive {
+        background-color: $success;
+
+        &[class*='text'] {
+            border-color: $success;
+        }
+
+        /* stylelint-disable-next-line order/order */
+        @if $allow-dark-mode {
+            @media (prefers-color-scheme: dark) {
+                color: $black;
+            }
+        }
+    }
+
+    &--negative {
+        background-color: $error;
+        color: $white;
+
+        &[class*='text'] {
+            border-color: $error;
+        }
+    }
+
+    &--icon {
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    // Text (and text + icons) buttons only. Icon button sizes are determined by the context of their parent container font-size (or their icon size overrides).
+    &--small {
+        font-size: $font-size-s;
+        padding: $gutter-xs;
+    }
+}

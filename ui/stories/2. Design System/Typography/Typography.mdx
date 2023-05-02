@@ -1,0 +1,14 @@
+# Fluid responsive typography
+
+- [Fluid typography](https://piccalil.li/tutorial/fluid-typography-with-css-clamp) has been implemented by leveraging [CSS clamp](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp).
+- The Sass `fluid-type-` mixin defines the **minimum**, **maximum** and **ideal** font sizes for specific elements. For example:
+```
+body { @include fluid-type; }
+h1 { @include fluid-type(($font-size-h2, $font-size-h1, $line-height-h1)); }
+```
+- This enables pleasing responsive typography with
+    - minimal usage of `font-size` declarations,
+    - zero media queries.
+
+## Wysiwyg CMS editor "prose" content
+- See [wysiwyg component](/story/components-wysiwyg--wysiwyg).

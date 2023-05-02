@@ -1,0 +1,82 @@
+/*
+----------------------------------------------------------------------------
+Apply skin (or "theming" layer) to components.
+----------------------------------------------------------------------------
+*/
+
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+:root {
+    --skin-gutter-offset: var(--gutter-xl);
+}
+
+.skin {
+    // Arbitrary styling to demo the concept.
+    &-1 {
+        border: $border-width-s solid;
+        color: inherit;
+        padding: $gutter-m;
+    }
+
+    &-2 {
+        background-color: $brand;
+        color: $white;
+        padding: $gutter-m;
+    }
+
+    &-3 {
+        background-color: #{rgba(var(--color-brand), 0.1)};
+        margin-block: var(--skin-gutter-offset);
+        padding: $gutter-m;
+        position: relative;
+
+        &::before,
+        &::after {
+            background-color: #{rgba(var(--color-brand), 0.1)};
+            clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0 100%);
+            content: '';
+            display: block;
+            inline-size: 100%;
+            inset-inline-start: 0;
+            padding-block-start: var(--skin-gutter-offset);
+            position: absolute;
+        }
+
+        &::before {
+            inset-block-end: 100%;
+        }
+
+        &::after {
+            inset-block-start: 100%;
+            transform: rotate(180deg);
+        }
+
+        /* stylelint-disable-next-line order/order */
+        @if $allow-dark-mode {
+            @media (prefers-color-scheme: dark) {
+                background-color: #{rgba(var(--color-brand), 0.3)};
+
+                /* stylelint-disable-next-line max-nesting-depth */
+                &::before,
+                &::after {
+                    background-color: #{rgba(var(--color-brand), 0.3)};
+                }
+            }
+        }
+    }
+}
+
+// Override 'stack' margins for 'skin-3'.
+.stack > .skin-3 {
+    margin-block-end: var(--skin-gutter-offset);
+}
+
+.stack > * + .skin-3 {
+    margin-block-start: var(--skin-gutter-offset);
+}
