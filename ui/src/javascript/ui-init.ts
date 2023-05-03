@@ -7,6 +7,7 @@ import Search from './modules/search';
 import Share from './modules/share';
 import Slider from './modules/slider';
 import Tabs from './modules/tabs';
+import VideoPlayer from './modules/video-player';
 import Wysiwyg from './modules/wysiwyg';
 
 // For DEMO purposes only.
@@ -26,6 +27,7 @@ export const uiInit = (): void => {
     Share.start();
     Slider.start();
     Tabs.start();
+    VideoPlayer.start();
 
     // For DEMO purposes only.
     demoAjaxFetchHTML.start();
