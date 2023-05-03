@@ -1,7 +1,5 @@
 .responsive-media {
-    aspect-ratio: var(--mediaAspectRatio);
-
-    > :first-child {
+    &__item {
         aspect-ratio: var(--mediaAspectRatio);
         inline-size: 100%;
     }
