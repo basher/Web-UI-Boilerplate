@@ -1,4 +1,5 @@
-import docs from './Grid.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Grid.mdx';
 
 export default {
     title: 'Layout/Grid',
@@ -18,7 +19,7 @@ export default {
             },
         },
     },
-}
+};
 
 const style = `
 <style>
@@ -34,7 +35,7 @@ const style = `
         padding: 0;
     }
 </style>
-`
+`;
 
 export const Grid = (args) => `
 ${style}
@@ -47,7 +48,7 @@ ${style}
     <div>Grid item 4</div>
     <div>Grid item 5</div>
 </div>
-`
+`;
 
 export const GridList = (args) => `
 ${style}
@@ -62,8 +63,8 @@ For example, a gallery of images, or list of product cards.</p>
     <li>Grid item 4</li>
     <li>Grid item 5</li>
 </ul>
-`
-GridList.storyName = 'Grid using unordered list'
+`;
+GridList.storyName = 'Grid using unordered list';
 
 export const Grid2EqualCols = (args) => `
 ${style}
@@ -87,8 +88,8 @@ Use the <code>grid--2-cols@small</code> classname to override the <code>grid-tem
     <div>Col 1</div>
     <div>Col 2</div>
 </div>
-`
-Grid2EqualCols.storyName = 'Equal 2-column grid'
+`;
+Grid2EqualCols.storyName = 'Equal 2-column grid';
 
 export const Grid3EqualCols = (args) => `
 ${style}
@@ -106,8 +107,8 @@ ${style}
     <div>Col 2</div>
     <div>Col 3</div>
 </div>
-`
-Grid3EqualCols.storyName = 'Equal 3-column grid'
+`;
+Grid3EqualCols.storyName = 'Equal 3-column grid';
 
 export const GridAsymmetric = (args) => `
 ${style}
@@ -151,5 +152,5 @@ ${style}
         </div>
     </div>
 </div>
-`
-GridAsymmetric.storyName = 'Asymmetric 2-column grids'
+`;
+GridAsymmetric.storyName = 'Asymmetric 2-column grids';

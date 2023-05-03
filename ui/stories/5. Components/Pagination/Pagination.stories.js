@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 export default {
     title: 'Components/Pagination',
     parameters: {
@@ -5,7 +6,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 export const Pagination = () => `
 <div class="pagination-container">
@@ -50,4 +51,4 @@ export const Pagination = () => `
     </button>
     </div>
 </div>
-`
+`;

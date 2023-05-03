@@ -1,4 +1,5 @@
-import docs from './Skin.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Skin.mdx';
 
 export default {
     title: 'Components/Skin',
@@ -18,7 +19,7 @@ export default {
             },
         },
     },
-}
+};
 
 export const Skin = (args) => `
 <div class="${args.skin}">
@@ -30,12 +31,12 @@ export const Skin = (args) => `
         <li>Text alignment</li>
     </ul>
 </div>
-`
+`;
 
 export const SkinWrapper = (args) => `
 <div class="wrapper ${args.skin}">
 <p>Skin component allows us to add a <i>&quot;skin&quot;</i> or theming layer to components.</p>
 <p>Wrapper (default)</p>
 </div>
-`
-SkinWrapper.storyName = 'Skin applied to wrapper layout'
+`;
+SkinWrapper.storyName = 'Skin applied to wrapper layout';

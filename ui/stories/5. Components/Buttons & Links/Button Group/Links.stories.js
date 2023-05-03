@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 export default {
     title: 'Components/Buttons & Links/Button Group/Links',
     parameters: {
@@ -10,7 +11,7 @@ export default {
             control: 'boolean',
         },
     },
-}
+};
 
 export const Links = (args) => `
 <div class="button-group ${
@@ -35,4 +36,4 @@ export const Links = (args) => `
         Default
     </a>
 </div>
-`
+`;

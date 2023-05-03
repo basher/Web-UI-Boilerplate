@@ -1,4 +1,5 @@
-import docs from './Wysiwyg.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Wysiwyg.mdx';
 
 export default {
     title: 'Components/Wysiwyg',
@@ -10,7 +11,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 export const Wysiwyg = () => `
 <div class="wysiwyg stack" data-module="wysiwyg">
@@ -91,4 +92,4 @@ export const Wysiwyg = () => `
         </tbody>
     </table>
 </div>
-`
+`;

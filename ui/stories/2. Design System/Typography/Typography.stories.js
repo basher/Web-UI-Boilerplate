@@ -1,4 +1,5 @@
-import docs from './Typography.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Typography.mdx';
 
 export default {
     title: 'Design System/Typography',
@@ -10,7 +11,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 export const Typography = () => `
 <h1 class="h--xl">Heading level 1 with "h--xl" class</h1>
@@ -89,4 +90,4 @@ export const Typography = () => `
     code { font-family: $base-font-family; }
 &lt;/style&gt;
 </code></pre>
-`
+`;

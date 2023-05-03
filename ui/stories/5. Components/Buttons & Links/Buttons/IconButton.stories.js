@@ -1,4 +1,5 @@
-import docs from '../IconButton.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from '../IconButton.mdx';
 
 export default {
     title: 'Components/Buttons & Links/Buttons/Icon',
@@ -25,7 +26,7 @@ export default {
         },
         disabled: { control: 'boolean' },
     },
-}
+};
 
 export const IconButton = (args) => `
 <button
@@ -43,8 +44,8 @@ export const IconButton = (args) => `
     </svg>
     <span class="sr-only">[screenreader label]</span>
 </button>
-`
+`;
 IconButton.args = {
     iconRef: 'down',
-}
-IconButton.storyName = 'Icon'
+};
+IconButton.storyName = 'Icon';

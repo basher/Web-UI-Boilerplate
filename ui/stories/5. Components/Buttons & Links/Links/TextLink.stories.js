@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 export default {
     title: 'Components/Buttons & Links/Links/TextLink',
     parameters: {
@@ -20,7 +21,7 @@ export default {
             },
         },
     },
-}
+};
 
 export const StyledLink = (args) => `
 <a
@@ -29,8 +30,8 @@ export const StyledLink = (args) => `
 >
     ${args.label}
 </a>
-`
+`;
 StyledLink.args = {
     label: 'Styled link',
-}
-StyledLink.storyName = 'Text link styled like button'
+};
+StyledLink.storyName = 'Text link styled like button';

@@ -1,4 +1,5 @@
-import docs from './Cards.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Cards.mdx';
 
 export default {
     title: 'Components/Cards',
@@ -14,7 +15,11 @@ export default {
         cardOrientation: {
             control: {
                 type: 'select',
-                options: ['media-bottom', 'media-inline', 'media-inline-reverse'],
+                options: [
+                    'media-bottom',
+                    'media-inline',
+                    'media-inline-reverse',
+                ],
             },
         },
         flipFullwidthOrientation: { control: 'boolean' },
@@ -25,7 +30,7 @@ export default {
             },
         },
     },
-}
+};
 
 export const DefaultCard = (args) => `
 <article class="card card--${args.cardOrientation} ${args.skin}">
@@ -55,7 +60,9 @@ export const DefaultCard = (args) => `
 DefaultCard.storyName = 'Default card';
 
 export const FullwidthCard = (args) => `
-<article class="card card--fullwidth${args.flipFullwidthOrientation === true ? '-reverse' : ''} ${args.skin}">
+<article class="card card--fullwidth${
+    args.flipFullwidthOrientation === true ? '-reverse' : ''
+} ${args.skin}">
     <figure class="card__media">
         <picture>
             <source
@@ -184,7 +191,7 @@ export const CardGrid = () => `
     </li>
 </ul>
 `;
-CardGrid.storyName = 'Cards in a grid'
+CardGrid.storyName = 'Cards in a grid';
 
 export const CardSlider = () => `
 <section class="slider-wrapper" aria-label="[meaningful label for slider]"
@@ -341,4 +348,4 @@ export const CardSlider = () => `
     <p class="slider-instructions">Scroll or use your arrow keys for more</p>
 </section>
 `;
-CardSlider.storyName = 'Cards in a slider'
+CardSlider.storyName = 'Cards in a slider';

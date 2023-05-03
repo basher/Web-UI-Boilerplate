@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 export default {
     title: 'Pages/Homepage',
     parameters: {
@@ -5,7 +6,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 const style = `
 <style>
@@ -18,7 +19,7 @@ const style = `
         background: rgba(235, 201, 90, 0.2);
     }
 </style>
-`
+`;
 
 export const Homepage = () => `
 ${style}
@@ -226,4 +227,4 @@ ${style}
         </div>
     </footer>
 </div>
-`
+`;

@@ -1,4 +1,5 @@
-import docs from './Tables.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Tables.mdx';
 
 export default {
     title: 'Components/Tables',
@@ -10,7 +11,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 export const Table = () => `
 <table class="table">
@@ -40,7 +41,7 @@ export const Table = () => `
         </tr>
     </tbody>
 </table>
-`
+`;
 
 export const TableResponsive = () => `
 <div
@@ -88,5 +89,5 @@ export const TableResponsive = () => `
         </tbody>
     </table>
 </div>
-`
-TableResponsive.storyName = 'Responsive table'
+`;
+TableResponsive.storyName = 'Responsive table';

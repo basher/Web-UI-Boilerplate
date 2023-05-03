@@ -1,4 +1,5 @@
-import docs from './Ajax.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Ajax.mdx';
 
 export default {
     title: 'Components/Ajax',
@@ -10,7 +11,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 export const AjaxSpinner = () => `
 <svg
@@ -25,8 +26,8 @@ export const AjaxSpinner = () => `
     <title>loading...</title>
     <circle cx="50" cy="50" r="47"/>
 </svg>
-`
-AjaxSpinner.storyName = 'Ajax spinner'
+`;
+AjaxSpinner.storyName = 'Ajax spinner';
 
 export const FetchHTML = () => `
 <p>This is simply a demo to show the core features of a component that has some Ajax dependencies (e.g. fetching an HTML fragment).</p>
@@ -34,5 +35,5 @@ export const FetchHTML = () => `
     <button class="button button--text button--primary" data-button="ajax-trigger" data-ajax-trigger="test-1">Fetch HTML</button>
     <div class="ajax__container" data-ajax-container="test-1" aria-live="polite"></div>
 </div>
-`
-FetchHTML.storyName = 'Demo - Fetch HTML'
+`;
+FetchHTML.storyName = 'Demo - Fetch HTML';

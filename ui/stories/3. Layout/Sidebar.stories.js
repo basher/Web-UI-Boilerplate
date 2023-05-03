@@ -1,4 +1,5 @@
-import docs from './Sidebar.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Sidebar.mdx';
 
 export default {
     title: 'Layout/Sidebar',
@@ -10,7 +11,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 const style = `
 <style>
@@ -18,7 +19,7 @@ const style = `
         background: rgba(235, 201, 90, 0.2);
     }
 </style>
-`
+`;
 
 export const Sidebar = () => `
 ${style}
@@ -30,7 +31,7 @@ ${style}
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
     </div>
 </div>
-`
+`;
 
 export const SidebarRight = () => `
 ${style}
@@ -42,5 +43,5 @@ ${style}
         Sidebar = narrow content.
     </div>
 </div>
-`
-SidebarRight.storyName = 'Right sidebar'
+`;
+SidebarRight.storyName = 'Right sidebar';

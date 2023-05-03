@@ -1,4 +1,5 @@
-import docs from './Flex.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Flex.mdx';
 
 export default {
     title: 'Layout/Flex',
@@ -35,9 +36,9 @@ export default {
                 options: ['jc-center', 'jc-end', 'jc-between', 'jc-evenly'],
             },
         },
-        growAllFlexItems: { control: 'boolean' }
+        growAllFlexItems: { control: 'boolean' },
     },
-}
+};
 
 const style = `
 <style>
@@ -47,15 +48,13 @@ const style = `
         padding: 1rem;
     }
 </style>
-`
+`;
 
 export const Flex = (args) => `
 ${style}
 <div class="
     flex
-    ${
-        args.growAllFlexItems === true ? 'flex--grow-all' : ''
-    }
+    ${args.growAllFlexItems === true ? 'flex--grow-all' : ''}
     flex--${args.direction}
     flex--${args.gap}
     flex--${args.alignItems}
@@ -68,4 +67,4 @@ ${style}
     <div>Flex item 4</div>
     <div>Flex item 5</div>
 </div>
-`
+`;

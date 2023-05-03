@@ -1,4 +1,5 @@
-import docs from './Skiplinks.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Skiplinks.mdx';
 
 export default {
     title: 'Components/Skiplinks',
@@ -10,7 +11,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 export const Skiplinks = () => `
 <nav class="skiplinks" aria-label="skiplinks">

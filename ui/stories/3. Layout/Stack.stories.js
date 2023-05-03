@@ -1,4 +1,5 @@
-import docs from './Stack.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Stack.mdx';
 
 export default {
     title: 'Layout/Stack',
@@ -18,7 +19,7 @@ export default {
             },
         },
     },
-}
+};
 
 const style = `
 <style>
@@ -27,7 +28,7 @@ const style = `
         border: 1px dashed rgb(235, 201, 90);
     }
 </style>
-`
+`;
 
 export const Stack = (args) => `
 ${style}
@@ -36,4 +37,4 @@ ${style}
     <div>Child item of "stack" parent...</div>
     <div>Child item of "stack" parent...</div>
 </div>
-`
+`;

@@ -1,4 +1,5 @@
-import docs from './Breadcrumb.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Breadcrumb.mdx';
 
 export default {
     title: 'Components/Breadcrumb',
@@ -10,8 +11,7 @@ export default {
             type: 'stable',
         },
     },
-
-}
+};
 
 export const Breadcrumb = () => `
 <nav class="breadcrumb" aria-label="Breadcrumb">

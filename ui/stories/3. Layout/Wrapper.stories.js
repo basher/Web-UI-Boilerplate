@@ -1,4 +1,5 @@
-import docs from './Wrapper.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Wrapper.mdx';
 
 export default {
     title: 'Layout/Wrapper',
@@ -15,13 +16,25 @@ export default {
         paddingBlock: {
             control: {
                 type: 'select',
-                options: ['p-block--xs', 'p-block--s', 'p-block--m', 'p-block--l', 'p-block--xl'],
+                options: [
+                    'p-block--xs',
+                    'p-block--s',
+                    'p-block--m',
+                    'p-block--l',
+                    'p-block--xl',
+                ],
             },
         },
         paddingInline: {
             control: {
                 type: 'select',
-                options: ['p-inline--xs', 'p-inline--s', 'p-inline--m', 'p-inline--l', 'p-inline--xl'],
+                options: [
+                    'p-inline--xs',
+                    'p-inline--s',
+                    'p-inline--m',
+                    'p-inline--l',
+                    'p-inline--xl',
+                ],
             },
         },
         skin: {
@@ -31,7 +44,7 @@ export default {
             },
         },
     },
-}
+};
 
 const style = `
 <style>
@@ -43,7 +56,7 @@ const style = `
         border: 1px dashed rgb(235, 201, 90);
     }
 </style>
-`
+`;
 
 export const Wrapper = (args) => `
 ${style}
@@ -82,4 +95,4 @@ ${style}
         Wrapper fit-content
     </div>
 </div>
-`
+`;

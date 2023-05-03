@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 export default {
     title: 'Forms/Select',
     parameters: {
@@ -8,7 +9,7 @@ export default {
     argTypes: {
         disabled: { control: 'boolean' },
     },
-}
+};
 
 export const Select = (args) => `
 <label for="select" class="label">Select label</label>
@@ -18,4 +19,4 @@ export const Select = (args) => `
     <option value="2">option 2</option>
     <option value="3">option 3</option>
 </select>
-`
+`;

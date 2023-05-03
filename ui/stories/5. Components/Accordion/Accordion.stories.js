@@ -1,4 +1,5 @@
-import docs from './Accordion.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Accordion.mdx';
 
 export default {
     title: 'Components/Accordion',
@@ -10,7 +11,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 export const Accordion = () => `
 <div class="accordion">
@@ -27,7 +28,7 @@ export const Accordion = () => `
         </div>
     </details>
 </div>
-`
+`;
 
 export const AccordionCustomIcon = () => `
 <div class="accordion accordion--custom-icon">
@@ -64,5 +65,5 @@ export const AccordionCustomIcon = () => `
         </div>
     </details>
 </div>
-`
-AccordionCustomIcon.storyName = 'Accordion with custom icon'
+`;
+AccordionCustomIcon.storyName = 'Accordion with custom icon';

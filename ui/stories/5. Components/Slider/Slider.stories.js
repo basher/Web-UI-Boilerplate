@@ -1,4 +1,5 @@
-import docs from './Slider.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Slider.mdx';
 
 export default {
     title: 'Components/Slider (or Carousel)',
@@ -16,7 +17,7 @@ export default {
         showSlideCountPips: { control: 'boolean' },
         showPrevNextButtons: { control: 'boolean' },
     },
-}
+};
 
 const style = `
 <style>
@@ -26,7 +27,7 @@ const style = `
         padding: 5rem;
     }
 </style>
-`
+`;
 
 const style2 = `
 <style>
@@ -39,7 +40,7 @@ const style2 = `
         padding: 5rem;
     }
 </style>
-`
+`;
 
 export const Slider = () => `
 ${style}
@@ -113,7 +114,7 @@ ${style}
     <p class="slider-instructions">Scroll or use your arrow keys for more</p>
 </section>
 `;
-Slider.storyName = 'CSS slider'
+Slider.storyName = 'CSS slider';
 
 export const SlidesFullwidth = () => `
 ${style}
@@ -157,7 +158,7 @@ ${style}
     <p class="slider-instructions">Scroll or use your arrow keys for more</p>
 </section>
 `;
-SlidesFullwidth.storyName = 'CSS fullwidth slides'
+SlidesFullwidth.storyName = 'CSS fullwidth slides';
 
 export const SlidesClickable = () => `
 ${style2}
@@ -201,7 +202,7 @@ ${style2}
     <p class="slider-instructions">Scroll or use your arrow keys for more</p>
 </section>
 `;
-SlidesClickable.storyName = 'CSS clickable slides'
+SlidesClickable.storyName = 'CSS clickable slides';
 
 export const SliderEnhancedJS = (args) => `
 ${style}
@@ -212,8 +213,16 @@ ${style}
         tabindex="0"
         data-module="slider"
         ${args.showSlideCount === true ? 'data-slide-count="true"' : ''}
-        ${args.showSlideCountPips === true ? 'data-slide-count-pips="true"' : ''}
-        ${args.showPrevNextButtons === true ? 'data-prev-next-buttons="true"' : ''}
+        ${
+            args.showSlideCountPips === true
+                ? 'data-slide-count-pips="true"'
+                : ''
+        }
+        ${
+            args.showPrevNextButtons === true
+                ? 'data-prev-next-buttons="true"'
+                : ''
+        }
     >
          <li class="slider__slide">
             Slide 1<br>More content<br>Slides have equal height
@@ -279,19 +288,29 @@ ${style}
     <p class="slider-instructions">Scroll or use your arrow keys for more</p>
 </section>
 `;
-SliderEnhancedJS.storyName = 'JS-enhanced slider'
+SliderEnhancedJS.storyName = 'JS-enhanced slider';
 
 export const SlidesClickableEnhancedJS = (args) => `
 ${style2}
 <section class="slider-wrapper" aria-label="[meaningful label for slider]"
 >
     <ul
-        class="slider slider--has-clickable-slides ${args.makeFullwidth === true ? 'slider--fullwidth' : ''}"
+        class="slider slider--has-clickable-slides ${
+            args.makeFullwidth === true ? 'slider--fullwidth' : ''
+        }"
         tabindex="0"
         data-behaviour="slider"
         ${args.showSlideCount === true ? 'data-slide-count="true"' : ''}
-        ${args.showSlideCountPips === true ? 'data-slide-count-pips="true"' : ''}
-        ${args.showPrevNextButtons === true ? 'data-prev-next-buttons="true"' : ''}
+        ${
+            args.showSlideCountPips === true
+                ? 'data-slide-count-pips="true"'
+                : ''
+        }
+        ${
+            args.showPrevNextButtons === true
+                ? 'data-prev-next-buttons="true"'
+                : ''
+        }
     >
         <li class="slider__slide">
             <a href="#">
@@ -327,4 +346,4 @@ ${style2}
     <p class="slider-instructions">Scroll or use your arrow keys for more</p>
 </section>
 `;
-SlidesClickableEnhancedJS.storyName = 'JS-enhanced clickable slides'
+SlidesClickableEnhancedJS.storyName = 'JS-enhanced clickable slides';

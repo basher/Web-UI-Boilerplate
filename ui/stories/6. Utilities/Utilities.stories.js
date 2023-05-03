@@ -1,4 +1,5 @@
-import docs from './Utilities.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Utilities.mdx';
 
 export default {
     title: 'Utilities/Helpers and utilities',
@@ -36,7 +37,7 @@ export default {
             },
         },
     },
-}
+};
 
 const style = `
 <style>
@@ -50,7 +51,7 @@ const style = `
         margin: 0;
     }
 </style>
-`
+`;
 
 export const ScreenReader = () => `
 <p>The content below is hidden visually...</p>
@@ -58,8 +59,8 @@ export const ScreenReader = () => `
 <div class="sr-only">
     Visually hide content, but still make it available to screen readers.
 </div>
-`
-ScreenReader.storyName = 'Screen reader'
+`;
+ScreenReader.storyName = 'Screen reader';
 
 export const HideContent = () => `
 <p>The content below is removed from the DOM entirely...</p>
@@ -67,8 +68,8 @@ export const HideContent = () => `
 <div class="u-hidden">
     Remove content from the DOM.
 </div>
-`
-HideContent.storyName = 'Hide content'
+`;
+HideContent.storyName = 'Hide content';
 
 export const CenterContent = () => `
 <div class="u-center">
@@ -76,8 +77,8 @@ export const CenterContent = () => `
     <h3>Heading level 3</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
 <div>
-`
-CenterContent.storyName = 'Center content'
+`;
+CenterContent.storyName = 'Center content';
 
 export const marginPadding = (args) => `
 ${style}
@@ -93,5 +94,5 @@ ${style}
         <li>Additional modifiers can be applied. For example, <code>--0</code>, <code>--xs</code>, <code>--xl</code>, etc.</li>
     </ul>
 </div>
-`
-marginPadding.storyName = 'Adjust margin & padding'
+`;
+marginPadding.storyName = 'Adjust margin & padding';

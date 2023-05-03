@@ -1,4 +1,5 @@
-import docs from './Images.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Images.mdx';
 
 export default {
     title: 'Components/Images',
@@ -10,7 +11,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 export const ResponsiveImage = () => `
 <picture>

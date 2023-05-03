@@ -1,4 +1,5 @@
-import docs from './Icons.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Icons.mdx';
 
 export default {
     title: 'Design System/Icons',
@@ -18,7 +19,7 @@ export default {
             },
         },
     },
-}
+};
 
 const style = `
 <style>
@@ -26,7 +27,7 @@ const style = `
         grid-template-columns: repeat(auto-fit, 50px);
     }
 </style>
-`
+`;
 
 export const Icons = (args) => `
 ${style}
@@ -160,4 +161,4 @@ ${style}
     </svg>
 
 </div>
-`
+`;

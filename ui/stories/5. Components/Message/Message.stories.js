@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 export default {
     title: 'Components/Message',
     component: Message,
@@ -17,7 +18,7 @@ export default {
             control: 'boolean',
         },
     },
-}
+};
 
 export const Message = (args) => `
 <div class="message message--${args.messageType}" data-module="message">
@@ -25,8 +26,9 @@ export const Message = (args) => `
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur?</p>
     </div>
-    ${args.hasCloseButton === true ?
-        `<button
+    ${
+        args.hasCloseButton === true
+            ? `<button
             type="button"
             class="button button--icon message__close"
             data-button="message-close"
@@ -40,6 +42,8 @@ export const Message = (args) => `
                 <use href="/sprite.svg#close" />
             </svg>
             <span class="sr-only">Close</span>
-        </button>` : ''}
+        </button>`
+            : ''
+    }
 </div>
-`
+`;

@@ -1,12 +1,13 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 export default {
-  title: 'Components/Search',
-  component: Search,
-  parameters: {
-    status: {
-      type: 'stable'
+    title: 'Components/Search',
+    component: Search,
+    parameters: {
+        status: {
+            type: 'stable',
+        },
     },
-  },
-}
+};
 
 export const Search = () => `
     <div class="search">
@@ -26,7 +27,7 @@ export const Search = () => `
             </button>
         </form>
     </div>
-`
+`;
 
 export const SearchWithAjax = () => `
     <div class="search" data-module="search">
@@ -53,5 +54,5 @@ export const SearchWithAjax = () => `
         >
         </div>
     </div>
-`
-SearchWithAjax.storyName = 'Search with Ajax'
+`;
+SearchWithAjax.storyName = 'Search with Ajax';

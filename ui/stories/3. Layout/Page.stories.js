@@ -1,4 +1,5 @@
-import docs from './Page.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Page.mdx';
 
 export default {
     title: 'Layout/Page',
@@ -10,7 +11,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 const style = `
 <style>
@@ -27,7 +28,7 @@ const style = `
         padding: 1rem;
     }
 </style>
-`
+`;
 
 export const Page = () => `
 ${style}
@@ -44,7 +45,7 @@ ${style}
         Probably contains additional <code>&lt;nav&gt;</code>.
     </footer>
 </div>
-`
+`;
 
 export const PageSidebar = () => `
 ${style}
@@ -68,8 +69,8 @@ ${style}
         Footer.
     </footer>
 </div>
-`
-PageSidebar.storyName = 'Page with sidebar'
+`;
+PageSidebar.storyName = 'Page with sidebar';
 
 export const PageSidebarRight = () => `
 ${style}
@@ -93,5 +94,5 @@ ${style}
         Footer.
     </footer>
 </div>
-`
-PageSidebarRight.storyName = 'Page with right sidebar'
+`;
+PageSidebarRight.storyName = 'Page with right sidebar';

@@ -1,4 +1,5 @@
-import docs from './Banners.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Banners.mdx';
 
 export default {
     title: 'Components/Banners',
@@ -10,7 +11,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 export const FullwidthBanner = () => `
 <div class="banner banner--fullwidth">

@@ -1,4 +1,5 @@
-import docs from './Modal.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Modal.mdx';
 
 export default {
     title: 'Components/Modal',
@@ -10,7 +11,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 export const Modal = () => `
 <p>
@@ -64,7 +65,7 @@ export const Modal = () => `
     <br/>
     <button type="button" class="button button--text">Am I clickable?</button>
 </p>
-`
+`;
 
 export const ModalOverflow = () => `
 <p>
@@ -134,9 +135,8 @@ export const ModalOverflow = () => `
     <br/>
     <button type="button" class="button button--text">Am I clickable?</button>
 </p>
-`
-ModalOverflow.storyName = 'Modal with overflowing content'
-
+`;
+ModalOverflow.storyName = 'Modal with overflowing content';
 
 export const ModalMultipleCloseButtons = () => `
 <p>
@@ -189,5 +189,5 @@ export const ModalMultipleCloseButtons = () => `
     <br/>
     <button type="button" class="button button--text">Am I clickable?</button>
 </p>
-`
-ModalMultipleCloseButtons.storyName = 'Modal with multiple close buttons'
+`;
+ModalMultipleCloseButtons.storyName = 'Modal with multiple close buttons';

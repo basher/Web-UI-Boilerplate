@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 export default {
     title: 'Components/Buttons & Links/Buttons/Text',
     parameters: {
@@ -21,7 +22,7 @@ export default {
         },
         disabled: { control: 'boolean' },
     },
-}
+};
 
 export const TextButton = (args) => `
 <button
@@ -33,8 +34,8 @@ export const TextButton = (args) => `
 >
     ${args.label}
 </button>
-`
+`;
 TextButton.args = {
     label: 'Text button',
-}
-TextButton.storyName = 'Text'
+};
+TextButton.storyName = 'Text';

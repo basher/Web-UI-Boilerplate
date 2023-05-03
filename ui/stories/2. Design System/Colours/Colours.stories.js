@@ -1,5 +1,6 @@
-import domready from 'domready'
-import docs from './Colours.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import domready from 'domready';
+import docs from './Colours.mdx';
 
 export default {
     title: 'Design System/Colours',
@@ -17,7 +18,7 @@ export default {
                 .then((r) => r.json())
                 .then((json) => json),
     ],
-}
+};
 
 const style = `
 <style>
@@ -43,7 +44,7 @@ const style = `
         height: 4rem;
     }
 </style>
-`
+`;
 
 export const Colours = (args, { loaded }) => `
     ${style}
@@ -82,13 +83,13 @@ export const Colours = (args, { loaded }) => `
     }
     ${
         // Output computed RGB colours.
-        domready(function() {
-            const styledSpan = document.querySelectorAll('.styled')
+        domready(function () {
+            const styledSpan = document.querySelectorAll('.styled');
             styledSpan.forEach((span) => {
-                const computedSpan = span.nextElementSibling.nextElementSibling
+                const computedSpan = span.nextElementSibling.nextElementSibling;
                 computedSpan.innerHTML =
-                    getComputedStyle(span).getPropertyValue('background-color')
-            })
+                    getComputedStyle(span).getPropertyValue('background-color');
+            });
         })
     }
-`
+`;

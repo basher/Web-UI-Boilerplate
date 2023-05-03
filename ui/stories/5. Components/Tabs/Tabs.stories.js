@@ -1,4 +1,5 @@
-import docs from './Tabs.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Tabs.mdx';
 
 export default {
     title: 'Components/Tabs',
@@ -10,7 +11,7 @@ export default {
             type: 'stable',
         },
     },
-}
+};
 
 export const Tabs = () => `
 <div class="tabs" data-module="tabs">
@@ -45,7 +46,7 @@ export const Tabs = () => `
         <p>4 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum maxime amet omnis numquam voluptatem exercitationem nemo deleniti dolorem perferendis vitae? Qui molestias inventore illum ad ullam eum unde omnis temporibus.</p>
     </div>
 </div>
-`
+`;
 
 export const TabsVertical = () => `
 <div class="tabs tabs--vertical" data-module="tabs">
@@ -80,5 +81,5 @@ export const TabsVertical = () => `
         <p>4 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum maxime amet omnis numquam voluptatem exercitationem nemo deleniti dolorem perferendis vitae? Qui molestias inventore illum ad ullam eum unde omnis temporibus.</p>
     </div>
 </div>
-`
-TabsVertical.storyName = 'Vertical tabs'
+`;
+TabsVertical.storyName = 'Vertical tabs';

@@ -1,4 +1,5 @@
-import docs from '../IconButton.mdx'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from '../IconButton.mdx';
 
 export default {
     title: 'Components/Buttons & Links/Links/Text & Icon',
@@ -32,7 +33,7 @@ export default {
         },
         swapIconPosition: { control: 'boolean' },
     },
-}
+};
 
 export const TextAndIconLink = (args) => `
 <a
@@ -41,9 +42,7 @@ export const TextAndIconLink = (args) => `
         button button--text-icon
         button--${args.buttonType}
         button--${args.buttonSize}
-        ${
-            args.swapIconPosition === true ? 'button--reverse' : ''
-        }
+        ${args.swapIconPosition === true ? 'button--reverse' : ''}
     "
 >
     <svg
@@ -55,9 +54,9 @@ export const TextAndIconLink = (args) => `
     </svg>
     <span>${args.label}</span>
 </a>
-`
+`;
 TextAndIconLink.args = {
     label: 'Text & icon link',
     iconRef: 'down',
-}
-TextAndIconLink.storyName = 'Text & Icon'
+};
+TextAndIconLink.storyName = 'Text & Icon';
