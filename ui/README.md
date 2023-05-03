@@ -44,7 +44,9 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
 - Run `npx browserslist` to see a list of supported browsers.
 
 ### Testing for browser support in the UI
-- The `supported-browsers` script in `package.json` uses the `browserslist-useragent-regexp` package to extract the browserslist config into an exportable JS module containing a REGEX of supported browsers.
+
+> NOTE: The syntax for the `supported-browsers` script differs in Windows environments from MacOS/Linux.
+- The `supported-browsers` script in `package.json` uses the `browserslist-useragent-regexp` package to extract the browserslist config into an exportable JavaScript module containing a REGEX of supported browsers.
 - This is imported in the generated REGEX in `src/javascript/utils/browser-support.ts` to match against the current browser.
 
 ## Parcel bundler
@@ -84,12 +86,12 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
 ### Hot module reloading (HMR)
 - The `start:parcel` NPM script mentioned earlier doesn't actually start the default Parcel server.
 - Instead, it simply [watches files and defines a port for the HMR server](https://parceljs.org/features/cli/#parcel-watch-%3Centries%3E).
-- This means that Storybook updates automatically with any CSS/JS changes.
+- This means that Storybook updates automatically with any CSS/JavaScript changes.
 
 ### Dev dependencies
 - `babel-loader` is needed for Storybook.
 
 ## Trouble-shooting bundling and build issues
-- If bundling breaks, or UI is not updated (in DEV mode) to reflect latest CSS/JS changes:
+- If bundling breaks, or UI is not updated (in DEV mode) to reflect latest CSS/JavaScript changes:
     - Kill the Parcel Node process with `CTRL+C`.
     - Run `yarn start` again.
