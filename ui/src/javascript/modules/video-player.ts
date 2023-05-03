@@ -1,8 +1,10 @@
 export default class VideoPlayer {
     private player: Element;
+    private btnPlay: HTMLButtonElement | null;
 
     constructor(player: Element) {
         this.player = player;
+        this.btnPlay = player.querySelector('[data-button="modal-open"]');
 
         this.init();
     }
@@ -20,6 +22,12 @@ export default class VideoPlayer {
     }
 
     private init(): void {
-        console.log(this.player);
+        this.btnPlay?.addEventListener('click', (e: MouseEvent) =>
+            this.handlePlay(e),
+        );
+    }
+
+    private handlePlay(e: MouseEvent): void {
+        e.preventDefault();
     }
 }

@@ -16,14 +16,6 @@ export default {
 export const VideoPlayer = () => `
 <div class="video-player" data-module="video-player">
     <div class="modal" data-module="modal">
-        <button
-            type="button"
-            class="button button--text button--primary"
-            data-button="modal-open"
-        >
-            Open modal
-        </button>
-
         <a
             class="video-player__link"
             href="https://www.youtube.com/embed/yHWSC-RW8kk"
