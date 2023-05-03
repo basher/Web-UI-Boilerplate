@@ -34,6 +34,8 @@ export const ResponsiveVideo = () => `
     <iframe
         class="responsive-media__item"
         src="https://www.youtube.com/embed/yHWSC-RW8kk"
+        height="315"
+        width="560"
         allowfullscreen
         title="YouTube video player"
         loading="lazy"
