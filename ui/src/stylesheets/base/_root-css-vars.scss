@@ -32,6 +32,9 @@ CSS custom properties for dynamic theming.
     --gutter-m: 1.25rem; // 20px
     --gutter-l: 2.5rem; // 40px
     --gutter-xl: 3.75rem; // 60px
+
+    // Miscellaneous.
+    --mediaAspectRatio: 16/9;
 }
 
 // Dark theme: ensure black & white are NOT truly black & white.
