@@ -27,11 +27,6 @@ class Tabs {
 
     private init(): void {
         this.createTabs();
-
-        window.addEventListener('hashchange', () => this.bindHashChangeEvent, {
-            once: true,
-        });
-        this.bindHashChangeEvent();
     }
 
     private createTabs(): void {
@@ -148,21 +143,6 @@ class Tabs {
                 break;
             default:
                 break;
-        }
-    }
-
-    private bindHashChangeEvent(): void {
-        if (window.location.hash === '' || !this.tabTriggers.length) {
-            return;
-        }
-
-        const selectedTab = Array.from(this.tabTriggers).find(
-            (tabTrigger) =>
-                tabTrigger.getAttribute('href') === window.location.hash,
-        );
-        if (selectedTab) {
-            selectedTab.focus();
-            selectedTab.click();
         }
     }
 }
