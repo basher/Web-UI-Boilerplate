@@ -50,7 +50,7 @@ export const Share = () => `
 </div>
 `;
 
-export const ShareAnotherPage = () => `
+export const ShareDifferentPage = () => `
 <div class="share" data-module="share">
     <button
         type="button"
@@ -89,4 +89,4 @@ export const ShareAnotherPage = () => `
     </div>
 </div>
 `;
-ShareAnotherPage.storyName = 'Share another page';
+ShareDifferentPage.storyName = 'Share a different page';
