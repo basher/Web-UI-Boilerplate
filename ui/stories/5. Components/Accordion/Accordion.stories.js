@@ -40,7 +40,6 @@ export const AccordionCustomIcon = () => `
                 focusable="false"
                 class="icon"
             >
-                <title>open / close</title>
                 <use href="/sprite.svg#down" />
             </svg>
         </summary>
@@ -57,7 +56,6 @@ export const AccordionCustomIcon = () => `
                 focusable="false"
                 class="icon"
             >
-                <title>open / close</title>
                 <use href="/sprite.svg#down" />
             </svg>
         </summary>
