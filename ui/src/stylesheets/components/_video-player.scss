@@ -3,10 +3,25 @@
 Dependencies.
 ----------------------------------------------------------------------------
 */
-// @use '../base' as *;
+@use '../base' as *;
 // @use '../mixins' as *;
 
 .video-player {
+    &__link {
+        display: grid;
+        grid-template-areas: 'video';
+        inline-size: fit-content;
+        place-items: center;
+
+        > * {
+            grid-area: video;
+        }
+
+        .icon {
+            block-size: $icon-size-l;
+        }
+    }
+
     .modal__dialog {
         inline-size: 100%;
     }

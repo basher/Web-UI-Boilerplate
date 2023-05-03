@@ -8,22 +8,19 @@ Dependencies.
 .icon {
     $this: &;
 
+    aspect-ratio: 1;
     block-size: 1em; // Scale icon to match font-size of parent element
     fill: currentColor;
-    inline-size: 1em;
 
     &--small {
         block-size: $icon-size-s;
-        inline-size: $icon-size-s;
     }
 
     &--medium {
         block-size: $icon-size-m;
-        inline-size: $icon-size-m;
     }
 
     &--large {
         block-size: $icon-size-l;
-        inline-size: $icon-size-l;
     }
 }

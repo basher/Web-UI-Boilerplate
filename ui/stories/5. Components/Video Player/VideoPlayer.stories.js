@@ -25,10 +25,9 @@ export const VideoPlayer = () => `
         </button>
 
         <a
+            class="video-player__link"
             href="https://www.youtube.com/embed/yHWSC-RW8kk"
             target="_blank"
-            data-video-height=""
-            data-video-width=""
             data-button="modal-open"
         >
             <picture>
@@ -45,6 +44,13 @@ export const VideoPlayer = () => `
                     width="400"
                 />
             </picture>
+            <svg
+                aria-hidden="true"
+                focusable="false"
+                class="icon"
+            >
+                <use href="/sprite.svg#video" />
+            </svg>
         </a>
 
         <dialog class="modal__dialog">
