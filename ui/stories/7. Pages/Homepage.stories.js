@@ -67,7 +67,7 @@ ${style}
                             src="https://dummyimage.com/1920x1080/ccc/ddd"
                             alt="[alt]"
                             loading="lazy"
-                            height="1440"
+                            height="1080"
                             width="1920"
                         />
                     </picture>
@@ -184,8 +184,8 @@ ${style}
                                 src="https://dummyimage.com/768x576/ccc/ddd"
                                 alt="[alt]"
                                 loading="lazy"
-                                height="768"
-                                width="1024"
+                                height="576"
+                                width="768"
                             />
                         </picture>
                     </figure>
@@ -208,8 +208,8 @@ ${style}
                                 src="https://dummyimage.com/768x576/ccc/ddd"
                                 alt="[alt]"
                                 loading="lazy"
-                                height="768"
-                                width="1024"
+                                height="576"
+                                width="768"
                             />
                         </picture>
                     </figure>

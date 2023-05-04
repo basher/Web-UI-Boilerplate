@@ -75,8 +75,8 @@ export const FullwidthCard = (args) => `
                 src="https://dummyimage.com/768x576/ccc/ddd"
                 alt="[alt]"
                 loading="lazy"
-                height="768"
-                width="1024"
+                height="576"
+                width="768"
             />
         </picture>
     </figure>

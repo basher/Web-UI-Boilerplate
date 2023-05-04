@@ -42,7 +42,7 @@ export const FullwidthBanner = () => `
                 src="https://dummyimage.com/1920x1080/ccc/ddd"
                 alt="[alt]"
                 loading="lazy"
-                height="1440"
+                height="1080"
                 width="1920"
             />
         </picture>
@@ -88,7 +88,7 @@ export const FullwidthBannerOverlay = () => `
                 src="https://dummyimage.com/1920x1080/ccc/ddd"
                 alt="[alt]"
                 loading="lazy"
-                height="1440"
+                height="1080"
                 width="1920"
             />
         </picture>
