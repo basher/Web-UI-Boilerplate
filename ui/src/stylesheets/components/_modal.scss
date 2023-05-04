@@ -16,7 +16,7 @@ Dependencies.
     &__dialog {
         background: $white;
         margin: auto;
-        padding: $gutter-m;
+        padding: 0 $gutter-m $gutter-m;
 
         &::backdrop {
             background: var(--color-backdrop);
@@ -28,8 +28,13 @@ Dependencies.
         display: flex;
         inset-block-start: 0;
         justify-content: flex-end;
-        padding-block-end: $gutter-m;
+        padding-block: $gutter-m;
         position: sticky;
+    }
+
+    &__content {
+        @include focus($inset: true);
+        margin-block-start: $gutter-m;
     }
 
     // "dialogPolyfill" styles.
