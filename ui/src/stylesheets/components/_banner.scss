@@ -16,6 +16,11 @@ Dependencies.
     gap: var(--banner-gap);
 
     &--fullwidth {
+        #{$this}__content {
+            padding-inline: $gutter-s;
+        }
+
+        /* stylelint-disable-next-line order/order */
         @include bp-medium {
             display: grid;
             grid-template-areas: 'fullwidth';

@@ -83,14 +83,15 @@ ${style}
             </div>
 
             <div class="wrapper wrapper--xl u-p-block--l">
-                <div class="wysiwyg stack">
+                <div class="wysiwyg stack u-center">
                     <h2>Heading level 2</h2>
                     <h3>Heading level 3</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
                 </div>
             </div>
 
-            <div class="wrapper wrapper--xl skin-3">
+            <div class="wrapper wrapper--fullbleed skin-3">
+            <div class="wrapper wrapper--xl">
                 <ul class="grid grid--centered card-grid">
                     <li>
                         <a href="#" class="card">
@@ -166,8 +167,9 @@ ${style}
                     </li>
                 </ul>
             </div>
+            </div>
 
-            <div class="wrapper wrapper--fullbleed stack u-p-inline--l">
+            <div class="wrapper wrapper--xl stack u-p-block--l">
                 <h2>Heading level 2</h2>
                 <article class="card card--fullwidth">
                     <figure class="card__media">
