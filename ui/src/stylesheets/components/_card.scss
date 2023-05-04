@@ -41,12 +41,10 @@ Dependencies.
     &[class*='fullwidth'] {
         --card-gap: #{$gutter-clamp-xl};
 
-        // Uses <picture> element. Set image to take up 45% of available space, which allows it to shrink and use the correct source.
+        // Uses <picture> element. Set image to take up % of available space, which allows it to shrink and use the correct source.
         #{$this}__media {
-            // flex-basis: 45%;
-            // flex-basis: min(48rem, calc(50% - var(--card-gap)));
-            // flex-basis: calc(50% - var(--card-gap));
-            // flex-basis: clamp(45%, 50% - var(--card-gap), 48rem);
+            // TODO: Try to NOT use a magic number - i.e. 43%.
+            flex-basis: min(43%, 100% - var(--card-gap));
         }
 
         #{$this}__content {
