@@ -27,12 +27,11 @@ export default class Share {
             '[data-module="share"]',
         );
 
-        shareComponents &&
-            shareComponents.forEach((share) => {
-                addJSClass(share);
-                const instance = new Share(share);
-                return instance;
-            });
+        shareComponents.forEach((share) => {
+            addJSClass(share);
+            const instance = new Share(share);
+            return instance;
+        });
     }
 
     private init(): void {

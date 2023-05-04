@@ -12,11 +12,10 @@ export default class Wysiwyg {
     public static start(): void {
         const wysiwygs = document.querySelectorAll('[data-module="wysiwyg"]');
 
-        wysiwygs &&
-            wysiwygs.forEach((wysiwyg) => {
-                const instance = new Wysiwyg(wysiwyg);
-                return instance;
-            });
+        wysiwygs.forEach((wysiwyg) => {
+            const instance = new Wysiwyg(wysiwyg);
+            return instance;
+        });
     }
 
     private init(): void {

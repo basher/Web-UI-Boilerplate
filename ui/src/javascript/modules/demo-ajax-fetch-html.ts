@@ -22,11 +22,10 @@ class AjaxLoader {
             '[data-module="demo-ajax-fetch-html"]',
         );
 
-        ajaxLoaders &&
-            ajaxLoaders.forEach((ajaxLoader) => {
-                const instance = new AjaxLoader(ajaxLoader);
-                return instance;
-            });
+        ajaxLoaders.forEach((ajaxLoader) => {
+            const instance = new AjaxLoader(ajaxLoader);
+            return instance;
+        });
     }
 
     private init(): void {

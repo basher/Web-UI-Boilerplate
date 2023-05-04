@@ -8,7 +8,7 @@ export default {
             page: docs,
         },
         status: {
-            type: 'beta',
+            type: 'stable',
         },
     },
 };

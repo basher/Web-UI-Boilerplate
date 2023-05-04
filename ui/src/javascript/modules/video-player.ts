@@ -18,7 +18,7 @@ export default class VideoPlayer {
             '[data-module="video-player"]',
         );
 
-        players?.forEach((player) => {
+        players.forEach((player) => {
             const instance = new VideoPlayer(player);
             return instance;
         });

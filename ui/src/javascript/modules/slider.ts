@@ -33,12 +33,11 @@ class Slider {
     public static start(): void {
         const sliders = document.querySelectorAll('[data-module="slider"]');
 
-        sliders &&
-            sliders.forEach((slider) => {
-                addJSClass(slider);
-                const instance = new Slider(slider);
-                return instance;
-            });
+        sliders.forEach((slider) => {
+            addJSClass(slider);
+            const instance = new Slider(slider);
+            return instance;
+        });
     }
 
     private initConfiguration(): void {

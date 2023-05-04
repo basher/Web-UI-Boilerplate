@@ -22,11 +22,10 @@ class Modal {
     public static start(): void {
         const modals = document.querySelectorAll('[data-module="modal"]');
 
-        modals &&
-            modals.forEach((modal) => {
-                const instance = new Modal(modal);
-                return instance;
-            });
+        modals.forEach((modal) => {
+            const instance = new Modal(modal);
+            return instance;
+        });
     }
 
     private init(): void {

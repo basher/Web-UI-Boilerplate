@@ -25,11 +25,10 @@ class Search {
             '[data-module="search"]',
         );
 
-        searchComponents &&
-            searchComponents.forEach((searchComponent) => {
-                const instance = new Search(searchComponent);
-                return instance;
-            });
+        searchComponents.forEach((searchComponent) => {
+            const instance = new Search(searchComponent);
+            return instance;
+        });
     }
 
     private init(): void {

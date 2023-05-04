@@ -18,11 +18,10 @@ class Tabs {
     public static start(): void {
         const tabComponents = document.querySelectorAll('[data-module="tabs"]');
 
-        tabComponents &&
-            tabComponents.forEach((tabComponent) => {
-                const instance = new Tabs(tabComponent);
-                return instance;
-            });
+        tabComponents.forEach((tabComponent) => {
+            const instance = new Tabs(tabComponent);
+            return instance;
+        });
     }
 
     private init(): void {

@@ -16,11 +16,10 @@ export default class Message {
     public static start(): void {
         const messages = document.querySelectorAll('[data-module="message"]');
 
-        messages &&
-            messages.forEach((message) => {
-                const instance = new Message(message);
-                return instance;
-            });
+        messages.forEach((message) => {
+            const instance = new Message(message);
+            return instance;
+        });
     }
 
     private init(): void {
