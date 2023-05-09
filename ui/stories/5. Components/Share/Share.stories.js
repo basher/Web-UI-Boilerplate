@@ -25,7 +25,6 @@ export const Share = () => `
             focusable="false"
             class="icon"
         >
-            <title>Share</title>
             <use href="/sprite.svg#share" />
         </svg>
         <span>Share</span>
