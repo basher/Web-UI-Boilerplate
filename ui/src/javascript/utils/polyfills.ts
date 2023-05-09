@@ -6,7 +6,7 @@
 
 // No official polyfill exists for https://github.com/w3c/IntersectionObserver.
 
-// TODO: These 2 "fetch" polyfills will probably be redundant, given our current "browserslist" config.
+// TODO: These 2 "fetch" polyfills will probably be redundant, given the current "browserslist" config.
 import 'abortcontroller-polyfill/dist/polyfill-patch-fetch';
 import 'whatwg-fetch';
 

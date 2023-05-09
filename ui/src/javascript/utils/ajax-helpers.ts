@@ -1,14 +1,7 @@
-/**
- * @file ajax-helpers.ts
- *
- * @description
- * This file contains helper functions for Ajax requests
- *
- */
 import main from '../../javascript/config/main';
 
 /**
- * @const {HTMLDivElement} - we must programatically build Ajax spinner in full here, as we cannot reference it from the SVG sprite because the <circle> element would be in the shadow DOM, and therefore impossible to style.
+ * @const {HTMLDivElement} - programatically build Ajax spinner in full here, as it cannot be referenced from the SVG sprite because the <circle> element would be in the shadow DOM, and therefore impossible to style.
  * @returns {HTMLElement}
  */
 const ajaxSpinner = document.createElement('div') as HTMLElement;
@@ -93,9 +86,9 @@ export const ajaxErrorHandler = (arg: AjaxError): void => {
 /**
  * @function ajaxEventHandler
  * Function to handle Ajax events
- * @param {HTMLElement} ajaxTrigger - The element that triggers the Ajax request
- * @param {string} eventType - The event type that triggers the Ajax request
- * @param {Function} ajaxCallback - The callback function that handles the Ajax request
+ * @param {HTMLElement} ajaxTrigger - element that triggers the Ajax request
+ * @param {string} eventType - event type that triggers the Ajax request
+ * @param {Function} ajaxCallback - callback function that handles the Ajax request
  * @returns {void}
  */
 interface AjaxEvent {
@@ -107,8 +100,7 @@ interface AjaxEvent {
 export const ajaxEventHandler = (arg: AjaxEvent): void => {
     const { ajaxTrigger, eventType, ajaxCallback } = arg;
 
-    // 1. Value of 'data-ajax-trigger' must match 'data-ajax-container' so that an Ajax trigger (e.g. button) loads content into the correct container.
-    // 2. We're using querySelector instead of our '_' util function because we cannot guarantee that the Ajax trigger & container are both inside the same parent DOM node.
+    // Value of 'data-ajax-trigger' must match 'data-ajax-container' so that an Ajax trigger (e.g. button) loads content into the correct container.
     const target = ajaxTrigger?.dataset.ajaxTrigger;
     const ajaxContainer = document.querySelector(
         `[data-ajax-container="${target}"]`,
