@@ -17,7 +17,7 @@ export const Share = () => `
 <div class="share" data-module="share">
     <button
         type="button"
-        class="button button--icon"
+        class="button button--text-icon"
         data-button="share"
     >
         <svg
@@ -28,7 +28,7 @@ export const Share = () => `
             <title>Share</title>
             <use href="/sprite.svg#share" />
         </svg>
-        <span class="sr-only">Share</span>
+        <span>Share</span>
     </button>
 
     <div class="share__fallback" data-share-fallback>
