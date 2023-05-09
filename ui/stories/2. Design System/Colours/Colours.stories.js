@@ -22,7 +22,7 @@ export default {
 
 const style = `
 <style>
-    style + h2,
+    .stack h2:first-of-type,
     .grid:first-of-type {
         display: none;
     }
@@ -47,49 +47,51 @@ const style = `
 `;
 
 export const Colours = (args, { loaded }) => `
-    ${style}
-    ${
-        // Build story HTML from 'exported-colors.json'.
-        Object.keys(loaded)
-            .map(
-                (section) => `
-                    <h2>
-                        ${
-                            section.charAt(0).toUpperCase() +
-                            section.slice(1).replace(/-/g, ' ')
-                        }
-                    </h2>
-                    <ul class="grid">
-                        ${loaded[section]
-                            .map(
-                                (color) => `
-                                    <li>
-                                        <span
-                                            class="styled"
-                                            style="background: ${color.compiledValue}">
-                                        </span>
-                                        <span>
-                                            ${color.name}
-                                        </span>
-                                        <span></span>
-                                    </li>
-                                `,
-                            )
-                            .join('')}
-                    </ul>
-                `,
-            )
-            .join('')
-    }
-    ${
-        // Output computed RGB colours.
-        domready(function () {
-            const styledSpan = document.querySelectorAll('.styled');
-            styledSpan.forEach((span) => {
-                const computedSpan = span.nextElementSibling.nextElementSibling;
-                computedSpan.innerHTML =
-                    getComputedStyle(span).getPropertyValue('background-color');
-            });
-        })
-    }
+${style}
+<div class="stack">
+${
+    // Build story HTML from 'exported-colors.json'.
+    Object.keys(loaded)
+        .map(
+            (section) => `
+                <h2>
+                    ${
+                        section.charAt(0).toUpperCase() +
+                        section.slice(1).replace(/-/g, ' ')
+                    }
+                </h2>
+                <ul class="grid">
+                    ${loaded[section]
+                        .map(
+                            (color) => `
+                                <li>
+                                    <span
+                                        class="styled"
+                                        style="background: ${color.compiledValue}">
+                                    </span>
+                                    <span>
+                                        ${color.name}
+                                    </span>
+                                    <span></span>
+                                </li>
+                            `,
+                        )
+                        .join('')}
+                </ul>
+            `,
+        )
+        .join('')
+}
+${
+    // Output computed RGB colours.
+    domready(function () {
+        const styledSpan = document.querySelectorAll('.styled');
+        styledSpan.forEach((span) => {
+            const computedSpan = span.nextElementSibling.nextElementSibling;
+            computedSpan.innerHTML =
+                getComputedStyle(span).getPropertyValue('background-color');
+        });
+    })
+}
+</div>
 `;
