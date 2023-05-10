@@ -56,7 +56,7 @@ Dependencies.
         --grid-gap: #{$gutter-clamp-xl};
     }
 
-    // Enable 2-col on small screens (even without a media query)... though eventually the column 'min-width' will enforce stacking when we run out of space, to avoid overflows.
+    // Enable 2-col on small screens (even without a media query)... though eventually the column 'min-width' will enforce stacking when space is too limited, to avoid overflows.
     &--2-cols\@small {
         @include responsive-grid-auto-columns($min-width: 6.25rem);
     }

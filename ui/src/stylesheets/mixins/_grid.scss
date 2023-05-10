@@ -7,7 +7,7 @@ Dependencies.
 @use '../mixins/breakpoints' as *;
 
 // 1. Uses CSS Grid, with automatic responsive behaviour as per https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/.
-// 2. The min() function inside minmax() ensures we get no horizontal overflow on very narrow screens.
+// 2. The min() function inside minmax() ensures there is no horizontal overflow on very narrow screens.
 @mixin responsive-grid-auto-columns(
     $auto-layout: auto-fit,
     $min-width: $grid-item-min-width,

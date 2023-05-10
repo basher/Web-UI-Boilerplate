@@ -165,7 +165,7 @@ class Slider {
     }
 
     private showPrevNextButtons(): void {
-        // Prevent keyboard :FOCUS on slider if we're using PREV/NEXT buttons.
+        // Prevent keyboard :FOCUS on slider when displaying PREV/NEXT buttons.
         this.slider.setAttribute('tabIndex', '-1');
 
         const buttonGroup = document.createElement('div');
