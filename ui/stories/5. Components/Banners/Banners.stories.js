@@ -121,17 +121,27 @@ export const InlineBanner = () => `
     <figure class="card__media">
         <picture>
             <source
-                media="(max-width: 1024px)"
+                media="(min-width: 1024px)"
+                srcset="https://dummyimage.com/768x576/ccc/ddd"
+                type="image/webp"
+            >
+            <source
+                media="(min-width: 480px)"
+                srcset="https://dummyimage.com/400x300/ccc/ddd"
+                type="image/webp"
+            >
+            <source
+                media="(max-width: 479px)"
                 srcset="https://dummyimage.com/400x300/ccc/ddd"
                 type="image/webp"
             >
             <img
                 class="image"
-                src="https://dummyimage.com/1024x768/ccc/ddd"
+                src="https://dummyimage.com/800x600/ccc/ddd"
                 alt="[alt]"
                 loading="lazy"
-                height="768"
-                width="1024"
+                height="576"
+                width="768"
             />
         </picture>
     </figure>
