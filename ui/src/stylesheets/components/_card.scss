@@ -8,7 +8,8 @@ Dependencies.
 
 .card {
     --card-gap: #{$gutter-m};
-    --content-min-width: 30%;
+    --content-min-width: 50%;
+    --image-min-width: 250px;
 
     $this: &;
 
@@ -25,12 +26,12 @@ Dependencies.
         flex-direction: column-reverse;
     }
 
+    // Layout approach is same as sidebar layout.
     &[class*='media-inline'],
     &[class*='fullwidth'] {
         flex-wrap: wrap;
         inline-size: fit-content;
 
-        // Same approach to sidebar layout.
         #{$this}__content {
             flex-basis: 0;
             flex-grow: 999;
@@ -43,12 +44,7 @@ Dependencies.
 
         // Uses <picture> element. Set image to take up % of available space, which allows it to shrink and use the correct source.
         #{$this}__media {
-            // TODO: Try to NOT use a magic number - i.e. 43%.
-            flex-basis: min(43%, 100% - var(--card-gap));
-        }
-
-        #{$this}__content {
-            --content-min-width: 50%;
+            flex-basis: max(50% - var(--card-gap), var(--image-min-width));
         }
     }
 
