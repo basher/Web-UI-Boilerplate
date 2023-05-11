@@ -43,23 +43,28 @@ ${style}
                 <figure class="banner__media">
                     <picture>
                         <source
-                            media="(max-width: 480px)"
-                            srcset="https://dummyimage.com/480x270/ccc/ddd"
+                            media="(min-width: 1440px)"
+                            srcset="https://dummyimage.com/1920x1080/ccc/ddd"
                             type="image/webp"
                         >
                         <source
-                            media="(max-width: 768px)"
-                            srcset="https://dummyimage.com/768x432/ccc/ddd"
+                            media="(min-width: 1024px)"
+                            srcset="https://dummyimage.com/1440x810/ccc/ddd"
                             type="image/webp"
                         >
                         <source
-                            media="(max-width: 1024px)"
+                            media="(min-width: 768px)"
                             srcset="https://dummyimage.com/1024x576/ccc/ddd"
                             type="image/webp"
                         >
                         <source
-                            media="(max-width: 1440px)"
-                            srcset="https://dummyimage.com/1440x810/ccc/ddd"
+                            media="(min-width: 480px)"
+                            srcset="https://dummyimage.com/768x432/ccc/ddd"
+                            type="image/webp"
+                        >
+                        <source
+                            media="(max-width: 479px)"
+                            srcset="https://dummyimage.com/480x270/ccc/ddd"
                             type="image/webp"
                         >
                         <img
