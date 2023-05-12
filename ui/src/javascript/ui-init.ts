@@ -7,6 +7,7 @@ import Search from './modules/search';
 import Share from './modules/share';
 import Slider from './modules/slider';
 import Tabs from './modules/tabs';
+import Toggle from './modules/toggle';
 import VideoPlayer from './modules/video-player';
 import Wysiwyg from './modules/wysiwyg';
 
@@ -27,6 +28,7 @@ export const uiInit = (): void => {
     Share.start();
     Slider.start();
     Tabs.start();
+    Toggle.start();
     VideoPlayer.start();
 
     // For DEMO purposes only.
