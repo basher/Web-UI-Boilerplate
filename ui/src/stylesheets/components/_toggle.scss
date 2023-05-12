@@ -21,8 +21,7 @@ Dependencies.
 
     &[aria-checked='false'] {
         #{$this}__off {
-            background-color: $black;
-            color: $white;
+            background-color: #{rgba(var(--color-text), 0.3)};
         }
     }
 
