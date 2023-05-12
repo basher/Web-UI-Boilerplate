@@ -55,6 +55,7 @@ Print stylesheet
     }
 
     a {
+        color: inherit;
         text-decoration: underline;
 
         + a {
@@ -105,13 +106,11 @@ Print stylesheet
     ----------------------------------------------------------------------------
     */
     [class*='grid'] {
-        display: flex;
-        flex-wrap: wrap;
         list-style: none;
         padding: 0;
 
         > * {
-            margin: 5pt;
+            margin-block: 5pt;
         }
     }
 

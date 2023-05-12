@@ -1,38 +1,63 @@
 /*
 ----------------------------------------------------------------------------
-Base scaffold, containing all !default Sass variables.
-----------------------------------------------------------------------------
-*/
-@use 'base' as *;
+Sass @use needs to come before other @ rules otherwise compiler breaks.
 
-/*
-----------------------------------------------------------------------------
-Globals.
-----------------------------------------------------------------------------
-*/
-@use 'global' as *;
+Therefore, to use CSS Cascade Layers @layer rule, the Sass "meta.load-css()" mixin is needed to import Sass partials.
 
-/*
-----------------------------------------------------------------------------
-Core partials.
+See https://github.com/sass/sass/issues/3240#issuecomment-1007004992
 ----------------------------------------------------------------------------
 */
-@use 'components' as *;
-@use 'form' as *;
-@use 'layouts' as *;
+@use 'sass:meta';
 
-/*
-----------------------------------------------------------------------------
-Utilities.
-----------------------------------------------------------------------------
-*/
-@use 'utilities' as *;
+@media screen {
+    /*
+    ----------------------------------------------------------------------------
+    Base scaffold, containing all !default Sass variables.
+    ----------------------------------------------------------------------------
+    */
+    @layer base {
+        @include meta.load-css('base');
+    }
+
+    /*
+    ----------------------------------------------------------------------------
+    Globals.
+    ----------------------------------------------------------------------------
+    */
+    @layer global {
+        @include meta.load-css('global');
+    }
+
+    /*
+    ----------------------------------------------------------------------------
+    Core partials.
+    ----------------------------------------------------------------------------
+    */
+    @layer layout {
+        @include meta.load-css('layouts');
+    }
+    @layer core {
+        @include meta.load-css('form');
+        @include meta.load-css('components');
+    }
+
+    /*
+    ----------------------------------------------------------------------------
+    Utilities.
+    ----------------------------------------------------------------------------
+    */
+    @layer utilities {
+        @include meta.load-css('utilities');
+    }
+}
 
 /*
 ----------------------------------------------------------------------------
 Print styles.
-
-TODO: Figure out a clean way to wrap non-print styles in a '@media screen {}' query because '@media screen { @use ... }' is invalid.
 ----------------------------------------------------------------------------
 */
-@use 'print';
+@media print {
+    @layer print {
+        @include meta.load-css('print');
+    }
+}
