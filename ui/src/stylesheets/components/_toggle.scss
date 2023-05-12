@@ -28,7 +28,8 @@ Dependencies.
 
     &[aria-checked='true'] {
         #{$this}__on {
-            background-color: $success;
+            background-color: $brand;
+            color: $white;
         }
     }
 
