@@ -4,20 +4,41 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
+// @use '../mixins' as *;
 
 .toggle {
     $this: &;
 
+    display: inline-flex;
+    gap: $gutter-m;
+    position: relative;
+
+    &::before {
+        background-color: $text-color;
+        block-size: 100%;
+        content: '';
+        display: block;
+        inline-size: 50%;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        position: absolute;
+    }
+
     &[aria-checked='false'] {
         #{$this}--on {
-            display: none;
+            opacity: 0;
         }
     }
 
     &[aria-checked='true'] {
         #{$this}--off {
-            display: none;
+            opacity: 0;
+        }
+
+        &::before {
+            background-color: $success;
+            inset-inline-end: 0;
+            inset-inline-start: auto;
         }
     }
 }
