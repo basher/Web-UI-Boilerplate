@@ -6,6 +6,26 @@ Dependencies.
 @use '../mixins' as *;
 @use '../base' as *;
 
+@mixin validation {
+    .label,
+    .checkbox__label,
+    .radio__label {
+        padding-inline-end: $gutter-m;
+        position: relative;
+
+        &::after {
+            color: $error;
+            content: '!';
+            display: block;
+            font-size: 1em;
+            font-weight: bold;
+            inset-block-start: 0;
+            inset-inline-end: 0;
+            position: absolute;
+        }
+    }
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -26,24 +46,7 @@ Dependencies.
         // Native HTML5 validation.
         &:has(:valid:required),
         &:has(:invalid:required:focus) {
-            .label,
-            .checkbox__label,
-            .radio__label {
-                padding-inline-end: $gutter-m;
-                position: relative;
-
-                /* stylelint-disable-next-line max-nesting-depth */
-                &::after {
-                    color: $error;
-                    content: '!';
-                    display: block;
-                    font-size: 1em;
-                    font-weight: bold;
-                    inset-block-start: 0;
-                    inset-inline-end: 0;
-                    position: absolute;
-                }
-            }
+            @include validation;
         }
 
         /* stylelint-disable no-descending-specificity */
@@ -60,9 +63,18 @@ Dependencies.
         }
         /* stylelint-enable no-descending-specificity */
     }
+
+    // Errors rendered directly in HTML, or via JavaScript.
+    &__field--has-error {
+        @include validation;
+    }
+
+    &__error {
+        color: $error;
+    }
 }
 
-// Form errors.
+// Form errors message component.
 .message--error {
     + .form {
         margin-block-start: $gutter-m;
