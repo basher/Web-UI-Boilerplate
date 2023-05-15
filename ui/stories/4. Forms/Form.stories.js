@@ -114,3 +114,58 @@ export const Form = (args) => `
 </form>
 `;
 Form.storyName = 'Form (with native HTML5 validation)';
+
+export const FormJSValidation = () => `
+<div class="message message--error" role="alert">
+    <div class="stack">
+        <h2>Form errors</h2>
+        <ul>
+            <li>
+                <a href="#input-text2">Error 2...</a>
+            </li>
+            <li>
+                <a href="#input-text3">Error 3...</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<form class="form" action="#" data-module="form-validate">
+    <div class="form__field">
+        <label for="input-text1" class="label">
+            Text input1 label
+            <span aria-hidden="true">(required)</span>
+        </label>
+        <input type="text" id="input-text1" class="input" placeholder="placeholder" value="example of valid field" required />
+    </div>
+    <div class="form__field">
+        <label for="input-text2" class="label">
+            Text input2 label
+            <span aria-hidden="true">(required)</span>
+        </label>
+        <input type="text" id="input-text2" class="input" placeholder="placeholder" required />
+    </div>
+    <div class="form__field">
+        <label for="input-text3" class="label">
+            Text input3 label
+            <span aria-hidden="true">(required)</span>
+        </label>
+        <input type="text" id="input-text3" class="input" placeholder="placeholder" required />
+    </div>
+    <div class="button-group">
+        <button
+            type="submit"
+            class="button button--text button--positive"
+        >
+            Submit
+        </button>
+        <button
+            type="reset"
+            class="button button--text"
+        >
+            Reset
+        </button>
+    </div>
+</form>
+`;
+FormJSValidation.storyName = 'Form (with JS validation)';

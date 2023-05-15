@@ -1,6 +1,7 @@
 // Dependencies
 import { isBrowserSupported } from './utils/browser-support';
 
+import FormValidate from './modules/form-validate';
 import Message from './modules/message';
 import Modal from './modules/modal';
 import RangeSlider from './modules/range-slider';
@@ -22,6 +23,7 @@ export const uiInit = (): void => {
         console.warn('isBrowserSupported...', isBrowserSupported());
     }
 
+    FormValidate.start();
     Message.start();
     Wysiwyg.start();
     Modal.start();
