@@ -1,0 +1,49 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+@mixin slider-thumb {
+    background-color: $brand;
+    border: 0;
+    border-radius: 50%;
+    height: $icon-size-l;
+    width: $icon-size-l;
+}
+
+@mixin slider-track {
+    background-color: #{'rgba(var(--color-text), .3)'};
+    height: 0.25rem;
+    width: 100%;
+}
+
+.range {
+    //
+}
+
+[type='range'] {
+    appearance: none;
+    border: 0;
+    padding-inline: 0;
+
+    &::-webkit-slider-thumb {
+        @include slider-thumb;
+        -webkit-appearance: none;
+        margin-block-start: -0.75rem;
+    }
+
+    &::-webkit-slider-runnable-track {
+        @include slider-track;
+    }
+
+    &::-moz-range-thumb {
+        @include slider-thumb;
+    }
+
+    &::-moz-range-track {
+        @include slider-track;
+    }
+}
