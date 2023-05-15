@@ -1,24 +1,30 @@
 /*
 ----------------------------------------------------------------------------
-Sass @use needs to come before other @ rules otherwise compiler breaks.
+CSS custom properties.
+----------------------------------------------------------------------------
+*/
+@use 'root-css-vars' as *;
 
-Therefore, to use CSS Cascade Layers @layer rule, the Sass "meta.load-css()" mixin is needed to import Sass partials.
+/*
+----------------------------------------------------------------------------
+Base scaffold, containing all !default Sass variables.
+----------------------------------------------------------------------------
+*/
+@use 'base' as *;
 
-See https://github.com/sass/sass/issues/3240#issuecomment-1007004992
+/*
+----------------------------------------------------------------------------
+CSS Cascade Layers.
+
+1. Sass @use needs to come before other @ rules otherwise compiler breaks. Therefore, to use @layer rule, the Sass "meta.load-css()" mixin is needed to import Sass partials. See https://github.com/sass/sass/issues/3240#issuecomment-1007004992
+
+2. Define layer order.
 ----------------------------------------------------------------------------
 */
 @use 'sass:meta';
+@layer global, layout, framework, utilities, print;
 
 @media screen {
-    /*
-    ----------------------------------------------------------------------------
-    Base scaffold, containing all !default Sass variables.
-    ----------------------------------------------------------------------------
-    */
-    @layer base {
-        @include meta.load-css('base');
-    }
-
     /*
     ----------------------------------------------------------------------------
     Globals.
@@ -30,13 +36,13 @@ See https://github.com/sass/sass/issues/3240#issuecomment-1007004992
 
     /*
     ----------------------------------------------------------------------------
-    Core partials.
+    Layout & framework partials.
     ----------------------------------------------------------------------------
     */
     @layer layout {
         @include meta.load-css('layouts');
     }
-    @layer core {
+    @layer framework {
         @include meta.load-css('form');
         @include meta.load-css('components');
     }
