@@ -27,9 +27,14 @@ export const Form = (args) => `
                     : ''
             }
         </label>
-        <input type="text" id="input-text" class="input" placeholder="placeholder" ${
-            args.makeFieldsRequired === true ? 'required' : ''
-        } ${args.disabled === true ? 'disabled' : ''} />
+        <input
+            type="text"
+            id="input-text"
+            class="input"
+            placeholder="placeholder"
+            ${args.makeFieldsRequired === true ? 'required' : ''}
+            ${args.disabled === true ? 'disabled' : ''}
+        />
     </div>
     <div class="form__field">
         <label for="select" class="label">
@@ -39,10 +44,13 @@ export const Form = (args) => `
                     : ''
             }
         </label>
-        <select class="select" id="select" ${
-            args.makeFieldsRequired === true ? 'required' : ''
-        } ${args.disabled === true ? 'disabled' : ''}>
-            <option value="">choose</option>
+        <select
+            class="select"
+            id="select"
+            ${args.makeFieldsRequired === true ? 'required' : ''}
+            ${args.disabled === true ? 'disabled' : ''}
+        >
+            <option value="">choose...</option>
             <option value="1">option 1</option>
             <option value="2">option 2</option>
             <option value="3">option 3</option>
@@ -56,15 +64,22 @@ export const Form = (args) => `
                     : ''
             }
         </label>
-        <textarea id="textarea" class="textarea" ${
-            args.makeFieldsRequired === true ? 'required' : ''
-        } ${args.disabled === true ? 'disabled' : ''}></textarea>
+        <textarea
+            id="textarea"
+            class="textarea"
+            ${args.makeFieldsRequired === true ? 'required' : ''}
+            ${args.disabled === true ? 'disabled' : ''}
+        ></textarea>
     </div>
     <div class="form__field">
         <div class="checkbox">
-            <input type="checkbox" id="checkbox-1" class="checkbox__input" ${
-                args.makeFieldsRequired === true ? 'required' : ''
-            } ${args.disabled === true ? 'disabled' : ''} />
+            <input
+                type="checkbox"
+                id="checkbox-1"
+                class="checkbox__input"
+                ${args.makeFieldsRequired === true ? 'required' : ''}
+                ${args.disabled === true ? 'disabled' : ''}
+            />
             <label for="checkbox-1" class="checkbox__label">
                 Checkbox label ${
                     args.makeFieldsRequired === true
@@ -84,15 +99,25 @@ export const Form = (args) => `
                 }
             </legend>
             <div class="radio">
-                <input type="radio" id="radio-1" class="radio__input" name="radio_group" ${
-                    args.makeFieldsRequired === true ? 'required' : ''
-                } ${args.disabled === true ? 'disabled' : ''} />
+                <input
+                    type="radio"
+                    id="radio-1"
+                    class="radio__input"
+                    name="radio_group"
+                    ${args.makeFieldsRequired === true ? 'required' : ''}
+                    ${args.disabled === true ? 'disabled' : ''}
+                />
                 <label for="radio-1" class="radio__label">Radio 1 label</label>
             </div>
             <div class="radio">
-                <input type="radio" id="radio-2" class="radio__input" name="radio_group" ${
-                    args.makeFieldsRequired === true ? 'required' : ''
-                } ${args.disabled === true ? 'disabled' : ''} />
+                <input
+                    type="radio"
+                    id="radio-2"
+                    class="radio__input"
+                    name="radio_group"
+                    ${args.makeFieldsRequired === true ? 'required' : ''}
+                    ${args.disabled === true ? 'disabled' : ''}
+                />
                 <label for="radio-2" class="radio__label">Radio 2 label</label>
             </div>
         </fieldset>
@@ -133,24 +158,53 @@ export const FormJSValidation = () => `
 <form class="form" action="#" data-module="form-validate">
     <div class="form__field">
         <label for="input-text1" class="label">
-            Text input1 label
+            Text input 1 label
             <span aria-hidden="true">(required)</span>
         </label>
-        <input type="text" id="input-text1" class="input" placeholder="placeholder" value="example of valid field" required />
+        <input
+            type="text"
+            id="input-text1"
+            class="input"
+            placeholder="placeholder"
+            value="example of valid field"
+            required
+        />
     </div>
-    <div class="form__field">
+    <div class="form__field form__field--has-error">
         <label for="input-text2" class="label">
-            Text input2 label
+            Text input 2 label
             <span aria-hidden="true">(required)</span>
         </label>
-        <input type="text" id="input-text2" class="input" placeholder="placeholder" required />
+        <input
+            type="text"
+            id="input-text2"
+            class="input"
+            placeholder="placeholder"
+            required
+            aria-invalid="true"
+            aria-describedby="input-text2-error"
+        />
+        <span class="form__error" id="input-text2-error">
+            Error 2 text
+        </span>
     </div>
-    <div class="form__field">
+    <div class="form__field form__field--has-error">
         <label for="input-text3" class="label">
-            Text input3 label
+            Text input 3 label
             <span aria-hidden="true">(required)</span>
         </label>
-        <input type="text" id="input-text3" class="input" placeholder="placeholder" required />
+        <input
+            type="text"
+            id="input-text3"
+            class="input"
+            placeholder="placeholder"
+            required
+            aria-invalid="true"
+            aria-describedby="input-text3-error"
+        />
+        <span class="form__error" id="input-text3-error">
+            Error 3 text
+        </span>
     </div>
     <div class="button-group">
         <button

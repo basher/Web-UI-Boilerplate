@@ -13,7 +13,9 @@ export default {
 
 export const Textarea = (args) => `
 <label for="textarea" class="label">Textarea label</label>
-<textarea id="textarea" class="textarea" ${
-    args.disabled === true ? 'disabled' : ''
-}></textarea>
+<textarea
+    id="textarea"
+    class="textarea"
+    ${args.disabled === true ? 'disabled' : ''}
+></textarea>
 `;
