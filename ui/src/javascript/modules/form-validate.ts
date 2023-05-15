@@ -1,7 +1,7 @@
 export default class FormValidate {
-    private form: Element;
+    private form: HTMLFormElement;
 
-    constructor(form: Element) {
+    constructor(form: HTMLFormElement) {
         this.form = form;
 
         this.init();
@@ -12,7 +12,8 @@ export default class FormValidate {
             '[data-module="form-validate"]',
         );
 
-        forms.forEach((form) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        [...(forms as any)].forEach((form) => {
             const instance = new FormValidate(form);
             return instance;
         });
@@ -20,10 +21,27 @@ export default class FormValidate {
 
     private init(): void {
         this.initFormValidate();
+        this.form.addEventListener('submit', (e: Event) =>
+            this.handleSubmit(e),
+        );
     }
 
     private initFormValidate(): void {
         // Prevent native HTML5 validation.
-        this.form.setAttribute('novalidate', '');
+        this.form.noValidate = true;
+    }
+
+    private handleSubmit(e: Event): void {
+        if (!this.form.checkValidity()) {
+            e.preventDefault();
+
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            [...(this.form.elements as any)].forEach((field) => {
+                if (!field.checkValidity()) {
+                    console.log('error...', field);
+                }
+            });
+        }
+        console.log('submit');
     }
 }

@@ -32,7 +32,7 @@ class Search {
     }
 
     private init(): void {
-        this.searchForm?.addEventListener('submit', (e) =>
+        this.searchForm?.addEventListener('submit', (e: Event) =>
             this.handleSubmit(e),
         );
 

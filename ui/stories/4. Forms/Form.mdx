@@ -2,23 +2,26 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 
 # Forms
 
-## Accessibility considerations & form validation
+## Accessibility considerations
 - All form fields need a `<label>`, which is explicitly associated with the relevant field with `for | id` attribute pairs.
 - Additionally, any "grouped" form fields (e.g. `<input type="radio">`) should be enclosed in a `<fieldset>` with an appropriate `<legend>` to provide additional context for screen readers.
 
 ## Additional reading
 - [Creating accessible forms](https://webaim.org/techniques/forms/controls).
-- [Form input types for better mobile user experiences](https://css-tricks.com/better-form-inputs-for-better-mobile-user-experiences/).
 - [Accessible form validation](https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/).
+- [Form input types for better mobile user experiences](https://css-tricks.com/better-form-inputs-for-better-mobile-user-experiences/).
 
 ## Native HTML5 browser validation
-- For example, `:valid`, `:invalid` and `:required` pseudo classes.
+- For example, using `:valid`, `:invalid` and `:required` CSS pseudo classes.
 
 <Preview>
     <Story id="forms-form--form" />
 </Preview>
 
 ## JavaScript validation
+- [Better approach to form validation](https://adamsilver.io/blog/the-problem-with-live-validation-and-what-to-do-instead/) - using form `submit` rather than live inline validation.
+- Using the [Constraint Validation API](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript).
+
 <Preview>
     <Story id="forms-form--form-js-validation" />
 </Preview>

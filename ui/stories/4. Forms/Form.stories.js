@@ -144,6 +144,10 @@ export const FormJSValidation = () => `
 <div class="message message--error" role="alert">
     <div class="stack">
         <h2>Form errors</h2>
+        <p>
+            Optional error summary.<br/>
+            For example, if server posts back the form with errors, or programatically generated via JavaScript on form submit.
+        </p>
         <ul>
             <li>
                 <a href="#input-text2">Error 2...</a>
