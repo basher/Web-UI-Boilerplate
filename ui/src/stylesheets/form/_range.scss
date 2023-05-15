@@ -6,6 +6,10 @@ Dependencies.
 @use '../mixins' as *;
 @use '../base' as *;
 
+:root {
+    --slider-height: 0.25rem;
+}
+
 @mixin slider-thumb {
     background-color: $brand;
     border: 0;
@@ -15,9 +19,8 @@ Dependencies.
 }
 
 @mixin slider-track {
-    background-color: #{'rgba(var(--color-text), .3)'};
-    height: 0.25rem;
-    width: 100%;
+    background-color: #{'rgba(var(--color-text), .2)'};
+    height: var(--slider-height);
 }
 
 .range {
@@ -32,7 +35,7 @@ Dependencies.
     &::-webkit-slider-thumb {
         @include slider-thumb;
         -webkit-appearance: none;
-        margin-block-start: -0.75rem;
+        margin-block-start: calc(var(--slider-height) * -3);
     }
 
     &::-webkit-slider-runnable-track {
