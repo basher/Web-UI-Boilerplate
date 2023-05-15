@@ -37,7 +37,7 @@ export const InputEmail = (args) => `
 InputEmail.storyName = 'Email input';
 
 export const InputTel = (args) => `
-<label for="input-tel" class="label">Email input label</label>
+<label for="input-tel" class="label">Telephone input label</label>
 <input
     type="tel"
     id="input-tel"

@@ -38,7 +38,7 @@ export default class FormValidate {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             [...(this.form.elements as any)].forEach((field) => {
                 if (!field.checkValidity()) {
-                    console.log('error...', field);
+                    console.log('error...', field, field.validity);
                 }
             });
         }

@@ -37,6 +37,26 @@ export const Form = (args) => `
         />
     </div>
     <div class="form__field">
+        <label for="input-tel" class="label">
+            Telephone input label ${
+                args.makeFieldsRequired === true
+                    ? '<span aria-hidden="true">(required)</span>'
+                    : ''
+            }
+        </label>
+        <input
+            type="tel"
+            id="input-tel"
+            class="input"
+            pattern="^[0-9-+\s()]*$"
+            placeholder="tel number, including +-() and spaces"
+            title="tel number, including +-() and spaces"
+            autocomplete="tel"
+            ${args.makeFieldsRequired === true ? 'required' : ''}
+            ${args.disabled === true ? 'disabled' : ''}
+        />
+    </div>
+    <div class="form__field">
         <label for="select" class="label">
             Select label ${
                 args.makeFieldsRequired === true
@@ -55,21 +75,6 @@ export const Form = (args) => `
             <option value="2">option 2</option>
             <option value="3">option 3</option>
         </select>
-    </div>
-    <div class="form__field">
-        <label for="textarea" class="label">
-            Textarea label ${
-                args.makeFieldsRequired === true
-                    ? '<span aria-hidden="true">(required)</span>'
-                    : ''
-            }
-        </label>
-        <textarea
-            id="textarea"
-            class="textarea"
-            ${args.makeFieldsRequired === true ? 'required' : ''}
-            ${args.disabled === true ? 'disabled' : ''}
-        ></textarea>
     </div>
     <div class="form__field">
         <div class="checkbox">
@@ -146,7 +151,7 @@ export const FormJSValidation = () => `
         <h2>Form errors</h2>
         <p>
             Optional error summary.<br/>
-            For example, if server posts back the form with errors, or programatically generated via JavaScript on form submit.
+            For example, rendered in the HTML on server postback, or programatically generated via JavaScript on form submit.
         </p>
         <ul>
             <li>
@@ -170,7 +175,7 @@ export const FormJSValidation = () => `
             id="input-text1"
             class="input"
             placeholder="placeholder"
-            value="example of valid field"
+            value="example of valid field - e.g. on form postback"
             required
         />
     </div>
@@ -188,7 +193,7 @@ export const FormJSValidation = () => `
             aria-invalid="true"
             aria-describedby="input-text2-error"
         />
-        <span class="form__error" id="input-text2-error">
+        <span class="form__error" id="input-text2-error" hidden>
             Error 2 text
         </span>
     </div>
@@ -206,7 +211,7 @@ export const FormJSValidation = () => `
             aria-invalid="true"
             aria-describedby="input-text3-error"
         />
-        <span class="form__error" id="input-text3-error">
+        <span class="form__error" id="input-text3-error" hidden>
             Error 3 text
         </span>
     </div>
