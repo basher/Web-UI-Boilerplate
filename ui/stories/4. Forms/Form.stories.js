@@ -20,13 +20,25 @@ export default {
 export const Form = (args) => `
 <form class="form" action="#">
     <div class="form__field">
-        <label for="input-text" class="label">Text input label</label>
+        <label for="input-text" class="label">
+            Text input label ${
+                args.makeFieldsRequired === true
+                    ? '<span aria-hidden="true">(required)</span>'
+                    : ''
+            }
+        </label>
         <input type="text" id="input-text" class="input" placeholder="placeholder" ${
             args.makeFieldsRequired === true ? 'required' : ''
         } ${args.disabled === true ? 'disabled' : ''} />
     </div>
     <div class="form__field">
-        <label for="select" class="label">Select label</label>
+        <label for="select" class="label">
+            Select label ${
+                args.makeFieldsRequired === true
+                    ? '<span aria-hidden="true">(required)</span>'
+                    : ''
+            }
+        </label>
         <select class="select" id="select" ${
             args.makeFieldsRequired === true ? 'required' : ''
         } ${args.disabled === true ? 'disabled' : ''}>
@@ -37,7 +49,13 @@ export const Form = (args) => `
         </select>
     </div>
     <div class="form__field">
-        <label for="textarea" class="label">Textarea label</label>
+        <label for="textarea" class="label">
+            Textarea label ${
+                args.makeFieldsRequired === true
+                    ? '<span aria-hidden="true">(required)</span>'
+                    : ''
+            }
+        </label>
         <textarea id="textarea" class="textarea" ${
             args.makeFieldsRequired === true ? 'required' : ''
         } ${args.disabled === true ? 'disabled' : ''}></textarea>
@@ -47,12 +65,24 @@ export const Form = (args) => `
             <input type="checkbox" id="checkbox-1" class="checkbox__input" ${
                 args.makeFieldsRequired === true ? 'required' : ''
             } ${args.disabled === true ? 'disabled' : ''} />
-            <label for="checkbox-1" class="checkbox__label">Checkbox label</label>
+            <label for="checkbox-1" class="checkbox__label">
+                Checkbox label ${
+                    args.makeFieldsRequired === true
+                        ? '<span aria-hidden="true">(required)</span>'
+                        : ''
+                }
+            </label>
         </div>
     </div>
     <div class="form__field">
         <fieldset class="fieldset">
-            <legend class="legend">Radio legend</legend>
+            <legend class="legend">
+                Radio legend ${
+                    args.makeFieldsRequired === true
+                        ? '<span aria-hidden="true">(required)</span>'
+                        : ''
+                }
+            </legend>
             <div class="radio">
                 <input type="radio" id="radio-1" class="radio__input" name="radio_group" ${
                     args.makeFieldsRequired === true ? 'required' : ''
@@ -83,3 +113,4 @@ export const Form = (args) => `
     </div>
 </form>
 `;
+Form.storyName = 'Form (with native HTML5 validation)';
