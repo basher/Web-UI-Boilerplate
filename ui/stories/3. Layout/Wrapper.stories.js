@@ -67,7 +67,11 @@ ${style}
     ">
         Wrapper (default)
     </div>
-    <div class="wrapper ${args.skin}">
+    <div class="wrapper
+        u-${args.paddingBlock}
+        u-${args.paddingInline}
+        ${args.skin}
+    ">
         Apply a SKIN override to this wrapper
     </div>
     <div class="wrapper wrapper--s

@@ -16,7 +16,7 @@ Base scaffold, containing all !default Sass variables.
 ----------------------------------------------------------------------------
 CSS Cascade Layers.
 
-1. Sass @use needs to come before other @ rules otherwise compiler breaks. Therefore, to use @layer rule, the Sass "meta.load-css()" mixin is needed to import Sass partials. See https://github.com/sass/sass/issues/3240#issuecomment-1007004992
+1. Sass @use needs to come before other @ rules otherwise compiler breaks. Therefore, to use @layer rule, the Sass "meta.load-css()" mixin is needed to import Sass partials inside layers. See https://github.com/sass/sass/issues/3240#issuecomment-1007004992
 
 2. Define layer order.
 ----------------------------------------------------------------------------
@@ -36,7 +36,7 @@ CSS Cascade Layers.
 
     /*
     ----------------------------------------------------------------------------
-    Layout & component partials.
+    Layout & components.
     ----------------------------------------------------------------------------
     */
     @layer layout {
