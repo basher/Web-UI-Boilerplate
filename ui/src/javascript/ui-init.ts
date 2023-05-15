@@ -3,6 +3,7 @@ import { isBrowserSupported } from './utils/browser-support';
 
 import Message from './modules/message';
 import Modal from './modules/modal';
+import RangeSlider from './modules/range-slider';
 import Search from './modules/search';
 import Share from './modules/share';
 import Slider from './modules/slider';
@@ -24,6 +25,7 @@ export const uiInit = (): void => {
     Message.start();
     Wysiwyg.start();
     Modal.start();
+    RangeSlider.start();
     Search.start();
     Share.start();
     Slider.start();

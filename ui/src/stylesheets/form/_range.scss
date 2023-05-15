@@ -24,7 +24,10 @@ Dependencies.
 }
 
 .range {
-    //
+    &__bubble {
+        inline-size: fit-content;
+        margin-inline: auto;
+    }
 }
 
 [type='range'] {
