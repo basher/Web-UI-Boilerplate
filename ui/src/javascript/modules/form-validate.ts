@@ -61,7 +61,7 @@ export default class FormValidate {
 
         fieldWrapper?.classList.add(this.errorFieldClass);
         // Only add 1 error msg per field (e.g. a group of radio buttons).
-        if (!fieldWrapper?.querySelector(errorMsg.id)) {
+        if (!fieldWrapper?.querySelector(`#${errorMsg.id}`)) {
             fieldWrapper?.appendChild(errorMsg);
         }
 
