@@ -49,8 +49,8 @@ export const Form = (args) => `
             id="input-tel"
             class="input"
             pattern="^[0-9-+\s()]*$"
-            placeholder="tel number, including +-() and spaces"
-            title="tel number, including +-() and spaces"
+            placeholder="tel number, can include +-() and spaces"
+            title="tel number, can include +-() and spaces"
             autocomplete="tel"
             ${args.makeFieldsRequired === true ? 'required' : ''}
             ${args.disabled === true ? 'disabled' : ''}
@@ -196,8 +196,8 @@ export const FormServerValidation = () => `
             id="input-tel"
             class="input"
             pattern="^[0-9-+\s()]*$"
-            placeholder="tel number, including +-() and spaces"
-            title="tel number, including +-() and spaces"
+            placeholder="tel number, can include +-() and spaces"
+            title="tel number, can include +-() and spaces"
             autocomplete="tel"
             required
             aria-invalid="true"
@@ -326,8 +326,8 @@ export const FormJSValidation = () => `
             id="input-tel"
             class="input"
             pattern="^[0-9-+\s()]*$"
-            placeholder="tel number, including +-() and spaces"
-            title="tel number, including +-() and spaces"
+            placeholder="tel number, can include +-() and spaces"
+            title="tel number, can include +-() and spaces"
             autocomplete="tel"
             required
         />
