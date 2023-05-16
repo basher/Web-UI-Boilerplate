@@ -28,6 +28,13 @@ export default class FormValidate {
         this.form.addEventListener('submit', (e: Event) =>
             this.handleSubmit(e),
         );
+        this.form.addEventListener(
+            'blur',
+            (e: Event) => {
+                this.handleBlur(e);
+            },
+            true,
+        );
     }
 
     private initFormValidate(): void {
@@ -53,6 +60,18 @@ export default class FormValidate {
         }
     }
 
+    private handleBlur(e: Event): void {
+        const field = e.target as any;
+
+        // If field is valid, remove any errors.
+        if (field?.checkValidity()) {
+            if (field.type === 'submit' || field.type === 'reset') {
+                return;
+            }
+            this.removeError(field);
+        }
+    }
+
     private showError(field: any): void {
         const errorMsg = document.createElement('span');
         const fieldWrapper = field.closest('.form__field');
@@ -72,5 +91,15 @@ export default class FormValidate {
         field.setAttribute('aria-describedby', errorMsg.id);
 
         // console.log('error...', field, field.validity);
+    }
+
+    private removeError(field: any): void {
+        const fieldWrapper = field.closest('.form__field');
+        const errorMsg = fieldWrapper.querySelector(`.${this.errorMsgClass}`);
+
+        field.removeAttribute('aria-invalid');
+        field.removeAttribute('aria-describedby');
+        fieldWrapper.classList.remove(this.errorFieldClass);
+        errorMsg.remove();
     }
 }
