@@ -28,4 +28,9 @@ Dependencies.
         border-color: $error;
         border-width: $border-width-m;
     }
+
+    // ARIA.
+    &[aria-invalid='true'] {
+        border-color: $error;
+    }
 }

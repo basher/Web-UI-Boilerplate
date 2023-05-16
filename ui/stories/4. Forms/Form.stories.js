@@ -193,7 +193,7 @@ export const FormServerValidation = () => `
             aria-invalid="true"
             aria-describedby="input-text2-error"
         />
-        <span class="form__error" id="input-text2-error" hidden>
+        <span class="form__error" id="input-text2-error">
             Error 2 text
         </span>
     </div>
@@ -211,7 +211,7 @@ export const FormServerValidation = () => `
             aria-invalid="true"
             aria-describedby="input-text3-error"
         />
-        <span class="form__error" id="input-text3-error" hidden>
+        <span class="form__error" id="input-text3-error">
             Error 3 text
         </span>
     </div>
