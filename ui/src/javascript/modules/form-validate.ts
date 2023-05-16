@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
 export default class FormValidate {
     private form: HTMLFormElement;
     private errorFieldClass: string;
@@ -79,7 +80,7 @@ export default class FormValidate {
         errorMsg.classList.add(this.errorMsgClass);
         errorMsg.id =
             field.name !== '' ? `${field.name}-error` : `${field.id}-error`;
-        errorMsg.textContent = 'Error text...';
+        errorMsg.textContent = field.validationMessage;
 
         fieldWrapper?.classList.add(this.errorFieldClass);
         // Only add 1 error msg per field (e.g. a group of radio buttons).
@@ -89,8 +90,6 @@ export default class FormValidate {
 
         field.setAttribute('aria-invalid', 'true');
         field.setAttribute('aria-describedby', errorMsg.id);
-
-        // console.log('error...', field, field.validity);
     }
 
     private removeError(field: any): void {
@@ -99,7 +98,7 @@ export default class FormValidate {
 
         field.removeAttribute('aria-invalid');
         field.removeAttribute('aria-describedby');
-        fieldWrapper.classList.remove(this.errorFieldClass);
-        errorMsg.remove();
+        fieldWrapper?.classList.remove(this.errorFieldClass);
+        errorMsg?.remove();
     }
 }
