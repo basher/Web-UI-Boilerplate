@@ -145,13 +145,13 @@ export const Form = (args) => `
 `;
 Form.storyName = 'Form (with native HTML5 validation)';
 
-export const FormJSValidation = () => `
+export const FormServerValidation = () => `
 <div class="message message--error" role="alert">
     <div class="stack">
         <h2>Form errors</h2>
         <p>
             Optional error summary.<br/>
-            For example, rendered in the HTML on server postback, or programatically generated via JavaScript on form submit.
+            For example, rendered in the HTML on server postback.
         </p>
         <ul>
             <li>
@@ -164,7 +164,7 @@ export const FormJSValidation = () => `
     </div>
 </div>
 
-<form class="form" action="#" data-module="form-validate">
+<form class="form" action="#">
     <div class="form__field">
         <label for="input-text1" class="label">
             Text input 1 label
@@ -214,6 +214,65 @@ export const FormJSValidation = () => `
         <span class="form__error" id="input-text3-error" hidden>
             Error 3 text
         </span>
+    </div>
+    <div class="button-group">
+        <button
+            type="submit"
+            class="button button--text button--positive"
+        >
+            Submit
+        </button>
+        <button
+            type="reset"
+            class="button button--text"
+        >
+            Reset
+        </button>
+    </div>
+</form>
+`;
+FormServerValidation.storyName = 'Form (with server-side validation)';
+
+export const FormJSValidation = () => `
+<form class="form" action="#" data-module="form-validate">
+    <div class="form__field">
+        <label for="input-text1" class="label">
+            Text input 1 label
+            <span aria-hidden="true">(required)</span>
+        </label>
+        <input
+            type="text"
+            id="input-text1"
+            class="input"
+            placeholder="placeholder"
+            required
+        />
+    </div>
+    <div class="form__field">
+        <label for="input-text2" class="label">
+            Text input 2 label
+            <span aria-hidden="true">(required)</span>
+        </label>
+        <input
+            type="text"
+            id="input-text2"
+            class="input"
+            placeholder="placeholder"
+            required
+        />
+    </div>
+    <div class="form__field">
+        <label for="input-text3" class="label">
+            Text input 3 label
+            <span aria-hidden="true">(required)</span>
+        </label>
+        <input
+            type="text"
+            id="input-text3"
+            class="input"
+            placeholder="placeholder"
+            required
+        />
     </div>
     <div class="button-group">
         <button

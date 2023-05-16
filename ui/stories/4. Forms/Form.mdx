@@ -5,6 +5,7 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 ## Accessibility considerations
 - All form fields need a `<label>`, which is explicitly associated with the relevant field with `for | id` attribute pairs.
 - Additionally, any "grouped" form fields (e.g. `<input type="radio">`) should be enclosed in a `<fieldset>` with an appropriate `<legend>` to provide additional context for screen readers.
+- Invalid fields should be identified with `aria-invalid="true"` and `aria-describedby` which references the `id` of appropriate error text.
 
 ## Additional reading
 - [Creating accessible forms](https://webaim.org/techniques/forms/controls).
@@ -17,6 +18,13 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 
 <Preview>
     <Story id="forms-form--form" />
+</Preview>
+
+## Server-side validation
+- It can be a good idea to add an additional error summary block to list all the form errors, with anchors to each field.
+
+<Preview>
+    <Story id="forms-form--form-server-validation" />
 </Preview>
 
 ## JavaScript validation
