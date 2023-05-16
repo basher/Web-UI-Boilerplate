@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export default class FormValidate {
     private form: HTMLFormElement;
     private errorFieldClass: string;
@@ -16,7 +17,6 @@ export default class FormValidate {
             '[data-module="form-validate"]',
         );
 
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         [...(forms as any)].forEach((form) => {
             const instance = new FormValidate(form);
             return instance;
@@ -39,18 +39,21 @@ export default class FormValidate {
         if (!this.form.checkValidity()) {
             e.preventDefault();
 
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            [...(this.form.elements as any)].forEach(
-                (field: HTMLFormElement) => {
-                    if (!field.checkValidity()) {
-                        this.showError(field);
-                    }
-                },
-            );
+            [...(this.form.elements as any)].forEach((field) => {
+                if (!field.checkValidity()) {
+                    this.showError(field);
+                }
+            });
+
+            // Focus on 1st error.
+            const firstError = this.form.querySelector(
+                '[aria-invalid]',
+            ) as HTMLElement;
+            firstError?.focus();
         }
     }
 
-    private showError(field: HTMLFormElement): void {
+    private showError(field: any): void {
         const errorMsg = document.createElement('span');
         const fieldWrapper = field.closest('.form__field');
 
