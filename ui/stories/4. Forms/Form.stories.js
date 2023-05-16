@@ -127,6 +127,7 @@ export const Form = (args) => `
             </div>
         </fieldset>
     </div>
+
     <div class="button-group">
         <button
             type="submit"
@@ -155,10 +156,16 @@ export const FormServerValidation = () => `
         </p>
         <ul>
             <li>
-                <a href="#input-text2">Error 2...</a>
+                <a href="#input-tel">Error text... tel</a>
             </li>
             <li>
-                <a href="#input-text3">Error 3...</a>
+                <a href="#select">Error text... select</a>
+            </li>
+            <li>
+                <a href="#checkbox-1">Error text... checkbox</a>
+            </li>
+            <li>
+                <a href="#radio-1">Error text... radio</a>
             </li>
         </ul>
     </div>
@@ -180,41 +187,102 @@ export const FormServerValidation = () => `
         />
     </div>
     <div class="form__field form__field--has-error">
-        <label for="input-text2" class="label">
-            Text input 2 label
+        <label for="input-tel" class="label">
+            Telephone input label
             <span aria-hidden="true">(required)</span>
         </label>
         <input
-            type="text"
-            id="input-text2"
+            type="tel"
+            id="input-tel"
             class="input"
-            placeholder="placeholder"
+            pattern="^[0-9-+\s()]*$"
+            placeholder="tel number, including +-() and spaces"
+            title="tel number, including +-() and spaces"
+            autocomplete="tel"
             required
             aria-invalid="true"
-            aria-describedby="input-text2-error"
+            aria-describedby="input-tel-error"
         />
-        <span class="form__error" id="input-text2-error">
-            Error 2 text
+        <span class="form__error" id="input-tel-error">
+            Error text...
         </span>
     </div>
     <div class="form__field form__field--has-error">
-        <label for="input-text3" class="label">
-            Text input 3 label
+        <label for="select" class="label">
+            Select label
             <span aria-hidden="true">(required)</span>
         </label>
-        <input
-            type="text"
-            id="input-text3"
-            class="input"
-            placeholder="placeholder"
+        <select
+            class="select"
+            id="select"
             required
             aria-invalid="true"
-            aria-describedby="input-text3-error"
-        />
-        <span class="form__error" id="input-text3-error">
-            Error 3 text
+            aria-describedby="input-tel-error"
+        >
+            <option value="">choose...</option>
+            <option value="1">option 1</option>
+            <option value="2">option 2</option>
+            <option value="3">option 3</option>
+        </select>
+        <span class="form__error" id="select-error">
+            Error text...
         </span>
     </div>
+    <div class="form__field form__field--has-error">
+        <div class="checkbox">
+            <input
+                type="checkbox"
+                id="checkbox-1"
+                class="checkbox__input"
+                required
+                aria-invalid="true"
+                aria-describedby="checkbox-1-error"
+            />
+            <label for="checkbox-1" class="checkbox__label">
+                Checkbox label
+                <span aria-hidden="true">(required)</span>
+            </label>
+        </div>
+        <span class="form__error" id="checkbox-1-error">
+            Error text...
+        </span>
+    </div>
+    <div class="form__field form__field--has-error">
+        <fieldset class="fieldset">
+            <legend class="legend">
+                Radio legend
+                <span aria-hidden="true">(required)</span>
+            </legend>
+            <div class="radio">
+                <input
+                    type="radio"
+                    id="radio-1"
+                    class="radio__input"
+                    name="radio_group"
+                    required
+                    aria-invalid="true"
+                    aria-describedby="radio_group-error"
+                />
+                <label for="radio-1" class="radio__label">Radio 1 label</label>
+            </div>
+            <div class="radio">
+                <input
+                    type="radio"
+                    id="radio-2"
+                    class="radio__input"
+                    name="radio_group"
+                    required
+                    aria-invalid="true"
+                    aria-describedby="radio_group-error"
+                />
+                <label for="radio-2" class="radio__label">Radio 2 label</label>
+            </div>
+        </fieldset>
+        <span class="form__error" id="radio_group-error">
+            Error text...
+        </span>
+    </div>
+
     <div class="button-group">
         <button
             type="submit"
@@ -249,31 +317,80 @@ export const FormJSValidation = () => `
         />
     </div>
     <div class="form__field">
-        <label for="input-text2" class="label">
-            Text input 2 label
+        <label for="input-tel" class="label">
+            Telephone input label
             <span aria-hidden="true">(required)</span>
         </label>
         <input
-            type="text"
-            id="input-text2"
+            type="tel"
+            id="input-tel"
             class="input"
-            placeholder="placeholder"
+            pattern="^[0-9-+\s()]*$"
+            placeholder="tel number, including +-() and spaces"
+            title="tel number, including +-() and spaces"
+            autocomplete="tel"
             required
         />
     </div>
     <div class="form__field">
-        <label for="input-text3" class="label">
-            Text input 3 label
+        <label for="select" class="label">
+            Select label
             <span aria-hidden="true">(required)</span>
         </label>
-        <input
-            type="text"
-            id="input-text3"
-            class="input"
-            placeholder="placeholder"
+        <select
+            class="select"
+            id="select"
             required
-        />
+        >
+            <option value="">choose...</option>
+            <option value="1">option 1</option>
+            <option value="2">option 2</option>
+            <option value="3">option 3</option>
+        </select>
     </div>
+    <div class="form__field">
+        <div class="checkbox">
+            <input
+                type="checkbox"
+                id="checkbox-1"
+                class="checkbox__input"
+                required
+            />
+            <label for="checkbox-1" class="checkbox__label">
+                Checkbox label
+                <span aria-hidden="true">(required)</span>
+            </label>
+        </div>
+    </div>
+    <div class="form__field">
+        <fieldset class="fieldset">
+            <legend class="legend">
+                Radio legend
+                <span aria-hidden="true">(required)</span>
+            </legend>
+            <div class="radio">
+                <input
+                    type="radio"
+                    id="radio-1"
+                    class="radio__input"
+                    name="radio_group"
+                    required
+                />
+                <label for="radio-1" class="radio__label">Radio 1 label</label>
+            </div>
+            <div class="radio">
+                <input
+                    type="radio"
+                    id="radio-2"
+                    class="radio__input"
+                    name="radio_group"
+                    required
+                />
+                <label for="radio-2" class="radio__label">Radio 2 label</label>
+            </div>
+        </fieldset>
+    </div>
+
     <div class="button-group">
         <button
             type="submit"
