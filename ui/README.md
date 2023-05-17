@@ -1,4 +1,4 @@
-# WebUI Boilerplate - 'UI' Code Directory
+# Web UI Boilerplate - 'UI' Code Directory
 
 ## Useful commands
 From `ui` directory:
