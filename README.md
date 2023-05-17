@@ -1,5 +1,5 @@
 # WebUI Boilerplate
-UI boilerplate and component library for websites/webapps.
+Accessible UI boilerplate and component library for websites/webapps.
 - Using HTML, CSS (Sass) and vanilla JavaScript (TypeScript).
 - Powered by Storybook.
 - Bundled by Parcel.
