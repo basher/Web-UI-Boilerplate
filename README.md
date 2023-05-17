@@ -1,6 +1,6 @@
 # WebUI Boilerplate
 Accessible UI boilerplate and component library for websites/webapps.
-- Using HTML, CSS (Sass) and vanilla JavaScript (TypeScript).
+- Using semantic HTML, CSS (Sass), vanilla JavaScript (TypeScript) and ARIA.
 - Powered by Storybook.
 - Bundled by Parcel.
 
