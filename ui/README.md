@@ -1,11 +1,17 @@
-# Web UI Boilerplate - 'UI' Code Directory
+# Web UI Boilerplate - the actual 'UI' code
 
 ## Useful commands
 From `ui` directory:
 - `yarn reset` - Deletes `node_modules` folder and reinstalls with `yarn install`.
-- `yarn start` -  Compiles and watches files, for UI development. It also sets the port for HMR (Hot Module Reloading) to work in Storybook.
-- `yarn storybook` - Launches Storybook/HTML. Run this in a different terminal instance to Parcel.
+- `yarn start` - Installs Node modules (if not already installed), launches Parcel bundler to compile/watch files, and sets the port for HMR (Hot Module Reloading) to work in Storybook.
+- `yarn storybook` - Launches Storybook/HTML component library. Run this in a different terminal instance to Parcel.
 - `yarn build` - Compiles and minifies files, for production and local dev environments.
+
+## Code authoring guidelines & accessibility
+- All UI components are authored with **semantic HTML5** markup, which is **progressively enhanced** with JavaScript and `WAI-ARIA` as appropriate.
+- The HTML markup uses the `BEM` methodology to provide CSS namespacing.
+- Visual styling is minimal & unopinionated.
+- The CSS is authored with as little code as necessary, making full use of the CSS cascade and inheritance.
 
 ## Linting
 This boilerplate provides lint configurations for both JavaScript and CSS.

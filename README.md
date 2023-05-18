@@ -17,8 +17,8 @@ Just plain vanilla code. 😜
 Run both the following commands in **separate terminal instances** in order to be able to compile CSS/JavaScript and test the UI in Storybook.
 
 From `ui` directory:
-- `yarn start` - installs Node modules (if not already installed) and launches Parcel bundler.
-- `yarn storybook` - launches Storybook/HTML.
+- `yarn start` - Installs Node modules (if not already installed) and launches Parcel bundler.
+- `yarn storybook` - Launches Storybook/HTML component library.
 
 ## Bundle for production without watch
 From `ui` directory:
