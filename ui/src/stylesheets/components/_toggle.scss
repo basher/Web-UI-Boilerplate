@@ -19,6 +19,10 @@ Dependencies.
         padding: $gutter-s;
     }
 
+    &:active {
+        transform: none;
+    }
+
     &[aria-checked='false'] {
         #{$this}__off {
             background-color: #{rgba(var(--color-text), 0.3)};

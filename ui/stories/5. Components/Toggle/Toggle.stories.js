@@ -2,7 +2,7 @@
 import docs from './Toggle.mdx';
 
 export default {
-    title: 'Components/Toggle',
+    title: 'Components/Toggle (or Switch)',
     parameters: {
         docs: {
             page: docs,
@@ -25,7 +25,7 @@ export const Toggle = () => `
     <span class="toggle__off" aria-hidden="true">off</span>
 </button>
 `;
-Toggle.storyName = 'Toggle button (or switch)';
+Toggle.storyName = 'Toggle';
 
 export const ToggleWithLabel = () => `
 <button
