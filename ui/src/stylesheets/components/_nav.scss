@@ -1,0 +1,25 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+.nav {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $gutter-m;
+    }
+
+    &__link {
+        @include focus;
+        color: inherit;
+    }
+
+    [aria-current] {
+        color: $brand;
+        font-weight: bold;
+    }
+}
