@@ -1,6 +1,7 @@
 // Dependencies
 import { isBrowserSupported } from './utils/browser-support';
 
+import Disclosure from './modules/disclosure';
 import FormValidate from './modules/form-validate';
 import Message from './modules/message';
 import Modal from './modules/modal';
@@ -23,6 +24,7 @@ export const uiInit = (): void => {
         console.warn('isBrowserSupported...', isBrowserSupported());
     }
 
+    Disclosure.start();
     FormValidate.start();
     Message.start();
     Wysiwyg.start();
