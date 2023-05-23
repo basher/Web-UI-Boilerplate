@@ -42,11 +42,12 @@ export const disclosure = (arg: Disclosure): void => {
         return true;
     });
 
-    // Bind ESC key to hide content.
+    // Bind ESC key to hide content, and set keyboard focus to the button.
     if (arg.bindEscapeKey) {
         document.addEventListener('keyup', (e: KeyboardEvent) => {
             if (e.code === 'Escape') {
                 arg.button.setAttribute('aria-expanded', 'false');
+                arg.button.focus();
                 arg.content?.classList.add(toggleClassname);
             }
         });
