@@ -11,10 +11,17 @@ export default {
             type: 'stable',
         },
     },
+    argTypes: {
+        bindEscapeKey: { control: 'boolean' },
+    },
 };
 
-export const Disclosure = () => `
-<div class="disclosure" data-module="disclosure">
+export const Disclosure = (args) => `
+<div
+    class="disclosure"
+    data-module="disclosure"
+    ${args.bindEscapeKey === true ? 'data-disclosure-escape-key' : ''}
+>
     <button
         type="button"
         class="button button--text"

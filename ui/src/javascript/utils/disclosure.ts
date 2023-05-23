@@ -5,6 +5,7 @@ import { randomString } from './random-string';
  *
  * @param {HTMLElement} button - usually a <button>.
  * @param {HTMLElement} content - usually a <div> whose content is shown|hidden.
+ * @param {boolean} bindEscapeKey - define if ESC key should hide content.
  *
  * @return {void}
  *
@@ -15,6 +16,7 @@ import { randomString } from './random-string';
 interface Disclosure {
     button: HTMLElement;
     content: HTMLElement | null;
+    bindEscapeKey?: boolean;
 }
 export const disclosure = (arg: Disclosure): void => {
     const toggleClassname = 'u-hidden';
@@ -39,4 +41,14 @@ export const disclosure = (arg: Disclosure): void => {
 
         return true;
     });
+
+    // Bind ESC key to hide content.
+    if (arg.bindEscapeKey) {
+        document.addEventListener('keyup', (e: KeyboardEvent) => {
+            if (e.code === 'Escape') {
+                arg.button.setAttribute('aria-expanded', 'false');
+                arg.content?.classList.add(toggleClassname);
+            }
+        });
+    }
 };

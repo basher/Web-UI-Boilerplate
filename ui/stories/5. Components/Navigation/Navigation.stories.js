@@ -43,6 +43,7 @@ export const HamburgerNavigation = () => `
     id="navigation"
     aria-label="Primary"
     data-module="disclosure"
+    data-disclosure-escape-key
 >
     <button
         type="button"

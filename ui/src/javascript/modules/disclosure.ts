@@ -36,9 +36,13 @@ export default class Disclosure {
         // Show/hide content.
         const button = this.btnDisclosure as HTMLElement;
         const content = this.content as HTMLElement;
+        const bindEscapeKey = this.disclosure.hasAttribute(
+            'data-disclosure-escape-key',
+        );
         disclosure({
             button,
             content,
+            bindEscapeKey,
         });
     }
 }
