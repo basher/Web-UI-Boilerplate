@@ -34,14 +34,23 @@ Dependencies.
     &.nav--hamburger {
         position: relative;
 
+        &.is-js-enabled {
+            #{$this}--hamburger__button {
+                display: inline-flex;
+            }
+
+            #{$this}__list {
+                background-color: $background-color;
+                inset-block-end: auto;
+                position: absolute;
+                z-index: z('popup');
+            }
+        }
+
         #{$this}__list {
-            background-color: $background-color;
             border: $border-width-s solid;
             flex-direction: column;
-            inset-block-end: auto;
             padding: $gutter-m;
-            position: absolute;
-            z-index: z('popup');
         }
     }
 
@@ -58,12 +67,6 @@ Dependencies.
             .icon:first-of-type {
                 display: none;
             }
-        }
-    }
-
-    &.is-js-enabled {
-        #{$this}--hamburger__button {
-            display: inline-flex;
         }
     }
 }
