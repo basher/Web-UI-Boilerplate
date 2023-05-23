@@ -14,13 +14,17 @@ export default {
 };
 
 export const Navigation = () => `
-<nav class="nav" aria-label="Primary">
+<nav
+    class="nav"
+    id="navigation"
+    aria-label="Primary"
+>
     <ul class="nav__list">
         <li class="nav__item">
             <a class="nav__link" href="#">Nav link</a>
         </li>
         <li class="nav__item">
-            <a class="nav__link" href="#" aria-current="page">Current page</a>
+            <a class="nav__link" href="#" aria-current="page">Nav link = current page</a>
         </li>
         <li class="nav__item">
             <a class="nav__link" href="#">Nav link</a>
@@ -34,7 +38,57 @@ export const Navigation = () => `
 Navigation.storyName = 'Simple navigation';
 
 export const HamburgerNavigation = () => `
-TODO: hamburger...
+<nav
+    class="nav nav--hamburger"
+    id="navigation"
+    aria-label="Primary"
+    data-module="disclosure"
+>
+    <button
+        type="button"
+        class="button button--icon nav--hamburger__button"
+        data-button="disclosure"
+    >
+        <svg
+            aria-hidden="true"
+            focusable="false"
+            class="icon"
+        >
+            <title>Menu</title>
+            <use href="/sprite.svg#hamburger" />
+        </svg>
+        <svg
+            aria-hidden="true"
+            focusable="false"
+            class="icon"
+        >
+            <title>Menu</title>
+            <use href="/sprite.svg#close" />
+        </svg>
+        <span class="sr-only">Menu</span>
+    </button>
+
+    <ul
+        class="nav__list"
+        data-disclosure
+    >
+        <li class="nav__item">
+            <a class="nav__link" href="#">Nav link</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#" aria-current="page">Nav link = current page</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#">Nav link</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#">Nav link</a>
+        </li>
+    </ul>
+</nav>
+
+<br/>
+<p>Some content below the navigation, to test the CSS positioning & stacking context of the navigation when it is shown.</p>
 `;
 HamburgerNavigation.storyName = 'Hamburger navigation';
 

@@ -4,10 +4,10 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 - All navigation components use the native HTML `<nav>` element, with 1 or more lists of anchors/links.
 
 ## Accessibility considerations
+- The navigation has a unique `id` so it can be directly accessed via [skiplinks](/story/components-skiplinks--skiplinks).
 - The current/active page link is identified by [aria-current](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current).
-
-### Useful articles
-- .
+- Don't use [ARIA menu role](https://adrianroselli.com/2017/10/dont-use-aria-menu-roles-for-site-nav.html) for site navigation.
+- Also see [Inclusive Components](https://inclusive-components.design/menus-menu-buttons/).
 
 ## Simple navigation
 <Preview>
@@ -15,6 +15,9 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 </Preview>
 
 ## Hamburger navigation
+- Uses the [disclosure](/story/components-disclosure--disclosure) pattern to show/hide the navigation.
+- The disclosure button is placed inside the navigation region, allowing screen reader users who move to the `<nav>` using a shortcut to access the button directly.
+
 <Preview>
     <Story id="components-navigation--hamburger-navigation" />
 </Preview>
