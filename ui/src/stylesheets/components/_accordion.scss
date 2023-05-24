@@ -35,7 +35,7 @@ Dependencies.
         }
 
         .icon {
-            transition: transform 150ms ease-in-out;
+            transition: transform $animation-fast;
         }
 
         [open] {

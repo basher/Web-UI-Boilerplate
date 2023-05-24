@@ -42,7 +42,7 @@ Dependencies.
             #{$this}__list {
                 background-color: $background-color;
                 border: $border-width-s solid;
-                inset-block-end: auto;
+                inset-block-start: 100%;
                 padding: $gutter-m;
                 position: absolute;
                 z-index: z('popup');
@@ -66,6 +66,40 @@ Dependencies.
         &[aria-expanded='true'] {
             .icon:first-of-type {
                 display: none;
+            }
+        }
+    }
+
+    // Disclosure navigation (with dropdowns).
+    &--disclosure {
+        > .nav__list {
+            align-items: center;
+        }
+
+        .icon {
+            transition: transform $animation-fast;
+        }
+    }
+
+    #{$this}__list--dropdown {
+        background-color: $background-color;
+        border: $border-width-s solid;
+        flex-direction: column;
+        inset-block-start: 100%;
+        padding: $gutter-m;
+        position: absolute;
+        z-index: z('popup');
+    }
+
+    #{$this}-item--has-dropdown {
+        align-items: center;
+        display: flex;
+        gap: $gutter-s;
+        position: relative;
+
+        [aria-expanded='true'] {
+            .icon {
+                transform: rotate(180deg);
             }
         }
     }

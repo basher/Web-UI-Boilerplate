@@ -32,6 +32,9 @@ export const Navigation = () => `
         <li class="nav__item">
             <a class="nav__link" href="#">Nav link</a>
         </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#">Nav link</a>
+        </li>
     </ul>
 </nav>
 `;
@@ -94,9 +97,114 @@ export const HamburgerNavigation = () => `
 HamburgerNavigation.storyName = 'Hamburger navigation';
 
 export const DisclosureNavigation = () => `
-TODO: disclosure...
+<nav
+    class="nav nav--disclosure"
+    id="navigation"
+    aria-label="Primary"
+>
+    <ul class="nav__list">
+        <li
+            class="nav__item nav-item--has-dropdown"
+            data-module="disclosure"
+            data-disclosure-escape-key
+        >
+            <a class="nav__link" href="#">Nav link with dropdown</a>
+
+            <button
+                type="button"
+                class="button button--icon"
+                data-disclosure-button
+            >
+                <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    class="icon"
+                >
+                    <title>Menu</title>
+                    <use href="/sprite.svg#down" />
+                </svg>
+                <span class="sr-only">[Nav link] dropdown</span>
+            </button>
+
+            <ul
+                class="nav__list nav__list--dropdown"
+                data-disclosure-content
+            >
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Nested nav link</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Nested nav link with longer name</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Nested nav link</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Nested nav link</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav__item">
+            <a class="nav__link" href="#" aria-current="page">Nav link = current page</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#">Nav link</a>
+        </li>
+
+        <li
+            class="nav__item nav-item--has-dropdown"
+            data-module="disclosure"
+            data-disclosure-escape-key
+        >
+            <a class="nav__link" href="#">Nav link with dropdown</a>
+
+            <button
+                type="button"
+                class="button button--icon"
+                data-disclosure-button
+            >
+                <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    class="icon"
+                >
+                    <title>Menu</title>
+                    <use href="/sprite.svg#down" />
+                </svg>
+                <span class="sr-only">[Nav link] dropdown</span>
+            </button>
+
+            <ul
+                class="nav__list nav__list--dropdown"
+                data-disclosure-content
+            >
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Nested nav link</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Nested nav link with longer name</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Nested nav link</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Nested nav link</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav__item">
+            <a class="nav__link" href="#">Nav link</a>
+        </li>
+    </ul>
+</nav>
+
+<br/>
+<p>Some content below the navigation, to test the CSS positioning & stacking context of the navigation dropdowns when they are shown.</p>
 `;
-DisclosureNavigation.storyName = 'Disclosure navigation (with top-level links)';
+DisclosureNavigation.storyName =
+    'Disclosure navigation (with top-level links and dropdown menus)';
 
 export const MegaNavigation = () => `
 TODO: mega-dropdown...

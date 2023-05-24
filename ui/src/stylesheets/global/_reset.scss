@@ -79,7 +79,7 @@ table {
 img {
     @media (prefers-color-scheme: dark) {
         opacity: 0.8;
-        transition: opacity 0.5s ease-in-out;
+        transition: opacity $animation-slow;
 
         &:hover {
             opacity: 1;

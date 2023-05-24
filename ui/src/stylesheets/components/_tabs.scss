@@ -56,7 +56,7 @@ Dependencies.
     @include focus($inset: true);
     border-block-end: $border-width-l solid $white;
     text-decoration: none;
-    transition: border 150ms ease-in-out;
+    transition: border $animation-fast;
 
     &[aria-selected='true'] {
         border-color: $brand;
