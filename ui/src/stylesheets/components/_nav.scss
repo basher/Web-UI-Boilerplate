@@ -31,7 +31,7 @@ Dependencies.
     }
 
     // Hamburger navigation.
-    &.nav--hamburger {
+    &--hamburger {
         position: relative;
 
         &.is-js-enabled {
@@ -41,16 +41,16 @@ Dependencies.
 
             #{$this}__list {
                 background-color: $background-color;
+                border: $border-width-s solid;
                 inset-block-end: auto;
+                padding: $gutter-m;
                 position: absolute;
                 z-index: z('popup');
             }
         }
 
         #{$this}__list {
-            border: $border-width-s solid;
             flex-direction: column;
-            padding: $gutter-m;
         }
     }
 
