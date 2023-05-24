@@ -96,13 +96,7 @@ HamburgerNavigation.storyName = 'Hamburger navigation';
 export const DisclosureNavigation = () => `
 TODO: disclosure...
 `;
-DisclosureNavigation.storyName = 'Disclosure navigation';
-
-export const HybridDisclosureNavigation = () => `
-TODO: hybrid disclosure...
-`;
-HybridDisclosureNavigation.storyName =
-    'Hybrid disclosure navigation (with top-level links)';
+DisclosureNavigation.storyName = 'Disclosure navigation (with top-level links)';
 
 export const MegaNavigation = () => `
 TODO: mega-dropdown...
