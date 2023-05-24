@@ -9,9 +9,11 @@ export default class Disclosure {
     constructor(disclosure: Element) {
         this.disclosure = disclosure;
         this.btnDisclosure = this.disclosure.querySelector(
-            '[data-button="disclosure"]',
+            '[data-disclosure-button]',
         );
-        this.content = this.disclosure.querySelector('[data-disclosure]');
+        this.content = this.disclosure.querySelector(
+            '[data-disclosure-content]',
+        );
 
         this.init();
     }

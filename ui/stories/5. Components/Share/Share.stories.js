@@ -18,7 +18,7 @@ export const Share = () => `
     <button
         type="button"
         class="button button--text-icon"
-        data-button="share"
+        data-share-button
     >
         <svg
             aria-hidden="true"
@@ -42,7 +42,7 @@ export const Share = () => `
         <button
             type="button"
             class="button button--text button--secondary"
-            data-button="copy"
+            data-share-copy
         >
             Copy
         </button>

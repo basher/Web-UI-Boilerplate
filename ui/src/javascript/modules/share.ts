@@ -11,8 +11,8 @@ export default class Share {
 
     constructor(share: Element) {
         this.share = share;
-        this.btnShare = this.share.querySelector('[data-button="share"]');
-        this.btnCopy = this.share.querySelector('[data-button="copy"]');
+        this.btnShare = this.share.querySelector('[data-share-button]');
+        this.btnCopy = this.share.querySelector('[data-share-copy]');
         this.shareFallback = this.share.querySelector('[data-share-fallback]');
         this.shareInput = this.share.querySelector(
             '[data-share-input]',

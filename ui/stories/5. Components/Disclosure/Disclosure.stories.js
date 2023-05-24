@@ -25,12 +25,12 @@ export const Disclosure = (args) => `
     <button
         type="button"
         class="button button--text"
-        data-button="disclosure"
+        data-disclosure-button
     >
         <span>Show / Hide</span>
     </button>
 
-    <div data-disclosure>
+    <div data-disclosure-content>
         <p>Content to be shown/hidden.</p>
         <p>Use this component when <code>accordion</code> or <code>tabs</code> components cannot be used.</p>
     </div>

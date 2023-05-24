@@ -48,7 +48,7 @@ export const HamburgerNavigation = () => `
     <button
         type="button"
         class="button button--icon nav--hamburger__button"
-        data-button="disclosure"
+        data-disclosure-button
     >
         <svg
             aria-hidden="true"
@@ -71,7 +71,7 @@ export const HamburgerNavigation = () => `
 
     <ul
         class="nav__list"
-        data-disclosure
+        data-disclosure-content
     >
         <li class="nav__item">
             <a class="nav__link" href="#">Nav link</a>
