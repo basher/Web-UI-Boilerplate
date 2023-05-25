@@ -11,20 +11,21 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
     - For simplicity, use `flex-wrap` to make the primary navigation items wrap onto a new row when space is limited.
     - And/or add `overflow-x: auto` to the parent container to allow horizontal scrolling.
     - And/or add `media` or `container` queries to stack the navigation vertically when space is limited.
-    - And/or use the hamburger navigaton pattern, as shown further down.
+    - And/or use the hamburger navigaton pattern(s), as shown further down.
+    - And/or use JavaScript to handle *"fly-in"* or *"slide-in/out"* behaviour.
 
 ## Simple navigation
 <Preview>
     <Story id="components-navigation--navigation" />
 </Preview>
 
-## Hamburger navigation
+## Hamburger (with simple navigation)
 - Uses the [disclosure](/story/components-disclosure--disclosure) pattern to show/hide the navigation.
 - The `ESC` key and clicking outside the navigation both close the hamburger navigation.
 - The disclosure button is placed **inside** the navigation region, allowing screen reader users who move to the `<nav>` using a shortcut to access the button directly.
 
 <Preview>
-    <Story id="components-navigation--hamburger-navigation" />
+    <Story id="components-navigation--hamburger-simple-navigation" />
 </Preview>
 
 ## Disclosure navigation (with top-level links and dropdown menus)
@@ -35,6 +36,12 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 
 <Preview>
     <Story id="components-navigation--disclosure-navigation" />
+</Preview>
+
+## Hamburger (with disclosure navigation)
+
+<Preview>
+    <Story id="components-navigation--hamburger-disclosure-navigation" />
 </Preview>
 
 ## Mega-dropdown navigation
