@@ -9,8 +9,6 @@ Dependencies.
 .flex {
     --flex-gap: #{$gutter-m};
 
-    $this: &;
-
     display: flex;
     flex-wrap: wrap;
     gap: var(--flex-gap, 1rem);

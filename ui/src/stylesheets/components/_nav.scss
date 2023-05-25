@@ -7,8 +7,6 @@ Dependencies.
 @use '../mixins' as *;
 
 .nav {
-    $this: &;
-
     &__list {
         display: flex;
         flex-wrap: wrap;
@@ -41,7 +39,7 @@ Dependencies.
         }
     }
 
-    #{$this}__list--dropdown {
+    .nav__list--dropdown {
         background-color: $background-color;
         border: $border-width-s solid;
         flex-direction: column;
@@ -51,7 +49,7 @@ Dependencies.
         z-index: z('popup');
     }
 
-    #{$this}__item--has-dropdown {
+    .nav__item--has-dropdown {
         align-items: center;
         display: flex;
         gap: $gutter-s;
@@ -65,46 +63,7 @@ Dependencies.
     }
 
     // Hamburger navigation.
-    &--hamburger {
-        position: relative;
-
-        &.is-js-enabled {
-            #{$this}--hamburger__button {
-                display: inline-flex;
-            }
-
-            #{$this}__list {
-                background-color: $background-color;
-                border: $border-width-s solid;
-                inset-block-start: 100%;
-                padding: $gutter-m;
-                position: absolute;
-                z-index: z('popup');
-            }
-        }
-
-        #{$this}__list {
-            flex-direction: column;
-        }
-
-        // With disclosure navigation.
-        &#{$this}--disclosure {
-            > .nav__list {
-                align-items: unset;
-            }
-
-            #{$this}__item--has-dropdown {
-                display: unset;
-            }
-
-            #{$this}__list--dropdown {
-                border: 0;
-                position: relative;
-            }
-        }
-    }
-
-    #{$this}--hamburger__button {
+    .nav--hamburger__button {
         display: none;
 
         &[aria-expanded='false'] {
@@ -116,6 +75,45 @@ Dependencies.
         &[aria-expanded='true'] {
             .icon:first-of-type {
                 display: none;
+            }
+        }
+    }
+
+    &--hamburger {
+        position: relative;
+
+        .nav__list {
+            flex-direction: column;
+        }
+
+        &.is-js-enabled {
+            .nav--hamburger__button {
+                display: inline-flex;
+            }
+
+            .nav__list {
+                background-color: $background-color;
+                border: $border-width-s solid;
+                inset-block-start: 100%;
+                padding: $gutter-m;
+                position: absolute;
+                z-index: z('popup');
+            }
+        }
+
+        // With disclosure navigation.
+        &.nav--disclosure {
+            > .nav__list {
+                align-items: unset;
+            }
+
+            .nav__item--has-dropdown {
+                display: unset;
+            }
+
+            .nav__list--dropdown {
+                border: 0;
+                position: relative;
             }
         }
     }

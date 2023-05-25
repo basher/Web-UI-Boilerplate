@@ -7,8 +7,6 @@ Dependencies.
 // @use '../mixins' as *;
 
 .toggle {
-    $this: &;
-
     align-items: center;
     border: $border-width-s solid;
     display: inline-flex;
@@ -24,13 +22,13 @@ Dependencies.
     }
 
     &[aria-checked='false'] {
-        #{$this}__off {
+        .toggle__off {
             background-color: #{rgba(var(--color-text), 0.3)};
         }
     }
 
     &[aria-checked='true'] {
-        #{$this}__on {
+        .toggle__on {
             background-color: $brand;
             color: $white;
         }
@@ -40,7 +38,7 @@ Dependencies.
         border: 0;
         gap: $gutter-s;
 
-        #{$this}__indicator {
+        .toggle__indicator {
             border: $border-width-s solid;
             display: flex;
         }

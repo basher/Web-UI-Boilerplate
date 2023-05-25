@@ -7,8 +7,6 @@ Dependencies.
 @use '../mixins' as *;
 
 .tabs {
-    $this: &;
-
     &__tablist {
         display: flex;
         gap: $gutter-m;
@@ -45,7 +43,7 @@ Dependencies.
                 grid-area: content;
             }
 
-            #{$this}__link {
+            .tabs__link {
                 white-space: unset;
             }
         }

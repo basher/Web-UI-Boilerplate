@@ -6,8 +6,6 @@ Dependencies.
 @use '../base' as *;
 
 .icon {
-    $this: &;
-
     aspect-ratio: 1;
     block-size: 1em; // Scale icon to match font-size of parent element
     fill: currentColor;

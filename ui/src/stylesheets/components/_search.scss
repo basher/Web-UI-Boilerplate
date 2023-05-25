@@ -9,8 +9,6 @@ Dependencies.
 .search {
     --search-grid-max-width: 10rem;
 
-    $this: &;
-
     .form {
         &__field {
             flex-grow: 1;

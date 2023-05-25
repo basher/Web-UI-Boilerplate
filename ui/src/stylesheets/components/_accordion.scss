@@ -7,8 +7,6 @@ Dependencies.
 @use '../mixins' as *;
 
 .accordion {
-    $this: &;
-
     &__details + &__details {
         margin-block-start: $gutter-m;
     }
@@ -21,7 +19,7 @@ Dependencies.
     }
 
     &--custom-icon {
-        #{$this}__summary {
+        .accordion__summary {
             align-items: center;
             border-block-end: $border-width-s solid;
             display: flex;

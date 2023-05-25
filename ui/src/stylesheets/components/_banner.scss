@@ -9,14 +9,12 @@ Dependencies.
 .banner {
     --banner-gap: var(--gutter-m);
 
-    $this: &;
-
     display: flex;
     flex-direction: column;
     gap: var(--banner-gap);
 
     &--fullwidth {
-        #{$this}__content {
+        .banner__content {
             padding-inline: $gutter-s;
         }
 
@@ -30,7 +28,7 @@ Dependencies.
                 grid-area: fullwidth;
             }
 
-            #{$this}__content {
+            .banner__content {
                 // Example, so text is legible above image.
                 background: #{rgba(var(--color-brand), 0.1)};
                 inline-size: 40vw;
@@ -52,7 +50,7 @@ Dependencies.
             inline-size: 50%;
         }
 
-        + #{$this}__content {
+        + .banner__content {
             @include bp-medium {
                 background: none;
             }

@@ -17,8 +17,6 @@ Dependencies.
 .sidebar {
     --sidebar-width: unset;
 
-    $this: &;
-
     flex-basis: var(--sidebar-width);
     flex-grow: 1;
 
@@ -27,7 +25,7 @@ Dependencies.
         flex-wrap: wrap;
         gap: $gutter-m;
 
-        :not(#{$this}) {
+        :not(.sidebar) {
             --content-min-width: 50%;
 
             flex-basis: 0;

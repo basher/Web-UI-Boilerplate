@@ -24,8 +24,6 @@ Dependencies.
 }
 
 .grid {
-    $this: &;
-
     // Automatic grid layout (e.g. for galleries, card listings, etc)
     @include responsive-grid-auto-columns;
 

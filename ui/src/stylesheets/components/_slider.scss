@@ -10,8 +10,6 @@ Dependencies.
     --slide-min-width: 18.75rem;
     --slider-gap: #{$gutter-m};
 
-    $this: &;
-
     @include focus {
         cursor: default;
     }
@@ -38,7 +36,7 @@ Dependencies.
     &-instructions {
         display: none;
 
-        #{$this}:focus-visible ~ & {
+        .slider:focus-visible ~ & {
             display: block;
         }
     }
@@ -48,21 +46,21 @@ Dependencies.
         --slider-gap: 0;
 
         /* stylelint-disable-next-line no-descending-specificity */
-        #{$this}__slide {
+        .slider__slide {
             min-inline-size: 100%;
         }
     }
 
     // Clickable slides (e.g. cards, image thumbnails).
     &--has-clickable-slides {
-        #{$this}__slide > :is(a, button) {
+        .slider__slide > :is(a, button) {
             @include focus($inset: true);
         }
     }
 
     // JavaScript enhancements.
     &.is-js-enabled {
-        #{$this}__slide {
+        .slider__slide {
             opacity: 0.6;
         }
 

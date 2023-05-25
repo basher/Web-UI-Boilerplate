@@ -7,8 +7,6 @@ Dependencies.
 @use '../mixins' as *;
 
 .pagination {
-    $this: &;
-
     display: flex;
     flex-wrap: wrap;
     gap: $gutter-m;
@@ -17,7 +15,8 @@ Dependencies.
     &-container {
         @supports (container-type: inline-size) {
             @container (max-width: 30rem) {
-                #{$this} {
+                /* stylelint-disable-next-line max-nesting-depth */
+                .pagination {
                     display: grid;
                     grid-template-areas:
                         'select select'

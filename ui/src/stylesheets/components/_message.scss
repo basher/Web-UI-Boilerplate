@@ -7,8 +7,6 @@ Dependencies.
 @use '../mixins' as *;
 
 .message {
-    $this: &;
-
     align-items: flex-start;
     border: $border-width-s solid;
     display: flex;

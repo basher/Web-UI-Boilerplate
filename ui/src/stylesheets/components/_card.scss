@@ -11,8 +11,6 @@ Dependencies.
     --content-min-width: 50%;
     --image-min-width: 250px;
 
-    $this: &;
-
     display: flex;
     flex-direction: column;
     gap: var(--card-gap);
@@ -32,7 +30,7 @@ Dependencies.
         flex-wrap: wrap;
         inline-size: fit-content;
 
-        #{$this}__content {
+        .card__content {
             flex-basis: 0;
             flex-grow: 999;
             min-inline-size: var(--content-min-width);
@@ -43,7 +41,7 @@ Dependencies.
         --card-gap: #{$gutter-clamp-xl};
 
         // Uses <picture> element. Set image to take up % of available space, which allows it to shrink and use the correct source.
-        #{$this}__media {
+        .card__media {
             flex-basis: max(50% - var(--card-gap), var(--image-min-width));
         }
     }

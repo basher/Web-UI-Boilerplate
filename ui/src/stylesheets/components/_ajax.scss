@@ -7,8 +7,6 @@ Dependencies.
 @use '../mixins' as *;
 
 .ajax {
-    $this: &;
-
     &__container {
         //
     }

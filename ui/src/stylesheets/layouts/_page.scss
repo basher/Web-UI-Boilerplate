@@ -7,8 +7,6 @@ Dependencies.
 @use '../base' as *;
 
 .page {
-    $this: &;
-
     display: grid;
     grid-template-rows: auto 1fr auto;
     margin-inline: auto;
