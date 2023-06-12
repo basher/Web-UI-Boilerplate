@@ -51,7 +51,7 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
 
 ### Testing for browser support in the UI
 
-> NOTE: The syntax for the `supported-browsers` script differs in Windows environments from MacOS/Linux.
+> NOTE: The syntax for the [supported-browsers](https://github.com/browserslist/browserslist-useragent-regexp#browserslist-useragent-regexp) script differs in Windows environments versus MacOS/Linux.
 - The `supported-browsers` script in `package.json` uses the `browserslist-useragent-regexp` package to extract the browserslist config into an exportable JavaScript module containing a REGEX of supported browsers.
 - This is imported in the generated REGEX in `src/javascript/utils/browser-support.ts` to match against the current browser.
 
