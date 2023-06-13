@@ -33,14 +33,14 @@ Dependencies.
         }
 
         &-3 {
-            background-color: #{rgba(var(--color-brand), 0.1)};
+            // background-color: #{rgba(var(--color-brand), 0.1)};
             margin-block: var(--skin-gutter-offset);
             padding: $gutter-m;
             position: relative;
 
             &::before,
             &::after {
-                background-color: #{rgba(var(--color-brand), 0.1)};
+                // background-color: #{rgba(var(--color-brand), 0.1)};
                 clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0 100%);
                 content: '';
                 display: block;
@@ -62,12 +62,12 @@ Dependencies.
             /* stylelint-disable-next-line order/order */
             @if $allow-dark-mode {
                 @media (prefers-color-scheme: dark) {
-                    background-color: #{rgba(var(--color-brand), 0.3)};
+                    // background-color: #{rgba(var(--color-brand), 0.3)};
 
                     /* stylelint-disable-next-line max-nesting-depth */
                     &::before,
                     &::after {
-                        background-color: #{rgba(var(--color-brand), 0.3)};
+                        // background-color: #{rgba(var(--color-brand), 0.3)};
                     }
                 }
             }

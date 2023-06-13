@@ -4,22 +4,22 @@ CSS custom properties for dynamic theming.
 
 1. CSS variables are global if they are defined inside ':root' element.
 2. Overrides can be applied via HTML <style> blocks, JavaScript or by simply setting a new value in a Sass partial.
-3. Color values are specified as a comma-separated list of RGB values so they can be used in the Sass 'rgba()' function:
+3. Color values are specified as a comma-separated list of HSL values so they can be used in the CSS 'hsl()' function:
 
-        color: #{'rgba(var(--color-brand), .5)'};
+        color: #{'hsl(var(--color-brand) / 50%)'};
 ----------------------------------------------------------------------------
 */
 :root {
     // Colors.
-    --color-brand: 102, 51, 153; // rebeccapurple
-    --color-text: 51, 51, 51;
-    --color-background: 255, 255, 255;
-    --color-neutral-900: 0, 0, 0;
-    --color-neutral-100: 255, 255, 255;
-    --color-accent-positive: 114, 198, 108;
-    --color-accent-negative: 174, 25, 29;
-    --color-accent-neutral: 230, 195, 0;
-    --color-focus: 0, 180, 230;
+    --color-brand: 270, 50%, 40%; // rebeccapurple
+    --color-text: 0, 0%, 20%;
+    --color-background: 0, 0%, 100%;
+    --color-neutral-900: 0, 0%, 0%;
+    --color-neutral-100: 0, 0%, 100%;
+    --color-accent-positive: 116, 44%, 60%;
+    --color-accent-negative: 358, 75%, 39%;
+    --color-accent-neutral: 51, 100%, 45%;
+    --color-focus: 193, 100%, 45%;
 
     // Typography.
     --type-font-family: Arial;
@@ -40,10 +40,10 @@ CSS custom properties for dynamic theming.
 // Dark theme: ensure black & white are NOT truly black & white.
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-brand: 168, 118, 208;
-        --color-text: 243, 244, 244;
-        --color-background: 34, 34, 34;
-        --color-neutral-900: 34, 34, 34;
-        --color-neutral-100: 244, 244, 244;
+        --color-brand: 270, 50%, 60%;
+        --color-text: 0, 0%, 95%;
+        --color-background: 0, 0%, 13%;
+        --color-neutral-900: 0, 0%, 13%;
+        --color-neutral-100: 0, 0%, 95%;
     }
 }

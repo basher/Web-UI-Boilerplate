@@ -18,15 +18,14 @@ export const Colours = (args, {loaded}) => `...`
 
 ## Why the 'funky' syntax for the CSS variables?
 
-- The CSS variable colour values are specified as a comma-separated list of individual `r`, `g` and `b` values:
+- The CSS variable colour values are specified as a comma-separated list of individual `h`, `s` and `l` values:
 ```
-:root { --color-brand: 255, 0, 98; }
+:root { --color-brand: 270, 50%, 40%; }
 ```
-- This enables us to use the CSS variables directly in the `rgba()` Sass function, providing access to the `alpha` channel for `opacity`:
+- This enables us to use the CSS variables directly in the `hsl()` CSS function, providing access to the `alpha` channel for `opacity`:
 ```
-.my-selector { background: #{rgba(var(--color-brand), 0.6)}; }
+.my-selector { background: #{hsl(var(--color-brand) / 60%)}; }
 ```
-- This would be impossible if the CSS variables had been specified as `hex` or a single `rgb()` value.
 
 ## TODO
-- Migrate to CSS Color 4 `oklch()`, or maybe just `hsla()`.
+- Migrate to CSS Color 4 `oklch()`?

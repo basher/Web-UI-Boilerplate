@@ -19,7 +19,7 @@ Dependencies.
 }
 
 @mixin slider-track {
-    background-color: #{'rgba(var(--color-text), .2)'};
+    // background-color: #{'rgba(var(--color-text), .2)'};
     height: var(--slider-height);
 }
 

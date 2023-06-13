@@ -26,12 +26,6 @@ const style = `
     .grid:first-of-type {
         display: none;
     }
-    .stack {
-        color: transparent;
-    }
-    .stack :is(h2, .grid) {
-        color: initial;
-    }
     .grid {
         grid-template-columns: repeat(auto-fit, 12.5rem);
     }
@@ -93,9 +87,16 @@ ${
     domready(function () {
         const styledSpan = document.querySelectorAll('.styled');
         styledSpan.forEach((span) => {
+            const spanStyle = span.style.background;
+            const spanStyleValue = spanStyle.substring(
+                spanStyle.indexOf('--'),
+                spanStyle.length - 2,
+            );
+
             const computedSpan = span.nextElementSibling.nextElementSibling;
-            computedSpan.innerHTML =
-                getComputedStyle(span).getPropertyValue('background-color');
+            computedSpan.innerHTML = `hsl(${getComputedStyle(
+                span,
+            ).getPropertyValue(spanStyleValue)})`;
         });
     })
 }

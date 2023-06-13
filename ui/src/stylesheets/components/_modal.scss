@@ -8,7 +8,7 @@ Dependencies.
 
 // Cannot use existing CSS variables defined on :root element for ::backdrop. See https://stackoverflow.com/questions/58818299/css-variables-not-working-in-dialogbackdrop
 ::backdrop {
-    --color-backdrop: rgba(0, 0, 0, 0.7);
+    --color-backdrop: hsl(0 0% 0% / 70%);
 }
 
 .modal {

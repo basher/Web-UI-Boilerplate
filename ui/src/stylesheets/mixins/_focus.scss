@@ -23,7 +23,7 @@ Dependencies.
     &:hover {
         @if $background {
             &:not(:disabled, :invalid, :valid) {
-                background-color: #{rgba(var(--color-brand), 0.1)};
+                // background-color: #{rgba(var(--color-brand), 0.1)};
             }
         }
         @if $opacity {

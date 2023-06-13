@@ -11,22 +11,22 @@ Color settings.
  * @sass-export-section="main theme colours"
  */
 
-$color-brand: #{'rgb(var(--color-brand))'} !default;
-$color-text: #{'rgb(var(--color-text))'} !default;
-$color-background: #{'rgb(var(--color-background))'} !default;
+$color-brand: #{'hsl(var(--color-brand))'} !default;
+$color-text: #{'hsl(var(--color-text))'} !default;
+$color-background: #{'hsl(var(--color-background))'} !default;
 
 /**
  * @sass-export-section="neutral colours"
  */
 
-$color-neutral-900: #{'rgb(var(--color-neutral-900))'};
-$color-neutral-100: #{'rgb(var(--color-neutral-100))'};
+$color-neutral-900: #{'hsl(var(--color-neutral-900))'};
+$color-neutral-100: #{'hsl(var(--color-neutral-100))'};
 
 /**
  * @sass-export-section="other accent colours"
  */
 
-$color-success: #{'rgb(var(--color-accent-positive))'} !default;
-$color-error: #{'rgb(var(--color-accent-negative))'} !default;
-$color-notify: #{'rgb(var(--color-accent-neutral))'} !default;
-$color-focus: #{'rgb(var(--color-focus))'} !default;
+$color-success: #{'hsl(var(--color-accent-positive))'} !default;
+$color-error: #{'hsl(var(--color-accent-negative))'} !default;
+$color-notify: #{'hsl(var(--color-accent-neutral))'} !default;
+$color-focus: #{'hsl(var(--color-focus))'} !default;

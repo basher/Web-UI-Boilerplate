@@ -30,7 +30,7 @@ Dependencies.
 
             .banner__content {
                 // Example, so text is legible above image.
-                background: #{rgba(var(--color-brand), 0.1)};
+                // background: #{rgba(var(--color-brand), 0.1)};
                 inline-size: 40vw;
                 margin-inline-start: $gutter-m;
                 padding: $gutter-m;
@@ -41,11 +41,11 @@ Dependencies.
     &__overlay {
         @include bp-medium {
             // Example, so text is legible above image.
-            background: linear-gradient(
-                to right,
-                #{rgba(var(--color-brand), 0.2)},
-                transparent
-            );
+            // background: linear-gradient(
+            //     to right,
+            //     #{rgba(var(--color-brand), 0.2)},
+            //     transparent
+            // );
             block-size: 100%;
             inline-size: 50%;
         }
