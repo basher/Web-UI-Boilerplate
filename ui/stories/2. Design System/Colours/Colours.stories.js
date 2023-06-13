@@ -26,6 +26,12 @@ const style = `
     .grid:first-of-type {
         display: none;
     }
+    .stack {
+        color: transparent;
+    }
+    .stack :is(h2, .grid) {
+        color: initial;
+    }
     .grid {
         grid-template-columns: repeat(auto-fit, 12.5rem);
     }
