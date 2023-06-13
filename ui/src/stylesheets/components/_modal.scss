@@ -14,7 +14,7 @@ Dependencies.
 .modal {
     // Browser already applies "position: fixed" and "width: fit-content".
     &__dialog {
-        background: $white;
+        background: $color-neutral-100;
         margin: auto;
         padding: 0 $gutter-m $gutter-m;
 
@@ -24,7 +24,7 @@ Dependencies.
     }
 
     &__header {
-        background: $white;
+        background: $color-neutral-100;
         display: flex;
         inset-block-start: 0;
         justify-content: flex-end;

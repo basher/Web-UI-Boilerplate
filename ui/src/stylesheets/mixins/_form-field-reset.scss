@@ -19,18 +19,18 @@ Dependencies.
     // Native HTML5 validation.
     &:valid:required {
         background-color: #{rgba(var(--color-accent-positive), 0.1)};
-        border-color: $success;
+        border-color: $color-success;
         border-width: $border-width-m;
     }
 
     &:invalid:required:focus {
         background-color: #{rgba(var(--color-accent-negative), 0.1)};
-        border-color: $error;
+        border-color: $color-error;
         border-width: $border-width-m;
     }
 
     // ARIA.
     &[aria-invalid='true'] {
-        border-color: $error;
+        border-color: $color-error;
     }
 }

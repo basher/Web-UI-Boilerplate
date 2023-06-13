@@ -29,8 +29,8 @@ Dependencies.
 
     &[aria-checked='true'] {
         .toggle__on {
-            background-color: $brand;
-            color: $white;
+            background-color: $color-brand;
+            color: $color-neutral-100;
         }
     }
 

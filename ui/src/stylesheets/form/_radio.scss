@@ -12,7 +12,7 @@ Dependencies.
     gap: $gutter-s;
 
     &__input {
-        accent-color: $brand;
+        accent-color: $color-brand;
         block-size: 1.5em;
         inline-size: 1.5em;
 
@@ -23,7 +23,7 @@ Dependencies.
         }
 
         &:invalid:required:focus {
-            box-shadow: 0 0 0 $border-width-m $error;
+            box-shadow: 0 0 0 $border-width-m $color-error;
         }
     }
 }

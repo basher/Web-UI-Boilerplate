@@ -24,7 +24,7 @@ Dependencies.
     }
 
     [aria-current] {
-        color: $brand;
+        color: $color-brand;
         font-weight: bold;
     }
 
@@ -40,7 +40,7 @@ Dependencies.
     }
 
     .nav__list--dropdown {
-        background-color: $background-color;
+        background-color: $color-background;
         border: $border-width-s solid;
         flex-direction: column;
         inset-block-start: 100%;
@@ -92,7 +92,7 @@ Dependencies.
             }
 
             .nav__list {
-                background-color: $background-color;
+                background-color: $color-background;
                 border: $border-width-s solid;
                 inset-block-start: 100%;
                 padding: $gutter-m;

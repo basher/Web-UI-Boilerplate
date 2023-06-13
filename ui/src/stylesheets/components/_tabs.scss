@@ -35,7 +35,7 @@ Dependencies.
 
             [role='tab'] {
                 border-block-end: 0;
-                border-inline-end: $border-width-l solid $white;
+                border-inline-end: $border-width-l solid $color-neutral-100;
                 padding-inline-end: $gutter-xs;
             }
 
@@ -52,20 +52,20 @@ Dependencies.
 
 [role='tab'] {
     @include focus($inset: true);
-    border-block-end: $border-width-l solid $white;
+    border-block-end: $border-width-l solid $color-neutral-100;
     text-decoration: none;
     transition: border $animation-fast;
 
     &[aria-selected='true'] {
-        border-color: $brand;
-        color: $brand;
+        border-color: $color-brand;
+        color: $color-brand;
     }
 
     /* stylelint-disable-next-line order/order */
     @if $allow-dark-mode {
         @media (prefers-color-scheme: dark) {
-            border-color: #{'rgba(var(--color-white), .5)'};
-            color: #{'rgba(var(--color-white), .5)'};
+            border-color: #{'rgba(var(--color-neutral-100), .5)'};
+            color: #{'rgba(var(--color-neutral-100), .5)'};
 
             &[aria-selected='true'] {
                 border-color: inherit;

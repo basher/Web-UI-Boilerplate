@@ -10,7 +10,7 @@ Dependencies.
 @mixin table {
     th,
     td {
-        border: $border-width-s solid #{rgba(var(--color-black), 0.1)};
+        border: $border-width-s solid #{rgba(var(--color-neutral-900), 0.1)};
         padding: $gutter-m;
 
         /* stylelint-disable-next-line order/order */

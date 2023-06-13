@@ -14,8 +14,8 @@ CSS custom properties for dynamic theming.
     --color-brand: 102, 51, 153; // rebeccapurple
     --color-text: 51, 51, 51;
     --color-background: 255, 255, 255;
-    --color-black: 0, 0, 0;
-    --color-white: 255, 255, 255;
+    --color-neutral-900: 0, 0, 0;
+    --color-neutral-100: 255, 255, 255;
     --color-accent-positive: 114, 198, 108;
     --color-accent-negative: 174, 25, 29;
     --color-accent-neutral: 230, 195, 0;
@@ -43,7 +43,7 @@ CSS custom properties for dynamic theming.
         --color-brand: 168, 118, 208;
         --color-text: 243, 244, 244;
         --color-background: 34, 34, 34;
-        --color-black: 34, 34, 34;
-        --color-white: 244, 244, 244;
+        --color-neutral-900: 34, 34, 34;
+        --color-neutral-100: 244, 244, 244;
     }
 }

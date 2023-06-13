@@ -11,8 +11,8 @@ Dependencies.
 
     &__link {
         @include off-screen;
-        background-color: $brand;
-        color: $white;
+        background-color: $color-brand;
+        color: $color-neutral-100;
         display: inline-block;
         left: $gutter-m;
         min-inline-size: 10vw;

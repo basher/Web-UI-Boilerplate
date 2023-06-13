@@ -14,7 +14,7 @@ Dependencies.
         position: relative;
 
         &::after {
-            color: $error;
+            color: $color-error;
             content: '!';
             display: block;
             font-size: 1em;
@@ -56,7 +56,7 @@ Dependencies.
             .radio__label {
                 /* stylelint-disable-next-line max-nesting-depth */
                 &::after {
-                    color: $success;
+                    color: $color-success;
                     content: '✓';
                 }
             }
@@ -70,7 +70,7 @@ Dependencies.
     }
 
     &__error {
-        color: $error;
+        color: $color-error;
     }
 }
 

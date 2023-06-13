@@ -30,19 +30,19 @@ Dependencies.
 
     // Apply colours to button variants.
     &--primary {
-        background-color: $brand;
-        color: $white;
+        background-color: $color-brand;
+        color: $color-neutral-100;
 
         &[class*='text'] {
-            border-color: $brand;
+            border-color: $color-brand;
         }
     }
 
     &--secondary {
-        color: $brand;
+        color: $color-brand;
 
         &[class*='text'] {
-            border-color: $brand;
+            border-color: $color-brand;
         }
 
         /* stylelint-disable-next-line order/order */
@@ -54,26 +54,26 @@ Dependencies.
     }
 
     &--positive {
-        background-color: $success;
+        background-color: $color-success;
 
         &[class*='text'] {
-            border-color: $success;
+            border-color: $color-success;
         }
 
         /* stylelint-disable-next-line order/order */
         @if $allow-dark-mode {
             @media (prefers-color-scheme: dark) {
-                color: $black;
+                color: $color-neutral-900;
             }
         }
     }
 
     &--negative {
-        background-color: $error;
-        color: $white;
+        background-color: $color-error;
+        color: $color-neutral-100;
 
         &[class*='text'] {
-            border-color: $error;
+            border-color: $color-error;
         }
     }
 

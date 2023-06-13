@@ -43,7 +43,7 @@ body {
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
     }
-    background-color: $background-color;
+    background-color: $color-background;
     color: $base-color;
     min-block-size: 100dvb;
 }
