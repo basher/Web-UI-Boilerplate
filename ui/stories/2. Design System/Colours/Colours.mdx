@@ -24,7 +24,7 @@ export const Colours = (args, {loaded}) => `...`
 ```
 - This enables us to use the CSS variables directly in the `hsl()` CSS function, providing access to the `alpha` channel for `opacity`:
 ```
-.my-selector { background: #{hsl(var(--color-brand) / 60%)}; }
+.my-selector { background: hsl(var(--color-brand), 60%); }
 ```
 
 ## TODO

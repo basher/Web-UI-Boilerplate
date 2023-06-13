@@ -17,17 +17,17 @@ Dependencies.
     }
 
     &--success {
-        // background: #{rgba(var(--color-accent-positive), 0.2)};
+        background: hsl(var(--color-accent-positive), 20%);
         border-color: $color-success;
     }
 
     &--warning {
-        // background: #{rgba(var(--color-accent-neutral), 0.2)};
+        background: hsl(var(--color-accent-neutral), 20%);
         border-color: $color-notify;
     }
 
     &--error {
-        // background: #{rgba(var(--color-accent-negative), 0.2)};
+        background: hsl(var(--color-accent-negative), 20%);
         border-color: $color-error;
     }
 

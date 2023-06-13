@@ -64,8 +64,8 @@ Dependencies.
     /* stylelint-disable-next-line order/order */
     @if $allow-dark-mode {
         @media (prefers-color-scheme: dark) {
-            // border-color: #{'rgba(var(--color-neutral-100), .5)'};
-            // color: #{'rgba(var(--color-neutral-100), .5)'};
+            border-color: hsl(var(--color-neutral-100), 50%);
+            color: hsl(var(--color-neutral-100), 50%);
 
             &[aria-selected='true'] {
                 border-color: inherit;

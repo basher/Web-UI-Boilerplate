@@ -83,7 +83,7 @@ ${
         .join('')
 }
 ${
-    // Output computed RGB colours.
+    // Output computed HSL colours.
     domready(function () {
         const styledSpan = document.querySelectorAll('.styled');
         styledSpan.forEach((span) => {

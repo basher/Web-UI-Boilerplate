@@ -23,7 +23,7 @@ Dependencies.
 
     &[aria-checked='false'] {
         .toggle__off {
-            // background-color: #{rgba(var(--color-text), 0.3)};
+            background-color: hsl(var(--color-text), 30%);
         }
     }
 

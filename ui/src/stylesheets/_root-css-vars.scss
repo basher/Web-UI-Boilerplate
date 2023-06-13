@@ -6,7 +6,7 @@ CSS custom properties for dynamic theming.
 2. Overrides can be applied via HTML <style> blocks, JavaScript or by simply setting a new value in a Sass partial.
 3. Color values are specified as a comma-separated list of HSL values so they can be used in the CSS 'hsl()' function:
 
-        color: #{'hsl(var(--color-brand) / 50%)'};
+        color: hsl(var(--color-brand), 50%);
 ----------------------------------------------------------------------------
 */
 :root {
