@@ -43,8 +43,8 @@ const style = `
 <style>
     [class*="u-m"],
     [class*="u-p"] {
-        background: rgba(235, 201, 90, 0.2);
-        border: 1px dashed rgb(235, 201, 90);
+        background: hsl(51, 100%, 45%, 15%);
+        border: 1px dashed hsl(51, 100%, 45%);
     }
 
     [class*="u-m"] ul {

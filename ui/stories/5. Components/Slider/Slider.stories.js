@@ -22,8 +22,8 @@ export default {
 const style = `
 <style>
     .slider > * {
-        background: rgba(235, 201, 90, 0.2);
-        border: 1px dashed rgb(235, 201, 90);
+        background: hsl(51, 100%, 45%, 15%);
+        border: 1px dashed hsl(51, 100%, 45%);
         padding: 5rem;
     }
 </style>
@@ -32,8 +32,8 @@ const style = `
 const style2 = `
 <style>
     .slider > * {
-        background: rgba(235, 201, 90, 0.2);
-        border: 1px dashed rgb(235, 201, 90);
+        background: hsl(51, 100%, 45%, 15%);
+        border: 1px dashed hsl(51, 100%, 45%);
     }
     .slider--has-clickable-slides a {
         display: block;
