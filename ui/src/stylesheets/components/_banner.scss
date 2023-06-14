@@ -30,7 +30,7 @@ Dependencies.
 
             .banner__content {
                 // Example, so text is legible above image.
-                background: hsl(var(--color-brand), 10%);
+                background: hsl(var(--color-brand) / 10%);
                 inline-size: 40vw;
                 margin-inline-start: $gutter-m;
                 padding: $gutter-m;
@@ -43,7 +43,7 @@ Dependencies.
             // Example, so text is legible above image.
             background: linear-gradient(
                 to right,
-                hsl(var(--color-brand), 20%),
+                hsl(var(--color-brand) / 20%),
                 transparent
             );
             block-size: 100%;

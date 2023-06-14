@@ -23,7 +23,7 @@ Dependencies.
     &:hover {
         @if $background {
             &:not(:disabled, :invalid, :valid) {
-                background-color: hsl(var(--color-brand), 10%);
+                background-color: hsl(var(--color-brand) / 10%);
             }
         }
         @if $opacity {

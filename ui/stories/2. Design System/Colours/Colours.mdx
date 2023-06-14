@@ -18,13 +18,13 @@ export const Colours = (args, {loaded}) => `...`
 
 ## Why the 'funky' syntax for the CSS variables?
 
-- The CSS variable colour values are specified as a comma-separated list of individual `h`, `s` and `l` values:
+- The CSS variable colour values are specified as a space-separated list of individual `h`, `s` and `l` values:
 ```
-:root { --color-brand: 270, 50%, 40%; }
+:root { --color-brand: 270 50% 40%; }
 ```
 - This enables them to be passed in as arguments to the `hsl()` CSS function, providing access to the `alpha` channel for `opacity`:
 ```
-.my-selector { background: hsl(var(--color-brand), 60%); }
+.my-selector { background: hsl(var(--color-brand) / 60%); }
 ```
 
 ## TODO

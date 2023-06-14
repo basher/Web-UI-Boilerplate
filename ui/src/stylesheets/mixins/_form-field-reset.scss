@@ -18,13 +18,13 @@ Dependencies.
 
     // Native HTML5 validation.
     &:valid:required {
-        background-color: hsl(var(--color-accent-positive), 10%);
+        background-color: hsl(var(--color-accent-positive) / 10%);
         border-color: $color-success;
         border-width: $border-width-m;
     }
 
     &:invalid:required:focus {
-        background-color: hsl(var(--color-accent-negative), 10%);
+        background-color: hsl(var(--color-accent-negative) / 10%);
         border-color: $color-error;
         border-width: $border-width-m;
     }
