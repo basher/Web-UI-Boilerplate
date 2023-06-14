@@ -82,6 +82,8 @@ ${
         )
         .join('')
 }
+</div>
+
 ${
     // Output computed HSL colours.
     domready(function () {
@@ -100,5 +102,4 @@ ${
         });
     })
 }
-</div>
 `;

@@ -3,7 +3,7 @@
 - Sass colours get automatically exported to a JSON file when Parcel server is started with `yarn start`.
 - Colours will be updated automatically:
     - For example, when setting the operating system preference to `dark mode`, thereby triggering the CSS `prefers-color-scheme: dark` media query.
-    - Dark mode colours are defined in `src/stylesheets/settings/_root-css-vars.scss`.
+    - Dark mode colours are defined in `src/stylesheets/_root-css-vars.scss`.
 
 ## Using the external `exported-colors.json` in this Storybook
 
@@ -22,7 +22,7 @@ export const Colours = (args, {loaded}) => `...`
 ```
 :root { --color-brand: 270, 50%, 40%; }
 ```
-- This enables us to use the CSS variables directly in the `hsl()` CSS function, providing access to the `alpha` channel for `opacity`:
+- This enables them to be passed in as arguments to the `hsl()` CSS function, providing access to the `alpha` channel for `opacity`:
 ```
 .my-selector { background: hsl(var(--color-brand), 60%); }
 ```
