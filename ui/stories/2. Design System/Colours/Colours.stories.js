@@ -22,6 +22,7 @@ export default {
 
 const style = `
 <style>
+    #root { font-size: 0; }
     .stack h2:first-of-type,
     .grid:first-of-type {
         display: none;
