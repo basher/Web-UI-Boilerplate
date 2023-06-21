@@ -7,7 +7,8 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 
 ## Accessibility considerations
 - Based on [Inclusive Components](https://inclusive-components.design/a-content-slider/) and [ARIA patterns](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/).
-- The slider has `tabindex="0"` so it can receive keyboard `:focus`.
+- The slider has `tabindex="0"` so it can receive keyboard `:focus`, and be operated via the `LEFT|RIGHT` arrow keys.
+- CSS `scroll-snap` ensures the slider stops at a complete slide.
 
 <Preview>
     <Story id="components-slider-or-carousel--slider" />
