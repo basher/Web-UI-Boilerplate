@@ -14,7 +14,7 @@ Dependencies.
 
     &-container {
         @supports (container-type: inline-size) {
-            @container (max-width: 30rem) {
+            @container (inline-size <= 30rem) {
                 /* stylelint-disable-next-line max-nesting-depth */
                 .pagination {
                     display: grid;
