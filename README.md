@@ -49,6 +49,11 @@ There is a need to distinguish between `development` and `production` environmen
 <script defer nomodule src="/path/to/build/folder/app/javascript/legacy.js"></script>
 ```
 
+## Build and publish Storybook
+From `ui` directory:
+- `yarn build storybook`.
+- `npx http-server ./storybook-static` - to test production build on local server.
+
 ## Complete UI setup instructions
 - Please see the `README` in `ui` directory.
 
