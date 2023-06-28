@@ -10,3 +10,4 @@ yarn-error.log
 
 # Storybook
 .cache
+ui/storybook-static
