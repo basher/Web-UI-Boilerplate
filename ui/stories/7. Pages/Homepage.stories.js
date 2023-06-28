@@ -92,7 +92,7 @@ ${style}
                 <div class="wysiwyg stack u-center">
                     <h2>Heading level 2</h2>
                     <h3>Heading level 3</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio nemo.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
                 </div>
             </div>
 
