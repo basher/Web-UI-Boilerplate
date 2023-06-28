@@ -5,8 +5,9 @@
     "license": "ISC",
     "repository": {
         "type": "git",
-        "url": "https://github.com/basher/WebUI-Boilerplate/"
+        "url": "https://github.com/basher/Web-UI-Boilerplate/"
     },
+    "homepage": "https://basher.github.io/Web-UI-Boilerplate",
     "scripts": {
         "supported-browsers": "(echo export default && browserslist-useragent-regexp --allowHigherVersions) > src/javascript/config/supported-browsers.js",
         "reset": "rm -rf node_modules/ && yarn install",
