@@ -24,6 +24,6 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: master # The branch the action should deploy to.
-          FOLDER: public # The folder that the build-storybook script generates files.
+          FOLDER: ui/public # The folder that the build-storybook script generates files.
           CLEAN: true # Automatically remove deleted files from the deploy branch
-          TARGET_FOLDER: storybook-static # The folder that we serve our Storybook files from
+          TARGET_FOLDER: ui/storybook-static # The folder that we serve our Storybook files from
