@@ -1,0 +1,91 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+.card {
+    --card-gap: #{$gutter-m};
+    --content-min-width: 50%;
+    --image-min-width: 250px;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-gap);
+    inline-size: clamp(1rem, 100%, 60ch);
+
+    &__media {
+        flex-grow: 1;
+    }
+
+    &--media-bottom {
+        flex-direction: column-reverse;
+    }
+
+    // Layout approach is same as sidebar layout.
+    &[class*='media-inline'],
+    &[class*='fullwidth'] {
+        flex-wrap: wrap;
+        inline-size: fit-content;
+
+        .card__content {
+            flex-basis: 0;
+            flex-grow: 999;
+            min-inline-size: var(--content-min-width);
+        }
+    }
+
+    &[class*='fullwidth'] {
+        --card-gap: #{$gutter-clamp-xl};
+
+        // Uses <picture> element. Set image to take up % of available space, which allows it to shrink and use the correct source.
+        .card__media {
+            flex-basis: max(50% - var(--card-gap), var(--image-min-width));
+        }
+    }
+
+    &--media-inline,
+    &--fullwidth {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    &--media-inline-reverse,
+    &--fullwidth-reverse {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+    // Clickable card.
+    &[href] {
+        @include focus($opacity: true);
+        text-decoration: none;
+
+        &:not([class*='theme']) {
+            color: inherit;
+        }
+    }
+
+    // Uses stack layout for card__content internal spacing.
+    .stack {
+        --stack-gutter: var(--gutter-s);
+    }
+
+    // Cards in a grid.
+    &-grid.grid {
+        --card-max-width: 25rem; // Same width as image.
+
+        @include responsive-grid-auto-columns($max-width: max-content);
+
+        > * {
+            max-inline-size: var(--card-max-width);
+        }
+    }
+
+    // Cards in a slider.
+    &-slider.slider {
+        --slide-min-width: 25rem; // Same width as image.
+    }
+}

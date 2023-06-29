@@ -1,0 +1,88 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+.flex {
+    --flex-gap: #{$gutter-m};
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--flex-gap, 1rem);
+
+    // Flex direction.
+    &--column {
+        flex-direction: column;
+    }
+    &--row-reverse {
+        flex-direction: row-reverse;
+    }
+    &--column-reverse {
+        flex-direction: column-reverse;
+    }
+
+    // 0 gap between flex items.
+    &--no-gap {
+        --flex-gap: 0;
+    }
+
+    // Gap variants.
+    &--gap-xs {
+        --flex-gap: #{$gutter-xs};
+    }
+
+    &--gap-s {
+        --flex-gap: #{$gutter-s};
+    }
+
+    &--gap-l {
+        --flex-gap: #{$gutter-clamp-l};
+    }
+
+    &--gap-xl {
+        --flex-gap: #{$gutter-clamp-xl};
+    }
+
+    // Align items.
+    &--ai-center {
+        align-items: center;
+    }
+    &--ai-start {
+        align-items: flex-start;
+    }
+    &--ai-end {
+        align-items: flex-end;
+    }
+
+    // Justify content.
+    &--jc-center {
+        justify-content: center;
+    }
+    &--jc-end {
+        justify-content: flex-end;
+    }
+    &--jc-between {
+        justify-content: space-between;
+    }
+    &--jc-evenly {
+        justify-content: space-evenly;
+    }
+
+    // Make all flex items grow to fill available space.
+    &--grow-all > * {
+        flex-grow: 1;
+    }
+
+    // Let gap handle spacing between flex items.
+    > * {
+        margin: 0;
+    }
+
+    // When flex uses a UL/LI construct, override LI max-inline-size in 'typography.scss'.
+    > li {
+        max-inline-size: none;
+    }
+}

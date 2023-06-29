@@ -1,0 +1,7 @@
+.responsive-media {
+    &__item {
+        aspect-ratio: var(--media-aspect-ratio);
+        block-size: auto;
+        inline-size: 100%;
+    }
+}

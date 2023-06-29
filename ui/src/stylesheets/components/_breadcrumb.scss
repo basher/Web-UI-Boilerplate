@@ -1,0 +1,36 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+.breadcrumb {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $gutter-m;
+    }
+
+    &__item {
+        position: relative;
+
+        &:not(:first-child):before {
+            content: '>';
+            display: inline-block;
+            inline-size: 1ch;
+            inset-inline-start: -1em;
+            position: absolute;
+        }
+    }
+
+    &__link {
+        @include focus;
+        color: inherit;
+    }
+
+    [aria-current] {
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,27 @@
+/*
+----------------------------------------------------------------------------
+WYSIWYG (CMS editor "prose" content).
+----------------------------------------------------------------------------
+*/
+
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+.wysiwyg {
+    overflow-x: hidden; // Just in case CMS content is stupidly wide.
+
+    // Uses stack layout to handle spacing between prose elements, based on their rendered font size.
+    &.stack {
+        --stack-gutter: 1em;
+
+        // Remove spacing for adjacent headings.
+        :is(h2 + h3, h3 + h4, h4 + h5, h5 + h6) {
+            --stack-gutter: 0;
+        }
+    }
+}

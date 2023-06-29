@@ -1,0 +1,17 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gutter-s;
+
+    &--centered {
+        justify-content: center;
+    }
+}

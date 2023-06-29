@@ -1,0 +1,36 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins/focus' as *;
+
+@mixin form-field-reset {
+    @include focus($background: true);
+    border: $border-width-s solid;
+    padding: $gutter-s;
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    // Native HTML5 validation.
+    &:valid:required {
+        background-color: hsl(var(--color-accent-positive) / 10%);
+        border-color: $color-success;
+        border-width: $border-width-m;
+    }
+
+    &:invalid:required:focus {
+        background-color: hsl(var(--color-accent-negative) / 10%);
+        border-color: $color-error;
+        border-width: $border-width-m;
+    }
+
+    // ARIA.
+    &[aria-invalid='true'] {
+        border-color: $color-error;
+    }
+}

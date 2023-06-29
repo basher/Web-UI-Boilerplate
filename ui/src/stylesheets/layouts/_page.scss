@@ -1,0 +1,27 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+.page {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin-inline: auto;
+    max-inline-size: $site-width;
+    min-block-size: 100dvb;
+
+    &__sidebar {
+        .sidebar {
+            // Set explicit flex-basis (width) for page sidebar.
+            --sidebar-width: 18.75rem;
+        }
+    }
+
+    // Main is a grid item, so this affects overflow behaviour on components like tables.
+    .main {
+        overflow-x: hidden;
+    }
+}

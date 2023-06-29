@@ -1,0 +1,143 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+/*
+----------------------------------------------------------------------------
+Center content.
+----------------------------------------------------------------------------
+*/
+.u-center {
+    text-align: center;
+
+    // Setting auto margins on direct children without a CSS classname ensures that typographic elements whose max width is constrained by "$max-line-length" will be correctly centered.
+    > :not([class]) {
+        margin-inline: auto;
+    }
+}
+
+/*
+----------------------------------------------------------------------------
+Margins.
+----------------------------------------------------------------------------
+*/
+[class*='u-m-block'] {
+    --marg-block-gutter: #{$gutter-m};
+    margin-block: var(--marg-block-gutter, 1rem);
+}
+
+[class*='u-m-inline'] {
+    --marg-inline-gutter: #{$gutter-m};
+    margin-inline: var(--marg-inline-gutter, 1rem);
+}
+
+.u-m {
+    &-block {
+        &--0 {
+            --marg-block-gutter: 0;
+        }
+
+        &--xs {
+            --marg-block-gutter: #{$gutter-xs};
+        }
+
+        &--s {
+            --marg-block-gutter: #{$gutter-s};
+        }
+
+        &--l {
+            --marg-block-gutter: #{$gutter-clamp-l};
+        }
+
+        &--xl {
+            --marg-block-gutter: #{$gutter-clamp-xl};
+        }
+    }
+
+    &-inline {
+        &--0 {
+            --marg-inline-gutter: 0;
+        }
+
+        &--xs {
+            --marg-inline-gutter: #{$gutter-xs};
+        }
+
+        &--s {
+            --marg-inline-gutter: #{$gutter-s};
+        }
+
+        &--l {
+            --marg-inline-gutter: #{$gutter-clamp-l};
+        }
+
+        &--xl {
+            --marg-inline-gutter: #{$gutter-clamp-xl};
+        }
+    }
+}
+
+/*
+----------------------------------------------------------------------------
+Padding.
+----------------------------------------------------------------------------
+*/
+[class*='u-p-block'] {
+    --pad-block-gutter: #{$gutter-m};
+    padding-block: var(--pad-block-gutter, 1rem);
+}
+
+[class*='u-p-inline'] {
+    --pad-inline-gutter: #{$gutter-m};
+    padding-inline: var(--pad-inline-gutter, 1rem);
+}
+
+.u-p {
+    &-block {
+        &--0 {
+            --pad-block-gutter: 0;
+        }
+
+        &--xs {
+            --pad-block-gutter: #{$gutter-xs};
+        }
+
+        &--s {
+            --pad-block-gutter: #{$gutter-s};
+        }
+
+        &--l {
+            --pad-block-gutter: #{$gutter-clamp-l};
+        }
+
+        &--xl {
+            --pad-block-gutter: #{$gutter-clamp-xl};
+        }
+    }
+
+    &-inline {
+        &--0 {
+            --pad-inline-gutter: 0;
+        }
+
+        &--xs {
+            --pad-inline-gutter: #{$gutter-xs};
+        }
+
+        &--s {
+            --pad-inline-gutter: #{$gutter-s};
+        }
+
+        &--l {
+            --pad-inline-gutter: #{$gutter-clamp-l};
+        }
+
+        &--xl {
+            --pad-inline-gutter: #{$gutter-clamp-xl};
+        }
+    }
+}

@@ -1,0 +1,91 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+.button {
+    @include button-reset;
+
+    &[class*='text'] {
+        border: $border-width-s solid;
+    }
+
+    &--text-icon {
+        align-items: center;
+        display: inline-flex;
+        gap: $gutter-s;
+        justify-content: space-between;
+
+        span {
+            text-align: start;
+        }
+    }
+
+    &--reverse {
+        flex-direction: row-reverse;
+    }
+
+    // Apply colours to button variants.
+    &--primary {
+        background-color: $color-brand;
+        color: $color-neutral-100;
+
+        &[class*='text'] {
+            border-color: $color-brand;
+        }
+    }
+
+    &--secondary {
+        color: $color-brand;
+
+        &[class*='text'] {
+            border-color: $color-brand;
+        }
+
+        /* stylelint-disable-next-line order/order */
+        @if $allow-dark-mode {
+            @media (prefers-color-scheme: dark) {
+                color: inherit;
+            }
+        }
+    }
+
+    &--positive {
+        background-color: $color-success;
+
+        &[class*='text'] {
+            border-color: $color-success;
+        }
+
+        /* stylelint-disable-next-line order/order */
+        @if $allow-dark-mode {
+            @media (prefers-color-scheme: dark) {
+                color: $color-neutral-900;
+            }
+        }
+    }
+
+    &--negative {
+        background-color: $color-error;
+        color: $color-neutral-100;
+
+        &[class*='text'] {
+            border-color: $color-error;
+        }
+    }
+
+    &--icon {
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    // Text (and text + icons) buttons only. Icon button sizes are determined by the context of their parent container font-size (or their icon size overrides).
+    &--small {
+        font-size: $font-size-s;
+        padding: $gutter-xs;
+    }
+}

@@ -1,0 +1,17 @@
+import { Preview, Story } from '@storybook/addon-docs/blocks';
+
+# Share
+- Uses the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share).
+- Fallback behaviour uses the [disclosure](/story/components-disclosure--disclosure) pattern, and allows user to copy the URL.
+
+## TODO
+- Replace fallback [document.execCommand](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand) with [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API).
+
+<Preview>
+    <Story id="components-share--share" />
+</Preview>
+
+## Share a different page
+<Preview>
+    <Story id="components-share--share-different-page" />
+</Preview>

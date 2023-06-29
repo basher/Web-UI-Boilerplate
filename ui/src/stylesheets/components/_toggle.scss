@@ -1,0 +1,46 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+// @use '../mixins' as *;
+
+.toggle {
+    align-items: center;
+    border: $border-width-s solid;
+    display: inline-flex;
+    padding: 0;
+
+    &__on,
+    &__off {
+        padding: $gutter-s;
+    }
+
+    &:active {
+        transform: none;
+    }
+
+    &[aria-checked='false'] {
+        .toggle__off {
+            background-color: hsl(var(--color-text) / 30%);
+        }
+    }
+
+    &[aria-checked='true'] {
+        .toggle__on {
+            background-color: $color-brand;
+            color: $color-neutral-100;
+        }
+    }
+
+    &--has-label {
+        border: 0;
+        gap: $gutter-s;
+
+        .toggle__indicator {
+            border: $border-width-s solid;
+            display: flex;
+        }
+    }
+}

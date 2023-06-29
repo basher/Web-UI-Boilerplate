@@ -1,0 +1,22 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+.share {
+    display: none;
+    position: relative;
+
+    &.is-js-enabled {
+        display: block;
+    }
+
+    &__fallback {
+        align-items: center;
+        display: flex;
+        gap: $gutter-s;
+    }
+}

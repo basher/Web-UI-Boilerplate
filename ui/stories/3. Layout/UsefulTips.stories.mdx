@@ -1,0 +1,41 @@
+<Meta title="Layout/Useful layout tips" />
+
+# Useful layout tips
+
+## Use CSS Grid and Flex `gap` property
+- Ideally, there should be **NO margins applied to direct children** of `grid` and `flex` containers, allowing the `gap` property to render appropriate spacing.
+
+### Dealing with "gutters" between components & elements
+- See the [stack layout](/docs/layout-stack--stack).
+
+
+## CSS container queries
+- The [asymmetric grid layout](/story/layout-grid--grid-asymmetric) now uses `container queries` in supported browsers.
+
+## Make use of CSS `--gutter-` and Sass `$gutter-` variables
+- In `margin` and `padding` declarations.
+- When defining `gap` property in Flexbox and Grid layouts.
+
+## When to use Flexbox or Grid?
+
+> **TL;DR**
+> - Use Flexbox, with its `intrinsic sizing`, if items, irrespective of their sizes, need to sit nicely next to each other (e.g. list of links in a `<nav>` component).
+> - Use Grid for structured layouts (e.g. complex component or page layout, or maybe a multi-column *"gallery"* of items).
+
+- The answer is not as simple as saying *"use Flexbox for 1-dimensional layouts"* and *"use Grid for 2-dimensional layouts"*, because Flexbox can also create 2-dimensional layouts when `flex-wrap: wrap` is used.
+
+### Comparison of Flexbox/Grid behaviours
+
+Flexbox | Grid
+--- | ---
+Flexbox works from the **content out**. | Grid works from the **layout in**.
+Flexbox uses `intrinsic sizing`. Each `flex item` is as large as it needs to be to contain its content. | Grid allows more structured control from the parent's perspective, placing `grid items` into `cells` whose dimensions are defined by the `grid-template`.
+By default, with no other CSS properties specified, **all direct children** of a flex container become **columns**, which may lead to horizontal overflow if there are too many to fit in the available space. | By default, **nothing happens to direct children** of a grid container if no `grid-template` has been defined.
+If you need more fine-grained control of the spacing and/or sizes of the flex items, you may have to adjust properties on both the flex container and the flex items (i.e. on multiple CSS selectors). | Modifying the `grid-template` may be all you need.
+There is **no relationship** between the rows/columns in a Flexbox layout. They are totally independent of each other. | Grid rows/columns **do** affect each other.
+
+### Useful Flexbox vs Grid resources
+- https://www.youtube.com/watch?v=3elGSZSWTbM.
+- https://www.smashingmagazine.com/2018/10/flexbox-use-cases/.
+- https://css-tricks.com/quick-whats-the-difference-between-flexbox-and-grid/.
+- https://css-irl.info/to-grid-or-to-flex/.

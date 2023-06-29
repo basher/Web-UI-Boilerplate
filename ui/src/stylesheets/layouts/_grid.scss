@@ -1,0 +1,82 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+[class*='grid'] {
+    --grid-gap: #{$gutter-m};
+
+    display: grid;
+    gap: var(--grid-gap, 1rem);
+
+    // Let grid-gap handle spacing between grid items.
+    > * {
+        margin: 0;
+    }
+
+    // When grid uses a UL/LI construct, override LI max-inline-size in 'typography.scss'.
+    > li {
+        max-inline-size: none;
+    }
+}
+
+.grid {
+    // Automatic grid layout (e.g. for galleries, card listings, etc)
+    @include responsive-grid-auto-columns;
+
+    // Centered grid.
+    &--centered {
+        justify-content: center;
+    }
+
+    // 0 gap between grid items.
+    &--no-gap {
+        --grid-gap: 0;
+    }
+
+    // Gap variants.
+    &--gap-xs {
+        --grid-gap: #{$gutter-xs};
+    }
+
+    &--gap-s {
+        --grid-gap: #{$gutter-s};
+    }
+
+    &--gap-l {
+        --grid-gap: #{$gutter-clamp-l};
+    }
+
+    &--gap-xl {
+        --grid-gap: #{$gutter-clamp-xl};
+    }
+
+    // Enable 2-col on small screens (even without a media query)... though eventually the column 'min-width' will enforce stacking when space is too limited, to avoid overflows.
+    &--2-cols\@small {
+        @include responsive-grid-auto-columns($min-width: 6.25rem);
+    }
+
+    // Asymmetric 2-col grid (with default column widths).
+    &--asymmetric {
+        @include responsive-grid-asymmetric;
+    }
+
+    // Asymmetric 2-col grid (with column width overrides).
+    &--75-25 {
+        @include responsive-grid-asymmetric($col1: 75%, $col2: 25%);
+    }
+
+    &--25-75 {
+        @include responsive-grid-asymmetric($col1: 25%, $col2: 75%);
+    }
+
+    // Using container queries for (asymmetric) grids.
+    &-container {
+        @supports (container-type: inline-size) {
+            container-type: inline-size;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+import { Preview, Story } from '@storybook/addon-docs/blocks';
+
+# Cards
+- The `card__content` uses the [stack layout](/story/layout-stack--stack) to manage spacing between all its children.
+- The `card__media` is marked up as a `<figure>`, and can contain `<picture>`, `<video>`, `<iframe>`, etc.
+- By default, cards have no visual treatment such as background colour, border, shadow, etc. Apply visual styles using the [skin component](/story/components-skin--skin).
+
+## TODO
+- Add cards with multiple CTAs. Might need JS to intercept click events?
+- Add media/container queries to modify fullwidth gap & content width?
+
+## Default card
+- Default card component is marked up as an `<article>`, and should therefore contain a heading with the appropriate level.
+- Uses `<picture>` with a single fixed size image, whose orientation can be `top`, `bottom`, `left` or `right`.
+
+<Preview>
+    <Story id="components-cards--default-card" />
+</Preview>
+
+## Fullwidth card
+- This card uses `<picture>` so that the image size can be optimised at different breakpoints.
+- It's a variant of `card--media-inline`.
+
+<Preview>
+    <Story id="components-cards--fullwidth-card" />
+</Preview>
+
+## Clickable card
+- This card replaces `<article>` with an `<a>`.
+
+<Preview>
+    <Story id="components-cards--clickable-card" />
+</Preview>
+
+## Cards in a grid
+- It's a good idea to set a `max-width` on the `grid-template-columns` to match the size of the card (which will probably be determined by the image size).
+- This is achieved via the `card-grid` override CSS classname.
+
+<Preview>
+    <Story id="components-cards--card-grid" />
+</Preview>
+
+## Cards in a slider
+- It's a good idea to set the `--slide-min-width` on the slides to match the size of the card.
+- This is achieved via the `card-slider` override CSS classname.
+
+<Preview>
+    <Story id="components-cards--card-slider" />
+</Preview>

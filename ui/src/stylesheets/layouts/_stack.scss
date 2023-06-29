@@ -1,0 +1,43 @@
+/*
+----------------------------------------------------------------------------
+Stack.
+
+See https://every-layout.dev/layouts/stack/.
+----------------------------------------------------------------------------
+*/
+
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+.stack {
+    --stack-gutter: #{$gutter-m};
+
+    > * + * {
+        margin-block-start: var(--stack-gutter, 1em);
+    }
+
+    > * {
+        margin-block-end: 0;
+    }
+
+    &--gutter-xs {
+        --stack-gutter: #{$gutter-xs};
+    }
+
+    &--gutter-s {
+        --stack-gutter: #{$gutter-s};
+    }
+
+    &--gutter-l {
+        --stack-gutter: #{$gutter-clamp-l};
+    }
+
+    &--gutter-xl {
+        --stack-gutter: #{$gutter-clamp-xl};
+    }
+}
