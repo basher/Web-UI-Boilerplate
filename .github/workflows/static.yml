@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           name: storybook_docs
-          path: ui/storybook-static
+          path: $GITHUB_WORKSPACE/ui/storybook-static
 
       - name: Deploy to GitHub Pages
         id: deployment
