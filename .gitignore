@@ -2,9 +2,11 @@
 node_modules
 dist/*
 build
-build-storybook
 *.map
 yarn-error.log
 
 # Parcel bundler
 .parcel-cache
+
+# Storybook
+ui/storybook-static
