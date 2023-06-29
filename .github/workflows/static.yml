@@ -2,9 +2,9 @@ name: Build and Publish Storybook to GitHub Pages
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ 'master' ]
     # Trigger the action only when files change in the folders defined here.
-    paths: ["ui/stories/**", "ui/src/**", "ui/public/**", "ui/.storybook/**"]
+    paths: ['ui/stories/**', 'ui/src/**', 'ui/public/**', 'ui/.storybook/**']
 
 jobs:
   build:
@@ -34,7 +34,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: /home/runner/work/Web-UI-Boilerplate/Web-UI-Boilerplate/ui/storybook-static
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
