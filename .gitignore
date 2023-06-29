@@ -1,13 +1,4 @@
-# UI
-node_modules
-dist/*
-build
-*.map
-yarn-error.log
-
-# Parcel bundler
-.parcel-cache
-
-# Storybook
-.cache
-ui/storybook-static
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
