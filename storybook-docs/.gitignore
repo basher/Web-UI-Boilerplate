@@ -1,4 +1,4 @@
-# Ignore everything in this directory
+# Ignore everything in this directory - used by GitHub pages to publish Storybook
 *
 # Except this file
 !.gitignore
