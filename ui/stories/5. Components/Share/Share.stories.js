@@ -55,7 +55,7 @@ export const ShareDifferentPage = () => `
     <button
         type="button"
         class="button button--icon"
-        data-button="share"
+        data-share-button
         data-share-url="https://www.google.com"
         data-share-title="google"
     >
