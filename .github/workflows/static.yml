@@ -5,6 +5,8 @@ on:
     branches: [ 'master' ]
     # Trigger the action only when files change in the folders defined here.
     paths: ['ui/stories/**', 'ui/src/**', 'ui/public/**', 'ui/.storybook/**']
+  # Allows workflow to be run manually from the Actions tab on GitHub.
+  workflow_dispatch:
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
