@@ -1,25 +1,39 @@
 name: Build and Publish Storybook to GitHub Pages
+
 on:
   push:
-    paths: ["ui/stories/**", "ui/src/**", "ui/public/**", "ui/.storybook/**"] # Trigger the action only when files change in the folders defined here.
+    branches: [ "master" ]
+    # Trigger the action only when files change in the folders defined here.
+    paths: ["ui/stories/**", "ui/src/**", "ui/public/**", "ui/.storybook/**"]
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-      - name: Set Node.js 16.x
+
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
-      - name: Install and Build 🔧
-        run: | # Install npm packages and build the Storybook files.
+          node-version: 16
+
+      - name: Install and Build
+        run: |
           cd ui
           yarn install
           yarn build-storybook
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          FOLDER: ui/storybook-static # The folder the action should deploy.
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+        inputs:
+          artifact_name:
+            default: ui/storybook-static
