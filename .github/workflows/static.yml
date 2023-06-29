@@ -6,6 +6,12 @@ on:
     # Trigger the action only when files change in the folders defined here.
     paths: ['ui/stories/**', 'ui/src/**', 'ui/public/**', 'ui/.storybook/**']
 
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -34,7 +40,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: './storybook-static'
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
