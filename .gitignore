@@ -11,6 +11,3 @@ yarn-error.log
 # Storybook
 .cache
 ui/storybook-static
-
-# GitHub Pages
-storybook-docs/
