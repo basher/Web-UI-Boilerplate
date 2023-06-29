@@ -22,7 +22,7 @@
         "build": "yarn install && yarn supported-browsers && yarn build:parcel",
         "postbuild": "yarn static-assets-rename && yarn static-assets-move",
         "storybook": "start-storybook -p 9009",
-        "build-storybook": "build-storybook -o ../build-storybook"
+        "build-storybook": "build-storybook"
     },
     "targets": {
         "app": {}
