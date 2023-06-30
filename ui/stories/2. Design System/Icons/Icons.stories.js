@@ -39,7 +39,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>search</title>
-        <use href="/sprite.svg#search" />
+        <use href="sprite.svg#search" />
     </svg>
 
     <svg
@@ -48,7 +48,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>hamburger</title>
-        <use href="/sprite.svg#hamburger" />
+        <use href="sprite.svg#hamburger" />
     </svg>
 
     <svg
@@ -57,7 +57,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>close</title>
-        <use href="/sprite.svg#close" />
+        <use href="sprite.svg#close" />
     </svg>
 
     <svg
@@ -66,7 +66,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>plus</title>
-        <use href="/sprite.svg#plus" />
+        <use href="sprite.svg#plus" />
     </svg>
 
     <svg
@@ -75,7 +75,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>minus</title>
-        <use href="/sprite.svg#minus" />
+        <use href="sprite.svg#minus" />
     </svg>
 
 
@@ -85,7 +85,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>right</title>
-        <use href="/sprite.svg#right" />
+        <use href="sprite.svg#right" />
     </svg>
 
     <svg
@@ -94,7 +94,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>left</title>
-        <use href="/sprite.svg#left" />
+        <use href="sprite.svg#left" />
     </svg>
 
     <svg
@@ -103,7 +103,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>up</title>
-        <use href="/sprite.svg#up" />
+        <use href="sprite.svg#up" />
     </svg>
 
     <svg
@@ -112,7 +112,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>down</title>
-        <use href="/sprite.svg#down" />
+        <use href="sprite.svg#down" />
     </svg>
 
     <svg
@@ -121,7 +121,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>share</title>
-        <use href="/sprite.svg#share" />
+        <use href="sprite.svg#share" />
     </svg>
 
     <svg
@@ -130,7 +130,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>twitter</title>
-        <use href="/sprite.svg#twitter" />
+        <use href="sprite.svg#twitter" />
     </svg>
 
     <svg
@@ -139,7 +139,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>facebook</title>
-        <use href="/sprite.svg#facebook" />
+        <use href="sprite.svg#facebook" />
     </svg>
 
     <svg
@@ -148,7 +148,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>linkedin</title>
-        <use href="/sprite.svg#linkedin" />
+        <use href="sprite.svg#linkedin" />
     </svg>
 
     <svg
@@ -157,7 +157,7 @@ ${style}
         class="icon icon--${args.iconSize}"
     >
         <title>video</title>
-        <use href="/sprite.svg#video" />
+        <use href="sprite.svg#video" />
     </svg>
 
 </div>

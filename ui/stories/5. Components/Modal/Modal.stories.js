@@ -42,7 +42,7 @@ export const Modal = () => `
                     class="icon"
                 >
                     <title>close</title>
-                    <use href="/sprite.svg#close" />
+                    <use href="sprite.svg#close" />
                 </svg>
                 <span class="sr-only">Close</span>
             </button>
@@ -96,7 +96,7 @@ export const ModalOverflow = () => `
                     class="icon"
                 >
                     <title>close</title>
-                    <use href="/sprite.svg#close" />
+                    <use href="sprite.svg#close" />
                 </svg>
                 <span class="sr-only">Close</span>
             </button>

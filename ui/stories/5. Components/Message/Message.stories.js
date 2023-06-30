@@ -39,7 +39,7 @@ export const Message = (args) => `
                 class="icon"
             >
                 <title>close</title>
-                <use href="/sprite.svg#close" />
+                <use href="sprite.svg#close" />
             </svg>
             <span class="sr-only">Close</span>
         </button>`

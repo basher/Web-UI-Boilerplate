@@ -25,7 +25,7 @@ export const Share = () => `
             focusable="false"
             class="icon"
         >
-            <use href="/sprite.svg#share" />
+            <use href="sprite.svg#share" />
         </svg>
         <span>Share</span>
     </button>
@@ -64,7 +64,7 @@ export const ShareDifferentPage = () => `
             focusable="false"
             class="icon"
         >
-            <use href="/sprite.svg#share" />
+            <use href="sprite.svg#share" />
         </svg>
         <span>Share</span>
     </button>

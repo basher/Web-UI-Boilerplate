@@ -52,7 +52,7 @@ export const TextAndIconButton = (args) => `
         focusable="false"
         class="icon"
     >
-        <use href="/sprite.svg#${args.iconRef}" />
+        <use href="sprite.svg#${args.iconRef}" />
     </svg>
     <span>${args.label}</span>
 </button>

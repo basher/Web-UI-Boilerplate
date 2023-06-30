@@ -40,7 +40,7 @@ export const IconButton = (args) => `
         class="icon icon--${args.iconSize}"
     >
         <title>[title]</title>
-        <use href="/sprite.svg#${args.iconRef}" />
+        <use href="sprite.svg#${args.iconRef}" />
     </svg>
     <span class="sr-only">[screenreader label]</span>
 </button>

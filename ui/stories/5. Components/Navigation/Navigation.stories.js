@@ -59,7 +59,7 @@ export const HamburgerSimpleNavigation = () => `
             class="icon"
         >
             <title>Menu</title>
-            <use href="/sprite.svg#hamburger" />
+            <use href="sprite.svg#hamburger" />
         </svg>
         <svg
             aria-hidden="true"
@@ -67,7 +67,7 @@ export const HamburgerSimpleNavigation = () => `
             class="icon"
         >
             <title>Menu</title>
-            <use href="/sprite.svg#close" />
+            <use href="sprite.svg#close" />
         </svg>
         <span class="sr-only">Menu</span>
     </button>
@@ -121,7 +121,7 @@ export const DisclosureNavigation = () => `
                     class="icon"
                 >
                     <title>Menu</title>
-                    <use href="/sprite.svg#down" />
+                    <use href="sprite.svg#down" />
                 </svg>
                 <span class="sr-only">[Nav link] dropdown</span>
             </button>
@@ -170,7 +170,7 @@ export const DisclosureNavigation = () => `
                     class="icon"
                 >
                     <title>Menu</title>
-                    <use href="/sprite.svg#down" />
+                    <use href="sprite.svg#down" />
                 </svg>
                 <span class="sr-only">[Nav link] dropdown</span>
             </button>
@@ -225,7 +225,7 @@ export const HamburgerDisclosureNavigation = () => `
             class="icon"
         >
             <title>Menu</title>
-            <use href="/sprite.svg#hamburger" />
+            <use href="sprite.svg#hamburger" />
         </svg>
         <svg
             aria-hidden="true"
@@ -233,7 +233,7 @@ export const HamburgerDisclosureNavigation = () => `
             class="icon"
         >
             <title>Menu</title>
-            <use href="/sprite.svg#close" />
+            <use href="sprite.svg#close" />
         </svg>
         <span class="sr-only">Menu</span>
     </button>
@@ -260,7 +260,7 @@ export const HamburgerDisclosureNavigation = () => `
                     class="icon"
                 >
                     <title>Menu</title>
-                    <use href="/sprite.svg#down" />
+                    <use href="sprite.svg#down" />
                 </svg>
                 <span class="sr-only">[Nav link] dropdown</span>
             </button>
@@ -309,7 +309,7 @@ export const HamburgerDisclosureNavigation = () => `
                     class="icon"
                 >
                     <title>Menu</title>
-                    <use href="/sprite.svg#down" />
+                    <use href="sprite.svg#down" />
                 </svg>
                 <span class="sr-only">[Nav link] dropdown</span>
             </button>

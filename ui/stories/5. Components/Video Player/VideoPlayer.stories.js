@@ -41,7 +41,7 @@ export const VideoPlayer = () => `
                 focusable="false"
                 class="icon"
             >
-                <use href="/sprite.svg#video" />
+                <use href="sprite.svg#video" />
             </svg>
         </a>
 
@@ -58,7 +58,7 @@ export const VideoPlayer = () => `
                         class="icon"
                     >
                         <title>close</title>
-                        <use href="/sprite.svg#close" />
+                        <use href="sprite.svg#close" />
                     </svg>
                     <span class="sr-only">Close</span>
                 </button>

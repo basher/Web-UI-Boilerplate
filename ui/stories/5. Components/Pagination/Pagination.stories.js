@@ -22,7 +22,7 @@ export const Pagination = () => `
                 focusable="false"
                 class="icon"
             >
-                <use href="/sprite.svg#left" />
+                <use href="sprite.svg#left" />
             </svg>
             <span>Previous Page</span>
         </button>
@@ -45,7 +45,7 @@ export const Pagination = () => `
                 focusable="false"
                 class="icon"
             >
-                <use href="/sprite.svg#right" />
+                <use href="sprite.svg#right" />
             </svg>
             <span>Next Page</span>
     </button>

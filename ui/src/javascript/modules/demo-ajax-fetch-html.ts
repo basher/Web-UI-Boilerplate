@@ -40,7 +40,7 @@ class AjaxLoader {
     private fetchHtmlFragment(ajaxContainer: HTMLElement): void {
         const showAjaxSpinner = true;
 
-        fetch('/ajax/ajax.html', {
+        fetch('ajax/ajax.html', {
             method: 'GET',
             signal: ajaxAbortHandler({
                 ajaxContainer,
