@@ -14,7 +14,7 @@ export default {
     },
     loaders: [
         () =>
-            fetch(process.env.STORYBOOK_EXPORTED_COLORS)
+            fetch('exported-colors.json')
                 .then((r) => r.json())
                 .then((json) => json),
     ],
