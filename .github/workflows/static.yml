@@ -17,6 +17,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -31,22 +34,16 @@ jobs:
           cd ui
           yarn install
           yarn build-storybook
+          ls
+          echo 'workspace'
+          cd ${{ github.workspace }}
+          ls
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          name: storybook
-          path: 'ui/storybook-static'
+          path: ${{ github.workspace }}/ui/storybook-static
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-        with:
-          artifact_name: storybook
