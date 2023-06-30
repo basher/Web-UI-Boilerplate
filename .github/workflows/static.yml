@@ -34,10 +34,7 @@ jobs:
           cd ui
           yarn install
           yarn build-storybook
-          ls
-          echo 'workspace'
           cd ${{ github.workspace }}
-          ls
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
