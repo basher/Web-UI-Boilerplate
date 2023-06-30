@@ -3,8 +3,7 @@ module.exports = {
         '../stories/**/*.stories.mdx',
         '../stories/**/*.stories.@(js|jsx|ts|tsx)'
     ],
-    // Adding 'dist' folder allows us to access Parcel-bundled CSS/JS in 'preview-head.html'.
-    staticDirs: ['../public', '../dist'],
+    staticDirs: ['../public'],
     addons: [
         '@storybook/addon-links',
         '@storybook/addon-a11y',
