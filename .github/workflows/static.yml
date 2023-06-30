@@ -32,8 +32,7 @@ jobs:
       - name: Install and Build
         run: |
           cd ui
-          yarn install
-          yarn build-storybook
+          yarn publish-storybook
           cd ${{ github.workspace }}
 
       - name: Upload artifact

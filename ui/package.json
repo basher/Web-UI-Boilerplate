@@ -22,7 +22,8 @@
         "build": "yarn install && yarn supported-browsers && yarn build:parcel",
         "postbuild": "yarn static-assets-rename && yarn static-assets-move",
         "storybook": "start-storybook -p 9009",
-        "build-storybook": "build-storybook"
+        "build-storybook": "build-storybook",
+        "publish-storybook": "yarn install && yarn sass-export-colors && parcel build src/javascript/index.ts --dist-dir dist && yarn build-storybook"
     },
     "targets": {
         "app": {}

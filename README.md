@@ -10,6 +10,8 @@ No React. No Vue. No CSS-in-JS. No Tailwind.
 Just plain vanilla code. 😜
 ```
 
+- Live Storybook URL = https://basher.github.io/Web-UI-Boilerplate/
+
 ## Compile and watch for UI changes
 > - Use the correct Node version as listed in `ui/.nvmrc`. If necessary, install Node Version Manager (NVM).
 > - Ensure Yarn is installed for the current Node version.
@@ -20,7 +22,7 @@ From `ui` directory:
 - `yarn start` - Installs Node modules (if not already installed) and launches Parcel bundler.
 - `yarn storybook` - Launches Storybook/HTML component library.
 
-## Bundle for production without watch
+## Bundle CSS/JavaScript for production without watch
 From `ui` directory:
 - `yarn build`
 
@@ -51,8 +53,12 @@ There is a need to distinguish between `development` and `production` environmen
 
 ## Build and publish Storybook
 From `ui` directory:
-- `yarn build storybook`.
+- `yarn publish-storybook` - this runs a Parcel build to bundle CSS/JavaScript in the `dist` folder, as defined in `ui/.storybook/main.js`.
 - `npx http-server ./storybook-static` - to test production build on local server.
+
+### Publish using GitHub pages
+- Uses the workflow defined in `.github/workflows/static.yml`.
+- Live Storybook URL = https://basher.github.io/Web-UI-Boilerplate/
 
 ## Complete UI setup instructions
 - Please see the `README` in `ui` directory.

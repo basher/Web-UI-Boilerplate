@@ -7,6 +7,3 @@ yarn-error.log
 
 # Parcel bundler
 .parcel-cache
-
-# Storybook
-ui/storybook-static
