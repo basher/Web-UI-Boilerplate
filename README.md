@@ -53,7 +53,7 @@ There is a need to distinguish between `development` and `production` environmen
 
 ## Build and publish Storybook
 From `ui` directory:
-- `yarn publish-storybook` - this runs a Parcel build to bundle CSS/JavaScript in the `dist` folder, as defined in `ui/.storybook/main.js`.
+- `yarn publish-storybook` - this runs a Parcel build to bundle CSS/JavaScript in the `public` folder, as defined in `ui/.storybook/main.js`.
 - `npx http-server ./storybook-static` - to test production build on local server.
 
 ### Publish using GitHub pages

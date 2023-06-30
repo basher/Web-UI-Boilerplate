@@ -1,12 +1,13 @@
 # UI
 node_modules
-dist/*
 build
+dist/*
+public/*
 *.map
-yarn-error.log
+*.log
 
 # Parcel bundler
 .parcel-cache
 
 # Storybook
-ui/storybook-static
+storybook-static
