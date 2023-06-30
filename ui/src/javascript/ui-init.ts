@@ -20,7 +20,7 @@ import demoAjaxFetchHTML from './modules/demo-ajax-fetch-html';
 export const uiInit = (): void => {
     // Is browser supported? Based on '.browserslistrc' config.
     if (!isBrowserSupported()) {
-        // Maybe do something...e.g. add an alert/message to the UI?
+        // Maybe do something... e.g. add an alert/message to the UI?
         console.warn('isBrowserSupported...', isBrowserSupported());
     }
 
