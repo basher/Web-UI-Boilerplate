@@ -13,7 +13,7 @@ export default {
     },
 };
 
-export const FormNoArgsServerValidation = () => `
+export const FormServerValidation = () => `
 <div class="message message--error" role="alert">
     <div class="stack">
         <h2>Form errors</h2>
@@ -166,9 +166,9 @@ export const FormNoArgsServerValidation = () => `
     </div>
 </form>
 `;
-FormNoArgsServerValidation.storyName = 'Form (with server-side validation)';
+FormServerValidation.storyName = 'Form (with server-side validation)';
 
-export const FormNoArgsJSValidation = () => `
+export const FormJSValidation = () => `
 <form class="form" action="#" data-module="form-validate">
     <div class="form__field">
         <label for="input-text1" class="label">
@@ -274,4 +274,4 @@ export const FormNoArgsJSValidation = () => `
     </div>
 </form>
 `;
-FormNoArgsJSValidation.storyName = 'Form (with JS validation)';
+FormJSValidation.storyName = 'Form (with JS validation)';
