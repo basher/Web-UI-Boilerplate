@@ -169,7 +169,7 @@ class Slider {
         this.slider.setAttribute('tabIndex', '-1');
 
         const buttonGroup = document.createElement('div');
-        buttonGroup.classList.add('button-group');
+        buttonGroup.classList.add('slider__controls', 'button-group');
         buttonGroup.setAttribute('role', 'region');
         buttonGroup.setAttribute('aria-label', 'slider controls');
         this.slider.before(buttonGroup);

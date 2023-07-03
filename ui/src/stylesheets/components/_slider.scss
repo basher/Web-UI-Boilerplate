@@ -74,11 +74,16 @@ Dependencies.
         }
     }
 
+    &__controls {
+        margin-block-end: $gutter-m;
+    }
+
     &__counter {
         &--pips {
             display: flex;
             flex-wrap: wrap;
             gap: $gutter-s;
+            margin-block-start: $gutter-m;
         }
 
         &__pip {
