@@ -97,6 +97,9 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
 ### Dev dependencies
 - `babel-loader` is needed for Storybook.
 
+### Re-ordering stories in sidebar navigation
+- All stories and docs are ordered according to the `storySort` configuration in `ui/.storybook/preview.js`.
+
 ## Trouble-shooting bundling and build issues
 - If bundling breaks, or UI is not updated (in DEV mode) to reflect latest CSS/JavaScript changes:
     - Kill the Parcel Node process with `CTRL+C`.
