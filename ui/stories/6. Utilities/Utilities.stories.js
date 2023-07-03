@@ -53,33 +53,6 @@ const style = `
 </style>
 `;
 
-export const ScreenReader = () => `
-<p>The content below is hidden visually...</p>
-
-<div class="sr-only">
-    Visually hide content, but still make it available to screen readers.
-</div>
-`;
-ScreenReader.storyName = 'Screen reader';
-
-export const HideContent = () => `
-<p>The content below is removed from the DOM entirely...</p>
-
-<div class="u-hidden">
-    Remove content from the DOM.
-</div>
-`;
-HideContent.storyName = 'Hide content';
-
-export const CenterContent = () => `
-<div class="u-center">
-    <h2>Heading level 2</h2>
-    <h3>Heading level 3</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
-<div>
-`;
-CenterContent.storyName = 'Center content';
-
 export const marginPadding = (args) => `
 ${style}
 <div class="
