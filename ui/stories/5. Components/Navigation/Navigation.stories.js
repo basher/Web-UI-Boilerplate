@@ -127,7 +127,7 @@ export const DisclosureNavigation = () => `
             </button>
 
             <ul
-                class="nav__list nav__list--dropdown"
+                class="nav__list nav__list--dropdown u-hidden"
                 data-disclosure-content
             >
                 <li class="nav__item">
@@ -176,7 +176,7 @@ export const DisclosureNavigation = () => `
             </button>
 
             <ul
-                class="nav__list nav__list--dropdown"
+                class="nav__list nav__list--dropdown u-hidden"
                 data-disclosure-content
             >
                 <li class="nav__item">
@@ -266,7 +266,7 @@ export const HamburgerDisclosureNavigation = () => `
             </button>
 
             <ul
-                class="nav__list nav__list--dropdown"
+                class="nav__list nav__list--dropdown u-hidden"
                 data-disclosure-content
             >
                 <li class="nav__item">
@@ -315,7 +315,7 @@ export const HamburgerDisclosureNavigation = () => `
             </button>
 
             <ul
-                class="nav__list nav__list--dropdown"
+                class="nav__list nav__list--dropdown u-hidden"
                 data-disclosure-content
             >
                 <li class="nav__item">
