@@ -126,4 +126,4 @@ ${style}
     <p class="slider-instructions">Scroll or use your arrow keys for more</p>
 </section>
 `;
-SliderEnhancedJS.storyName = 'JS-enhanced slider';
+SliderEnhancedJS.storyName = 'JavaScript-enhanced slider';

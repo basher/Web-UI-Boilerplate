@@ -20,7 +20,7 @@ export const ScreenReader = () => `
     Visually hide content, but still make it available to screen readers.
 </div>
 `;
-ScreenReader.storyName = 'Screen reader';
+ScreenReader.storyName = 'Screen reader only content';
 
 export const HideContent = () => `
 <p>The content below is removed from the DOM entirely...</p>
