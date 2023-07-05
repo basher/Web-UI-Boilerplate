@@ -14,7 +14,7 @@ export default {
 };
 
 export const ScreenReader = () => `
-<p>The content below is hidden visually...</p>
+<p>The content below is hidden visually, but still announced by screen readers...</p>
 
 <div class="sr-only">
     Visually hide content, but still make it available to screen readers.

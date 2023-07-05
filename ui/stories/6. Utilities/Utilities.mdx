@@ -2,6 +2,14 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 
 # CSS utility classes
 
+## Margin and padding
+- Applies `u-m-block`|`u-m-inline` and `u-p-block`|`u-p-inline` override classes.
+- Uses CSS `clamp()` to set `min` and `max` values for larger gutters.
+
+<Preview>
+    <Story id="utilities-helpers-and-utilities--margin-padding" />
+</Preview>
+
 ## Screen readers
 - `sr-only` visually hides content, but still make it available to screen readers.
 
@@ -17,16 +25,8 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 </Preview>
 
 ## Hide content
-- `u-center` centers the content.
+- `u-center` horizontally centers the content.
 
 <Preview>
     <Story id="utilities-helpers-and-utilities--center-content" />
-</Preview>
-
-## Margin and padding
-- Applies `u-m-block`|`u-m-inline` and `u-p-block`|`u-p-inline` override classes.
-- Uses CSS `clamp()` to set `min` and `max` values for larger gutters.
-
-<Preview>
-    <Story id="utilities-helpers-and-utilities--margin-padding" />
 </Preview>

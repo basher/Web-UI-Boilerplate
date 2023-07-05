@@ -108,7 +108,7 @@ ${style}
     <p class="slider-instructions">Scroll or use your arrow keys for more</p>
 </section>
 `;
-Slider.storyName = 'CSS-only slider';
+Slider.storyName = 'CSS slider';
 
 export const SlidesFullwidth = () => `
 ${style}
@@ -152,7 +152,7 @@ ${style}
     <p class="slider-instructions">Scroll or use your arrow keys for more</p>
 </section>
 `;
-SlidesFullwidth.storyName = 'CSS-only fullwidth slides';
+SlidesFullwidth.storyName = 'CSS fullwidth slides';
 
 export const SlidesClickable = () => `
 ${style2}
@@ -196,4 +196,4 @@ ${style2}
     <p class="slider-instructions">Scroll or use your arrow keys for more</p>
 </section>
 `;
-SlidesClickable.storyName = 'CSS-only clickable slides';
+SlidesClickable.storyName = 'CSS clickable slides';

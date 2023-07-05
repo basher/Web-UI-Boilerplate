@@ -29,19 +29,6 @@ const style = `
 </style>
 `;
 
-const style2 = `
-<style>
-    .slider > * {
-        background: hsl(51, 100%, 45%, 15%);
-        border: 1px dashed hsl(51, 100%, 45%);
-    }
-    .slider--has-clickable-slides a {
-        display: block;
-        padding: 5rem;
-    }
-</style>
-`;
-
 export const SliderEnhancedJS = (args) => `
 ${style}
 <section class="slider-wrapper" aria-label="[meaningful label for slider]"
