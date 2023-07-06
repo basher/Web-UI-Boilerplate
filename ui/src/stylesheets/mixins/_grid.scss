@@ -25,12 +25,10 @@ Dependencies.
     $min-width: $grid-item-min-width
 ) {
     // Container queries.
-    @supports (container-type: inline-size) {
-        @container (inline-size >= calc(#{$grid-item-min-width} * 2)) {
-            grid-template-columns:
-                minmax($min-width, $col1)
-                minmax($min-width, $col2);
-        }
+    @container (inline-size >= calc(#{$grid-item-min-width} * 2)) {
+        grid-template-columns:
+            minmax($min-width, $col1)
+            minmax($min-width, $col2);
     }
 
     // Fallback.
