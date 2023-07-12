@@ -28,7 +28,7 @@ Dependencies.
     &[class*='media-inline'],
     &[class*='fullwidth'] {
         flex-wrap: wrap;
-        inline-size: fit-content;
+        inline-size: auto;
 
         .card__content {
             flex-basis: 0;

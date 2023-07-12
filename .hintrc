@@ -1,0 +1,17 @@
+// Ignore warnings from VS Code Webhint extension.
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "accent-color",
+          "text-size-adjust"
+        ]
+      }
+    ]
+  }
+}

@@ -22,7 +22,6 @@ html {
     accent-color: $color-brand;
     color-scheme: light dark;
     // Remove the automatic text size adjustment that is provided by iOS.
-    -webkit-text-size-adjust: none;
     text-size-adjust: none;
 }
 
