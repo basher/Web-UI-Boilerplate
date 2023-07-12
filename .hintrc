@@ -1,4 +1,3 @@
-// Ignore warnings from VS Code Webhint extension.
 {
   "extends": [
     "development"
@@ -9,7 +8,8 @@
       {
         "ignore": [
           "accent-color",
-          "text-size-adjust"
+          "text-size-adjust",
+          "-webkit-tap-highlight-color"
         ]
       }
     ]
