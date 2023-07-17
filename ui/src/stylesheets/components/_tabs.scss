@@ -11,7 +11,7 @@ Dependencies.
         display: flex;
         gap: $gutter-m;
         margin-block-end: $gutter-m;
-        overflow-inline: auto;
+        overflow-x: auto;
     }
 
     &__link {
@@ -30,7 +30,7 @@ Dependencies.
                 flex-direction: column;
                 grid-area: tabs;
                 margin: 0;
-                overflow-inline: unset;
+                overflow-x: unset;
             }
 
             [role='tab'] {

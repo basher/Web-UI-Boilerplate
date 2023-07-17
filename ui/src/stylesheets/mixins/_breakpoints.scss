@@ -1,17 +1,9 @@
 /*
 ----------------------------------------------------------------------------
-Main breakpoints.
-
-NOTES:
-1. Add breakpoint Sass variables as appropriate.
-1a. Breakpoint specified in EM units due to Safari bug when increasing root font-size on HTML element - see https://zellwk.com/blog/media-query-units/.
-2. Create a mixin per breakpoint, whose name is the same as the breakpoints defined in (1).
-3. Create a mixin to generate CSS content to identify the media query, which can be leveraged by JavaScript.
-4. Invoke the mixin from (3) on the body element.
+Breakpoints specified in EM units due to Safari bug when increasing root font-size on HTML element - see https://zellwk.com/blog/media-query-units/.
 ----------------------------------------------------------------------------
 */
 
-/*[1], [1a]*/
 $bp-xsmall: 30em !default; // 480px
 $bp-small: 48em !default; // 768px
 $bp-medium: 48.0625em !default; // 769px
@@ -22,7 +14,6 @@ $bp-xlarge: 90em !default; // 1440px
 $bp-2k: 160em !default; // 2560px
 $bp-4k: 240em !default; // 3840px
 
-/*[2]*/
 // Smaller breakpoint sometimes needed to specifically target very narrow screens (e.g. to force single column layout in cases where FLEX or GRID can still fit >1 column).
 @mixin bp-xsmall {
     @media (max-width: $bp-xsmall) {
@@ -64,44 +55,5 @@ $bp-4k: 240em !default; // 3840px
 @mixin bp-4k {
     @media (min-width: $bp-4k) {
         @content;
-    }
-}
-
-/*[3]*/
-@mixin define-bp($name) {
-    &::before {
-        content: $name;
-        display: none;
-    }
-}
-
-/*[4]*/
-body {
-    @include bp-xsmall {
-        @include define-bp('bp-small');
-    }
-
-    @include bp-small {
-        @include define-bp('bp-small');
-    }
-
-    @include bp-medium {
-        @include define-bp('bp-medium');
-    }
-
-    @include bp-large {
-        @include define-bp('bp-large');
-    }
-
-    @include bp-xlarge {
-        @include define-bp('bp-xlarge');
-    }
-
-    @include bp-2k {
-        @include define-bp('bp-2k');
-    }
-
-    @include bp-4k {
-        @include define-bp('bp-4k');
     }
 }
