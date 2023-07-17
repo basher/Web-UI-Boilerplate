@@ -2,6 +2,7 @@
     "compilerOptions": {
         "strict": true,
         "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
     },
     "include": [
         "src/javascript/**/*",
