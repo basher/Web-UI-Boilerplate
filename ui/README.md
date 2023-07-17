@@ -46,14 +46,8 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
 - [ES6 template literal syntax highlighter](https://marketplace.visualstudio.com/items?itemName=julienetie.vscode-template-literals). Useful when editing Storybook/HTML stories, which use ES6 template literals.
 
 ## Supported browsers
-- The [default browserslist configuration](https://github.com/browserslist/browserslist#best-practices) has been defined in `.browserslistrc`.
+- The [default browserslist configuration](https://github.com/browserslist/browserslist#best-practices) has been defined in `package.json`.
 - Run `npx browserslist` to see a list of supported browsers.
-
-### Testing for browser support in the UI
-
-> NOTE: The syntax for the [supported-browsers](https://github.com/browserslist/browserslist-useragent-regexp#browserslist-useragent-regexp) script differs in Windows environments versus MacOS/Linux.
-- The `supported-browsers` script in `package.json` uses the `browserslist-useragent-regexp` package to extract the browserslist config into an exportable JavaScript module containing a REGEX of supported browsers.
-- This is imported in the generated REGEX in `src/javascript/utils/browser-support.ts` to match against the current browser.
 
 ## Parcel bundler
 ```
@@ -67,7 +61,7 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
 - See [Parcel default Babel presets](https://parceljs.org/languages/javascript/#default-presets).
     - Note that `babel-eslint` has been [deprecated](https://github.com/babel/babel-eslint) in favour of `@babel/eslint-parser`.
     - `@typescript-eslint/parser` is also needed, due to TypeScript usage.
-    - Parcel leverages the `.browserslistrc` config to determine what level of transpilation to perform.
+    - Parcel leverages the `browserslist` config in `package.json` to determine what level of transpilation to perform.
 - See [Parcel differential bundling](https://parceljs.org/features/targets/#differential-bundling).
 
 ### TypeScript

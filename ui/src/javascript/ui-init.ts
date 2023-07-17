@@ -1,6 +1,4 @@
 // Dependencies
-import { isBrowserSupported } from './utils/browser-support';
-
 import Disclosure from './modules/disclosure';
 import FormValidate from './modules/form-validate';
 import Message from './modules/message';
@@ -18,12 +16,6 @@ import Wysiwyg from './modules/wysiwyg';
 import demoAjaxFetchHTML from './modules/demo-ajax-fetch-html';
 
 export const uiInit = (): void => {
-    // Is browser supported? Based on '.browserslistrc' config.
-    if (!isBrowserSupported()) {
-        // Maybe do something... e.g. add an alert/message to the UI?
-        console.warn('isBrowserSupported...', isBrowserSupported());
-    }
-
     Disclosure.start();
     FormValidate.start();
     Message.start();

@@ -9,17 +9,16 @@
     },
     "homepage": "https://basher.github.io/Web-UI-Boilerplate",
     "scripts": {
-        "supported-browsers": "(echo export default && browserslist-useragent-regexp --allowHigherVersions) > src/javascript/config/supported-browsers.js",
         "reset": "rm -rf node_modules/ && yarn install",
         "static-assets-rename": "node ./scripts/static-assets-rename",
         "static-assets-move": "node ./scripts/static-assets-move",
         "sass-export-colors": "sass-export src/stylesheets/base/_colors.scss -o public/exported-colors.json",
         "prestart": "rm -rf .parcel-cache",
         "start:parcel": "parcel watch src/javascript/index.ts --dist-dir public --hmr-port 1234 --target app",
-        "start": "yarn install && yarn sass-export-colors && yarn supported-browsers && yarn start:parcel",
+        "start": "yarn install && yarn sass-export-colors && yarn start:parcel",
         "prebuild": "rm -rf .parcel-cache && rm -rf ../build/ui/",
         "build:parcel": "parcel build index.html --dist-dir ../build/ui",
-        "build": "yarn install && yarn supported-browsers && yarn build:parcel",
+        "build": "yarn install && yarn build:parcel",
         "postbuild": "yarn static-assets-rename && yarn static-assets-move",
         "storybook": "start-storybook -p 9009",
         "build-storybook": "build-storybook",
@@ -28,6 +27,10 @@
     "targets": {
         "app": {}
     },
+    "browserslist": [
+        "defaults",
+        "not dead"
+    ],
     "devDependencies": {
         "@babel/core": "^7.13.15",
         "@babel/eslint-parser": "^7.13.14",
@@ -60,7 +63,6 @@
     },
     "dependencies": {
         "abortcontroller-polyfill": "^1.7.3",
-        "browserslist-useragent-regexp": "^4.0.0",
         "dialog-polyfill": "^0.5.6",
         "intersection-observer": "^0.12.0",
         "process": "^0.11.10",

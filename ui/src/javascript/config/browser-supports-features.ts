@@ -1,5 +1,5 @@
 /*
-    Use the "browserslist" config in ".browserslistrc" file to determine which features need to be supported with polyfills.
+    Use the "browserslist" config in "package.json" file to determine which features need to be supported with polyfills.
 
     Please refer to these articles for explanation:
     - https://philipwalton.com/articles/loading-polyfills-only-when-needed/.
