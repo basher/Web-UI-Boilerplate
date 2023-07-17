@@ -75,8 +75,6 @@ Dependencies.
 
     // Using container queries for (asymmetric) grids.
     &-container {
-        @supports (container-type: inline-size) {
-            container-type: inline-size;
-        }
+        container-type: inline-size;
     }
 }
