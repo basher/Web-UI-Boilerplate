@@ -51,10 +51,10 @@ ${style}
 export const PageSidebar = () => `
 ${style}
 <div class="page">
-    <header>
+    <header class="header">
         Header.
     </header>
-    <main>
+    <main class="main">
         <div class="sidebar-wrapper page__sidebar">
             <div class="sidebar">
                 Sidebar.<br>
@@ -66,7 +66,7 @@ ${style}
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="footer">
         Footer.
     </footer>
 </div>
@@ -76,10 +76,10 @@ PageSidebar.storyName = 'Page with sidebar';
 export const PageSidebarRight = () => `
 ${style}
 <div class="page">
-    <header>
+    <header class="header">
         Header.
     </header>
-    <main>
+    <main class="main">
         <div class="sidebar-wrapper page__sidebar">
             <div>
                 Content.
@@ -91,7 +91,7 @@ ${style}
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="footer">
         Footer.
     </footer>
 </div>
