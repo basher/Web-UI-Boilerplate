@@ -15,8 +15,7 @@ Dependencies.
         }
     }
 
-    .form,
-    .form__field {
+    :is(.form, .form__field) {
         align-items: center;
         flex-direction: row;
     }
