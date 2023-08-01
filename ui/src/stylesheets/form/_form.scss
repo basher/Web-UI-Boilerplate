@@ -7,9 +7,7 @@ Dependencies.
 @use '../base' as *;
 
 @mixin validation {
-    .label,
-    .checkbox__label,
-    .radio__label {
+    :is(.label, .checkbox__label, .radio__label) {
         padding-inline-end: $gutter-m;
         position: relative;
 
@@ -51,9 +49,7 @@ Dependencies.
 
         /* stylelint-disable no-descending-specificity */
         &:has(:valid:required) {
-            .label,
-            .checkbox__label,
-            .radio__label {
+            :is(.label, .checkbox__label, .radio__label) {
                 /* stylelint-disable-next-line max-nesting-depth */
                 &::after {
                     color: $color-success;
