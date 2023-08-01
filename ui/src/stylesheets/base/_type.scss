@@ -31,12 +31,10 @@ Font-face rules.
 Typefaces.
 ----------------------------------------------------------------------------
 */
-$font-stack-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif !default;
-$base-font-family: var(--type-font-family), $font-stack-fallback !default;
-$base-font-family-title: var(--type-font-family-title), $font-stack-fallback !default;
-$base-font-family-monospace: Menlo, Monaco, Consolas, 'Droid Sans Mono',
-    'Courier New', monospace !default;
+$base-font-family: var(--type-font-family), var(--type-font-fallback) !default;
+$base-font-family-title: var(--type-font-family-title),
+    var(--type-font-fallback) !default;
+$base-font-family-monospace: var(--type-font-family-monospace) !default;
 
 /*
 ----------------------------------------------------------------------------

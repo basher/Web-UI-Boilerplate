@@ -22,8 +22,12 @@ CSS custom properties for dynamic theming.
     --color-focus: 193 100% 45%;
 
     // Typography.
+    --type-font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     --type-font-family: Arial;
     --type-font-family-title: 'robotolight';
+    --type-font-family-monospace: Menlo, Monaco, Consolas, 'Droid Sans Mono',
+        'Courier New', monospace;
     --type-max-line-length: 65ch;
 
     // Layout.
