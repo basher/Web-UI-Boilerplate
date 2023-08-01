@@ -22,7 +22,7 @@ CSS Cascade Layers.
 ----------------------------------------------------------------------------
 */
 @use 'sass:meta'; // [1]
-@layer global, layout, components, skin, state, utilities, print; // [2]
+@layer global, layout, components, skin, utilities, print; // [2]
 
 @media screen {
     /*
