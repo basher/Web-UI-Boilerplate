@@ -25,9 +25,7 @@ html {
     text-size-adjust: none;
 }
 
-*,
-*::after,
-*::before {
+:where(*, *::after, *::before) {
     box-sizing: border-box;
 }
 
@@ -39,8 +37,7 @@ html {
     vertical-align: baseline;
 }
 
-html,
-body {
+:is(html, body) {
     // Smooth scrolling IF user doesn't have a preference due to motion sensitivities.
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
@@ -50,8 +47,7 @@ body {
     min-block-size: 100dvb;
 }
 
-ol[class],
-ul[class] {
+:is(ol, ul)[class] {
     list-style: none;
 }
 
@@ -63,13 +59,11 @@ ol ol ol {
     list-style-type: lower-roman;
 }
 
-ol:not([class]),
-ul:not([class]) {
+:is(ol, ul):not([class]) {
     padding-inline-start: $gutter-l;
 }
 
-[type='submit'],
-label {
+:where([type='submit'], label) {
     cursor: pointer;
 }
 
@@ -97,16 +91,13 @@ svg {
     max-inline-size: 100%;
 }
 
-input,
-textarea,
-select {
+:is(input, textarea, select) {
     color: inherit;
     vertical-align: middle;
 }
 
 // <a> needs to be included here to remove the default tab focus.
-button,
-a {
+:is(button, a) {
     appearance: none;
     cursor: pointer;
     -webkit-tap-highlight-color: hsl(0 0% 0% / 0%);
@@ -127,8 +118,7 @@ a:not([class]) {
     }
 }
 
-sub,
-sup {
+:is(sub, sup) {
     vertical-align: revert;
 }
 
