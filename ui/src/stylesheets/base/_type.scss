@@ -57,6 +57,8 @@ $font-size-s: 0.875rem !default;
 $font-size-h6: $base-font-size !default;
 
 // Sizes below based on perfect 4th scale = 1.333.
+// Can't use --type-scale in fluid typography calculations & mixin.
+// Need to use $type-scale instead, with same value.
 $type-scale: 1.333 !default;
 $font-size-h5: $base-font-size * $type-scale !default;
 $font-size-h4: $font-size-h5 * $type-scale !default;
