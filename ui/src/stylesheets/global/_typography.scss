@@ -37,8 +37,7 @@ h4,
 h5,
 h6,
 [class*='h--'] {
-    font-family: $heading-font-family;
-    font-weight: $heading-font-weight;
+    font-family: $base-font-family-title;
 }
 
 .h--xl {

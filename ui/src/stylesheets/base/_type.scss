@@ -42,16 +42,7 @@ Base font settings.
 ----------------------------------------------------------------------------
 */
 $base-color: $color-text !default;
-$base-font-weight: 400 !default;
 $base-line-height: 1.5 !default;
-
-/*
-----------------------------------------------------------------------------
-Heading settings.
-----------------------------------------------------------------------------
-*/
-$heading-font-family: $base-font-family-title !default;
-$heading-font-weight: 700 !default;
 
 /*
 ----------------------------------------------------------------------------
@@ -63,12 +54,12 @@ $base-font-size-2k: 110% !default; // 2K screens
 $base-font-size-4k: 200% !default; // 4K screens
 
 $font-size-s: 0.875rem !default;
-$font-size-h6: 1rem !default;
-$font-size-h5: 1.125rem !default;
+$font-size-h6: $base-font-size !default;
 
 // Sizes below based on perfect 4th scale = 1.333.
 $type-scale: 1.333 !default;
-$font-size-h4: $base-font-size * $type-scale !default;
+$font-size-h5: $base-font-size * $type-scale !default;
+$font-size-h4: $font-size-h5 * $type-scale !default;
 $font-size-h3: $font-size-h4 * $type-scale !default;
 $font-size-h2: $font-size-h3 * $type-scale !default;
 $font-size-h1: $font-size-h2 * $type-scale !default;

@@ -14,7 +14,7 @@ Dependencies.
     &__summary {
         @include fluid-type($font-size-h5, $font-size-h3, $line-height-h3);
         @include focus;
-        font-family: $heading-font-family;
+        font-family: $base-font-family-title;
         margin-block-end: $gutter-s;
     }
 
