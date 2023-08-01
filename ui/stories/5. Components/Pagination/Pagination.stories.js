@@ -28,7 +28,7 @@ export const Pagination = () => `
         </button>
         <div class="form__field">
             <label for="select" class="label">Page</label>
-            <select class="select" id="select" aria-labelledby="pages" >
+            <select class="select" id="select" aria-describedby="pages" >
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
