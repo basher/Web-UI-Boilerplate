@@ -23,8 +23,8 @@ $gutter-m: var(--gutter-m) !default;
 $gutter-l: var(--gutter-l) !default;
 $gutter-xl: var(--gutter-xl) !default;
 
-$gutter-clamp-l: clamp(#{$gutter-m}, 4vw, #{$gutter-l}) !default;
-$gutter-clamp-xl: clamp(#{$gutter-m}, 5vw, #{$gutter-xl}) !default;
+$gutter-clamp-l: var(--gutter-clamp-l) !default;
+$gutter-clamp-xl: var(--gutter-clamp-xl) !default;
 
 /*
 ----------------------------------------------------------------------------

@@ -29,14 +29,21 @@ CSS custom properties for dynamic theming.
     --type-font-family-monospace: Menlo, Monaco, Consolas, 'Droid Sans Mono',
         'Courier New', monospace;
 
+    // Can't use --type-scale in fluid typography calculations & mixin.
+    // Need to use $type-scale instead, with same value.
+    --type-scale: 1.333;
     --type-max-line-length: 65ch;
 
     // Layout.
-    --gutter-xs: 0.3125rem; // 5px
-    --gutter-s: 0.625rem; // 10px
-    --gutter-m: 1.25rem; // 20px
-    --gutter-l: 2.5rem; // 40px
-    --gutter-xl: 3.75rem; // 60px
+    --gutter: 1.25rem;
+    --gutter-xs: calc(var(--gutter-s) / var(--type-scale));
+    --gutter-s: calc(var(--gutter) / var(--type-scale));
+    --gutter-m: calc(var(--gutter) * var(--type-scale));
+    --gutter-l: calc(var(--gutter-m) * var(--type-scale));
+    --gutter-xl: calc(var(--gutter-l) * var(--type-scale));
+
+    --gutter-clamp-l: clamp(var(--gutter-m), 4vw, var(--gutter-l));
+    --gutter-clamp-xl: clamp(var(--gutter-m), 5vw, var(--gutter-xl));
 
     // Miscellaneous.
     --media-aspect-ratio: 16/9;
