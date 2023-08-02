@@ -12,15 +12,15 @@ Dependencies.
 
 @mixin slider-thumb {
     background-color: $color-brand;
+    block-size: $icon-size-l;
     border: 0;
     border-radius: 50%;
-    height: $icon-size-l;
-    width: $icon-size-l;
+    inline-size: $icon-size-l;
 }
 
 @mixin slider-track {
     background-color: hsl(var(--color-text) / 20%);
-    height: var(--slider-height);
+    block-size: var(--slider-height);
 }
 
 .range {
