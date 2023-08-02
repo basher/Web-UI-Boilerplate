@@ -53,14 +53,14 @@ $base-font-size: 1rem !default;
 $base-font-size-2k: 110% !default; // 2K screens
 $base-font-size-4k: 200% !default; // 4K screens
 
-$font-size-s: 0.875rem !default;
-$font-size-h6: $base-font-size !default;
 
 // Sizes below based on augmented 4th scale = 1.414.
 // NOTE:
 // Can't use --type-scale in fluid typography calculations & mixin.
 // Need to use this $type-scale instead, with same value.
 $type-scale: 1.414 !default;
+$font-size-s: 0.875rem !default;
+$font-size-h6: $base-font-size !default;
 $font-size-h5: $base-font-size * $type-scale !default;
 $font-size-h4: $font-size-h5 * $type-scale !default;
 $font-size-h3: $font-size-h4 * $type-scale !default;
