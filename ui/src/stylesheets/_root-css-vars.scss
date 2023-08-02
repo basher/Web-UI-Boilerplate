@@ -27,9 +27,10 @@ CSS custom properties for dynamic theming.
     --type-font-family-monospace: Menlo, Monaco, Consolas, 'Droid Sans Mono',
         'Courier New', monospace;
 
-    // Can't use --type-scale in fluid typography calculations & mixin.
+    // NOTE:
+    // Can't use this --type-scale in fluid typography calculations & mixin.
     // Need to use $type-scale instead, with same value.
-    --type-scale: 1.333;
+    --type-scale: 1.414;
     --type-max-line-length: 65ch;
 
     // Layout.
