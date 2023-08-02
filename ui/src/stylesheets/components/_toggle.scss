@@ -12,8 +12,7 @@ Dependencies.
     display: inline-flex;
     padding: 0;
 
-    &__on,
-    &__off {
+    :is(&__on, &__off) {
         padding: $gutter-s;
     }
 

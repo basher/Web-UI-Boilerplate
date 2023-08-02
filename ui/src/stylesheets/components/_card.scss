@@ -25,8 +25,7 @@ Dependencies.
     }
 
     // Layout approach is same as sidebar layout.
-    &[class*='media-inline'],
-    &[class*='fullwidth'] {
+    &:is([class*='media-inline'], [class*='fullwidth']) {
         flex-wrap: wrap;
         inline-size: auto;
 
@@ -46,14 +45,12 @@ Dependencies.
         }
     }
 
-    &--media-inline,
-    &--fullwidth {
+    :is(&--media-inline, &--fullwidth) {
         flex-direction: row;
         justify-content: flex-start;
     }
 
-    &--media-inline-reverse,
-    &--fullwidth-reverse {
+    :is(&--media-inline-reverse, &--fullwidth-reverse) {
         flex-direction: row-reverse;
         justify-content: flex-end;
     }

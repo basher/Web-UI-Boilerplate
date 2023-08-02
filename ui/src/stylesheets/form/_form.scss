@@ -42,13 +42,9 @@ Dependencies.
         }
 
         // Native HTML5 validation.
-        &:has(:valid:required),
-        &:has(:invalid:required:focus) {
-            @include validation;
-        }
-
-        /* stylelint-disable no-descending-specificity */
         &:has(:valid:required) {
+            @include validation;
+
             :is(.label, .checkbox__label, .radio__label) {
                 /* stylelint-disable-next-line max-nesting-depth */
                 &::after {
@@ -57,7 +53,10 @@ Dependencies.
                 }
             }
         }
-        /* stylelint-enable no-descending-specificity */
+
+        &:has(:invalid:required:focus) {
+            @include validation;
+        }
     }
 
     // Errors rendered directly in HTML, or via JavaScript.

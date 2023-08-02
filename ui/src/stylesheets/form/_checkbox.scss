@@ -15,8 +15,7 @@ Dependencies.
         block-size: 1.5em;
         inline-size: 1.5em;
 
-        &:disabled,
-        &:disabled + label {
+        :is(&:disabled, &:disabled + label) {
             cursor: not-allowed;
             opacity: 0.6;
         }
