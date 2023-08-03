@@ -21,4 +21,4 @@ const storybookUIinit = (): void => {
     uiInit();
 };
 // 'StorybookLoaded' is an event that is dispatched from Storybook.
-window.addEventListener('StorybookLoaded', storybookUIinit, false);;
+window.addEventListener('StorybookLoaded', storybookUIinit, false)
