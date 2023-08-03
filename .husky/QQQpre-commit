@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-cd ui
-. "$(dirname "$0")/_/husky.sh"
-
-node bin/lint-staged.js
