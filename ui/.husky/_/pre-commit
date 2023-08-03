@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
-# . "$(dirname "$0")/_/husky.sh"
+. "$(dirname "$0")/_/husky.sh"
 
-cd ./ui && node bin/lint-staged.js
+cd ./ui && npx lint-staged
