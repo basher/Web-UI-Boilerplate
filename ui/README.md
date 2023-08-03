@@ -27,7 +27,8 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
     - `.prettierrc`
 
 ### Git commit hooks
-Configured using `husky` and `lint-staged` to ensure no linting errors are committed to the remote codebase.
+- Configured using `husky` and `lint-staged` to ensure no linting errors are committed to the remote codebase.
+- Run `yarn prepare` from `ui` directory to install husky shell script.Do this ONCE after cloning the repo.
 
 > NOTES:
 > - `Eslint` errors will only be shown in VSCode if you open VSCode from the project root directory, not a parent directory.
