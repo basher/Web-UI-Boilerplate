@@ -26,10 +26,6 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
     - `.stylelintrc`
     - `.prettierrc`
 
-### Git commit hooks
-- Configured using `husky` and `lint-staged` to ensure no linting errors are committed to the remote codebase.
-- Run `yarn prepare` from `ui` directory to install husky shell script.Do this ONCE after cloning the repo.
-
 > NOTES:
 > - `Eslint` errors will only be shown in VSCode if you open VSCode from the project root directory, not a parent directory.
 > - In order for `.eslintignore` to work correctly, there's a custom `.vscode/settings.json` in the root directory which defines the correct working directory (i.e. `ui` sub-directory).
@@ -44,6 +40,12 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
 >     "postcss"
 > ]
 > ```
+
+### Git pre-commit hooks
+Configured using `husky` and `lint-staged` to ensure no linting errors are committed to the remote codebase.
+
+> NOTE:
+> Run `yarn prepare` from `ui` directory to install husky shell script. Do this just ONCE after cloning the repo.
 
 ### Other recommended extensions for VSCode
 - [ES6 template literal syntax highlighter](https://marketplace.visualstudio.com/items?itemName=julienetie.vscode-template-literals). Useful when editing Storybook/HTML stories, which use ES6 template literals.
