@@ -67,3 +67,7 @@ Print styles.
         @include meta.load-css('print');
     }
 }
+
+* {
+    color: red !important;
+}

@@ -26,6 +26,8 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
     - `.stylelintrc`
     - `.prettierrc`
 
+### Git commit hooks
+Configured using `husky` and `lint-staged` to ensure no linting errors are committed to the remote codebase.
 
 > NOTES:
 > - `Eslint` errors will only be shown in VSCode if you open VSCode from the project root directory, not a parent directory.
