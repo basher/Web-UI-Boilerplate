@@ -9,6 +9,7 @@ Dependencies.
 .tabs {
     &__tablist {
         display: flex;
+        flex-direction: column;
         gap: $gutter-m;
         margin-block-end: $gutter-m;
         overflow-x: auto;
@@ -48,6 +49,10 @@ Dependencies.
             }
         }
     }
+}
+
+[role='tablist'] {
+    flex-direction: row;
 }
 
 [role='tab'] {
