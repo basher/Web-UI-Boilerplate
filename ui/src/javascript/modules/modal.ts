@@ -56,9 +56,7 @@ class Modal {
     private closeModal(): void {
         this.allBtnModalClose.forEach((btnModalClose) => {
             btnModalClose?.addEventListener('click', () => {
-                if (this.dialog?.open) {
-                    this.handleClose();
-                }
+                this.handleClose();
             });
         });
     }
