@@ -33,6 +33,11 @@ class Modal {
     private init(): void {
         this.openModal();
         this.closeModal();
+
+        document.addEventListener('click', (e: Event) => {
+            const target = e.target as HTMLElement;
+            this.handleClickOutside(target);
+        });
     }
 
     private openModal(): void {
@@ -52,14 +57,28 @@ class Modal {
         this.allBtnModalClose.forEach((btnModalClose) => {
             btnModalClose?.addEventListener('click', () => {
                 if (this.dialog?.open) {
-                    this.dialog?.close();
-                    // Set focus back on button that opened modal.
-                    this.btnModalOpen?.focus();
-
-                    document.body.classList.remove(this.classNameModalOpen);
+                    this.handleClose();
                 }
             });
         });
+    }
+
+    private handleClickOutside(target: HTMLElement): void {
+        if (
+            this.dialog?.open &&
+            !this.dialog.contains(target) &&
+            !this.btnModalOpen?.contains(target)
+        ) {
+            this.handleClose();
+        }
+    }
+
+    private handleClose(): void {
+        this.dialog?.close();
+        // Set focus back on button that opened modal.
+        this.btnModalOpen?.focus();
+
+        document.body.classList.remove(this.classNameModalOpen);
     }
 }
 export default Modal;
