@@ -4,6 +4,7 @@ class Modal {
     private modalContent: HTMLElement | null;
     private btnModalOpen: HTMLButtonElement | null;
     private allBtnModalClose: NodeListOf<HTMLElement>;
+    private classNameModalOpen: string;
 
     constructor(modal: Element) {
         this.modal = modal;
@@ -15,6 +16,7 @@ class Modal {
         this.allBtnModalClose = this.modal.querySelectorAll(
             '[data-button="modal-close"]',
         );
+        this.classNameModalOpen = 'has-modal-open';
 
         this.init();
     }
@@ -40,6 +42,8 @@ class Modal {
                 // Set focus on content rather than the 'close' button.
                 this.modalContent?.setAttribute('tabIndex', '-1');
                 this.modalContent?.focus();
+
+                document.body.classList.add(this.classNameModalOpen);
             }
         });
     }
@@ -51,6 +55,8 @@ class Modal {
                     this.dialog?.close();
                     // Set focus back on button that opened modal.
                     this.btnModalOpen?.focus();
+
+                    document.body.classList.remove(this.classNameModalOpen);
                 }
             });
         });
