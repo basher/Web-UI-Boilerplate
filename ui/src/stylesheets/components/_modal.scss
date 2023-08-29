@@ -36,6 +36,10 @@ Dependencies.
     &__content {
         @include focus($inset: true);
         margin-block-start: $gutter-m;
+
+        &:hover {
+            cursor: default;
+        }
     }
 
     // "dialogPolyfill" styles.
