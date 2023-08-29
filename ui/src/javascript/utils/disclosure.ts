@@ -42,24 +42,12 @@ export const disclosure = (arg: Disclosure): void => {
         return true;
     });
 
-    // Bind ESC key to hide content, and set keyboard focus to the button. Also handle clicking outside the disclosure component.
+    // Bind ESC key to hide content, and set keyboard focus to the button.
     if (arg.bindEscapeKey) {
         document.addEventListener('keyup', (e: KeyboardEvent) => {
             if (e.code === 'Escape') {
                 arg.button.setAttribute('aria-expanded', 'false');
                 arg.button.focus();
-                arg.content?.classList.add(toggleClassname);
-            }
-        });
-
-        document.addEventListener('click', (e: Event) => {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            const target = e.target as any;
-            const insideButton = arg.button.contains(target);
-            const insideContent = arg.content?.contains(target);
-
-            if (!insideButton && !insideContent) {
-                arg.button.setAttribute('aria-expanded', 'false');
                 arg.content?.classList.add(toggleClassname);
             }
         });
