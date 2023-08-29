@@ -27,10 +27,8 @@ Dependencies.
     &__header {
         background: $color-neutral-100;
         display: flex;
-        inset-block-start: 0;
         justify-content: flex-end;
-        padding-block: $gutter-m;
-        position: sticky;
+        padding-block-start: $gutter-m;
     }
 
     &__content {
