@@ -62,6 +62,7 @@ export default class FormValidate {
     }
 
     private handleBlur(e: Event): void {
+        // Need to use 'any' type as 'checkValidity' & 'type' properties do not exist on 'HTMLElement'.
         const field = e.target as any;
 
         // If field is valid, remove any errors.

@@ -20,7 +20,7 @@ Dependencies.
 
         &::backdrop {
             background: var(--color-backdrop);
-            pointer-events: none;
+            pointer-events: none; // So click outside works.
         }
     }
 
