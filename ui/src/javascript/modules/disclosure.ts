@@ -41,10 +41,14 @@ export default class Disclosure {
         const bindEscapeKey = this.disclosure.hasAttribute(
             'data-disclosure-escape-key',
         );
+        const bindClickOutside = this.disclosure.hasAttribute(
+            'data-disclosure-click-outside',
+        );
         disclosure({
             button,
             content,
             bindEscapeKey,
+            bindClickOutside,
         });
     }
 }

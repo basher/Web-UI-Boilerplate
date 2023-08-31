@@ -13,7 +13,8 @@ export default {
     },
     argTypes: {
         bindEscapeKey: { control: 'boolean' },
-    },
+        bindClickOutside: { control: 'boolean' },
+    }
 };
 
 export const Disclosure = (args) => `
@@ -21,6 +22,7 @@ export const Disclosure = (args) => `
     class="disclosure"
     data-module="disclosure"
     ${args.bindEscapeKey === true ? 'data-disclosure-escape-key' : ''}
+    ${args.bindClickOutside === true ? 'data-disclosure-click-outside' : ''}
 >
     <button
         type="button"

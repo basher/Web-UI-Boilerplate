@@ -17,7 +17,17 @@ interface Disclosure {
     button: HTMLElement;
     content: HTMLElement | null;
     bindEscapeKey?: boolean;
+    bindClickOutside?: boolean;
 }
+
+const TOGGLE_CLASSNAME = 'u-hidden';
+
+const handleClose = (arg: Disclosure): void => {
+    arg.button.setAttribute('aria-expanded', 'false');
+    arg.button.focus(); // Set keyboard focus to the button
+    arg.content?.classList.add(TOGGLE_CLASSNAME);
+};
+
 export const disclosure = (arg: Disclosure): void => {
     const toggleClassname = 'u-hidden';
 
@@ -42,13 +52,24 @@ export const disclosure = (arg: Disclosure): void => {
         return true;
     });
 
-    // Bind ESC key to hide content, and set keyboard focus to the button.
+    // Bind ESC key to hide content.
     if (arg.bindEscapeKey) {
         document.addEventListener('keyup', (e: KeyboardEvent) => {
             if (e.code === 'Escape') {
-                arg.button.setAttribute('aria-expanded', 'false');
-                arg.button.focus();
-                arg.content?.classList.add(toggleClassname);
+                handleClose(arg);
+            }
+        });
+    }
+
+    // Handle clicking outside the disclosure component.
+    if (arg.bindClickOutside) {
+        document.addEventListener('click', (e: Event) => {
+            const target = e.target as HTMLElement;
+            const insideButton = arg.button.contains(target);
+            const insideContent = arg.content?.contains(target);
+
+            if (!insideButton && !insideContent) {
+                handleClose(arg);
             }
         });
     }
