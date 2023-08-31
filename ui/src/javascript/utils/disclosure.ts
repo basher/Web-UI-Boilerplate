@@ -29,10 +29,8 @@ const handleClose = (arg: Disclosure): void => {
 };
 
 export const disclosure = (arg: Disclosure): void => {
-    const toggleClassname = 'u-hidden';
-
     arg.button.setAttribute('aria-expanded', 'false');
-    arg.content?.classList.add(toggleClassname);
+    arg.content?.classList.add(TOGGLE_CLASSNAME);
 
     // Auto-generate unique 'id' and 'aria-controls' attributes, using button 'parentElement' classname as a sensible prefix.
     if (arg.button.parentElement) {
@@ -47,7 +45,7 @@ export const disclosure = (arg: Disclosure): void => {
             target?.getAttribute('aria-expanded') === 'true' || false;
 
         target?.setAttribute('aria-expanded', Boolean(!isExpanded).toString());
-        arg.content?.classList.toggle(toggleClassname);
+        arg.content?.classList.toggle(TOGGLE_CLASSNAME);
 
         return true;
     });
