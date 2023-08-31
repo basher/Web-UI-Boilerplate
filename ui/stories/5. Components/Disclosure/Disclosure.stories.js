@@ -14,7 +14,7 @@ export default {
     argTypes: {
         bindEscapeKey: { control: 'boolean' },
         bindClickOutside: { control: 'boolean' },
-    }
+    },
 };
 
 export const Disclosure = (args) => `

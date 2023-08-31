@@ -47,6 +47,7 @@ export const HamburgerSimpleNavigation = () => `
     aria-label="Primary"
     data-module="disclosure"
     data-disclosure-escape-key
+    data-disclosure-click-outside
 >
     <button
         type="button"
@@ -107,6 +108,7 @@ export const DisclosureNavigation = () => `
             class="nav__item nav__item--has-dropdown"
             data-module="disclosure"
             data-disclosure-escape-key
+            data-disclosure-click-outside
         >
             <a class="nav__link" href="#">Nav link with dropdown</a>
 
@@ -156,6 +158,7 @@ export const DisclosureNavigation = () => `
             class="nav__item nav__item--has-dropdown"
             data-module="disclosure"
             data-disclosure-escape-key
+            data-disclosure-click-outside
         >
             <a class="nav__link" href="#">Nav link with dropdown</a>
 
@@ -213,6 +216,7 @@ export const HamburgerDisclosureNavigation = () => `
     aria-label="Primary"
     data-module="disclosure"
     data-disclosure-escape-key
+    data-disclosure-click-outside
 >
     <button
         type="button"
@@ -246,6 +250,7 @@ export const HamburgerDisclosureNavigation = () => `
             class="nav__item nav__item--has-dropdown"
             data-module="disclosure"
             data-disclosure-escape-key
+            data-disclosure-click-outside
         >
             <a class="nav__link" href="#">Nav link with dropdown</a>
 
@@ -295,6 +300,7 @@ export const HamburgerDisclosureNavigation = () => `
             class="nav__item nav__item--has-dropdown"
             data-module="disclosure"
             data-disclosure-escape-key
+            data-disclosure-click-outside
         >
             <a class="nav__link" href="#">Nav link with dropdown</a>
 
