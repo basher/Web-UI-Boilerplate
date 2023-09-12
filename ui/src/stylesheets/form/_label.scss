@@ -4,8 +4,13 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 // @use '../mixins' as *;
-// @use '../base' as *;
+@use '../base' as *;
 
 .label {
     display: block;
+
+    &__subtext {
+        display: block;
+        font-size: $font-size-s;
+    }
 }

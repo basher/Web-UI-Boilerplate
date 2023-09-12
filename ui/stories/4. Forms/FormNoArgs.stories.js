@@ -57,13 +57,14 @@ export const FormServerValidation = () => `
         <label for="input-tel" class="label">
             Telephone input label
             <span aria-hidden="true">(required)</span>
+            <span class="label__subtext">Can include +-() and spaces</span>
         </label>
         <input
             type="tel"
             id="input-tel"
             class="input"
             pattern="^[0-9-+\s()]*$"
-            placeholder="tel number, can include +-() and spaces"
+            placeholder="can include +-() and spaces"
             title="tel number, can include +-() and spaces"
             autocomplete="tel"
             required
@@ -187,13 +188,14 @@ export const FormJSValidation = () => `
         <label for="input-tel" class="label">
             Telephone input label
             <span aria-hidden="true">(required)</span>
+            <span class="label__subtext">Can include +-() and spaces</span>
         </label>
         <input
             type="tel"
             id="input-tel"
             class="input"
             pattern="^[0-9-+\s()]*$"
-            placeholder="tel number, can include +-() and spaces"
+            placeholder="can include +-() and spaces"
             title="tel number, can include +-() and spaces"
             autocomplete="tel"
             required

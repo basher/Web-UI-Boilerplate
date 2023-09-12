@@ -37,13 +37,16 @@ export const InputEmail = (args) => `
 InputEmail.storyName = 'Email input';
 
 export const InputTel = (args) => `
-<label for="input-tel" class="label">Telephone input label</label>
+<label for="input-tel" class="label">
+    Telephone input label
+    <span class="label__subtext">Can include +-() and spaces</span>
+</label>
 <input
     type="tel"
     id="input-tel"
     class="input"
     pattern="^[0-9-+\s()]*$"
-    placeholder="tel number, including +-() and spaces"
+    placeholder="can include +-() and spaces"
     autocomplete="tel"
     ${args.disabled === true ? 'disabled' : ''}
 />
