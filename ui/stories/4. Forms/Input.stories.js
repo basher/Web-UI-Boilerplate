@@ -45,7 +45,7 @@ export const InputTel = (args) => `
     type="tel"
     id="input-tel"
     class="input"
-    pattern="^[0-9-+\s()]*$"
+    pattern="^((?![a-zA-Z])[\\d\\-\\+\\s\\(\\)])+$"
     placeholder="can include +-() and spaces"
     autocomplete="tel"
     ${args.disabled === true ? 'disabled' : ''}

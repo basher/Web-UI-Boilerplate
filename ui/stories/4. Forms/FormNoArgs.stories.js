@@ -63,9 +63,8 @@ export const FormServerValidation = () => `
             type="tel"
             id="input-tel"
             class="input"
-            pattern="^[0-9-+\s()]*$"
+            pattern="^((?![a-zA-Z])[\\d\\-\\+\\s\\(\\)])+$"
             placeholder="can include +-() and spaces"
-            title="tel number, can include +-() and spaces"
             autocomplete="tel"
             required
             aria-invalid="true"
@@ -194,9 +193,8 @@ export const FormJSValidation = () => `
             type="tel"
             id="input-tel"
             class="input"
-            pattern="^[0-9-+\s()]*$"
+            pattern="^((?![a-zA-Z])[\\d\\-\\+\\s\\(\\)])+$"
             placeholder="can include +-() and spaces"
-            title="tel number, can include +-() and spaces"
             autocomplete="tel"
             required
         />
