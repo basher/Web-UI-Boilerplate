@@ -67,10 +67,10 @@ export const HamburgerSimpleNavigation = () => `
             focusable="false"
             class="icon"
         >
-            <title>Menu</title>
+            <title>Close</title>
             <use href="sprite.svg#close" />
         </svg>
-        <span class="sr-only">Menu</span>
+        <span class="sr-only">Toggle menu</span>
     </button>
 
     <ul

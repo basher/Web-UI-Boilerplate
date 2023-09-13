@@ -47,7 +47,7 @@ ${style}
         focusable="false"
         class="icon icon--${args.iconSize}"
     >
-        <title>hamburger</title>
+        <title>menu</title>
         <use href="sprite.svg#hamburger" />
     </svg>
 
@@ -65,7 +65,7 @@ ${style}
         focusable="false"
         class="icon icon--${args.iconSize}"
     >
-        <title>plus</title>
+        <title>open</title>
         <use href="sprite.svg#plus" />
     </svg>
 
@@ -74,7 +74,7 @@ ${style}
         focusable="false"
         class="icon icon--${args.iconSize}"
     >
-        <title>minus</title>
+        <title>close</title>
         <use href="sprite.svg#minus" />
     </svg>
 
@@ -84,7 +84,7 @@ ${style}
         focusable="false"
         class="icon icon--${args.iconSize}"
     >
-        <title>right</title>
+        <title>next</title>
         <use href="sprite.svg#right" />
     </svg>
 
@@ -93,7 +93,7 @@ ${style}
         focusable="false"
         class="icon icon--${args.iconSize}"
     >
-        <title>left</title>
+        <title>previous</title>
         <use href="sprite.svg#left" />
     </svg>
 
@@ -102,7 +102,7 @@ ${style}
         focusable="false"
         class="icon icon--${args.iconSize}"
     >
-        <title>up</title>
+        <title>close</title>
         <use href="sprite.svg#up" />
     </svg>
 
@@ -111,7 +111,7 @@ ${style}
         focusable="false"
         class="icon icon--${args.iconSize}"
     >
-        <title>down</title>
+        <title>open</title>
         <use href="sprite.svg#down" />
     </svg>
 
@@ -156,7 +156,7 @@ ${style}
         focusable="false"
         class="icon icon--${args.iconSize}"
     >
-        <title>video</title>
+        <title>play video</title>
         <use href="sprite.svg#video" />
     </svg>
 
