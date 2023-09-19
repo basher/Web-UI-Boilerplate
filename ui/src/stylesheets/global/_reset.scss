@@ -4,7 +4,7 @@ Reset.
 
 See:
 Eric Meyer = https://meyerweb.com/eric/tools/css/reset/
-Andy Bell = https://hankchizljaw.com/wrote/a-modern-css-reset/
+Andy Bell = https://andy-bell.co.uk/a-more-modern-css-reset/
 Josh Comeau = https://www.joshwcomeau.com/css/custom-css-reset/
 Kilian Valkhof = https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
 ----------------------------------------------------------------------------
@@ -132,6 +132,12 @@ iframe {
 hr {
     border: $border-width-s solid;
     margin-block: $gutter-m;
+}
+
+// Anchor targets should have extra scroll margin.
+// Adjust value to account for sticky header/footer, etc.
+:target {
+    scroll-margin-block: 5em;
 }
 
 // Remove all animations & transitions for people that prefer not to see them
