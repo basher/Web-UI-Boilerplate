@@ -11,7 +11,7 @@ Dependencies.
     grid-template-rows: auto 1fr auto;
     margin-inline: auto;
     max-inline-size: $site-width;
-    min-block-size: 100dvb;
+    min-block-size: 100vh; // 100dvb might have performance implications.
 
     &__sidebar {
         .sidebar {

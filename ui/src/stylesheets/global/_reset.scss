@@ -44,7 +44,7 @@ html {
     }
     background-color: $color-background;
     color: $base-color;
-    min-block-size: 100dvb;
+    min-block-size: 100vh; // 100dvb might have performance implications.
 }
 
 :is(ol, ul)[class] {
