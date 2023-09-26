@@ -74,11 +74,15 @@ export default class VideoPlayer {
 
         const callback = (mutationList: MutationRecord[]): void => {
             for (const mutation of mutationList) {
-                if (
-                    mutation.attributeName === 'open' &&
-                    !targetNode?.hasAttribute('open')
-                ) {
-                    this.iframe?.setAttribute('src', '');
+                if (mutation.attributeName === 'open') {
+                    if (
+                        targetNode?.hasAttribute('open') &&
+                        this.videoLink?.href
+                    ) {
+                        this.iframe?.setAttribute('src', this.videoLink.href);
+                    } else {
+                        this.iframe?.setAttribute('src', '');
+                    }
                 }
             }
         };
