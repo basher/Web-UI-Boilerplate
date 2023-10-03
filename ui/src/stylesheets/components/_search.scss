@@ -8,6 +8,8 @@ Dependencies.
 
 .search {
     .form {
+        flex-wrap: wrap;
+
         &__field {
             flex-grow: 1;
         }
