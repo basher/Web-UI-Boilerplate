@@ -1,8 +1,13 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
+import docs from './Search.mdx';
+
 export default {
     title: 'Components/Search',
     component: Search,
     parameters: {
+        docs: {
+            page: docs,
+        },
         status: {
             type: 'stable',
         },
