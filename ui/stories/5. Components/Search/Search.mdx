@@ -6,8 +6,18 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
     <Story id="components-search--search" />
 </Preview>
 
+## Predictive search (with datalist)
+
+### Accessibility considerations
+- [Comparison of datalist versus ARIA combobox](https://www.webaxe.org/datalist-over-aria-combobox/).
+- Detailed breakdown of [remaining accessibility issues & bugs](https://adrianroselli.com/2023/06/under-engineered-comboboxen.html).
+
+<Preview>
+    <Story id="components-search--search-with-datalist" />
+</Preview>
+
 ## Predictive search (with dynamic results from API)
-- When JavaScript is enabled, form submit is disabled and the submit button is hidden.
+- When JavaScript is enabled, form submit is disabled and submit button is hidden.
 
 ### Accessibility considerations
 - Dynamic search results are displayed in an ARIA `live` region.

@@ -100,7 +100,7 @@ Miscellaneous styles.
     max-inline-size: $max-line-length;
 }
 
-:is(button, input, select, textarea) {
+:is(button, input, select, textarea, datalist, datalist > option) {
     font: inherit;
 }
 
