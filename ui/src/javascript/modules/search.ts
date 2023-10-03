@@ -1,4 +1,5 @@
 import main from '../../javascript/config/main';
+import { addJSClass } from '../utils/progressive-enhancement';
 import {
     ajaxAbortHandler,
     ajaxErrorHandler,
@@ -26,6 +27,7 @@ class Search {
         );
 
         searchComponents.forEach((searchComponent) => {
+            addJSClass(searchComponent);
             const instance = new Search(searchComponent);
             return instance;
         });
@@ -45,17 +47,16 @@ class Search {
     }
 
     private handleSubmit = (e: Event): void => {
+        // Results are shown dynamically, so no need to submit.
         e.preventDefault();
-        const inputVal = this.searchInput?.value;
-
-        // TODO: In reality, submitting form would show results.
-        // eslint-disable-next-line no-console
-        console.log(inputVal);
     };
 
     private handleKeyUp = (ajaxContainer: HTMLElement): void => {
         const showAjaxSpinner = true;
         const query = this.searchInput?.value.toLowerCase();
+
+        // API paths would normally be defined in a global config.
+        const API_PATH = 'https://pokeapi.co/api/v2/pokemon?limit=1000';
 
         if (!query) {
             ajaxContainer.innerHTML = '';
@@ -63,7 +64,7 @@ class Search {
         }
 
         if (query && query?.length > 2) {
-            fetch(`https://pokeapi.co/api/v2/pokemon?limit=1000`, {
+            fetch(API_PATH, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

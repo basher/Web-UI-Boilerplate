@@ -55,4 +55,4 @@ export const SearchWithAjax = () => `
         </div>
     </div>
 `;
-SearchWithAjax.storyName = 'Search with Ajax';
+SearchWithAjax.storyName = 'Predictive search (with dynamic results from API)';
