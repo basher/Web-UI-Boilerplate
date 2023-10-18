@@ -110,12 +110,8 @@ button {
 }
 
 a:not([class]) {
+    @include focus;
     color: inherit;
-
-    // No need to set :focus styles as default browser behaviour is not being removed. However, there is a "_focus.scss" mixin to handle :focus styles on links with classes and other interactive elements.
-    &:hover {
-        text-decoration: none;
-    }
 }
 
 :is(sub, sup) {

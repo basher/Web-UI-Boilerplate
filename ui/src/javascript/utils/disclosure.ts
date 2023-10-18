@@ -23,8 +23,11 @@ interface Disclosure {
 const TOGGLE_CLASSNAME = 'u-hidden';
 
 const handleClose = (arg: Disclosure): void => {
-    arg.button.setAttribute('aria-expanded', 'false');
-    arg.button.focus(); // Set keyboard focus to the button
+    // Set keyboard focus to the expanded button.
+    if (arg.button.getAttribute('aria-expanded') === 'true') {
+        arg.button.focus();
+        arg.button.setAttribute('aria-expanded', 'false');
+    }
     arg.content?.classList.add(TOGGLE_CLASSNAME);
 };
 
