@@ -22,9 +22,7 @@ export const Form = (args) => `
     <div class="form__field">
         <label for="input-text" class="label">
             Text input label ${
-                args.makeFieldsRequired === true
-                    ? '<span aria-hidden="true">(required)</span>'
-                    : ''
+                args.makeFieldsRequired === true ? '' : '(optional)'
             }
         </label>
         <input
@@ -39,9 +37,7 @@ export const Form = (args) => `
     <div class="form__field">
         <label for="input-tel" class="label">
             Telephone input label ${
-                args.makeFieldsRequired === true
-                    ? '<span aria-hidden="true">(required)</span>'
-                    : ''
+                args.makeFieldsRequired === true ? '' : '(optional)'
             }
             <span class="label__subtext">Can include +-() and spaces</span>
         </label>
@@ -58,11 +54,7 @@ export const Form = (args) => `
     </div>
     <div class="form__field">
         <label for="select" class="label">
-            Select label ${
-                args.makeFieldsRequired === true
-                    ? '<span aria-hidden="true">(required)</span>'
-                    : ''
-            }
+            Select label ${args.makeFieldsRequired === true ? '' : '(optional)'}
         </label>
         <select
             class="select"
@@ -87,9 +79,7 @@ export const Form = (args) => `
             />
             <label for="checkbox-1" class="checkbox__label">
                 Checkbox label ${
-                    args.makeFieldsRequired === true
-                        ? '<span aria-hidden="true">(required)</span>'
-                        : ''
+                    args.makeFieldsRequired === true ? '' : '(optional)'
                 }
             </label>
         </div>
@@ -98,9 +88,7 @@ export const Form = (args) => `
         <fieldset class="fieldset">
             <legend class="legend">
                 Radio legend ${
-                    args.makeFieldsRequired === true
-                        ? '<span aria-hidden="true">(required)</span>'
-                        : ''
+                    args.makeFieldsRequired === true ? '' : '(optional)'
                 }
             </legend>
             <div class="radio">

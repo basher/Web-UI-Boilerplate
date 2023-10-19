@@ -42,7 +42,6 @@ export const FormServerValidation = () => `
     <div class="form__field">
         <label for="input-text1" class="label">
             Text input 1 label
-            <span aria-hidden="true">(required)</span>
         </label>
         <input
             type="text"
@@ -56,7 +55,6 @@ export const FormServerValidation = () => `
     <div class="form__field form__field--has-error">
         <label for="input-tel" class="label">
             Telephone input label
-            <span aria-hidden="true">(required)</span>
             <span class="label__subtext">Can include +-() and spaces</span>
         </label>
         <input
@@ -77,7 +75,6 @@ export const FormServerValidation = () => `
     <div class="form__field form__field--has-error">
         <label for="select" class="label">
             Select label
-            <span aria-hidden="true">(required)</span>
         </label>
         <select
             class="select"
@@ -107,7 +104,6 @@ export const FormServerValidation = () => `
             />
             <label for="checkbox-1" class="checkbox__label">
                 Checkbox label
-                <span aria-hidden="true">(required)</span>
             </label>
         </div>
         <span class="form__error" id="checkbox-1-error">
@@ -118,7 +114,6 @@ export const FormServerValidation = () => `
         <fieldset class="fieldset">
             <legend class="legend">
                 Radio legend
-                <span aria-hidden="true">(required)</span>
             </legend>
             <div class="radio">
                 <input
@@ -173,7 +168,6 @@ export const FormJSValidation = () => `
     <div class="form__field">
         <label for="input-text1" class="label">
             Text input 1 label
-            <span aria-hidden="true">(required)</span>
         </label>
         <input
             type="text"
@@ -186,7 +180,6 @@ export const FormJSValidation = () => `
     <div class="form__field">
         <label for="input-tel" class="label">
             Telephone input label
-            <span aria-hidden="true">(required)</span>
             <span class="label__subtext">Can include +-() and spaces</span>
         </label>
         <input
@@ -202,7 +195,6 @@ export const FormJSValidation = () => `
     <div class="form__field">
         <label for="select" class="label">
             Select label
-            <span aria-hidden="true">(required)</span>
         </label>
         <select
             class="select"
@@ -225,7 +217,6 @@ export const FormJSValidation = () => `
             />
             <label for="checkbox-1" class="checkbox__label">
                 Checkbox label
-                <span aria-hidden="true">(required)</span>
             </label>
         </div>
     </div>
@@ -233,7 +224,6 @@ export const FormJSValidation = () => `
         <fieldset class="fieldset">
             <legend class="legend">
                 Radio legend
-                <span aria-hidden="true">(required)</span>
             </legend>
             <div class="radio">
                 <input
