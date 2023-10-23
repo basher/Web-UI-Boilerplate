@@ -73,12 +73,12 @@
     },
     "lint-staged": {
         "src/**/*.ts": [
-          "eslint --fix",
-          "prettier --write"
+            "eslint --fix",
+            "prettier --write"
         ],
         "src/**/*.scss": [
-          "stylelint --custom-syntax postcss-scss",
-          "prettier --write"
+            "stylelint --custom-syntax postcss-scss",
+            "prettier --write"
         ]
     }
 }
