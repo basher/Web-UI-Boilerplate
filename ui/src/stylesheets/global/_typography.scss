@@ -102,6 +102,7 @@ Miscellaneous styles.
 
 :is(button, input, select, textarea, datalist, datalist > option) {
     font: inherit;
+    line-height: 1;
 }
 
 :is(caption, th, td) {
