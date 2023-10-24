@@ -55,14 +55,13 @@ export const FormServerValidation = () => `
     <div class="form__field form__field--has-error">
         <label for="input-tel" class="label">
             Telephone input label
-            <span class="label__subtext">Can include +-() and spaces</span>
+            <span class="label__subtext">e.g. 07700 111111, 020 1111 1111, with or without spaces</span>
         </label>
         <input
             type="tel"
             id="input-tel"
             class="input"
-            pattern="^((?![a-zA-Z])[\\d\\-\\+\\s\\(\\)])+$"
-            placeholder="can include +-() and spaces"
+            pattern="^\\d{3,5}\\s?\\d{3,4}\\s?\\d{3,4}$"
             autocomplete="tel"
             required
             aria-invalid="true"
@@ -180,14 +179,13 @@ export const FormJSValidation = () => `
     <div class="form__field">
         <label for="input-tel" class="label">
             Telephone input label
-            <span class="label__subtext">Can include +-() and spaces</span>
+            <span class="label__subtext">e.g. 07700 111111, 020 1111 1111, with or without spaces</span>
         </label>
         <input
             type="tel"
             id="input-tel"
             class="input"
-            pattern="^((?![a-zA-Z])[\\d\\-\\+\\s\\(\\)])+$"
-            placeholder="can include +-() and spaces"
+            pattern="^\\d{3,5}\\s?\\d{3,4}\\s?\\d{3,4}$"
             autocomplete="tel"
             required
         />

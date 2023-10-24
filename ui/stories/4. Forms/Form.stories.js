@@ -39,14 +39,13 @@ export const Form = (args) => `
             Telephone input label ${
                 args.makeFieldsRequired === true ? '' : '(optional)'
             }
-            <span class="label__subtext">Can include +-() and spaces</span>
+            <span class="label__subtext">e.g. 07700 111111, 020 1111 1111, with or without spaces</span>
         </label>
         <input
             type="tel"
             id="input-tel"
             class="input"
-            pattern="^((?![a-zA-Z])[\\d\\-\\+\\s\\(\\)])+$"
-            placeholder="can include +-() and spaces"
+            pattern="^\\d{3,5}\\s?\\d{3,4}\\s?\\d{3,4}$"
             autocomplete="tel"
             ${args.makeFieldsRequired === true ? 'required' : ''}
             ${args.disabled === true ? 'disabled' : ''}
