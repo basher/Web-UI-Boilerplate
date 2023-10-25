@@ -55,7 +55,7 @@ export const FormServerValidation = () => `
     <div class="form__field form__field--has-error">
         <label for="input-tel" class="label">
             Telephone input label
-            <span class="label__subtext">e.g. 07700 111111, 020 1111 1111, with or without spaces</span>
+            <span class="label__subtext">UK number, between 9 and 13 digits, can include spaces</span>
         </label>
         <input
             type="tel"
@@ -179,8 +179,8 @@ export const FormJSValidation = () => `
     <div class="form__field">
         <label for="input-tel" class="label">
             Telephone input label
-            <span class="label__subtext">e.g. 07700 111111, 020 1111 1111, with or without spaces</span>
-        </label>
+            <span class="label__subtext">UK number, between 9 and 13 digits, can include spaces</span>
+        </label>UK number, between 9 and 13 digits, can include spaces
         <input
             type="tel"
             id="input-tel"

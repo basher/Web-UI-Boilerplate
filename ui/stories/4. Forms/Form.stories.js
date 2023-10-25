@@ -39,7 +39,7 @@ export const Form = (args) => `
             Telephone input label ${
                 args.makeFieldsRequired === true ? '' : '(optional)'
             }
-            <span class="label__subtext">e.g. 07700 111111, 020 1111 1111, with or without spaces</span>
+            <span class="label__subtext">UK number, between 9 and 13 digits, can include spaces</span>
         </label>
         <input
             type="tel"
