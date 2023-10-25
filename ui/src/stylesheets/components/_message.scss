@@ -10,6 +10,7 @@ Dependencies.
     align-items: flex-start;
     border: $border-width-s solid;
     display: flex;
+    justify-content: space-between;
     padding: $gutter-m;
 
     .stack > * {
@@ -32,6 +33,9 @@ Dependencies.
     }
 
     &__close {
-        font-size: $icon-size-l;
+        font-size: $icon-size-s;
+        inset-block-start: calc($icon-size-s * -1);
+        inset-inline-end: calc($icon-size-s * -1);
+        position: relative;
     }
 }
