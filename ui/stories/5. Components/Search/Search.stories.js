@@ -88,6 +88,7 @@ export const SearchWithAjax = () => `
         <div
             class="search__results ajax__container"
             data-ajax-container="search-results"
+            role="region"
             aria-live="polite"
         >
         </div>

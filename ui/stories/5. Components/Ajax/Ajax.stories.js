@@ -32,8 +32,19 @@ AjaxSpinner.storyName = 'Ajax spinner';
 export const FetchHTML = () => `
 <p>This is simply a demo to show the core features of a component that has some Ajax dependencies (e.g. fetching an HTML fragment).</p>
 <div data-module="demo-ajax-fetch-html">
-    <button class="button button--text button--primary" data-button="ajax-trigger" data-ajax-trigger="test-1">Fetch HTML</button>
-    <div class="ajax__container" data-ajax-container="test-1" aria-live="polite"></div>
+    <button
+        class="button button--text button--primary"
+        data-button="ajax-trigger"
+        data-ajax-trigger="test-1"
+    >
+        Fetch HTML
+    </button>
+    <div
+        class="ajax__container"
+        data-ajax-container="test-1"
+        role="region"
+        aria-live="polite"
+    ></div>
 </div>
 `;
 FetchHTML.storyName = 'Demo - Fetch HTML';
