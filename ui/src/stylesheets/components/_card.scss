@@ -9,7 +9,7 @@ Dependencies.
 .card {
     --card-gap: #{$gutter-m};
     --content-min-width: 50%;
-    --image-min-width: 250px;
+    --image-min-width: 15rem;
 
     display: flex;
     flex-direction: column;

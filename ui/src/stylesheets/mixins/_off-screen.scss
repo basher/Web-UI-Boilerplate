@@ -13,11 +13,11 @@ Dependencies.
 // @use 'base' as *;
 
 @mixin off-screen() {
-    block-size: 1px;
+    block-size: 0.0625rem;
     border: 0;
     clip: rect(0, 0, 0, 0);
-    inline-size: 1px;
-    margin: -1px;
+    inline-size: 0.0625rem;
+    margin: -0.0625rem;
     overflow: hidden;
     padding: 0;
     position: absolute;
