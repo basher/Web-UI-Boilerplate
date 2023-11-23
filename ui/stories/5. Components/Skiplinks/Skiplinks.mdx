@@ -3,6 +3,10 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 # Skiplinks
 - Skiplinks are hidden visually, and are normally only accessible via keyboard `:focus`.
 
+## Accessibility considerations
+- Skiplink targets should have `tabindex="-1"` to ensure they are focusable.
+- See [Scott O'Hara's tabindex article](https://www.scottohara.me/blog/2019/05/25/tabindex.html#negative-values), or [TPGi's article on avoiding issues for keyboard users - scenario B](https://www.tpgi.com/how-to-avoid-breaking-web-pages-for-keyboard-users/).
+
 ## How to test
 - Click inside the Storybook `Canvas` iframe, then use the keyboard `TAB` key to navigate the skip links.
 
