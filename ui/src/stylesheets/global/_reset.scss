@@ -48,7 +48,7 @@ html {
 }
 
 :is(ol, ul)[class] {
-    list-style: none;
+    list-style-type: '';
 }
 
 ol ol {
