@@ -3,7 +3,7 @@
 # Known Storybook issues
 
 ## 1. Component JavaScript doesn't fire in `docs` mode.
-That's actually OK, as it shows what is rendered if JavaScript was disabled or broken.
+That's actually OK, as it shows what is rendered if JavaScript is disabled or broken.
 
 ## 2. Storybook fires `DOMContentLoaded` event [more than once](https://github.com/storybookjs/storybook/issues/15753).
 To mitigate this, a `custom Storybook event` is fired in `.storybook\preview-head.html`. This event is listened for in `src/javascript/index.ts` in order to re-initialise the JavaScript.
