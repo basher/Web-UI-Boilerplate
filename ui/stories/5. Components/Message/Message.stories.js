@@ -38,7 +38,6 @@ export const Message = (args) => `
                 focusable="false"
                 class="icon"
             >
-                <title>close</title>
                 <use href="sprite.svg#close" />
             </svg>
             <span class="sr-only">Close</span>

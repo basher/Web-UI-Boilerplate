@@ -59,7 +59,6 @@ export const HamburgerSimpleNavigation = () => `
             focusable="false"
             class="icon"
         >
-            <title>Menu</title>
             <use href="sprite.svg#hamburger" />
         </svg>
         <svg
@@ -67,7 +66,6 @@ export const HamburgerSimpleNavigation = () => `
             focusable="false"
             class="icon"
         >
-            <title>Close</title>
             <use href="sprite.svg#close" />
         </svg>
         <span class="sr-only">Toggle menu</span>
@@ -122,7 +120,6 @@ export const DisclosureNavigation = () => `
                     focusable="false"
                     class="icon"
                 >
-                    <title>Menu</title>
                     <use href="sprite.svg#down" />
                 </svg>
                 <span class="sr-only">[Nav link] dropdown</span>
@@ -172,7 +169,6 @@ export const DisclosureNavigation = () => `
                     focusable="false"
                     class="icon"
                 >
-                    <title>Menu</title>
                     <use href="sprite.svg#down" />
                 </svg>
                 <span class="sr-only">[Nav link] dropdown</span>
@@ -228,7 +224,6 @@ export const HamburgerDisclosureNavigation = () => `
             focusable="false"
             class="icon"
         >
-            <title>Menu</title>
             <use href="sprite.svg#hamburger" />
         </svg>
         <svg
@@ -236,10 +231,9 @@ export const HamburgerDisclosureNavigation = () => `
             focusable="false"
             class="icon"
         >
-            <title>Menu</title>
             <use href="sprite.svg#close" />
         </svg>
-        <span class="sr-only">Menu</span>
+        <span class="sr-only">Toggle menu</span>
     </button>
 
     <ul
@@ -264,7 +258,6 @@ export const HamburgerDisclosureNavigation = () => `
                     focusable="false"
                     class="icon"
                 >
-                    <title>Menu</title>
                     <use href="sprite.svg#down" />
                 </svg>
                 <span class="sr-only">[Nav link] dropdown</span>
@@ -314,7 +307,6 @@ export const HamburgerDisclosureNavigation = () => `
                     focusable="false"
                     class="icon"
                 >
-                    <title>Menu</title>
                     <use href="sprite.svg#down" />
                 </svg>
                 <span class="sr-only">[Nav link] dropdown</span>

@@ -39,7 +39,6 @@ export const IconButton = (args) => `
         focusable="false"
         class="icon icon--${args.iconSize}"
     >
-        <title>[title]</title>
         <use href="sprite.svg#${args.iconRef}" />
     </svg>
     <span class="sr-only">[screenreader label]</span>
