@@ -1,14 +1,15 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as Skin from './Skin.stories';
+
+<Meta of={Skin} />
 
 # Skin
 - Adds a *"skin"* or theming layer to components. For example, background and foreground colours, borders, etc.
 - Ideally, there should be **NO layout styles** applied to skin component (e.g. widths, margins). Use layout components for this.
 
-<Preview>
-    <Story id="components-skin--skin" />
-</Preview>
+<Canvas of={Skin.Skin} />
+<Controls of={Skin.Skin} />
 
 ## Skin applied to wrapper layout
-<Preview>
-    <Story id="components-skin--skin-wrapper" />
-</Preview>
+<Canvas of={Skin.SkinWrapper} />
+<Controls of={Skin.SkinWrapper} />

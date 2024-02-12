@@ -1,18 +1,14 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-// import docs from './ImageGallery.mdx'
+import { ImageGalleryHtml } from './ImageGallery';
 
 export default {
     title: 'Components/Image Gallery',
     parameters: {
-        // docs: {
-        //     page: docs,
-        // },
         status: {
             type: 'beta',
         },
     },
 };
 
-export const ImageGallery = () => `
-TODO...
-`;
+export const ImageGallery = {
+    render: () => ImageGalleryHtml(),
+};

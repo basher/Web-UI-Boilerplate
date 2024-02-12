@@ -11,11 +11,6 @@ Dependencies.
     border: $border-width-s solid;
     padding: $gutter-s;
 
-    &:disabled {
-        cursor: not-allowed;
-        opacity: 0.6;
-    }
-
     // Native HTML5 validation.
     &:valid:required {
         background-color: hsl(var(--color-accent-positive) / 10%);

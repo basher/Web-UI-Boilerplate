@@ -1,27 +1,26 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas } from '@storybook/blocks';
+import * as Ajax from './Ajax.stories';
+
+<Meta of={Ajax} />
 
 # Ajax
 
 ## Uses native Fetch API
-- [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+- See [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) docs on MDN.
 - Fetch aborts/timeouts are handled by [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
 
 ## Accessibility
-- An [aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) region is used to contain the Ajax response (or errors).
+- An [aria-live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) is used to contain the Ajax response (or errors).
 - The Ajax loading spinner is an `<svg>` with an accessible `loading...` name, which will be announced in the live region.
 
 ## Ajax loading spinner
 - This is example HTML markup for the spinner.
 - In actual Ajax requests, the HTML for the spinner is programatically generated via JavaScript in `javascript/utils/ajax-helpers.ts`.
 
-<Preview>
-    <Story id="components-ajax--ajax-spinner" />
-</Preview>
+<Canvas of={Ajax.AjaxSpinner} />
 
 ## Fetch HTML fragment
 - This is simply a demo to show the core features of a component that has some Ajax dependencies (e.g. fetching an HTML fragment).
-- A more realistic example can be found in the [search with Ajax](/story/components-search--search-with-ajax) component.
+- A more realistic example can be found in the [predictive search using external API](/story/components-search--search-ajax) component.
 
-<Preview>
-    <Story id="components-ajax--fetch-html" />
-</Preview>
+<Canvas of={Ajax.AjaxFetch} />

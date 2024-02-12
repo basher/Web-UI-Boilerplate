@@ -1,48 +1,27 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-import docs from '../IconButton.mdx';
+import { IconLinkHtml } from './Link';
 
 export default {
-    title: 'Components/Buttons & Links/Links/Icon',
+    title: 'Components/Buttons & Links/Links',
     parameters: {
-        docs: {
-            page: docs,
-        },
         status: {
             type: 'stable',
         },
     },
     argTypes: {
         iconSize: {
-            control: {
-                type: 'select',
-                options: ['small', 'medium', 'large'],
-            },
+            control: 'select',
+            options: ['small', 'medium', 'large'],
         },
         iconRef: {
-            control: {
-                type: 'select',
-                options: ['down', 'left', 'right', 'up'],
-            },
+            control: 'select',
+            options: ['down', 'left', 'right', 'up', 'close'],
         },
     },
 };
 
-export const IconLink = (args) => `
-<a
-    href="#"
-    class="button button--icon"
->
-    <svg
-        aria-hidden="true"
-        focusable="false"
-        class="icon icon--${args.iconSize}"
-    >
-        <use href="sprite.svg#${args.iconRef}" />
-    </svg>
-    <span class="sr-only">[screenreader label]</span>
-</a>
-`;
-IconLink.args = {
-    iconRef: 'down',
+export const IconLink = {
+    args: {
+        iconRef: 'down',
+    },
+    render: (args) => IconLinkHtml(args),
 };
-IconLink.storyName = 'Icon';

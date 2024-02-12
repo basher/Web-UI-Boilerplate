@@ -1,12 +1,12 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas } from '@storybook/blocks';
+import * as VideoPlayer from './VideoPlayer.stories';
+
+<Meta of={VideoPlayer} />
 
 # Video player
 
 ## Responsive, accessibility and performance considerations
-- See the [responsive media](/story/components-responsive-media--responsive-iframe) component.
+- See the [responsive media/video](/story/components-responsive-media--responsive-video) component.
 - If the browser does not support native `<iframe loading="lazy">` behaviour, the iframe `src` is removed until the video is played.
 
-
-<Preview>
-    <Story id="components-video-player--video-player" />
-</Preview>
+<Canvas of={VideoPlayer.VideoPlayer} />

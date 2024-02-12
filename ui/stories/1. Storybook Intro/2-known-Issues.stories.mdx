@@ -1,14 +1,15 @@
-<Meta title="Web UI Storybook/Known Storybook issues" />
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Web UI Storybook/Known Storybook Issues" />
 
 # Known Storybook issues
 
-## 1. Component JavaScript doesn't fire in `docs` mode.
+## 1. Component JavaScript doesn't always fire in `docs` mode.
 That's actually OK, as it shows what is rendered if JavaScript is disabled or broken.
 
-## 2. Storybook fires `DOMContentLoaded` event [more than once](https://github.com/storybookjs/storybook/issues/15753).
-To mitigate this, a `custom Storybook event` is fired in `.storybook\preview-head.html`. This event is listened for in `src/javascript/index.ts` in order to re-initialise the JavaScript.
+## 2. Storybook fires `DOMContentLoaded` event more than once.
+See [this issue on Github](https://github.com/storybookjs/storybook/issues/15753).
 
-If JavaScript appears not to be working correctly, switch to `docs` mode then back to `canvas` mode.
+To mitigate this, a `custom Storybook event` is fired in `.storybook\preview-head.html`. This event is handled in `src/javascript/index.ts` in order to re-initialise the JavaScript modules for some of the components.
 
-## 3. Unable to migrate to Storybook V7
-I have raised an [issue regarding MDX support with Storybook/HTML](https://github.com/storybookjs/storybook/issues/22249). This is now fixed, so I will be migrating to Storybook V7 soon.
+If JavaScript appears not to be working correctly, open the `docs` page then go back to `story` page.

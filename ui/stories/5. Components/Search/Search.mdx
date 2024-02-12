@@ -1,27 +1,23 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas } from '@storybook/blocks';
+import * as Search from './Search.stories';
+
+<Meta of={Search} />
 
 # Search
-
-<Preview>
-    <Story id="components-search--search" />
-</Preview>
+<Canvas of={Search.Search} />
 
 ## Predictive search (with datalist)
 
 ### Accessibility considerations
-- [Comparison of datalist versus ARIA combobox](https://www.webaxe.org/datalist-over-aria-combobox/).
-- Detailed breakdown of [remaining accessibility issues & bugs](https://adrianroselli.com/2023/06/under-engineered-comboboxen.html).
+- See a [comparison of datalist versus ARIA combobox](https://www.webaxe.org/datalist-over-aria-combobox/).
+- See a detailed breakdown of [remaining accessibility issues & bugs](https://adrianroselli.com/2023/06/under-engineered-comboboxen.html).
 
-<Preview>
-    <Story id="components-search--search-with-datalist" />
-</Preview>
+<Canvas of={Search.SearchDatalist} />
 
 ## Predictive search (with dynamic results from API)
 - When JavaScript is enabled, form submit is disabled and submit button is hidden.
 
 ### Accessibility considerations
-- Dynamic search results are displayed in an ARIA `live` region.
+- Dynamic search results are displayed in an [aria-live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
 
-<Preview>
-    <Story id="components-search--search-with-ajax" />
-</Preview>
+<Canvas of={Search.SearchAjax} />
