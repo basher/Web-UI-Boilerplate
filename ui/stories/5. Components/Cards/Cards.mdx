@@ -1,4 +1,8 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as Cards from './Cards.stories';
+import * as CardsNoArgs from './CardsNoArgs.stories';
+
+<Meta of={Cards} />
 
 # Cards
 - The `card__content` uses the [stack layout](/story/layout-stack--stack) to manage spacing between all its children.
@@ -9,41 +13,34 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 - Add cards with multiple CTAs. Might need JS to intercept click events?
 - Add media/container queries to modify fullwidth gap & content width?
 
-## Default card
-- Default card component is marked up as an `<article>`, and should therefore contain a heading with the appropriate level.
+## Card
+- The default card component is marked up as an `<article>`, and should therefore contain a heading with the appropriate level.
 - Uses `<picture>` with a single fixed size image, whose orientation can be `top`, `bottom`, `left` or `right`.
 
-<Preview>
-    <Story id="components-cards--default-card" />
-</Preview>
+<Canvas of={Cards.Card} />
+<Controls of={Cards.Card} />
 
 ## Fullwidth card
 - This card uses `<picture>` so that the image size can be optimised at different breakpoints.
 - It's a variant of `card--media-inline`.
 
-<Preview>
-    <Story id="components-cards--fullwidth-card" />
-</Preview>
+<Canvas of={Cards.FullwidthCard} />
+<Controls of={Cards.FullwidthCard} />
 
 ## Clickable card
 - This card replaces `<article>` with an `<a>`.
 
-<Preview>
-    <Story id="components-cards--clickable-card" />
-</Preview>
+<Canvas of={Cards.ClickableCard} />
+<Controls of={Cards.ClickableCard} />
 
 ## Cards in a grid
 - It's a good idea to set a `max-width` on the `grid-template-columns` to match the size of the card (which will probably be determined by the image size).
 - This is achieved via the `card-grid` override CSS classname.
 
-<Preview>
-    <Story id="components-cards--card-grid" />
-</Preview>
+<Canvas of={CardsNoArgs.CardGrid} />
 
 ## Cards in a slider
 - It's a good idea to set the `--slide-min-width` on the slides to match the size of the card.
 - This is achieved via the `card-slider` override CSS classname.
 
-<Preview>
-    <Story id="components-cards--card-slider" />
-</Preview>
+<Canvas of={CardsNoArgs.CardSlider} />

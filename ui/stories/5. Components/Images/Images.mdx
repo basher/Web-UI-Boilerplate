@@ -1,4 +1,7 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas } from '@storybook/blocks';
+import * as Images from './Images.stories';
+
+<Meta of={Images} />
 
 # Images
 
@@ -8,14 +11,10 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 - Images are [lazy loaded](https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading), but be aware of [not lazy loading images above the fold](https://web.dev/lazy-loading-best-practices/).
 -  Images have [explicit height & width](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/) declared in the HTML.
 
-<Preview>
-    <Story id="components-images--responsive-image" />
-</Preview>
+<Canvas of={Images.ResponsiveImage} />
 
 ## Fixed size images
 - If just 1 image size is needed, still use the `<picture>` element.
 - This allows **next-gen** images to be served - e.g. `type="image/webp"`.
 
-<Preview>
-    <Story id="components-images--fixed-size-image" />
-</Preview>
+<Canvas of={Images.FixedSizeImage} />

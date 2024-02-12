@@ -1,10 +1,11 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas } from '@storybook/blocks';
+import * as Breadcrumb from './Breadcrumb.stories';
+
+<Meta of={Breadcrumb} />
 
 # Breadcrumb
 
 ## Accessibility considerations
-- See the [ARIA patterns](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/) example.
+- See the [ARIA APG patterns](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/) example.
 
-<Preview>
-    <Story id="components-breadcrumb--breadcrumb" />
-</Preview>
+<Canvas of={Breadcrumb.Breadcrumb} />

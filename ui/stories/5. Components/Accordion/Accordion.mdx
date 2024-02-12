@@ -1,4 +1,7 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas } from '@storybook/blocks';
+import * as Accordion from './Accordion.stories';
+
+<Meta of={Accordion} />
 
 # Accordion
 - Uses the native HTML `<details>`|`<summary>` elements.
@@ -9,12 +12,8 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
     - [Dave Rupert](https://daverupert.com/2019/12/why-details-is-not-an-accordion/).
 - An alternative approach is to use the [disclosure](/story/components-disclosure--disclosure) component.
 
-<Preview>
-    <Story id="components-accordion--accordion" />
-</Preview>
+<Canvas of={Accordion.Accordion} />
 
 ## With custom icon
 
-<Preview>
-    <Story id="components-accordion--accordion-custom-icon" />
-</Preview>
+<Canvas of={Accordion.AccordionCustomIcon} />

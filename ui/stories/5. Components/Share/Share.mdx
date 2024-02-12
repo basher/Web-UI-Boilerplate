@@ -1,4 +1,7 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas } from '@storybook/blocks';
+import * as Share from './Share.stories';
+
+<Meta of={Share} />
 
 # Share
 - Uses the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share).
@@ -7,11 +10,7 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 ## TODO
 - Replace fallback [document.execCommand](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand) with [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API).
 
-<Preview>
-    <Story id="components-share--share" />
-</Preview>
+<Canvas of={Share.Share} />
 
-## Share a different page
-<Preview>
-    <Story id="components-share--share-different-page" />
-</Preview>
+## Share a different URL
+<Canvas of={Share.ShareAnotherUrl} />

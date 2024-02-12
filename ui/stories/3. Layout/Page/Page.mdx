@@ -1,0 +1,19 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as Page from './Page.stories';
+
+<Meta of={Page} />
+
+# Page layouts
+## Simple
+
+<Canvas of={Page.Page} />
+
+## With sidebar
+- Note the inclusion of an additional wrapper (i.e. the `<main>` element) around the sidebar component wrapper to allow the page's CSS Grid layout to push the footer to the bottom, whilst also preventing *vertical stretching* of the sidebar component flex items on small screens.
+
+<Canvas of={Page.PageSidebar} />
+
+## With right sidebar
+- Please note the source order in the HTML. The sidebar comes **after** the main content, to preserve natural tab sequence for keyboard users.
+
+<Canvas of={Page.PageSidebarRight} />

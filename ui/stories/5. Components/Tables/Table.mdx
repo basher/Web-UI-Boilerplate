@@ -1,0 +1,14 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as Table from './Table.stories';
+
+<Meta of={Table} />
+
+# Tables
+<Canvas of={Table.Table} />
+
+## Responsive table
+
+### Accessibility and responsive behaviour considerations
+- Placing a [table inside an overflowing container](https://adrianroselli.com/2020/11/under-engineered-responsive-tables.html?ref=sidebar) is the simplest way to achieve a fully accessible & responsive table, which is keyboard & screen reader friendly.
+
+<Canvas of={Table.ResponsiveTable} />

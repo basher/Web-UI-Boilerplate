@@ -1,0 +1,37 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as Form from './Form.stories';
+import * as FormNoArgs from './FormNoArgs.stories';
+
+<Meta of={Form} />
+
+# Forms
+
+## Accessibility considerations
+- All form fields need a `<label>`, which is explicitly associated with the relevant field with `for | id` attribute pairs.
+- Additionally, any "grouped" form fields (e.g. `<input type="radio">`) should be enclosed in a `<fieldset>` with an appropriate `<legend>` to provide additional context for screen readers.
+- Invalid fields should be identified with `aria-invalid="true"` and `aria-describedby` which references the `id` of appropriate error text.
+].
+
+### Additional reading
+- [Form controls should not be disabled](https://adrianroselli.com/2024/02/dont-disable-form-controls.html).
+- [Creating accessible forms](https://webaim.org/techniques/forms/controls).
+- [Accessible form validation](https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/).
+- [Form input types for better mobile user experiences](https://css-tricks.com/better-form-inputs-for-better-mobile-user-experiences/).
+
+## Native HTML5 browser validation
+- Using `:valid`, `:invalid` and `:required` CSS pseudo classes.
+- Adding a `title` attribute to a form field can improve the default browser validation error message.
+
+<Canvas of={Form.Form} />
+<Controls of={Form.Form} />
+
+## Server-side validation
+- It can be a good idea to add an additional error summary block to list all the form errors, with anchors to each field.
+
+<Canvas of={FormNoArgs.FormServerValidation} />
+
+## JavaScript validation
+- See a [better approach to form validation](https://adamsilver.io/blog/the-problem-with-live-validation-and-what-to-do-instead/) that uses form `submit` rather than live inline validation.
+- Uses the [Constraint Validation API](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript).
+
+<Canvas of={FormNoArgs.FormJSValidation} />

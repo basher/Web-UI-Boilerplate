@@ -2,10 +2,10 @@
 
 ## Useful commands
 From `ui` directory:
-- `yarn reset` - Deletes `node_modules` folder and reinstalls with `yarn install`.
-- `yarn start` - Installs Node modules (if not already installed), launches Parcel bundler to compile/watch files, and sets the port for HMR (Hot Module Reloading) to work in Storybook.
-- `yarn storybook` - Launches Storybook/HTML component library. Run this in a different terminal instance to Parcel.
-- `yarn build` - Compiles and minifies files, for production and local dev environments.
+- `npm run reset` - Deletes `node_modules` folder and reinstalls with `npm run install`.
+- `npm start` - Installs Node modules (if not already installed), launches Parcel bundler to compile/watch files, and sets the port for HMR (Hot Module Reloading) to work in Storybook.
+- `npm run storybook` - Launches Storybook/HTML component library. Run this in a different terminal instance to Parcel.
+- `npm run build` - Compiles and minifies files, for production and local dev environments.
 
 ## Code authoring guidelines & accessibility
 - All UI components are authored with **semantic HTML5** markup, which is **progressively enhanced** with JavaScript and `WAI-ARIA` as appropriate.
@@ -45,7 +45,7 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
 Configured using `husky` and `lint-staged` to ensure no linting errors are committed to the remote codebase.
 
 > NOTE:
-> Run `yarn prepare` from `ui` directory to install husky shell script. Do this just ONCE after cloning the repo.
+> Run `npm run prepare` from `ui` directory to install husky shell script. Do this just ONCE after cloning the repo.
 
 ### Other recommended extensions for VSCode
 - [ES6 template literal syntax highlighter](https://marketplace.visualstudio.com/items?itemName=julienetie.vscode-template-literals). Useful when editing Storybook/HTML stories, which use ES6 template literals.
@@ -58,7 +58,7 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 ```
 "start:parcel": "parcel watch src/javascript/index.ts --hmr-port 1234 --target app"
 ```
-- The command above starts the Parcel server, but it does not need to be run as `yarn start` does it.
+- The command above starts the Parcel server, but it does not need to be run as `npm start` does it.
 - See the `HMR` section further down for an explanation of the `--hmr-port 1234` argument.
 - The `--target app` argument enables transpilation of both CSS and JavaScript in **local DEV mode**. By default, Parcel only does this for production builds.
 
@@ -80,7 +80,6 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 ### Sass
 - Sass compilation is done automatically.
     - If Parcel sees Sass files in the project, it automatically installs `@parcel/transformer-sass`.
-    - There is no need to install `postcss` or `autoprefixer`.
 
 ### Dev dependencies
 - The default Babel presets mentioned above are sufficient.
@@ -93,13 +92,10 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 - Instead, it simply [watches files and defines a port for the HMR server](https://parceljs.org/features/cli/#parcel-watch-%3Centries%3E).
 - This means that Storybook updates automatically with any CSS/JavaScript changes.
 
-### Dev dependencies
-- `babel-loader` is needed for Storybook.
-
 ### Re-ordering stories in sidebar navigation
 - All stories and docs are ordered according to the `storySort` configuration in `ui/.storybook/preview.js`.
 
 ## Trouble-shooting bundling and build issues
 - If bundling breaks, or UI is not updated (in DEV mode) to reflect latest CSS/JavaScript changes:
     - Kill the Parcel Node process with `CTRL+C`.
-    - Run `yarn start` again.
+    - Run `npm start` again.

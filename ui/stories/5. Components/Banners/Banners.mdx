@@ -1,4 +1,7 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas } from '@storybook/blocks';
+import * as Banners from './Banners.stories';
+
+<Meta of={Banners} />
 
 # Banners
 - Please see [responsive image](/docs/components-images--responsive-image) component for a description of image markup and behaviour.
@@ -6,20 +9,14 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 
 ## Fullwidth banner with text overlay
 
-<Preview>
-    <Story id="components-banners--fullwidth-banner" />
-</Preview>
+<Canvas of={Banners.FullwidthBanner} />
 
-## Fullwidth banner with visual overlay
-- e.g. Gradient overlay to make content stand out.
+## Fullwidth banner with image overlay
+- e.g. Gradient overlay to make text content more readable.
 
-<Preview>
-    <Story id="components-banners--fullwidth-banner-overlay" />
-</Preview>
+<Canvas of={Banners.FullwidthBannerOverlay} />
 
 ## Banner with inline image
 - Uses the [fullwidth card](/story/components-cards--fullwidth-card) HTML structure & CSS behaviour.
 
-<Preview>
-    <Story id="components-banners--inline-banner" />
-</Preview>
+<Canvas of={Banners.InlineBanner} />

@@ -1,44 +1,18 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-import docs from './Toggle.mdx';
-
+import { ToggleHtml, ToggleWithLabelHtml } from './Toggle';
 export default {
-    title: 'Components/Toggle (or Switch)',
+    title: 'Components/Toggle (Or Switch)',
     parameters: {
-        docs: {
-            page: docs,
-        },
         status: {
             type: 'stable',
         },
     },
 };
 
-export const Toggle = () => `
-<button
-    class="button toggle"
-    type="button"
-    role="switch"
-    aria-checked="false"
-    aria-label="toggle / switch"
->
-    <span class="toggle__on" aria-hidden="true">on</span>
-    <span class="toggle__off" aria-hidden="true">off</span>
-</button>
-`;
-Toggle.storyName = 'Toggle';
+export const Toggle = {
+    render: () => ToggleHtml(),
+};
 
-export const ToggleWithLabel = () => `
-<button
-    class="button toggle toggle--has-label"
-    type="button"
-    role="switch"
-    aria-checked="false"
->
-    <span class="toggle__label">toggle / switch label</span>
-    <span class="toggle__indicator">
-        <span class="toggle__on" aria-hidden="true">on</span>
-        <span class="toggle__off" aria-hidden="true">off</span>
-    </span>
-</button>
-`;
-ToggleWithLabel.storyName = 'Toggle with visible label';
+export const ToggleWithLabel = {
+    render: () => ToggleWithLabelHtml(),
+};
+ToggleWithLabel.storyName = 'Toggle With Visible Label';

@@ -1,4 +1,8 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as Utilities from './Utilities.stories';
+import * as UtilitiesNoArgs from './UtilitiesNoArgs.stories';
+
+<Meta of={Utilities} />
 
 # CSS utility classes
 
@@ -6,27 +10,20 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 - Applies `u-m-block`|`u-m-inline` and `u-p-block`|`u-p-inline` override classes.
 - Uses CSS `clamp()` to set `min` and `max` values for larger gutters.
 
-<Preview>
-    <Story id="utilities-helpers-and-utilities--margin-padding" />
-</Preview>
+<Canvas of={Utilities.MarginPadding} />
+<Controls of={Utilities.MarginPadding} />
 
 ## Screen readers
 - `sr-only` visually hides content, but still make it available to screen readers.
 
-<Preview>
-    <Story id="utilities-helpers-and-utilities--screen-reader" />
-</Preview>
+<Canvas of={UtilitiesNoArgs.ScreenReader} />
 
 ## Hide content
 - `u-hidden` removes content from the DOM, using `display: none;`.
 
-<Preview>
-    <Story id="utilities-helpers-and-utilities--hide-content" />
-</Preview>
+<Canvas of={UtilitiesNoArgs.HideContent} />
 
-## Hide content
+## Center content
 - `u-center` horizontally centers the content.
 
-<Preview>
-    <Story id="utilities-helpers-and-utilities--center-content" />
-</Preview>
+<Canvas of={UtilitiesNoArgs.CenterContent} />

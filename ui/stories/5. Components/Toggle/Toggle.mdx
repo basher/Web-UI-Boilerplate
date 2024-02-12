@@ -1,16 +1,15 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas } from '@storybook/blocks';
+import * as Toggle from './Toggle.stories';
+
+<Meta of={Toggle} />
 
 # Toggle button (or switch)
 
 ## Accessibility considerations
-- See the [ARIA patterns](https://www.w3.org/WAI/ARIA/apg/patterns/switch/examples/switch-button/) and [Inclusive Components](https://inclusive-components.design/toggle-button/) examples.
+- See the [ARIA APG patterns](https://www.w3.org/WAI/ARIA/apg/patterns/switch/examples/switch-button/) and [Inclusive Components](https://inclusive-components.design/toggle-button/) examples.
 
 ## Toggle with no visible label
-<Preview>
-    <Story id="components-toggle-or-switch--toggle" />
-</Preview>
+<Canvas of={Toggle.Toggle} />
 
 ## Toggle with visible label
-<Preview>
-    <Story id="components-toggle-or-switch--toggle-with-label" />
-</Preview>
+<Canvas of={Toggle.ToggleWithLabel} />

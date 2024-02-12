@@ -1,0 +1,15 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as Sidebar from './Sidebar.stories';
+
+<Meta of={Sidebar} />
+
+# Sidebar layout
+- The sidebar layout is designed to cater for the behaviour of the narrower of two adjacent elements. See [Every Layout's sidebar](https://every-layout.dev/layouts/sidebar/) for a detailed explanation of this Flexbox behaviour.
+- An example of its usage can be found in the [page with sidebar](/story/layout-page--page-sidebar) layout.
+
+<Canvas of={Sidebar.Sidebar} />
+
+## With right sidebar
+- Please note the source order in the HTML. The sidebar comes **after** the main content, to preserve natural tab sequence for keyboard users.
+
+<Canvas of={Sidebar.SidebarRight} />

@@ -1,4 +1,7 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas } from '@storybook/blocks';
+import * as ResponsiveMedia from './ResponsiveMedia.stories';
+
+<Meta of={ResponsiveMedia} />
 
 # Responsive media (iframes, videos, etc)
 - The `iframe` & `video` examples use standard Google Maps & YouTube `embed` code.
@@ -16,11 +19,7 @@ style="--media-aspect-ratio: 21/9;"
 - See the [video player](/story/components-video-player--video-player) for a real use case, with a fallback for older browsers.
 
 ## Iframe
-<Preview>
-    <Story id="components-responsive-media--responsive-iframe" />
-</Preview>
+<Canvas of={ResponsiveMedia.ResponsiveIframe} />
 
 ## Video
-<Preview>
-    <Story id="components-responsive-media--responsive-video" />
-</Preview>
+<Canvas of={ResponsiveMedia.ResponsiveVideo} />

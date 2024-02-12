@@ -60,7 +60,7 @@ Dependencies.
         @include focus($opacity: true);
         text-decoration: none;
 
-        &:not([class*='theme']) {
+        &:not([class*='skin']) {
             color: inherit;
         }
     }

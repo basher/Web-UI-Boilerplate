@@ -1,4 +1,7 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as Icons from './Icons.stories';
+
+<Meta of={Icons} />
 
 # Icons
 
@@ -10,7 +13,7 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
     - [Contextually marking up accessible images and SVGs](https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html).
 - The `<title>` element can be used in decorative icons to provide a native HTML tooltip on mouse `:hover`.
 - If the icon is purely decorative and there is visible text associated with it, there is no need for `<title>` attribute, and the `role="img"` should be replaced with `aria-hidden="true"`.
-- For interactive icons (e.g. button or link), use either `<span class="sr-only">`  or `aria-label`to provide an appropriate accessible name.
+- For interactive icons (e.g. in buttons or links), use either `<span class="sr-only">`  or `aria-label`to provide an appropriate accessible name.
 
 ## Using external SVG sprites with `<use href=""/>"`
 
@@ -21,6 +24,5 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 - The default icon size is `1em` so that it inherits the font size of its parent container.
 - Selecting any of the available size variants will set a specific icon size in `rem` units.
 
-<Preview>
-    <Story id="design-system-icons--icons" />
-</Preview>
+<Canvas of={Icons.Icons} />
+<Controls of={Icons.Icons} />

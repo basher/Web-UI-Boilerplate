@@ -1,35 +1,31 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as Slider from './Slider.stories';
+import * as SliderNoArgs from './SliderNoArgs.stories';
 
-# CSS slider
-- The default slider can operate using CSS only.
-- Uses [CSS scroll snap](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type).
+<Meta of={Slider} />
+
+# CSS-only slider
+- The default slider can be operated using CSS only.
+- It leverages [CSS scroll snap](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type) to improve keyboard-only behaviour.
 - Slide widths are defined by the CSS `--slide-min-width` custom property. This can be overridden for specific slider implementations. For example, see the [card slider](/story/components-cards--card-slider).
 
 ## Accessibility considerations
-- Based on [Inclusive Components](https://inclusive-components.design/a-content-slider/) and [ARIA patterns](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/).
-- The slider has `tabindex="0"` so it can receive keyboard `:focus`, and be operated via the `LEFT|RIGHT` arrow keys.
+- Based on [Inclusive Components](https://inclusive-components.design/a-content-slider/) and [ARIA APG patterns](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/).
+- The slider has `tabindex="0"` so it can receive keyboard `focus`, and be operated via the `LEFT|RIGHT` arrow keys.
 - CSS `scroll-snap` ensures the slider stops at a complete slide.
 
-<Preview>
-    <Story id="components-slider-or-carousel--slider" />
-</Preview>
+<Canvas of={SliderNoArgs.Slider} />
 
-## CSS fullwidth slides (e.g. banner carousel)
+## CSS-only fullwidth slides (e.g. banner carousel)
+<Canvas of={SliderNoArgs.SlidesFullwidth} />
 
-<Preview>
-    <Story id="components-slider-or-carousel--slides-fullwidth" />
-</Preview>
-
-## CSS clickable slides (e.g. cards, image thumbnails)
-
-<Preview>
-    <Story id="components-slider-or-carousel--slides-clickable" />
-</Preview>
+## CSS-only clickable slides (e.g. cards, image thumbnails)
+<Canvas of={SliderNoArgs.SlidesClickable} />
 
 ## Slides with JavaScript enhancements
 - The default CSS slider can be enhanced with JavaScript to show a slide count, PREV and NEXT buttons, etc.
 - Each slide has an `aria-label`, indicating the current slide number and the total.
-- When PREV and NEXT buttons are shown, keyboard `:focus` is modified such that **only visible slides are focusable**.
+- When PREV and NEXT buttons are shown, keyboard `focus` is modified such that **only visible slides are focusable**.
 
 Attribute | JavaScript behaviour
 --- | ---
@@ -41,6 +37,5 @@ Attribute | JavaScript behaviour
 ### TODO
 - Update slide counter when using keyboard or touch.
 
-<Preview>
-    <Story id="components-slider-or-carousel--slider-enhanced-js" />
-</Preview>
+<Canvas of={Slider.SliderEnhancedJS} />
+<Controls of={Slider.SliderEnhancedJS} />

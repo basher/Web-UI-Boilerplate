@@ -1,0 +1,17 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as Stack from './Stack.stories';
+
+<Meta of={Stack} />
+
+# Stack layout
+- The stack layout injects a `gutter` (i.e. `margin-block-start`) between elements via their common parent.
+- See [Every Layout's stack](https://every-layout.dev/layouts/stack/), [CubeCSS composition](https://cube.fyi/composition.html#examples) or [favourite 3 lines of CSS](https://andy-bell.co.uk/my-favourite-3-lines-of-css/) for a detailed explanation.
+
+<Canvas of={Stack.Stack} />
+<Controls of={Stack.Stack} />
+
+## Example of stack layout used with "prose" content
+- See [wysiwyg component](/story/components-wysiwyg--wysiwyg).
+
+## Alternative approach
+- An alternative to using a `stack` layout would be to use a [vertical or column Flex layout](/story/layout-flex--flex).

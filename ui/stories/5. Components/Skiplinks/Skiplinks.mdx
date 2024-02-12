@@ -1,7 +1,10 @@
-import { Preview, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as Skiplinks from './Skiplinks.stories';
+
+<Meta of={Skiplinks} />
 
 # Skiplinks
-- Skiplinks are hidden visually, and are normally only accessible via keyboard `:focus`.
+- Skiplinks are hidden visually, and are normally only accessible via keyboard `focus`.
 
 ## Accessibility considerations
 - Skiplink targets should have `tabindex="-1"` to ensure they are focusable.
@@ -10,6 +13,4 @@ import { Preview, Story } from '@storybook/addon-docs/blocks';
 ## How to test
 - Click inside the Storybook `Canvas` iframe, then use the keyboard `TAB` key to navigate the skip links.
 
-<Preview>
-    <Story id="components-skiplinks--skiplinks" />
-</Preview>
+<Canvas of={Skiplinks.Skiplinks} />
