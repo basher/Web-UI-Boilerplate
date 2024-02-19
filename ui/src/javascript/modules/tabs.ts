@@ -3,14 +3,12 @@ class Tabs {
     private tablist: HTMLElement | null;
     private tabpanels: NodeListOf<HTMLElement>;
     private tabTriggers: NodeListOf<HTMLElement>;
-    private toggleClassname: string;
 
     constructor(tabComponent: Element) {
         this.tabComponent = tabComponent;
         this.tablist = this.tabComponent.querySelector('[data-tablist]');
         this.tabpanels = this.tabComponent.querySelectorAll('[data-tabpanel]');
         this.tabTriggers = this.tabComponent.querySelectorAll('[data-tab]');
-        this.toggleClassname = 'u-hidden';
 
         this.init();
     }
@@ -31,7 +29,7 @@ class Tabs {
     private createTabs(): void {
         // Hide all tabpanels initially.
         this.tabpanels.forEach((tabpanel) => {
-            tabpanel.classList.add(this.toggleClassname);
+            tabpanel.setAttribute('hidden', '');
         });
 
         // Update tablist properties.
@@ -79,7 +77,7 @@ class Tabs {
 
             // Show 1st tabpanel by default.
             if (index === 0) {
-                tabContainer.classList.remove(this.toggleClassname);
+                tabContainer.removeAttribute('hidden');
             }
         });
     }
@@ -92,7 +90,7 @@ class Tabs {
 
         // Hide all tabpanels.
         this.tabpanels.forEach((tabpanel) => {
-            tabpanel.classList.add(this.toggleClassname);
+            tabpanel.setAttribute('hidden', '');
         });
 
         // Update clicked tab and related tabpanel properties.
@@ -102,7 +100,7 @@ class Tabs {
         });
         this.tabpanels.forEach((tabContainer) => {
             if (tabContainer.id === triggerId) {
-                tabContainer.classList.remove(this.toggleClassname);
+                tabContainer.removeAttribute('hidden');
             }
         });
         trigger?.setAttribute('aria-selected', 'true');

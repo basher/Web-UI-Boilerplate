@@ -38,8 +38,12 @@ export const ScreenReaderHtml = () => `
 
 export const HideContentHtml = () => `
 <p>The content below is removed from the DOM entirely...</p>
-
 <div class="u-hidden">
+    Remove content from the DOM.
+</div>
+
+<p>And so is this content...</p>
+<div hidden>
     Remove content from the DOM.
 </div>
 `;

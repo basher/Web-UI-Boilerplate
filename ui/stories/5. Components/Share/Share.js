@@ -4,6 +4,7 @@ export const ShareHtml = () => `
         type="button"
         class="button button--text-icon"
         data-share-button
+        hidden
     >
         <svg
             aria-hidden="true"
@@ -43,6 +44,7 @@ export const ShareAnotherUrlHtml = () => `
         data-share-button
         data-share-url="https://www.google.com"
         data-share-title="google"
+        hidden
     >
         <svg
             aria-hidden="true"

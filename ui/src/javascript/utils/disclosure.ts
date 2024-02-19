@@ -20,20 +20,19 @@ interface Disclosure {
     bindClickOutside?: boolean;
 }
 
-const TOGGLE_CLASSNAME = 'u-hidden';
-
 const handleClose = (arg: Disclosure): void => {
     // Set keyboard focus to the expanded button.
     if (arg.button.getAttribute('aria-expanded') === 'true') {
         arg.button.focus();
         arg.button.setAttribute('aria-expanded', 'false');
     }
-    arg.content?.classList.add(TOGGLE_CLASSNAME);
+    arg.content?.setAttribute('hidden', '');
 };
 
 export const disclosure = (arg: Disclosure): void => {
+    arg.button?.removeAttribute('hidden');
     arg.button.setAttribute('aria-expanded', 'false');
-    arg.content?.classList.add(TOGGLE_CLASSNAME);
+    arg.content?.setAttribute('hidden', '');
 
     // Auto-generate unique 'id' and 'aria-controls' attributes, using button 'parentElement' classname as a sensible prefix.
     if (arg.button.parentElement) {
@@ -48,7 +47,7 @@ export const disclosure = (arg: Disclosure): void => {
             target?.getAttribute('aria-expanded') === 'true' || false;
 
         target?.setAttribute('aria-expanded', Boolean(!isExpanded).toString());
-        arg.content?.classList.toggle(TOGGLE_CLASSNAME);
+        arg.content?.toggleAttribute('hidden');
 
         return true;
     });

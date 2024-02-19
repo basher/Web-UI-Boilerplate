@@ -64,8 +64,6 @@ Dependencies.
 
     // Hamburger navigation.
     .nav--hamburger__button {
-        display: none;
-
         &[aria-expanded='false'] {
             .icon:last-of-type {
                 display: none;
@@ -87,10 +85,6 @@ Dependencies.
         }
 
         &.is-js-enabled {
-            .nav--hamburger__button {
-                display: inline-flex;
-            }
-
             .nav__list {
                 background-color: $color-background;
                 border: $border-width-s solid;

@@ -7,7 +7,6 @@ export default class Share {
     private btnCopy: HTMLButtonElement | null;
     private shareFallback: HTMLElement | null;
     private shareInput: HTMLInputElement | null;
-    private toggleClassname: string;
 
     constructor(share: Element) {
         this.share = share;
@@ -17,7 +16,6 @@ export default class Share {
         this.shareInput = this.share.querySelector(
             '[data-share-input]',
         ) as HTMLInputElement;
-        this.toggleClassname = 'u-hidden';
 
         this.init();
     }
@@ -59,8 +57,8 @@ export default class Share {
         }
 
         if (navigator.share) {
-            this.shareFallback &&
-                this.shareFallback.classList.add(this.toggleClassname);
+            this.shareFallback && this.shareFallback.setAttribute('hidden', '');
+            this.btnShare && this.btnShare.removeAttribute('hidden');
 
             this.btnShare &&
                 this.btnShare.addEventListener('click', () => {

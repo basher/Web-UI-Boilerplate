@@ -9,6 +9,7 @@ export const DisclosureHtml = (args) => `
         type="button"
         class="button button--text"
         data-disclosure-button
+        hidden
     >
         <span>Show / Hide</span>
     </button>

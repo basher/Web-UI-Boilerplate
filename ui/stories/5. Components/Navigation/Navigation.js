@@ -37,6 +37,7 @@ export const HamburgerNavigationHtml = () => `
         type="button"
         class="button button--icon nav--hamburger__button"
         data-disclosure-button
+        hidden
     >
         <svg
             aria-hidden="true"
@@ -97,6 +98,7 @@ export const DisclosureNavigationHtml = () => `
                 type="button"
                 class="button button--icon"
                 data-disclosure-button
+                hidden
             >
                 <svg
                     aria-hidden="true"
@@ -109,7 +111,7 @@ export const DisclosureNavigationHtml = () => `
             </button>
 
             <ul
-                class="nav__list nav__list--dropdown u-hidden"
+                class="nav__list nav__list--dropdown"
                 data-disclosure-content
             >
                 <li class="nav__item">
@@ -146,6 +148,7 @@ export const DisclosureNavigationHtml = () => `
                 type="button"
                 class="button button--icon"
                 data-disclosure-button
+                hidden
             >
                 <svg
                     aria-hidden="true"
@@ -158,7 +161,7 @@ export const DisclosureNavigationHtml = () => `
             </button>
 
             <ul
-                class="nav__list nav__list--dropdown u-hidden"
+                class="nav__list nav__list--dropdown"
                 data-disclosure-content
             >
                 <li class="nav__item">
@@ -199,6 +202,7 @@ export const HamburgerDisclosureNavigationHtml = () => `
         type="button"
         class="button button--icon nav--hamburger__button"
         data-disclosure-button
+        hidden
     >
         <svg
             aria-hidden="true"
@@ -233,6 +237,7 @@ export const HamburgerDisclosureNavigationHtml = () => `
                 type="button"
                 class="button button--icon"
                 data-disclosure-button
+                hidden
             >
                 <svg
                     aria-hidden="true"
@@ -245,7 +250,7 @@ export const HamburgerDisclosureNavigationHtml = () => `
             </button>
 
             <ul
-                class="nav__list nav__list--dropdown u-hidden"
+                class="nav__list nav__list--dropdown"
                 data-disclosure-content
             >
                 <li class="nav__item">
@@ -282,6 +287,7 @@ export const HamburgerDisclosureNavigationHtml = () => `
                 type="button"
                 class="button button--icon"
                 data-disclosure-button
+                hidden
             >
                 <svg
                     aria-hidden="true"
@@ -294,7 +300,7 @@ export const HamburgerDisclosureNavigationHtml = () => `
             </button>
 
             <ul
-                class="nav__list nav__list--dropdown u-hidden"
+                class="nav__list nav__list--dropdown"
                 data-disclosure-content
             >
                 <li class="nav__item">

@@ -1,14 +1,12 @@
 export default class Message {
     private message: Element;
     private btnClose: HTMLButtonElement | null;
-    private toggleClassname: string;
 
     constructor(message: Element) {
         this.message = message;
         this.btnClose = this.message.querySelector(
             '[data-button="message-close"]',
         );
-        this.toggleClassname = 'u-hidden';
 
         this.init();
     }
@@ -27,6 +25,6 @@ export default class Message {
     }
 
     private closeMessage(): void {
-        this.message.classList.add(this.toggleClassname);
+        this.message.setAttribute('hidden', '');
     }
 }
