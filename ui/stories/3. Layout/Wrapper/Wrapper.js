@@ -30,25 +30,25 @@ ${style}
         u-${args.paddingBlock}
         u-${args.paddingInline}
     ">
-        Wrapper "S"
+        Wrapper (small)
     </div>
     <div class="wrapper wrapper--l
         u-${args.paddingBlock}
         u-${args.paddingInline}
     ">
-        Wrapper "L""
+        Wrapper (large)
     </div>
     <div class="wrapper wrapper--fullbleed
         u-${args.paddingBlock}
         u-${args.paddingInline}
     ">
-        Wrapper fullbleed
+        Wrapper (fullbleed)
     </div>
     <div class="wrapper wrapper--fit-content
         u-${args.paddingBlock}
         u-${args.paddingInline}
     ">
-        Wrapper fit-content
+        Wrapper (fit-content)
     </div>
 </div>
 `;
