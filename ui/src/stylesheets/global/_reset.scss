@@ -112,6 +112,8 @@ button {
 a:not([class]) {
     @include focus;
     color: inherit;
+    text-decoration-thickness: 0.125rem;
+    text-underline-offset: 0.25em;
 }
 
 :is(sub, sup) {
