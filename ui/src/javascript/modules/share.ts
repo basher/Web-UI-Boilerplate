@@ -88,7 +88,10 @@ export default class Share {
     }
 
     private handleCopyUrl(fallbackInput: HTMLInputElement): void {
+        if (!navigator.clipboard) {
+            return;
+        }
         fallbackInput.select();
-        document.execCommand('copy');
+        navigator.clipboard.writeText(fallbackInput.value);
     }
 }
