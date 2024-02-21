@@ -7,6 +7,7 @@ Dependencies.
 @use '../mixins' as *;
 
 .button-group {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     gap: $gutter-s;

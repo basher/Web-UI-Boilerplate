@@ -42,9 +42,8 @@ export const LinksHtml = (args) => `
     </a>
     <a
         href="#"
-        class="button button--text"
     >
-        Default
+        Normal
     </a>
 </div>
 `;
