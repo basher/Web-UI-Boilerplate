@@ -135,7 +135,7 @@ hr {
 // Anchor targets should have extra scroll margin.
 // Adjust value to account for sticky header/footer, etc.
 :target {
-    scroll-margin-block: 5em;
+    scroll-margin-block: $gutter-clamp-xl;
 }
 
 // Remove all animations & transitions for people that prefer not to see them
