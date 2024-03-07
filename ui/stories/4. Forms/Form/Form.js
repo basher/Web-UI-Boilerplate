@@ -19,7 +19,7 @@ export const FormHtml = (args) => `
             Telephone input label ${
                 args.makeFieldsRequired === true ? '' : '(optional)'
             }
-            <span class="label__subtext">UK number, between 9 and 13 digits, can include spaces</span>
+            <span class="label__hint">UK number, between 9 and 13 digits, can include spaces</span>
         </label>
         <input
             type="tel"
@@ -149,7 +149,7 @@ export const FormServerValidationHtml = () => `
     <div class="form__field form__field--has-error">
         <label for="input-tel" class="label">
             Telephone input label
-            <span class="label__subtext">UK number, between 9 and 13 digits, can include spaces</span>
+            <span class="label__hint">UK number, between 9 and 13 digits, can include spaces</span>
         </label>
         <input
             type="tel"
@@ -272,7 +272,7 @@ export const FormJSValidationHtml = () => `
     <div class="form__field">
         <label for="input-tel" class="label">
             Telephone input label
-            <span class="label__subtext">UK number, between 9 and 13 digits, can include spaces</span>
+            <span class="label__hint">UK number, between 9 and 13 digits, can include spaces</span>
         </label>
         <input
             type="tel"

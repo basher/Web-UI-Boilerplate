@@ -22,14 +22,13 @@ export const InputEmailHtml = () => `
 export const InputTelHtml = () => `
 <label for="input-tel" class="label">
     Telephone input label
-    <span class="label__hint">Can include +-() and spaces</span>
+    <span class="label__hint">UK number, between 9 and 13 digits, can include spaces</span>
 </label>
 <input
     type="tel"
     id="input-tel"
     class="input"
-    pattern="^((?![a-zA-Z])[\\d\\-\\+\\s\\(\\)])+$"
-    placeholder="can include +-() and spaces"
+    pattern="^\\d{3,5}\\s?\\d{3,4}\\s?\\d{3,4}$"
     autocomplete="tel"
 />
 `;
