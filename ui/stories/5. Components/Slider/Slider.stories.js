@@ -18,4 +18,4 @@ export default {
 export const SliderEnhancedJS = {
     render: (args) => SliderEnhancedJSHtml(args),
 };
-SliderEnhancedJS.storyName = 'JavaScript-enhanced slider';
+SliderEnhancedJS.storyName = 'JavaScript-Enhanced Slider';

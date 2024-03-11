@@ -16,14 +16,14 @@ export default {
 export const Slider = {
     render: () => SliderHtml(),
 };
-Slider.storyName = 'CSS Slider';
+Slider.storyName = 'CSS-Only Slider';
 
 export const SlidesFullwidth = {
     render: () => SlidesFullwidthHtml(),
 };
-SlidesFullwidth.storyName = 'CSS Fullwidth Slides';
+SlidesFullwidth.storyName = 'CSS-Only Fullwidth Slides';
 
 export const SlidesClickable = {
     render: () => SlidesClickableHtml(),
 };
-SlidesClickable.storyName = 'CSS Clickable Slides';
+SlidesClickable.storyName = 'CSS-Only Clickable Slides';

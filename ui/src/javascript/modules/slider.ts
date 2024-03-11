@@ -61,12 +61,12 @@ class Slider {
         this.setAccessibility();
         this.setVisibleSlide();
 
-        // Show slide counter.
+        // Show slide counter (text).
         if (this.config.showSlideCount) {
             this.showSlideCount();
         }
 
-        // Show coins/pips instead of text counter.
+        // Show slide counter (coins/pips).
         if (this.config.showSlideCountPips) {
             this.showSlideCountPips();
         }
@@ -84,6 +84,17 @@ class Slider {
                     this.setCurrentSlide(i);
                     this.scrollToSlide(slide, i);
                 });
+        });
+
+        // Manage ARROW events on slider.
+        this.slides.forEach((slide: HTMLElement, i: number) => {
+            slide.addEventListener('keydown', (e: KeyboardEvent) => {
+                if (e.code !== 'ArrowRight' && e.code !== 'ArrowLeft') {
+                    return;
+                }
+                this.setCurrentSlide(i);
+                this.scrollToSlide(slide, i);
+            });
         });
     }
 
@@ -249,7 +260,7 @@ class Slider {
             this.scrollToSlide(this.slides[nextSlide], nextSlide);
 
             if (btnLabelA11y) {
-                btnLabelA11y.innerHTML = `slide ${nextSlide + 1} of ${
+                btnLabelA11y.innerHTML = `${nextSlide + 1} of ${
                     this.slides.length
                 }`;
             }
@@ -260,7 +271,7 @@ class Slider {
         const counter =
             this.slider.parentElement?.querySelector('[data-counter]');
         if (counter) {
-            counter.innerHTML = `slide ${i + 1} of ${this.slides.length}`;
+            counter.innerHTML = `${i + 1} of ${this.slides.length}`;
         }
 
         const counterPips = this.slider.parentElement?.querySelector(
