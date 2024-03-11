@@ -4,7 +4,7 @@ export default {
     title: 'Components/Slider (or Carousel)',
     parameters: {
         status: {
-            type: 'beta',
+            type: 'stable',
         },
     },
     argTypes: {

@@ -90,9 +90,11 @@ class Slider {
         this.slider.addEventListener('keydown', (e) => {
             switch (e.code) {
                 case 'ArrowRight':
+                    e.preventDefault();
                     this.goToNextSlide();
                     break;
                 case 'ArrowLeft':
+                    e.preventDefault();
                     this.goToPrevSlide();
                     break;
                 default:

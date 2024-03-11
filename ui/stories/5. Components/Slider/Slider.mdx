@@ -24,6 +24,7 @@ import * as SliderNoArgs from './SliderNoArgs.stories';
 
 ## Slides with JavaScript enhancements
 - The default CSS slider can be enhanced with JavaScript to show a slide count, PREV and NEXT buttons, etc.
+- Native scrolling with `LEFT|RIGHT` arrow keys is overridden, allowing JavaScript to correctly update the slide count when using arrow keys.
 - Each slide has an `aria-label`, indicating the current slide number and the total number of slides.
 - When PREV and NEXT buttons are shown, keyboard `focus` is modified such that **only visible slides are focusable**.
 
@@ -33,9 +34,6 @@ Attribute | JavaScript behaviour
 `data-slide-count="true"` | Displays slide count & current slide.
 `data-slide-count-pips="true"` | Displays slide count & current slide as pips instead of text.
 `data-prev-next-buttons="true"` | Displays PREV and NEXT slide buttons.
-
-### TODO
-- Update slide counter when using keyboard or touch.
 
 <Canvas of={Slider.SliderEnhancedJS} />
 <Controls of={Slider.SliderEnhancedJS} />
