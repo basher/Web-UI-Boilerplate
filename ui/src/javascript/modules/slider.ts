@@ -77,30 +77,10 @@ class Slider {
         }
 
         // Manage :FOCUS event on slides.
-        this.slides.forEach((slide: HTMLElement, i: number) => {
-            const focusableItem = slide.querySelector('a, button');
-            focusableItem &&
-                focusableItem.addEventListener('focus', () => {
-                    this.setCurrentSlide(i);
-                    this.scrollToSlide(slide, i);
-                });
-        });
+        this.handleFocus();
 
         // Manage ARROW events on slider.
-        this.slider.addEventListener('keydown', (e) => {
-            switch (e.code) {
-                case 'ArrowRight':
-                    e.preventDefault();
-                    this.goToNextSlide();
-                    break;
-                case 'ArrowLeft':
-                    e.preventDefault();
-                    this.goToPrevSlide();
-                    break;
-                default:
-                    break;
-            }
-        });
+        this.handleKeyboard();
     }
 
     private setAccessibility(): void {
@@ -243,7 +223,7 @@ class Slider {
         if (prevSlide && prevSlide > 1) {
             this.slides[prevSlide - 1].classList.remove(this.currentSlideClass);
             this.slides[prevSlide - 2].classList.add(this.currentSlideClass);
-            this.setCurrentSlide(prevSlide - 2);
+            this.setCurrentSlideCounter(prevSlide - 2);
             this.scrollToSlide(this.slides[prevSlide - 2], prevSlide - 2);
 
             if (btnLabelA11y) {
@@ -261,7 +241,7 @@ class Slider {
         if (nextSlide && nextSlide < this.slides.length) {
             this.slides[nextSlide - 1].classList.remove(this.currentSlideClass);
             this.slides[nextSlide].classList.add(this.currentSlideClass);
-            this.setCurrentSlide(nextSlide);
+            this.setCurrentSlideCounter(nextSlide);
             this.scrollToSlide(this.slides[nextSlide], nextSlide);
 
             if (btnLabelA11y) {
@@ -272,7 +252,7 @@ class Slider {
         }
     }
 
-    private setCurrentSlide(i: number): void {
+    private setCurrentSlideCounter(i: number): void {
         const counter =
             this.slider.parentElement?.querySelector('[data-counter]');
         if (counter) {
@@ -304,6 +284,36 @@ class Slider {
                 behavior: 'smooth',
             });
         }
+    }
+
+    private handleFocus(): void {
+        this.slides.forEach((slide: HTMLElement, i: number) => {
+            const focusableItem = slide.querySelector('a, button');
+            focusableItem &&
+                focusableItem.addEventListener('focus', () => {
+                    this.setCurrentSlideCounter(i);
+                    this.scrollToSlide(slide, i);
+                });
+        });
+    }
+
+    private handleKeyboard(): void {
+        this.slider.addEventListener('keydown', (e) => {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            switch (e.code) {
+                case 'ArrowRight':
+                    e.preventDefault();
+                    this.goToNextSlide();
+                    break;
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    this.goToPrevSlide();
+                    break;
+                default:
+                    break;
+            }
+        });
     }
 
     private getBoolAttribute(name: string): boolean {
