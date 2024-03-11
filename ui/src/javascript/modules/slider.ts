@@ -79,7 +79,7 @@ class Slider {
         // Manage :FOCUS event on slides.
         this.handleFocus();
 
-        // Manage ARROW events on slider.
+        // Manage keyboard (ARROW keys) events on slider.
         this.handleKeyboard();
     }
 
