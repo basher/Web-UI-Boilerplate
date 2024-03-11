@@ -87,14 +87,17 @@ class Slider {
         });
 
         // Manage ARROW events on slider.
-        this.slides.forEach((slide: HTMLElement, i: number) => {
-            slide.addEventListener('keydown', (e: KeyboardEvent) => {
-                if (e.code !== 'ArrowRight' && e.code !== 'ArrowLeft') {
-                    return;
-                }
-                this.setCurrentSlide(i);
-                this.scrollToSlide(slide, i);
-            });
+        this.slider.addEventListener('keydown', (e) => {
+            switch (e.code) {
+                case 'ArrowRight':
+                    this.goToNextSlide();
+                    break;
+                case 'ArrowLeft':
+                    this.goToPrevSlide();
+                    break;
+                default:
+                    break;
+            }
         });
     }
 
@@ -231,9 +234,9 @@ class Slider {
         return currentSlide;
     }
 
-    private goToPrevSlide(button: HTMLButtonElement): void {
+    private goToPrevSlide(button?: HTMLButtonElement): void {
         const prevSlide = this.getCurrentSlide();
-        const btnLabelA11y = button.querySelector('.sr-only');
+        const btnLabelA11y = button?.querySelector('.sr-only');
 
         if (prevSlide && prevSlide > 1) {
             this.slides[prevSlide - 1].classList.remove(this.currentSlideClass);
@@ -242,16 +245,16 @@ class Slider {
             this.scrollToSlide(this.slides[prevSlide - 2], prevSlide - 2);
 
             if (btnLabelA11y) {
-                btnLabelA11y.innerHTML = `slide ${prevSlide - 1} of ${
+                btnLabelA11y.innerHTML = `${prevSlide - 1} of ${
                     this.slides.length
                 }`;
             }
         }
     }
 
-    private goToNextSlide(button: HTMLButtonElement): void {
+    private goToNextSlide(button?: HTMLButtonElement): void {
         const nextSlide = this.getCurrentSlide();
-        const btnLabelA11y = button.querySelector('.sr-only');
+        const btnLabelA11y = button?.querySelector('.sr-only');
 
         if (nextSlide && nextSlide < this.slides.length) {
             this.slides[nextSlide - 1].classList.remove(this.currentSlideClass);
@@ -271,7 +274,7 @@ class Slider {
         const counter =
             this.slider.parentElement?.querySelector('[data-counter]');
         if (counter) {
-            counter.innerHTML = `${i + 1} of ${this.slides.length}`;
+            counter.innerHTML = `slide ${i + 1} of ${this.slides.length}`;
         }
 
         const counterPips = this.slider.parentElement?.querySelector(
