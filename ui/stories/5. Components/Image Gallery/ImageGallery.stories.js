@@ -4,7 +4,7 @@ export default {
     title: 'Components/Image Gallery',
     parameters: {
         status: {
-            type: 'beta',
+            type: 'stable',
         },
     },
 };

@@ -1,111 +1,178 @@
 export const ImageGalleryHtml = () => `
-<div class="image-gallery">
-    <ul class="grid">
-        <li>
-            <a
-                class="image-gallery__link"
-                href="https://dummyimage.com/1920x1080/ccc/ddd"
+<div class="image-gallery" data-module="image-gallery">
+    <div class="modal" data-module="modal">
+        <ul class="grid">
+            <li>
+                <a
+                    class="image-gallery__link"
+                    href="https://dummyimage.com/1920x1080&text=image+1"
+                    data-button="modal-open"
+                >
+                    <picture>
+                        <source
+                            srcset="https://dummyimage.com/400x300&text=thumbnail+1"
+                            type="image/webp"
+                        >
+                        <img
+                            class="image"
+                            src="https://dummyimage.com/400x300"
+                            alt="[alt]"
+                            loading="lazy"
+                            height="300"
+                            width="400"
+                        />
+                    </picture>
+                </a>
+            </li>
+            <li>
+                <a
+                    class="image-gallery__link"
+                    href="https://dummyimage.com/1920x1080&text=image+2"
+                    data-button="modal-open"
+                >
+                    <picture>
+                        <source
+                            srcset="https://dummyimage.com/400x300&text=thumbnail+2"
+                            type="image/webp"
+                        >
+                        <img
+                            class="image"
+                            src="https://dummyimage.com/400x300"
+                            alt="[alt]"
+                            loading="lazy"
+                            height="300"
+                            width="400"
+                        />
+                    </picture>
+                </a>
+            </li>
+            <li>
+                <a
+                    class="image-gallery__link"
+                    href="https://dummyimage.com/1920x1080&text=image+3"
+                    data-button="modal-open"
+                >
+                    <picture>
+                        <source
+                            srcset="https://dummyimage.com/400x300&text=thumbnail+3"
+                            type="image/webp"
+                        >
+                        <img
+                            class="image"
+                            src="https://dummyimage.com/400x300"
+                            alt="[alt]"
+                            loading="lazy"
+                            height="300"
+                            width="400"
+                        />
+                    </picture>
+                </a>
+            </li>
+            <li>
+                <a
+                    class="image-gallery__link"
+                    href="https://dummyimage.com/1920x1080&text=image+4"
+                    data-button="modal-open"
+                >
+                    <picture>
+                        <source
+                            srcset="https://dummyimage.com/400x300&text=thumbnail+4"
+                            type="image/webp"
+                        >
+                        <img
+                            class="image"
+                            src="https://dummyimage.com/400x300"
+                            alt="[alt]"
+                            loading="lazy"
+                            height="300"
+                            width="400"
+                        />
+                    </picture>
+                </a>
+            </li>
+            <li>
+                <a
+                    class="image-gallery__link"
+                    href="https://dummyimage.com/1920x1080&text=image+5"
+                    data-button="modal-open"
+                >
+                    <picture>
+                        <source
+                            srcset="https://dummyimage.com/400x300&text=thumbnail+5"
+                            type="image/webp"
+                        >
+                        <img
+                            class="image"
+                            src="https://dummyimage.com/400x300"
+                            alt="[alt]"
+                            loading="lazy"
+                            height="300"
+                            width="400"
+                        />
+                    </picture>
+                </a>
+            </li>
+        </ul>
+
+        <dialog class="modal__dialog">
+            <div class="modal__header">
+                <button
+                    type="button"
+                    class="button button--icon modal__close"
+                    data-button="modal-close"
+                >
+                    <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        class="icon"
+                    >
+                        <use href="sprite.svg#close" />
+                    </svg>
+                    <span class="sr-only">Close</span>
+                </button>
+            </div>
+
+            <div
+                class="modal__content"
+                data-modal-content
             >
                 <picture>
                     <source
-                        srcset="https://dummyimage.com/400x300/ccc/ddd"
+                        media="(min-width: 1440px)"
+                        srcset="https://dummyimage.com/1920x1080&text=image+1"
+                        type="image/webp"
+                    >
+                    <source
+                        media="(min-width: 1024px)"
+                        srcset="https://dummyimage.com/1440x810&text=image+1"
+                        type="image/webp"
+                    >
+                    <source
+                        media="(min-width: 768px)"
+                        srcset="https://dummyimage.com/1024x576&text=image+1"
+                        type="image/webp"
+                    >
+                    <source
+                        media="(min-width: 480px)"
+                        srcset="https://dummyimage.com/768x432&text=image+1"
+                        type="image/webp"
+                    >
+                    <source
+                        media="(max-width: 479px)"
+                        srcset="https://dummyimage.com/480x270&text=image+1"
                         type="image/webp"
                     >
                     <img
                         class="image"
-                        src="https://dummyimage.com/400x300/ccc/ddd"
+                        src="https://dummyimage.com/1920x1080&text=image+1"
                         alt="[alt]"
                         loading="lazy"
-                        height="300"
-                        width="400"
+                        height="1080"
+                        width="1920"
                     />
                 </picture>
-            </a>
-        </li>
-        <li>
-            <a
-                class="image-gallery__link"
-                href="https://dummyimage.com/1920x1080/ccc/ddd"
-            >
-                <picture>
-                    <source
-                        srcset="https://dummyimage.com/400x300/ccc/ddd"
-                        type="image/webp"
-                    >
-                    <img
-                        class="image"
-                        src="https://dummyimage.com/400x300/ccc/ddd"
-                        alt="[alt]"
-                        loading="lazy"
-                        height="300"
-                        width="400"
-                    />
-                </picture>
-            </a>
-        </li>
-        <li>
-            <a
-                class="image-gallery__link"
-                href="https://dummyimage.com/1920x1080/ccc/ddd"
-            >
-                <picture>
-                    <source
-                        srcset="https://dummyimage.com/400x300/ccc/ddd"
-                        type="image/webp"
-                    >
-                    <img
-                        class="image"
-                        src="https://dummyimage.com/400x300/ccc/ddd"
-                        alt="[alt]"
-                        loading="lazy"
-                        height="300"
-                        width="400"
-                    />
-                </picture>
-            </a>
-        </li>
-        <li>
-            <a
-                class="image-gallery__link"
-                href="https://dummyimage.com/1920x1080/ccc/ddd"
-            >
-                <picture>
-                    <source
-                        srcset="https://dummyimage.com/400x300/ccc/ddd"
-                        type="image/webp"
-                    >
-                    <img
-                        class="image"
-                        src="https://dummyimage.com/400x300/ccc/ddd"
-                        alt="[alt]"
-                        loading="lazy"
-                        height="300"
-                        width="400"
-                    />
-                </picture>
-            </a>
-        </li>
-        <li>
-            <a
-                class="image-gallery__link"
-                href="https://dummyimage.com/1920x1080/ccc/ddd"
-            >
-                <picture>
-                    <source
-                        srcset="https://dummyimage.com/400x300/ccc/ddd"
-                        type="image/webp"
-                    >
-                    <img
-                        class="image"
-                        src="https://dummyimage.com/400x300/ccc/ddd"
-                        alt="[alt]"
-                        loading="lazy"
-                        height="300"
-                        width="400"
-                    />
-                </picture>
-            </a>
-        </li>
-    </ul>
+            </div>
+        </dialog>
+    </div>
 </div>
 `;
