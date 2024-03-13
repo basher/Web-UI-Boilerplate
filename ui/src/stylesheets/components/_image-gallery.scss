@@ -3,17 +3,44 @@
 Dependencies.
 ----------------------------------------------------------------------------
 */
-// @use '../base' as *;
+@use '../base' as *;
 @use '../mixins' as *;
 
 .image-gallery {
+    &__link {
+        @include focus;
+        display: block;
+    }
+
     .grid {
         @include responsive-grid-auto-columns($auto-layout: auto-fill);
     }
 
-    &__link {
-        @include focus;
+    .modal__dialog[open] {
+        display: grid;
+        grid-template-areas: 'modal';
+        padding-block-start: $gutter-m;
+        place-items: start end;
+    }
 
-        display: block;
+    .modal__header,
+    .modal__content {
+        grid-area: modal;
+    }
+
+    .modal__header {
+        background: transparent;
+        padding-block-start: 0;
+        z-index: z('default');
+    }
+
+    .modal__content {
+        margin-block-start: 0;
+        z-index: z('reset');
+    }
+
+    .modal__close {
+        background: $color-neutral-100;
+        margin: $gutter-m;
     }
 }
