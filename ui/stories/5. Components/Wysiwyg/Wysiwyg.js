@@ -5,7 +5,7 @@ export const WysiwygHtml = () => `
     <p>Example of <a href="#">inline link</a>.</p>
 
     <img
-        src="https://dummyimage.com/400x300/ccc/ddd"
+        src="https://dummyimage.com/400x300"
         alt="[alt]"
         loading="lazy"
         height="300"

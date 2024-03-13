@@ -94,12 +94,12 @@ ${style}
                             <figure class="card__media">
                                 <picture>
                                     <source
-                                        srcset="https://dummyimage.com/400x300/ccc/ddd"
+                                        srcset="https://dummyimage.com/400x300"
                                         type="image/webp"
                                     >
                                     <img
                                         class="image"
-                                        src="https://dummyimage.com/400x300/ccc/ddd"
+                                        src="https://dummyimage.com/400x300"
                                         alt="[alt]"
                                         loading="lazy"
                                         height="300"
@@ -118,12 +118,12 @@ ${style}
                             <figure class="card__media">
                                 <picture>
                                     <source
-                                        srcset="https://dummyimage.com/400x300/ccc/ddd"
+                                        srcset="https://dummyimage.com/400x300"
                                         type="image/webp"
                                     >
                                     <img
                                         class="image"
-                                        src="https://dummyimage.com/400x300/ccc/ddd"
+                                        src="https://dummyimage.com/400x300"
                                         alt="[alt]"
                                         loading="lazy"
                                         height="300"
@@ -142,12 +142,12 @@ ${style}
                             <figure class="card__media">
                                 <picture>
                                     <source
-                                        srcset="https://dummyimage.com/400x300/ccc/ddd"
+                                        srcset="https://dummyimage.com/400x300"
                                         type="image/webp"
                                     >
                                     <img
                                         class="image"
-                                        src="https://dummyimage.com/400x300/ccc/ddd"
+                                        src="https://dummyimage.com/400x300"
                                         alt="[alt]"
                                         loading="lazy"
                                         height="300"
@@ -172,12 +172,12 @@ ${style}
                         <picture>
                             <source
                                 media="(max-width: 1024px)"
-                                srcset="https://dummyimage.com/400x300/ccc/ddd"
+                                srcset="https://dummyimage.com/400x300"
                                 type="image/webp"
                             >
                             <img
                                 class="image"
-                                src="https://dummyimage.com/768x576/ccc/ddd"
+                                src="https://dummyimage.com/768x576"
                                 alt="[alt]"
                                 loading="lazy"
                                 height="576"
@@ -196,12 +196,12 @@ ${style}
                         <picture>
                             <source
                                 media="(max-width: 1024px)"
-                                srcset="https://dummyimage.com/400x300/ccc/ddd"
+                                srcset="https://dummyimage.com/400x300"
                                 type="image/webp"
                             >
                             <img
                                 class="image"
-                                src="https://dummyimage.com/768x576/ccc/ddd"
+                                src="https://dummyimage.com/768x576"
                                 alt="[alt]"
                                 loading="lazy"
                                 height="576"

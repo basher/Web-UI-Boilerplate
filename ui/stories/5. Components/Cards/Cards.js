@@ -3,12 +3,12 @@ export const CardHtml = (args) => `
     <figure class="card__media">
         <picture>
             <source
-                srcset="https://dummyimage.com/400x300/ccc/ddd"
+                srcset="https://dummyimage.com/400x300"
                 type="image/webp"
             >
             <img
                 class="image"
-                src="https://dummyimage.com/400x300/ccc/ddd"
+                src="https://dummyimage.com/400x300"
                 alt="[alt]"
                 loading="lazy"
                 height="300"
@@ -32,22 +32,22 @@ export const FullwidthCardHtml = (args) => `
         <picture>
             <source
                 media="(min-width: 1024px)"
-                srcset="https://dummyimage.com/768x576/ccc/ddd"
+                srcset="https://dummyimage.com/768x576"
                 type="image/webp"
             >
             <source
                 media="(min-width: 480px)"
-                srcset="https://dummyimage.com/400x300/ccc/ddd"
+                srcset="https://dummyimage.com/400x300"
                 type="image/webp"
             >
             <source
                 media="(max-width: 479px)"
-                srcset="https://dummyimage.com/400x300/ccc/ddd"
+                srcset="https://dummyimage.com/400x300"
                 type="image/webp"
             >
             <img
                 class="image"
-                src="https://dummyimage.com/800x600/ccc/ddd"
+                src="https://dummyimage.com/800x600"
                 alt="[alt]"
                 loading="lazy"
                 height="576"
@@ -68,12 +68,12 @@ export const ClickableCardHtml = (args) => `
     <figure class="card__media">
         <picture>
             <source
-                srcset="https://dummyimage.com/400x300/ccc/ddd"
+                srcset="https://dummyimage.com/400x300"
                 type="image/webp"
             >
             <img
                 class="image"
-                src="https://dummyimage.com/400x300/ccc/ddd"
+                src="https://dummyimage.com/400x300"
                 alt="[alt]"
                 loading="lazy"
                 height="300"
@@ -95,12 +95,12 @@ export const CardGridHtml = () => `
             <figure class="card__media">
                 <picture>
                     <source
-                        srcset="https://dummyimage.com/400x300/ccc/ddd"
+                        srcset="https://dummyimage.com/400x300"
                         type="image/webp"
                     >
                     <img
                         class="image"
-                        src="https://dummyimage.com/400x300/ccc/ddd"
+                        src="https://dummyimage.com/400x300"
                         alt="[alt]"
                         loading="lazy"
                         height="300"
@@ -119,12 +119,12 @@ export const CardGridHtml = () => `
             <figure class="card__media">
                 <picture>
                     <source
-                        srcset="https://dummyimage.com/400x300/ccc/ddd"
+                        srcset="https://dummyimage.com/400x300"
                         type="image/webp"
                     >
                     <img
                         class="image"
-                        src="https://dummyimage.com/400x300/ccc/ddd"
+                        src="https://dummyimage.com/400x300"
                         alt="[alt]"
                         loading="lazy"
                         height="300"
@@ -143,12 +143,12 @@ export const CardGridHtml = () => `
             <figure class="card__media">
                 <picture>
                     <source
-                        srcset="https://dummyimage.com/400x300/ccc/ddd"
+                        srcset="https://dummyimage.com/400x300"
                         type="image/webp"
                     >
                     <img
                         class="image"
-                        src="https://dummyimage.com/400x300/ccc/ddd"
+                        src="https://dummyimage.com/400x300"
                         alt="[alt]"
                         loading="lazy"
                         height="300"
@@ -177,12 +177,12 @@ export const CardSliderHtml = () => `
                 <figure class="card__media">
                     <picture>
                         <source
-                            srcset="https://dummyimage.com/400x300/ccc/ddd"
+                            srcset="https://dummyimage.com/400x300"
                             type="image/webp"
                         >
                         <img
                             class="image"
-                            src="https://dummyimage.com/400x300/ccc/ddd"
+                            src="https://dummyimage.com/400x300"
                             alt="[alt]"
                             loading="lazy"
                             height="300"
@@ -201,12 +201,12 @@ export const CardSliderHtml = () => `
                 <figure class="card__media">
                     <picture>
                         <source
-                            srcset="https://dummyimage.com/400x300/ccc/ddd"
+                            srcset="https://dummyimage.com/400x300"
                             type="image/webp"
                         >
                         <img
                             class="image"
-                            src="https://dummyimage.com/400x300/ccc/ddd"
+                            src="https://dummyimage.com/400x300"
                             alt="[alt]"
                             loading="lazy"
                             height="300"
@@ -225,12 +225,12 @@ export const CardSliderHtml = () => `
                 <figure class="card__media">
                     <picture>
                         <source
-                            srcset="https://dummyimage.com/400x300/ccc/ddd"
+                            srcset="https://dummyimage.com/400x300"
                             type="image/webp"
                         >
                         <img
                             class="image"
-                            src="https://dummyimage.com/400x300/ccc/ddd"
+                            src="https://dummyimage.com/400x300"
                             alt="[alt]"
                             loading="lazy"
                             height="300"
@@ -249,12 +249,12 @@ export const CardSliderHtml = () => `
                 <figure class="card__media">
                     <picture>
                         <source
-                            srcset="https://dummyimage.com/400x300/ccc/ddd"
+                            srcset="https://dummyimage.com/400x300"
                             type="image/webp"
                         >
                         <img
                             class="image"
-                            src="https://dummyimage.com/400x300/ccc/ddd"
+                            src="https://dummyimage.com/400x300"
                             alt="[alt]"
                             loading="lazy"
                             height="300"
@@ -273,12 +273,12 @@ export const CardSliderHtml = () => `
                 <figure class="card__media">
                     <picture>
                         <source
-                            srcset="https://dummyimage.com/400x300/ccc/ddd"
+                            srcset="https://dummyimage.com/400x300"
                             type="image/webp"
                         >
                         <img
                             class="image"
-                            src="https://dummyimage.com/400x300/ccc/ddd"
+                            src="https://dummyimage.com/400x300"
                             alt="[alt]"
                             loading="lazy"
                             height="300"
@@ -297,12 +297,12 @@ export const CardSliderHtml = () => `
                 <figure class="card__media">
                     <picture>
                         <source
-                            srcset="https://dummyimage.com/400x300/ccc/ddd"
+                            srcset="https://dummyimage.com/400x300"
                             type="image/webp"
                         >
                         <img
                             class="image"
-                            src="https://dummyimage.com/400x300/ccc/ddd"
+                            src="https://dummyimage.com/400x300"
                             alt="[alt]"
                             loading="lazy"
                             height="300"
