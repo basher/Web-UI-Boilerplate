@@ -1,11 +1,11 @@
 export default class ImageGallery {
     private gallery: Element;
-    private btnModalOpen: HTMLAnchorElement | null;
+    private galleryItems: NodeListOf<HTMLElement>;
 
     constructor(gallery: Element) {
         this.gallery = gallery;
-        this.btnModalOpen = this.gallery.querySelector(
-            '[data-button="modal-open"]',
+        this.galleryItems = this.gallery.querySelectorAll(
+            '[data-module="modal"]',
         );
 
         this.init();
@@ -23,13 +23,19 @@ export default class ImageGallery {
     }
 
     private init(): void {
-        this.btnModalOpen?.addEventListener('click', (e: MouseEvent) =>
-            this.handleClick(e),
-        );
+        this.openModal();
     }
 
-    private handleClick(e: MouseEvent): void {
-        // Prevent anchor working so large image loads in modal.
-        e.preventDefault();
+    private openModal(): void {
+        this.galleryItems.forEach((galleryItem) => {
+            const btnModalOpen = galleryItem.querySelector(
+                '[data-button="modal-open"]',
+            ) as HTMLAnchorElement;
+
+            btnModalOpen?.addEventListener('click', (e: MouseEvent) => {
+                // Prevent default link behaviour so large image loads in modal.
+                e.preventDefault();
+            });
+        });
     }
 }
