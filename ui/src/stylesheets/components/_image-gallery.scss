@@ -1,0 +1,19 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+// @use '../base' as *;
+@use '../mixins' as *;
+
+.image-gallery {
+    .grid {
+        @include responsive-grid-auto-columns($auto-layout: auto-fill);
+    }
+
+    &__link {
+        @include focus;
+
+        display: block;
+    }
+}
