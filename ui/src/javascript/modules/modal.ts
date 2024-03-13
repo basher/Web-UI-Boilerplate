@@ -3,7 +3,7 @@ class Modal {
     private dialog: HTMLDialogElement | null;
     private modalContent: HTMLElement | null;
     private btnModalOpen: HTMLButtonElement | null;
-    private allBtnModalClose: NodeListOf<HTMLElement>;
+    private btnsModalClose: NodeListOf<HTMLElement>;
     private classNameModalOpen: string;
 
     constructor(modal: Element) {
@@ -13,7 +13,7 @@ class Modal {
         this.btnModalOpen = this.modal.querySelector(
             '[data-button="modal-open"]',
         );
-        this.allBtnModalClose = this.modal.querySelectorAll(
+        this.btnsModalClose = this.modal.querySelectorAll(
             '[data-button="modal-close"]',
         );
         this.classNameModalOpen = 'has-modal-open';
@@ -54,7 +54,7 @@ class Modal {
     }
 
     private closeModal(): void {
-        this.allBtnModalClose.forEach((btnModalClose) => {
+        this.btnsModalClose.forEach((btnModalClose) => {
             btnModalClose?.addEventListener('click', () => {
                 this.handleClose();
             });

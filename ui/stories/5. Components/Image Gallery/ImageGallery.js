@@ -1,11 +1,11 @@
 export const ImageGalleryHtml = () => `
 <div class="image-gallery" data-module="image-gallery">
-    <div class="modal" data-module="modal">
-        <ul class="grid">
-            <li>
+    <ul class="grid">
+        <li>
+            <div class="modal" data-module="modal">
                 <a
                     class="image-gallery__link"
-                    href="https://dummyimage.com/1920x1080&text=image+1"
+                    href="https://dummyimage.com/1140x810&text=image+1"
                     data-button="modal-open"
                 >
                     <picture>
@@ -23,11 +23,57 @@ export const ImageGalleryHtml = () => `
                         />
                     </picture>
                 </a>
-            </li>
+
+                <dialog class="modal__dialog">
+                    <div class="modal__header">
+                        <button
+                            type="button"
+                            class="button button--icon modal__close"
+                            data-button="modal-close"
+                        >
+                            <svg
+                                aria-hidden="true"
+                                focusable="false"
+                                class="icon"
+                            >
+                                <use href="sprite.svg#close" />
+                            </svg>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+
+                    <div
+                        class="modal__content"
+                        data-modal-content
+                    >
+                        <picture>
+                            <source
+                                media="(min-width: 480px)"
+                                srcset="https://dummyimage.com/1440x810&text=image+1"
+                                type="image/webp"
+                            >
+                            <source
+                                media="(max-width: 479px)"
+                                srcset="https://dummyimage.com/480x270&text=image+1"
+                                type="image/webp"
+                            >
+                            <img
+                                class="image"
+                                src="https://dummyimage.com/1440x810&text=image+1"
+                                alt="[alt]"
+                                loading="lazy"
+                                height="1080"
+                                width="1920"
+                            />
+                        </picture>
+                    </div>
+                </dialog>
+            </div>
+        </li>
             <li>
                 <a
                     class="image-gallery__link"
-                    href="https://dummyimage.com/1920x1080&text=image+2"
+                    href="https://dummyimage.com/1140x810&text=image+2"
                     data-button="modal-open"
                 >
                     <picture>
@@ -49,7 +95,7 @@ export const ImageGalleryHtml = () => `
             <li>
                 <a
                     class="image-gallery__link"
-                    href="https://dummyimage.com/1920x1080&text=image+3"
+                    href="https://dummyimage.com/1140x810&text=image+3"
                     data-button="modal-open"
                 >
                     <picture>
@@ -71,7 +117,7 @@ export const ImageGalleryHtml = () => `
             <li>
                 <a
                     class="image-gallery__link"
-                    href="https://dummyimage.com/1920x1080&text=image+4"
+                    href="https://dummyimage.com/1140x810&text=image+4"
                     data-button="modal-open"
                 >
                     <picture>
@@ -93,7 +139,7 @@ export const ImageGalleryHtml = () => `
             <li>
                 <a
                     class="image-gallery__link"
-                    href="https://dummyimage.com/1920x1080&text=image+5"
+                    href="https://dummyimage.com/1140x810&text=image+5"
                     data-button="modal-open"
                 >
                     <picture>
@@ -113,66 +159,5 @@ export const ImageGalleryHtml = () => `
                 </a>
             </li>
         </ul>
-
-        <dialog class="modal__dialog">
-            <div class="modal__header">
-                <button
-                    type="button"
-                    class="button button--icon modal__close"
-                    data-button="modal-close"
-                >
-                    <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        class="icon"
-                    >
-                        <use href="sprite.svg#close" />
-                    </svg>
-                    <span class="sr-only">Close</span>
-                </button>
-            </div>
-
-            <div
-                class="modal__content"
-                data-modal-content
-            >
-                <picture>
-                    <source
-                        media="(min-width: 1440px)"
-                        srcset="https://dummyimage.com/1920x1080&text=image+1"
-                        type="image/webp"
-                    >
-                    <source
-                        media="(min-width: 1024px)"
-                        srcset="https://dummyimage.com/1440x810&text=image+1"
-                        type="image/webp"
-                    >
-                    <source
-                        media="(min-width: 768px)"
-                        srcset="https://dummyimage.com/1024x576&text=image+1"
-                        type="image/webp"
-                    >
-                    <source
-                        media="(min-width: 480px)"
-                        srcset="https://dummyimage.com/768x432&text=image+1"
-                        type="image/webp"
-                    >
-                    <source
-                        media="(max-width: 479px)"
-                        srcset="https://dummyimage.com/480x270&text=image+1"
-                        type="image/webp"
-                    >
-                    <img
-                        class="image"
-                        src="https://dummyimage.com/1920x1080&text=image+1"
-                        alt="[alt]"
-                        loading="lazy"
-                        height="1080"
-                        width="1920"
-                    />
-                </picture>
-            </div>
-        </dialog>
-    </div>
 </div>
 `;

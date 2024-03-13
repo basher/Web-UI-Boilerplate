@@ -1,6 +1,7 @@
 // Dependencies
 import Disclosure from './modules/disclosure';
 import FormValidate from './modules/form-validate';
+import ImageGallery from './modules/image-gallery';
 import Message from './modules/message';
 import Modal from './modules/modal';
 import RangeSlider from './modules/range-slider';
@@ -19,7 +20,7 @@ export const uiInit = (): void => {
     Disclosure.start();
     FormValidate.start();
     Message.start();
-    Wysiwyg.start();
+    ImageGallery.start();
     Modal.start();
     RangeSlider.start();
     Search.start();
@@ -28,6 +29,7 @@ export const uiInit = (): void => {
     Tabs.start();
     Toggle.start();
     VideoPlayer.start();
+    Wysiwyg.start();
 
     // For DEMO purposes only.
     demoAjaxFetchHTML.start();
