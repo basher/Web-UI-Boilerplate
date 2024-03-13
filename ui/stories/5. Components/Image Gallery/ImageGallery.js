@@ -62,8 +62,8 @@ export const ImageGalleryHtml = () => `
                                 src="https://dummyimage.com/1440x810&text=image+1"
                                 alt="[alt]"
                                 loading="lazy"
-                                height="1080"
-                                width="1920"
+                                height="810"
+                                width="1440"
                             />
                         </picture>
                     </div>

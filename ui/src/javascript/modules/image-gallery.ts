@@ -29,6 +29,7 @@ export default class ImageGallery {
     }
 
     private handleClick(e: MouseEvent): void {
+        // Prevent anchor working so large image loads in modal.
         e.preventDefault();
     }
 }

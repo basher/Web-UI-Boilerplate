@@ -6,7 +6,7 @@ import * as Images from './Images.stories';
 # Images
 
 ## Responsive and performance considerations
-- Responsive images use the HTML `<picture>` element.
+- Responsive images use the HTML `<picture>` element with multiple image `sources`.
 - The image `media` queries are based on the CSS breakpoint values.
 - Images are [lazy loaded](https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading), but be aware of [not lazy loading images above the fold](https://web.dev/lazy-loading-best-practices/).
 -  Images have [explicit height & width](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/) declared in the HTML.
