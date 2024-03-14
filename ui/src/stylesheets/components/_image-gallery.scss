@@ -19,7 +19,7 @@ Dependencies.
     .modal__dialog[open] {
         display: grid;
         grid-template-areas: 'modal';
-        padding-block-start: $gutter-m;
+        padding: $gutter-s;
         place-items: start end;
     }
 
@@ -41,6 +41,6 @@ Dependencies.
 
     .modal__close {
         background: $color-neutral-100;
-        margin: $gutter-m;
+        margin: $gutter-s;
     }
 }
