@@ -2,7 +2,7 @@ class Modal {
     private modal: Element;
     private dialog: HTMLDialogElement | null;
     private modalContent: HTMLElement | null;
-    private btnModalOpen: HTMLButtonElement | null;
+    private btnModalOpen: HTMLButtonElement | HTMLAnchorElement | null;
     private btnsModalClose: NodeListOf<HTMLElement>;
     private classNameModalOpen: string;
 
@@ -41,7 +41,10 @@ class Modal {
     }
 
     private openModal(): void {
-        this.btnModalOpen?.addEventListener('click', () => {
+        this.btnModalOpen?.addEventListener('click', (e) => {
+            // Prevent default behaviour on links.
+            e.preventDefault();
+
             if (!this.dialog?.open) {
                 this.dialog?.showModal();
                 // Set focus on content rather than the 'close' button.
