@@ -1,6 +1,6 @@
 export default class VideoPlayer {
     private player: Element;
-    private btnPlay: HTMLButtonElement | null;
+    private btnPlay: HTMLAnchorElement | null;
     private mediaContainer: HTMLElement | null;
     private iframe: HTMLIFrameElement | null;
     private videoLink: HTMLAnchorElement | null;
