@@ -6,7 +6,7 @@ Dependencies.
 @use '../base' as *;
 @use '../mixins' as *;
 
-// Define mixin so tables inside WYSIWYG can be styled without requiring CSS class to be added.
+// Define mixin so tables inside prose content can be styled without requiring CSS class to be added.
 @mixin table {
     :is(th, td) {
         border: $border-width-s solid hsl(var(--color-neutral-900) / 10%);

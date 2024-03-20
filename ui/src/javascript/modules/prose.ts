@@ -1,19 +1,19 @@
-export default class Wysiwyg {
-    private wysiwyg: Element;
+export default class Prose {
+    private prose: Element;
     private tables: NodeListOf<HTMLTableElement>;
 
-    constructor(wysiwyg: Element) {
-        this.wysiwyg = wysiwyg;
-        this.tables = this.wysiwyg.querySelectorAll('table');
+    constructor(prose: Element) {
+        this.prose = prose;
+        this.tables = this.prose.querySelectorAll('table');
 
         this.init();
     }
 
     public static start(): void {
-        const wysiwygs = document.querySelectorAll('[data-module="wysiwyg"]');
+        const proses = document.querySelectorAll('[data-module="prose"]');
 
-        wysiwygs.forEach((wysiwyg) => {
-            const instance = new Wysiwyg(wysiwyg);
+        proses.forEach((prose) => {
+            const instance = new Prose(prose);
             return instance;
         });
     }

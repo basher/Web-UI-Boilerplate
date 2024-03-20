@@ -1,10 +1,10 @@
 import { Meta, Canvas } from '@storybook/blocks';
-import * as Wysiwyg from './Wysiwyg.stories';
+import * as Prose from './Prose.stories';
 
-<Meta of={Wysiwyg} />
+<Meta of={Prose} />
 
-# Wysiwyg CMS editor "prose" content
+# Prose content (e.g. from CMS editor)
 - The spacing between the individual typographic elements is handled by the [stack layout](/story/layout-stack--stack).
 - Tables have a `table-wrapper` programatically added via JavaScript to make them responsive.
 
-<Canvas of={Wysiwyg.Wysiwyg} />
+<Canvas of={Prose.Prose} />
