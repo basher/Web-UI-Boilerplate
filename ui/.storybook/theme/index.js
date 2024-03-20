@@ -3,7 +3,7 @@ import logo from './logo.png';
 
 export default create({
     base: 'light',
-    brandTitle: 'Web UI Boilerplate Storybook',
+    brandTitle: 'A11Y Web UI Boilerplate',
     brandUrl: '/',
     brandImage: logo,
 });
