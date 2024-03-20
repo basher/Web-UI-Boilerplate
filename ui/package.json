@@ -56,7 +56,7 @@
     "parcel": "^2.11.0",
     "postcss": "^8.4.18",
     "prettier": "^2.7.1",
-    "remark-gfm": "^3.0.1",
+    "remark-gfm": "^4.0.0",
     "sass-export": "^2.1.2",
     "storybook": "^8.0.2",
     "stylelint": "^14.14.0",
