@@ -1,5 +1,5 @@
 export const ProseHtml = () => `
-<div class="wysiwyg stack" data-module="prose">
+<div class="prose stack" data-module="prose">
     <h2>Heading level 2</h2>
     <p>Example of real prose content in a stack.</p>
     <p>Example of <a href="#">inline link</a>.</p>

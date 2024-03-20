@@ -79,7 +79,7 @@ ${style}
             </div>
 
             <div class="wrapper wrapper--xl u-p-block--l">
-                <div class="wysiwyg stack u-center">
+                <div class="prose stack u-center">
                     <h2>Heading level 2</h2>
                     <h3>Heading level 3</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
