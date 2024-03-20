@@ -1,0 +1,11 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as DateOfBirth from './DateOfBirth.stories';
+
+<Meta of={DateOfBirth} />
+
+# Date of birth
+
+## Usability considerations
+- All 3 form fields make use of [autocomplete](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) attributes.
+
+<Canvas of={DateOfBirth.DateOfBirth} />
