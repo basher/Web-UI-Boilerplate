@@ -8,7 +8,7 @@ import * as Typography from './Typography.stories';
 - [Fluid typography](https://piccalil.li/tutorial/fluid-typography-with-css-clamp) has been implemented by leveraging [CSS clamp](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp), resulting in
     - minimal usage of `font-size` declarations,
     - zero media queries.
-- The Sass `fluid-type` mixin outputs the **minimum**, **maximum** and **ideal** font sizes for specific elements. For example:
+- The Sass `fluid-type` mixin outputs the **minimum**, **maximum** and **ideal** font sizes for specific elements, and an appropriate line-height. For example:
 ```
 body { @include fluid-type; }
 h1 { @include fluid-type($font-size-h2, $font-size-h1, $line-height-h1); }
