@@ -9,10 +9,6 @@ import * as CardsNoArgs from './CardsNoArgs.stories';
 - The `card__media` is marked up as a `<figure>`, and can contain `<picture>`, `<video>`, `<iframe>`, etc.
 - By default, cards have no visual treatment such as background colour, border, shadow, etc. Apply visual styles using the [skin component](/story/components-skin--skin).
 
-## TODO
-- Add cards with multiple CTAs. Might need JS to intercept click events?
-- Add media/container queries to modify fullwidth gap & content width?
-
 ## Card
 - The default card component is marked up as an `<article>`, and should therefore contain a heading with the appropriate level.
 - Uses `<picture>` with a single fixed size image, whose orientation can be `top`, `bottom`, `left` or `right`.
@@ -30,6 +26,10 @@ import * as CardsNoArgs from './CardsNoArgs.stories';
 ## Clickable card
 - This card replaces `<article>` with an `<a>`.
 
+### Accessibility considerations
+- The image has an empty `alt` attribute.
+- Minimise the amount of text, as it will all be read out as link text by screen readers.
+
 <Canvas of={Cards.ClickableCard} />
 <Controls of={Cards.ClickableCard} />
 
@@ -44,3 +44,7 @@ import * as CardsNoArgs from './CardsNoArgs.stories';
 - This is achieved via the `card-slider` override CSS classname.
 
 <Canvas of={CardsNoArgs.CardSlider} />
+
+## TODO
+- Add cards with multiple CTAs. Might need JS to intercept click events?
+- Add media/container queries to modify fullwidth gap & content width?
