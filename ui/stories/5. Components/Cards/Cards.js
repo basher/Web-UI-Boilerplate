@@ -17,8 +17,9 @@ export const CardHtml = (args) => `
         </picture>
     </figure>
     <div class="card__content stack">
-        <h3 class="card__title">Default card title</h3>
-        <p>Paragraph of text with a <a href="#">simple text link</a> inside it.</p>
+        <h3 class="card__title">
+            <a href="#">Default card title</a>
+        </h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
     </div>
 </article>
