@@ -23,6 +23,11 @@ Give affordance of "clickability" to a component/content.
         }
     }
 
+    &:has(:focus:not(:focus-visible)) {
+        box-shadow: none;
+        outline: $border-width-l solid transparent; // So high contrast mode works.
+    }
+
     // With JS enhancement.
     &[data-module='make-clickable'] {
         &:hover {
