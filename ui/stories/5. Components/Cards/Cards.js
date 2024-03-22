@@ -57,8 +57,9 @@ export const FullwidthCardHtml = (args) => `
         </picture>
     </figure>
     <div class="card__content stack">
-        <h3 class="card__title">Fullwidth card title</h3>
-        <p>Paragraph of text with a <a href="#">simple text link</a> inside it.</p>
+        <h3 class="card__title">
+            <a href="#">Fullwidth card title</a>
+        </h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
     </div>
 </article>
@@ -102,7 +103,7 @@ export const CardGridHtml = () => `
                     <img
                         class="image"
                         src="https://dummyimage.com/400x300"
-                        alt="[alt]"
+                        alt=""
                         loading="lazy"
                         height="300"
                         width="400"
@@ -111,7 +112,7 @@ export const CardGridHtml = () => `
             </figure>
             <div class="card__content stack">
                 <h3 class="card__title">Clickable card title</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae.</p>
             </div>
         </a>
     </li>
@@ -126,7 +127,7 @@ export const CardGridHtml = () => `
                     <img
                         class="image"
                         src="https://dummyimage.com/400x300"
-                        alt="[alt]"
+                        alt=""
                         loading="lazy"
                         height="300"
                         width="400"
@@ -135,7 +136,7 @@ export const CardGridHtml = () => `
             </figure>
             <div class="card__content stack">
                 <h3 class="card__title">Clickable card title</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
         </a>
     </li>
@@ -150,7 +151,7 @@ export const CardGridHtml = () => `
                     <img
                         class="image"
                         src="https://dummyimage.com/400x300"
-                        alt="[alt]"
+                        alt=""
                         loading="lazy"
                         height="300"
                         width="400"
@@ -159,7 +160,7 @@ export const CardGridHtml = () => `
             </figure>
             <div class="card__content stack">
                 <h3 class="card__title">Clickable card title</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium.</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
         </a>
     </li>
@@ -184,7 +185,7 @@ export const CardSliderHtml = () => `
                         <img
                             class="image"
                             src="https://dummyimage.com/400x300"
-                            alt="[alt]"
+                            alt=""
                             loading="lazy"
                             height="300"
                             width="400"
@@ -193,7 +194,7 @@ export const CardSliderHtml = () => `
                 </figure>
                 <div class="card__content stack">
                     <h3 class="card__title">Clickable card title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae.</p>
                 </div>
             </a>
         </li>
@@ -208,7 +209,7 @@ export const CardSliderHtml = () => `
                         <img
                             class="image"
                             src="https://dummyimage.com/400x300"
-                            alt="[alt]"
+                            alt=""
                             loading="lazy"
                             height="300"
                             width="400"
@@ -217,7 +218,7 @@ export const CardSliderHtml = () => `
                 </figure>
                 <div class="card__content stack">
                     <h3 class="card__title">Clickable card title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
             </a>
         </li>
@@ -232,7 +233,7 @@ export const CardSliderHtml = () => `
                         <img
                             class="image"
                             src="https://dummyimage.com/400x300"
-                            alt="[alt]"
+                            alt=""
                             loading="lazy"
                             height="300"
                             width="400"
@@ -241,7 +242,7 @@ export const CardSliderHtml = () => `
                 </figure>
                 <div class="card__content stack">
                     <h3 class="card__title">Clickable card title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
             </a>
         </li>
@@ -256,7 +257,7 @@ export const CardSliderHtml = () => `
                         <img
                             class="image"
                             src="https://dummyimage.com/400x300"
-                            alt="[alt]"
+                            alt=""
                             loading="lazy"
                             height="300"
                             width="400"
@@ -265,7 +266,7 @@ export const CardSliderHtml = () => `
                 </figure>
                 <div class="card__content stack">
                     <h3 class="card__title">Clickable card title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae.</p>
                 </div>
             </a>
         </li>
@@ -280,7 +281,7 @@ export const CardSliderHtml = () => `
                         <img
                             class="image"
                             src="https://dummyimage.com/400x300"
-                            alt="[alt]"
+                            alt=""
                             loading="lazy"
                             height="300"
                             width="400"
@@ -289,7 +290,7 @@ export const CardSliderHtml = () => `
                 </figure>
                 <div class="card__content stack">
                     <h3 class="card__title">Clickable card title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
             </a>
         </li>
@@ -304,7 +305,7 @@ export const CardSliderHtml = () => `
                         <img
                             class="image"
                             src="https://dummyimage.com/400x300"
-                            alt="[alt]"
+                            alt=""
                             loading="lazy"
                             height="300"
                             width="400"
@@ -313,7 +314,7 @@ export const CardSliderHtml = () => `
                 </figure>
                 <div class="card__content stack">
                     <h3 class="card__title">Clickable card title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
             </a>
         </li>
