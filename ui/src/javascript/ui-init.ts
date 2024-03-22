@@ -1,6 +1,7 @@
 // Dependencies
 import Disclosure from './modules/disclosure';
 import FormValidate from './modules/form-validate';
+import MakeClickable from './modules/make-clickable';
 import Message from './modules/message';
 import Modal from './modules/modal';
 import Prose from './modules/prose';
@@ -18,6 +19,7 @@ import demoAjaxFetchHTML from './modules/demo-ajax-fetch-html';
 export const uiInit = (): void => {
     Disclosure.start();
     FormValidate.start();
+    MakeClickable.start();
     Message.start();
     Modal.start();
     RangeSlider.start();

@@ -1,7 +1,8 @@
 import {
     ScreenReaderHtml,
     HideContentHtml,
-    CenterContentHtml
+    CenterContentHtml,
+    MakeClickableHtml
 } from './Utilities';
 
 export default {
@@ -14,16 +15,18 @@ export default {
 };
 
 export const ScreenReader = {
-    render: (args) => ScreenReaderHtml(args),
+    render: () => ScreenReaderHtml(),
 };
 ScreenReader.storyName = 'Screen Reader Only Content';
 
 export const HideContent = {
-    render: (args) => HideContentHtml(args),
+    render: () => HideContentHtml(),
 };
-HideContent.storyName = 'Hide Content';
 
 export const CenterContent = {
-    render: (args) => CenterContentHtml(args),
+    render: () => CenterContentHtml(),
 };
-CenterContent.storyName = 'Center Content';
+
+export const MakeClickable = {
+    render: () => MakeClickableHtml(),
+};

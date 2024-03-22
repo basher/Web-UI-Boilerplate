@@ -1,0 +1,36 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../mixins' as *;
+@use '../base' as *;
+
+/*
+----------------------------------------------------------------------------
+Give affordance of "clickability" to a component/content.
+----------------------------------------------------------------------------
+*/
+.u-clickable {
+    &:focus-within {
+        box-shadow: 0 0 0 $border-width-l $color-focus;
+        outline: $border-width-l solid transparent; // So high contrast mode works.
+
+        // Remove focus styles on links inside.
+        :focus-visible {
+            box-shadow: none;
+            outline: none;
+        }
+    }
+
+    // With JS enhancement.
+    &[data-module='make-clickable'] {
+        &:hover {
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
