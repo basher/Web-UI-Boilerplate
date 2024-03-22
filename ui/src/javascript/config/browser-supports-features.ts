@@ -6,13 +6,9 @@
     - https://golb.hplar.ch/2018/02/Conditionally-load-polyfills.html.
 */
 export const browserSupportsAllFeatures = (): boolean => {
-    // TODO: The following 2 polyfills will probably be redundant, given the current "browserslist" config.
-    const isIntersectionObserver = 'IntersectionObserver' in window;
-    const isFetch = 'fetch' in window;
-
     // Native <dialog>.
     const isDialog =
         typeof document.createElement('dialog').showModal === 'function';
 
-    return isIntersectionObserver && isFetch && isDialog;
+    return isDialog;
 };

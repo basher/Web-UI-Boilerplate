@@ -55,6 +55,6 @@ Dependencies.
     }
 
     &:focus:not(:focus-visible) {
-        outline: $border-width-l solid transparent; // So high contrast mode works.
+        outline: $border-width-l solid transparent;
     }
 }

@@ -25,7 +25,7 @@ Give affordance of "clickability" to a component/content.
 
     &:has(:focus:not(:focus-visible)) {
         box-shadow: none;
-        outline: $border-width-l solid transparent; // So high contrast mode works.
+        outline: $border-width-l solid transparent;
     }
 
     // With JS enhancement.
