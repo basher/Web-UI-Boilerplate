@@ -34,6 +34,7 @@ Dependencies.
 
         &-3 {
             background-color: hsl(var(--color-brand) / 10%);
+            color: inherit;
             margin-block: var(--skin-gutter-offset);
             padding: $gutter-m;
             position: relative;
