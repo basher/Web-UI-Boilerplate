@@ -1,8 +1,7 @@
 import {
     ScreenReaderHtml,
     HideContentHtml,
-    CenterContentHtml,
-    MakeClickableHtml
+    CenterContentHtml
 } from './Utilities';
 
 export default {
@@ -25,8 +24,4 @@ export const HideContent = {
 
 export const CenterContent = {
     render: () => CenterContentHtml(),
-};
-
-export const MakeClickable = {
-    render: () => MakeClickableHtml(),
 };

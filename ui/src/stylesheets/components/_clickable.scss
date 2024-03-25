@@ -3,7 +3,7 @@
 Dependencies.
 ----------------------------------------------------------------------------
 */
-@use '../mixins' as *;
+// @use '../mixins' as *;
 @use '../base' as *;
 
 /*
@@ -11,7 +11,7 @@ Dependencies.
 Give affordance of "clickability" to a component/content.
 ----------------------------------------------------------------------------
 */
-.u-clickable {
+.clickable {
     &:focus-within {
         box-shadow: 0 0 0 $border-width-l $color-focus;
         outline: $border-width-l solid transparent; // So high contrast mode works.
