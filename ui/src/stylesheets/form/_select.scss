@@ -4,8 +4,16 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../mixins' as *;
-// @use '../base' as *;
+@use '../base' as *;
 
 .select {
     @include form-field-reset;
+
+    @if $allow-dark-mode {
+        @media (prefers-color-scheme: dark) {
+            option {
+                color: $color-neutral-900;
+            }
+        }
+    }
 }
