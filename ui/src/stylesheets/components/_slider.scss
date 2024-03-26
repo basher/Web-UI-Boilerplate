@@ -62,10 +62,12 @@ Dependencies.
     &.is-js-enabled {
         .slider__slide {
             filter: grayscale(60%);
+            opacity: 0.8;
         }
 
         .is-visible {
             filter: grayscale(0);
+            opacity: 1;
         }
 
         // Identify current slide (when using PREV|NEXT buttons).
