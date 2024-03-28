@@ -16,7 +16,7 @@ export default class WebDisclosure extends HTMLElement {
 
         this.init();
 
-        // NOTE: There are NO event listeners here. All events are handled by the external 'discloure()' dependency.
+        // NOTE: There are NO event listeners here. All events are handled by the external 'disclosure()' dependency.
     }
 
     private init(): void {
