@@ -3,7 +3,7 @@ import { randomString } from './random-string';
 /**
  * Function - used by any component that needs to show|hide content, when Accordion or Tab component cannot be used.
  *
- * @param {HTMLElement} button - usually a <button>.
+ * @param {HTMLButtonElement} button - <button>.
  * @param {HTMLElement} content - usually a <div> whose content is shown|hidden.
  * @param {boolean} bindEscapeKey - define if ESC key should hide content.
  *
