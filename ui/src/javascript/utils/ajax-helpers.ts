@@ -58,7 +58,7 @@ export const ajaxAbortHandler = (arg: AjaxAbort): AbortSignal => {
  * Function - handle Ajax errors.
  *
  * @param {string} error - Ajax error text.
- * @param {HTMLElement} ajaxContainer - DOM node into which Ajax error text is injected.
+ * @param {HTMLElement} [ajaxContainer] - DOM node into which Ajax error text is injected.
  *
  * @return {void}
  *

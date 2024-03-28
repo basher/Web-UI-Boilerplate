@@ -5,7 +5,8 @@ import { randomString } from './random-string';
  *
  * @param {HTMLButtonElement} button - <button>.
  * @param {HTMLElement} content - usually a <div> whose content is shown|hidden.
- * @param {boolean} bindEscapeKey - define if ESC key should hide content.
+ * @param {boolean} [bindEscapeKey] - define if ESC key should hide content.
+ * @param {boolean} [bindClickOutside] - define if clicking outside should hide content.
  *
  * @return {void}
  *
