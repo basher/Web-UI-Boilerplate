@@ -1,7 +1,7 @@
-import { DisclosureHtml } from './Disclosure';
+import { WebDisclosureHtml } from './WebDisclosure';
 
 export default {
-    title: 'Components/Disclosure (Or Show|Hide)',
+    title: 'Web Components Or Custom Elements/<web-disclosure>',
     parameters: {
         status: {
             type: 'stable',
@@ -19,6 +19,7 @@ export default {
     },
 };
 
-export const Disclosure = {
-    render: (args) => DisclosureHtml(args),
+export const WebDisclosure = {
+    render: (args) => WebDisclosureHtml(args),
 };
+WebDisclosure.storyName = '<web-disclosure>';

@@ -5,6 +5,8 @@ export default class Disclosure {
     private disclosure: Element;
     private btnDisclosure: HTMLButtonElement | null;
     private content: HTMLElement | null;
+    private bindEscapeKey?: boolean;
+    private bindClickOutside?: boolean;
 
     constructor(disclosure: Element) {
         this.disclosure = disclosure;
@@ -13,6 +15,12 @@ export default class Disclosure {
         );
         this.content = this.disclosure.querySelector(
             '[data-disclosure-content]',
+        );
+        this.bindEscapeKey = this.disclosure.hasAttribute(
+            'data-disclosure-escape-key',
+        );
+        this.bindClickOutside = this.disclosure.hasAttribute(
+            'data-disclosure-click-outside',
         );
 
         this.init();
@@ -35,20 +43,18 @@ export default class Disclosure {
     }
 
     private initdisclosure(): void {
+        const button = this.btnDisclosure;
+        const content = this.content;
+        const bindEscapeKey = this.bindEscapeKey;
+        const bindClickOutside = this.bindClickOutside;
+
         // Show/hide content.
-        const button = this.btnDisclosure as HTMLElement;
-        const content = this.content as HTMLElement;
-        const bindEscapeKey = this.disclosure.hasAttribute(
-            'data-disclosure-escape-key',
-        );
-        const bindClickOutside = this.disclosure.hasAttribute(
-            'data-disclosure-click-outside',
-        );
-        disclosure({
-            button,
-            content,
-            bindEscapeKey,
-            bindClickOutside,
-        });
+        button &&
+            disclosure({
+                button,
+                content,
+                bindEscapeKey,
+                bindClickOutside,
+            });
     }
 }

@@ -13,6 +13,8 @@ import Tabs from './modules/tabs';
 import Toggle from './modules/toggle';
 import VideoPlayer from './modules/video-player';
 
+import WebDisclosure from './web-components/web-disclosure';
+
 // For DEMO purposes only.
 import demoAjaxFetchHTML from './modules/demo-ajax-fetch-html';
 
@@ -33,4 +35,8 @@ export const uiInit = (): void => {
 
     // For DEMO purposes only.
     demoAjaxFetchHTML.start();
+
+    // Define Web Components
+    !customElements.get('web-disclosure') &&
+        customElements.define('web-disclosure', WebDisclosure);
 };

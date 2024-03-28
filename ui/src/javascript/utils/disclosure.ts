@@ -14,7 +14,7 @@ import { randomString } from './random-string';
  *      disclosure({ button, content });
  */
 interface Disclosure {
-    button: HTMLElement;
+    button: HTMLButtonElement;
     content: HTMLElement | null;
     bindEscapeKey?: boolean;
     bindClickOutside?: boolean;

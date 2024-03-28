@@ -45,6 +45,7 @@ CSS Cascade Layers.
     @layer components {
         @include meta.load-css('form');
         @include meta.load-css('components');
+        @include meta.load-css('web-components');
     }
 
     /*

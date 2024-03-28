@@ -3,7 +3,7 @@ const preview = {
     parameters: {
         options: {
             storySort: {
-                order: ['Web UI Storybook', 'Design System', 'Layout','Forms', 'Components', 'Utilities', 'Pages'],
+                order: ['Web UI Storybook', 'Design System', 'Layout','Forms', 'Components', 'Web Components Or Custom Elements', 'Utilities', 'Pages'],
             },
         },
     },

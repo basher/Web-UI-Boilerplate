@@ -5,7 +5,7 @@ import {
 } from './Utilities';
 
 export default {
-    title: 'Utilities/Helpers and utilities',
+    title: 'Utilities/Helpers and Utilities',
     parameters: {
         status: {
             type: 'stable',
