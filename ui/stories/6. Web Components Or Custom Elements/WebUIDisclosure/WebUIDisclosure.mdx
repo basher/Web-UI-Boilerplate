@@ -1,12 +1,12 @@
 import { Meta, Canvas, Controls } from '@storybook/blocks';
-import * as WebDisclosure from './WebDisclosure.stories';
+import * as WebUIDisclosure from './WebUIDisclosure.stories';
 
-<Meta of={WebDisclosure} />
+<Meta of={WebUIDisclosure} />
 
-# `<web-disclosure>`
+# `<webui-disclosure>`
 - This is functionally equivalent to the [disclosure](/story/components-disclosure-or-show-hide--disclosure) component, with the same accessibility considerations.
 - The attributes that bind clicking the `ESC` key and clicking outside are renamed to `bind-escape-key` and `bind-click-outside`.
 - To maintain the [DRY code](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) approach in this boilerplate, the JavaScript logic to handle showing/hiding of content is imported from an external shared utility function in `src/javascript/utils/disclosure.ts`.
 
-<Canvas of={WebDisclosure.WebDisclosure} />
-<Controls of={WebDisclosure.WebDisclosure} />
+<Canvas of={WebUIDisclosure.WebUIDisclosure} />
+<Controls of={WebUIDisclosure.WebUIDisclosure} />

@@ -1,6 +1,6 @@
 import { disclosure } from '../utils/disclosure';
 
-export default class WebDisclosure extends HTMLElement {
+export default class WebUIDisclosure extends HTMLElement {
     private trigger: HTMLButtonElement | null;
     private content: HTMLElement | null;
     private bindEscapeKey?: boolean;

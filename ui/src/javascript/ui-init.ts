@@ -13,7 +13,7 @@ import Tabs from './modules/tabs';
 import Toggle from './modules/toggle';
 import VideoPlayer from './modules/video-player';
 
-import WebDisclosure from './web-components/web-disclosure';
+import WebUIDisclosure from './web-components/webui-disclosure';
 
 // For DEMO purposes only.
 import demoAjaxFetchHTML from './modules/demo-ajax-fetch-html';
@@ -37,6 +37,6 @@ export const uiInit = (): void => {
     demoAjaxFetchHTML.start();
 
     // Define Web Components
-    !customElements.get('web-disclosure') &&
-        customElements.define('web-disclosure', WebDisclosure);
+    !customElements.get('webui-disclosure') &&
+        customElements.define('webui-disclosure', WebUIDisclosure);
 };

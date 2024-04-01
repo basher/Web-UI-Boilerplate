@@ -1,7 +1,7 @@
-import { WebDisclosureHtml } from './WebDisclosure';
+import { WebUIDisclosureHtml } from './WebUIDisclosure';
 
 export default {
-    title: 'Web Components Or Custom Elements/<web-disclosure>',
+    title: 'Web Components Or Custom Elements/<webui-disclosure>',
     parameters: {
         status: {
             type: 'stable',
@@ -19,7 +19,7 @@ export default {
     },
 };
 
-export const WebDisclosure = {
-    render: (args) => WebDisclosureHtml(args),
+export const WebUIDisclosure = {
+    render: (args) => WebUIDisclosureHtml(args),
 };
-WebDisclosure.storyName = '<web-disclosure>';
+WebUIDisclosure.storyName = '<webui-disclosure>';

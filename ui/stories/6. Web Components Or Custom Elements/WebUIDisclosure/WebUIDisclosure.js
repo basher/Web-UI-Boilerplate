@@ -1,5 +1,5 @@
-export const WebDisclosureHtml = (args) => `
-<web-disclosure
+export const WebUIDisclosureHtml = (args) => `
+<webui-disclosure
     class="disclosure"
     ${args.bindEscapeKey === true ? 'bind-escape-key' : ''}
     ${args.bindClickOutside === true ? 'bind-click-outside' : ''}
@@ -17,5 +17,5 @@ export const WebDisclosureHtml = (args) => `
         <p>Content to be shown/hidden.</p>
         <p>Use this component when <code>accordion</code> or <code>tabs</code> components cannot be used.</p>
     </div>
-</web-disclosure>
+</webui-disclosure>
 `;
