@@ -16,3 +16,9 @@
     font-size: inherit !important;
     font-weight: 600;
 }
+
+/* Override dark mode in Storybook docs. */
+:root :has(#storybook-docs:not([hidden='true'])) {
+    --color-text: 0 0% 20%;
+    color-scheme: light !important;
+}
