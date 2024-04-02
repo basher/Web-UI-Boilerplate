@@ -1,4 +1,5 @@
-// Dependencies
+// Dependencies.
+// 1. Modules.
 import Disclosure from './modules/disclosure';
 import FormValidate from './modules/form-validate';
 import MakeClickable from './modules/make-clickable';
@@ -13,10 +14,12 @@ import Tabs from './modules/tabs';
 import Toggle from './modules/toggle';
 import VideoPlayer from './modules/video-player';
 
-import WebUIDisclosure from './web-components/webui-disclosure';
-
-// For DEMO purposes only.
+// 2. For DEMO purposes only.
 import demoAjaxFetchHTML from './modules/demo-ajax-fetch-html';
+
+// 3. Web components.
+import WebUIDisclosure from './web-components/webui-disclosure';
+import WebUIShare from './web-components/webui-share';
 
 export const uiInit = (): void => {
     Disclosure.start();
@@ -39,4 +42,6 @@ export const uiInit = (): void => {
     // Define Web Components
     !customElements.get('webui-disclosure') &&
         customElements.define('webui-disclosure', WebUIDisclosure);
+    !customElements.get('webui-share') &&
+        customElements.define('webui-share', WebUIShare);
 };

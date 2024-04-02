@@ -6,6 +6,8 @@ Dependencies.
 // @use '../base' as *;
 // @use '../mixins' as *;
 
-web-disclosure {
-    //
+webui-share {
+    &:not(:defined) {
+        display: none;
+    }
 }

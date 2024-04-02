@@ -1,19 +1,18 @@
 export const WebUIDisclosureHtml = (args) => `
 <webui-disclosure
-    class="disclosure"
-    ${args.bindEscapeKey === true ? 'bind-escape-key' : ''}
-    ${args.bindClickOutside === true ? 'bind-click-outside' : ''}
+    ${args.bindEscapeKey === true ? 'data-bind-escape-key' : ''}
+    ${args.bindClickOutside === true ? 'data-bind-click-outside' : ''}
 >
     <button
         type="button"
         class="button button--text"
-        trigger
+        data-trigger
         hidden
     >
         <span>Show / Hide</span>
     </button>
 
-    <div content>
+    <div data-content>
         <p>Content to be shown/hidden.</p>
         <p>Use this component when <code>accordion</code> or <code>tabs</code> components cannot be used.</p>
     </div>

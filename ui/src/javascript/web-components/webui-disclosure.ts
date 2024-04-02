@@ -9,14 +9,17 @@ export default class WebUIDisclosure extends HTMLElement {
     constructor() {
         super();
 
-        this.trigger = this.querySelector('[trigger]');
-        this.content = this.querySelector('[content]');
-        this.bindEscapeKey = this.hasAttribute('bind-escape-key');
-        this.bindClickOutside = this.hasAttribute('bind-click-outside');
+        this.trigger = this.querySelector('[data-trigger]');
+        this.content = this.querySelector('[data-content]');
+        this.bindEscapeKey = this.hasAttribute('data-bind-escape-key');
+        this.bindClickOutside = this.hasAttribute('data-bind-click-outside');
 
         this.init();
 
-        // NOTE: There are NO event listeners here. All events are handled by the external 'disclosure()' dependency.
+        // TODO:
+        // 1. All events are handled by the external 'disclosure()' dependency.
+        // 2. Refactor to handle events here. For now, just console.log().
+        this.addEventListener('click', this);
     }
 
     private init(): void {
@@ -33,5 +36,9 @@ export default class WebUIDisclosure extends HTMLElement {
             bindEscapeKey,
             bindClickOutside,
         });
+    }
+
+    handleEvent(e: any) {
+        console.log('handleEvent', e);
     }
 }
