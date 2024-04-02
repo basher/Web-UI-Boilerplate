@@ -74,7 +74,7 @@ export default class WebUIDisclosure extends HTMLElement {
         }
     }
 
-    // Handle events from constructor().
+    // Handle web component events from constructor().
     handleEvent(e: MouseEvent) {
         const target = e.currentTarget as HTMLElement;
         const isExpanded =
@@ -84,7 +84,7 @@ export default class WebUIDisclosure extends HTMLElement {
         this.content?.toggleAttribute('hidden');
     }
 
-    // Add/remove other (global) event listeners which are not part of this component.
+    // Add/remove other (global) event listeners which are not part of this web component.
     connectedCallback() {
         window.addEventListener('keyup', (e: KeyboardEvent) =>
             this.handleGlobalKeyup(e),
