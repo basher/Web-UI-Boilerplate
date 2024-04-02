@@ -68,7 +68,7 @@ export const ShareAnotherUrlHtml = () => `
         <button
             type="button"
             class="button button--text button--secondary"
-            data-button="copy"
+            data-share-copy
         >
             Copy
         </button>

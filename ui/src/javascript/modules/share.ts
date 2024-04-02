@@ -13,9 +13,7 @@ export default class Share {
         this.btnShare = this.share.querySelector('[data-share-button]');
         this.btnCopy = this.share.querySelector('[data-share-copy]');
         this.shareFallback = this.share.querySelector('[data-share-fallback]');
-        this.shareInput = this.share.querySelector(
-            '[data-share-input]',
-        ) as HTMLInputElement;
+        this.shareInput = this.share.querySelector('[data-share-input]');
 
         this.init();
     }
@@ -53,7 +51,7 @@ export default class Share {
             shareUrl = this.btnShare.dataset.shareUrl;
         } else {
             shareTitle = document.title;
-            shareUrl = canonical ? canonical.href : document.location.href;
+            shareUrl = canonical?.href || document.location.href;
         }
 
         if (navigator.share) {
