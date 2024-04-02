@@ -47,18 +47,21 @@ export default class WebUIDisclosure extends HTMLElement {
         return random;
     }
 
-    private hideContent(): void {
+    private hideContent(e?: KeyboardEvent): void {
         if (this.trigger?.getAttribute('aria-expanded') === 'true') {
-            // Set keyboard :FOCUS on the trigger button.
-            this.trigger?.focus();
             this.trigger?.setAttribute('aria-expanded', 'false');
+            this.content?.setAttribute('hidden', '');
+
+            // Set keyboard :FOCUS on the trigger button.
+            if (e?.type === 'keyup') {
+                this.trigger?.focus();
+            }
         }
-        this.content?.setAttribute('hidden', '');
     }
 
     private handleGlobalKeyup(e: KeyboardEvent): void {
         if (this.bindEscapeKey && e.code === 'Escape') {
-            this.hideContent();
+            this.hideContent(e);
         }
     }
 
