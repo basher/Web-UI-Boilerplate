@@ -13,9 +13,7 @@ export default class Share {
         this.btnShare = this.share.querySelector('[data-share-button]');
         this.btnCopy = this.share.querySelector('[data-share-copy]');
         this.shareFallback = this.share.querySelector('[data-share-fallback]');
-        this.shareInput = this.share.querySelector(
-            '[data-share-input]',
-        ) as HTMLInputElement;
+        this.shareInput = this.share.querySelector('[data-share-input]');
 
         this.init();
     }
@@ -57,8 +55,8 @@ export default class Share {
         }
 
         if (navigator.share) {
-            this.shareFallback && this.shareFallback.setAttribute('hidden', '');
-            this.btnShare && this.btnShare.removeAttribute('hidden');
+            this.shareFallback?.setAttribute('hidden', '');
+            this.btnShare?.removeAttribute('hidden');
 
             this.btnShare &&
                 this.btnShare.addEventListener('click', () => {
@@ -69,21 +67,21 @@ export default class Share {
                 });
         } else {
             // Show/hide fallback input & button.
-            const button = this.btnShare as HTMLElement;
-            const content = this.shareFallback as HTMLElement;
-            disclosure({
-                button,
-                content,
-            });
+            const button = this.btnShare;
+            const content = this.shareFallback;
+            button &&
+                disclosure({
+                    button,
+                    content,
+                });
 
             if (this.shareInput) {
                 this.shareInput.value = shareUrl;
             }
 
-            this.btnCopy &&
-                this.btnCopy.addEventListener('click', () => {
-                    this.shareInput && this.handleCopyUrl(this.shareInput);
-                });
+            this.btnCopy?.addEventListener('click', () => {
+                this.shareInput && this.handleCopyUrl(this.shareInput);
+            });
         }
     }
 

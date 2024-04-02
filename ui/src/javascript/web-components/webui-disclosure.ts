@@ -19,12 +19,13 @@ export default class WebUIDisclosure extends HTMLElement {
         // TODO:
         // 1. All events are handled by the external 'disclosure()' dependency.
         // 2. Refactor to handle events here. For now, just console.log().
-        this.addEventListener('click', this);
+        this.trigger?.addEventListener('click', this);
     }
 
     private init(): void {
         if (!this.trigger || !this.content) return;
 
+        // TODO: This code might become redundant (see 2 above).
         const button = this.trigger;
         const content = this.content;
         const bindEscapeKey = this.bindEscapeKey;
@@ -38,7 +39,8 @@ export default class WebUIDisclosure extends HTMLElement {
         });
     }
 
-    handleEvent(e: any) {
+    handleEvent(e: MouseEvent) {
+        // TODO: See 2 above.
         console.log('handleEvent', e);
     }
 }

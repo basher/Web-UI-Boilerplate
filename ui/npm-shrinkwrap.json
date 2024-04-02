@@ -1,12 +1,12 @@
 {
     "name": "web-ui-boilerplate",
-    "version": "2.1.0",
+    "version": "2.1.3",
     "lockfileVersion": 3,
     "requires": true,
     "packages": {
         "": {
             "name": "web-ui-boilerplate",
-            "version": "2.1.0",
+            "version": "2.1.3",
             "license": "ISC",
             "dependencies": {
                 "dialog-polyfill": "^0.5.6"

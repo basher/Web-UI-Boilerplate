@@ -3,11 +3,17 @@
 Dependencies.
 ----------------------------------------------------------------------------
 */
-// @use '../base' as *;
+@use '../base' as *;
 // @use '../mixins' as *;
 
 webui-share {
     &:not(:defined) {
         display: none;
+    }
+
+    [data-content] {
+        align-items: center;
+        display: flex;
+        gap: $gutter-s;
     }
 }
