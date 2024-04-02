@@ -7,6 +7,9 @@ export default class Share {
     private btnCopy: HTMLButtonElement | null;
     private shareFallback: HTMLElement | null;
     private shareInput: HTMLInputElement | null;
+    private canonical: HTMLLinkElement | null;
+    private shareTitle: string | undefined;
+    private shareUrl: string | undefined;
 
     constructor(share: Element) {
         this.share = share;
@@ -14,6 +17,13 @@ export default class Share {
         this.btnCopy = this.share.querySelector('[data-share-copy]');
         this.shareFallback = this.share.querySelector('[data-share-fallback]');
         this.shareInput = this.share.querySelector('[data-share-input]');
+
+        this.canonical = document.querySelector('link[rel=canonical]');
+        this.shareTitle = this.btnShare?.dataset.shareTitle || document.title;
+        this.shareUrl =
+            this.btnShare?.dataset.shareUrl ||
+            this.canonical?.href ||
+            document.location.href;
 
         this.init();
     }
@@ -35,25 +45,6 @@ export default class Share {
     }
 
     private initShare(): void {
-        let shareTitle = '';
-        let shareUrl = '';
-        const canonical = document.querySelector(
-            'link[rel=canonical]',
-        ) as HTMLLinkElement;
-
-        // Does share button have 'data-' attributes to identify the URL to be shared?
-        if (
-            this.btnShare &&
-            this.btnShare.dataset.shareTitle &&
-            this.btnShare.dataset.shareUrl
-        ) {
-            shareTitle = this.btnShare.dataset.shareTitle;
-            shareUrl = this.btnShare.dataset.shareUrl;
-        } else {
-            shareTitle = document.title;
-            shareUrl = canonical?.href || document.location.href;
-        }
-
         if (navigator.share) {
             this.shareFallback && this.shareFallback.setAttribute('hidden', '');
             this.btnShare && this.btnShare.removeAttribute('hidden');
@@ -61,8 +52,8 @@ export default class Share {
             this.btnShare &&
                 this.btnShare.addEventListener('click', () => {
                     navigator.share({
-                        title: shareTitle,
-                        url: shareUrl,
+                        title: this.shareTitle,
+                        url: this.shareUrl,
                     });
                 });
         } else {
@@ -76,7 +67,7 @@ export default class Share {
                 });
 
             if (this.shareInput) {
-                this.shareInput.value = shareUrl;
+                this.shareInput.value = this.shareUrl || '';
             }
 
             this.btnCopy &&
