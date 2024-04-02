@@ -1,5 +1,3 @@
-import { randomString } from '../utils/random-string';
-
 export default class WebUIDisclosure extends HTMLElement {
     private trigger: HTMLButtonElement | null;
     private content: HTMLElement | null;
@@ -32,7 +30,7 @@ export default class WebUIDisclosure extends HTMLElement {
 
         // Auto-generate unique 'id' and 'aria-controls' attributes, using button 'parentElement' className or nodeName as a sensible prefix.
         if (this.trigger?.parentElement) {
-            const unique = randomString(
+            const unique = this.randomString(
                 this.trigger.parentElement.classList[0] ||
                     this.trigger.parentElement.nodeName.toLowerCase(),
             );
@@ -41,13 +39,27 @@ export default class WebUIDisclosure extends HTMLElement {
         }
     }
 
+    private randomString(string: string): string {
+        const random = `${string}-${Math.random()
+            .toString(36)
+            .substring(2, 15)}`;
+
+        return random;
+    }
+
     private hideContent(): void {
-        // Set keyboard focus to the trigger button.
         if (this.trigger?.getAttribute('aria-expanded') === 'true') {
+            // Set keyboard :FOCUS on the trigger button.
             this.trigger?.focus();
             this.trigger?.setAttribute('aria-expanded', 'false');
         }
         this.content?.setAttribute('hidden', '');
+    }
+
+    private handleGlobalKeyup(e: KeyboardEvent): void {
+        if (this.bindEscapeKey && e.code === 'Escape') {
+            this.hideContent();
+        }
     }
 
     private handleGlobalClick(e: MouseEvent): void {
@@ -59,12 +71,6 @@ export default class WebUIDisclosure extends HTMLElement {
             if (!insideButton && !insideContent) {
                 this.hideContent();
             }
-        }
-    }
-
-    private handleGlobalKeyup(e: KeyboardEvent): void {
-        if (this.bindEscapeKey && e.code === 'Escape') {
-            this.hideContent();
         }
     }
 
@@ -80,16 +86,16 @@ export default class WebUIDisclosure extends HTMLElement {
 
     // Add/remove other (global) event listeners which are not part of this component.
     connectedCallback() {
-        window.addEventListener('click', (e: MouseEvent) =>
-            this.handleGlobalClick(e),
-        );
         window.addEventListener('keyup', (e: KeyboardEvent) =>
             this.handleGlobalKeyup(e),
+        );
+        window.addEventListener('click', (e: MouseEvent) =>
+            this.handleGlobalClick(e),
         );
     }
 
     disconnectedCallback() {
-        window.removeEventListener('click', this.handleGlobalClick);
         window.removeEventListener('keyup', this.handleGlobalKeyup);
+        window.removeEventListener('click', this.handleGlobalClick);
     }
 }
