@@ -37,7 +37,10 @@ export const disclosure = (arg: Disclosure): void => {
 
     // Auto-generate unique 'id' and 'aria-controls' attributes, using button 'parentElement' classname as a sensible prefix.
     if (arg.button.parentElement) {
-        const unique = randomString(arg.button.parentElement.classList[0]);
+        const unique = randomString(
+            arg.button.parentElement.classList[0] ||
+                arg.button.parentElement.nodeName.toLowerCase(),
+        );
         arg.content?.setAttribute('id', unique);
         arg.button.setAttribute('aria-controls', unique);
     }
