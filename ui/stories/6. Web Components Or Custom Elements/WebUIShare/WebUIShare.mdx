@@ -1,4 +1,4 @@
-import { Meta, Canvas, Controls } from '@storybook/blocks';
+import { Meta, Canvas } from '@storybook/blocks';
 import * as WebUIShare from './WebUIShare.stories';
 
 <Meta of={WebUIShare} />
@@ -8,4 +8,6 @@ import * as WebUIShare from './WebUIShare.stories';
 - It is a simple `wrapper` around the [webui-disclosure](/story/web-components-or-custom-elements-webui-disclosure--web-ui-disclosure) custom element.
 
 <Canvas of={WebUIShare.WebUIShare} />
-<Controls of={WebUIShare.WebUIShare} />
+
+## Share a different URL
+<Canvas of={WebUIShare.WebUIShareAnotherUrl} />
