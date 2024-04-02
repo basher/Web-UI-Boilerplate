@@ -18,9 +18,9 @@ export default class WebUIShare extends HTMLElement {
         this.canonical = document.querySelector('link[rel=canonical]');
         this.shareTitle = this.btnShare?.dataset.title || document.title;
         this.shareUrl =
-            this.btnShare?.dataset.url || this.canonical
-                ? this.canonical?.href
-                : document.location.href;
+            this.btnShare?.dataset.url ||
+            this.canonical?.href ||
+            document.location.href;
 
         this.btnShare?.addEventListener('click', this);
         this.btnCopy?.addEventListener('click', this);

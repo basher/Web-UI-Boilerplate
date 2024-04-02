@@ -13,7 +13,9 @@ export default class Share {
         this.btnShare = this.share.querySelector('[data-share-button]');
         this.btnCopy = this.share.querySelector('[data-share-copy]');
         this.shareFallback = this.share.querySelector('[data-share-fallback]');
-        this.shareInput = this.share.querySelector('[data-share-input]');
+        this.shareInput = this.share.querySelector(
+            '[data-share-input]',
+        ) as HTMLInputElement;
 
         this.init();
     }
@@ -55,8 +57,8 @@ export default class Share {
         }
 
         if (navigator.share) {
-            this.shareFallback?.setAttribute('hidden', '');
-            this.btnShare?.removeAttribute('hidden');
+            this.shareFallback && this.shareFallback.setAttribute('hidden', '');
+            this.btnShare && this.btnShare.removeAttribute('hidden');
 
             this.btnShare &&
                 this.btnShare.addEventListener('click', () => {
@@ -79,9 +81,10 @@ export default class Share {
                 this.shareInput.value = shareUrl;
             }
 
-            this.btnCopy?.addEventListener('click', () => {
-                this.shareInput && this.handleCopyUrl(this.shareInput);
-            });
+            this.btnCopy &&
+                this.btnCopy.addEventListener('click', () => {
+                    this.shareInput && this.handleCopyUrl(this.shareInput);
+                });
         }
     }
 
