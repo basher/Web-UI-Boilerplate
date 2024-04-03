@@ -7,9 +7,5 @@ import * as WebUIDisclosure from './WebUIDisclosure.stories';
 - This is functionally equivalent to the [disclosure](/story/components-disclosure-or-show-hide--disclosure) component, with the same accessibility considerations.
 - The `data-` attributes that handle the functionality have been subtly renamed.
 
-## TBC
-- The JavaScript logic to handle showing/hiding of content is imported from an external shared utility function in `src/javascript/utils/disclosure.ts` to maintain the [DRY code](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) approach in this boilerplate.
-- This might be refactored, to allow all logic to be contained within the web component itself?
-
 <Canvas of={WebUIDisclosure.WebUIDisclosure} />
 <Controls of={WebUIDisclosure.WebUIDisclosure} />
