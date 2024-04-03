@@ -1,0 +1,25 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as WebUIModal from './WebUIModal.stories';
+
+<Meta of={WebUIModal} />
+
+# `<webui-modal>`
+- Uses the native HTML `<dialog>` element. See [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) docs on MDN.
+
+## Accessibility considerations
+- There are ongoing discussions about the [initial focus behaviour](https://github.com/whatwg/html/wiki/dialog--initial-focus,-a-proposal) for `<dialog>`.
+    - Keyboard `focus` is currently being set on the `data-content` using `tabindex="-1"` to ensure that content gets announced first, before the `close` button.
+- When modal is closed, focus is set back to the button that opened the modal.
+- Modal can be closed with the `ESC` key (default browser behaviour), and by clicking outside the modal (JavaScript enhancement).
+
+### Useful articles
+- [Is dialog ready to be used?](https://www.scottohara.me/blog/2019/03/05/open-dialog.html)
+- [Defending dialog](https://whistlr.info/2021/in-defence-of-dialog/) by the official polyfill maintainer.
+
+<Canvas of={WebUIModal.WebUIModal} />
+
+## Modal with overflowing content
+<Canvas of={WebUIModal.WebUIModalOverflow} />
+
+## Modal with multiple close buttons
+<Canvas of={WebUIModal.WebUIModalMultipleCloseButtons} />

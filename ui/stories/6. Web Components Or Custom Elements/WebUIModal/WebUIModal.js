@@ -1,15 +1,15 @@
-export const ModalHtml = () => `
+export const WebUIModalHtml = () => `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
     <button type="button" class="button button--text">Am I clickable?</button>
 </p>
 
-<div class="modal" data-module="modal">
+<webui-modal>
     <button
         type="button"
         class="button button--text button--primary"
-        data-button="modal-open"
+        data-open
     >
         Open modal
     </button>
@@ -19,7 +19,7 @@ export const ModalHtml = () => `
             <button
                 type="button"
                 class="button button--icon modal__close"
-                data-button="modal-close"
+                data-close
             >
                 <svg
                     aria-hidden="true"
@@ -34,16 +34,16 @@ export const ModalHtml = () => `
 
         <div
             class="modal__content"
-            data-modal-content
+            data-content
         >
             <h2>Modal dialog</h2>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
         </div>
     </dialog>
-</div>
+</webui-modal>
 
-<br/>
+<br/><br/>
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
@@ -51,18 +51,18 @@ export const ModalHtml = () => `
 </p>
 `;
 
-export const ModalOverflowHtml = () => `
+export const WebUIModalOverflowHtml = () => `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
     <button type="button" class="button button--text">Am I clickable?</button>
 </p>
 
-<div class="modal" data-module="modal">
+<webui-modal>
     <button
         type="button"
         class="button button--text button--primary"
-        data-button="modal-open"
+        data-open
     >
         Open modal
     </button>
@@ -72,7 +72,7 @@ export const ModalOverflowHtml = () => `
             <button
                 type="button"
                 class="button button--icon modal__close"
-                data-button="modal-close"
+                data-close
             >
                 <svg
                     aria-hidden="true"
@@ -87,7 +87,7 @@ export const ModalOverflowHtml = () => `
 
         <div
             class="modal__content"
-            data-modal-content
+            data-content
         >
             <h2>Modal dialog</h2>
 
@@ -110,9 +110,9 @@ export const ModalOverflowHtml = () => `
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
         </div>
     </dialog>
-</div>
+</webui-modal>
 
-<br/>
+<br/><br/>
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
@@ -120,18 +120,18 @@ export const ModalOverflowHtml = () => `
 </p>
 `;
 
-export const ModalMultipleCloseButtonsHtml = () => `
+export const WebUIModalMultipleCloseButtonsHtml = () => `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
     <button type="button" class="button button--text">Am I clickable?</button>
 </p>
 
-<div class="modal" data-module="modal">
+<webui-modal>
     <button
         type="button"
         class="button button--text button--primary"
-        data-button="modal-open"
+        data-open
     >
         Open modal
     </button>
@@ -139,7 +139,7 @@ export const ModalMultipleCloseButtonsHtml = () => `
     <dialog class="modal__dialog">
         <div
             class="modal__content"
-            data-modal-content
+            data-content
         >
             <h2>Modal dialog</h2>
 
@@ -149,23 +149,23 @@ export const ModalMultipleCloseButtonsHtml = () => `
                 <button
                     type="button"
                     class="button button--text"
-                    data-button="modal-close"
+                    data-close
                 >
                     Cancel
                 </button>
                 <button
                     type="button"
                     class="button button--text button--positive"
-                    data-button="modal-close"
+                    data-close
                 >
                     Yes please
                 </button>
             </div>
         </div>
     </dialog>
-</div>
+</webui-modal>
 
-<br/>
+<br/><br/>
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>

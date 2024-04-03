@@ -11,9 +11,15 @@ Dependencies.
     --color-backdrop: hsl(0 0% 0% / 70%);
 }
 
-.modal {
+webui-modal {
+    &:not(:defined) {
+        [data-open] {
+            display: none;
+        }
+    }
+
     // Browser already applies "position: fixed" and "width: fit-content".
-    &__dialog {
+    .modal__dialog {
         background: $color-neutral-100;
         margin: auto;
         padding: 0 $gutter-m $gutter-m;
@@ -24,14 +30,14 @@ Dependencies.
         }
     }
 
-    &__header {
+    .modal__header {
         background: $color-neutral-100;
         display: flex;
         justify-content: flex-end;
         padding-block-start: $gutter-m;
     }
 
-    &__content {
+    .modal__content {
         @include focus($inset: true);
         margin-block-start: $gutter-m;
 
