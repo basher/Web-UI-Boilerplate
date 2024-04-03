@@ -1,6 +1,5 @@
 // Dependencies.
 // 1. Modules.
-import Disclosure from './modules/disclosure';
 import FormValidate from './modules/form-validate';
 import MakeClickable from './modules/make-clickable';
 import Message from './modules/message';
@@ -8,7 +7,6 @@ import Modal from './modules/modal';
 import Prose from './modules/prose';
 import RangeSlider from './modules/range-slider';
 import Search from './modules/search';
-import Share from './modules/share';
 import Slider from './modules/slider';
 import Tabs from './modules/tabs';
 import Toggle from './modules/toggle';
@@ -22,14 +20,12 @@ import WebUIDisclosure from './web-components/webui-disclosure';
 import WebUIShare from './web-components/webui-share';
 
 export const uiInit = (): void => {
-    Disclosure.start();
     FormValidate.start();
     MakeClickable.start();
     Message.start();
     Modal.start();
     RangeSlider.start();
     Search.start();
-    Share.start();
     Slider.start();
     Tabs.start();
     Toggle.start();
