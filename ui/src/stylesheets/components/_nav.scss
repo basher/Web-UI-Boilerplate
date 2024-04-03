@@ -44,6 +44,7 @@ Dependencies.
         border: $border-width-s solid;
         flex-direction: column;
         inset-block-start: 100%;
+        inset-inline-start: 0;
         padding: $gutter-m;
         position: absolute;
         z-index: z('popup');
@@ -84,7 +85,8 @@ Dependencies.
             flex-direction: column;
         }
 
-        &.is-js-enabled {
+        // Using <webui-disclosure> custom element.
+        webui-disclosure:defined {
             .nav__list {
                 background-color: $color-background;
                 border: $border-width-s solid;
@@ -95,19 +97,23 @@ Dependencies.
             }
         }
 
-        // With disclosure navigation.
+        // Hamburger with disclosure navigation.
         &.nav--disclosure {
-            > .nav__list {
-                align-items: unset;
-            }
+            webui-disclosure:defined {
+                /* stylelint-disable max-nesting-depth */
+                > .nav__list {
+                    align-items: unset;
+                }
 
-            .nav__item--has-dropdown {
-                display: unset;
-            }
+                .nav__item--has-dropdown {
+                    display: unset;
+                }
 
-            .nav__list--dropdown {
-                border: 0;
-                position: relative;
+                .nav__list--dropdown {
+                    border: 0;
+                    position: relative;
+                }
+                /* stylelint-enable max-nesting-depth */
             }
         }
     }
