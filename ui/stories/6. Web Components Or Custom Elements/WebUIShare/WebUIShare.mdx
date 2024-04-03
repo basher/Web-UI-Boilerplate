@@ -4,8 +4,8 @@ import * as WebUIShare from './WebUIShare.stories';
 <Meta of={WebUIShare} />
 
 # `<webui-share>`
-- This is functionally equivalent to the [share](/story/components-share--share) component.
-- It is a simple `wrapper` around the [`<webui-disclosure>`](/story/web-components-or-custom-elements-webui-disclosure--web-ui-disclosure) custom element.
+- Leverages the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share).
+- It is a simple `wrapper` around the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) custom element, which provides fallback behaviour, allowing user to copy the URL.
 
 <Canvas of={WebUIShare.WebUIShare} />
 

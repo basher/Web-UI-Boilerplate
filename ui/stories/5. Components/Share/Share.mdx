@@ -1,19 +1,6 @@
-import { Meta, Canvas } from '@storybook/blocks';
-import * as Share from './Share.stories';
+import { Meta } from '@storybook/blocks';
 
-<Meta of={Share} />
+<Meta title="Components/Share" />
 
 # Share
-- Uses the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share).
-- Fallback behaviour uses the [disclosure](/story/components-disclosure-or-show-hide--disclosure) pattern, and allows user to copy the URL.
-
-## Web component version
-- See the equivalent [`<webui-share>`](/story/web-components-or-custom-elements-webui-share--web-ui-share) custom element.
-
-## TODO
-- Replace fallback [document.execCommand](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand) with [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API).
-
-<Canvas of={Share.Share} />
-
-## Share another URL
-<Canvas of={Share.ShareAnotherUrl} />
+- See the [`<webui-share>`](/docs/web-components-or-custom-elements-webui-share--docs) custom element.
