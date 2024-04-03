@@ -38,4 +38,10 @@ webui-notification {
         inset-inline-end: calc($icon-size-s * -1);
         position: relative;
     }
+
+    &:not(:defined) {
+        [data-close] {
+            display: none;
+        }
+    }
 }
