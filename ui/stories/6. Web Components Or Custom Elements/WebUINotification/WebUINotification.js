@@ -1,5 +1,8 @@
-export const MessageTemplate = (args) => `
-<div class="message message--${args.messageType}" data-module="message">
+export const WebUINotificationHtml = (args) => `
+<webui-notification
+    ${args.notificationType === 'error' ? 'role="alert"' : 'role="status"'}
+    ${args.notificationType === undefined ? '' : `data-${args.notificationType}`}
+>
     <div class="stack">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur?</p>
@@ -9,7 +12,7 @@ export const MessageTemplate = (args) => `
             ? `<button
             type="button"
             class="button button--icon message__close"
-            data-button="message-close"
+            data-close
         >
             <svg
                 aria-hidden="true"
@@ -22,5 +25,5 @@ export const MessageTemplate = (args) => `
         </button>`
             : ''
     }
-</div>
+</webui-notification>
 `;

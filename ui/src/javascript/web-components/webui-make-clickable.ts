@@ -3,9 +3,7 @@ export default class WebUIMakeClickable extends HTMLElement {
 
     constructor() {
         super();
-
         this.link = this.querySelector('[data-url]') || this.querySelector('a');
-
         this.addEventListener('click', this);
     }
 

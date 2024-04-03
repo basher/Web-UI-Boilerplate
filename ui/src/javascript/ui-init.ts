@@ -1,7 +1,6 @@
 // Dependencies.
 // 1. Modules.
 import FormValidate from './modules/form-validate';
-import Message from './modules/message';
 import Prose from './modules/prose';
 import RangeSlider from './modules/range-slider';
 import Search from './modules/search';
@@ -17,11 +16,11 @@ import demoAjaxFetchHTML from './modules/demo-ajax-fetch-html';
 import WebUIDisclosure from './web-components/webui-disclosure';
 import WebUIMakeClickable from './web-components/webui-make-clickable';
 import WebUIModal from './web-components/webui-modal';
+import WebUINotification from './web-components/webui-notification';
 import WebUIShare from './web-components/webui-share';
 
 export const uiInit = (): void => {
     FormValidate.start();
-    Message.start();
     RangeSlider.start();
     Search.start();
     Slider.start();
@@ -40,6 +39,8 @@ export const uiInit = (): void => {
         customElements.define('webui-make-clickable', WebUIMakeClickable);
     !customElements.get('webui-modal') &&
         customElements.define('webui-modal', WebUIModal);
+    !customElements.get('webui-notification') &&
+        customElements.define('webui-notification', WebUINotification);
     !customElements.get('webui-share') &&
         customElements.define('webui-share', WebUIShare);
 };

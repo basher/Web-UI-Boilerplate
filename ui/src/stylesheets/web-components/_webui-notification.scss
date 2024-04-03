@@ -6,7 +6,7 @@ Dependencies.
 @use '../base' as *;
 @use '../mixins' as *;
 
-.message {
+webui-notification {
     align-items: flex-start;
     border: $border-width-s solid;
     display: flex;
@@ -17,22 +17,22 @@ Dependencies.
         max-inline-size: none;
     }
 
-    &--success {
+    &[data-success] {
         background: hsl(var(--color-accent-positive) / 15%);
         border-color: $color-success;
     }
 
-    &--warning {
+    &[data-warning] {
         background: hsl(var(--color-accent-neutral) / 15%);
         border-color: $color-notify;
     }
 
-    &--error {
+    &[data-error] {
         background: hsl(var(--color-accent-negative) / 15%);
         border-color: $color-error;
     }
 
-    &__close {
+    [data-close] {
         font-size: $icon-size-s;
         inset-block-start: calc($icon-size-s * -1);
         inset-inline-end: calc($icon-size-s * -1);
