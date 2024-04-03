@@ -33,7 +33,6 @@ webui-notification {
     }
 
     [data-close] {
-        // font-size: $icon-size-s;
         flex-shrink: 0;
         inset-block-start: calc($icon-size-s * -1);
         inset-inline-end: calc($icon-size-s * -1);
