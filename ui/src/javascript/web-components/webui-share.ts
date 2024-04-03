@@ -26,6 +26,7 @@ export default class WebUIShare extends HTMLElement {
         this.btnCopy?.addEventListener('click', this);
     }
 
+    // Handle web component events from constructor().
     handleEvent(e: MouseEvent) {
         const target = e.currentTarget as HTMLButtonElement;
 

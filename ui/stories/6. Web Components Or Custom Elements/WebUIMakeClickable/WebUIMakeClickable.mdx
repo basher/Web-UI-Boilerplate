@@ -1,0 +1,11 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as WebUIMakeClickable from './WebUIMakeClickable.stories';
+
+<Meta of={WebUIMakeClickable} />
+
+# `<webui-make-clickable>`
+- The entire custom element is made clickable via JavaScript.
+- The primary URL is mapped to either a `data-url` attribute on any link, or by the first link, inside the custom element.
+- CSS `focus-within` is utilised to add a focus indicator when the custom element, or any of its descendents, receives keyboard `focus`.
+
+<Canvas of={WebUIMakeClickable.WebUIMakeClickable} />

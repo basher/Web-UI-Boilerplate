@@ -11,7 +11,17 @@ Dependencies.
 Give affordance of "clickability" to a component/content.
 ----------------------------------------------------------------------------
 */
-.clickable {
+webui-make-clickable:defined {
+    display: inline-block;
+
+    &:hover {
+        cursor: pointer;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
     &:focus-within {
         box-shadow: 0 0 0 $border-width-l $color-focus;
         outline: $border-width-l solid transparent; // So high contrast mode works.
@@ -26,16 +36,5 @@ Give affordance of "clickability" to a component/content.
     &:has(:focus:not(:focus-visible)) {
         box-shadow: none;
         outline: $border-width-l solid transparent;
-    }
-
-    // With JS enhancement.
-    &[data-module='make-clickable'] {
-        &:hover {
-            cursor: pointer;
-
-            a {
-                text-decoration: none;
-            }
-        }
     }
 }

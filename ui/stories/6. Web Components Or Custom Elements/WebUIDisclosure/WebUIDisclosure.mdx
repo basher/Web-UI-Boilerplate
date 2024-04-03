@@ -5,12 +5,12 @@ import * as WebUIDisclosure from './WebUIDisclosure.stories';
 
 # `<webui-disclosure>`
 - Shows/hides content using the HTML `hidden` attribute.
-- Use this component when [accordion](/story/components-accordion--accordion) or [tabs](/story/components-tabs--tabs) components cannot be used.
+- Use this custom element when [accordion](/story/components-accordion--accordion) or [tabs](/story/components-tabs--tabs) components cannot be used.
 - Also see the [ARIA APG disclosure pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/).
 
 ## Accessibility considerations
 - By adding the `data-bind-escape-key` attribute to the HTML, the `ESC` key can be used to hide the content.
-- Similarly, the `data-bind-click-outside` attribute hides the content when clicking anywhere outside the content.
+- Similarly, the `data-bind-click-outside` attribute hides the content when clicking anywhere outside the custom element.
 
 <Canvas of={WebUIDisclosure.WebUIDisclosure} />
 <Controls of={WebUIDisclosure.WebUIDisclosure} />
