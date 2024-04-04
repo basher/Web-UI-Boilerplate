@@ -1,38 +1,21 @@
-export default class VideoPlayer {
-    private player: Element;
+export default class WebUIVideoPlayer extends HTMLElement {
     private btnPlay: HTMLAnchorElement | null;
     private mediaContainer: HTMLElement | null;
     private iframe: HTMLIFrameElement | null;
-    private videoLink: HTMLAnchorElement | null;
-    private modal: HTMLDialogElement | null;
+    private dialog: HTMLDialogElement | null;
 
-    constructor(player: Element) {
-        this.player = player;
-        this.btnPlay = this.player.querySelector('[data-button="modal-open"]');
-        this.mediaContainer = this.player.querySelector('.responsive-media');
-        this.iframe = this.player.querySelector('.responsive-media__item');
-        this.videoLink = this.player.querySelector('.video-player__link');
-        this.modal = this.player.querySelector('.modal__dialog');
+    constructor() {
+        super();
 
-        this.init();
-    }
+        this.btnPlay = this.querySelector('[data-open]');
+        this.mediaContainer = this.querySelector('.responsive-media');
+        this.iframe = this.querySelector('.responsive-media__item');
+        this.dialog = this.querySelector('dialog');
 
-    public static start(): void {
-        const players = document.querySelectorAll(
-            '[data-module="video-player"]',
-        );
+        if (!this.btnPlay || !this.dialog) return;
 
-        players.forEach((player) => {
-            const instance = new VideoPlayer(player);
-            return instance;
-        });
-    }
-
-    private init(): void {
         this.lazyload();
-        this.btnPlay?.addEventListener('click', (e: MouseEvent) =>
-            this.handlePlay(e),
-        );
+        this.btnPlay.addEventListener('click', this);
         this.handleModalClose();
     }
 
@@ -40,9 +23,9 @@ export default class VideoPlayer {
         // Browser does not support native lazyload for iframes.
         if (
             'loading' in HTMLIFrameElement.prototype === false &&
-            this.videoLink?.href
+            this.btnPlay?.href
         ) {
-            this.iframe?.setAttribute('data-src', this.videoLink.href);
+            this.iframe?.setAttribute('data-src', this.btnPlay.href);
             this.iframe?.setAttribute('src', '');
         }
     }
@@ -69,7 +52,7 @@ export default class VideoPlayer {
     // When modal is closed, the video still plays! Temp "fix" using MutationObserver to detect when the <dialog> 'open' attribute is removed.
     // See https://bugs.chromium.org/p/chromium/issues/detail?id=1481718#c1.
     private handleModalClose(): void {
-        const targetNode = this.modal;
+        const targetNode = this.dialog;
         const config = { attributes: true };
 
         const callback = (mutationList: MutationRecord[]): void => {
@@ -77,9 +60,9 @@ export default class VideoPlayer {
                 if (mutation.attributeName === 'open') {
                     if (
                         targetNode?.hasAttribute('open') &&
-                        this.videoLink?.href
+                        this.btnPlay?.href
                     ) {
-                        this.iframe?.setAttribute('src', this.videoLink.href);
+                        this.iframe?.setAttribute('src', this.btnPlay.href);
                     } else {
                         this.iframe?.setAttribute('src', '');
                     }
@@ -89,5 +72,10 @@ export default class VideoPlayer {
 
         const observer = new MutationObserver(callback);
         targetNode && observer.observe(targetNode, config);
+    }
+
+    // Handle constructor() event listeners.
+    handleEvent(e: MouseEvent) {
+        this.handlePlay(e);
     }
 }

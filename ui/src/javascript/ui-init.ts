@@ -5,7 +5,6 @@ import RangeSlider from './modules/range-slider';
 import Search from './modules/search';
 import Slider from './modules/slider';
 import Tabs from './modules/tabs';
-import VideoPlayer from './modules/video-player';
 
 // 2. For DEMO purposes only.
 import demoAjaxFetchHTML from './modules/demo-ajax-fetch-html';
@@ -18,6 +17,7 @@ import WebUINotify from './web-components/webui-notify';
 import WebUIProse from './web-components/webui-prose';
 import WebUIShare from './web-components/webui-share';
 import WebUIToggle from './web-components/webui-toggle';
+import WebUIVideoPlayer from './web-components/webui-video-player';
 
 export const uiInit = (): void => {
     FormValidate.start();
@@ -25,7 +25,6 @@ export const uiInit = (): void => {
     Search.start();
     Slider.start();
     Tabs.start();
-    VideoPlayer.start();
 
     // For DEMO purposes only.
     demoAjaxFetchHTML.start();
@@ -45,4 +44,6 @@ export const uiInit = (): void => {
         customElements.define('webui-share', WebUIShare);
     !customElements.get('webui-toggle') &&
         customElements.define('webui-toggle', WebUIToggle);
+    !customElements.get('webui-video-player') &&
+        customElements.define('webui-video-player', WebUIVideoPlayer);
 };

@@ -6,8 +6,8 @@ Dependencies.
 @use '../base' as *;
 // @use '../mixins' as *;
 
-.video-player {
-    &__link {
+webui-video-player {
+    [data-open] {
         display: grid;
         grid-template-areas: 'video';
         inline-size: fit-content;

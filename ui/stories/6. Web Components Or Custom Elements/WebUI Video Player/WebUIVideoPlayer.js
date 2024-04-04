@@ -1,11 +1,10 @@
-export const VideoPlayerHtml = () => `
-<div class="video-player" data-module="video-player">
-    <div class="modal" data-module="modal">
+export const WebUIVideoPlayerHtml = () => `
+<webui-video-player>
+    <webui-modal>
         <a
-            class="video-player__link"
             href="https://www.youtube.com/embed/yHWSC-RW8kk"
             target="_blank"
-            data-button="modal-open"
+            data-open
         >
             <picture>
                 <source
@@ -35,7 +34,7 @@ export const VideoPlayerHtml = () => `
                 <button
                     type="button"
                     class="button button--icon modal__close"
-                    data-button="modal-close"
+                    data-close
                 >
                     <svg
                         aria-hidden="true"
@@ -50,7 +49,7 @@ export const VideoPlayerHtml = () => `
 
             <div
                 class="modal__content"
-                data-modal-content
+                data-content
             >
                 <div class="responsive-media">
                     <iframe
@@ -68,6 +67,6 @@ export const VideoPlayerHtml = () => `
                 </div>
             </div>
         </dialog>
-    </div>
-</div>
+    <webui-modal>
+</webui-video-player>
 `;
