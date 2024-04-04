@@ -1,5 +1,5 @@
-export const WebUINotificationHtml = (args) => `
-<webui-notification
+export const WebUINotifyHtml = (args) => `
+<webui-notify
     ${args.notificationType === 'error' ? 'role="alert"' : 'role="status"'}
     ${args.notificationType === undefined ? '' : `data-${args.notificationType}`}
 >
@@ -25,5 +25,5 @@ export const WebUINotificationHtml = (args) => `
         </button>`
             : ''
     }
-</webui-notification>
+</webui-notify>
 `;

@@ -1,4 +1,4 @@
-export default class WebUIMakeNotification extends HTMLElement {
+export default class WebUINotify extends HTMLElement {
     private btnClose: HTMLButtonElement | null;
 
     constructor() {

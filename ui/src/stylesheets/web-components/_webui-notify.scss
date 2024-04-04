@@ -6,7 +6,7 @@ Dependencies.
 @use '../base' as *;
 @use '../mixins' as *;
 
-webui-notification {
+webui-notify {
     align-items: flex-start;
     border: $border-width-s solid;
     display: flex;

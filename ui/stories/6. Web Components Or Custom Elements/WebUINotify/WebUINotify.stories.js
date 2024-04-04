@@ -1,7 +1,7 @@
-import { WebUINotificationHtml } from './WebUINotification';
+import { WebUINotifyHtml } from './WebUINotify';
 
 export default {
-    title: 'Web Components Or Custom Elements/<webui-notification>',
+    title: 'Web Components Or Custom Elements/<webui-notify>',
     parameters: {
         status: {
             type: 'stable',
@@ -18,7 +18,7 @@ export default {
     },
 };
 
-export const WebUINotification = {
-    render: (args) => WebUINotificationHtml(args),
+export const WebUINotify = {
+    render: (args) => WebUINotifyHtml(args),
 };
-WebUINotification.storyName = '<webui-notification>';
+WebUINotify.storyName = '<webui-notify>';

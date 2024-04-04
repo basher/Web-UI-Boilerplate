@@ -1,0 +1,13 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as WebUINotify from './WebUINotify.stories';
+
+<Meta of={WebUINotify} />
+
+# `<webui-notify>`
+
+## Accessibility considerations
+- Error notifications have an ARIA `role="error"`.
+- Other notifications have an ARIA `role="status"`.
+
+<Canvas of={WebUINotify.WebUINotify} />
+<Controls of={WebUINotify.WebUINotify} />
