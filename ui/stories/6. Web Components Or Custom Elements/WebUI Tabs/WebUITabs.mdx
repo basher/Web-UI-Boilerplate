@@ -1,9 +1,9 @@
 import { Meta, Canvas } from '@storybook/blocks';
-import * as Tabs from './Tabs.stories';
+import * as WebUITabs from './WebUITabs.stories';
 
-<Meta of={Tabs} />
+<Meta of={WebUITabs} />
 
-# Tabs
+# `<webui-tabs>`
 
 ## Accessibility and responsive behaviour considerations
 - Rather than [Stacking tabs vertically on narrow viewports](https://inclusive-components.design/tabbed-interfaces/#responsivedesign), a simple horizontal overflow scrolling solution is used instead to make tabs responsive.
@@ -14,7 +14,16 @@ import * as Tabs from './Tabs.stories';
     - Use `HOME | END` key to focus on first or last tab.
 - See the [ARIA APG tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/) and [Inclusive Components tabs](https://inclusive-components.design/tabbed-interfaces/) examples.
 
-<Canvas of={Tabs.Tabs} />
+## Required and optional HTML  or `data-` attributes
+
+Attribute | Behaviour
+--- | ---
+`data-tablist` | Required. Add to `<div>` which contains links that will be transformed into tab "triggers".
+`data-tab` | Required. Add to tab "triggers".
+`data-tabpanel` | Required. Add to content that will be shown/hidden.
+`data-vertical` | Optional. Add to parent `<webui-tabs>` to create vertical tabs.
+
+<Canvas of={WebUITabs.WebUITabs} />
 
 ## Vertical tabs
-<Canvas of={Tabs.VerticalTabs} />
+<Canvas of={WebUITabs.WebUIVerticalTabs} />

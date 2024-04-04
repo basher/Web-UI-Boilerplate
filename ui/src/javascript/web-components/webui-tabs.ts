@@ -1,29 +1,32 @@
-class Tabs {
-    private tabComponent: Element;
+export default class WebUITabs extends HTMLElement {
     private tablist: HTMLElement | null;
     private tabpanels: NodeListOf<HTMLElement>;
     private tabTriggers: NodeListOf<HTMLElement>;
 
-    constructor(tabComponent: Element) {
-        this.tabComponent = tabComponent;
-        this.tablist = this.tabComponent.querySelector('[data-tablist]');
-        this.tabpanels = this.tabComponent.querySelectorAll('[data-tabpanel]');
-        this.tabTriggers = this.tabComponent.querySelectorAll('[data-tab]');
+    constructor() {
+        super();
 
-        this.init();
-    }
+        this.tablist = this.querySelector('[data-tablist]');
+        this.tabpanels = this.querySelectorAll('[data-tabpanel]');
+        this.tabTriggers = this.querySelectorAll('[data-tab]');
 
-    public static start(): void {
-        const tabComponents = document.querySelectorAll('[data-module="tabs"]');
+        if (
+            !this.tablist ||
+            this.tabpanels.length === 0 ||
+            this.tabTriggers.length === 0
+        )
+            return;
 
-        tabComponents.forEach((tabComponent) => {
-            const instance = new Tabs(tabComponent);
-            return instance;
-        });
-    }
-
-    private init(): void {
         this.createTabs();
+
+        this.tabTriggers.forEach((tabTrigger, index) => {
+            tabTrigger.addEventListener('click', (e: MouseEvent) => {
+                this.bindClickEvent(e);
+            });
+            tabTrigger.addEventListener('keydown', (e: KeyboardEvent) => {
+                this.bindKeyboardEvent(e, index);
+            });
+        });
     }
 
     private createTabs(): void {
@@ -55,13 +58,6 @@ class Tabs {
                 tabTrigger.setAttribute('aria-selected', 'true');
                 tabTrigger.setAttribute('tabIndex', '0');
             }
-
-            tabTrigger.addEventListener('click', (e: MouseEvent) => {
-                this.bindClickEvent(e);
-            });
-            tabTrigger.addEventListener('keydown', (e: KeyboardEvent) => {
-                this.bindKeyboardEvent(e, index);
-            });
         });
 
         // Update tabpanel properties.
@@ -143,4 +139,3 @@ class Tabs {
         }
     }
 }
-export default Tabs;

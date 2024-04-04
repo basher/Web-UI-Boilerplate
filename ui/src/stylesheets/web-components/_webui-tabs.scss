@@ -6,8 +6,8 @@ Dependencies.
 @use '../base' as *;
 @use '../mixins' as *;
 
-.tabs {
-    &__tablist {
+webui-tabs {
+    [data-tablist] {
         display: flex;
         flex-direction: column;
         gap: $gutter-m;
@@ -15,12 +15,12 @@ Dependencies.
         overflow-x: auto;
     }
 
-    &__link {
+    [data-tab] {
         color: inherit;
         white-space: nowrap;
     }
 
-    &--vertical {
+    &[data-vertical] {
         @include bp-medium {
             display: grid;
             gap: $gutter-m;
@@ -44,42 +44,45 @@ Dependencies.
                 grid-area: content;
             }
 
-            .tabs__link {
+            [data-tab] {
                 white-space: unset;
             }
         }
     }
-}
 
-[role='tablist'] {
-    flex-direction: row;
-}
-
-[role='tab'] {
-    @include focus($inset: true);
-    border-block-end: $border-width-l solid $color-neutral-100;
-    text-decoration: none;
-    transition: border $animation-fast;
-
-    &[aria-selected='true'] {
-        border-color: $color-brand;
-        color: $color-brand;
+    // Roles are added by JavaScript.
+    [role='tablist'] {
+        flex-direction: row;
     }
 
-    /* stylelint-disable-next-line order/order */
-    @if $allow-dark-mode {
-        @media (prefers-color-scheme: dark) {
-            border-color: hsl(var(--color-neutral-100) / 50%);
-            color: hsl(var(--color-neutral-100) / 50%);
+    [role='tab'] {
+        @include focus($inset: true);
+        border-block-end: $border-width-l solid $color-neutral-100;
+        text-decoration: none;
+        transition: border $animation-fast;
 
-            &[aria-selected='true'] {
-                border-color: inherit;
-                color: inherit;
+        &[aria-selected='true'] {
+            border-color: $color-brand;
+            color: $color-brand;
+        }
+
+        /* stylelint-disable-next-line order/order */
+        @if $allow-dark-mode {
+            @media (prefers-color-scheme: dark) {
+                border-color: hsl(var(--color-neutral-100) / 50%);
+                color: hsl(var(--color-neutral-100) / 50%);
+
+                /* stylelint-disable max-nesting-depth */
+                &[aria-selected='true'] {
+                    border-color: inherit;
+                    color: inherit;
+                }
+                /* stylelint-enable max-nesting-depth */
             }
         }
     }
-}
 
-[role='tabpanel'] {
-    @include focus;
+    [role='tabpanel'] {
+        @include focus;
+    }
 }
