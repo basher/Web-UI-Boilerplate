@@ -7,6 +7,15 @@ import * as WebUIShare from './WebUIShare.stories';
 - Leverages the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share).
 - It is a simple `wrapper` around the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) custom element, which provides fallback behaviour, allowing user to copy the URL.
 
+## Required and optional HTML  or `data-` attributes
+
+- In addition to the `data-` attributes used with the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) custom element:
+
+Attribute | Behaviour
+--- | ---
+`data-url` | Optional. URL of a different page to be shared.
+`data-title` | Optional. Title of the different page.
+
 <Canvas of={WebUIShare.WebUIShare} />
 
 ## `<webui-share>` another URL

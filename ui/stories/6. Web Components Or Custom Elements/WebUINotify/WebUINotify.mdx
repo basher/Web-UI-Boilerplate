@@ -6,8 +6,17 @@ import * as WebUINotify from './WebUINotify.stories';
 # `<webui-notify>`
 
 ## Accessibility considerations
-- Error notifications have an ARIA `role="error"`.
-- Other notifications have an ARIA `role="status"`.
+- Error notifications have an [ARIA alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
+- Other notifications have an [ARIA status role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/status_role).
+
+## Required and optional HTML  or `data-` attributes
+
+Attribute | Behaviour
+--- | ---
+`role="alert"` | Required if `data-error` has been used.
+`role="status"` | Required if `data-success` or `data-warning` have been used.
+`data-success`, `data-warning`, `data-error` | Optional. Apply different visual styling.
+`data-close` | Required on close button.
 
 <Canvas of={WebUINotify.WebUINotify} />
 <Controls of={WebUINotify.WebUINotify} />

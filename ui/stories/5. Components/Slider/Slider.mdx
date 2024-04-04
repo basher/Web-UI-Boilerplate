@@ -28,12 +28,14 @@ import * as SliderNoArgs from './SliderNoArgs.stories';
 - Each slide has an `aria-label`, indicating the current slide number and the total number of slides.
 - When PREV and NEXT buttons are shown, keyboard `focus` is modified such that **only visible slides are focusable**.
 
-Attribute | JavaScript behaviour
+## Required and optional HTML  or `data-` attributes
+
+Attribute | Behaviour
 --- | ---
-`data-module="slider"` | Slider container. Instantiates Slider class.
-`data-slide-count="true"` | Displays slide count & current slide.
-`data-slide-count-pips="true"` | Displays slide count & current slide as pips instead of text.
-`data-prev-next-buttons="true"` | Displays PREV and NEXT slide buttons.
+`data-module="slider"` | Required. Slider container. Instantiates Slider class.
+`data-slide-count="true"` | Optional. Displays slide count & current slide.
+`data-slide-count-pips="true"` | Optional. Displays slide count & current slide as pips instead of text.
+`data-prev-next-buttons="true"` | Optional. Displays PREV and NEXT slide buttons.
 
 ### TODO
 - Update counter with touch/swipe events?

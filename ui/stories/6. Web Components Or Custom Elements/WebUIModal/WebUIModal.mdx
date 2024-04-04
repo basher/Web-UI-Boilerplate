@@ -12,6 +12,14 @@ import * as WebUIModal from './WebUIModal.stories';
 - When modal is closed, focus is set back to the button that opened the modal.
 - Modal can be closed with the `ESC` key (default browser behaviour), and by clicking outside the modal (JavaScript enhancement).
 
+## Required and optional HTML  or `data-` attributes
+
+Attribute | Behaviour
+--- | ---
+`data-open` | Required. Button that opens the modal dialog.
+`data-close` | Required. Button(s) that close the modal dialog.
+`data-content` | Required. Identifies the modal dialog content.
+
 ### Useful articles
 - [Is dialog ready to be used?](https://www.scottohara.me/blog/2019/03/05/open-dialog.html)
 - [Defending dialog](https://whistlr.info/2021/in-defence-of-dialog/) by the official polyfill maintainer.
