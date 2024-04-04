@@ -7,7 +7,7 @@ export default class WebUINotify extends HTMLElement {
         this.btnClose?.addEventListener('click', this);
     }
 
-    // Handle web component events from constructor().
+    // Handle constructor() event listeners.
     handleEvent() {
         this.setAttribute('hidden', '');
     }

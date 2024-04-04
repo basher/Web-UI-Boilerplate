@@ -1,15 +1,16 @@
 import { Meta, Canvas } from '@storybook/blocks';
-import * as Toggle from './Toggle.stories';
+import * as WebUIToggle from './WebUIToggle.stories';
 
-<Meta of={Toggle} />
+<Meta of={WebUIToggle} />
 
-# Toggle button (or switch)
+# `<webui-toggle>`
+- Toggle button (or switch)
 
 ## Accessibility considerations
 - See the [ARIA APG switch pattern](https://www.w3.org/WAI/ARIA/apg/patterns/switch/examples/switch-button/) and [Inclusive Components toggle](https://inclusive-components.design/toggle-button/) examples.
 
 ## Toggle with no visible label
-<Canvas of={Toggle.Toggle} />
+<Canvas of={WebUIToggle.WebUIToggle} />
 
 ## Toggle with visible label
-<Canvas of={Toggle.ToggleWithLabel} />
+<Canvas of={WebUIToggle.WebUIToggleWithLabel} />

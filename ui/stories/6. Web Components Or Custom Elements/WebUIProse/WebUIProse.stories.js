@@ -11,3 +11,4 @@ export default {
 export const WebUIProse = {
     render: () => WebUIProseHtml(),
 };
+WebUIProse.storyName = '<webui-prose>';

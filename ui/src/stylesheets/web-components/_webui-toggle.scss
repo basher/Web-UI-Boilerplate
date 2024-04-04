@@ -6,34 +6,36 @@ Dependencies.
 @use '../base' as *;
 // @use '../mixins' as *;
 
-.toggle {
-    align-items: center;
-    border: $border-width-s solid;
-    display: inline-flex;
-    padding: 0;
+webui-toggle {
+    [role='switch'] {
+        align-items: center;
+        border: $border-width-s solid;
+        display: inline-flex;
+        padding: 0;
 
-    :is(&__on, &__off) {
-        padding: $gutter-s;
+        &:active {
+            transform: none;
+        }
     }
 
-    &:active {
-        transform: none;
-    }
-
-    &[aria-checked='false'] {
+    [aria-checked='false'] {
         .toggle__off {
             background-color: hsl(var(--color-text) / 30%);
         }
     }
 
-    &[aria-checked='true'] {
+    [aria-checked='true'] {
         .toggle__on {
             background-color: $color-brand;
             color: $color-neutral-100;
         }
     }
 
-    &--has-label {
+    :is(.toggle__on, .toggle__off) {
+        padding: $gutter-s;
+    }
+
+    .toggle--has-label {
         border: 0;
         gap: $gutter-s;
 
