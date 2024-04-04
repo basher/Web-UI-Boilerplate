@@ -15,6 +15,7 @@ export default class WebUIShare extends HTMLElement {
         this.shareFallback = this.querySelector('[data-content]');
         this.shareInput = this.querySelector('[data-input]');
 
+        // URL and page title to be shared.
         this.canonical = document.querySelector('link[rel=canonical]');
         this.shareTitle = this.btnShare?.dataset.title || document.title;
         this.shareUrl =
@@ -26,30 +27,19 @@ export default class WebUIShare extends HTMLElement {
         this.btnCopy?.addEventListener('click', this);
     }
 
-    // Handle web component events from constructor().
-    handleEvent(e: MouseEvent) {
-        const target = e.currentTarget as HTMLButtonElement;
+    private handleShare(): void {
+        // Use native Share API, or fallback to <webui-disclosure>.
+        if (navigator.share) {
+            this.shareFallback?.remove();
 
-        // Click 'share' button.
-        if (target?.dataset.trigger === '') {
-            // Use native Share API, or fallback to <webui-disclosure>.
-            if (navigator.share) {
-                this.shareFallback?.remove();
-
-                navigator.share({
-                    title: this.shareTitle,
-                    url: this.shareUrl,
-                });
-            } else {
-                if (this.shareInput) {
-                    this.shareInput.value = this.shareUrl || '';
-                }
+            navigator.share({
+                title: this.shareTitle,
+                url: this.shareUrl,
+            });
+        } else {
+            if (this.shareInput) {
+                this.shareInput.value = this.shareUrl || '';
             }
-        }
-
-        // Click 'copy' button.
-        if (target?.dataset.copy === '') {
-            this.shareInput && this.handleCopyUrl(this.shareInput);
         }
     }
 
@@ -59,5 +49,20 @@ export default class WebUIShare extends HTMLElement {
         }
         fallbackInput.select();
         navigator.clipboard.writeText(fallbackInput.value);
+    }
+
+    // Handle constructor() event listeners.
+    handleEvent(e: MouseEvent) {
+        const target = e.currentTarget as HTMLButtonElement;
+
+        // Click 'share' button.
+        if (target?.dataset.trigger === '') {
+            this.handleShare();
+        }
+
+        // Click 'copy' button.
+        if (target?.dataset.copy === '') {
+            this.shareInput && this.handleCopyUrl(this.shareInput);
+        }
     }
 }

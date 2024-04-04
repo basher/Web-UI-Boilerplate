@@ -14,16 +14,12 @@ export default class WebUIModal extends HTMLElement {
         this.btnsModalClose = this.querySelectorAll('[data-close]');
         this.classNameModalOpen = 'has-modal-open';
 
-        this.init();
+        if (!this.btnModalOpen || !this.dialog) return;
 
         this.btnModalOpen?.addEventListener('click', this);
         this.btnsModalClose.forEach((btnModalClose) => {
             btnModalClose?.addEventListener('click', this);
         });
-    }
-
-    private init(): void {
-        if (!this.btnModalOpen || !this.dialog) return;
     }
 
     private handleOpen(): void {
@@ -56,7 +52,7 @@ export default class WebUIModal extends HTMLElement {
         }
     }
 
-    // Handle web component events from constructor().
+    // Handle constructor() event listeners.
     handleEvent(e: MouseEvent) {
         const target = e.currentTarget as HTMLButtonElement;
 
@@ -74,7 +70,7 @@ export default class WebUIModal extends HTMLElement {
         }
     }
 
-    // Add/remove other (global) event listeners which are not part of this web component.
+    // Handle (global) event listeners which are not part of this web component.
     connectedCallback() {
         window.addEventListener('click', (e: MouseEvent) =>
             this.handleGlobalClick(e),

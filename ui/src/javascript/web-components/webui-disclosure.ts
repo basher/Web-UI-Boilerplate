@@ -12,15 +12,11 @@ export default class WebUIDisclosure extends HTMLElement {
         this.bindEscapeKey = this.hasAttribute('data-bind-escape-key');
         this.bindClickOutside = this.hasAttribute('data-bind-click-outside');
 
-        this.init();
-
-        this.trigger?.addEventListener('click', this);
-    }
-
-    private init(): void {
         if (!this.trigger || !this.content) return;
 
         this.a11ySetup();
+
+        this.trigger?.addEventListener('click', this);
     }
 
     private a11ySetup(): void {
@@ -77,7 +73,7 @@ export default class WebUIDisclosure extends HTMLElement {
         }
     }
 
-    // Handle web component events from constructor().
+    // Handle constructor() event listeners.
     handleEvent(e: MouseEvent) {
         const target = e.currentTarget as HTMLElement;
         const isExpanded =
@@ -87,7 +83,7 @@ export default class WebUIDisclosure extends HTMLElement {
         this.content?.toggleAttribute('hidden');
     }
 
-    // Add/remove other (global) event listeners which are not part of this web component.
+    // Handle (global) event listeners which are not part of this web component.
     connectedCallback() {
         window.addEventListener('keyup', (e: KeyboardEvent) =>
             this.handleGlobalKeyup(e),
