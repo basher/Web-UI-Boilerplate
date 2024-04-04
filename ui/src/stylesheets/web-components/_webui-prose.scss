@@ -12,11 +12,11 @@ Dependencies.
 @use '../base' as *;
 @use '../mixins' as *;
 
-.prose {
+webui-prose {
     overflow-x: hidden; // Just in case CMS content is stupidly wide.
 
     // Uses stack layout to handle spacing between prose elements, based on their rendered font size.
-    &.stack {
+    > .stack {
         --stack-gutter: 1em;
 
         // Remove spacing for adjacent headings.

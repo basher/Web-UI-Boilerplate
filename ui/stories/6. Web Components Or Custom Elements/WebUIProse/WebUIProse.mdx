@@ -1,0 +1,11 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as WebUIProse from './WebUIProse.stories';
+
+<Meta of={WebUIProse} />
+
+# `<webui-prose>`
+- Manages prose content (e.g. from a CMS editor).
+- The spacing between the individual typographic elements is handled by the [stack layout](/docs/layout-stack--docs).
+- Tables have a `<div class="table-wrapper">` programatically added via JavaScript to make them responsive.
+
+<Canvas of={WebUIProse.WebUIProse} />

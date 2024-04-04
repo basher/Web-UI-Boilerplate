@@ -1,24 +1,9 @@
-export default class Prose {
-    private prose: Element;
+export default class WebUIProse extends HTMLElement {
     private tables: NodeListOf<HTMLTableElement>;
 
-    constructor(prose: Element) {
-        this.prose = prose;
-        this.tables = this.prose.querySelectorAll('table');
-
-        this.init();
-    }
-
-    public static start(): void {
-        const proses = document.querySelectorAll('[data-module="prose"]');
-
-        proses.forEach((prose) => {
-            const instance = new Prose(prose);
-            return instance;
-        });
-    }
-
-    private init(): void {
+    constructor() {
+        super();
+        this.tables = this.querySelectorAll('table');
         this.wrapTables();
     }
 

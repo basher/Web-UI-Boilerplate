@@ -1,7 +1,6 @@
 // Dependencies.
 // 1. Modules.
 import FormValidate from './modules/form-validate';
-import Prose from './modules/prose';
 import RangeSlider from './modules/range-slider';
 import Search from './modules/search';
 import Slider from './modules/slider';
@@ -17,6 +16,7 @@ import WebUIDisclosure from './web-components/webui-disclosure';
 import WebUIMakeClickable from './web-components/webui-make-clickable';
 import WebUIModal from './web-components/webui-modal';
 import WebUINotify from './web-components/webui-notify';
+import WebUIProse from './web-components/webui-prose';
 import WebUIShare from './web-components/webui-share';
 
 export const uiInit = (): void => {
@@ -27,7 +27,6 @@ export const uiInit = (): void => {
     Tabs.start();
     Toggle.start();
     VideoPlayer.start();
-    Prose.start();
 
     // For DEMO purposes only.
     demoAjaxFetchHTML.start();
@@ -41,6 +40,8 @@ export const uiInit = (): void => {
         customElements.define('webui-modal', WebUIModal);
     !customElements.get('webui-notify') &&
         customElements.define('webui-notify', WebUINotify);
+    !customElements.get('webui-prose') &&
+        customElements.define('webui-prose', WebUIProse);
     !customElements.get('webui-share') &&
         customElements.define('webui-share', WebUIShare);
 };
