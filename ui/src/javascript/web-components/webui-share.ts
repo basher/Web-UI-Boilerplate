@@ -23,6 +23,8 @@ export default class WebUIShare extends HTMLElement {
             this.canonical?.href ||
             document.location.href;
 
+        if (!this.btnShare) return;
+
         this.btnShare?.addEventListener('click', this);
         this.btnCopy?.addEventListener('click', this);
     }

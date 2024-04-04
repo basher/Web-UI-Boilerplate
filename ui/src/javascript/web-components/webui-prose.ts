@@ -4,6 +4,9 @@ export default class WebUIProse extends HTMLElement {
     constructor() {
         super();
         this.tables = this.querySelectorAll('table');
+
+        if (this.tables.length === 0) return;
+
         this.wrapTables();
     }
 
