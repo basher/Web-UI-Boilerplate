@@ -3,7 +3,7 @@ export default class WebUIToggle extends HTMLElement {
 
     constructor() {
         super();
-        this.switch = this.querySelector('[role="switch"]');
+        this.switch = this.querySelector('[role=switch]');
 
         if (!this.switch) return;
 

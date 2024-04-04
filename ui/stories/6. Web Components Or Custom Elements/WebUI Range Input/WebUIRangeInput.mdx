@@ -1,0 +1,12 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as WebUIRangeInput from './WebUIRangeInput.stories';
+
+<Meta of={WebUIRangeInput} />
+
+# `<webui-range-input>`
+- JavaScript is required to display the numeric range value inside the `<output>` element.
+
+## Accessibility considerations
+- See the [ARIA APG slider pattern](https://www.w3.org/WAI/ARIA/apg/patterns/slider/).
+
+<Canvas of={WebUIRangeInput.WebUIRangeInput} />

@@ -1,7 +1,6 @@
 // Dependencies.
 // 1. Modules.
 import FormValidate from './modules/form-validate';
-import RangeSlider from './modules/range-slider';
 import Search from './modules/search';
 import Slider from './modules/slider';
 
@@ -14,6 +13,7 @@ import WebUIMakeClickable from './web-components/webui-make-clickable';
 import WebUIModal from './web-components/webui-modal';
 import WebUINotify from './web-components/webui-notify';
 import WebUIProse from './web-components/webui-prose';
+import WebUIRangeInput from './web-components/webui-range-input';
 import WebUIShare from './web-components/webui-share';
 import WebUIToggle from './web-components/webui-toggle';
 import WebUITabs from './web-components/webui-tabs';
@@ -21,7 +21,6 @@ import WebUIVideoPlayer from './web-components/webui-video-player';
 
 export const uiInit = (): void => {
     FormValidate.start();
-    RangeSlider.start();
     Search.start();
     Slider.start();
 
@@ -39,6 +38,8 @@ export const uiInit = (): void => {
         customElements.define('webui-notify', WebUINotify);
     !customElements.get('webui-prose') &&
         customElements.define('webui-prose', WebUIProse);
+    !customElements.get('webui-range-input') &&
+        customElements.define('webui-range-input', WebUIRangeInput);
     !customElements.get('webui-share') &&
         customElements.define('webui-share', WebUIShare);
     !customElements.get('webui-tabs') &&

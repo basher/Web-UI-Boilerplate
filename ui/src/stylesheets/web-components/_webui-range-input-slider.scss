@@ -23,8 +23,8 @@ Dependencies.
     block-size: var(--slider-height);
 }
 
-.range {
-    &__bubble {
+webui-range-input-slider {
+    output {
         margin-inline: auto;
     }
 }
