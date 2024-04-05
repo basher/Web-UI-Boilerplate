@@ -6,14 +6,18 @@ Dependencies.
 @use '../base' as *;
 @use '../mixins' as *;
 
-.image-gallery {
-    &__link {
+webui-image-gallery {
+    .image-gallery__link {
         @include focus;
         display: block;
     }
 
     .grid {
         @include responsive-grid-auto-columns($auto-layout: auto-fill);
+
+        > * {
+            display: block;
+        }
     }
 
     .modal__dialog[open] {

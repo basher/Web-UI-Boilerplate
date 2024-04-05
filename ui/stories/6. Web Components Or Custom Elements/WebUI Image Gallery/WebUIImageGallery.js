@@ -1,12 +1,12 @@
-export const ImageGalleryHtml = () => `
-<div class="image-gallery" data-module="image-gallery">
+export const WebUIImageGalleryHtml = () => `
+<webui-image-gallery>
     <ul class="grid">
         <li>
-            <div class="modal" data-module="modal">
+            <webui-modal>
                 <a
                     class="image-gallery__link"
                     href="https://dummyimage.com/1140x810&text=image+1"
-                    data-button="modal-open"
+                    data-open
                 >
                     <picture>
                         <source
@@ -29,7 +29,7 @@ export const ImageGalleryHtml = () => `
                         <button
                             type="button"
                             class="button button--icon modal__close"
-                            data-button="modal-close"
+                            data-close
                         >
                             <svg
                                 aria-hidden="true"
@@ -44,7 +44,7 @@ export const ImageGalleryHtml = () => `
 
                     <div
                         class="modal__content"
-                        data-modal-content
+                        data-content
                     >
                         <picture>
                             <source
@@ -68,14 +68,14 @@ export const ImageGalleryHtml = () => `
                         </picture>
                     </div>
                 </dialog>
-            </div>
+            </webui-modal>
         </li>
         <li>
-            <div class="modal" data-module="modal">
+            <webui-modal>
                 <a
                     class="image-gallery__link"
                     href="https://dummyimage.com/1140x810&text=image+2"
-                    data-button="modal-open"
+                    data-open
                 >
                     <picture>
                         <source
@@ -98,7 +98,7 @@ export const ImageGalleryHtml = () => `
                         <button
                             type="button"
                             class="button button--icon modal__close"
-                            data-button="modal-close"
+                            data-close
                         >
                             <svg
                                 aria-hidden="true"
@@ -113,7 +113,7 @@ export const ImageGalleryHtml = () => `
 
                     <div
                         class="modal__content"
-                        data-modal-content
+                        data-content
                     >
                         <picture>
                             <source
@@ -137,14 +137,14 @@ export const ImageGalleryHtml = () => `
                         </picture>
                     </div>
                 </dialog>
-            </div>
+            </webui-modal>
         </li>
         <li>
-            <div class="modal" data-module="modal">
+            <webui-modal>
                 <a
                     class="image-gallery__link"
                     href="https://dummyimage.com/1140x810&text=image+3"
-                    data-button="modal-open"
+                    data-open
                 >
                     <picture>
                         <source
@@ -167,7 +167,7 @@ export const ImageGalleryHtml = () => `
                         <button
                             type="button"
                             class="button button--icon modal__close"
-                            data-button="modal-close"
+                            data-close
                         >
                             <svg
                                 aria-hidden="true"
@@ -182,7 +182,7 @@ export const ImageGalleryHtml = () => `
 
                     <div
                         class="modal__content"
-                        data-modal-content
+                        data-content
                     >
                         <picture>
                             <source
@@ -206,14 +206,14 @@ export const ImageGalleryHtml = () => `
                         </picture>
                     </div>
                 </dialog>
-            </div>
+            </webui-modal>
         </li>
         <li>
-            <div class="modal" data-module="modal">
+            <webui-modal>
                 <a
                     class="image-gallery__link"
                     href="https://dummyimage.com/1140x810&text=image+4"
-                    data-button="modal-open"
+                    data-open
                 >
                     <picture>
                         <source
@@ -236,7 +236,7 @@ export const ImageGalleryHtml = () => `
                         <button
                             type="button"
                             class="button button--icon modal__close"
-                            data-button="modal-close"
+                            data-close
                         >
                             <svg
                                 aria-hidden="true"
@@ -251,7 +251,7 @@ export const ImageGalleryHtml = () => `
 
                     <div
                         class="modal__content"
-                        data-modal-content
+                        data-content
                     >
                         <picture>
                             <source
@@ -275,14 +275,14 @@ export const ImageGalleryHtml = () => `
                         </picture>
                     </div>
                 </dialog>
-            </div>
+            </webui-modal>
         </li>
         <li>
-            <div class="modal" data-module="modal">
+            <webui-modal>
                 <a
                     class="image-gallery__link"
                     href="https://dummyimage.com/1140x810&text=image+5"
-                    data-button="modal-open"
+                    data-open
                 >
                     <picture>
                         <source
@@ -305,7 +305,7 @@ export const ImageGalleryHtml = () => `
                         <button
                             type="button"
                             class="button button--icon modal__close"
-                            data-button="modal-close"
+                            data-close
                         >
                             <svg
                                 aria-hidden="true"
@@ -320,7 +320,7 @@ export const ImageGalleryHtml = () => `
 
                     <div
                         class="modal__content"
-                        data-modal-content
+                        data-content
                     >
                         <picture>
                             <source
@@ -344,8 +344,8 @@ export const ImageGalleryHtml = () => `
                         </picture>
                     </div>
                 </dialog>
-            </div>
+            </webui-modal>
         </li>
     </ul>
-</div>
+</webui-image-gallery>
 `;

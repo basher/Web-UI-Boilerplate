@@ -1,0 +1,17 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as WebUIImageGallery from './WebUIImageGallery.stories';
+
+<Meta of={WebUIImageGallery} />
+
+# `<webui-image-gallery>`
+- Uses a simple [grid list layout](/story/layout-grid--grid-list) to arrange the image thumbnails.
+- Without JavaScript, clicking thumbnails opens the large images in current browser window.
+- With JavaScript, the large images are shown in the [`<webui-modal>`](/docs/web-components-or-custom-elements-webui-modal--docs) custom element.
+
+> Please note: For brevity, the large images only have a subset of [responsive image](/story/components-images--responsive-image) `<source>` markup.
+
+## TODO
+- Consider extending `<webui-modal>` custom element to enable a single modal instance to be opened by multiple triggers?
+- Consider showing the large images in a carousel?
+
+<Canvas of={WebUIImageGallery.WebUIImageGallery} />
