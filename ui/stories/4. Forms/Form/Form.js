@@ -108,31 +108,31 @@ export const FormHtml = (args) => `
 `;
 
 export const FormServerValidationHtml = () => `
-<div class="message message--error" role="alert">
-    <div class="stack">
-        <h2>Form errors</h2>
-        <p>
-            Optional error summary.<br/>
-            For example, rendered in the HTML on server postback.
-        </p>
-        <ul>
-            <li>
-                <a href="#input-tel">Error text... tel</a>
-            </li>
-            <li>
-                <a href="#select">Error text... select</a>
-            </li>
-            <li>
-                <a href="#checkbox-1">Error text... checkbox</a>
-            </li>
-            <li>
-                <a href="#radio-1">Error text... radio</a>
-            </li>
-        </ul>
-    </div>
-</div>
-
 <form class="form" action="#">
+    <webui-notify data-error role="alert">
+        <div class="stack">
+            <h2>Form errors</h2>
+            <p>
+                Optional error summary.<br/>
+                For example, rendered in the HTML on server postback.
+            </p>
+            <ul>
+                <li>
+                    <a href="#input-tel">Error text... tel</a>
+                </li>
+                <li>
+                    <a href="#select">Error text... select</a>
+                </li>
+                <li>
+                    <a href="#checkbox-1">Error text... checkbox</a>
+                </li>
+                <li>
+                    <a href="#radio-1">Error text... radio</a>
+                </li>
+            </ul>
+        </div>
+    </webui-notify>
+
     <div class="form__field">
         <label for="input-text1" class="label">
             Text input 1 label

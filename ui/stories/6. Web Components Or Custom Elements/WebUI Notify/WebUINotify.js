@@ -11,7 +11,7 @@ export const WebUINotifyHtml = (args) => `
         args.hasCloseButton === true
             ? `<button
             type="button"
-            class="button button--icon message__close"
+            class="button button--icon"
             data-close
         >
             <svg

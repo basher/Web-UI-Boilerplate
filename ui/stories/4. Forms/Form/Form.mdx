@@ -25,7 +25,8 @@ import * as FormNoArgs from './FormNoArgs.stories';
 <Controls of={Form.Form} />
 
 ## Server-side validation
-- It can be a good idea to add an additional error summary block to list all the form errors, with anchors to each field.
+- Use the [`<webui-notify>`](/docs/web-components-or-custom-elements-webui-notify--docs) custom element to add an additional error summary block.
+- List all the form errors, with anchors to each form field that has an error.
 
 <Canvas of={FormNoArgs.FormServerValidation} />
 
