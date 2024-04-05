@@ -1,0 +1,49 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+webui-carousel {
+    .carousel__slide {
+        filter: grayscale(60%);
+        opacity: 0.8;
+    }
+
+    .is-visible {
+        filter: grayscale(0);
+        opacity: 1;
+    }
+
+    // Identify current slide (when using PREV|NEXT buttons).
+    .is-current:not(:focus-visible) {
+        box-shadow: inset 0 0 0 $border-width-l $color-brand; // For demo purposes.
+    }
+
+    &__controls {
+        margin-block-end: $gutter-m;
+    }
+
+    &__counter {
+        &--pips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: $gutter-s;
+            margin-block-start: $gutter-m;
+        }
+
+        &__pip {
+            border: $border-width-s solid;
+            border-radius: 50%;
+            font-size: 0;
+            padding: $gutter-s;
+
+            &.is-current {
+                background-color: $color-brand;
+                color: $color-brand;
+            }
+        }
+    }
+}

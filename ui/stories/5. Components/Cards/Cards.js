@@ -167,14 +167,14 @@ export const CardGridHtml = () => `
 </ul>
 `;
 
-export const CardSliderHtml = () => `
-<section class="slider-wrapper" aria-label="[meaningful label for slider]"
+export const CardCarouselHtml = () => `
+<section class="carousel-wrapper" aria-label="[meaningful label for carousel]"
 >
     <ul
-        class="slider slider--has-clickable-slides card-slider"
+        class="carousel carousel--has-clickable-slides card-carousel"
         tabindex="0"
     >
-        <li class="slider__slide">
+        <li class="carousel__slide">
             <a href="#" class="card">
                 <figure class="card__media">
                     <picture>
@@ -198,7 +198,7 @@ export const CardSliderHtml = () => `
                 </div>
             </a>
         </li>
-        <li class="slider__slide">
+        <li class="carousel__slide">
             <a href="#" class="card">
                 <figure class="card__media">
                     <picture>
@@ -222,7 +222,7 @@ export const CardSliderHtml = () => `
                 </div>
             </a>
         </li>
-        <li class="slider__slide">
+        <li class="carousel__slide">
             <a href="#" class="card">
                 <figure class="card__media">
                     <picture>
@@ -246,7 +246,7 @@ export const CardSliderHtml = () => `
                 </div>
             </a>
         </li>
-        <li class="slider__slide">
+        <li class="carousel__slide">
             <a href="#" class="card">
                 <figure class="card__media">
                     <picture>
@@ -270,7 +270,7 @@ export const CardSliderHtml = () => `
                 </div>
             </a>
         </li>
-        <li class="slider__slide">
+        <li class="carousel__slide">
             <a href="#" class="card">
                 <figure class="card__media">
                     <picture>
@@ -294,7 +294,7 @@ export const CardSliderHtml = () => `
                 </div>
             </a>
         </li>
-        <li class="slider__slide">
+        <li class="carousel__slide">
             <a href="#" class="card">
                 <figure class="card__media">
                     <picture>
@@ -319,6 +319,6 @@ export const CardSliderHtml = () => `
             </a>
         </li>
     </ul>
-    <p class="slider-instructions">Scroll or use your arrow keys for more</p>
+    <p class="carousel-instructions">Scroll or use your arrow keys for more</p>
 </section>
 `;

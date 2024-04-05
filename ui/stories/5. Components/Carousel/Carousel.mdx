@@ -1,0 +1,43 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as Carousel from './Carousel.stories';
+import * as CarouselNoArgs from './CarouselNoArgs.stories';
+
+<Meta of={Carousel} />
+
+# CSS-only carousel
+- The default carousel can be operated using CSS only.
+- It leverages [CSS scroll snap](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type) to improve keyboard-only behaviour.
+- Slide widths are defined by the CSS `--slide-min-width` custom property. This can be overridden for specific carousel implementations. For example, see the [card carousel](/story/components-cards--card-carousel).
+
+## Accessibility considerations
+- Based on [Inclusive Components carousel](https://inclusive-components.design/a-content-slider/) and [ARIA APG carousel pattern](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/).
+- The carousel has `tabindex="0"` so it can receive keyboard `focus`, and be operated via the `LEFT|RIGHT` arrow keys.
+- CSS `scroll-snap` ensures the carousel stops at a complete slide.
+
+<Canvas of={CarouselNoArgs.Carousel} />
+
+## CSS-only fullwidth slides (e.g. banner carousel)
+<Canvas of={CarouselNoArgs.CarouselFullwidthSlides} />
+
+## CSS-only clickable slides (e.g. cards, image thumbnails)
+<Canvas of={CarouselNoArgs.CarouselClickableSlidesHtml} />
+
+## Slides with JavaScript enhancements
+- The default CSS carousel can be enhanced with JavaScript to show a slide count, PREV and NEXT buttons, etc.
+- Native scrolling with `LEFT|RIGHT` arrow keys is overridden, allowing JavaScript to correctly update the slide count when using arrow keys.
+- Each slide has an `aria-label`, indicating the current slide number and the total number of slides.
+- When PREV and NEXT buttons are shown, keyboard `focus` is modified such that **only visible slides are focusable**.
+
+## Required and optional HTML  or `data-` attributes
+
+Attribute | Behaviour
+--- | ---
+`data-slide-count="true"` | Optional. Displays slide count & current slide.
+`data-slide-count-pips="true"` | Optional. Displays slide count & current slide as pips instead of text.
+`data-prev-next-buttons="true"` | Optional. Displays PREV and NEXT slide buttons.
+
+### TODO
+- Update counter with touch/swipe events?
+
+<Canvas of={Carousel.WebUICarouselHtml} />
+<Controls of={Carousel.WebUICarouselHtml} />

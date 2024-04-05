@@ -1,7 +1,7 @@
-import { SliderEnhancedJSHtml } from './Slider';
+import { WebUICarouselHtml } from './Carousel';
 
 export default {
-    title: 'Components/Slider (or Carousel)',
+    title: 'Components/Carousel',
     parameters: {
         status: {
             type: 'stable',
@@ -15,7 +15,7 @@ export default {
     },
 };
 
-export const SliderEnhancedJS = {
-    render: (args) => SliderEnhancedJSHtml(args),
+export const WebUICarousel = {
+    render: (args) => WebUICarouselHtml(args),
 };
-SliderEnhancedJS.storyName = 'JavaScript-Enhanced Slider';
+WebUICarouselHtml.storyName = '<webui-carousel>';

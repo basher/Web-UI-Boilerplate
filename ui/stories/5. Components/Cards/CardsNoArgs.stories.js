@@ -1,4 +1,4 @@
-import { CardGridHtml, CardSliderHtml } from './Cards';
+import { CardGridHtml, CardCarouselHtml } from './Cards';
 
 export default {
     title: 'Components/Cards',
@@ -14,7 +14,7 @@ export const CardGrid = {
 };
 CardGrid.storyName = 'Cards In A Grid';
 
-export const CardSlider = {
-    render: (args) => CardSliderHtml(args),
+export const CardCarousel = {
+    render: (args) => CardCarouselHtml(args),
 };
-CardSlider.storyName = 'Cards In A Slider';
+CardCarousel.storyName = 'Cards In A Carousel';

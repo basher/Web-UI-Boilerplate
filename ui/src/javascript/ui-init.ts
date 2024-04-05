@@ -1,4 +1,5 @@
 // Web Components.
+import WebUICarousel from './web-components/webui-carousel';
 import WebUIDisclosure from './web-components/webui-disclosure';
 import WebUIFetchHtml from './web-components/webui-fetch-html';
 import WebUIFormValidate from './web-components/webui-form-validate';
@@ -13,11 +14,10 @@ import WebUIToggle from './web-components/webui-toggle';
 import WebUITabs from './web-components/webui-tabs';
 import WebUIVideoPlayer from './web-components/webui-video-player';
 
-// Modules.
-import Slider from './modules/slider';
-
 export const uiInit = (): void => {
     // Define Web Components
+    !customElements.get('webui-carousel') &&
+        customElements.define('webui-carousel', WebUICarousel);
     !customElements.get('webui-disclosure') &&
         customElements.define('webui-disclosure', WebUIDisclosure);
     !customElements.get('webui-fetch-html') &&
@@ -44,6 +44,4 @@ export const uiInit = (): void => {
         customElements.define('webui-toggle', WebUIToggle);
     !customElements.get('webui-video-player') &&
         customElements.define('webui-video-player', WebUIVideoPlayer);
-
-    Slider.start();
 };

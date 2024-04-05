@@ -1,5 +1,3 @@
-import { addJSClass } from '../utils/progressive-enhancement';
-
 type SliderConfig = {
     showSlideCount: boolean;
     showSlideCountPips: boolean;
@@ -34,7 +32,6 @@ class Slider {
         const sliders = document.querySelectorAll('[data-module="slider"]');
 
         sliders.forEach((slider) => {
-            addJSClass(slider);
             const instance = new Slider(slider);
             return instance;
         });
