@@ -1,7 +1,5 @@
-import {
-    FormServerValidationHtml,
-    FormJSValidationHtml
-} from './Form';
+import { FormServerValidationHtml } from './Form';
+import { WebUIFormValidateHtml } from '../../6. Web Components Or Custom Elements/WebUI Form Validate/WebUIFormValidate';
 
 export default {
     title: 'Forms/Form',
@@ -17,7 +15,7 @@ export const FormServerValidation = {
 };
 FormServerValidation.storyName = 'Form (Server Validation)';
 
-export const FormJSValidation = {
-    render: () => FormJSValidationHtml(),
+export const WebUIFormValidate = {
+    render: () => WebUIFormValidateHtml(),
 };
-FormJSValidation.storyName = 'Form (JavaScript Validation)';
+WebUIFormValidate.storyName = '<webui-form> JavaScript Validation';

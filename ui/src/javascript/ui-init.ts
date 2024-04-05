@@ -1,14 +1,8 @@
 // Dependencies.
-// 1. Modules.
-import FormValidate from './modules/form-validate';
-import Search from './modules/search';
-import Slider from './modules/slider';
 
-// 2. For DEMO purposes only.
-import demoAjaxFetchHTML from './modules/demo-ajax-fetch-html';
-
-// 3. Web components.
+// Web components.
 import WebUIDisclosure from './web-components/webui-disclosure';
+import WebUIFormValidate from './web-components/webui-form-validate';
 import WebUIMakeClickable from './web-components/webui-make-clickable';
 import WebUIModal from './web-components/webui-modal';
 import WebUINotify from './web-components/webui-notify';
@@ -19,17 +13,19 @@ import WebUIToggle from './web-components/webui-toggle';
 import WebUITabs from './web-components/webui-tabs';
 import WebUIVideoPlayer from './web-components/webui-video-player';
 
+// Modules.
+import Search from './modules/search';
+import Slider from './modules/slider';
+
+// For DEMO purposes only.
+import demoAjaxFetchHTML from './modules/demo-ajax-fetch-html';
+
 export const uiInit = (): void => {
-    FormValidate.start();
-    Search.start();
-    Slider.start();
-
-    // For DEMO purposes only.
-    demoAjaxFetchHTML.start();
-
     // Define Web Components
     !customElements.get('webui-disclosure') &&
         customElements.define('webui-disclosure', WebUIDisclosure);
+    !customElements.get('webui-form-validate') &&
+        customElements.define('webui-form-validate', WebUIFormValidate);
     !customElements.get('webui-make-clickable') &&
         customElements.define('webui-make-clickable', WebUIMakeClickable);
     !customElements.get('webui-modal') &&
@@ -48,4 +44,10 @@ export const uiInit = (): void => {
         customElements.define('webui-toggle', WebUIToggle);
     !customElements.get('webui-video-player') &&
         customElements.define('webui-video-player', WebUIVideoPlayer);
+
+    // For DEMO purposes only.
+    demoAjaxFetchHTML.start();
+
+    Search.start();
+    Slider.start();
 };

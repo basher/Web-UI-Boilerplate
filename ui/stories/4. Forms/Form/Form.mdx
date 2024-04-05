@@ -1,6 +1,7 @@
 import { Meta, Canvas, Controls } from '@storybook/blocks';
 import * as Form from './Form.stories';
 import * as FormNoArgs from './FormNoArgs.stories';
+import * as WebUIFormValidate from '../../6. Web Components Or Custom Elements/WebUI Form Validate/WebUIFormValidate.stories';
 
 <Meta of={Form} />
 
@@ -25,13 +26,16 @@ import * as FormNoArgs from './FormNoArgs.stories';
 <Controls of={Form.Form} />
 
 ## Server-side validation
-- Use the [`<webui-notify>`](/docs/web-components-or-custom-elements-webui-notify--docs) custom element to add an additional error summary block.
+- Uses the [`<webui-notify>`](/docs/web-components-or-custom-elements-webui-notify--docs) custom element to add an additional error summary block at the top of the form.
 - List all the form errors, with anchors to each form field that has an error.
 
 <Canvas of={FormNoArgs.FormServerValidation} />
 
 ## JavaScript validation
+- Uses the [`<webui-form-validate>`](/docs/web-components-or-custom-elements-webui-form-validate--docs) custom element.
+
+## Additional reading
 - See a [better approach to form validation](https://adamsilver.io/blog/the-problem-with-live-validation-and-what-to-do-instead/) that uses form `submit` rather than live inline validation.
 - Uses the [Constraint Validation API](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript).
 
-<Canvas of={FormNoArgs.FormJSValidation} />
+<Canvas of={WebUIFormValidate.WebUIFormValidate} />

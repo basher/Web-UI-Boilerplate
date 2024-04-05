@@ -14,12 +14,12 @@ export default class WebUIDisclosure extends HTMLElement {
 
         if (!this.trigger || !this.content) return;
 
-        this.a11ySetup();
+        this.setupA11y();
 
         this.trigger?.addEventListener('click', this);
     }
 
-    private a11ySetup(): void {
+    private setupA11y(): void {
         this.trigger?.removeAttribute('hidden');
         this.trigger?.setAttribute('aria-expanded', 'false');
         this.content?.setAttribute('hidden', '');
