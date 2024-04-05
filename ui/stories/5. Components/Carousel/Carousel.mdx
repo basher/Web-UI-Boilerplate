@@ -1,6 +1,5 @@
 import { Meta, Canvas, Controls } from '@storybook/blocks';
 import * as Carousel from './Carousel.stories';
-import * as CarouselNoArgs from './CarouselNoArgs.stories';
 
 <Meta of={Carousel} />
 
@@ -14,30 +13,13 @@ import * as CarouselNoArgs from './CarouselNoArgs.stories';
 - The carousel has `tabindex="0"` so it can receive keyboard `focus`, and be operated via the `LEFT|RIGHT` arrow keys.
 - CSS `scroll-snap` ensures the carousel stops at a complete slide.
 
-<Canvas of={CarouselNoArgs.Carousel} />
+<Canvas of={Carousel.Carousel} />
 
 ## CSS-only fullwidth slides (e.g. banner carousel)
-<Canvas of={CarouselNoArgs.CarouselFullwidthSlides} />
+<Canvas of={Carousel.CarouselFullwidthSlides} />
 
 ## CSS-only clickable slides (e.g. cards, image thumbnails)
-<Canvas of={CarouselNoArgs.CarouselClickableSlidesHtml} />
+<Canvas of={Carousel.CarouselClickableSlides} />
 
-## Slides with JavaScript enhancements
-- The default CSS carousel can be enhanced with JavaScript to show a slide count, PREV and NEXT buttons, etc.
-- Native scrolling with `LEFT|RIGHT` arrow keys is overridden, allowing JavaScript to correctly update the slide count when using arrow keys.
-- Each slide has an `aria-label`, indicating the current slide number and the total number of slides.
-- When PREV and NEXT buttons are shown, keyboard `focus` is modified such that **only visible slides are focusable**.
-
-## Required and optional HTML  or `data-` attributes
-
-Attribute | Behaviour
---- | ---
-`data-slide-count="true"` | Optional. Displays slide count & current slide.
-`data-slide-count-pips="true"` | Optional. Displays slide count & current slide as pips instead of text.
-`data-prev-next-buttons="true"` | Optional. Displays PREV and NEXT slide buttons.
-
-### TODO
-- Update counter with touch/swipe events?
-
-<Canvas of={Carousel.WebUICarouselHtml} />
-<Controls of={Carousel.WebUICarouselHtml} />
+## JavaScript-enhanced carousel
+- See the [`<webui-carousel>`](/docs/web-components-or-custom-elements-webui-carousel--docs) custom element.

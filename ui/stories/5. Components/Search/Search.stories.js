@@ -1,6 +1,4 @@
 import { SearchHtml, SearchDatalistHtml } from './Search';
-import { WebUIPredictiveSearchHtml } from '../../6. Web Components Or Custom Elements/WebUI Predictive Search/WebUIPredictiveSearch';
-
 
 export default {
     title: 'Components/Search',
@@ -21,6 +19,12 @@ export const SearchDatalist = {
 SearchDatalist.storyName = 'Predictive Search Using Datalist';
 
 export const WebUIPredictiveSearch = {
-    render: () => WebUIPredictiveSearchHtml(),
+    render: () => `
+        <p>
+            See the
+            <a href="/?path=/docs/web-components-or-custom-elements-webui-predictive-search--docs"><code>&lt;webui-predictive-search&gt;</code></a>
+            custom element.
+        </p>
+    `
 };
 WebUIPredictiveSearch.storyName = '<webui-predictive-search>';

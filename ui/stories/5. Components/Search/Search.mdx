@@ -1,6 +1,5 @@
 import { Meta, Canvas } from '@storybook/blocks';
 import * as Search from './Search.stories';
-import * as WebUIPredictiveSearch from '../../6. Web Components Or Custom Elements/WebUI Predictive Search/WebUIPredictiveSearch.stories';
 
 <Meta of={Search} />
 
@@ -15,11 +14,5 @@ import * as WebUIPredictiveSearch from '../../6. Web Components Or Custom Elemen
 
 <Canvas of={Search.SearchDatalist} />
 
-## Predictive search (with dynamic results from an API)
-- Uses the [`<webui-predictive-search>`](/docs/web-components-or-custom-elements-webui-predictive-search--docs) custom element.
-- When JavaScript is enabled, form submit is disabled and the submit button is hidden.
-
-### Accessibility considerations
-- Dynamic search results are displayed in an [aria-live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
-
-<Canvas of={WebUIPredictiveSearch.WebUIPredictiveSearch} />
+## `<webui-predictive-search>` (with dynamic results from an API)
+- See the [`<webui-predictive-search>`](/docs/web-components-or-custom-elements-webui-predictive-search--docs) custom element.

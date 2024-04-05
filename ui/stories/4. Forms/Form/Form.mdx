@@ -1,7 +1,6 @@
 import { Meta, Canvas, Controls } from '@storybook/blocks';
 import * as Form from './Form.stories';
 import * as FormNoArgs from './FormNoArgs.stories';
-import * as WebUIFormValidate from '../../6. Web Components Or Custom Elements/WebUI Form Validate/WebUIFormValidate.stories';
 
 <Meta of={Form} />
 
@@ -31,11 +30,5 @@ import * as WebUIFormValidate from '../../6. Web Components Or Custom Elements/W
 
 <Canvas of={FormNoArgs.FormServerValidation} />
 
-## JavaScript validation
-- Uses the [`<webui-form-validate>`](/docs/web-components-or-custom-elements-webui-form-validate--docs) custom element.
-
-## Additional reading
-- See a [better approach to form validation](https://adamsilver.io/blog/the-problem-with-live-validation-and-what-to-do-instead/) that uses form `submit` rather than live inline validation.
-- Uses the [Constraint Validation API](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript).
-
-<Canvas of={WebUIFormValidate.WebUIFormValidate} />
+## `<webui-form-validate>` JavaScript validation
+- See the [`<webui-form-validate>`](/docs/web-components-or-custom-elements-webui-form-validate--docs) custom element.
