@@ -18,7 +18,7 @@ ${style}
     <section class="carousel-wrapper" aria-label="[meaningful label for carousel]"
     >
         <ul
-            class="carousel ${args.makeFullwidth === true ? 'carousel--fullwidth' : ''}"
+            class="carousel"
             tabindex="0"
         >
             <li class="carousel__slide">

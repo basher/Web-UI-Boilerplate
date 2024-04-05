@@ -8,7 +8,6 @@ export default {
         },
     },
     argTypes: {
-        makeFullwidth: { control: 'boolean' },
         showSlideCount: { control: 'boolean' },
         showSlideCountPips: { control: 'boolean' },
         showPrevNextButtons: { control: 'boolean' },
