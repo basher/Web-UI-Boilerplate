@@ -22,11 +22,11 @@ webui-carousel {
         box-shadow: inset 0 0 0 $border-width-l $color-brand; // For demo purposes.
     }
 
-    &__controls {
+    .carousel__controls {
         margin-block-end: $gutter-m;
     }
 
-    &__counter {
+    .carousel__counter {
         &--pips {
             display: flex;
             flex-wrap: wrap;
