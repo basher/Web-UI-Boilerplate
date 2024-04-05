@@ -1,0 +1,13 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as AjaxSpinner from './AjaxSpinner.stories';
+
+<Meta of={AjaxSpinner} />
+
+# Ajax loading spinner
+- This is example HTML markup for the spinner.
+- In actual Ajax requests, the HTML for the spinner is programatically generated via JavaScript in `src/javascript/utils/ajax-helpers.ts`.
+
+## Accessibility
+- The Ajax loading spinner is an `<svg>` with an accessible `loading...` name.
+
+<Canvas of={AjaxSpinner.AjaxSpinner} />

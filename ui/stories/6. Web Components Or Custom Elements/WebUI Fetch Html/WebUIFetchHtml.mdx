@@ -1,0 +1,26 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as WebUIFetchHtml from './WebUIFetchHtml.stories';
+
+<Meta of={WebUIFetchHtml} />
+
+# `<webui-fetch-html>`
+- This is simply a demo to show the core features of a component that has some Ajax dependencies (e.g. fetching an HTML fragment).
+- A more realistic example can be found in the [`<webui-predictive-search>`](/docs/web-components-or-custom-elements-webui-predictive-search--docs) custom element.
+
+## Uses native Fetch API
+- See [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) docs on MDN.
+- Fetch aborts/timeouts are handled by an [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) in `src/javascript/utils/ajax-helpers.ts`.
+
+## Accessibility
+- An [ARIA live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) is used to contain the Ajax response (or errors).
+- The [Ajax loading spinner](/docs/components-ajax-spinner--docs) is an `<svg>` with an accessible `loading...` name, which will be announced in the live region.
+
+## Required and optional HTML  or `data-` attributes
+
+Attribute | Behaviour
+--- | ---
+`data-trigger` | Required. On the button that triggers the Fetch request.
+`data-trigger-target` | Required. On the trigger button. The value must match `data-target`.
+`data-target` | Required. On the ARIA live region. The value must match `data-trigger-target`.
+
+<Canvas of={WebUIFetchHtml.WebUIFetchHtml} />

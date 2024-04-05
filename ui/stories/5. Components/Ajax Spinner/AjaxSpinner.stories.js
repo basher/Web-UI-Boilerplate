@@ -1,7 +1,7 @@
-import { AjaxSpinnerHtml, AjaxFetchHtml } from './Ajax';
+import { AjaxSpinnerHtml } from './AjaxSpinner';
 
 export default {
-    title: 'Components/Ajax',
+    title: 'Components/Ajax Spinner',
     parameters: {
         status: {
             type: 'stable',
@@ -11,8 +11,4 @@ export default {
 
 export const AjaxSpinner = {
     render: () => AjaxSpinnerHtml(),
-};
-
-export const AjaxFetch = {
-    render: () => AjaxFetchHtml(),
 };
