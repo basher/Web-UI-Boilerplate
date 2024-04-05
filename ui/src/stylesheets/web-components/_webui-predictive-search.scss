@@ -1,0 +1,28 @@
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+@use '../base' as *;
+@use '../mixins' as *;
+
+webui-predictive-search {
+    [type='submit'] {
+        display: none;
+    }
+
+    .search__results {
+        margin-block-start: $gutter-m;
+
+        .grid {
+            @include responsive-grid-auto-columns($max-width: 10rem);
+        }
+    }
+
+    .search__result {
+        &__link {
+            @include focus;
+            color: inherit;
+        }
+    }
+}

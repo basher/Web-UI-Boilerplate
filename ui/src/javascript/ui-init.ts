@@ -1,12 +1,11 @@
-// Dependencies.
-
-// Web components.
+// Web Components.
 import WebUIDisclosure from './web-components/webui-disclosure';
 import WebUIFetchHtml from './web-components/webui-fetch-html';
 import WebUIFormValidate from './web-components/webui-form-validate';
 import WebUIMakeClickable from './web-components/webui-make-clickable';
 import WebUIModal from './web-components/webui-modal';
 import WebUINotify from './web-components/webui-notify';
+import WebUIPredictiveSearch from './web-components/webui-predictive-search';
 import WebUIProse from './web-components/webui-prose';
 import WebUIRangeInput from './web-components/webui-range-input';
 import WebUIShare from './web-components/webui-share';
@@ -15,7 +14,6 @@ import WebUITabs from './web-components/webui-tabs';
 import WebUIVideoPlayer from './web-components/webui-video-player';
 
 // Modules.
-import Search from './modules/search';
 import Slider from './modules/slider';
 
 export const uiInit = (): void => {
@@ -32,6 +30,8 @@ export const uiInit = (): void => {
         customElements.define('webui-modal', WebUIModal);
     !customElements.get('webui-notify') &&
         customElements.define('webui-notify', WebUINotify);
+    !customElements.get('webui-predictive-search') &&
+        customElements.define('webui-predictive-search', WebUIPredictiveSearch);
     !customElements.get('webui-prose') &&
         customElements.define('webui-prose', WebUIProse);
     !customElements.get('webui-range-input') &&
@@ -45,6 +45,5 @@ export const uiInit = (): void => {
     !customElements.get('webui-video-player') &&
         customElements.define('webui-video-player', WebUIVideoPlayer);
 
-    Search.start();
     Slider.start();
 };

@@ -1,8 +1,6 @@
-import {
-    SearchHtml,
-    SearchDatalistHtml,
-    SearchAjaxHtml
-} from './Search';
+import { SearchHtml, SearchDatalistHtml } from './Search';
+import { WebUIPredictiveSearchHtml } from '../../6. Web Components Or Custom Elements/WebUI Predictive Search/WebUIPredictiveSearch';
+
 
 export default {
     title: 'Components/Search',
@@ -22,7 +20,7 @@ export const SearchDatalist = {
 };
 SearchDatalist.storyName = 'Predictive Search Using Datalist';
 
-export const SearchAjax = {
-    render: () => SearchAjaxHtml(),
+export const WebUIPredictiveSearch = {
+    render: () => WebUIPredictiveSearchHtml(),
 };
-SearchAjax.storyName = 'Predictive Search Using External API';
+WebUIPredictiveSearch.storyName = '<webui-predictive-search>';

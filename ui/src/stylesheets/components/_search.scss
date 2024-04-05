@@ -3,8 +3,8 @@
 Dependencies.
 ----------------------------------------------------------------------------
 */
-@use '../base' as *;
-@use '../mixins' as *;
+// @use '../base' as *;
+// @use '../mixins' as *;
 
 .search {
     .form {
@@ -22,26 +22,5 @@ Dependencies.
 
     .input {
         flex-basis: 100%;
-    }
-
-    &.is-js-enabled {
-        [type='submit'] {
-            display: none;
-        }
-    }
-
-    &__results {
-        margin-block-start: $gutter-m;
-
-        .grid {
-            @include responsive-grid-auto-columns($max-width: 10rem);
-        }
-    }
-
-    &__result {
-        &__link {
-            @include focus;
-            color: inherit;
-        }
     }
 }

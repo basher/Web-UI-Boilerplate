@@ -1,5 +1,4 @@
-import main from '../../javascript/config/main';
-import { addJSClass } from '../utils/progressive-enhancement';
+import main from '../config/main';
 import {
     ajaxAbortHandler,
     ajaxErrorHandler,
@@ -7,49 +6,26 @@ import {
 } from '../utils/ajax-helpers';
 import searchResults from '../templates/search-results';
 
-class Search {
-    private searchComponent: Element;
+export default class WebUIPredictiveSearch extends HTMLElement {
     private searchForm: HTMLFormElement | null;
     private searchInput: HTMLInputElement | null;
 
-    constructor(searchComponent: Element) {
-        this.searchComponent = searchComponent;
-        this.searchForm = this.searchComponent.querySelector('[role="search"]');
-        this.searchInput =
-            this.searchComponent.querySelector('[type="search"]');
+    constructor() {
+        super();
 
-        this.init();
-    }
+        this.searchForm = this.querySelector('[role="search"]');
+        this.searchInput = this.querySelector('[type="search"]');
 
-    public static start(): void {
-        const searchComponents = document.querySelectorAll(
-            '[data-module="search"]',
-        );
+        if (!this.searchForm || !this.searchInput) return;
 
-        searchComponents.forEach((searchComponent) => {
-            addJSClass(searchComponent);
-            const instance = new Search(searchComponent);
-            return instance;
+        ajaxEventHandler({
+            ajaxTrigger: this.searchInput,
+            eventType: 'keyup',
+            ajaxCallback: this.handleKeyUp,
         });
+
+        this.searchForm.addEventListener('submit', this);
     }
-
-    private init(): void {
-        this.searchForm?.addEventListener('submit', (e: Event) =>
-            this.handleSubmit(e),
-        );
-
-        this.searchInput &&
-            ajaxEventHandler({
-                ajaxTrigger: this.searchInput,
-                eventType: 'keyup',
-                ajaxCallback: this.handleKeyUp,
-            });
-    }
-
-    private handleSubmit = (e: Event): void => {
-        // Results are shown dynamically, so no need to submit.
-        e.preventDefault();
-    };
 
     private handleKeyUp = (ajaxContainer: HTMLElement): void => {
         const showAjaxSpinner = true;
@@ -113,6 +89,10 @@ class Search {
                 });
         }
     };
-}
 
-export default Search;
+    // Handle constructor() event listeners.
+    handleEvent(e: SubmitEvent) {
+        // Results are shown dynamically, so no need to submit.
+        e.preventDefault();
+    }
+}
