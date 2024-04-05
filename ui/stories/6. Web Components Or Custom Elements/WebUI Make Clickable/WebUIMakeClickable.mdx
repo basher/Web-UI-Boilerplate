@@ -4,13 +4,13 @@ import * as WebUIMakeClickable from './WebUIMakeClickable.stories';
 <Meta of={WebUIMakeClickable} />
 
 # `<webui-make-clickable>`
-- The entire custom element is made clickable via JavaScript.
-- CSS `focus-within` is utilised to add a focus indicator when the custom element, or any of its descendents, receives keyboard `focus`.
+- The entire Web Component is made clickable via JavaScript.
+- CSS `focus-within` is utilised to add a focus indicator when the Web Component, or any of its descendents, receives keyboard `focus`.
 
 ## Required and optional HTML  or `data-` attributes
 
 Attribute | Behaviour
 --- | ---
-`data-url` | Optional. Identifies the link whose URL is used for the click event. Fallback is the first link inside the custom element.
+`data-url` | Optional. Identifies the link whose URL is used for the click event. Fallback is the first link inside the Web Component.
 
 <Canvas of={WebUIMakeClickable.WebUIMakeClickable} />

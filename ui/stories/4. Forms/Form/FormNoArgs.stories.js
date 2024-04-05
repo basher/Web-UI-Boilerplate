@@ -19,7 +19,7 @@ export const WebUIFormValidate = {
         <p>
             See the
             <code>&lt;webui-form-validate&gt;</code>
-            Web Component / custom element.
+            Web Component.
         </p>
     `
 };

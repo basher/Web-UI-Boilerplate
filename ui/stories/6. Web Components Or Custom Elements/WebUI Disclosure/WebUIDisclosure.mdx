@@ -5,11 +5,11 @@ import * as WebUIDisclosure from './WebUIDisclosure.stories';
 
 # `<webui-disclosure>`
 - Shows/hides content using the HTML `hidden` attribute.
-- Use this custom element when [accordion](/story/components-accordion--accordion) or [tabs](/story/components-tabs--tabs) components cannot be used.
+- Use this Web Component when [accordion](/story/components-accordion--accordion) or [tabs](/story/components-tabs--tabs) components cannot be used.
 - Also see the [ARIA APG disclosure pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/).
 
 ## Accessibility considerations
-- The content can be hidden via the `ESC` key, or clicking outside the custom element. See the table below.
+- The content can be hidden via the `ESC` key, or clicking outside the Web Component. See the table below.
 
 ## Required and optional HTML  or `data-` attributes
 
@@ -19,7 +19,7 @@ Attribute | Behaviour
 `data-trigger` | Required. Button that shows/hides the content.
 `data-content` | Required. Content to be shown/hidden.
 `data-bind-escape-key` | Optional. `ESC` key hides the content.
-`data-bind-click-outside` | Optional. Hides the content when clicking anywhere outside the custom element.
+`data-bind-click-outside` | Optional. Hides the content when clicking anywhere outside the Web Component.
 
 <Canvas of={WebUIDisclosure.WebUIDisclosure} />
 <Controls of={WebUIDisclosure.WebUIDisclosure} />

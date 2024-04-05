@@ -33,7 +33,7 @@ export const WebUICarousel = {
         <p>
             See the
             <code>&lt;webui-carousel&gt;</code>
-            Web Component / custom element.
+            Web Component.
         </p>
     `
 };

@@ -22,7 +22,7 @@ export const WebUIPredictiveSearch = {
     render: () => `
         <p>
             See the <code>&lt;webui-predictive-search&gt;</code>
-            Web Component / custom element.
+            Web Component.
         </p>
     `
 };
