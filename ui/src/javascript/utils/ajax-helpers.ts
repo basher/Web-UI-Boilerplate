@@ -100,10 +100,10 @@ interface AjaxEvent {
 export const ajaxEventHandler = (arg: AjaxEvent): void => {
     const { ajaxTrigger, eventType, ajaxCallback } = arg;
 
-    // Value of 'data-ajax-trigger' must match 'data-ajax-container' so that an Ajax trigger (e.g. button) loads content into the correct container.
-    const target = ajaxTrigger?.dataset.ajaxTrigger;
+    // Value of 'data-fetch-trigger' must match 'data-fetch-container' so that an Ajax trigger (e.g. button) loads content into the correct container.
+    const target = ajaxTrigger?.dataset.fetchTarget;
     const ajaxContainer = document.querySelector(
-        `[data-ajax-container="${target}"]`,
+        `[data-fetch-container="${target}"]`,
     ) as HTMLElement;
 
     ajaxTrigger.addEventListener(eventType, () => {

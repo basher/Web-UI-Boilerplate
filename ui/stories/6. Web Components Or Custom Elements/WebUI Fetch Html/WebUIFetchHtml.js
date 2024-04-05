@@ -4,8 +4,7 @@ export const WebUIFetchHtmlHtml = () => `
 <webui-fetch-html>
     <button
         class="button button--text button--primary"
-        data-trigger"
-        data-trigger-target="test-1"
+        data-fetch-target="test-1"
     >
         Fetch HTML
     </button>
@@ -13,7 +12,7 @@ export const WebUIFetchHtmlHtml = () => `
     <div
         role="region"
         aria-live="polite"
-        data-target="test-1"
+        data-fetch-container="test-1"
     ></div>
 </webui-fetch-html>
 `;

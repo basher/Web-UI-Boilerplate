@@ -7,10 +7,6 @@ Dependencies.
 @use '../mixins' as *;
 
 .ajax {
-    &__container {
-        //
-    }
-
     &__error {
         color: $color-error;
     }

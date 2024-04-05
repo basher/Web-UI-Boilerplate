@@ -4,37 +4,21 @@ import {
     ajaxEventHandler,
 } from '../utils/ajax-helpers';
 
-class AjaxLoader {
-    private ajaxLoader: Element;
-    private ajaxTrigger: HTMLButtonElement | null;
+export default class WebUIFetchHtml extends HTMLElement {
+    private fetchTrigger: HTMLButtonElement | null;
 
-    constructor(ajaxLoader: Element) {
-        this.ajaxLoader = ajaxLoader;
-        this.ajaxTrigger = this.ajaxLoader.querySelector(
-            '[data-button="ajax-trigger"]',
-        );
+    constructor() {
+        super();
 
-        this.init();
-    }
+        this.fetchTrigger = this.querySelector('[data-fetch-target]');
 
-    public static start(): void {
-        const ajaxLoaders = document.querySelectorAll(
-            '[data-module="demo-ajax-fetch-html"]',
-        );
+        if (!this.fetchTrigger) return;
 
-        ajaxLoaders.forEach((ajaxLoader) => {
-            const instance = new AjaxLoader(ajaxLoader);
-            return instance;
+        ajaxEventHandler({
+            ajaxTrigger: this.fetchTrigger,
+            eventType: 'click',
+            ajaxCallback: this.fetchHtmlFragment,
         });
-    }
-
-    private init(): void {
-        this.ajaxTrigger &&
-            ajaxEventHandler({
-                ajaxTrigger: this.ajaxTrigger,
-                eventType: 'click',
-                ajaxCallback: this.fetchHtmlFragment,
-            });
     }
 
     private fetchHtmlFragment(ajaxContainer: HTMLElement): void {
@@ -64,5 +48,3 @@ class AjaxLoader {
             });
     }
 }
-
-export default AjaxLoader;
