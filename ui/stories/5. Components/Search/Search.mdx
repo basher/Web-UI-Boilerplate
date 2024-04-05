@@ -7,7 +7,7 @@ import * as WebUIPredictiveSearch from '../../6. Web Components Or Custom Elemen
 # Search
 <Canvas of={Search.Search} />
 
-## Predictive search (with datalist)
+## Predictive search (using `<datalist>`)
 
 ### Accessibility considerations
 - See a [comparison of datalist versus ARIA combobox](https://www.webaxe.org/datalist-over-aria-combobox/).
@@ -15,9 +15,9 @@ import * as WebUIPredictiveSearch from '../../6. Web Components Or Custom Elemen
 
 <Canvas of={Search.SearchDatalist} />
 
-## Predictive search (with dynamic results from API)
+## Predictive search (with dynamic results from an API)
 - Uses the [`<webui-predictive-search>`](/docs/web-components-or-custom-elements-webui-predictive-search--docs) custom element.
-- When JavaScript is enabled, form submit is disabled and submit button is hidden.
+- When JavaScript is enabled, form submit is disabled and the submit button is hidden.
 
 ### Accessibility considerations
 - Dynamic search results are displayed in an [aria-live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
