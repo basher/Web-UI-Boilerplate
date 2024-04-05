@@ -21,9 +21,8 @@ SearchDatalist.storyName = 'Predictive Search Using Datalist';
 export const WebUIPredictiveSearch = {
     render: () => `
         <p>
-            See the
-            <a href="/?path=/docs/web-components-or-custom-elements-webui-predictive-search--docs"><code>&lt;webui-predictive-search&gt;</code></a>
-            custom element.
+            See the <code>&lt;webui-predictive-search&gt;</code>
+            Web Component / custom element.
         </p>
     `
 };

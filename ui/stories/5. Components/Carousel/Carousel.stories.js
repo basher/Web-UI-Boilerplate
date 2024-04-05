@@ -32,8 +32,8 @@ export const WebUICarousel = {
     render: () => `
         <p>
             See the
-            <a href="/?path=/docs/web-components-or-custom-elements-webui-carousel--docs"><code>&lt;webui-carousel&gt;</code></a>
-            custom element.
+            <code>&lt;webui-carousel&gt;</code>
+            Web Component / custom element.
         </p>
     `
 };

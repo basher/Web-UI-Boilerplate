@@ -18,8 +18,8 @@ export const WebUIFormValidate = {
     render: () => `
         <p>
             See the
-            <a href="/?path=/docs/web-components-or-custom-elements-webui-form-validate--docs"><code>&lt;webui-form-validate&gt;</code></a>
-            custom element.
+            <code>&lt;webui-form-validate&gt;</code>
+            Web Component / custom element.
         </p>
     `
 };
