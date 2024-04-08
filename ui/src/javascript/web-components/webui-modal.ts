@@ -48,6 +48,7 @@ export default class WebUIModal extends HTMLElement {
             !this.dialog.contains(target) &&
             !this.btnModalOpen?.contains(target)
         ) {
+            // Close modal when clicking outside.
             this.handleClose();
         }
     }
@@ -72,12 +73,12 @@ export default class WebUIModal extends HTMLElement {
 
     // Handle (global) event listeners which are not part of this web component.
     connectedCallback() {
-        window.addEventListener('click', (e: MouseEvent) =>
+        document.addEventListener('click', (e: MouseEvent) =>
             this.handleGlobalClick(e),
         );
     }
 
     disconnectedCallback() {
-        window.removeEventListener('click', this.handleGlobalClick);
+        document.removeEventListener('click', this.handleGlobalClick);
     }
 }

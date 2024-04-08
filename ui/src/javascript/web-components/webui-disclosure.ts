@@ -85,16 +85,16 @@ export default class WebUIDisclosure extends HTMLElement {
 
     // Handle (global) event listeners which are not part of this web component.
     connectedCallback() {
-        window.addEventListener('keyup', (e: KeyboardEvent) =>
+        document.addEventListener('keyup', (e: KeyboardEvent) =>
             this.handleGlobalKeyup(e),
         );
-        window.addEventListener('click', (e: MouseEvent) =>
+        document.addEventListener('click', (e: MouseEvent) =>
             this.handleGlobalClick(e),
         );
     }
 
     disconnectedCallback() {
-        window.removeEventListener('keyup', this.handleGlobalKeyup);
-        window.removeEventListener('click', this.handleGlobalClick);
+        document.removeEventListener('keyup', this.handleGlobalKeyup);
+        document.removeEventListener('click', this.handleGlobalClick);
     }
 }
