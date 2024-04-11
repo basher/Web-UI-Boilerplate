@@ -22,13 +22,13 @@ export default class WebUIFetchHtml extends HTMLElement {
     }
 
     private fetchHtmlFragment(ajaxContainer: HTMLElement): void {
-        const showAjaxSpinner = true;
+        const showAjaxLoader = true;
 
         fetch('ajax/ajax.html', {
             method: 'GET',
             signal: ajaxAbortHandler({
                 ajaxContainer,
-                showAjaxSpinner,
+                showAjaxLoader,
             }),
         })
             .then((response) => {

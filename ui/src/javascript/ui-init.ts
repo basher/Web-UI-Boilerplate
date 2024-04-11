@@ -1,4 +1,5 @@
 // Web Components.
+import WebUIAjaxLoader from './web-components/webui-ajax-loader';
 import WebUICarousel from './web-components/webui-carousel';
 import WebUIDisclosure from './web-components/webui-disclosure';
 import WebUIFetchHtml from './web-components/webui-fetch-html';
@@ -16,6 +17,8 @@ import WebUIVideoPlayer from './web-components/webui-video-player';
 
 export const uiInit = (): void => {
     // Define Web Components
+    !customElements.get('webui-ajax-loader') &&
+        customElements.define('webui-ajax-loader', WebUIAjaxLoader);
     !customElements.get('webui-carousel') &&
         customElements.define('webui-carousel', WebUICarousel);
     !customElements.get('webui-disclosure') &&

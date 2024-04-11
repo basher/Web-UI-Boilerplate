@@ -3,9 +3,12 @@ import { Meta } from '@storybook/blocks';
 <Meta title="Web Components Or Custom Elements/Using Web Components" />
 
 # HTML Web Components
-- The Web Components in this boilerplate are simply `custom elements` that wrap normal HTML markup, therefore providing a progressive enhancement layer via JavaScript.
-- They are **not** empty shells that only work with JavaScript.
-- They also don't make use of the [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
+- The Web Components in this boilerplate are `custom elements` that wrap normal HTML markup, therefore providing a progressive enhancement layer via JavaScript.
+- They are **not** empty shells that only work with JavaScript. <sup>1</sup>
+- They also don't make use of the [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM). <sup>2</sup>
+
+> <sup>1</sup> <sup>2</sup>
+> The [`<webui-ajax-loader>`](/docs/web-components-or-custom-elements-webui-ajax-loader--docs) Web Component is entirely constructed via JavaScript, and uses the shadow DOM.
 
 ## Additional reading
 - Great explanation by Jeremy Keith (and others) about the power of [HTML Web Components](https://adactio.com/journal/20618).

@@ -1,0 +1,34 @@
+/*
+----------------------------------------------------------------------------
+Styles for the <webui-ajax-loader> custom element itself.
+
+Shadow root styles for the <svg> are located in the Web Component JavaScript class.
+----------------------------------------------------------------------------
+*/
+/*
+----------------------------------------------------------------------------
+Dependencies.
+----------------------------------------------------------------------------
+*/
+// @use '../base' as *;
+// @use '../mixins' as *;
+
+webui-ajax-loader {
+    animation: 2s linear infinite svg-animation;
+    block-size: 3rem;
+    display: block;
+    fill: currentColor;
+    inline-size: 3rem;
+    margin: auto;
+
+    /* stylelint-disable-next-line order/order */
+    @keyframes svg-animation {
+        0% {
+            transform: rotateZ(0deg);
+        }
+
+        100% {
+            transform: rotateZ(360deg);
+        }
+    }
+}

@@ -1,32 +1,10 @@
-import main from '../../javascript/config/main';
-
-/**
- * @const {HTMLDivElement} - programatically build Ajax spinner in full here, as it cannot be referenced from the SVG sprite because the <circle> element would be in the shadow DOM, and therefore impossible to style.
- * @returns {HTMLElement}
- */
-const ajaxSpinner = document.createElement('div') as HTMLElement;
-const ajaxSpinnerContent = `
-    <svg
-        role="img"
-        focusable="false"
-        class="ajax__spinner"
-        data-element="ajax-spinner"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 0 100 100"
-    >
-        <title>loading...</title>
-        <circle cx="50" cy="50" r="47"/>
-    </svg>
-`;
-ajaxSpinner.classList.add('ajax__spinner-container');
-ajaxSpinner.innerHTML = ajaxSpinnerContent;
+import main from '../config/main';
 
 /**
  * Function - handle Fetch aborts/timeouts, using AbortController with a timeout - see https://developer.mozilla.org/en-US/docs/Web/API/AbortController.
  *
  * @param {HTMLElement} [ajaxContainer] - DOM node into which Ajax loader is injected.
- * @param {boolean} [showAjaxSpinner] - show loading spinner.
+ * @param {boolean} [showAjaxLoader] - show Ajax loader.
  * @param {number} [ajaxTimeout] - timeout for Fetch before aborting request (default = 5000).
  *
  * @return {AbortSignal}
@@ -36,15 +14,16 @@ ajaxSpinner.innerHTML = ajaxSpinnerContent;
  */
 interface AjaxAbort {
     ajaxContainer?: HTMLElement | null;
-    showAjaxSpinner?: boolean;
+    showAjaxLoader?: boolean;
     ajaxTimeout?: number;
 }
 
 export const ajaxAbortHandler = (arg: AjaxAbort): AbortSignal => {
-    const { ajaxContainer, showAjaxSpinner, ajaxTimeout } = arg;
+    const { ajaxContainer, showAjaxLoader, ajaxTimeout } = arg;
 
-    if (showAjaxSpinner && ajaxContainer) {
-        ajaxContainer.appendChild(ajaxSpinner);
+    if (showAjaxLoader && ajaxContainer) {
+        const loader = document.createElement('webui-ajax-loader');
+        ajaxContainer.appendChild(loader);
     }
 
     const timeout = ajaxTimeout === undefined ? 5000 : ajaxTimeout;

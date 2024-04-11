@@ -28,7 +28,7 @@ export default class WebUIPredictiveSearch extends HTMLElement {
     }
 
     private handleKeyUp = (ajaxContainer: HTMLElement): void => {
-        const showAjaxSpinner = true;
+        const showAjaxLoader = true;
         const query = this.searchInput?.value.toLowerCase();
 
         // API paths would normally be defined in a global config.
@@ -47,7 +47,7 @@ export default class WebUIPredictiveSearch extends HTMLElement {
                 },
                 signal: ajaxAbortHandler({
                     ajaxContainer,
-                    showAjaxSpinner,
+                    showAjaxLoader,
                 }),
             })
                 .then((response) => {

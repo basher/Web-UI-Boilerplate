@@ -1,0 +1,12 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as WebUIAjaxLoader from './WebUIAjaxLoader.stories';
+
+<Meta of={WebUIAjaxLoader} />
+
+# `<webui-ajax-loader>`
+- Renders an animated loader via JavaScript while Ajax requests are being handled.
+
+## Accessibility considerations
+- The Ajax loading spinner is an `<svg>` with an accessible `loading` name.
+
+<Canvas of={WebUIAjaxLoader.WebUIAjaxLoader} />
