@@ -14,21 +14,50 @@ Dependencies.
 // @use '../mixins' as *;
 
 webui-ajax-loader {
-    animation: 2s linear infinite svg-animation;
+    animation: 1.2s linear infinite loader-animation;
     block-size: 3rem;
     display: block;
-    fill: currentColor;
     inline-size: 3rem;
     margin: auto;
 
+    &::part(svg) {
+        animation: 1.2s ease-in-out infinite both svg-animation;
+        fill: transparent;
+        stroke: currentColor;
+        stroke-dasharray: 300;
+        stroke-dashoffset: 75;
+        stroke-linecap: round;
+        stroke-width: 0.375rem;
+        transform-origin: 50% 50%;
+    }
+
     /* stylelint-disable-next-line order/order */
-    @keyframes svg-animation {
+    @keyframes loader-animation {
         0% {
             transform: rotateZ(0deg);
         }
 
         100% {
             transform: rotateZ(360deg);
+        }
+    }
+
+    @keyframes svg-animation {
+        0%,
+        25% {
+            stroke-dashoffset: 280;
+            transform: rotate(0);
+        }
+
+        50%,
+        75% {
+            stroke-dashoffset: 75;
+            transform: rotate(45deg);
+        }
+
+        100% {
+            stroke-dashoffset: 280;
+            transform: rotate(360deg);
         }
     }
 }
