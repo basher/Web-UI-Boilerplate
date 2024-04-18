@@ -7,7 +7,6 @@ export default class WebUIAjaxLoader extends HTMLElement {
         shadow.innerHTML = `
             <svg
                 role="img"
-                class="icon"
                 focusable="false"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"

@@ -111,6 +111,7 @@ export default class FormValidate extends HTMLElement {
         if (e.type === 'submit') {
             this.handleSubmit(e);
         }
+
         if (e.type === 'reset') {
             this.handleReset();
         }
