@@ -16,6 +16,7 @@ export default class FormValidate extends HTMLElement {
         this.form.noValidate = true;
 
         this.form.addEventListener('submit', this);
+        this.form.addEventListener('reset', this);
         this.form.addEventListener('blur', this, true);
     }
 
@@ -34,6 +35,16 @@ export default class FormValidate extends HTMLElement {
                 '[aria-invalid]',
             ) as HTMLElement;
             firstError?.focus();
+        }
+    }
+
+    private handleReset(): void {
+        if (!this.form?.checkValidity()) {
+            [...(this.form?.elements as any)].forEach((field) => {
+                if (!field.checkValidity()) {
+                    this.removeError(field);
+                }
+            });
         }
     }
 
@@ -99,6 +110,9 @@ export default class FormValidate extends HTMLElement {
     handleEvent(e: MouseEvent) {
         if (e.type === 'submit') {
             this.handleSubmit(e);
+        }
+        if (e.type === 'reset') {
+            this.handleReset();
         }
 
         if (e.type === 'blur') {

@@ -16,7 +16,7 @@ export const WebUIFormValidateHtml = () => `
         <div class="form__field">
             <label for="input-tel" class="label">
                 Telephone input label
-                <span class="label__hint">UK number, between 9 and 13 digits, can include spaces</span>
+                <span class="label__hint">UK number, usually 11 digits, can also include spaces</span>
             </label>
             <input
                 type="tel"
