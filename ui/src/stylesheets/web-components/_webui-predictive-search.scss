@@ -7,8 +7,10 @@ Dependencies.
 @use '../mixins' as *;
 
 webui-predictive-search {
-    [type='submit'] {
-        display: none;
+    &:defined {
+        [type='submit'] {
+            display: none;
+        }
     }
 
     .search__results {

@@ -54,7 +54,7 @@ export default class WebUIModal extends HTMLElement {
     }
 
     // Handle constructor() event listeners.
-    handleEvent(e: MouseEvent) {
+    public handleEvent(e: MouseEvent) {
         const target = e.currentTarget as HTMLButtonElement;
 
         // Click 'open' button.
@@ -72,13 +72,13 @@ export default class WebUIModal extends HTMLElement {
     }
 
     // Handle (global) event listeners which are not part of this web component.
-    connectedCallback() {
+    public connectedCallback() {
         document.addEventListener('click', (e: MouseEvent) =>
             this.handleGlobalClick(e),
         );
     }
 
-    disconnectedCallback() {
+    public disconnectedCallback() {
         document.removeEventListener('click', this.handleGlobalClick);
     }
 }

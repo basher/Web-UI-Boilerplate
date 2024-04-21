@@ -4,7 +4,6 @@ export const WebUIImageGalleryHtml = () => `
         <li>
             <webui-modal>
                 <a
-                    class="image-gallery__link"
                     href="https://dummyimage.com/1140x810&text=image+1"
                     data-open
                 >
@@ -73,7 +72,6 @@ export const WebUIImageGalleryHtml = () => `
         <li>
             <webui-modal>
                 <a
-                    class="image-gallery__link"
                     href="https://dummyimage.com/1140x810&text=image+2"
                     data-open
                 >
@@ -142,7 +140,6 @@ export const WebUIImageGalleryHtml = () => `
         <li>
             <webui-modal>
                 <a
-                    class="image-gallery__link"
                     href="https://dummyimage.com/1140x810&text=image+3"
                     data-open
                 >
@@ -211,7 +208,6 @@ export const WebUIImageGalleryHtml = () => `
         <li>
             <webui-modal>
                 <a
-                    class="image-gallery__link"
                     href="https://dummyimage.com/1140x810&text=image+4"
                     data-open
                 >
@@ -280,7 +276,6 @@ export const WebUIImageGalleryHtml = () => `
         <li>
             <webui-modal>
                 <a
-                    class="image-gallery__link"
                     href="https://dummyimage.com/1140x810&text=image+5"
                     data-open
                 >

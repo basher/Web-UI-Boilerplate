@@ -74,7 +74,7 @@ export default class WebUIDisclosure extends HTMLElement {
     }
 
     // Handle constructor() event listeners.
-    handleEvent(e: MouseEvent) {
+    public handleEvent(e: MouseEvent) {
         const target = e.currentTarget as HTMLElement;
         const isExpanded =
             target?.getAttribute('aria-expanded') === 'true' || false;
@@ -84,7 +84,7 @@ export default class WebUIDisclosure extends HTMLElement {
     }
 
     // Handle (global) event listeners which are not part of this web component.
-    connectedCallback() {
+    public connectedCallback() {
         document.addEventListener('keyup', (e: KeyboardEvent) =>
             this.handleGlobalKeyup(e),
         );
@@ -93,7 +93,7 @@ export default class WebUIDisclosure extends HTMLElement {
         );
     }
 
-    disconnectedCallback() {
+    public disconnectedCallback() {
         document.removeEventListener('keyup', this.handleGlobalKeyup);
         document.removeEventListener('click', this.handleGlobalClick);
     }

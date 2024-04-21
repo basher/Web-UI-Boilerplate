@@ -8,7 +8,7 @@ export default class WebUIMakeClickable extends HTMLElement {
     }
 
     // Handle constructor() event listeners.
-    handleEvent(e: MouseEvent) {
+    public handleEvent(e: MouseEvent) {
         if (e.target !== this.link) {
             this.link?.click();
         }

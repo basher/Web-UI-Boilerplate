@@ -312,7 +312,7 @@ export default class WebUICarousel extends HTMLElement {
     }
 
     // Handle constructor() event listeners.
-    handleEvent(e: MouseEvent) {
+    public handleEvent(e: MouseEvent) {
         //
     }
 }

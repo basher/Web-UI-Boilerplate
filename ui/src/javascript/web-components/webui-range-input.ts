@@ -24,7 +24,7 @@ export default class WebUIRangeInput extends HTMLElement {
     }
 
     // Handle constructor() event listeners.
-    handleEvent() {
+    public handleEvent() {
         this.rangeInput &&
             this.rangeOutput &&
             this.handleValidRanges(this.rangeInput, this.rangeOutput);

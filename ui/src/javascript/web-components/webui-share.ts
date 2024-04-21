@@ -54,7 +54,7 @@ export default class WebUIShare extends HTMLElement {
     }
 
     // Handle constructor() event listeners.
-    handleEvent(e: MouseEvent) {
+    public handleEvent(e: MouseEvent) {
         const target = e.currentTarget as HTMLButtonElement;
 
         // Click 'share' button.

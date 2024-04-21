@@ -3,11 +3,14 @@ import { Meta } from '@storybook/blocks';
 <Meta title="Web Components Or Custom Elements/Using Web Components" />
 
 # HTML Web Components
-- The Web Components in this boilerplate are `custom elements` that wrap normal HTML markup, therefore providing a progressive enhancement layer via JavaScript.
-- They are **not** empty shells that only work with JavaScript. <sup>1</sup>
-- They also don't make use of the [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM). <sup>2</sup>
+- The Web Components in this boilerplate are `custom elements` that wrap normal HTML markup, therefore providing a progressive enhancement layer via JavaScript. <sup>1</sup>
+- They are **not** empty shells that only work with JavaScript. <sup>2</sup>
+- They also don't make use of the [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM). <sup>3</sup>
 
-> <sup>1</sup> <sup>2</sup>
+> <sup>1</sup>
+> Global CSS is inherited by the Web Components because they contain regular HTML markup. Additional CSS scoping & encapsulation is provided by the custom element names, enabling styles not to "leak" out into the global scope.
+
+> <sup>2</sup> <sup>3</sup>
 > The [`<webui-ajax-loader>`](/docs/web-components-or-custom-elements-webui-ajax-loader--docs) Web Component is entirely constructed via JavaScript, and uses the shadow DOM.
 
 ## Additional reading

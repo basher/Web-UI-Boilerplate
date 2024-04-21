@@ -7,9 +7,16 @@ Dependencies.
 @use '../mixins' as *;
 
 webui-image-gallery {
-    .image-gallery__link {
+    [data-open] {
         @include focus;
         display: block;
+    }
+
+    // Without JS, still show the modal open link so the target opens in the browser window rather than a modal.
+    &:not(:defined) {
+        webui-modal [data-open] {
+            display: block;
+        }
     }
 
     .grid {

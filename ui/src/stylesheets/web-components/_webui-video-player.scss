@@ -22,6 +22,17 @@ webui-video-player {
         }
     }
 
+    // Without JS, still show the modal open link so the target opens in the browser window rather than a modal.
+    &:not(:defined) {
+        webui-modal [data-open] {
+            display: inline-block;
+        }
+
+        .icon {
+            display: none;
+        }
+    }
+
     .modal__dialog {
         inline-size: 100%;
     }

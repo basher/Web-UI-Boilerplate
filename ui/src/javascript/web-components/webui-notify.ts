@@ -8,7 +8,7 @@ export default class WebUINotify extends HTMLElement {
     }
 
     // Handle constructor() event listeners.
-    handleEvent() {
+    public handleEvent() {
         this.setAttribute('hidden', '');
     }
 }

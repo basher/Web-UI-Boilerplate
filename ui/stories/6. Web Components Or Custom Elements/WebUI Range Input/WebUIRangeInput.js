@@ -8,12 +8,13 @@ export const WebUIRangeInputHtml = () => `
             class="input"
             type="range"
             id="range-input"
-            value="1"
-            min="1"
-            max="10"
-            aria-valuenow="1"
-            aria-valuemin="1"
-            aria-valuemax="10"
+            value="10"
+            min="10"
+            max="100"
+            step="10"
+            aria-valuenow="10"
+            aria-valuemin="10"
+            aria-valuemax="100"
         />
         <output></output>
     </div>

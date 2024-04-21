@@ -75,7 +75,7 @@ export default class WebUIVideoPlayer extends HTMLElement {
     }
 
     // Handle constructor() event listeners.
-    handleEvent(e: MouseEvent) {
+    public handleEvent(e: MouseEvent) {
         this.handlePlay(e);
     }
 }

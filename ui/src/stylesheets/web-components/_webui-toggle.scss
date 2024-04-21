@@ -7,6 +7,10 @@ Dependencies.
 // @use '../mixins' as *;
 
 webui-toggle {
+    &:not(:defined) {
+        display: none;
+    }
+
     [role='switch'] {
         align-items: center;
         border: $border-width-s solid;

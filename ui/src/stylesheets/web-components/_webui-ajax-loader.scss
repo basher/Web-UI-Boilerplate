@@ -1,12 +1,5 @@
 /*
 ----------------------------------------------------------------------------
-Styles for the <webui-ajax-loader> custom element itself.
-
-Shadow root styles for the <svg> are located in the Web Component JavaScript class.
-----------------------------------------------------------------------------
-*/
-/*
-----------------------------------------------------------------------------
 Dependencies.
 ----------------------------------------------------------------------------
 */
@@ -20,6 +13,7 @@ webui-ajax-loader {
     inline-size: 3rem;
     margin: auto;
 
+    // Pseudo element reprents SVG in shadow DOM with matching part attribute.
     &::part(svg) {
         animation: 1.2s ease-in-out infinite both svg-animation;
         fill: transparent;

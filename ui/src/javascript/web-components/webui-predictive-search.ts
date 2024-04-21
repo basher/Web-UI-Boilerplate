@@ -91,7 +91,7 @@ export default class WebUIPredictiveSearch extends HTMLElement {
     };
 
     // Handle constructor() event listeners.
-    handleEvent(e: SubmitEvent) {
+    public handleEvent(e: SubmitEvent) {
         // Results are shown dynamically, so no need to submit.
         e.preventDefault();
     }
