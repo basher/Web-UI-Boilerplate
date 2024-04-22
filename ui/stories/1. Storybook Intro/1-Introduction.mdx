@@ -18,7 +18,7 @@ Just plain vanilla code. 😜
 
 ## Code authoring guidelines & accessibility
 - All UI components are authored with **semantic HTML5** markup.
-- Some components are **progressively enhanced** with JavaScript and `WAI-ARIA` as appropriate. <sup>1</sup>
+- Some components are **progressively enhanced** with JavaScript and `WAI-ARIA` as appropriate. <sup>1, 2</sup>
 - The HTML markup uses the `BEM` methodology to provide CSS namespacing.
 - Visual styling is minimal & unopinionated.
 - The CSS is authored with as little code as necessary, making full use of the CSS cascade and inheritance.
@@ -26,6 +26,9 @@ Just plain vanilla code. 😜
 
 > <sup>1</sup>
 > The JavaScript-enhanced components have been authored as [HTML Web Components](/docs/web-components-or-custom-elements-using-web-components--docs), also known as `custom elements`.
+
+> <sup>2</sup>
+> To test how these enhanced components behave with JavaScript disabled, comment out the call to `uiInit()` in `src/javascript/index.ts`.
 
 ### Accessibility testing
 Storybook comes with 2 default accessibility testing tools:

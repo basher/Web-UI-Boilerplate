@@ -80,8 +80,7 @@ ${
 </div>
 
 ${
-    // Output computed HSL colours when 'StorybookLoaded' custom event has fired.
-    window.addEventListener('StorybookLoaded',
+    window.addEventListener('DOMContentLoaded',
         () => {
             const styledSpan = document.querySelectorAll('.styled');
             styledSpan.forEach((span) => {

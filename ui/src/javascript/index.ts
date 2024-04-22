@@ -14,11 +14,3 @@ if (browserSupportsAllFeatures()) {
         .then(() => uiInit())
         .catch((e) => console.error(e));
 }
-
-// Run UI module instantition ONCE when each Storybook story has loaded.
-const storybookUIinit = (): void => {
-    console.log('Storybook custom event fired...');
-    uiInit();
-};
-// 'StorybookLoaded' is an event that is dispatched from Storybook.
-window.addEventListener('StorybookLoaded', storybookUIinit, false);
