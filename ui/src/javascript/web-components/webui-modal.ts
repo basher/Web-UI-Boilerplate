@@ -35,9 +35,6 @@ export default class WebUIModal extends HTMLElement {
 
     private handleClose(): void {
         this.dialog?.close();
-        // Set focus back on button that opened modal.
-        this.btnModalOpen?.focus();
-
         document.body.classList.remove(this.classNameModalOpen);
     }
 
@@ -55,7 +52,7 @@ export default class WebUIModal extends HTMLElement {
 
     private handleGlobalKeyup(e: KeyboardEvent): void {
         if (e.code === 'Escape') {
-            document.body.classList.remove(this.classNameModalOpen);
+            this.handleClose();
         }
     }
 
