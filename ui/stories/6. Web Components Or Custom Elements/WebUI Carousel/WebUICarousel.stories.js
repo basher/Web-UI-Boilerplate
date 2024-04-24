@@ -8,9 +8,9 @@ export default {
         },
     },
     argTypes: {
+        showPrevNextButtons: { control: 'boolean' },
         showSlideCount: { control: 'boolean' },
         showSlideCountPips: { control: 'boolean' },
-        showPrevNextButtons: { control: 'boolean' },
     },
 };
 

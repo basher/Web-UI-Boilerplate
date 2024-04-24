@@ -1,52 +1,29 @@
-type CarouselConfig = {
-    showSlideCount: boolean;
-    showSlideCountPips: boolean;
-    showPrevNextButtons: boolean;
-};
-
 export default class WebUICarousel extends HTMLElement {
     private carousel: HTMLUListElement | null;
     private slides: NodeListOf<HTMLElement>;
+    private hasPrevNextButtons?: boolean;
+    private hasSlideCount?: boolean;
+    private hasSlideCountPips?: boolean;
     private visibleSlideClass: string;
     private currentSlideClass: string;
     private currentPipClass: string;
-
-    private config: CarouselConfig = {
-        showSlideCount: false,
-        showSlideCountPips: false,
-        showPrevNextButtons: false,
-    };
 
     constructor() {
         super();
 
         this.carousel = this.querySelector('.carousel');
         this.slides = this.querySelectorAll('.carousel__slide');
+        this.hasPrevNextButtons = this.hasAttribute('data-prev-next-buttons');
+        this.hasSlideCount = this.hasAttribute('data-slide-count');
+        this.hasSlideCountPips = this.hasAttribute('data-slide-count-pips');
+
         this.visibleSlideClass = 'is-visible';
         this.currentSlideClass = 'is-current';
         this.currentPipClass = 'is-current';
 
         if (!this.carousel || this.slides.length === 0) return;
 
-        this.initConfiguration();
         this.init();
-    }
-
-    private initConfiguration(): void {
-        // HTML 'data-' attribute flags.
-        const flags = {
-            showSlideCount: 'data-slide-count',
-            showSlideCountPips: 'data-slide-count-pips',
-            showPrevNextButtons: 'data-prev-next-buttons',
-        };
-
-        for (const prop in flags) {
-            if (Object.prototype.hasOwnProperty.call(flags, prop)) {
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                // @ts-ignore
-                this.config[prop] = this.getBoolAttribute(flags[prop]);
-            }
-        }
     }
 
     private init(): void {
@@ -54,17 +31,17 @@ export default class WebUICarousel extends HTMLElement {
         this.setVisibleSlide();
 
         // Show slide counter (text).
-        if (this.config.showSlideCount) {
+        if (this.hasSlideCount) {
             this.showSlideCount();
         }
 
         // Show slide counter (coins/pips).
-        if (this.config.showSlideCountPips) {
+        if (this.hasSlideCountPips) {
             this.showSlideCountPips();
         }
 
         // Show PREV/NEXT buttons.
-        if (this.config.showPrevNextButtons) {
+        if (this.hasPrevNextButtons) {
             this.showPrevNextButtons();
         }
 
@@ -103,7 +80,7 @@ export default class WebUICarousel extends HTMLElement {
                         entry.target.classList.remove(this.visibleSlideClass);
 
                         // When using PREV/NEXT buttons, make clickable elements inside non-visible slides non-focusable. This enables keyboard :FOCUS via TAB key to the "current" slide.
-                        if (this.config.showPrevNextButtons) {
+                        if (this.hasPrevNextButtons) {
                             focusableItems.forEach((focusableItem) => {
                                 focusableItem.setAttribute('tabIndex', '-1');
                             });
@@ -113,7 +90,7 @@ export default class WebUICarousel extends HTMLElement {
                     entry.target.classList.add(this.visibleSlideClass);
 
                     // Reinstate focusability when slides are visible.
-                    if (this.config.showPrevNextButtons) {
+                    if (this.hasPrevNextButtons) {
                         focusableItems.forEach((focusableItem) => {
                             focusableItem.removeAttribute('tabIndex');
                         });
@@ -305,14 +282,5 @@ export default class WebUICarousel extends HTMLElement {
                     break;
             }
         });
-    }
-
-    private getBoolAttribute(name: string): boolean {
-        return this.getAttribute(name) === 'true';
-    }
-
-    // Handle constructor() event listeners.
-    public handleEvent(e: MouseEvent) {
-        //
     }
 }

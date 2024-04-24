@@ -11,9 +11,9 @@ const style = `
 export const WebUICarouselHtml = (args) => `
 ${style}
 <webui-carousel
-    ${args.showSlideCount === true ? 'data-slide-count="true"' : ''}
-    ${args.showSlideCountPips === true ? 'data-slide-count-pips="true"' : ''}
-    ${args.showPrevNextButtons === true ? 'data-prev-next-buttons="true"' : ''}
+    ${args.showPrevNextButtons === true ? 'data-prev-next-buttons' : ''}
+    ${args.showSlideCount === true ? 'data-slide-count' : ''}
+    ${args.showSlideCountPips === true ? 'data-slide-count-pips' : ''}
 >
     <section class="carousel-wrapper" aria-label="[meaningful label for carousel]"
     >
