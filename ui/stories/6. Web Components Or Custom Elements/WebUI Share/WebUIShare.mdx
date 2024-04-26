@@ -8,6 +8,8 @@ import * as WebUIShare from './WebUIShare.stories';
 - Fallback behaviour in non-supporting browsers allows user to copy the URL.
 - This Web Component contains a [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs).
 
+<Canvas of={WebUIShare.WebUIShare} />
+
 ## Required and optional HTML  or `data-` attributes
 
 - In addition to the `data-` attributes used with the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) Web Component:
@@ -16,8 +18,6 @@ Attribute | Behaviour
 --- | ---
 `data-url` | Optional. URL of a different page to be shared.
 `data-title` | Optional. Title of the different page.
-
-<Canvas of={WebUIShare.WebUIShare} />
 
 ## `<webui-share>` another URL
 <Canvas of={WebUIShare.WebUIShareAnotherUrl} />

@@ -4,6 +4,7 @@ import * as WebUITabs from './WebUITabs.stories';
 <Meta of={WebUITabs} />
 
 # `<webui-tabs>`
+<Canvas of={WebUITabs.WebUITabs} />
 
 ## Accessibility and responsive behaviour considerations
 - Rather than [Stacking tabs vertically on narrow viewports](https://inclusive-components.design/tabbed-interfaces/#responsivedesign), a simple horizontal overflow scrolling solution is used instead to make tabs responsive.
@@ -22,8 +23,6 @@ Attribute | Behaviour
 `data-tab` | Required. Add to tab "triggers".
 `data-tabpanel` | Required. Add to content that will be shown/hidden.
 `data-vertical` | Optional. Add to parent `<webui-tabs>` to create vertical tabs.
-
-<Canvas of={WebUITabs.WebUITabs} />
 
 ## Vertical tabs
 <Canvas of={WebUITabs.WebUIVerticalTabs} />

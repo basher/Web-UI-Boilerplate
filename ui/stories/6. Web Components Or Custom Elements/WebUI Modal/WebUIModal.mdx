@@ -6,6 +6,8 @@ import * as WebUIModal from './WebUIModal.stories';
 # `<webui-modal>`
 - Uses the native HTML `<dialog>` element. See [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) docs on MDN.
 
+<Canvas of={WebUIModal.WebUIModal} />
+
 ## Accessibility considerations
 - There are ongoing discussions about the [initial focus behaviour](https://github.com/whatwg/html/wiki/dialog--initial-focus,-a-proposal) for `<dialog>`.
     - Keyboard `focus` is currently being set on the `data-content` using `tabindex="-1"` to ensure that content gets announced first, before the `close` button.
@@ -23,8 +25,6 @@ Attribute | Behaviour
 ### Useful articles
 - [Is dialog ready to be used?](https://www.scottohara.me/blog/2019/03/05/open-dialog.html)
 - [Defending dialog](https://whistlr.info/2021/in-defence-of-dialog/) by the official polyfill maintainer.
-
-<Canvas of={WebUIModal.WebUIModal} />
 
 ## Modal with overflowing content
 <Canvas of={WebUIModal.WebUIModalOverflow} />

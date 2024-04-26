@@ -8,6 +8,9 @@ import * as WebUIDisclosure from './WebUIDisclosure.stories';
 - Use this Web Component when [accordion](/story/components-accordion--accordion) or [tabs](/story/components-tabs--tabs) components cannot be used.
 - Also see the [ARIA APG disclosure pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/).
 
+<Canvas of={WebUIDisclosure.WebUIDisclosure} />
+<Controls of={WebUIDisclosure.WebUIDisclosure} />
+
 ## Accessibility considerations
 - The content can be hidden via the `ESC` key, or clicking outside the Web Component. See the table below.
 
@@ -20,6 +23,3 @@ Attribute | Behaviour
 `data-content` | Required. Content to be shown/hidden.
 `data-bind-escape-key` | Optional. `ESC` key hides the content.
 `data-bind-click-outside` | Optional. Hides the content when clicking anywhere outside the Web Component.
-
-<Canvas of={WebUIDisclosure.WebUIDisclosure} />
-<Controls of={WebUIDisclosure.WebUIDisclosure} />

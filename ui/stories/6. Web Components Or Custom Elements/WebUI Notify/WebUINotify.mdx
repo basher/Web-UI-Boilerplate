@@ -4,6 +4,8 @@ import * as WebUINotify from './WebUINotify.stories';
 <Meta of={WebUINotify} />
 
 # `<webui-notify>`
+<Canvas of={WebUINotify.WebUINotify} />
+<Controls of={WebUINotify.WebUINotify} />
 
 ## Accessibility considerations
 - Error notifications have an [ARIA alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
@@ -17,6 +19,3 @@ Attribute | Behaviour
 `role="status"` | Required if `data-success` or `data-warning` have been used.
 `data-success`, `data-warning`, `data-error` | Optional. Apply different visual styling.
 `data-close` | Required on close button.
-
-<Canvas of={WebUINotify.WebUINotify} />
-<Controls of={WebUINotify.WebUINotify} />

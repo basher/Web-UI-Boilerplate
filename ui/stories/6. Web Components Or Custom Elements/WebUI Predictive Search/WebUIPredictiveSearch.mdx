@@ -7,6 +7,8 @@ import * as WebUIPredictiveSearch from './WebUIPredictiveSearch.stories';
 - Predictive search (with dynamic results from an API)
 - When JavaScript is enabled, form submit is disabled and submit button is hidden.
 
+<Canvas of={WebUIPredictiveSearch.WebUIPredictiveSearch} />
+
 ## Accessibility considerations
 - Dynamic search results are displayed in an [aria-live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
 
@@ -16,5 +18,3 @@ Attribute | Behaviour
 --- | ---
 `data-fetch-target` | Required. On the button that triggers the Fetch request. The value must match `data-fetch-container`.
 `data-fetch-container` | Required. On the ARIA live region. The value must match `data-fetch-target`.
-
-<Canvas of={WebUIPredictiveSearch.WebUIPredictiveSearch} />

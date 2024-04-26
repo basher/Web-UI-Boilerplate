@@ -6,14 +6,13 @@ import * as Accordion from './Accordion.stories';
 # Accordion
 - Uses the native HTML `<details>`|`<summary>` elements.
 
+<Canvas of={Accordion.Accordion} />
+
 ## Accessibility considerations
 - There are several articles cautioning against using `<details>`|`<summary>` for accordions. For example:
     - [Scott O'Hara](https://www.scottohara.me//blog/2022/09/12/details-summary.html).
     - [Dave Rupert](https://daverupert.com/2019/12/why-details-is-not-an-accordion/).
 - An alternative approach is to use the [disclosure](/story/components-disclosure-or-show-hide--disclosure) component.
 
-<Canvas of={Accordion.Accordion} />
-
 ## With custom icon
-
 <Canvas of={Accordion.AccordionCustomIcon} />

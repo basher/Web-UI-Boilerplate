@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { Meta, Canvas } from '@storybook/blocks';
 import * as Colours from './Colours.stories';
 
 <Meta of={Colours} />
@@ -6,6 +6,8 @@ import * as Colours from './Colours.stories';
 # Colour palette / swatch
 
 The default Sass colour variables get automatically exported to a JSON file when Parcel server is started with `npm start`.
+
+<Canvas of={Colours.Colours} />
 
 ## Dark mode
 Colours in the swatch will be updated automatically if the operating system preference for `dark mode` is selected.

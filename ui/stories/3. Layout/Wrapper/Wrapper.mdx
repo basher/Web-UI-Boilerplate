@@ -9,6 +9,9 @@ import * as Wrapper from './Wrapper.stories';
 - For more complex layouts (e.g. multi-column), use one of the [grid layouts](/docs/layout-grid--docs).
 - Ideally, there should be **NO visual styles** applied to wrappers (e.g. background colour).
 
+<Canvas of={Wrapper.Wrapper} />
+<Controls of={Wrapper.Wrapper} />
+
 ## Override margin
 - Use [stack layout](/story/layout-stack--stack) to apply vertical `gutters` between sibling wrappers.
 
@@ -17,6 +20,3 @@ import * as Wrapper from './Wrapper.stories';
 
 ## Applying visual styles to wrapper
 - Add a [skin component](/story/components-skin--skin-wrapper) classname.
-
-<Canvas of={Wrapper.Wrapper} />
-<Controls of={Wrapper.Wrapper} />

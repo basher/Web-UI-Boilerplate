@@ -7,6 +7,8 @@ import * as WebUIFetchHtml from './WebUIFetchHtml.stories';
 - This is simply a demo to show the core features of a component that has some Ajax dependencies (e.g. fetching an HTML fragment).
 - A more realistic example can be found in the [`<webui-predictive-search>`](/docs/web-components-or-custom-elements-webui-predictive-search--docs) Web Component.
 
+<Canvas of={WebUIFetchHtml.WebUIFetchHtml} />
+
 ## Uses native Fetch API
 - See [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) docs on MDN.
 - Fetch aborts/timeouts are handled by an [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) in `src/javascript/utils/ajax-helpers.ts`.
@@ -21,5 +23,3 @@ Attribute | Behaviour
 --- | ---
 `data-fetch-target` | Required. On the button that triggers the Fetch request. The value must match `data-fetch-container`.
 `data-fetch-container` | Required. On the ARIA live region. The value must match `data-fetch-target`.
-
-<Canvas of={WebUIFetchHtml.WebUIFetchHtml} />

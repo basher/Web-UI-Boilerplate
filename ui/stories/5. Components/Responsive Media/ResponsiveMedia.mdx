@@ -11,15 +11,14 @@ import * as ResponsiveMedia from './ResponsiveMedia.stories';
 style="--media-aspect-ratio: 21/9;"
 ```
 
+<Canvas of={ResponsiveMedia.ResponsiveIframe} />
+
 ## Accessibility considerations
 - `<iframe>` should have a non-empty `title` attribute.
 
 ## Performance considerations
 - Native [lazy-loaded iframes](https://web.dev/iframe-lazy-loading/) are now supported in modern browsers.
 - See the [video player](/story/components-video-player--video-player) for a real use case, with a fallback for older browsers.
-
-## Iframe
-<Canvas of={ResponsiveMedia.ResponsiveIframe} />
 
 ## Video
 <Canvas of={ResponsiveMedia.ResponsiveVideo} />

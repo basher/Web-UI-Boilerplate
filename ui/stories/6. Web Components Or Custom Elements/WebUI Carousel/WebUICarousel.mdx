@@ -9,6 +9,9 @@ import * as WebUICarousel from './WebUICarousel.stories';
 - Each slide has an `aria-label`, indicating the current slide number and the total number of slides.
 - When PREV and NEXT buttons are shown, keyboard `focus` is modified such that **only visible slides are focusable**.
 
+<Canvas of={WebUICarousel.WebUICarousel} />
+<Controls of={WebUICarousel.WebUICarousel} />
+
 ## Required and optional HTML  or `data-` attributes
 
 Attribute | Behaviour
@@ -19,6 +22,3 @@ Attribute | Behaviour
 
 ## TODO
 - Update counter with touch/swipe events?
-
-<Canvas of={WebUICarousel.WebUICarousel} />
-<Controls of={WebUICarousel.WebUICarousel} />
