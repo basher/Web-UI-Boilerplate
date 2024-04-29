@@ -21,7 +21,7 @@ export const WebUINotifyHtml = (args) => `
             >
                 <use href="sprite.svg#close" />
             </svg>
-            <span class="sr-only">Close</span>
+            <span class="sr-only">Close notification</span>
         </button>`
             : ''
     }
