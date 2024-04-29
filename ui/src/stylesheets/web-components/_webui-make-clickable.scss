@@ -27,8 +27,8 @@ webui-make-clickable {
             box-shadow: 0 0 0 $border-width-l $color-focus;
             outline: $border-width-l solid transparent; // So high contrast mode works.
 
-            // Remove focus styles on links inside.
-            :focus-visible {
+            // Remove focus styles on "data-url" link inside.
+            [data-url]:focus-visible {
                 box-shadow: none;
                 outline: none;
             }
