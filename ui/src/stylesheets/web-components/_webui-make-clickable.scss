@@ -18,7 +18,7 @@ webui-make-clickable {
         &:hover {
             cursor: pointer;
 
-            a {
+            :hover {
                 text-decoration: none;
             }
         }
