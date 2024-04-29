@@ -5,9 +5,12 @@ import * as WebUIMakeClickable from './WebUIMakeClickable.stories';
 
 # `<webui-make-clickable>`
 - The entire Web Component is made clickable via JavaScript.
-- CSS `focus-within` is utilised to add a focus indicator when the Web Component, or any of its descendents, receives keyboard `focus`.
 
 <Canvas of={WebUIMakeClickable.WebUIMakeClickable} />
+
+## Accessibility considerations
+- CSS `focus-within` is utilised to add a focus indicator when the Web Component, or any of its descendents, receives keyboard `focus`.
+- Text selection is still possible.
 
 ## Required and optional HTML  or `data-` attributes
 
