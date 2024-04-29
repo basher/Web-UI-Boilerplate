@@ -27,7 +27,7 @@ Dependencies.
     }
 
     &--fit-content {
-        --wrapper-max-width: unset;
+        --wrapper-max-width: revert;
         inline-size: fit-content;
     }
 }

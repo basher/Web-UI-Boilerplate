@@ -101,12 +101,8 @@ Dependencies.
         &.nav--disclosure {
             webui-disclosure:defined {
                 /* stylelint-disable max-nesting-depth */
-                > .nav__list {
-                    align-items: unset;
-                }
-
                 .nav__item--has-dropdown {
-                    display: unset;
+                    display: revert;
                 }
 
                 .nav__list--dropdown {

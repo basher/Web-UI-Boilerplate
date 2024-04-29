@@ -15,7 +15,7 @@ Dependencies.
 @use '../base' as *;
 
 .sidebar {
-    --sidebar-width: unset;
+    --sidebar-width: revert;
 
     flex-basis: var(--sidebar-width);
     flex-grow: 1;

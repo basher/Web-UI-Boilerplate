@@ -31,7 +31,7 @@ webui-tabs {
                 flex-direction: column;
                 grid-area: tabs;
                 margin: 0;
-                overflow-x: unset;
+                overflow-x: revert;
             }
 
             [role='tab'] {
@@ -45,7 +45,7 @@ webui-tabs {
             }
 
             [data-tab] {
-                white-space: unset;
+                white-space: revert;
             }
         }
     }
