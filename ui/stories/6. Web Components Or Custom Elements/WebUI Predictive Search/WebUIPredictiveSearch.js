@@ -17,7 +17,6 @@ export const WebUIPredictiveSearchHtml = () => `
         </button>
     </form>
     <div
-        class="search__results ajax__container"
         role="region"
         aria-live="polite"
         data-fetch-container="search-results"

@@ -13,12 +13,12 @@ webui-predictive-search {
         }
     }
 
-    .search__results {
+    [role='region'] {
         margin-block-start: $gutter-m;
+    }
 
-        .grid {
-            @include responsive-grid-auto-columns($max-width: 10rem);
-        }
+    .grid {
+        @include responsive-grid-auto-columns($max-width: 10rem);
     }
 
     .search__result {
