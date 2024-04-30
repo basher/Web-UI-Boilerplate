@@ -57,6 +57,7 @@ export default class WebUIPredictiveSearch extends HTMLElement {
                     return response.json();
                 })
                 .then((data) => {
+                    // Results array contains matches to search query.
                     const results: [] = data.results.filter(
                         (result: { name: string | string[] }) =>
                             result.name.includes(query),
@@ -68,6 +69,7 @@ export default class WebUIPredictiveSearch extends HTMLElement {
                         return;
                     }
 
+                    // Pass matching results to 'searchResults' template.
                     const resultTemplates = results.map(
                         (result: Record<string, string>) =>
                             searchResults(result),
