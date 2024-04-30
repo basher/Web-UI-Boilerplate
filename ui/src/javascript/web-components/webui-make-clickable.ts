@@ -14,6 +14,12 @@ export default class WebUIMakeClickable extends HTMLElement {
             return;
         }
 
+        // Allow nested buttons to do their thing.
+        const target = e.target as HTMLElement;
+        if (target?.nodeName === 'BUTTON') {
+            return;
+        }
+
         if (e.target !== this.link) {
             this.link?.click();
         }
