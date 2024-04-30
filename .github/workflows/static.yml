@@ -4,7 +4,13 @@ on:
   push:
     branches: [ 'master' ]
     # Trigger the action only when files change in the folders defined here.
-    paths: ['ui/stories/**', 'ui/src/**', 'ui/public/**', 'ui/.storybook/**']
+    paths: [
+      'ui/stories/**',
+      'ui/src/**',
+      'ui/public/**',
+      'ui/.storybook/**',
+      'ui/scripts/**'
+    ]
   # Allows workflow to be run manually from the Actions tab on GitHub.
   workflow_dispatch:
 
