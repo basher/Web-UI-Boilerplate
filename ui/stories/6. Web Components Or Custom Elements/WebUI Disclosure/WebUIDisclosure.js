@@ -9,7 +9,7 @@ export const WebUIDisclosureHtml = (args) => `
         data-trigger
         hidden
     >
-        <span>Show / Hide</span>
+        Show / Hide
     </button>
 
     <div data-content>
