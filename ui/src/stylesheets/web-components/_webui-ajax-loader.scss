@@ -13,7 +13,7 @@ webui-ajax-loader {
     inline-size: 3rem;
     margin: auto;
 
-    // Pseudo element reprents SVG in shadow DOM with matching part attribute.
+    // Pseudo element represents SVG in shadow DOM with matching part attribute.
     &::part(svg) {
         animation: 1.2s ease-in-out infinite both svg-animation;
         fill: transparent;
