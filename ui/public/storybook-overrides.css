@@ -3,10 +3,6 @@
     max-inline-size: none;
 }
 
-.sbdocs-content ul {
-    padding-inline-start: 1rem;
-}
-
 .sbdocs-content ul ul {
     list-style-type: circle;
 }

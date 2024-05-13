@@ -69,19 +69,7 @@ export default class WebUIPredictiveSearch extends HTMLElement {
                         return;
                     }
 
-                    // Pass matching results to 'searchResults' template.
-                    const resultTemplates = results.map(
-                        (result: Record<string, string>) =>
-                            searchResults(result),
-                    );
-
-                    const resultGrid = `
-                        <ul class="grid">
-                            ${resultTemplates.join('')}
-                        </ul>
-                    `;
-
-                    ajaxContainer.innerHTML = resultGrid;
+                    ajaxContainer.innerHTML = searchResults(results);
                 })
                 .catch((error) => {
                     ajaxErrorHandler({
