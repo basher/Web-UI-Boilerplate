@@ -4,4 +4,4 @@
 !.gitignore
 !ajax/*
 !sprite.svg
-!storybook-overrides/*
+!storybook-overrides.css

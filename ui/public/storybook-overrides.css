@@ -1,0 +1,20 @@
+/* Reset Docs typography to use theme settings. */
+.sbdocs-content :where(:is(p, li):not([class]), dd, small) {
+    max-inline-size: none;
+}
+
+.sbdocs-content ul ul {
+    list-style-type: circle;
+}
+
+.sbdocs-content code {
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: 600;
+}
+
+/* Override dark mode in Storybook docs. */
+:root :has(#storybook-docs:not([hidden='true'])) {
+    --color-text: 0 0% 20%;
+    color-scheme: light !important;
+}
