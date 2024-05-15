@@ -55,7 +55,7 @@ webui-tabs {
         background-color: $color-neutral-100;
         padding: $gutter-s;
         text-decoration: none;
-        transition: border $animation-fast;
+        transition: all $animation-fast;
 
         &[aria-selected='true'] {
             background-color: $color-brand;
