@@ -104,11 +104,6 @@ export default class WebUITabs extends HTMLElement {
     }
 
     private bindKeyboardEvent(e: KeyboardEvent, index: number): void {
-        // Stop page jumping with certain key events with 'e.preventDefault()'.
-        if (e.code !== 'Tab') {
-            e.preventDefault();
-        }
-
         switch (e.code) {
             case 'ArrowRight':
                 if (this.tabTriggers.length - index > 1) {
