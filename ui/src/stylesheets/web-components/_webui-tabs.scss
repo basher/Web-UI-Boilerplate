@@ -10,7 +10,7 @@ webui-tabs {
     [data-tablist] {
         display: flex;
         flex-direction: column;
-        gap: $gutter-m;
+        gap: $gutter-s;
         margin-block-end: $gutter-m;
         overflow-x: auto;
     }
@@ -27,6 +27,11 @@ webui-tabs {
             grid-template-areas: 'tabs content';
             grid-template-columns: minmax(auto, 10rem) 1fr;
 
+            [data-tab] {
+                white-space: revert;
+            }
+
+            // Roles are added by JavaScript.
             [role='tablist'] {
                 flex-direction: column;
                 grid-area: tabs;
@@ -34,18 +39,8 @@ webui-tabs {
                 overflow-x: revert;
             }
 
-            [role='tab'] {
-                border-block-end: 0;
-                border-inline-end: $border-width-l solid $color-neutral-100;
-                padding-inline-end: $gutter-xs;
-            }
-
             [role='tabpanel'] {
                 grid-area: content;
-            }
-
-            [data-tab] {
-                white-space: revert;
             }
         }
     }
@@ -57,13 +52,14 @@ webui-tabs {
 
     [role='tab'] {
         @include focus($inset: true);
-        border-block-end: $border-width-l solid $color-neutral-100;
+        background-color: $color-neutral-100;
+        padding: $gutter-s;
         text-decoration: none;
         transition: border $animation-fast;
 
         &[aria-selected='true'] {
-            border-color: $color-brand;
-            color: $color-brand;
+            background-color: $color-brand;
+            color: $color-neutral-100;
         }
 
         /* stylelint-disable-next-line order/order */
@@ -77,7 +73,6 @@ webui-tabs {
                     border-color: inherit;
                     color: inherit;
                 }
-                /* stylelint-enable max-nesting-depth */
             }
         }
     }
