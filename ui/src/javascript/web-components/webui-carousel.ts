@@ -65,27 +65,28 @@ export default class WebUICarousel extends HTMLElement {
                     const focusableItems =
                         entry.target.querySelectorAll('a, button');
 
-                    if (!entry.isIntersecting) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(this.visibleSlideClass);
+
+                        // Make visible slides keyboard focusable.Screen readers will read out content.
+                        entry.target.setAttribute('tabIndex', '0');
+
+                        // Re-instate focusability of interactive child elements.
+                        if (this.hasPrevNextButtons) {
+                            focusableItems.forEach((focusableItem) => {
+                                focusableItem.removeAttribute('tabIndex');
+                            });
+                        }
+                    } else {
                         entry.target.classList.remove(this.visibleSlideClass);
                         entry.target.removeAttribute('tabIndex');
 
-                        // When using PREV/NEXT buttons, make clickable elements inside non-visible slides non-focusable. This enables keyboard :FOCUS via TAB key to the "current" slide.
+                        // When using PREV/NEXT buttons, make interactive child elements inside non-visible slides non-focusable. This enables keyboard :FOCUS via TAB key to the "current" slide.
                         if (this.hasPrevNextButtons) {
                             focusableItems.forEach((focusableItem) => {
                                 focusableItem.setAttribute('tabIndex', '-1');
                             });
                         }
-                        return;
-                    }
-
-                    entry.target.classList.add(this.visibleSlideClass);
-                    entry.target.setAttribute('tabIndex', '0');
-
-                    // Reinstate focusability when slides are visible.
-                    if (this.hasPrevNextButtons) {
-                        focusableItems.forEach((focusableItem) => {
-                            focusableItem.removeAttribute('tabIndex');
-                        });
                     }
                 });
             }, observerSettings);

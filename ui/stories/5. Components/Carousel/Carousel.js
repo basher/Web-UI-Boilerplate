@@ -33,63 +33,64 @@ ${style}
         tabindex="0"
     >
         <li class="carousel__slide">
-            Slide 1<br>More content<br>Slides have equal height
+            Content 1
+            <br>Slides have equal height
             <br><br>
             <a
                 href="#"
                 class="button button--text button--primary"
             >
-                Slide 1 link
+                Link 1
             </a>
         </li>
         <li class="carousel__slide">
-            Slide 2 content
+            Content 2
             <br><br>
             <a
                 href="#"
                 class="button button--text button--primary"
             >
-                Slide 2 link
+                Link 2
             </a>
         </li>
         <li class="carousel__slide">
-            Slide 3 content
+            Content 3
             <br><br>
             <a
                 href="#"
                 class="button button--text button--primary"
             >
-                Slide 3 link
+                Link 3
             </a>
         </li>
         <li class="carousel__slide">
-            Slide 4 content
+            Content 4
             <br><br>
             <a
                 href="#"
                 class="button button--text button--primary"
             >
-                Slide 4 link
+                Link 4
             </a>
         </li>
         <li class="carousel__slide">
-            Slide 5 content
+            Content 5
             <br><br>
             <a
                 href="#"
                 class="button button--text button--primary"
             >
-                Slide 5 link
+                Link 5
             </a>
         </li>
         <li class="carousel__slide">
-            Slide 6 content
+            Content 6
             <br><br>
             <a
                 href="#"
                 class="button button--text button--primary"
             >
-                Slide 6 link
+                Link 6
             </a>
         </li>
     </ul>
@@ -109,33 +110,33 @@ ${style}
         tabindex="0"
     >
          <li class="carousel__slide">
-            Slide 1 - e.g. banner
+            Fullwidth 1
             <br><br>
             <a
                 href="#"
                 class="button button--text button--primary"
             >
-                Slide 1 link
+                Link 1
             </a>
         </li>
-         <li class="carousel__slide">
-            Slide 2 - e.g. banner
+        <li class="carousel__slide">
+            Fullwidth 2
             <br><br>
             <a
                 href="#"
                 class="button button--text button--primary"
             >
-                Slide 2 link
+                Link 2
             </a>
         </li>
-         <li class="carousel__slide">
-            Slide 3 - e.g. banner
+        <li class="carousel__slide">
+            Fullwidth 3
             <br><br>
             <a
                 href="#"
                 class="button button--text button--primary"
             >
-                Slide 3 link
+                Link 3
             </a>
         </li>
     </ul>
@@ -156,32 +157,33 @@ ${style2}
     >
         <li class="carousel__slide">
             <a href="#">
-                Clickable slide 1<br>More content<br>Slides have equal height
+                Clickable 1
+                <br>Slides have equal height
             </a>
         </li>
         <li class="carousel__slide">
             <a href="#">
-                Clickable slide 2
+                Clickable 2
             </a>
         </li>
         <li class="carousel__slide">
             <a href="#">
-                Clickable slide 3
+                Clickable 3
             </a>
         </li>
         <li class="carousel__slide">
             <a href="#">
-                Clickable slide 4
+                Clickable 4
             </a>
         </li>
         <li class="carousel__slide">
             <a href="#">
-                Clickable slide 5
+                Clickable 5
             </a>
         </li>
         <li class="carousel__slide">
             <a href="#">
-                Clickable slide 6
+                Clickable 6
             </a>
         </li>
     </ul>

@@ -25,63 +25,64 @@ ${style}
             tabindex="0"
         >
             <li class="carousel__slide">
-                Slide 1<br>More content<br>Slides have equal height
+                Content 1
+                <br>Slides have equal height
                 <br><br>
                 <a
                     href="#"
                     class="button button--text button--primary"
                 >
-                    Button
+                    Link 1
                 </a>
             </li>
             <li class="carousel__slide">
-                Slide 2 content
+                Content 2
                 <br><br>
                 <a
                     href="#"
                     class="button button--text button--primary"
                 >
-                    Button
+                    Link 2
                 </a>
             </li>
             <li class="carousel__slide">
-                Slide 3 content
+                Content 3
                 <br><br>
                 <a
                     href="#"
                     class="button button--text button--primary"
                 >
-                    Button
+                    Link 3
                 </a>
             </li>
             <li class="carousel__slide">
-                Slide 4 content
+                Content 4
                 <br><br>
                 <a
                     href="#"
                     class="button button--text button--primary"
                 >
-                    Button
+                    Link 4
                 </a>
             </li>
             <li class="carousel__slide">
-                Slide 5 content
+                Content 5
                 <br><br>
                 <a
                     href="#"
                     class="button button--text button--primary"
                 >
-                    Button
+                    Link 5
                 </a>
             </li>
             <li class="carousel__slide">
-                Slide 6 content
+                Content 6
                 <br><br>
                 <a
                     href="#"
                     class="button button--text button--primary"
                 >
-                    Button
+                    Link 6
                 </a>
             </li>
         </ul>
