@@ -27,7 +27,6 @@ export default class WebUICarousel extends HTMLElement {
     }
 
     private init(): void {
-        // this.setupA11y();
         this.setVisibleSlide();
 
         // Show slide counter (text).
@@ -50,16 +49,6 @@ export default class WebUICarousel extends HTMLElement {
 
         // Manage keyboard (ARROW keys) events on carousel.
         this.handleKeyboard();
-    }
-
-    private setupA11y(): void {
-        // Add slide counter labels for screen readers.
-        this.slides.forEach((slide: HTMLElement, i: number) => {
-            slide.setAttribute(
-                'aria-label',
-                `slide ${i + 1} of ${this.slides.length}`,
-            );
-        });
     }
 
     private setVisibleSlide(): void {
