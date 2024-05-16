@@ -23,7 +23,10 @@ const style2 = `
 
 export const CarouselHtml = () => `
 ${style}
-<section class="carousel-wrapper" aria-label="[meaningful label for carousel]"
+<section
+    class="carousel-wrapper"
+    aria-label="[meaningful label]"
+    aria-roledescription="carousel"
 >
     <ul
         class="carousel"
@@ -36,7 +39,7 @@ ${style}
                 href="#"
                 class="button button--text button--primary"
             >
-                Button
+                Slide 1 link
             </a>
         </li>
         <li class="carousel__slide">
@@ -46,7 +49,7 @@ ${style}
                 href="#"
                 class="button button--text button--primary"
             >
-                Button
+                Slide 2 link
             </a>
         </li>
         <li class="carousel__slide">
@@ -56,7 +59,7 @@ ${style}
                 href="#"
                 class="button button--text button--primary"
             >
-                Button
+                Slide 3 link
             </a>
         </li>
         <li class="carousel__slide">
@@ -66,7 +69,7 @@ ${style}
                 href="#"
                 class="button button--text button--primary"
             >
-                Button
+                Slide 4 link
             </a>
         </li>
         <li class="carousel__slide">
@@ -76,7 +79,7 @@ ${style}
                 href="#"
                 class="button button--text button--primary"
             >
-                Button
+                Slide 5 link
             </a>
         </li>
         <li class="carousel__slide">
@@ -86,7 +89,7 @@ ${style}
                 href="#"
                 class="button button--text button--primary"
             >
-                Button
+                Slide 6 link
             </a>
         </li>
     </ul>
@@ -96,7 +99,10 @@ ${style}
 
 export const CarouselFullwidthSlidesHtml = () => `
 ${style}
-<section class="carousel-wrapper" aria-label="[meaningful label for carousel]"
+<section
+    class="carousel-wrapper"
+    aria-label="[meaningful label]"
+    aria-roledescription="carousel"
 >
     <ul
         class="carousel carousel--fullwidth"
@@ -109,7 +115,7 @@ ${style}
                 href="#"
                 class="button button--text button--primary"
             >
-                Button
+                Slide 1 link
             </a>
         </li>
          <li class="carousel__slide">
@@ -119,7 +125,7 @@ ${style}
                 href="#"
                 class="button button--text button--primary"
             >
-                Button
+                Slide 2 link
             </a>
         </li>
          <li class="carousel__slide">
@@ -129,7 +135,7 @@ ${style}
                 href="#"
                 class="button button--text button--primary"
             >
-                Button
+                Slide 3 link
             </a>
         </li>
     </ul>
@@ -139,7 +145,10 @@ ${style}
 
 export const CarouselClickableSlidesHtml = () => `
 ${style2}
-<section class="carousel-wrapper" aria-label="[meaningful label for carousel]"
+<section
+    class="carousel-wrapper"
+    aria-label="[meaningful label]"
+    aria-roledescription="carousel"
 >
     <ul
         class="carousel carousel--has-clickable-slides"
