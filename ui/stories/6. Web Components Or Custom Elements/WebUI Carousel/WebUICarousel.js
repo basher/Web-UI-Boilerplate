@@ -32,7 +32,7 @@ ${style}
                 </a>
             </li>
             <li class="carousel__slide">
-                Slide 2
+                Slide 2 content
                 <br><br>
                 <a
                     href="#"
@@ -42,7 +42,7 @@ ${style}
                 </a>
             </li>
             <li class="carousel__slide">
-                Slide 3
+                Slide 3 content
                 <br><br>
                 <a
                     href="#"
@@ -52,7 +52,7 @@ ${style}
                 </a>
             </li>
             <li class="carousel__slide">
-                Slide 4
+                Slide 4 content
                 <br><br>
                 <a
                     href="#"
@@ -62,7 +62,7 @@ ${style}
                 </a>
             </li>
             <li class="carousel__slide">
-                Slide 5
+                Slide 5 content
                 <br><br>
                 <a
                     href="#"
@@ -72,7 +72,7 @@ ${style}
                 </a>
             </li>
             <li class="carousel__slide">
-                Slide 6
+                Slide 6 content
                 <br><br>
                 <a
                     href="#"

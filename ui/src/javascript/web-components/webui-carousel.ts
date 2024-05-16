@@ -27,7 +27,7 @@ export default class WebUICarousel extends HTMLElement {
     }
 
     private init(): void {
-        this.setupA11y();
+        // this.setupA11y();
         this.setVisibleSlide();
 
         // Show slide counter (text).
@@ -78,6 +78,7 @@ export default class WebUICarousel extends HTMLElement {
 
                     if (!entry.isIntersecting) {
                         entry.target.classList.remove(this.visibleSlideClass);
+                        entry.target.removeAttribute('tabIndex');
 
                         // When using PREV/NEXT buttons, make clickable elements inside non-visible slides non-focusable. This enables keyboard :FOCUS via TAB key to the "current" slide.
                         if (this.hasPrevNextButtons) {
@@ -87,7 +88,9 @@ export default class WebUICarousel extends HTMLElement {
                         }
                         return;
                     }
+
                     entry.target.classList.add(this.visibleSlideClass);
+                    entry.target.setAttribute('tabIndex', '0');
 
                     // Reinstate focusability when slides are visible.
                     if (this.hasPrevNextButtons) {
