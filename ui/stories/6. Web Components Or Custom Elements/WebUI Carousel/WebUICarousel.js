@@ -21,7 +21,7 @@ ${style}
         aria-roledescription="carousel"
     >
         <ul
-            class="carousel"
+            class="carousel ${args.makeSlidesFullwidth === true ? 'carousel--fullwidth' : ''}"
             tabindex="0"
         >
             <li class="carousel__slide">
