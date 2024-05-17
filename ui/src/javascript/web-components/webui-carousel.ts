@@ -55,7 +55,7 @@ export default class WebUICarousel extends HTMLElement {
         const observerSettings = {
             root: this.carousel,
             // Fire callback when when observed item is 100% in view.
-            threshold: [1.0],
+            threshold: [0.99],
         };
 
         if ('IntersectionObserver' in window) {
