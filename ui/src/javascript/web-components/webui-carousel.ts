@@ -54,7 +54,7 @@ export default class WebUICarousel extends HTMLElement {
     private setVisibleSlide(): void {
         const observerSettings = {
             root: this.carousel,
-            // Fire callback when when observed item is 100% in view.
+            // Fire callback when when observed item is 99% in view.
             threshold: [0.99],
         };
 
