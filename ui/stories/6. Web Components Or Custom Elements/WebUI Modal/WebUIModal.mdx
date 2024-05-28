@@ -10,8 +10,8 @@ import * as WebUIModal from './WebUIModal.stories';
 
 ## Accessibility considerations
 - There are ongoing discussions about the [initial focus behaviour](https://github.com/whatwg/html/wiki/dialog--initial-focus,-a-proposal) for `<dialog>`.
-    - Keyboard `focus` is currently being set on the `data-content` using `tabindex="-1"` to ensure that content gets announced first, before the `close` button.
-- When modal is closed, focus is set back to the button that opened the modal.
+    - Keyboard `focus` is currently being set on the `data-content` using `tabindex="-1"` to ensure that content gets announced first, before the `data-close` button.
+- When modal is closed using the native `close()` method, focus is set back to the button that opened the modal (default browser behaviour).
 - Modal can be closed with the `ESC` key (default browser behaviour), and by clicking outside the modal (JavaScript enhancement).
 
 ## Required and optional HTML  or `data-` attributes

@@ -25,6 +25,7 @@ export default class WebUIModal extends HTMLElement {
     private handleOpen(): void {
         if (!this.dialog?.open) {
             this.dialog?.showModal();
+
             // Set focus on content rather than the 'close' button.
             this.modalContent?.setAttribute('tabIndex', '-1');
             this.modalContent?.focus();
