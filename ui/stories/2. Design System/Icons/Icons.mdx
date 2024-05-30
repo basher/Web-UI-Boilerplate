@@ -14,9 +14,9 @@ import * as Icons from './Icons.stories';
     - [Accessible SVG icons with inline sprites](https://www.24a11y.com/2018/accessible-svg-icons-with-inline-sprites/).
     - [Accessible icon buttons](https://www.sarasoueidan.com/blog/accessible-icon-buttons/).
     - [Contextually marking up accessible images and SVGs](https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html).
-- The `<title>` element can be used in decorative icons to provide a native HTML tooltip on mouse `:hover`.
+- The `<title>` element can be used in decorative icons to provide a native HTML tooltip on mouse `:hover` and an accessible name for screen readers.
 - If the icon is purely decorative and there is visible text associated with it, there is no need for `<title>` attribute, and the `role="img"` should be replaced with `aria-hidden="true"`.
-- For interactive icons (e.g. in buttons or links), use either `<span class="sr-only">`  or `aria-label`to provide an appropriate accessible name.
+- For interactive icons (e.g. in buttons or links), use a `<span class="sr-only">` rather than `aria-label`to provide an appropriate accessible name.
 
 ## Using external SVG sprites with `<use href=""/>"`
 
