@@ -36,7 +36,7 @@ jobs:
           node-version: 20
           # Add dependency caching
           cache: 'npm'
-          cache-dependency-path: ui/npm-shrinkwrap.json
+          cache-dependency-path: 'ui/npm-shrinkwrap.json'
 
       - name: Install and Build
         run: |
