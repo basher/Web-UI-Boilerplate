@@ -58,16 +58,16 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 ```
 "start:parcel": "parcel watch src/javascript/index.ts --hmr-port 1234 --target app"
 ```
-- The command above starts the Parcel server, but it does not need to be run as `npm start` does it.
+- This command does not need to be explicitly run as `npm start` does it for you.
 - See the `HMR` section further down for an explanation of the `--hmr-port 1234` argument.
 - The `--target app` argument enables transpilation of both CSS and JavaScript in **local DEV mode**. By default, Parcel only does this for production builds.
 
 ### JavaScript transpilation and differential bundling
-- See [Parcel default Babel presets](https://parceljs.org/languages/javascript/#default-presets).
+- There's no need for a `.babelrc` config. See [Parcel default Babel presets](https://parceljs.org/languages/javascript/#default-presets).
     - Note that `babel-eslint` has been [deprecated](https://github.com/babel/babel-eslint) in favour of `@babel/eslint-parser`.
     - `@typescript-eslint/parser` is also needed, due to TypeScript usage.
     - Parcel leverages the `browserslist` config in `package.json` to determine what level of transpilation to perform.
-- See [Parcel differential bundling](https://parceljs.org/features/targets/#differential-bundling).
+- The JavaScript bundles contains non-transpiled `ES6+` code for modern browsers, and transpiled `ES5` code for legacy browsers. See [Parcel differential bundling](https://parceljs.org/features/targets/#differential-bundling).
 
 ### TypeScript
 - Parcel [automatically transpiles TypeScript](https://parceljs.org/languages/typescript/).
