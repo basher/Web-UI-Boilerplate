@@ -45,11 +45,11 @@ Uses the Storybook dev server.
 #### PRODUCTION
 Uses whatever build folder has been defined for the web application.
 ```
-<link rel="stylesheet" href="/path/to/build/folder/app/stylesheets/index.css">
+<link rel="stylesheet" href="/path/to/build/folder/stylesheets/index.css">
 ```
 ```
-<script defer type="module" src="/path/to/build/folder/app/javascript/index.js"></script>
-<script defer nomodule src="/path/to/build/folder/app/javascript/legacy.js"></script>
+<script defer type="module" src="/path/to/build/folder/javascript/index.js"></script>
+<script defer nomodule src="/path/to/build/folder/javascript/legacy.js"></script>
 ```
 
 ## Build and publish Storybook
