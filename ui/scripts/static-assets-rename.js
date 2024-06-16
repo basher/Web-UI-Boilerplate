@@ -52,8 +52,8 @@ const processFile = (file) => {
         readIndexHtml().then((data) => {
             // Use cheerio to parse HTML DOM.
             const $ = cheerio.load(data);
-            const firstScript = $('script:first');
-            const lastScript = $('script:last');
+            const firstScript = $('body script:first');
+            const lastScript = $('body script:last');
 
             // Rename modern bundle to "index.js" and legacy bundle to "legacy.js".
             // TODO: Might not even need to worry about browsers that don't support type="module".
