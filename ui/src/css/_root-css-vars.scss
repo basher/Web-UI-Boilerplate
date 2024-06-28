@@ -51,7 +51,7 @@ CSS custom properties for dynamic theming.
 // Dark theme: ensure black & white are NOT truly black & white.
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-brand: 270 50% 60%;
+        --color-brand: 270 50% 50%;
         --color-text: 0 0% 95%;
         --color-background: 0 0% 13%;
         --color-neutral-900: 0 0% 13%;

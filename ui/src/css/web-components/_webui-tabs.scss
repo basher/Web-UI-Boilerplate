@@ -65,12 +65,10 @@ webui-tabs {
         /* stylelint-disable-next-line order/order */
         @if $allow-dark-mode {
             @media (prefers-color-scheme: dark) {
-                border-color: hsl(var(--color-neutral-100) / 50%);
-                color: hsl(var(--color-neutral-100) / 50%);
+                background-color: hsl(var(--color-neutral-100) / 30%);
 
                 /* stylelint-disable max-nesting-depth */
                 &[aria-selected='true'] {
-                    border-color: inherit;
                     color: inherit;
                 }
             }
