@@ -56,12 +56,12 @@ const moveFile = (file, type) => {
         subFolder = 'javascript';
     }
     if (type === 'css') {
-        subFolder = 'stylesheets';
+        subFolder = 'css';
     }
     if (type === 'svg') {
         const filename = file.substring(0, file.lastIndexOf('.'));
-        // Move SVG sprite into 'images' folder. Any other SVGs go in 'stylesheets' as they're referenced inside CSS.
-        subFolder = filename === 'sprite' ? 'images' : 'stylesheets';
+        // Move SVG sprite into 'images' folder. Any other SVGs go in 'css' as they're referenced inside CSS.
+        subFolder = filename === 'sprite' ? 'images' : 'css';
     }
 
     fs.move(

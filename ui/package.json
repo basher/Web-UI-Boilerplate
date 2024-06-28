@@ -13,7 +13,7 @@
         "reset": "rm -rf node_modules/ && npm install",
         "static-assets-rename": "node ./scripts/static-assets-rename",
         "static-assets-move": "node ./scripts/static-assets-move",
-        "sass-export-colors": "sass-export src/stylesheets/base/_colors.scss -o public/exported-colors.json",
+        "sass-export-colors": "sass-export src/css/base/_colors.scss -o public/exported-colors.json",
         "prestart": "rm -rf .parcel-cache",
         "start:parcel": "parcel watch src/javascript/index.ts --dist-dir public --hmr-port 1234 --target app",
         "start": "npm install && npm run sass-export-colors && npm run start:parcel",

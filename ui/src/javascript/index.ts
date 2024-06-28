@@ -1,5 +1,5 @@
 // Import Sass entry file and SVG sprite.
-import '../../src/stylesheets/index.scss';
+import '../../src/css/index.scss';
 import '../../src/images/sprite.svg';
 
 // Import config and UI module initialisation.
