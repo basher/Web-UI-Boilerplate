@@ -38,6 +38,18 @@ Dependencies.
         }
     }
 
+    &__media {
+        .image {
+            @if $allow-dark-mode {
+                /* stylelint-disable-next-line max-nesting-depth */
+                @media (prefers-color-scheme: dark) {
+                    opacity: 1;
+                    transition: none;
+                }
+            }
+        }
+    }
+
     &__overlay {
         @include bp-medium {
             // Example, so text is legible above image.

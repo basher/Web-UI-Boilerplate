@@ -24,6 +24,13 @@ webui-modal {
         margin: auto;
         padding: 0 $gutter-m $gutter-m;
 
+        /* stylelint-disable-next-line order/order */
+        @if $allow-dark-mode {
+            @media (prefers-color-scheme: dark) {
+                background: $color-neutral-900;
+            }
+        }
+
         &::backdrop {
             background: var(--color-backdrop);
             pointer-events: none; // So click outside works.
@@ -35,6 +42,13 @@ webui-modal {
         display: flex;
         justify-content: flex-end;
         padding-block-start: $gutter-m;
+
+        /* stylelint-disable-next-line order/order */
+        @if $allow-dark-mode {
+            @media (prefers-color-scheme: dark) {
+                background: $color-neutral-900;
+            }
+        }
     }
 
     .modal__content {
