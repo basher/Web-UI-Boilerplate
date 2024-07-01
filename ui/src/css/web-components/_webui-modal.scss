@@ -25,10 +25,8 @@ webui-modal {
         padding: 0 $gutter-m $gutter-m;
 
         /* stylelint-disable-next-line order/order */
-        @if $allow-dark-mode {
-            @media (prefers-color-scheme: dark) {
-                background: $color-neutral-900;
-            }
+        @media (prefers-color-scheme: dark) {
+            background: $color-neutral-900;
         }
 
         &::backdrop {
@@ -44,10 +42,8 @@ webui-modal {
         padding-block-start: $gutter-m;
 
         /* stylelint-disable-next-line order/order */
-        @if $allow-dark-mode {
-            @media (prefers-color-scheme: dark) {
-                background: $color-neutral-900;
-            }
+        @media (prefers-color-scheme: dark) {
+            background: $color-neutral-900;
         }
     }
 

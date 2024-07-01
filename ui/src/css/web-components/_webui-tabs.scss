@@ -63,14 +63,12 @@ webui-tabs {
         }
 
         /* stylelint-disable-next-line order/order */
-        @if $allow-dark-mode {
-            @media (prefers-color-scheme: dark) {
-                background-color: hsl(var(--color-neutral-100) / 30%);
+        @media (prefers-color-scheme: dark) {
+            background-color: hsl(var(--color-neutral-100) / 30%);
 
-                /* stylelint-disable max-nesting-depth */
-                &[aria-selected='true'] {
-                    color: inherit;
-                }
+            /* stylelint-disable max-nesting-depth */
+            &[aria-selected='true'] {
+                color: inherit;
             }
         }
     }

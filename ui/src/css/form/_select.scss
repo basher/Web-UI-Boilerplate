@@ -9,11 +9,9 @@ Dependencies.
 .select {
     @include form-field-reset;
 
-    @if $allow-dark-mode {
-        @media (prefers-color-scheme: dark) {
-            option {
-                color: $color-neutral-900;
-            }
+    @media (prefers-color-scheme: dark) {
+        option {
+            color: $color-neutral-900;
         }
     }
 }

@@ -61,15 +61,12 @@ Dependencies.
             }
 
             /* stylelint-disable-next-line order/order */
-            @if $allow-dark-mode {
-                @media (prefers-color-scheme: dark) {
-                    background-color: hsl(var(--color-brand) / 30%);
+            @media (prefers-color-scheme: dark) {
+                background-color: hsl(var(--color-brand) / 30%);
 
-                    /* stylelint-disable-next-line max-nesting-depth */
-                    &::before,
-                    &::after {
-                        background-color: hsl(var(--color-brand) / 30%);
-                    }
+                &::before,
+                &::after {
+                    background-color: hsl(var(--color-brand) / 30%);
                 }
             }
         }

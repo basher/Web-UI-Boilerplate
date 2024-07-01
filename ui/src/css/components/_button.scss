@@ -46,10 +46,8 @@ Dependencies.
         }
 
         /* stylelint-disable-next-line order/order */
-        @if $allow-dark-mode {
-            @media (prefers-color-scheme: dark) {
-                color: inherit;
-            }
+        @media (prefers-color-scheme: dark) {
+            color: inherit;
         }
     }
 
@@ -61,10 +59,8 @@ Dependencies.
         }
 
         /* stylelint-disable-next-line order/order */
-        @if $allow-dark-mode {
-            @media (prefers-color-scheme: dark) {
-                color: $color-neutral-900;
-            }
+        @media (prefers-color-scheme: dark) {
+            color: $color-neutral-900;
         }
     }
 

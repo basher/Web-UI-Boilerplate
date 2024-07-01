@@ -13,10 +13,8 @@ Dependencies.
         padding: $gutter-m;
 
         /* stylelint-disable-next-line order/order */
-        @if $allow-dark-mode {
-            @media (prefers-color-scheme: dark) {
-                border-color: inherit;
-            }
+        @media (prefers-color-scheme: dark) {
+            border-color: inherit;
         }
     }
 
