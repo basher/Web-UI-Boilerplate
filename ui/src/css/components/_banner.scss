@@ -13,6 +13,19 @@ Dependencies.
     flex-direction: column;
     gap: var(--banner-gap);
 
+    &__media {
+        .image {
+            @media (prefers-color-scheme: dark) {
+                opacity: 1;
+                transition: none;
+            }
+        }
+    }
+
+    &__content {
+        color: $color-text;
+    }
+
     &--fullwidth {
         .banner__content {
             padding-inline: $gutter-s;
@@ -29,20 +42,16 @@ Dependencies.
             }
 
             .banner__content {
+                /* stylelint-disable-next-line max-nesting-depth */
+                @media (prefers-color-scheme: dark) {
+                    --color-text: 0 0% 20%;
+                }
+
                 // Example, so text is legible above image.
                 background: hsl(var(--color-brand) / 10%);
                 inline-size: 40vw;
                 margin-inline-start: $gutter-m;
                 padding: $gutter-m;
-            }
-        }
-    }
-
-    &__media {
-        .image {
-            @media (prefers-color-scheme: dark) {
-                opacity: 1;
-                transition: none;
             }
         }
     }
@@ -61,6 +70,11 @@ Dependencies.
 
         + .banner__content {
             @include bp-medium {
+                /* stylelint-disable-next-line max-nesting-depth */
+                @media (prefers-color-scheme: dark) {
+                    --color-text: 0 0% 20%;
+                }
+
                 background: none;
             }
         }
