@@ -17,6 +17,9 @@
 :root :has(#storybook-docs:not([hidden='true'])) {
     --color-brand: 270 50% 80%;
     --color-text: 0 0% 20%;
-    --color-neutral-900: 0 0% 95%;
+    --color-background: 0 0% 100%;
+    --color-neutral-900: 0 0% 0%;
+    --color-neutral-100: 0 0% 85%;
+
     color-scheme: light !important;
 }
