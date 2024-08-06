@@ -5,7 +5,7 @@ export const WebUIToggleHtml = () => `
         type="button"
         role="switch"
         aria-checked="false"
-        aria-label="toggle / switch"
+        aria-label="toggle label"
     >
         <span class="toggle__on" aria-hidden="true">on</span>
         <span class="toggle__off" aria-hidden="true">off</span>
@@ -21,7 +21,7 @@ export const WebUIToggleWithLabelHtml = () => `
         role="switch"
         aria-checked="false"
     >
-        <span class="toggle__label">toggle / switch label</span>
+        <span class="toggle__label">toggle label</span>
         <span class="toggle__indicator">
             <span class="toggle__on" aria-hidden="true">on</span>
             <span class="toggle__off" aria-hidden="true">off</span>
