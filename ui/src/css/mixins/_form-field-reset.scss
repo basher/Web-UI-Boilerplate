@@ -18,7 +18,7 @@ Dependencies.
         border-width: $border-width-m;
     }
 
-    &:invalid:required:focus {
+    &:user-invalid:required {
         background-color: hsl(var(--color-accent-negative) / 10%);
         border-color: $color-error;
         border-width: $border-width-m;
@@ -26,6 +26,8 @@ Dependencies.
 
     // ARIA.
     &[aria-invalid='true'] {
+        background-color: hsl(var(--color-accent-negative) / 10%);
         border-color: $color-error;
+        border-width: $border-width-m;
     }
 }

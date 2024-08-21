@@ -47,18 +47,24 @@ Dependencies.
             }
         }
 
-        &:has(:invalid:required:focus) {
+        &:has(:user-invalid:required) {
             @include validation;
         }
     }
 
     // Errors rendered directly in HTML, or via JavaScript.
-    &__field--has-error {
-        @include validation;
-    }
-
     &__error {
         color: $color-error;
+    }
+
+    &__field--has-error {
+        @include validation;
+
+        &:has(:valid) {
+            .form__error {
+                display: none;
+            }
+        }
     }
 }
 
