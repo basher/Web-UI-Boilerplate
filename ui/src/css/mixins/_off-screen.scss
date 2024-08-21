@@ -1,7 +1,7 @@
 /*
 ----------------------------------------------------------------------------
 Hide content visually, but make available for screen readers.
-Reveal content if it receives :FOCUS.
+See https://www.tpgi.com/the-anatomy-of-visually-hidden/
 ----------------------------------------------------------------------------
 */
 
@@ -13,20 +13,12 @@ Dependencies.
 // @use 'base' as *;
 
 @mixin off-screen() {
-    block-size: 0.0625rem;
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    inline-size: 0.0625rem;
-    margin: -0.0625rem;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-
-    &:focus {
-        block-size: auto;
-        clip: auto;
-        inline-size: auto;
-        margin: 0;
-        overflow: visible;
+    &:not(:focus):not(:active) {
+        block-size: 1px;
+        clip-path: inset(50%);
+        inline-size: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
     }
 }

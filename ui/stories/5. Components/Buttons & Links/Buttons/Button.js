@@ -23,7 +23,7 @@ export const IconButtonHtml = (args) => `
     >
         <use href="sprite.svg#${args.iconRef}" />
     </svg>
-    <span class="sr-only">[screenreader label]</span>
+    <span class="visually-hidden">[screenreader label]</span>
 </button>
 `;
 

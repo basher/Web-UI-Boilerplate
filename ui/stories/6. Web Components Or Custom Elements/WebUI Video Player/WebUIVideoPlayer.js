@@ -43,7 +43,7 @@ export const WebUIVideoPlayerHtml = () => `
                     >
                         <use href="sprite.svg#close" />
                     </svg>
-                    <span class="sr-only">Close dialog</span>
+                    <span class="visually-hidden">Close dialog</span>
                 </button>
             </div>
 

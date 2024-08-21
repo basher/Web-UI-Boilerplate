@@ -27,7 +27,7 @@ ${style}
     </header>
 
     <main class="main" id="main">
-        <h1 class="sr-only">Heading level 1</h1>
+        <h1 class="visually-hidden">Heading level 1</h1>
 
         <div class="wrapper wrapper--fullbleed stack">
             <div class="banner banner--fullwidth">

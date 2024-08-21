@@ -54,7 +54,7 @@ export const HamburgerNavigationHtml = () => `
             >
                 <use href="sprite.svg#close" />
             </svg>
-            <span class="sr-only">Toggle menu</span>
+            <span class="visually-hidden">Toggle menu</span>
         </button>
 
         <ul
@@ -108,7 +108,7 @@ export const DisclosureNavigationHtml = () => `
                     >
                         <use href="sprite.svg#down" />
                     </svg>
-                    <span class="sr-only">[Nav link] dropdown</span>
+                    <span class="visually-hidden">[Nav link] dropdown</span>
                 </button>
 
                 <ul
@@ -158,7 +158,7 @@ export const DisclosureNavigationHtml = () => `
                     >
                         <use href="sprite.svg#down" />
                     </svg>
-                    <span class="sr-only">[Nav link] dropdown</span>
+                    <span class="visually-hidden">[Nav link] dropdown</span>
                 </button>
 
                 <ul
@@ -221,7 +221,7 @@ export const HamburgerDisclosureNavigationHtml = () => `
             >
                 <use href="sprite.svg#close" />
             </svg>
-            <span class="sr-only">Toggle menu</span>
+            <span class="visually-hidden">Toggle menu</span>
         </button>
 
         <ul
@@ -248,7 +248,7 @@ export const HamburgerDisclosureNavigationHtml = () => `
                         >
                             <use href="sprite.svg#down" />
                         </svg>
-                        <span class="sr-only">[Nav link] dropdown</span>
+                        <span class="visually-hidden">[Nav link] dropdown</span>
                     </button>
 
                     <ul
@@ -298,7 +298,7 @@ export const HamburgerDisclosureNavigationHtml = () => `
                         >
                             <use href="sprite.svg#down" />
                         </svg>
-                        <span class="sr-only">[Nav link] dropdown</span>
+                        <span class="visually-hidden">[Nav link] dropdown</span>
                     </button>
 
                     <ul

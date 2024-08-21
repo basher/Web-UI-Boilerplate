@@ -37,7 +37,7 @@ export const WebUIImageGalleryHtml = () => `
                             >
                                 <use href="sprite.svg#close" />
                             </svg>
-                            <span class="sr-only">Close dialog</span>
+                            <span class="visually-hidden">Close dialog</span>
                         </button>
                     </div>
 
@@ -105,7 +105,7 @@ export const WebUIImageGalleryHtml = () => `
                             >
                                 <use href="sprite.svg#close" />
                             </svg>
-                            <span class="sr-only">Close dialog</span>
+                            <span class="visually-hidden">Close dialog</span>
                         </button>
                     </div>
 
@@ -173,7 +173,7 @@ export const WebUIImageGalleryHtml = () => `
                             >
                                 <use href="sprite.svg#close" />
                             </svg>
-                            <span class="sr-only">Close dialog</span>
+                            <span class="visually-hidden">Close dialog</span>
                         </button>
                     </div>
 
@@ -241,7 +241,7 @@ export const WebUIImageGalleryHtml = () => `
                             >
                                 <use href="sprite.svg#close" />
                             </svg>
-                            <span class="sr-only">Close dialog</span>
+                            <span class="visually-hidden">Close dialog</span>
                         </button>
                     </div>
 
@@ -309,7 +309,7 @@ export const WebUIImageGalleryHtml = () => `
                             >
                                 <use href="sprite.svg#close" />
                             </svg>
-                            <span class="sr-only">Close dialog</span>
+                            <span class="visually-hidden">Close dialog</span>
                         </button>
                     </div>
 

@@ -31,7 +31,7 @@ ${style}
 export const ScreenReaderHtml = () => `
 <p>The content below is hidden visually, but still announced by screen readers...</p>
 
-<div class="sr-only">
+<div class="visually-hidden">
     Visually hide content, but still make it available to screen readers.
 </div>
 `;
