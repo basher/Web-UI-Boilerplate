@@ -11,22 +11,38 @@ export default {
         marginBlock: {
             control: 'select',
             options: ['0', 'xs', 's', 'l', 'xl'],
-            defaultValue: { summary: 'm' },
+            description: 'Add block margin to component.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'm' }
+            },
         },
         marginInline: {
             control: 'select',
             options: ['0', 'xs', 's', 'l', 'xl'],
-            defaultValue: { summary: 'm' },
+            description: 'Add inline margin to component.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'm' }
+            },
         },
         paddingBlock: {
             control: 'select',
             options: ['0', 'xs', 's', 'l', 'xl'],
-            defaultValue: { summary: 'm' }
+            description: 'Add block padding to component.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'm' }
+            },
         },
         paddingInline: {
             control: 'select',
             options: ['0', 'xs', 's', 'l', 'xl'],
-            defaultValue: { summary: 'm' }
+            description: 'Add inline padding to component.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'm' }
+            },
         },
     },
 };
