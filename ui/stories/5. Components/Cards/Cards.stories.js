@@ -30,7 +30,7 @@ export default {
             description: 'Move image position. Only applies to fullwidth cards.',
             table: {
                 type: { summary: 'boolean' },
-                defaultValue: { summary: 'Left' }
+                defaultValue: { summary: false }
             },
         },
         skin: {

@@ -10,11 +10,19 @@ export default {
     argTypes: {
         bindEscapeKey: {
             control: 'boolean',
-            description: 'Close with ESC key.'
+            description: 'Close with ESC key.',
+            table: {
+                type: { summary: 'boolean' },
+                defaultValue: { summary: false }
+            },
         },
         bindClickOutside: {
             control: 'boolean',
-            description: 'Close by clicking outside'
+            description: 'Close by clicking outside component.',
+            table: {
+                type: { summary: 'boolean' },
+                defaultValue: { summary: false }
+            },
         },
     },
 };
