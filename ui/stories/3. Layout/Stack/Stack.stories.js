@@ -11,6 +11,11 @@ export default {
         stackGutter: {
             control: 'select',
             options: ['gutter-xs', 'gutter-s', 'gutter-l', 'gutter-xl'],
+            description: '"Gutter" (margin block) between child elements.',
+            table: {
+                type: { summary: 'gutter-xs, gutter-s, gutter-l, gutter-xl' },
+                defaultValue: { summary: 'gutter-m' }
+            },
         },
     },
 };

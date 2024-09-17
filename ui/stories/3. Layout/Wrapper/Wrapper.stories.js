@@ -8,7 +8,14 @@ export default {
         },
     },
     argTypes: {
-        turnParentIntoStack: { control: 'boolean' },
+        turnParentIntoStack: {
+            control: 'boolean',
+            description: 'Add "stack" class to wrapper.',
+            table: {
+                type: { summary: 'boolean' },
+                defaultValue: { summary: 'false' }
+            },
+        },
         paddingBlock: {
             control: 'select',
             options: [
@@ -18,6 +25,11 @@ export default {
                 'p-block--l',
                 'p-block--xl',
             ],
+            description: 'Add "padding-block" to wrapper.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
         },
         paddingInline: {
             control: 'select',
@@ -28,10 +40,20 @@ export default {
                 'p-inline--l',
                 'p-inline--xl',
             ],
+            description: 'Add "padding-inline" to wrapper.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'p-inline--m' }
+            },
         },
         skin: {
             control: 'select',
             options: ['skin-1', 'skin-2', 'skin-3'],
+            description: 'Add visual "skin" to wrapper.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
         },
     },
 };

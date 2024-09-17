@@ -2,7 +2,7 @@ import {
     FullwidthBannerHtml,
     FullwidthBannerOverlayHtml,
     InlineBannerHtml
-} from "./Banners";
+} from './Banners';
 
 export default {
     title: 'Components/Banners',

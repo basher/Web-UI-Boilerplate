@@ -11,6 +11,11 @@ export default {
         iconSize: {
             control: 'select',
             options: ['small', 'medium', 'large'],
+            description: 'Icon size.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
         },
     },
 };

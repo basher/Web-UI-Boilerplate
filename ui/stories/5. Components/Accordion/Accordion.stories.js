@@ -1,4 +1,4 @@
-import { AccordionHtml, AccordionCustomIconHtml } from "./Accordion";
+import { AccordionHtml, AccordionCustomIconHtml } from './Accordion';
 export default {
     title: 'Components/Accordion',
     parameters: {

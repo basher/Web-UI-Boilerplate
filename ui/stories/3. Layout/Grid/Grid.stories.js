@@ -17,6 +17,11 @@ export default {
         gap: {
             control: 'select',
             options: ['no-gap', 'gap-xs', 'gap-s', 'gap-l', 'gap-xl'],
+            description: 'Grid gap.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'gap-m' }
+            },
         },
     },
 };
