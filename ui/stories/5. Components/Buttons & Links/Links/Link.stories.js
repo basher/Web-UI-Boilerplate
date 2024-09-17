@@ -8,14 +8,31 @@ export default {
         },
     },
     argTypes: {
-        label: { control: 'text' },
+        label: {
+            control: 'text',
+            description: 'Link label text.',
+            table: {
+                type: { summary: 'string' },
+                defaultValue: { summary: 'Non-empty string' }
+            },
+        },
         linkType: {
             control: 'select',
             options: ['primary', 'secondary', 'positive', 'negative'],
+            description: 'Link style override.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
         },
         linkSize: {
             control: 'select',
             options: ['small'],
+            description: 'Button size.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
         },
     },
 };

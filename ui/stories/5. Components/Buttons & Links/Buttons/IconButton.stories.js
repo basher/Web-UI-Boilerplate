@@ -8,15 +8,32 @@ export default {
         },
     },
     argTypes: {
-        iconSize: {
-            control: 'select',
-            options: ['small', 'medium', 'large'],
-        },
         iconRef: {
             control: 'select',
             options: ['down', 'left', 'right', 'up', 'close'],
+            description: 'Name of icon from sprite.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
         },
-        disabled: { control: 'boolean' },
+        iconSize: {
+            control: 'select',
+            options: ['small', 'medium', 'large'],
+            description: 'Icon size.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
+        },
+        disabled: {
+            control: 'boolean',
+            description: 'Disable button.',
+            table: {
+                type: { summary: 'boolean' },
+                defaultValue: { summary: 'false' }
+            },
+        },
     },
 };
 

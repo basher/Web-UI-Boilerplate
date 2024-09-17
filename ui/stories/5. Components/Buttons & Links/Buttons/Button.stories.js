@@ -8,16 +8,40 @@ export default {
         },
     },
     argTypes: {
-        label: { control: 'text' },
+        label: {
+            control: 'text',
+            description: 'Button label text.',
+            table: {
+                type: { summary: 'string' },
+                defaultValue: { summary: 'Non-empty string' }
+            },
+        },
         buttonType: {
             control: 'select',
             options: ['primary', 'secondary', 'positive', 'negative'],
+            description: 'Button style override.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
         },
         buttonSize: {
             control: 'select',
             options: ['small'],
+            description: 'Button size.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
         },
-        disabled: { control: 'boolean' },
+        disabled: {
+            control: 'boolean',
+            description: 'Disable button.',
+            table: {
+                type: { summary: 'boolean' },
+                defaultValue: { summary: 'false' }
+            },
+        },
     },
 };
 

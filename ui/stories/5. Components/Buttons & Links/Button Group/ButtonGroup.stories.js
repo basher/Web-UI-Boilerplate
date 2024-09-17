@@ -10,6 +10,11 @@ export default {
     argTypes: {
         centered: {
             control: 'boolean',
+            description: 'Horizontally center buttons.',
+            table: {
+                type: { summary: 'boolean' },
+                defaultValue: { summary: 'false' }
+            },
         },
     },
 };

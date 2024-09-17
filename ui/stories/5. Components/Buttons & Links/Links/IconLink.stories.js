@@ -8,13 +8,23 @@ export default {
         },
     },
     argTypes: {
-        iconSize: {
-            control: 'select',
-            options: ['small', 'medium', 'large'],
-        },
         iconRef: {
             control: 'select',
             options: ['down', 'left', 'right', 'up', 'close'],
+            description: 'Name of icon from sprite.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
+        },
+        iconSize: {
+            control: 'select',
+            options: ['small', 'medium', 'large'],
+            description: 'Icon size.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
         },
     },
 };

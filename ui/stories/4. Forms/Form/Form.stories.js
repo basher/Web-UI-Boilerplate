@@ -8,7 +8,14 @@ export default {
         },
     },
     argTypes: {
-        makeFieldsRequired: { control: 'boolean' },
+        makeFieldsRequired: {
+            control: 'boolean',
+            description: 'Make form fields required.',
+            table: {
+                type: { summary: 'boolean' },
+                defaultValue: { summary: 'false' }
+            },
+        },
     },
 };
 
