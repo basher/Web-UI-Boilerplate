@@ -19,15 +19,28 @@ export default {
                 'media-inline',
                 'media-inline-reverse',
             ],
-            description: 'Does NOT apply to fullwidth cards.'
+            description: 'Move image position. Does NOT apply to fullwidth cards.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'Top' }
+            },
         },
         fullwidthFlipOrientation: {
             control: 'boolean',
-            description: 'Only applies to fullwidth cards.'
+            description: 'Move image position. Only applies to fullwidth cards.',
+            table: {
+                type: { summary: 'boolean' },
+                defaultValue: { summary: 'Left' }
+            },
         },
         skin: {
             control: 'select',
             options: ['skin-1', 'skin-2', 'skin-3'],
+            description: 'Add visual "skin" to card.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
         },
     },
 };

@@ -11,6 +11,11 @@ export default {
         skin: {
             control: 'select',
             options: ['skin-1', 'skin-2', 'skin-3'],
+            description: 'Add visual "skin" to component.',
+            table: {
+                type: { summary: 'select' },
+                defaultValue: { summary: 'N/A' }
+            },
         },
     },
 };

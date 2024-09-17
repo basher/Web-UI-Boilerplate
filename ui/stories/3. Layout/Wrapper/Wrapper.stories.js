@@ -28,7 +28,7 @@ export default {
             description: 'Add "padding-block" to wrapper.',
             table: {
                 type: { summary: 'select' },
-                defaultValue: { summary: 'N/A' }
+                defaultValue: { summary: '0' }
             },
         },
         paddingInline: {
