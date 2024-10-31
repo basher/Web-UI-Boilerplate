@@ -21,6 +21,8 @@ Dependencies.
 html {
     accent-color: $color-brand;
     color-scheme: light dark;
+    /* stylelint-disable-next-line property-no-unknown */
+    interpolate-size: allow-keywords;
     // Remove the automatic text size adjustment that is provided by iOS.
     text-size-adjust: none;
 }

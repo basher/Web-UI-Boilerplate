@@ -7,6 +7,24 @@ Dependencies.
 @use '../mixins' as *;
 
 .accordion {
+    &__details {
+        overflow: hidden;
+
+        /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+        &::details-content {
+            block-size: 0;
+            transition: block-size $animation-medium,
+                content-visibility $animation-medium;
+            /* stylelint-disable-next-line property-no-unknown */
+            transition-behavior: allow-discrete;
+        }
+
+        /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+        &[open]::details-content {
+            block-size: auto;
+        }
+    }
+
     &__details + &__details {
         margin-block-start: $gutter-m;
     }
