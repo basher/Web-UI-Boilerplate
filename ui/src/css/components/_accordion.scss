@@ -13,8 +13,8 @@ Dependencies.
         /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
         &::details-content {
             block-size: 0;
-            transition: block-size $animation-medium,
-                content-visibility $animation-medium;
+            transition: block-size $animation-fast,
+                content-visibility $animation-fast;
             /* stylelint-disable-next-line property-no-unknown */
             transition-behavior: allow-discrete;
         }
