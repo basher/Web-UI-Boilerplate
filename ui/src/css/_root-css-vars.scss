@@ -27,7 +27,7 @@ CSS custom properties for dynamic theming.
     --type-font-family-monospace: Menlo, Monaco, Consolas, 'Droid Sans Mono',
         'Courier New', monospace;
 
-    // Type scale.
+    // Fluid type scale.
     /* @link https://utopia.fyi/type/calculator?c=480,16,1.25,1440,20,1.333,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
     --type-step--1: clamp(0.8rem, 0.7311rem + 0.2296vw, 0.9377rem);
     --type-step-0: clamp(1rem, 0.875rem + 0.4167vw, 1.25rem);
@@ -40,6 +40,15 @@ CSS custom properties for dynamic theming.
 
     /* Max line-length (aka measure) to improve readability of editorial content */
     --type-max-line-length: 65ch;
+
+    // Fluid space scale.
+    /* @link https://utopia.fyi/space/calculator?c=480,16,1.25,1440,20,1.333,6,1,&s=0.75|0.5,1.5|2|3,&g=s,l,xl,12 */
+    --space-2xs: clamp(0.5rem, 0.4375rem + 0.2083vw, 0.625rem);
+    --space-xs: clamp(0.75rem, 0.6563rem + 0.3125vw, 0.9375rem);
+    --space-s: clamp(1rem, 0.875rem + 0.4167vw, 1.25rem);
+    --space-m: clamp(1.5rem, 1.3125rem + 0.625vw, 1.875rem);
+    --space-l: clamp(2rem, 1.75rem + 0.8333vw, 2.5rem);
+    --space-xl: clamp(3rem, 2.625rem + 1.25vw, 3.75rem);
 
     // Layout.
     --type-scale: 1.414;
