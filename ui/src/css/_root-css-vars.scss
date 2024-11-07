@@ -28,23 +28,21 @@ CSS custom properties for dynamic theming.
         'Courier New', monospace;
 
     // Type scale.
-    /* @link https://utopia.fyi/type/calculator?c=480,16,1.25,1440,20,1.414,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-    --step--1: clamp(0.8333rem, 0.7811rem + 0.174vw, 0.9377rem);
-    --step-0: clamp(1rem, 0.875rem + 0.4167vw, 1.25rem);
-    --step-1: clamp(1.2rem, 0.9669rem + 0.7771vw, 1.6663rem);
-    --step-2: clamp(1.44rem, 1.0494rem + 1.3019vw, 2.2211rem);
-    --step-3: clamp(1.728rem, 1.1116rem + 2.0546vw, 2.9607rem);
-    --step-4: clamp(2.0736rem, 1.1371rem + 3.1218vw, 3.9467rem);
-    --step-5: clamp(2.4883rem, 1.102rem + 4.621vw, 5.2609rem);
-    --step-6: clamp(2.986rem, 0.9726rem + 6.7113vw, 7.0128rem);
+    /* @link https://utopia.fyi/type/calculator?c=480,16,1.25,1440,20,1.333,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --type-step--1: clamp(0.8rem, 0.7311rem + 0.2296vw, 0.9377rem);
+    --type-step-0: clamp(1rem, 0.875rem + 0.4167vw, 1.25rem);
+    --type-step-1: clamp(1.25rem, 1.0419rem + 0.6938vw, 1.6663rem);
+    --type-step-2: clamp(1.5625rem, 1.2332rem + 1.0977vw, 2.2211rem);
+    --type-step-3: clamp(1.9531rem, 1.4493rem + 1.6794vw, 2.9607rem);
+    --type-step-4: clamp(2.4414rem, 1.6888rem + 2.5088vw, 3.9467rem);
+    --type-step-5: clamp(3.0518rem, 1.9472rem + 3.6819vw, 5.2609rem);
+    --type-step-6: clamp(3.8147rem, 2.2157rem + 5.3302vw, 7.0128rem);
 
-    // NOTE:
-    // Can't use this --type-scale in fluid typography calculations & mixin.
-    // Need to use $type-scale instead, with same value.
-    --type-scale: 1.414;
+    /* Max line-length (aka measure) to improve readability of editorial content */
     --type-max-line-length: 65ch;
 
     // Layout.
+    --type-scale: 1.414;
     --gutter: 1.25rem;
     --gutter-xs: calc(var(--gutter-s) / var(--type-scale));
     --gutter-s: calc(var(--gutter) / var(--type-scale));

@@ -16,62 +16,62 @@ No need for font smoothing - see https://ui.dev/rwd/articles/font-smoothing
 
 html {
     @include bp-2k {
-        font-size: $base-font-size-2k;
+        font-size: var(--base-font-size-2k);
     }
     @include bp-4k {
-        font-size: $base-font-size-4k;
+        font-size: var(--base-font-size-4k);
     }
 
-    font-size: $base-font-size;
+    font-size: var(--base-font-size);
 }
 
 body {
-    font-family: $base-font-family;
-    font-size: var(--step-0);
-    line-height: $base-line-height;
+    font-family: var(--base-font-family);
+    font-size: var(--type-step-0);
+    line-height: var(--base-line-height);
 }
 
 :where(h1, h2, h3, h4, h5, h6, [class*='h--']) {
-    font-family: $base-font-family-title;
+    font-family: var(--base-font-family-title);
 }
 
 .h--xl {
-    font-size: var(--step-6);
-    line-height: $line-height-xl;
+    font-size: var(--type-step-6);
+    line-height: var(--line-height-step-6);
     margin-block-end: $gutter-clamp-xl;
 }
 
 :where(h1, .h--1) {
-    font-size: var(--step-5);
-    line-height: $line-height-h1;
+    font-size: var(--type-step-5);
+    line-height: var(--line-height-step-5);
     margin-block-end: $gutter-clamp-l;
 }
 
 :where(h2, .h--2) {
-    font-size: var(--step-4);
-    line-height: $line-height-h2;
+    font-size: var(--type-step-4);
+    line-height: var(--line-height-step-4);
     margin-block-end: $gutter-m;
 }
 
 :where(h3, .h--3) {
-    font-size: var(--step-3);
-    line-height: $line-height-h3;
+    font-size: var(--type-step-3);
+    line-height: var(--line-height-step-3);
     margin-block-end: $gutter-m;
 }
 
 :where(h4, .h--4) {
-    font-size: var(--step-2);
-    line-height: $line-height-h4;
+    font-size: var(--type-step-2);
+    line-height: var(--line-height-step-2);
     margin-block-end: $gutter-s;
 }
 
 :where(h5, .h--5) {
-    font-size: var(--step-1);
+    font-size: var(--type-step-1);
     margin-block-end: $gutter-xs;
 }
 
 :where(h6, .h--6) {
-    font-size: var(--step-0);
+    font-size: var(--type-step-0);
     margin-block-end: $gutter-xs;
 }
 
@@ -103,7 +103,7 @@ Miscellaneous styles.
 ----------------------------------------------------------------------------
 */
 :where(:is(p, li):not([class]), dd, small) {
-    max-inline-size: $max-line-length;
+    max-inline-size: var(--type-max-line-length);
 }
 
 :is(button, input, select, textarea, datalist, datalist > option) {
@@ -121,9 +121,9 @@ address {
 }
 
 small {
-    font-size: $font-size-s;
+    font-size: var(--type-step--1);
 }
 
 code {
-    font-family: $base-font-family-monospace;
+    font-family: var(--base-font-family-monospace);
 }

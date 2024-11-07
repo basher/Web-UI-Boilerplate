@@ -31,9 +31,9 @@ Dependencies.
 
     &__summary {
         @include focus;
-        font-family: $base-font-family-title;
-        font-size: var(--step-2);
-        line-height: $line-height-h4;
+        font-family: var(--base-font-family-title);
+        font-size: var(--type-step-2);
+        line-height: var(--line-height-step-2);
         margin-block-end: $gutter-s;
     }
 

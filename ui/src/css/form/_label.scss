@@ -11,6 +11,6 @@ Dependencies.
 
     &__hint {
         display: block;
-        font-size: $font-size-s;
+        font-size: var(--type-step--1);
     }
 }
