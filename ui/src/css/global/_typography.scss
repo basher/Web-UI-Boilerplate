@@ -26,8 +26,9 @@ html {
 }
 
 body {
-    @include fluid-type;
     font-family: $base-font-family;
+    font-size: var(--step-0);
+    line-height: $base-line-height;
 }
 
 :where(h1, h2, h3, h4, h5, h6, [class*='h--']) {
@@ -35,37 +36,42 @@ body {
 }
 
 .h--xl {
-    @include fluid-type($font-size-h1, $font-size-xl, $line-height-xl);
+    font-size: var(--step-6);
+    line-height: $line-height-xl;
     margin-block-end: $gutter-clamp-xl;
 }
 
 :where(h1, .h--1) {
-    @include fluid-type($font-size-h2, $font-size-h1, $line-height-h1);
+    font-size: var(--step-5);
+    line-height: $line-height-h1;
     margin-block-end: $gutter-clamp-l;
 }
 
 :where(h2, .h--2) {
-    @include fluid-type($font-size-h3, $font-size-h2, $line-height-h2);
+    font-size: var(--step-4);
+    line-height: $line-height-h2;
     margin-block-end: $gutter-m;
 }
 
 :where(h3, .h--3) {
-    @include fluid-type($font-size-h4, $font-size-h3, $line-height-h3);
+    font-size: var(--step-3);
+    line-height: $line-height-h3;
     margin-block-end: $gutter-m;
 }
 
 :where(h4, .h--4) {
-    @include fluid-type($font-size-h5, $font-size-h4, $line-height-h4);
+    font-size: var(--step-2);
+    line-height: $line-height-h4;
     margin-block-end: $gutter-s;
 }
 
 :where(h5, .h--5) {
-    font-size: $font-size-h5;
+    font-size: var(--step-1);
     margin-block-end: $gutter-xs;
 }
 
 :where(h6, .h--6) {
-    font-size: $font-size-h6;
+    font-size: var(--step-0);
     margin-block-end: $gutter-xs;
 }
 

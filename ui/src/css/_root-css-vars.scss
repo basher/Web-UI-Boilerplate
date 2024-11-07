@@ -27,6 +27,17 @@ CSS custom properties for dynamic theming.
     --type-font-family-monospace: Menlo, Monaco, Consolas, 'Droid Sans Mono',
         'Courier New', monospace;
 
+    // Type scale.
+    /* @link https://utopia.fyi/type/calculator?c=480,16,1.25,1440,20,1.414,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --step--1: clamp(0.8333rem, 0.7811rem + 0.174vw, 0.9377rem);
+    --step-0: clamp(1rem, 0.875rem + 0.4167vw, 1.25rem);
+    --step-1: clamp(1.2rem, 0.9669rem + 0.7771vw, 1.6663rem);
+    --step-2: clamp(1.44rem, 1.0494rem + 1.3019vw, 2.2211rem);
+    --step-3: clamp(1.728rem, 1.1116rem + 2.0546vw, 2.9607rem);
+    --step-4: clamp(2.0736rem, 1.1371rem + 3.1218vw, 3.9467rem);
+    --step-5: clamp(2.4883rem, 1.102rem + 4.621vw, 5.2609rem);
+    --step-6: clamp(2.986rem, 0.9726rem + 6.7113vw, 7.0128rem);
+
     // NOTE:
     // Can't use this --type-scale in fluid typography calculations & mixin.
     // Need to use $type-scale instead, with same value.
