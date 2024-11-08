@@ -35,29 +35,14 @@ CSS custom properties (e.g. from "design tokens") for dynamic theming.
     --type-step-5: clamp(3.0518rem, 1.9472rem + 3.6819vw, 5.2609rem);
     --type-step-6: clamp(3.8147rem, 2.2157rem + 5.3302vw, 7.0128rem);
 
-    /* Max line-length (aka measure) to improve readability of editorial content */
-    --type-max-line-length: 65ch;
-
     // Fluid space scale.
     /* @link https://utopia.fyi/space/calculator?c=480,16,1.25,1440,20,1.333,6,1,&s=0.75|0.5,1.5|2|3,&g=s,l,xl,12 */
-    --space-2xs: clamp(0.5rem, 0.4375rem + 0.2083vw, 0.625rem);
-    --space-xs: clamp(0.75rem, 0.6563rem + 0.3125vw, 0.9375rem);
-    --space-s: clamp(1rem, 0.875rem + 0.4167vw, 1.25rem);
-    --space-m: clamp(1.5rem, 1.3125rem + 0.625vw, 1.875rem);
-    --space-l: clamp(2rem, 1.75rem + 0.8333vw, 2.5rem);
-    --space-xl: clamp(3rem, 2.625rem + 1.25vw, 3.75rem);
-
-    // Layout.
-    --type-scale: 1.414;
-    --gutter: 1.25rem;
-    --gutter-xs: calc(var(--gutter-s) / var(--type-scale));
-    --gutter-s: calc(var(--gutter) / var(--type-scale));
-    --gutter-m: calc(var(--gutter) * var(--type-scale));
-    --gutter-l: calc(var(--gutter-m) * var(--type-scale));
-    --gutter-xl: calc(var(--gutter-l) * var(--type-scale));
-
-    --gutter-clamp-l: clamp(var(--gutter-m), 4vw, var(--gutter-l));
-    --gutter-clamp-xl: clamp(var(--gutter-m), 5vw, var(--gutter-xl));
+    /* One-up pairs */
+    --space-2xs-xs: clamp(0.5rem, 0.2813rem + 0.7292vw, 0.9375rem);
+    --space-xs-s: clamp(0.75rem, 0.5rem + 0.8333vw, 1.25rem);
+    --space-s-m: clamp(1rem, 0.5625rem + 1.4583vw, 1.875rem);
+    --space-m-l: clamp(1.5rem, 1rem + 1.6667vw, 2.5rem);
+    --space-l-xl: clamp(2rem, 1.125rem + 2.9167vw, 3.75rem);
 }
 
 // Dark theme: ensure black & white are NOT truly black & white.

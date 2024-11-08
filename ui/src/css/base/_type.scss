@@ -52,6 +52,9 @@ Font-face rules.
     --line-height-h2: 1.2;
     --line-height-h1: 1.2;
     --line-height-xl: 1.2;
+
+    /* Max line-length (aka measure) to improve readability of editorial content */
+    --type-max-line-length: 65ch;
 }
 
 /*

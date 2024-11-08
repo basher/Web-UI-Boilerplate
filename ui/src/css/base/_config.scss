@@ -5,31 +5,17 @@ Config settings.
 */
 
 :root {
-    /*
-    ----------------------------------------------------------------------------
-    Layout.
-    ----------------------------------------------------------------------------
-    */
-    --site-width: null; // Replace NULL to set a max-width for site.
+    /* Layout. */
+    --site-max-width: null;
 
-    /*
-    ----------------------------------------------------------------------------
-    Spacing and gutters.
-    Use for margin|padding, and gap in flex|grid layouts.
-    ----------------------------------------------------------------------------
-    */
-    --gutter-xs: var(--space-2xs);
-    --gutter-s: var(--space-xs);
-    --gutter: var(--space-s);
-    --gutter-m: var(--space-m);
-    --gutter-l: var(--space-l);
-    --gutter-xl: var(--space-xl);
+    /* Spacing and gutters. Use for margin|padding, and gap in flex|grid layouts. */
+    --gutter-xs: var(--space-2xs-xs);
+    --gutter-s: var(--space-xs-s);
+    --gutter-m: var(--space-s-m);
+    --gutter-l: var(--space-m-l);
+    --gutter-xl: var(--space-l-xl);
 
-    /*
-    ----------------------------------------------------------------------------
-    Miscellaneous.
-    ----------------------------------------------------------------------------
-    */
+    /* Miscellaneous. */
     --media-aspect-ratio: 16/9;
 }
 

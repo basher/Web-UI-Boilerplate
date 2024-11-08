@@ -10,7 +10,7 @@ Dependencies.
     display: grid;
     grid-template-rows: auto 1fr auto;
     margin-inline: auto;
-    max-inline-size: var(--site-width);
+    max-inline-size: var(--site-max-width);
     min-block-size: 100vh; // 100dvb might have performance implications.
 
     &__sidebar {
