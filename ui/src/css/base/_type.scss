@@ -36,14 +36,22 @@ Font-face rules.
     --base-font-size-2k: 110%; /* 2K screens */
     --base-font-size-4k: 200%; /* 4K screens */
 
-    --base-line-height: 1.5;
+    --font-size-body: var(--type-step-0);
+    --font-size-s: var(--type-step--1);
+    --font-size-h5: var(--type-step-1);
+    --font-size-h4: var(--type-step-2);
+    --font-size-h3: var(--type-step-3);
+    --font-size-h2: var(--type-step-4);
+    --font-size-h1: var(--type-step-5);
+    --font-size-xl: var(--type-step-6);
 
     /* Only adjust line-height when fonts get large */
-    --line-height-step-2: 1.3;
-    --line-height-step-3: 1.3;
-    --line-height-step-4: 1.2;
-    --line-height-step-5: 1.2;
-    --line-height-step-6: 1.2;
+    --base-line-height: 1.5;
+    --line-height-h4: 1.3;
+    --line-height-h3: 1.3;
+    --line-height-h2: 1.2;
+    --line-height-h1: 1.2;
+    --line-height-xl: 1.2;
 }
 
 /*

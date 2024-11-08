@@ -27,7 +27,7 @@ html {
 
 body {
     font-family: var(--base-font-family);
-    font-size: var(--type-step-0);
+    font-size: var(--font-size-body);
     line-height: var(--base-line-height);
 }
 
@@ -36,42 +36,42 @@ body {
 }
 
 .h--xl {
-    font-size: var(--type-step-6);
-    line-height: var(--line-height-step-6);
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
     margin-block-end: $gutter-clamp-xl;
 }
 
 :where(h1, .h--1) {
-    font-size: var(--type-step-5);
-    line-height: var(--line-height-step-5);
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
     margin-block-end: $gutter-clamp-l;
 }
 
 :where(h2, .h--2) {
-    font-size: var(--type-step-4);
-    line-height: var(--line-height-step-4);
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
     margin-block-end: $gutter-m;
 }
 
 :where(h3, .h--3) {
-    font-size: var(--type-step-3);
-    line-height: var(--line-height-step-3);
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
     margin-block-end: $gutter-m;
 }
 
 :where(h4, .h--4) {
-    font-size: var(--type-step-2);
-    line-height: var(--line-height-step-2);
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
     margin-block-end: $gutter-s;
 }
 
 :where(h5, .h--5) {
-    font-size: var(--type-step-1);
+    font-size: var(--font-size-h5);
     margin-block-end: $gutter-xs;
 }
 
 :where(h6, .h--6) {
-    font-size: var(--type-step-0);
+    font-size: var(--font-size-body);
     margin-block-end: $gutter-xs;
 }
 
@@ -121,7 +121,7 @@ address {
 }
 
 small {
-    font-size: var(--type-step--1);
+    font-size: var(--font-size-s);
 }
 
 code {
