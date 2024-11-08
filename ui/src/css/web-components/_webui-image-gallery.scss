@@ -20,7 +20,7 @@ webui-image-gallery {
     }
 
     .grid {
-        @include responsive-grid-auto-columns($auto-layout: auto-fill);
+        --grid-auto-layout: auto-fill;
 
         > * {
             display: block;

@@ -72,9 +72,8 @@ Dependencies.
 
     // Cards in a grid.
     &-grid.grid {
-        --card-max-width: 25rem; // Same width as image.
-
-        @include responsive-grid-auto-columns($max-width: max-content);
+        --card-max-width: 25rem; // Same width as image.: 100px;
+        --grid-item-max-width: max-content;
 
         > * {
             max-inline-size: var(--card-max-width);

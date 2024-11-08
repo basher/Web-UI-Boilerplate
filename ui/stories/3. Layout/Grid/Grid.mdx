@@ -7,13 +7,16 @@ import * as Grid from './Grid.stories';
 - Grid layouts use `CSS Grid` in most cases.
 - By default, the grid component [auto-arranges the grid items](https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/) based on available space, with **no CSS media queries**.
 - Auto-arranging is ideal for components such as image galleries, card listings, etc.
-    - In these scenarios, set an explicit `$max-width` to prevent cards getting too wide.
+    - In these scenarios, set an explicit `--grid-item-max-width` to prevent cards getting too wide.
 - Auto-arranging is also ideal when dividing a page, or a section of a page, into **equal width** columns.
-- This behaviour is achieved using this code in the relevant Sass mixin:
+- This behaviour is achieved using the following `grid-template-columns` definition:
 ```
 grid-template-columns: repeat(
-    #{$auto-layout},
-    minmax(min(#{$min-width}, 100%), #{$max-width})
+    var(--grid-auto-layout),
+    minmax(
+        min(var(--grid-item-min-width), 100%),
+        var(--grid-item-max-width)
+    )
 );
 ```
 
@@ -23,33 +26,34 @@ grid-template-columns: repeat(
 ## When to use Grid or Flexbox?
 - Please see [useful layout tips](/docs/layout-useful-layout-tips--docs).
 
-## Description of Sass variables used in `grid-template-columns`
+## Description of CSS custom properties used in `grid-template-columns`
 
 Variable | Functionality
 --- | ---
-`$auto-layout` | Either `auto-fit` (**default**) or `auto-fill`. Allows grid to reflow automatically at different screen widths without any media queries. See [this CSS Tricks article](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/) for an explanation of the subtle differences between them.
-`$min-width` | Minimum grid column width.
-`$max-width` | Maximum grid column width.
+`--grid-auto-layout` | Either `auto-fit` (**default**) or `auto-fill`. Allows grid to reflow automatically at different screen widths without any media queries. See [this CSS Tricks article](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/) for an explanation of the subtle differences between them.
+`--grid-item-min-width` | Minimum grid column width.
+`--grid-item-max-width` | Maximum grid column width.
 
 
 ## Override grid behaviour
 
-### 1. Change grid cell `min-width` and `max-width` in Sass mixin
+### 1. Change `--grid-item-min-width` and `--grid-item-max-width` custom properties
 - See [cards in a grid](/story/components-cards--card-grid) for a real example.
 - Generally speaking, for a grid of `widget` components, you can do:
 ```
 widget-grid.grid {
-    @include responsive-grid-auto-columns($min-width: 17.5rem);
+    --grid-item-min-width: 20rem;
 }
 ```
 ```
 widget-grid.grid {
-    @include responsive-grid-auto-columns($max-width: 30rem);
+    --grid-item-max-width: 30rem;
 }
 ```
 ```
 widget-grid.grid {
-    @include responsive-grid-auto-columns($min-width: 17.5rem, $max-width: 30rem);
+    --grid-item-min-width: 20rem;
+    --grid-item-max-width: 30rem;
 }
 ```
 
@@ -81,19 +85,11 @@ widget-grid.grid {
 <Controls of={Grid.Grid3EqualCols} />
 
 ## Asymmetric 2-column layouts
-### 1. Use default column widths as defined in Sass mixin
+### 1. Use default column widths (66.66% and 33.33%)
 - Simply define a `.grid--asymmetric` parent with 2 direct children.
 
 ### 2. Specify column widths using explicit CSS classnames
-- For example, `.grid--75-25` or `.grid--25-75`.
-
-### 3. Specify column width overrides using the Sass mixin
-- For example, for a grid of `widget` components:
-```
-.widget-grid {
-    @include responsive-grid-asymmetric($col1: 75%, $col2: 25%);
-}
-```
+- For example, `.grid--asymmetric-75-25` or `.grid--asymmetric-25-75`.
 
 <Canvas of={Grid.GridAsymmetric} />
 <Controls of={Grid.GridAsymmetric} />

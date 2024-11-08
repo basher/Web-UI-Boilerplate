@@ -102,7 +102,7 @@ ${style}
 </div>
 
 <div class="grid-container">
-    <div class="grid--75-25 ${args.gap === undefined ? '' : `grid--${args.gap}`}">
+    <div class="grid--asymmetric-75-25 ${args.gap === undefined ? '' : `grid--${args.gap}`}">
         <div>
             Asymmetric col 1<br>
             Override width = 75%
@@ -115,7 +115,7 @@ ${style}
 </div>
 
 <div class="grid-container">
-    <div class="grid--25-75 ${args.gap === undefined ? '' : `grid--${args.gap}`}">
+    <div class="grid--asymmetric-25-75 ${args.gap === undefined ? '' : `grid--${args.gap}`}">
         <div>
             Asymmetric col 1<br>
             Override width = 25%

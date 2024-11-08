@@ -18,7 +18,7 @@ webui-predictive-search {
     }
 
     .grid {
-        @include responsive-grid-auto-columns($max-width: 10rem);
+        --grid-item-max-width: 10rem;
     }
 
     .search__result {
