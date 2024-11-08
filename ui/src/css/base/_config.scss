@@ -27,29 +27,15 @@ Config settings.
     --icon-size-m: 1.5rem;
     --icon-size-l: 2rem;
 
+    /* Animations. */
+    --animation-fast: 150ms ease-in-out;
+    --animation-medium: 250ms ease-in-out;
+    --animation-slow: 500ms ease-in-out;
+
     /* Miscellaneous. */
     --media-aspect-ratio: 16/9;
+    --base-image-path: '../images/interface';
 }
 
-/*
-----------------------------------------------------------------------------
-TODO - refactor mixin
-----------------------------------------------------------------------------
-*/
+/* TODO - refactor mixin */
 $grid-item-min-width: 12.5rem !default;
-
-/*
-----------------------------------------------------------------------------
-Animations.
-----------------------------------------------------------------------------
-*/
-$animation-fast: 150ms ease-in-out !default;
-$animation-medium: 250ms ease-in-out !default;
-$animation-slow: 500ms ease-in-out !default;
-
-/*
-----------------------------------------------------------------------------
-Miscellaneous.
-----------------------------------------------------------------------------
-*/
-$base-image-path: '../images/interface' !default;

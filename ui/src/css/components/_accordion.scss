@@ -13,8 +13,8 @@ Dependencies.
         /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
         &::details-content {
             block-size: 0;
-            transition: block-size $animation-fast,
-                content-visibility $animation-fast;
+            transition: block-size var(--animation-fast),
+                content-visibility var(--animation-fast);
             /* stylelint-disable-next-line property-no-unknown */
             transition-behavior: allow-discrete;
         }
@@ -52,7 +52,7 @@ Dependencies.
         }
 
         .icon {
-            transition: transform $animation-fast;
+            transition: transform var(--animation-fast);
         }
 
         [open] {

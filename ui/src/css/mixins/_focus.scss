@@ -18,7 +18,7 @@ Dependencies.
     $transform: false
 ) {
     transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out,
-        opacity $animation-medium, transform $animation-fast;
+        opacity var(--animation-medium), transform var(--animation-fast);
 
     &:hover {
         @if $background {
