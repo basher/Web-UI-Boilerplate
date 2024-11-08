@@ -9,7 +9,7 @@ Dependencies.
 .pagination {
     display: flex;
     flex-wrap: wrap;
-    gap: $gutter-m;
+    gap: var(--gutter-m);
     justify-content: center;
 
     &-container {

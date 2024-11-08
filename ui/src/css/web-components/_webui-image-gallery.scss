@@ -30,7 +30,7 @@ webui-image-gallery {
     .modal__dialog[open] {
         display: grid;
         grid-template-areas: 'modal';
-        padding: $gutter-s;
+        padding: var(--gutter-s);
         place-items: start end;
     }
 
@@ -52,6 +52,6 @@ webui-image-gallery {
 
     .modal__close {
         background: $color-neutral-100;
-        margin: $gutter-s;
+        margin: var(--gutter-s);
     }
 }

@@ -7,7 +7,7 @@ Dependencies.
 @use '../base' as *;
 
 [class*='grid'] {
-    --grid-gap: #{$gutter-m};
+    --grid-gap: #{var(--gutter-m)};
 
     display: grid;
     gap: var(--grid-gap, 1rem);

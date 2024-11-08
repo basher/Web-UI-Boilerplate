@@ -26,7 +26,7 @@ Dependencies.
     }
 
     &__details + &__details {
-        margin-block-start: $gutter-m;
+        margin-block-start: var(--gutter-m);
     }
 
     &__summary {
@@ -34,7 +34,7 @@ Dependencies.
         font-family: var(--base-font-family-title);
         font-size: var(--type-step-2);
         line-height: var(--line-height-h4);
-        margin-block-end: $gutter-s;
+        margin-block-end: var(--gutter-s);
     }
 
     &--custom-icon {
@@ -44,7 +44,7 @@ Dependencies.
             display: flex;
             justify-content: space-between;
             list-style: none;
-            padding-block-end: $gutter-s;
+            padding-block-end: var(--gutter-s);
 
             &::-webkit-details-marker {
                 display: none;

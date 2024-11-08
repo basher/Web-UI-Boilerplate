@@ -9,7 +9,7 @@ Dependencies.
 .radio {
     align-items: center;
     display: flex;
-    gap: $gutter-s;
+    gap: var(--gutter-s);
 
     &__input {
         block-size: 1.5em;

@@ -19,7 +19,7 @@ Dependencies.
     color: inherit;
     cursor: pointer;
     display: inline-block;
-    padding: $gutter-s;
+    padding: var(--gutter-s);
     text-decoration: none;
 
     &:disabled {

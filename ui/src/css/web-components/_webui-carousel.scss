@@ -23,22 +23,22 @@ webui-carousel {
     }
 
     .carousel__controls {
-        margin-block-end: $gutter-m;
+        margin-block-end: var(--gutter-m);
     }
 
     .carousel__counter {
         &--pips {
             display: flex;
             flex-wrap: wrap;
-            gap: $gutter-s;
-            margin-block-start: $gutter-m;
+            gap: var(--gutter-s);
+            margin-block-start: var(--gutter-m);
         }
 
         &__pip {
             border: $border-width-s solid;
             border-radius: 50%;
             font-size: 0;
-            padding: $gutter-s;
+            padding: var(--gutter-s);
 
             &.is-current {
                 background-color: $color-brand;

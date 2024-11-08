@@ -11,7 +11,7 @@ webui-notify {
     border: $border-width-s solid;
     display: flex;
     justify-content: space-between;
-    padding: $gutter-m;
+    padding: var(--gutter-m);
 
     .stack > * {
         max-inline-size: none;

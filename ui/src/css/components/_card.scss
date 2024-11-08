@@ -7,7 +7,7 @@ Dependencies.
 @use '../mixins' as *;
 
 .card {
-    --card-gap: #{$gutter-m};
+    --card-gap: #{var(--gutter-m)};
     --content-min-width: 50%;
     --image-min-width: 15rem;
 
@@ -37,7 +37,7 @@ Dependencies.
     }
 
     &[class*='fullwidth'] {
-        --card-gap: #{$gutter-clamp-xl};
+        --card-gap: var(--gutter-xl);
 
         // Uses <picture> element. Set image to take up % of available space, which allows it to shrink and use the correct source.
         .card__media {

@@ -10,7 +10,7 @@ Dependencies.
     &__list {
         display: flex;
         flex-wrap: wrap;
-        gap: $gutter-m;
+        gap: var(--gutter-m);
     }
 
     &__item {

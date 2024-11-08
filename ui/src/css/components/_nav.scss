@@ -10,7 +10,7 @@ Dependencies.
     &__list {
         display: flex;
         flex-wrap: wrap;
-        gap: $gutter-m;
+        gap: var(--gutter-m);
     }
 
     &__link {
@@ -45,7 +45,7 @@ Dependencies.
         flex-direction: column;
         inset-block-start: 100%;
         inset-inline-start: 0;
-        padding: $gutter-m;
+        padding: var(--gutter-m);
         position: absolute;
         z-index: z('popup');
     }
@@ -53,7 +53,7 @@ Dependencies.
     .nav__item--has-dropdown {
         align-items: center;
         display: flex;
-        gap: $gutter-s;
+        gap: var(--gutter-s);
         position: relative;
 
         [aria-expanded='true'] {
@@ -91,7 +91,7 @@ Dependencies.
                 background-color: $color-background;
                 border: $border-width-s solid;
                 inset-block-start: 100%;
-                padding: $gutter-m;
+                padding: var(--gutter-m);
                 position: absolute;
                 z-index: z('popup');
             }

@@ -35,21 +35,6 @@ Config settings.
 
 /*
 ----------------------------------------------------------------------------
-Spacing and gutters.
-Use for margin|padding, and gap in flex|grid layouts.
-----------------------------------------------------------------------------
-*/
-$gutter-xs: var(--gutter-xs) !default;
-$gutter-s: var(--gutter-s) !default;
-$gutter-m: var(--gutter-m) !default;
-$gutter-l: var(--gutter-l) !default;
-$gutter-xl: var(--gutter-xl) !default;
-
-$gutter-clamp-l: var(--gutter-clamp-l) !default;
-$gutter-clamp-xl: var(--gutter-clamp-xl) !default;
-
-/*
-----------------------------------------------------------------------------
 Grid / Flex.
 ----------------------------------------------------------------------------
 */

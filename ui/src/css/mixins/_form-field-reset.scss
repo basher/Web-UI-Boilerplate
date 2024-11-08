@@ -9,7 +9,7 @@ Dependencies.
 @mixin form-field-reset {
     @include focus($background: true);
     border: $border-width-s solid;
-    padding: $gutter-s;
+    padding: var(--gutter-s);
 
     // Native HTML5 validation.
     &:valid:required {

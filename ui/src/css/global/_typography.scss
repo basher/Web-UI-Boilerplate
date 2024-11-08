@@ -38,31 +38,31 @@ body {
 .h--xl {
     font-size: var(--font-size-xl);
     line-height: var(--line-height-xl);
-    margin-block-end: $gutter-clamp-xl;
+    margin-block-end: var(--gutter-xl);
 }
 
 :where(h1, .h--1) {
     font-size: var(--font-size-h1);
     line-height: var(--line-height-h1);
-    margin-block-end: $gutter-clamp-l;
+    margin-block-end: var(--gutter-l);
 }
 
 :where(h2, .h--2) {
     font-size: var(--font-size-h2);
     line-height: var(--line-height-h2);
-    margin-block-end: $gutter-m;
+    margin-block-end: var(--gutter-m);
 }
 
 :where(h3, .h--3) {
     font-size: var(--font-size-h3);
     line-height: var(--line-height-h3);
-    margin-block-end: $gutter-m;
+    margin-block-end: var(--gutter-m);
 }
 
 :where(h4, .h--4) {
     font-size: var(--font-size-h4);
     line-height: var(--line-height-h4);
-    margin-block-end: $gutter-s;
+    margin-block-end: var(--gutter-s);
 }
 
 :where(h5, .h--5) {
@@ -81,7 +81,7 @@ Margins on other prose elements.
 ----------------------------------------------------------------------------
 */
 :where(p, :is(ul, ol):not([class])) {
-    margin-block-end: $gutter-m;
+    margin-block-end: var(--gutter-m);
 }
 
 /*

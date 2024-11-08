@@ -16,7 +16,7 @@ Dependencies.
     &--text-icon {
         align-items: center;
         display: inline-flex;
-        gap: $gutter-s;
+        gap: var(--gutter-s);
         justify-content: space-between;
 
         span {

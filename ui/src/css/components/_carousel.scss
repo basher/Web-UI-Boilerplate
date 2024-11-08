@@ -8,7 +8,7 @@ Dependencies.
 
 .carousel {
     --slide-min-width: 18.75rem;
-    --slide-gap: #{$gutter-m};
+    --slide-gap: #{var(--gutter-m)};
 
     @include focus {
         cursor: default;

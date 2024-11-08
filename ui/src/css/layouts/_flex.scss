@@ -7,7 +7,7 @@ Dependencies.
 @use '../base' as *;
 
 .flex {
-    --flex-gap: #{$gutter-m};
+    --flex-gap: #{var(--gutter-m)};
 
     display: flex;
     flex-wrap: wrap;

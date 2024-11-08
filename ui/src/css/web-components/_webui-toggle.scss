@@ -36,12 +36,12 @@ webui-toggle {
     }
 
     :is(.toggle__on, .toggle__off) {
-        padding: $gutter-s;
+        padding: var(--gutter-s);
     }
 
     .toggle--has-label {
         border: 0;
-        gap: $gutter-s;
+        gap: var(--gutter-s);
 
         .toggle__indicator {
             border: $border-width-s solid;

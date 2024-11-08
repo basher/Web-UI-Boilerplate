@@ -9,5 +9,5 @@ Dependencies.
 .fieldset {
     display: flex;
     flex-direction: column;
-    gap: $gutter-s;
+    gap: var(--gutter-s);
 }

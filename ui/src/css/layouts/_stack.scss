@@ -15,7 +15,7 @@ Dependencies.
 @use '../base' as *;
 
 .stack {
-    --stack-gutter: #{$gutter-m};
+    --stack-gutter: #{var(--gutter-m)};
 
     > * + * {
         margin-block-start: var(--stack-gutter, 1em);

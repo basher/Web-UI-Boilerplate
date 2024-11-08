@@ -8,7 +8,7 @@ Dependencies.
 
 @mixin validation {
     :is(.label, .checkbox__label, .radio__label) {
-        padding-inline-end: $gutter-m;
+        padding-inline-end: var(--gutter-m);
         position: relative;
 
         &::after {
@@ -27,7 +27,7 @@ Dependencies.
 .form {
     display: flex;
     flex-direction: column;
-    gap: $gutter-m;
+    gap: var(--gutter-m);
 
     &__field {
         display: flex;
@@ -70,6 +70,6 @@ Dependencies.
 
 .message--error {
     + .form {
-        margin-block-start: $gutter-m;
+        margin-block-start: var(--gutter-m);
     }
 }

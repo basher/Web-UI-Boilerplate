@@ -22,7 +22,7 @@ webui-modal {
     .modal__dialog {
         background: $color-neutral-100;
         margin: auto;
-        padding: 0 $gutter-m $gutter-m;
+        padding: 0 var(--gutter-m) var(--gutter-m);
 
         /* stylelint-disable-next-line order/order */
         @media (prefers-color-scheme: dark) {
@@ -39,7 +39,7 @@ webui-modal {
         background: $color-neutral-100;
         display: flex;
         justify-content: flex-end;
-        padding-block-start: $gutter-m;
+        padding-block-start: var(--gutter-m);
 
         /* stylelint-disable-next-line order/order */
         @media (prefers-color-scheme: dark) {
@@ -49,7 +49,7 @@ webui-modal {
 
     .modal__content {
         @include focus($inset: true);
-        margin-block-start: $gutter-m;
+        margin-block-start: var(--gutter-m);
 
         &:hover {
             cursor: default;

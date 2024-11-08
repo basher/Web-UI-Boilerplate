@@ -28,7 +28,7 @@ Dependencies.
 
     &--fullwidth {
         .banner__content {
-            padding-inline: $gutter-s;
+            padding-inline: var(--gutter-s);
         }
 
         /* stylelint-disable-next-line order/order */
@@ -50,8 +50,8 @@ Dependencies.
                 // Example, so text is legible above image.
                 background: hsl(var(--color-brand) / 10%);
                 inline-size: 40vw;
-                margin-inline-start: $gutter-m;
-                padding: $gutter-m;
+                margin-inline-start: var(--gutter-m);
+                padding: var(--gutter-m);
             }
         }
     }

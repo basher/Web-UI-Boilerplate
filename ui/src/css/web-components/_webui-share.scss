@@ -16,6 +16,6 @@ webui-share {
     [data-content] {
         align-items: center;
         display: flex;
-        gap: $gutter-s;
+        gap: var(--gutter-s);
     }
 }

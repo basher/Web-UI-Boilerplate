@@ -62,7 +62,7 @@ ol ol ol {
 }
 
 :is(ol, ul):not([class]) {
-    padding-inline-start: $gutter-l;
+    padding-inline-start: var(--gutter-l);
 }
 
 :where([type='submit'], label) {
@@ -131,13 +131,13 @@ iframe {
 
 hr {
     border: $border-width-s solid;
-    margin-block: $gutter-m;
+    margin-block: var(--gutter-m);
 }
 
 // Anchor targets should have extra scroll margin.
 // Adjust value to account for sticky header/footer, etc.
 :target {
-    scroll-margin-block: $gutter-clamp-xl;
+    scroll-margin-block: var(--gutter-xl);
 }
 
 // Remove all animations & transitions for people that prefer not to see them

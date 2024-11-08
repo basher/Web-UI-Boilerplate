@@ -14,9 +14,9 @@ Dependencies.
         background-color: $color-brand;
         color: $color-neutral-100;
         display: inline-block;
-        left: $gutter-m;
+        left: var(--gutter-m);
         min-inline-size: 10vw;
-        padding: $gutter-s;
+        padding: var(--gutter-s);
         text-align: center;
         z-index: z('default') + 1;
     }

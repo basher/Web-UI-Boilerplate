@@ -23,7 +23,7 @@ Dependencies.
     &-wrapper {
         display: flex;
         flex-wrap: wrap;
-        gap: $gutter-m;
+        gap: var(--gutter-m);
 
         :not(.sidebar) {
             --content-min-width: 50%;

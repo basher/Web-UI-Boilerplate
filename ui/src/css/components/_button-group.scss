@@ -10,7 +10,7 @@ Dependencies.
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: $gutter-s;
+    gap: var(--gutter-s);
 
     &--centered {
         justify-content: center;
