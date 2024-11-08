@@ -4,13 +4,11 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
 
 .skiplinks {
     position: absolute;
 
     &__link {
-        @include off-screen;
         background-color: $color-brand;
         color: $color-neutral-100;
         display: inline-block;

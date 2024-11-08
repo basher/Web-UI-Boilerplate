@@ -17,8 +17,8 @@ ${style}
 <div class="page">
     <header class="header">
         <nav class="skiplinks" aria-label="skiplinks">
-            <a class="skiplinks__link" href="#main">Skip to main content</a>
-            <a class="skiplinks__link" href="#footer">Skip to footer</a>
+            <a class="skiplinks__link  visually-hidden" href="#main">Skip to main content</a>
+            <a class="skiplinks__link  visually-hidden" href="#footer">Skip to footer</a>
         </nav>
 
         <div class="wrapper wrapper--l">

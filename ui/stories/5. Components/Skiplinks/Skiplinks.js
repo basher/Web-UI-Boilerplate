@@ -1,6 +1,6 @@
 export const SkiplinksHtml = () => `
 <nav class="skiplinks" aria-label="skiplinks">
-    <a class="skiplinks__link" href="#main">Skip to main content</a>
+    <a class="skiplinks__link visually-hidden" href="#main">Skip to main content</a>
 </nav>
 
 <p>Some content preceding skiplink target - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, incidunt non numquam deserunt dolorem, perspiciatis error asperiores fuga.</p>
