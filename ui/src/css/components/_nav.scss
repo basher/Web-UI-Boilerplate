@@ -47,7 +47,7 @@ Dependencies.
         inset-inline-start: 0;
         padding: var(--gutter-m);
         position: absolute;
-        z-index: z('popup');
+        z-index: var(--z-popup);
     }
 
     .nav__item--has-dropdown {
@@ -93,7 +93,7 @@ Dependencies.
                 inset-block-start: 100%;
                 padding: var(--gutter-m);
                 position: absolute;
-                z-index: z('popup');
+                z-index: var(--z-popup);
             }
         }
 

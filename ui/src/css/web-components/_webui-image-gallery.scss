@@ -42,12 +42,12 @@ webui-image-gallery {
     .modal__header {
         background: transparent;
         padding-block-start: 0;
-        z-index: z('default');
+        z-index: var(--z-default);
     }
 
     .modal__content {
         margin-block-start: 0;
-        z-index: z('reset');
+        z-index: var(--z-reset);
     }
 
     .modal__close {

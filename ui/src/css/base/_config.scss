@@ -28,10 +28,17 @@ Config settings.
     --animation-medium: 250ms ease-in-out;
     --animation-slow: 500ms ease-in-out;
 
+    /* z-index.
+    1. Boilerplate uses native HTML <dialog> for modals, so 'z-modal' is probably redundant now.
+    2. There's a subtle distinction between a modal that sits above everything, and a popup (e.g. dropdown menu). These will probably be replaced by Popover API.
+    */
+    --z-modal: 1000;
+    --z-popup: 999;
+    --z-default: 1;
+    --z-reset: 0;
+    --z-below: -1;
+
     /* Miscellaneous. */
     --media-aspect-ratio: 16/9;
     --base-image-path: '../images/interface';
 }
-
-/* TODO - refactor mixin */
-$grid-item-min-width: 12.5rem !default;

@@ -18,6 +18,6 @@ Dependencies.
         min-inline-size: 10vw;
         padding: var(--gutter-s);
         text-align: center;
-        z-index: z('default') + 1;
+        z-index: var(--z-default);
     }
 }
