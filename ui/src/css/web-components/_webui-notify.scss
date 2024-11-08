@@ -8,7 +8,7 @@ Dependencies.
 
 webui-notify {
     align-items: flex-start;
-    border: $border-width-s solid;
+    border: var(--border-width-s) solid;
     display: flex;
     justify-content: space-between;
     padding: var(--gutter-m);
@@ -34,8 +34,8 @@ webui-notify {
 
     [data-close] {
         flex-shrink: 0;
-        inset-block-start: calc($icon-size-s * -1);
-        inset-inline-end: calc($icon-size-s * -1);
+        inset-block-start: calc(var(--icon-size-s) * -1);
+        inset-inline-end: calc(var(--icon-size-s) * -1);
         position: relative;
     }
 

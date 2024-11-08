@@ -41,7 +41,7 @@ Dependencies.
 
     .nav__list--dropdown {
         background-color: $color-background;
-        border: $border-width-s solid;
+        border: var(--border-width-s) solid;
         flex-direction: column;
         inset-block-start: 100%;
         inset-inline-start: 0;
@@ -89,7 +89,7 @@ Dependencies.
         webui-disclosure:defined {
             .nav__list {
                 background-color: $color-background;
-                border: $border-width-s solid;
+                border: var(--border-width-s) solid;
                 inset-block-start: 100%;
                 padding: var(--gutter-m);
                 position: absolute;

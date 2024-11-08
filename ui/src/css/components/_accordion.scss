@@ -40,7 +40,7 @@ Dependencies.
     &--custom-icon {
         .accordion__summary {
             align-items: center;
-            border-block-end: $border-width-s solid;
+            border-block-end: var(--border-width-s) solid;
             display: flex;
             justify-content: space-between;
             list-style: none;

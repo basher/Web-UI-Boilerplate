@@ -130,7 +130,7 @@ iframe {
 }
 
 hr {
-    border: $border-width-s solid;
+    border: var(--border-width-s) solid;
     margin-block: var(--gutter-m);
 }
 

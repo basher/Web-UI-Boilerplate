@@ -3,7 +3,6 @@
 Config settings.
 ----------------------------------------------------------------------------
 */
-
 :root {
     /* Layout. */
     --site-max-width: null;
@@ -15,35 +14,29 @@ Config settings.
     --gutter-l: var(--space-m-l);
     --gutter-xl: var(--space-l-xl);
 
+    /* Grid columns. */
+    --grid-item-min-width: 12.5rem;
+    --grid-item-max-width: 17.5rem;
+
+    /* Borders. */
+    --border-width-s: 0.0625rem;
+    --border-width-m: 0.125rem;
+
+    /* Icons. */
+    --icon-size-s: 1rem;
+    --icon-size-m: 1.5rem;
+    --icon-size-l: 2rem;
+
     /* Miscellaneous. */
     --media-aspect-ratio: 16/9;
 }
 
 /*
 ----------------------------------------------------------------------------
-Grid / Flex.
+TODO - refactor mixin
 ----------------------------------------------------------------------------
 */
-$grid-item-min-width: 12.5rem !default; // Stop grid columns getting too small.
-$grid-item-max-width: 17.5rem !default; // Or too large.
-
-/*
-----------------------------------------------------------------------------
-Borders.
-----------------------------------------------------------------------------
-*/
-$border-width-s: 0.0625rem !default;
-$border-width-m: 0.125rem !default;
-$border-width-l: 0.25rem !default;
-
-/*
-----------------------------------------------------------------------------
-Icons.
-----------------------------------------------------------------------------
-*/
-$icon-size-s: 1rem !default;
-$icon-size-m: 1.5rem !default;
-$icon-size-l: 2rem !default;
+$grid-item-min-width: 12.5rem !default;
 
 /*
 ----------------------------------------------------------------------------

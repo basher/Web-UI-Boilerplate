@@ -21,7 +21,7 @@ Dependencies.
     .skin {
         // Arbitrary styling to demo the concept.
         &-1 {
-            border: $border-width-s solid;
+            border: var(--border-width-s) solid;
             color: inherit;
             padding: var(--gutter-m);
         }

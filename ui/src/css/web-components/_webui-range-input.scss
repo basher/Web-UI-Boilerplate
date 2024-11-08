@@ -12,10 +12,10 @@ Dependencies.
 
 @mixin slider-thumb {
     background-color: $color-brand;
-    block-size: $icon-size-l;
+    block-size: var(--icon-size-l);
     border: 0;
     border-radius: 50%;
-    inline-size: $icon-size-l;
+    inline-size: var(--icon-size-l);
 }
 
 @mixin slider-track {

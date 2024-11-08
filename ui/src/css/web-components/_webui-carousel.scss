@@ -19,7 +19,7 @@ webui-carousel {
 
     // Identify current slide (when using PREV|NEXT buttons).
     .is-current:not(:focus-visible) {
-        box-shadow: inset 0 0 0 $border-width-l $color-brand; // For demo purposes.
+        box-shadow: inset 0 0 0 var(--border-width-l) $color-brand; // For demo purposes.
     }
 
     .carousel__controls {
@@ -35,7 +35,7 @@ webui-carousel {
         }
 
         &__pip {
-            border: $border-width-s solid;
+            border: var(--border-width-s) solid;
             border-radius: 50%;
             font-size: 0;
             padding: var(--gutter-s);

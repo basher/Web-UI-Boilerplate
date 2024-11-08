@@ -8,26 +8,26 @@ Dependencies.
 
 @mixin form-field-reset {
     @include focus($background: true);
-    border: $border-width-s solid;
+    border: var(--border-width-s) solid;
     padding: var(--gutter-s);
 
     // Native HTML5 validation.
     &:valid:required {
         background-color: hsl(var(--color-accent-positive) / 10%);
         border-color: $color-success;
-        border-width: $border-width-m;
+        border-width: var(--border-width-m);
     }
 
     &:user-invalid:required {
         background-color: hsl(var(--color-accent-negative) / 10%);
         border-color: $color-error;
-        border-width: $border-width-m;
+        border-width: var(--border-width-m);
     }
 
     // ARIA.
     &[aria-invalid='true'] {
         background-color: hsl(var(--color-accent-negative) / 10%);
         border-color: $color-error;
-        border-width: $border-width-m;
+        border-width: var(--border-width-m);
     }
 }

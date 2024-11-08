@@ -10,7 +10,7 @@ Dependencies.
     @include button-reset;
 
     &[class*='text'] {
-        border: $border-width-s solid;
+        border: var(--border-width-s) solid;
     }
 
     &--text-icon {

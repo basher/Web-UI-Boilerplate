@@ -44,17 +44,17 @@ Dependencies.
 
     // See https://css-tricks.com/the-focus-visible-trick/
     &:focus-visible {
-        box-shadow: 0 0 0 $border-width-l $color-focus;
-        outline: $border-width-l solid transparent; // So high contrast mode works.
+        box-shadow: 0 0 0 var(--border-width-l) $color-focus;
+        outline: var(--border-width-l) solid transparent; // So high contrast mode works.
 
         /* stylelint-disable-next-line order/order */
         @if $inset {
-            box-shadow: inset 0 0 0 $border-width-l $color-focus;
+            box-shadow: inset 0 0 0 var(--border-width-l) $color-focus;
         }
         @content;
     }
 
     &:focus:not(:focus-visible) {
-        outline: $border-width-l solid transparent;
+        outline: var(--border-width-l) solid transparent;
     }
 }

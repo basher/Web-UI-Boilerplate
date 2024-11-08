@@ -13,7 +13,7 @@ webui-toggle {
 
     [role='switch'] {
         align-items: center;
-        border: $border-width-s solid;
+        border: var(--border-width-s) solid;
         display: inline-flex;
         padding: 0;
 
@@ -44,7 +44,7 @@ webui-toggle {
         gap: var(--gutter-s);
 
         .toggle__indicator {
-            border: $border-width-s solid;
+            border: var(--border-width-s) solid;
             display: flex;
         }
     }

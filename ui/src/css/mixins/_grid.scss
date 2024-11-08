@@ -10,7 +10,7 @@ Dependencies.
 // 2. The min() function inside minmax() ensures there is no horizontal overflow on very narrow screens.
 @mixin responsive-grid-auto-columns(
     $auto-layout: auto-fit,
-    $min-width: $grid-item-min-width,
+    $min-width: var(--grid-item-min-width),
     $max-width: 1fr
 ) {
     grid-template-columns: repeat(
@@ -22,7 +22,7 @@ Dependencies.
 @mixin responsive-grid-asymmetric(
     $col1: 66.66%,
     $col2: 33.33%,
-    $min-width: $grid-item-min-width
+    $min-width: var(--grid-item-min-width)
 ) {
     // Container queries.
     @container (inline-size >= calc(#{$grid-item-min-width} * 2)) {

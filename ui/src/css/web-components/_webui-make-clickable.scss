@@ -26,8 +26,8 @@ webui-make-clickable {
         // Visible focus state only if 'data-url' link receives keyboard focus.
         &:focus-within {
             &:has([data-url]:focus-visible) {
-                box-shadow: 0 0 0 $border-width-l $color-focus;
-                outline: $border-width-l solid transparent; // So high contrast mode works.
+                box-shadow: 0 0 0 var(--border-width-l) $color-focus;
+                outline: var(--border-width-l) solid transparent; // So high contrast mode works.
             }
         }
 
