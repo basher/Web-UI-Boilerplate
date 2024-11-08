@@ -82,6 +82,6 @@ Dependencies.
     // Text (and text + icons) buttons only. Icon button sizes are determined by the context of their parent container font-size (or their icon size overrides).
     &--small {
         font-size: var(--font-size-s);
-        padding: $gutter-xs;
+        padding: var(--gutter-xs);
     }
 }

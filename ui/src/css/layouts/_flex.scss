@@ -31,19 +31,19 @@ Dependencies.
 
     // Gap variants.
     &--gap-xs {
-        --flex-gap: #{$gutter-xs};
+        --flex-gap: var(--gutter-xs);
     }
 
     &--gap-s {
-        --flex-gap: #{$gutter-s};
+        --flex-gap: var(--gutter-s);
     }
 
     &--gap-l {
-        --flex-gap: #{$gutter-clamp-l};
+        --flex-gap: var(--gutter-l);
     }
 
     &--gap-xl {
-        --flex-gap: #{$gutter-clamp-xl};
+        --flex-gap: var(--gutter-xl);
     }
 
     // Align items.

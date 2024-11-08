@@ -15,10 +15,10 @@ const style = `
 export const MarginPaddingHtml = (args) => `
 ${style}
 <div class="
-    u-m-block--${args.marginBlock}
-    u-m-inline--${args.marginInline}
-    u-p-block--${args.paddingBlock}
-    u-p-inline--${args.paddingInline}
+${args.marginBlock && args.marginBlock !== '' ? `u-m-block--${args.marginBlock}` : 'u-m-block'}
+${args.marginInline && args.marginInline !== '' ? `u-m-inline--${args.marginInline}` : 'u-m-inline'}
+${args.paddingBlock && args.paddingBlock !== '' ? `u-p-block--${args.paddingBlock}` : 'u-p-block'}
+${args.paddingInline && args.paddingInline !== '' ? `u-p-inline--${args.paddingInline}` : 'u-p-inline'}
 ">
     <p>Adjust <code>margin-block</code> | <code>margin-inline</code> and <code>padding-block</code> | <code>padding-inline</code> values.</p>
     <ul>

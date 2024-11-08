@@ -67,12 +67,12 @@ body {
 
 :where(h5, .h--5) {
     font-size: var(--font-size-h5);
-    margin-block-end: $gutter-xs;
+    margin-block-end: var(--gutter-xs);
 }
 
 :where(h6, .h--6) {
     font-size: var(--font-size-body);
-    margin-block-end: $gutter-xs;
+    margin-block-end: var(--gutter-xs);
 }
 
 /*

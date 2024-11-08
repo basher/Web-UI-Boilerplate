@@ -26,12 +26,12 @@ Margins.
 ----------------------------------------------------------------------------
 */
 [class*='u-m-block'] {
-    --marg-block-gutter: #{$gutter-m};
+    --marg-block-gutter: var(--gutter-m);
     margin-block: var(--marg-block-gutter, 1rem);
 }
 
 [class*='u-m-inline'] {
-    --marg-inline-gutter: #{$gutter-m};
+    --marg-inline-gutter: var(--gutter-m);
     margin-inline: var(--marg-inline-gutter, 1rem);
 }
 
@@ -42,19 +42,19 @@ Margins.
         }
 
         &--xs {
-            --marg-block-gutter: #{$gutter-xs};
+            --marg-block-gutter: var(--gutter-xs);
         }
 
         &--s {
-            --marg-block-gutter: #{$gutter-s};
+            --marg-block-gutter: var(--gutter-s);
         }
 
         &--l {
-            --marg-block-gutter: #{$gutter-clamp-l};
+            --marg-block-gutter: var(--gutter-l);
         }
 
         &--xl {
-            --marg-block-gutter: #{$gutter-clamp-xl};
+            --marg-block-gutter: var(--gutter-xl);
         }
     }
 
@@ -64,19 +64,19 @@ Margins.
         }
 
         &--xs {
-            --marg-inline-gutter: #{$gutter-xs};
+            --marg-inline-gutter: var(--gutter-xs);
         }
 
         &--s {
-            --marg-inline-gutter: #{$gutter-s};
+            --marg-inline-gutter: var(--gutter-s);
         }
 
         &--l {
-            --marg-inline-gutter: #{$gutter-clamp-l};
+            --marg-inline-gutter: var(--gutter-l);
         }
 
         &--xl {
-            --marg-inline-gutter: #{$gutter-clamp-xl};
+            --marg-inline-gutter: var(--gutter-xl);
         }
     }
 }
@@ -87,12 +87,12 @@ Padding.
 ----------------------------------------------------------------------------
 */
 [class*='u-p-block'] {
-    --pad-block-gutter: #{$gutter-m};
+    --pad-block-gutter: var(--gutter-m);
     padding-block: var(--pad-block-gutter, 1rem);
 }
 
 [class*='u-p-inline'] {
-    --pad-inline-gutter: #{$gutter-m};
+    --pad-inline-gutter: var(--gutter-m);
     padding-inline: var(--pad-inline-gutter, 1rem);
 }
 
@@ -103,19 +103,19 @@ Padding.
         }
 
         &--xs {
-            --pad-block-gutter: #{$gutter-xs};
+            --pad-block-gutter: var(--gutter-xs);
         }
 
         &--s {
-            --pad-block-gutter: #{$gutter-s};
+            --pad-block-gutter: var(--gutter-s);
         }
 
         &--l {
-            --pad-block-gutter: #{$gutter-clamp-l};
+            --pad-block-gutter: var(--gutter-l);
         }
 
         &--xl {
-            --pad-block-gutter: #{$gutter-clamp-xl};
+            --pad-block-gutter: var(--gutter-xl);
         }
     }
 
@@ -125,19 +125,19 @@ Padding.
         }
 
         &--xs {
-            --pad-inline-gutter: #{$gutter-xs};
+            --pad-inline-gutter: var(--gutter-xs);
         }
 
         &--s {
-            --pad-inline-gutter: #{$gutter-s};
+            --pad-inline-gutter: var(--gutter-s);
         }
 
         &--l {
-            --pad-inline-gutter: #{$gutter-clamp-l};
+            --pad-inline-gutter: var(--gutter-l);
         }
 
         &--xl {
-            --pad-inline-gutter: #{$gutter-clamp-xl};
+            --pad-inline-gutter: var(--gutter-xl);
         }
     }
 }

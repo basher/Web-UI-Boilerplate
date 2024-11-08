@@ -32,7 +32,7 @@ Dependencies.
     &__field {
         display: flex;
         flex-direction: column;
-        gap: $gutter-xs;
+        gap: var(--gutter-xs);
 
         // Native HTML5 validation.
         &:has(:valid:required) {

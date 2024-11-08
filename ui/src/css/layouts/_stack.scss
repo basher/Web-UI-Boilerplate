@@ -26,18 +26,18 @@ Dependencies.
     }
 
     &--gutter-xs {
-        --stack-gutter: #{$gutter-xs};
+        --stack-gutter: var(--gutter-xs);
     }
 
     &--gutter-s {
-        --stack-gutter: #{$gutter-s};
+        --stack-gutter: var(--gutter-s);
     }
 
     &--gutter-l {
-        --stack-gutter: #{$gutter-clamp-l};
+        --stack-gutter: var(--gutter-l);
     }
 
     &--gutter-xl {
-        --stack-gutter: #{$gutter-clamp-xl};
+        --stack-gutter: var(--gutter-xl);
     }
 }

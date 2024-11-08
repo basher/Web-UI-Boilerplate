@@ -23,7 +23,7 @@ Dependencies.
     }
 
     caption {
-        margin-block-end: $gutter-xs;
+        margin-block-end: var(--gutter-xs);
     }
 }
 

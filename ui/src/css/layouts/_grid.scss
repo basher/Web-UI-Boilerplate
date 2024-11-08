@@ -39,19 +39,19 @@ Dependencies.
 
     // Gap variants.
     &--gap-xs {
-        --grid-gap: #{$gutter-xs};
+        --grid-gap: var(--gutter-xs);
     }
 
     &--gap-s {
-        --grid-gap: #{$gutter-s};
+        --grid-gap: var(--gutter-s);
     }
 
     &--gap-l {
-        --grid-gap: #{$gutter-clamp-l};
+        --grid-gap: var(--gutter-l);
     }
 
     &--gap-xl {
-        --grid-gap: #{$gutter-clamp-xl};
+        --grid-gap: var(--gutter-xl);
     }
 
     // Enable 2-col on small screens (even without a media query)... though eventually the column 'min-width' will enforce stacking when space is too limited, to avoid overflows.

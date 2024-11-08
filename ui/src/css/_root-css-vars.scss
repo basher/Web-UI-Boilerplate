@@ -1,14 +1,11 @@
 /*
 ----------------------------------------------------------------------------
-CSS custom properties for dynamic theming.
-
-1. Color values are specified as a space-separated list of HSL values so they can be used in the CSS 'hsl()' function:
-
-    color: hsl(var(--color-brand) / 50%);
+CSS custom properties (e.g. from "design tokens") for dynamic theming.
 ----------------------------------------------------------------------------
 */
 :root {
-    // Colors.
+    // Colors. Values are specified as a space-separated list of HSL values so they can be used in the CSS 'hsl()' function.
+    // e.g. color: hsl(var(--color-brand) / 50%);
     --color-brand: 270 50% 40%; // rebeccapurple
     --color-text: 0 0% 20%;
     --color-background: 0 0% 100%;
@@ -61,9 +58,6 @@ CSS custom properties for dynamic theming.
 
     --gutter-clamp-l: clamp(var(--gutter-m), 4vw, var(--gutter-l));
     --gutter-clamp-xl: clamp(var(--gutter-m), 5vw, var(--gutter-xl));
-
-    // Miscellaneous.
-    --media-aspect-ratio: 16/9;
 }
 
 // Dark theme: ensure black & white are NOT truly black & white.
