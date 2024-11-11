@@ -2,11 +2,12 @@
 ----------------------------------------------------------------------------
 Color settings.
 
-1. Copy the CSS Custom properties below, along with their JSDoc comments, into 'base/colors-to-json.scss'.
+1. Copied from the CSS Custom properties in 'base/colors.css', ans converted to Sass variables.
 2. The 'sass-export' Node package then correctly exports all the colors as JSON for consumption by Storybook.
+3. This file is NOT imported so is NOT part of the Parcel build.
 
 TODO:
-- Write custom Node script to convert these values into JSON without the manual copy/paste step into a Sass file.
+- Write custom Node script to convert CSS into JSON without the manual copy/paste step into this Sass file.
 ----------------------------------------------------------------------------
 */
 

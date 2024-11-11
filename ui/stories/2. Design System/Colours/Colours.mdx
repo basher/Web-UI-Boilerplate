@@ -5,7 +5,7 @@ import * as Colours from './Colours.stories';
 
 # Colour palette / swatch
 
-The default Sass colour variables get automatically exported to a JSON file when Parcel server is started with `npm start`.
+The default colour CSS custom properties get automatically exported to a JSON file when Parcel server is started with `npm start`.
 
 <Canvas of={Colours.Colours} />
 
@@ -42,4 +42,5 @@ export const Colours = (args, {loaded}) => `...`
 ```
 
 ## TODO
+- Remove dependency on `sass-export` NPM script to generate JSON colours.
 - Migrate to CSS Color 4 `oklch()`?

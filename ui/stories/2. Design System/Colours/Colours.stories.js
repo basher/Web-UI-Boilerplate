@@ -65,7 +65,7 @@ ${
                                         style="background: ${color.compiledValue}">
                                     </span>
                                     <span>
-                                        ${color.name}
+                                        ${color.value.replace(/hsl\(/g, '').slice(0, -1)}
                                     </span>
                                     <span></span>
                                 </li>
