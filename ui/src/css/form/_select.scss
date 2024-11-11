@@ -1,14 +1,12 @@
 /*
 ----------------------------------------------------------------------------
-Dependencies.
+Basic component styles are in "form.css".
 ----------------------------------------------------------------------------
 */
-@use '../mixins' as *;
+// @use '../mixins' as *;
 @use '../base' as *;
 
 .select {
-    @include form-field-reset;
-
     @media (prefers-color-scheme: dark) {
         option {
             color: $color-neutral-900;

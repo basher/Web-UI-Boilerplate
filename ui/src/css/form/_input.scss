@@ -1,11 +1,8 @@
 /*
 ----------------------------------------------------------------------------
-Dependencies.
+Basic component styles are in "form.css".
 ----------------------------------------------------------------------------
 */
-@use '../mixins' as *;
-// @use '../base' as *;
-
 .input {
-    @include form-field-reset;
+    //
 }
