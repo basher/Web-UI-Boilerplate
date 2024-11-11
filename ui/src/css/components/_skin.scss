@@ -10,7 +10,6 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
 
 :root {
     --skin-gutter-offset: var(--gutter-xl);

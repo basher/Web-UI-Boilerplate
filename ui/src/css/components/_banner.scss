@@ -4,7 +4,6 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
 
 .banner {
     --banner-gap: var(--gutter-m);

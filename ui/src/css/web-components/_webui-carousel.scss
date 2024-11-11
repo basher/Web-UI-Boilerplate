@@ -4,12 +4,20 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
 
 webui-carousel {
     .carousel__slide {
         filter: grayscale(60%);
         opacity: 0.8;
+
+        &:focus-visible {
+            box-shadow: inset var(--focus-shadow);
+            outline: var(--focus-outline);
+        }
+
+        &:focus:not(:focus-visible) {
+            outline: var(--focus-outline);
+        }
     }
 
     .is-visible {

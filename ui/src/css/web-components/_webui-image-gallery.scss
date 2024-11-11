@@ -4,11 +4,9 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
 
 webui-image-gallery {
     [data-open] {
-        @include focus;
         display: block;
     }
 

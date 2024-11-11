@@ -4,7 +4,6 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
 
 .accordion {
     &__details {
@@ -30,7 +29,6 @@ Dependencies.
     }
 
     &__summary {
-        @include focus;
         font-family: var(--base-font-family-title);
         font-size: var(--type-step-2);
         line-height: var(--line-height-h4);

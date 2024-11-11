@@ -4,15 +4,11 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
 
 .carousel {
     --slide-min-width: 18.75rem;
     --slide-gap: #{var(--gutter-m)};
 
-    @include focus {
-        cursor: default;
-    }
     display: flex;
     gap: var(--slide-gap, 1rem);
     overflow-x: auto;
@@ -21,10 +17,16 @@ Dependencies.
     /* stylelint-disable-next-line order/properties-alphabetical-order */
     -webkit-overflow-scrolling: touch; // iOS
 
+    &:focus-visible {
+        box-shadow: var(--focus-shadow);
+        outline: var(--focus-outline);
+    }
+
+    &:focus:not(:focus-visible) {
+        outline: var(--focus-outline);
+    }
+
     &__slide {
-        @include focus($inset: true) {
-            cursor: default;
-        }
         min-inline-size: min(var(--slide-min-width), 100%);
         scroll-snap-align: start;
 
@@ -54,7 +56,11 @@ Dependencies.
     // Clickable slides (e.g. cards, image thumbnails).
     &--has-clickable-slides {
         .carousel__slide > :is(a, button) {
-            @include focus($inset: true);
+            block-size: 100%;
+
+            &:focus-visible {
+                box-shadow: inset var(--focus-shadow);
+            }
         }
     }
 }

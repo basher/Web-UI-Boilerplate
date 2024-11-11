@@ -4,7 +4,6 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
 
 table,
 .table {
@@ -28,9 +27,6 @@ table,
 
     // Responsive wrapper.
     &-wrapper[role='region'][tabindex] {
-        @include focus {
-            cursor: default;
-        }
         overflow: auto;
     }
 }

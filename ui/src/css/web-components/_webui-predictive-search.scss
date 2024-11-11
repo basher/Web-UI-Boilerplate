@@ -1,11 +1,3 @@
-/*
-----------------------------------------------------------------------------
-Dependencies.
-----------------------------------------------------------------------------
-*/
-@use '../base' as *;
-@use '../mixins' as *;
-
 webui-predictive-search {
     &:defined {
         [type='submit'] {
@@ -23,7 +15,6 @@ webui-predictive-search {
 
     .search__result {
         &__link {
-            @include focus;
             color: inherit;
         }
     }

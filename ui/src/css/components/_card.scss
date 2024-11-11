@@ -4,7 +4,6 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
 
 .card {
     --card-gap: #{var(--gutter-m)};
@@ -57,8 +56,11 @@ Dependencies.
 
     // Clickable card.
     &[href] {
-        @include focus($opacity: true);
         text-decoration: none;
+
+        &:hover {
+            opacity: var(--hover-opacity);
+        }
 
         &:not([class*='skin']) {
             color: inherit;

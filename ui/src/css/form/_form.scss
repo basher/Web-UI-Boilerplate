@@ -3,7 +3,6 @@
 Dependencies.
 ----------------------------------------------------------------------------
 */
-@use '../mixins' as *;
 @use '../base' as *;
 
 .form {
@@ -65,9 +64,21 @@ Dependencies.
 
 // Basic form component styles.
 :is(.input, .select, .textarea) {
-    @include focus($background: true);
     border: var(--border-width-s) solid;
     padding: var(--gutter-s);
+
+    &:focus-visible {
+        box-shadow: var(--focus-shadow);
+        outline: var(--focus-outline);
+    }
+
+    &:focus:not(:focus-visible) {
+        outline: var(--focus-outline);
+    }
+
+    &:hover:not(:disabled) {
+        background-color: hsl(var(--color-brand) / 10%);
+    }
 
     // Native HTML5 validation.
     &:valid:required {

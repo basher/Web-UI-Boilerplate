@@ -4,7 +4,6 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
 
 .breadcrumb {
     &__list {
@@ -26,8 +25,11 @@ Dependencies.
     }
 
     &__link {
-        @include focus;
         color: inherit;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     [aria-current] {

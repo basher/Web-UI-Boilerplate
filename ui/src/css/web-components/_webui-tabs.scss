@@ -4,7 +4,6 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
 
 webui-tabs {
     [data-tablist] {
@@ -52,11 +51,14 @@ webui-tabs {
     }
 
     [role='tab'] {
-        @include focus($inset: true);
         background-color: $color-neutral-100;
         padding: var(--gutter-s);
         text-decoration: none;
         transition: background-color var(--animation-fast);
+
+        &:focus-visible {
+            box-shadow: inset var(--focus-shadow);
+        }
 
         &[aria-selected='true'] {
             background-color: $color-brand;
@@ -75,6 +77,13 @@ webui-tabs {
     }
 
     [role='tabpanel'] {
-        @include focus;
+        &:focus-visible {
+            box-shadow: var(--focus-shadow);
+            outline: var(--focus-outline);
+        }
+
+        &:focus:not(:focus-visible) {
+            outline: var(--focus-outline);
+        }
     }
 }

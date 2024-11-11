@@ -3,6 +3,7 @@
 Config settings.
 ----------------------------------------------------------------------------
 */
+@use 'colors' as *;
 :root {
     /* Layout. */
     --site-max-width: null;
@@ -13,6 +14,17 @@ Config settings.
     --gutter-m: var(--space-s-m);
     --gutter-l: var(--space-m-l);
     --gutter-xl: var(--space-l-xl);
+
+    /* :focus-visible.
+        - Uses transparent outline so high contrast mode works.
+        - See https://css-tricks.com/the-focus-visible-trick/.
+    */
+    --focus-shadow: 0 0 0 var(--border-width-l) #{$color-focus};
+    --focus-outline: var(--border-width-l) solid transparent;
+
+    /* :hover and :active */
+    --hover-opacity: 0.8;
+    --active-transform: scale(0.975);
 
     /* Borders. */
     --border-width-s: 0.0625rem;

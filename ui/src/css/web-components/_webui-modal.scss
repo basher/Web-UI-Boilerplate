@@ -4,7 +4,6 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
 
 // Cannot use existing CSS variables defined on :root element for ::backdrop. See https://stackoverflow.com/questions/58818299/css-variables-not-working-in-dialogbackdrop
 ::backdrop {
@@ -48,11 +47,15 @@ webui-modal {
     }
 
     .modal__content {
-        @include focus($inset: true);
         margin-block-start: var(--gutter-m);
 
-        &:hover {
-            cursor: default;
+        &:focus-visible {
+            box-shadow: inset var(--focus-shadow);
+            outline: var(--focus-outline);
+        }
+
+        &:focus:not(:focus-visible) {
+            outline: var(--focus-outline);
         }
     }
 

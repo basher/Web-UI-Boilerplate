@@ -15,7 +15,6 @@ Kilian Valkhof = https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-te
 Dependencies.
 ----------------------------------------------------------------------------
 */
-@use '../mixins' as *;
 @use '../base' as *;
 
 html {
@@ -65,7 +64,7 @@ ol ol ol {
     padding-inline-start: var(--gutter-l);
 }
 
-:where([type='submit'], label) {
+:where([type='submit'], label, summary) {
     cursor: pointer;
 }
 
@@ -112,7 +111,6 @@ button {
 }
 
 a:not([class]) {
-    @include focus;
     color: inherit;
     text-decoration-thickness: 0.125rem;
     text-underline-offset: 0.25em;
@@ -132,6 +130,24 @@ iframe {
 hr {
     border: var(--border-width-s) solid;
     margin-block: var(--gutter-m);
+}
+
+// :focus.
+:where(a, button, summary, [role='region'][tabindex]) {
+    &:focus-visible {
+        box-shadow: var(--focus-shadow);
+        outline: var(--focus-outline);
+    }
+
+    &:focus:not(:focus-visible) {
+        outline: var(--focus-outline);
+    }
+}
+
+summary {
+    &:focus-visible {
+        box-shadow: inset var(--focus-shadow);
+    }
 }
 
 // Anchor targets should have extra scroll margin.

@@ -4,16 +4,22 @@ Dependencies.
 ----------------------------------------------------------------------------
 */
 @use '../base' as *;
-@use '../mixins' as *;
 
 .button {
-    @include focus($opacity: true, $transform: true);
     background: transparent;
     color: inherit;
     cursor: pointer;
     display: inline-block;
     padding: var(--gutter-s);
     text-decoration: none;
+
+    &:hover {
+        opacity: var(--hover-opacity);
+    }
+
+    &:active {
+        transform: var(--active-transform);
+    }
 
     &:disabled {
         cursor: not-allowed;
