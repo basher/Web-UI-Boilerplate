@@ -31,8 +31,9 @@ Dependencies.
             padding-inline: var(--gutter-s);
         }
 
+        // TODO: Replace with container query.
         /* stylelint-disable-next-line order/order */
-        @include bp-medium {
+        @media (width > 48em) {
             display: grid;
             grid-template-areas: 'fullwidth';
             place-items: center start;
@@ -57,7 +58,8 @@ Dependencies.
     }
 
     &__overlay {
-        @include bp-medium {
+        // TODO: Replace with container query.
+        @media (width > 48em) {
             // Example, so text is legible above image.
             background: linear-gradient(
                 to right,
@@ -69,7 +71,8 @@ Dependencies.
         }
 
         + .banner__content {
-            @include bp-medium {
+            // TODO: Replace with container query.
+            @media (width > 48em) {
                 /* stylelint-disable-next-line max-nesting-depth */
                 @media (prefers-color-scheme: dark) {
                     --color-text: 0 0% 20%;

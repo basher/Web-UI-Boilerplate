@@ -41,7 +41,7 @@ Dependencies.
 
     // Fallback.
     @supports not (container-type: inline-size) {
-        @include bp-medium {
+        @media (min-width: 48.0625em) {
             grid-template-columns:
                 minmax(var(--grid-item-min-width), var(--grid-asymmetric-col1))
                 minmax(var(--grid-item-min-width), var(--grid-asymmetric-col2));
