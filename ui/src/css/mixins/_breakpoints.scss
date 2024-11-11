@@ -11,8 +11,8 @@ $bp-large: 64em !default; // 1024px
 $bp-xlarge: 90em !default; // 1440px
 
 // Zoom root font size on high density screens (e.g. 2K, 4K), but not to the extent that the additional real estate can't be utilised.
-$bp-2k: 160em !default; // 2560px
-$bp-4k: 240em !default; // 3840px
+// $bp-2k: 160em !default; // 2560px
+// $bp-4k: 240em !default; // 3840px
 
 // Smaller breakpoint sometimes needed to specifically target very narrow screens (e.g. to force single column layout in cases where FLEX or GRID can still fit >1 column).
 @mixin bp-xsmall {
@@ -46,14 +46,14 @@ $bp-4k: 240em !default; // 3840px
     }
 }
 
-@mixin bp-2k {
-    @media (min-width: $bp-2k) {
-        @content;
-    }
-}
+// @mixin bp-2k {
+//     @media (min-width: $bp-2k) {
+//         @content;
+//     }
+// }
 
-@mixin bp-4k {
-    @media (min-width: $bp-4k) {
-        @content;
-    }
-}
+// @mixin bp-4k {
+//     @media (min-width: $bp-4k) {
+//         @content;
+//     }
+// }

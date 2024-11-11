@@ -15,10 +15,12 @@ No need for font smoothing - see https://ui.dev/rwd/articles/font-smoothing
 */
 
 html {
-    @include bp-2k {
+    // Zoom root font size on high density screens (e.g. 2K, 4K), but not to the extent that the additional real estate can't be utilised.
+    @media (width >= 160em) {
         font-size: var(--base-font-size-2k);
     }
-    @include bp-4k {
+
+    @media (width >= 240em) {
         font-size: var(--base-font-size-4k);
     }
 
