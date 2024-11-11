@@ -6,24 +6,6 @@ Dependencies.
 @use '../mixins' as *;
 @use '../base' as *;
 
-@mixin validation {
-    :is(.label, .checkbox__label, .radio__label) {
-        padding-inline-end: var(--gutter-m);
-        position: relative;
-
-        &::after {
-            color: $color-error;
-            content: '!';
-            display: block;
-            font-size: 1em;
-            font-weight: bold;
-            inset-block-start: 0;
-            inset-inline-end: 0;
-            position: absolute;
-        }
-    }
-}
-
 .form {
     display: flex;
     flex-direction: column;
@@ -34,10 +16,29 @@ Dependencies.
         flex-direction: column;
         gap: var(--gutter-xs);
 
-        // Native HTML5 validation.
-        &:has(:valid:required) {
-            @include validation;
+        // Native HTML5 validation, and errors rendered directly in HTML, or via JavaScript.
+        &:has(:valid:required),
+        &:has(:user-invalid:required),
+        &--has-error {
+            :is(.label, .checkbox__label, .radio__label) {
+                padding-inline-end: var(--gutter-m);
+                position: relative;
 
+                /* stylelint-disable-next-line max-nesting-depth, no-descending-specificity */
+                &::after {
+                    color: $color-error;
+                    content: '!';
+                    display: block;
+                    font-size: 1em;
+                    font-weight: bold;
+                    inset-block-start: 0;
+                    inset-inline-end: 0;
+                    position: absolute;
+                }
+            }
+        }
+
+        &:has(:valid:required) {
             :is(.label, .checkbox__label, .radio__label) {
                 /* stylelint-disable-next-line max-nesting-depth */
                 &::after {
@@ -45,10 +46,6 @@ Dependencies.
                     content: '✓';
                 }
             }
-        }
-
-        &:has(:user-invalid:required) {
-            @include validation;
         }
     }
 
@@ -58,8 +55,6 @@ Dependencies.
     }
 
     &__field--has-error {
-        @include validation;
-
         &:has(:valid) {
             .form__error {
                 display: none;
@@ -68,6 +63,7 @@ Dependencies.
     }
 }
 
+// Basic form component styles.
 :is(.input, .select, .textarea) {
     @include focus($background: true);
     border: var(--border-width-s) solid;
