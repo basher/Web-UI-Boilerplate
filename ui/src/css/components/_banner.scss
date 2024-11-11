@@ -22,7 +22,7 @@ Dependencies.
     }
 
     &__content {
-        color: $color-text;
+        color: var(--color-text);
     }
 
     &--fullwidth {
@@ -44,7 +44,7 @@ Dependencies.
             .banner__content {
                 /* stylelint-disable-next-line max-nesting-depth */
                 @media (prefers-color-scheme: dark) {
-                    --color-text: 0 0% 20%;
+                    --color-neutral-700: 0 0% 20%;
                 }
 
                 // Example, so text is legible above image.
@@ -74,7 +74,7 @@ Dependencies.
             @media (width > 48em) {
                 /* stylelint-disable-next-line max-nesting-depth */
                 @media (prefers-color-scheme: dark) {
-                    --color-text: 0 0% 20%;
+                    --color-neutral-700: 0 0% 20%;
                 }
 
                 background: none;

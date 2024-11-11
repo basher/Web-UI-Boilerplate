@@ -26,8 +26,8 @@ Dependencies.
         }
 
         &-2 {
-            background-color: $color-brand;
-            color: $color-neutral-100;
+            background-color: var(--color-primary);
+            color: var(--color-neutral-light);
             padding: var(--gutter-m);
         }
 

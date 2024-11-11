@@ -8,7 +8,7 @@ Basic component styles are in "form.css".
 .select {
     @media (prefers-color-scheme: dark) {
         option {
-            color: $color-neutral-900;
+            color: var(--color-neutral-dark);
         }
     }
 }

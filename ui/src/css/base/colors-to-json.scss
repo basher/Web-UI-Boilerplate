@@ -2,32 +2,31 @@
 ----------------------------------------------------------------------------
 Color settings.
 
-1. Copied from the CSS Custom properties in 'base/colors.css', ans converted to Sass variables.
+1. Copied from the CSS Custom properties in 'base/colors.css', and converted to Sass variables.
 2. The 'sass-export' Node package then correctly exports all the colors as JSON for consumption by Storybook.
-3. This file is NOT imported so is NOT part of the Parcel build.
+3. This file is NOT imported and is NOT part of the Parcel build.
 
 TODO:
 - Write custom Node script to convert CSS into JSON without the manual copy/paste step into this Sass file.
 ----------------------------------------------------------------------------
 */
+/**
+* @sass-export-section="main theme colours"
+*/
+$color-primary: hsl(var(--color-brand));
 
 /**
- * @sass-export-section="main theme colours"
- */
-$color-brand: hsl(var(--color-brand));
-$color-text: hsl(var(--color-text));
-$color-background: hsl(var(--color-background));
+* @sass-export-section="neutral colours"
+*/
+$color-background: hsl(var(--color-neutral-100));
+$color-text: hsl(var(--color-neutral-700));
+$color-neutral-light: hsl(var(--color-neutral-200));
+$color-neutral-dark: hsl(var(--color-neutral-900));
 
 /**
- * @sass-export-section="neutral colours"
- */
-$color-neutral-900: hsl(var(--color-neutral-900));
-$color-neutral-100: hsl(var(--color-neutral-100));
-
-/**
- * @sass-export-section="other accent colours"
- */
+* @sass-export-section="other accent colours"
+*/
 $color-success: hsl(var(--color-accent-positive));
 $color-error: hsl(var(--color-accent-negative));
 $color-notify: hsl(var(--color-accent-neutral));
-$color-focus: hsl(var(--color-focus));
+$color-focus: hsl(var(--color-focused));

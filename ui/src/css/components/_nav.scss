@@ -22,7 +22,7 @@ Dependencies.
     }
 
     [aria-current] {
-        color: $color-brand;
+        color: var(--color-primary);
         font-weight: bold;
     }
 
@@ -38,7 +38,7 @@ Dependencies.
     }
 
     .nav__list--dropdown {
-        background-color: $color-background;
+        background-color: var(--color-background);
         border: var(--border-width-s) solid;
         flex-direction: column;
         inset-block-start: 100%;
@@ -86,7 +86,7 @@ Dependencies.
         // Using <webui-disclosure> custom element.
         webui-disclosure:defined {
             .nav__list {
-                background-color: $color-background;
+                background-color: var(--color-background);
                 border: var(--border-width-s) solid;
                 inset-block-start: 100%;
                 padding: var(--gutter-m);

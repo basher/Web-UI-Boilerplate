@@ -18,7 +18,7 @@ Dependencies.
 @use '../base' as *;
 
 html {
-    accent-color: $color-brand;
+    accent-color: var(--color-primary);
     color-scheme: light dark;
     /* stylelint-disable-next-line property-no-unknown */
     interpolate-size: allow-keywords;
@@ -43,8 +43,8 @@ html {
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
     }
-    background-color: $color-background;
-    color: $base-color;
+    background-color: var(--color-background);
+    color: var(--color-text);
     min-block-size: 100vh; // 100dvb might have performance implications.
 }
 

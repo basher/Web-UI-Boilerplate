@@ -91,11 +91,11 @@ Validation styles.
 ----------------------------------------------------------------------------
 */
 .error {
-    color: $color-error;
+    color: var(--color-error);
 }
 
 .success {
-    color: $color-success;
+    color: var(--color-success);
 }
 
 /*

@@ -23,14 +23,14 @@ webui-toggle {
 
     [aria-checked='false'] {
         .toggle__off {
-            background-color: hsl(var(--color-text) / 30%);
+            background-color: hsl(var(--color-neutral-700) / 30%);
         }
     }
 
     [aria-checked='true'] {
         .toggle__on {
-            background-color: $color-brand;
-            color: $color-neutral-100;
+            background-color: var(--color-primary);
+            color: var(--color-neutral-light);
         }
     }
 

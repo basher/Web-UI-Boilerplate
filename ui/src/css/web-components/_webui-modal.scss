@@ -19,13 +19,13 @@ webui-modal {
 
     // Browser already applies "position: fixed" and "width: fit-content".
     .modal__dialog {
-        background: $color-neutral-100;
+        background: var(--color-neutral-light);
         margin: auto;
         padding: 0 var(--gutter-m) var(--gutter-m);
 
         /* stylelint-disable-next-line order/order */
         @media (prefers-color-scheme: dark) {
-            background: $color-neutral-900;
+            background: var(--color-neutral-dark);
         }
 
         &::backdrop {
@@ -35,14 +35,14 @@ webui-modal {
     }
 
     .modal__header {
-        background: $color-neutral-100;
+        background: var(--color-neutral-light);
         display: flex;
         justify-content: flex-end;
         padding-block-start: var(--gutter-m);
 
         /* stylelint-disable-next-line order/order */
         @media (prefers-color-scheme: dark) {
-            background: $color-neutral-900;
+            background: var(--color-neutral-dark);
         }
     }
 

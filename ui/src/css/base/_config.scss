@@ -19,7 +19,7 @@ Config settings.
         - Uses transparent outline so high contrast mode works.
         - See https://css-tricks.com/the-focus-visible-trick/.
     */
-    --focus-shadow: 0 0 0 var(--border-width-l) #{$color-focus};
+    --focus-shadow: 0 0 0 var(--border-width-l) var(--color-focus);
     --focus-outline: var(--border-width-l) solid transparent;
 
     /* :hover and :active */

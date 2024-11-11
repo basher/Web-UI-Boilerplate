@@ -25,7 +25,7 @@ Dependencies.
 
                 /* stylelint-disable-next-line max-nesting-depth, no-descending-specificity */
                 &::after {
-                    color: $color-error;
+                    color: var(--color-error);
                     content: '!';
                     display: block;
                     font-size: 1em;
@@ -41,7 +41,7 @@ Dependencies.
             :is(.label, .checkbox__label, .radio__label) {
                 /* stylelint-disable-next-line max-nesting-depth */
                 &::after {
-                    color: $color-success;
+                    color: var(--color-success);
                     content: '✓';
                 }
             }
@@ -50,7 +50,7 @@ Dependencies.
 
     // Errors rendered directly in HTML, or via JavaScript.
     &__error {
-        color: $color-error;
+        color: var(--color-error);
     }
 
     &__field--has-error {
@@ -83,20 +83,20 @@ Dependencies.
     // Native HTML5 validation.
     &:valid:required {
         background-color: hsl(var(--color-accent-positive) / 10%);
-        border-color: $color-success;
+        border-color: var(--color-success);
         border-width: var(--border-width-m);
     }
 
     &:user-invalid:required {
         background-color: hsl(var(--color-accent-negative) / 10%);
-        border-color: $color-error;
+        border-color: var(--color-error);
         border-width: var(--border-width-m);
     }
 
     // ARIA.
     &[aria-invalid='true'] {
         background-color: hsl(var(--color-accent-negative) / 10%);
-        border-color: $color-error;
+        border-color: var(--color-error);
         border-width: var(--border-width-m);
     }
 }
