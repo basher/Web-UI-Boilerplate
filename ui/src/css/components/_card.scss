@@ -6,7 +6,7 @@ Dependencies.
 @use '../base' as *;
 
 .card {
-    --card-gap: #{var(--gutter-m)};
+    --card-gap: var(--gutter-m);
     --content-min-width: 50%;
     --image-min-width: 15rem;
 

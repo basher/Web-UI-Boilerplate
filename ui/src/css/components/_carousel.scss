@@ -7,7 +7,7 @@ Dependencies.
 
 .carousel {
     --slide-min-width: 18.75rem;
-    --slide-gap: #{var(--gutter-m)};
+    --slide-gap: var(--gutter-m);
 
     display: flex;
     gap: var(--slide-gap, 1rem);
