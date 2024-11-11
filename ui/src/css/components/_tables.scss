@@ -6,8 +6,8 @@ Dependencies.
 @use '../base' as *;
 @use '../mixins' as *;
 
-// Define mixin so tables inside prose content can be styled without requiring CSS class to be added.
-@mixin table {
+table,
+.table {
     :is(th, td) {
         border: var(--border-width-s) solid hsl(var(--color-neutral-900) / 10%);
         padding: var(--gutter-m);
@@ -25,11 +25,6 @@ Dependencies.
     caption {
         margin-block-end: var(--gutter-xs);
     }
-}
-
-table,
-.table {
-    @include table;
 
     // Responsive wrapper.
     &-wrapper[role='region'][tabindex] {

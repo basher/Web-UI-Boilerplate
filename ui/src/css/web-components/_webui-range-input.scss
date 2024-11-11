@@ -10,19 +10,6 @@ Dependencies.
     --slider-height: 0.25rem;
 }
 
-@mixin slider-thumb {
-    background-color: $color-brand;
-    block-size: var(--icon-size-l);
-    border: 0;
-    border-radius: 50%;
-    inline-size: var(--icon-size-l);
-}
-
-@mixin slider-track {
-    background-color: hsl(var(--color-text) / 20%);
-    block-size: var(--slider-height);
-}
-
 webui-range-input {
     output {
         margin-inline: auto;
@@ -35,20 +22,22 @@ webui-range-input {
     padding-inline: 0;
 
     &::-webkit-slider-thumb {
-        @include slider-thumb;
         -webkit-appearance: none;
+    }
+
+    &::-webkit-slider-thumb,
+    &::-moz-range-thumb {
+        background-color: $color-brand;
+        block-size: var(--icon-size-l);
+        border: 0;
+        border-radius: 50%;
+        inline-size: var(--icon-size-l);
         margin-block-start: calc(var(--slider-height) * -3);
     }
 
-    &::-webkit-slider-runnable-track {
-        @include slider-track;
-    }
-
-    &::-moz-range-thumb {
-        @include slider-thumb;
-    }
-
+    &::-webkit-slider-runnable-track,
     &::-moz-range-track {
-        @include slider-track;
+        background-color: hsl(var(--color-text) / 20%);
+        block-size: var(--slider-height);
     }
 }
