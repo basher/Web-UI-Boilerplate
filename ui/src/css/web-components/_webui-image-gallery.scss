@@ -49,6 +49,9 @@ webui-image-gallery {
     }
 
     .modal__close {
+        @media (prefers-color-scheme: dark) {
+            background: inherit;
+        }
         background: var(--color-neutral-light);
         margin: var(--gutter-s);
     }

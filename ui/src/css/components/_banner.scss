@@ -42,12 +42,11 @@ Dependencies.
             }
 
             .banner__content {
+                // So text is legible above image.
                 /* stylelint-disable-next-line max-nesting-depth */
                 @media (prefers-color-scheme: dark) {
-                    --color-neutral-700: 0 0% 20%;
+                    background: hsl(var(--color-brand) / 50%);
                 }
-
-                // Example, so text is legible above image.
                 background: hsl(var(--color-brand) / 10%);
                 inline-size: 40vw;
                 margin-inline-start: var(--gutter-m);
@@ -59,24 +58,26 @@ Dependencies.
     &__overlay {
         // TODO: Replace with container query.
         @media (width > 48em) {
-            // Example, so text is legible above image.
+            // So text is legible above image.
+            @media (prefers-color-scheme: dark) {
+                background: linear-gradient(
+                    to right,
+                    hsl(var(--color-brand) / 90%),
+                    transparent
+                );
+            }
             background: linear-gradient(
                 to right,
                 hsl(var(--color-brand) / 20%),
                 transparent
             );
             block-size: 100%;
-            inline-size: 50%;
+            inline-size: 60%;
         }
 
         + .banner__content {
             // TODO: Replace with container query.
             @media (width > 48em) {
-                /* stylelint-disable-next-line max-nesting-depth */
-                @media (prefers-color-scheme: dark) {
-                    --color-neutral-700: 0 0% 20%;
-                }
-
                 background: none;
             }
         }

@@ -24,6 +24,11 @@ Dependencies.
     [aria-current] {
         color: var(--color-primary);
         font-weight: bold;
+
+        /* stylelint-disable-next-line order/order */
+        @media (prefers-color-scheme: dark) {
+            color: inherit;
+        }
     }
 
     // Disclosure navigation (with dropdowns).

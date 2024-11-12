@@ -88,6 +88,11 @@ Dependencies.
         &[class*='text'] {
             border-color: var(--color-error);
         }
+
+        /* stylelint-disable-next-line order/order */
+        @media (prefers-color-scheme: dark) {
+            color: var(--color-neutral-dark);
+        }
     }
 
     &--icon {

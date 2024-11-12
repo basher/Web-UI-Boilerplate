@@ -3,12 +3,6 @@
 Basic component styles are in "form.css".
 ----------------------------------------------------------------------------
 */
-@use '../base' as *;
-
 .select {
-    @media (prefers-color-scheme: dark) {
-        option {
-            color: var(--color-neutral-dark);
-        }
-    }
+    //
 }
