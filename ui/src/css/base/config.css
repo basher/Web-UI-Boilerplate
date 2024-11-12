@@ -3,7 +3,6 @@
 Config settings.
 ----------------------------------------------------------------------------
 */
-@use 'colors' as *;
 :root {
     /* Layout. */
     --site-max-width: null;

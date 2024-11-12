@@ -6,13 +6,6 @@ Typography settings.
 
 /*
 ----------------------------------------------------------------------------
-Dependencies.
-----------------------------------------------------------------------------
-*/
-@use 'colors' as *;
-
-/*
-----------------------------------------------------------------------------
 Font-face rules.
 
 'font-display: swap;' ensures that all text will be rendered with a fallback system font until custom font is ready.
@@ -20,10 +13,10 @@ Font-face rules.
 */
 @font-face {
     font-display: swap;
-    font-family: 'robotolight';
+    font-family: robotolight;
     font-style: normal;
     font-weight: normal;
-    src: url('../fonts/roboto-light/roboto-light.woff') format('woff');
+    src: url('../../fonts/roboto-light/roboto-light.woff') format('woff');
 }
 
 :root {
@@ -31,12 +24,11 @@ Font-face rules.
     --base-font-family-title: var(--type-font-family-title),
         var(--type-font-fallback);
     --base-font-family-monospace: var(--type-font-family-monospace);
-
     --base-font-size: 100%;
     --base-font-size-2k: 110%; /* 2K screens */
     --base-font-size-4k: 200%; /* 4K screens */
-
     --font-size-body: var(--type-step-0);
+    /* stylelint-disable-next-line custom-property-pattern */
     --font-size-s: var(--type-step--1);
     --font-size-h5: var(--type-step-1);
     --font-size-h4: var(--type-step-2);

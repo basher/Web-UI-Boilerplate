@@ -1,10 +1,4 @@
-/*
-----------------------------------------------------------------------------
-Dependencies.
-----------------------------------------------------------------------------
-*/
-@use '../base' as *;
-
+/* stylelint-disable selector-class-pattern */
 /*
 ----------------------------------------------------------------------------
 Element styles.
@@ -14,7 +8,7 @@ No need for font smoothing - see https://ui.dev/rwd/articles/font-smoothing
 */
 
 html {
-    // Zoom root font size on high density screens (e.g. 2K, 4K), but not to the extent that the additional real estate can't be utilised.
+    /* Zoom root font size on high density screens (e.g. 2K, 4K), but not to the extent that the additional real estate can't be utilised. */
     @media (width >= 160em) {
         font-size: var(--base-font-size-2k);
     }

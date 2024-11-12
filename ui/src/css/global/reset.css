@@ -9,20 +9,13 @@ Josh Comeau = https://www.joshwcomeau.com/css/custom-css-reset/
 Kilian Valkhof = https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
 ----------------------------------------------------------------------------
 */
-
-/*
-----------------------------------------------------------------------------
-Dependencies.
-----------------------------------------------------------------------------
-*/
-@use '../base' as *;
-
 html {
     accent-color: var(--color-primary);
     color-scheme: light dark;
     /* stylelint-disable-next-line property-no-unknown */
     interpolate-size: allow-keywords;
-    // Remove the automatic text size adjustment that is provided by iOS.
+
+    /* Remove the automatic text size adjustment that is provided by iOS. */
     text-size-adjust: none;
 }
 
@@ -39,13 +32,14 @@ html {
 }
 
 :is(html, body) {
-    // Smooth scrolling IF user doesn't have a preference due to motion sensitivities.
+    /* Smooth scrolling IF user doesn't have a preference due to motion sensitivities. */
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
     }
+
     background-color: var(--color-background);
     color: var(--color-text);
-    min-block-size: 100vh; // 100dvb might have performance implications.
+    min-block-size: 100vh; /* 100dvb might have performance implications */
 }
 
 :is(ol, ul)[class] {
@@ -82,13 +76,14 @@ img {
             opacity: 1;
         }
     }
-    block-size: auto; // Needed for overriding 'height' attribute in HTML.
+
+    block-size: auto; /* Needed for overriding 'height' attribute in HTML */
     display: block;
-    max-inline-size: 100%; // Needed for responsive widths.
+    max-inline-size: 100%; /* Needed for responsive widths */
 }
 
 svg {
-    flex-shrink: 0; // Stop icon shrinking when inside a flex container.
+    flex-shrink: 0; /* Stop icon shrinking when inside a flex container */
     max-inline-size: 100%;
 }
 
@@ -97,7 +92,7 @@ svg {
     vertical-align: middle;
 }
 
-// <a> needs to be included here to remove the default tab focus.
+/* <a> needs to be included here to remove the default tab focus. */
 :is(button, a) {
     appearance: none;
     cursor: pointer;
@@ -132,7 +127,7 @@ hr {
     margin-block: var(--gutter-m);
 }
 
-// :focus.
+/* :focus. */
 :where(a, button, summary, [role='region'][tabindex]) {
     &:focus-visible {
         box-shadow: var(--focus-shadow);
@@ -150,13 +145,13 @@ summary {
     }
 }
 
-// Anchor targets should have extra scroll margin.
-// Adjust value to account for sticky header/footer, etc.
+/* Anchor targets should have extra scroll margin. */
+/* Adjust value to account for sticky header/footer, etc. */
 :target {
     scroll-margin-block: var(--gutter-xl);
 }
 
-// Remove all animations & transitions for people that prefer not to see them
+/* Remove all animations & transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
     * {
         /* stylelint-disable declaration-no-important */

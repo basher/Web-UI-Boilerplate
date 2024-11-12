@@ -1,19 +1,5 @@
 /*
 ----------------------------------------------------------------------------
-Core CSS custom properties = reference design tokens.
-----------------------------------------------------------------------------
-*/
-@import 'root-css-vars.css' screen;
-
-/*
-----------------------------------------------------------------------------
-Base scaffold, containing CSS custom properties = system design tokens.
-----------------------------------------------------------------------------
-*/
-/* @import 'base/index.css' screen; */
-
-/*
-----------------------------------------------------------------------------
 CSS Cascade Layers.
 ----------------------------------------------------------------------------
 */
@@ -21,42 +7,46 @@ CSS Cascade Layers.
 
 /*
 ----------------------------------------------------------------------------
+Core CSS custom properties = "reference" design tokens.
+----------------------------------------------------------------------------
+*/
+@import 'root-css-vars.css' screen;
+
+/*
+----------------------------------------------------------------------------
+Base scaffold, containing CSS custom properties = "system" design tokens.
+----------------------------------------------------------------------------
+*/
+@import 'base/index.css' screen;
+
+/*
+----------------------------------------------------------------------------
 Globals (including reset).
 ----------------------------------------------------------------------------
 */
-@layer global {
-    /* @import 'global/index.css' screen; */
-}
+@import 'global/index.css' layer(global) screen;
 
 /*
 ----------------------------------------------------------------------------
 Layout & components.
 ----------------------------------------------------------------------------
 */
-@layer layout {
-    /* @import 'layout/index.css' screen; */
-}
-/* stylelint-disable-next-line at-rule-empty-line-before */
-@layer components {
-    /* @import 'form/index.css' screen; */
-    /* @import 'components/index.css' screen; */
-    /* @import 'web-components/index.css' screen; */
-}
+/* @import 'layout/index.css' layer(layout) screen; */
+
+/* @import 'form/index.css' layer(components) screen; */
+/* @import 'components/index.css' layer(components) screen; */
+/* @import 'web-components/index.css' layer(components) screen; */
 
 /*
 ----------------------------------------------------------------------------
 Utilities.
 ----------------------------------------------------------------------------
 */
-@layer utilities {
-    /* @import 'utilities/index.css' screen; */
-}
+/* @import 'utilities/index.css' layer(utilities) screen; */
 
 /*
 ----------------------------------------------------------------------------
 Print styles.
 ----------------------------------------------------------------------------
 */
-@layer print {
-    /* @import 'print.css' print; */
-}
+/* @import 'print.css' layer(print) print; */
