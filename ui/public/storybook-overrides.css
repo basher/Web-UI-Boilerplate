@@ -13,15 +13,7 @@
     font-weight: 600;
 }
 
-/* Override dark mode in Storybook docs. */
-:root :has(#storybook-docs:not([hidden='true'])) {
-    @media (prefers-color-scheme: dark) {
-        --color-brand: 270 50% 80%;
-        --color-text: 0 0% 20%;
-        --color-background: 0 0% 100%;
-        --color-neutral-900: 0 0% 0%;
-        --color-neutral-100: 0 0% 85%;
-    }
-
-    color-scheme: light !important;
+/* Override dark mode in Storybook docs so text is legible. */
+[data-story-block='true'] {
+    color: hsl(0 0% 20%);
 }
