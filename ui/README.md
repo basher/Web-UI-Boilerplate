@@ -33,10 +33,9 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
 > - The VSCode `stylelint` extension introduced changes that break the `stylelint v14` NPM package. To fix this, the following settings have been added in the custom VSCode `settings.json` file:
 > ```
 > "css.validate": false,
-> "scss.validate": false,
 > "stylelint.enable": true,
 > "stylelint.validate": [
->     "scss",
+>     "css",
 >     "postcss"
 > ]
 > ```
@@ -77,9 +76,8 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 ### Polyfills
 - A separate `polyfills` bundle is created for browsers that don't support the required features in `src/javascript/config/browser-supports-features.ts`.
 
-### Sass
-- Sass compilation is done automatically.
-    - If Parcel sees Sass files in the project, it automatically installs `@parcel/transformer-sass`.
+### CSS
+- CSS compilation is done automatically.
 
 ### Dev dependencies
 - The default Babel presets mentioned above are sufficient.

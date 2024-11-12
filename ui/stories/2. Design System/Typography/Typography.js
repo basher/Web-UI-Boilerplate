@@ -72,7 +72,7 @@ export const TypographyHtml = () => `
 <pre><code>
 &lt;p&gt;Code example...&lt;/p&gt;
 &lt;style&gt;
-    code { font-family: $base-font-family; }
+    code { font-family: var(--type-font-family-monospace); }
 &lt;/style&gt;
 </code></pre>
 `;
