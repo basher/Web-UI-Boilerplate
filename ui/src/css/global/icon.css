@@ -1,18 +1,19 @@
+/* stylelint-disable selector-class-pattern */
 .icon {
     aspect-ratio: 1;
     block-size: 1em; /* Scale icon to match font-size of parent element */
     /* stylelint-disable-next-line value-keyword-case */
     fill: currentColor;
+}
 
-    &--small {
-        block-size: var(--icon-size-s);
-    }
+.icon--small {
+    block-size: var(--icon-size-s);
+}
 
-    &--medium {
-        block-size: var(--icon-size-m);
-    }
+.icon--medium {
+    block-size: var(--icon-size-m);
+}
 
-    &--large {
-        block-size: var(--icon-size-l);
-    }
+.icon--large {
+    block-size: var(--icon-size-l);
 }

@@ -31,7 +31,7 @@ Globals (including reset).
 Layout & components.
 ----------------------------------------------------------------------------
 */
-/* @import 'layout/index.css' layer(layout) screen; */
+@import 'layouts/index.css' layer(layout) screen;
 
 /* @import 'form/index.css' layer(components) screen; */
 /* @import 'components/index.css' layer(components) screen; */
