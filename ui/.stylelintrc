@@ -1,6 +1,6 @@
 {
     "extends": [
-        "stylelint-config-recommended-scss",
+        "stylelint-config-standard",
         "stylelint-prettier/recommended"
     ],
     "plugins": [
@@ -29,7 +29,13 @@
             }
         ],
         "selector-max-id": 0,
-        "scss/operator-no-unspaced": null,
-        "scss/comment-no-empty": null
+        "comment-empty-line-before": [
+            "always",
+            {
+                "ignore": ["after-comment", "stylelint-commands"],
+                "except": ["first-nested"]
+            }
+        ],
+        "import-notation": "string"
     }
 }
