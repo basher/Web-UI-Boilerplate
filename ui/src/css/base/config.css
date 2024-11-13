@@ -8,11 +8,11 @@ Config settings.
     --site-max-width: null;
 
     /* Spacing and gutters. Use for margin|padding, and gap in flex|grid layouts. */
-    --gutter-xs: var(--space-2xs-xs);
-    --gutter-s: var(--space-xs-s);
-    --gutter-m: var(--space-s-m);
-    --gutter-l: var(--space-m-l);
-    --gutter-xl: var(--space-l-xl);
+    --gutter-xs: var(--webui-space-2xs-xs);
+    --gutter-s: var(--webui-space-xs-s);
+    --gutter-m: var(--webui-space-s-m);
+    --gutter-l: var(--webui-space-m-l);
+    --gutter-xl: var(--webui-space-l-xl);
 
     /* :focus-visible.
         - Uses transparent outline so high contrast mode works.

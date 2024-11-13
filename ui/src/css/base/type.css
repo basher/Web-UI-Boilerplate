@@ -20,22 +20,22 @@ Font-face rules.
 }
 
 :root {
-    --base-font-family: var(--type-font-family), var(--type-font-fallback);
-    --base-font-family-title: var(--type-font-family-title),
-        var(--type-font-fallback);
-    --base-font-family-monospace: var(--type-font-family-monospace);
+    --base-font-family: var(--webui-font-family), var(--webui-font-fallback);
+    --base-font-family-title: var(--webui-font-family-title),
+        var(--webui-font-fallback);
+    --base-font-family-monospace: var(--webui-font-family-monospace);
     --base-font-size: 100%;
     --base-font-size-2k: 110%; /* 2K screens */
     --base-font-size-4k: 200%; /* 4K screens */
-    --font-size-body: var(--type-step-0);
+    --font-size-body: var(--webui-step-0);
     /* stylelint-disable-next-line custom-property-pattern */
-    --font-size-s: var(--type-step--1);
-    --font-size-h5: var(--type-step-1);
-    --font-size-h4: var(--type-step-2);
-    --font-size-h3: var(--type-step-3);
-    --font-size-h2: var(--type-step-4);
-    --font-size-h1: var(--type-step-5);
-    --font-size-xl: var(--type-step-6);
+    --font-size-s: var(--webui-step--1);
+    --font-size-h5: var(--webui-step-1);
+    --font-size-h4: var(--webui-step-2);
+    --font-size-h3: var(--webui-step-3);
+    --font-size-h2: var(--webui-step-4);
+    --font-size-h1: var(--webui-step-5);
+    --font-size-xl: var(--webui-step-6);
 
     /* Only adjust line-height when fonts get large */
     --base-line-height: 1.5;

@@ -7,14 +7,14 @@ CSS Cascade Layers.
 
 /*
 ----------------------------------------------------------------------------
-Core CSS custom properties = "reference" design tokens.
+Core CSS design tokens.
 ----------------------------------------------------------------------------
 */
-@import 'root-css-vars.css' screen;
+@import 'tokens.css' screen;
 
 /*
 ----------------------------------------------------------------------------
-Base scaffold, containing CSS custom properties = "system" design tokens.
+Base scaffold, containing "system" design tokens.
 ----------------------------------------------------------------------------
 */
 @import 'base/index.css' screen;
