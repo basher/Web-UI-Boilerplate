@@ -40,10 +40,10 @@
             /* So text is legible above image. */
             /* stylelint-disable-next-line max-nesting-depth */
             @media (prefers-color-scheme: dark) {
-                background: hsl(var(--color-brand) / 50%);
+                background: hsl(var(--color-primary) / 50%);
             }
 
-            background: hsl(var(--color-brand) / 10%);
+            background: hsl(var(--color-primary) / 10%);
             inline-size: 40vw;
             margin-inline-start: var(--gutter-m);
             padding: var(--gutter-m);
@@ -58,14 +58,14 @@
         @media (prefers-color-scheme: dark) {
             background: linear-gradient(
                 to right,
-                hsl(var(--color-brand) / 90%),
+                hsl(var(--color-primary) / 90%),
                 transparent
             );
         }
 
         background: linear-gradient(
             to right,
-            hsl(var(--color-brand) / 20%),
+            hsl(var(--color-primary) / 20%),
             transparent
         );
         block-size: 100%;

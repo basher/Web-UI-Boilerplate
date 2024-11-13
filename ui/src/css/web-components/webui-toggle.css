@@ -17,7 +17,7 @@ webui-toggle {
 
     [aria-checked='false'] {
         .toggle__off {
-            background-color: hsl(var(--color-neutral-700) / 30%);
+            background-color: hsl(var(--color-text) / 30%);
         }
     }
 

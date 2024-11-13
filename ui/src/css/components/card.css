@@ -30,16 +30,6 @@
         }
     }
 
-    :is(&--media-inline, &--fullwidth) {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-
-    :is(&--media-inline-reverse, &--fullwidth-reverse) {
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-    }
-
     /* Clickable card. */
     &[href] {
         text-decoration: none;
@@ -57,6 +47,16 @@
     .stack {
         --stack-gutter: var(--gutter-s);
     }
+}
+
+:is(.card--media-inline, .card--fullwidth) {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+:is(.card--media-inline-reverse, .card--fullwidth-reverse) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */

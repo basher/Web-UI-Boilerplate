@@ -71,7 +71,7 @@
     }
 
     &:hover:not(:disabled) {
-        background-color: hsl(var(--color-brand) / 10%);
+        background-color: hsl(var(--color-primary) / 10%);
     }
 
     /* Native HTML5 validation. */

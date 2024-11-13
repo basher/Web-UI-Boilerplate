@@ -60,7 +60,7 @@ webui-tabs {
 
         /* stylelint-disable-next-line order/order */
         @media (prefers-color-scheme: dark) {
-            background-color: hsl(var(--color-neutral-200) / 30%);
+            background-color: hsl(var(--color-neutral-light) / 30%);
 
             &[aria-selected='true'] {
                 color: inherit;

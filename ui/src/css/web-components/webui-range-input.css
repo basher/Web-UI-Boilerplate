@@ -29,7 +29,7 @@ webui-range-input {
 
     &::-webkit-slider-runnable-track,
     &::-moz-range-track {
-        background-color: hsl(var(--color-neutral-700) / 20%);
+        background-color: hsl(var(--color-text) / 20%);
         block-size: var(--slider-height);
     }
 }

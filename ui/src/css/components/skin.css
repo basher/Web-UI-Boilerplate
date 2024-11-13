@@ -23,7 +23,7 @@ Apply skin (or "theming" layer) to components.
     }
 
     .skin-3 {
-        background-color: hsl(var(--color-brand) / 10%);
+        background-color: hsl(var(--color-primary) / 10%);
         color: inherit;
         margin-block: var(--skin-gutter-offset);
         padding: var(--gutter-m);
@@ -31,7 +31,7 @@ Apply skin (or "theming" layer) to components.
 
         &::before,
         &::after {
-            background-color: hsl(var(--color-brand) / 10%);
+            background-color: hsl(var(--color-primary) / 10%);
             clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0 100%);
             content: '';
             display: block;
@@ -52,11 +52,11 @@ Apply skin (or "theming" layer) to components.
 
         /* stylelint-disable-next-line order/order */
         @media (prefers-color-scheme: dark) {
-            background-color: hsl(var(--color-brand) / 30%);
+            background-color: hsl(var(--color-primary) / 30%);
 
             &::before,
             &::after {
-                background-color: hsl(var(--color-brand) / 30%);
+                background-color: hsl(var(--color-primary) / 30%);
             }
         }
     }
