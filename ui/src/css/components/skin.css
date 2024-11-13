@@ -23,7 +23,7 @@ Apply skin (or "theming" layer) to components.
     }
 
     .skin-3 {
-        background-color: var(--color-primary-500);
+        background-color: var(--color-primary-100);
         color: inherit;
         margin-block: var(--skin-gutter-offset);
         padding: var(--gutter-m);
