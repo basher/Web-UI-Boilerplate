@@ -1,0 +1,45 @@
+/* stylelint-disable selector-class-pattern */
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter-m);
+    justify-content: center;
+
+    .form__field {
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.pagination-container {
+    @supports (container-type: inline-size) {
+        @container (inline-size <= 30rem) {
+            .pagination {
+                display: grid;
+                grid-template-areas:
+                    'select select'
+                    'prev next';
+                grid-template-columns: 1fr 1fr;
+                /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+                grid-template-rows: auto auto;
+            }
+        }
+
+        container-type: inline-size;
+
+        .form__field {
+            grid-area: select;
+        }
+
+        .button:first-of-type {
+            grid-area: prev;
+            justify-self: flex-start;
+        }
+
+        .button:last-of-type {
+            grid-area: next;
+            justify-self: flex-end;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+/* stylelint-disable selector-class-pattern */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-m);
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-xs);
+
+    /* Native HTML5 validation, and errors rendered directly in HTML, or via JavaScript. */
+    &:has(:valid:required),
+    &:has(:user-invalid:required),
+    &.form__field--has-error {
+        :is(.label, .checkbox__label, .radio__label) {
+            padding-inline-end: var(--gutter-m);
+            position: relative;
+
+            /* stylelint-disable-next-line max-nesting-depth, no-descending-specificity */
+            &::after {
+                color: var(--color-error-500);
+                content: '!';
+                display: block;
+                font-size: 1em;
+                font-weight: bold;
+                inset-block-start: 0;
+                inset-inline-end: 0;
+                position: absolute;
+            }
+        }
+    }
+
+    &:has(:valid:required) {
+        :is(.label, .checkbox__label, .radio__label) {
+            /* stylelint-disable-next-line max-nesting-depth */
+            &::after {
+                color: var(--color-success-500);
+                content: '✓';
+            }
+        }
+    }
+}
+
+/* Errors rendered directly in HTML, or via JavaScript. */
+.form__error {
+    color: var(--color-error-500);
+}
+
+.form__field--has-error {
+    &:has(:valid) {
+        .form__error {
+            display: none;
+        }
+    }
+}
+
+/* Basic form component styles. */
+:is(.input, .select, .textarea) {
+    border: var(--border-width-s) solid;
+    padding: var(--gutter-s);
+
+    &:focus-visible {
+        box-shadow: var(--focus-shadow);
+        outline: var(--focus-outline);
+    }
+
+    &:focus:not(:focus-visible) {
+        outline: var(--focus-outline);
+    }
+
+    &:hover:not(:disabled) {
+        background-color: var(--color-primary-100);
+    }
+
+    /* Native HTML5 validation. */
+    &:valid:required {
+        background-color: var(--color-success-100);
+        border-color: var(--color-success-500);
+        border-width: var(--border-width-m);
+    }
+
+    &:user-invalid:required {
+        background-color: var(--color-error-100);
+        border-color: var(--color-error-500);
+        border-width: var(--border-width-m);
+    }
+
+    /* ARIA. */
+    &[aria-invalid='true'] {
+        background-color: var(--color-error-100);
+        border-color: var(--color-error-500);
+        border-width: var(--border-width-m);
+    }
+}
+
+.message--error {
+    + .form {
+        margin-block-start: var(--gutter-m);
+    }
+}

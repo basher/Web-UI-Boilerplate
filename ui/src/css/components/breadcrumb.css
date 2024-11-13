@@ -1,0 +1,33 @@
+/* stylelint-disable selector-class-pattern */
+.breadcrumb {
+    [aria-current] {
+        color: var(--color-primary-500);
+        font-weight: bold;
+    }
+}
+
+.breadcrumb__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter-m);
+}
+
+.breadcrumb__item {
+    position: relative;
+
+    &:not(:first-child)::before {
+        content: '>';
+        display: inline-block;
+        inline-size: 1ch;
+        inset-inline-start: -1em;
+        position: absolute;
+    }
+}
+
+.breadcrumb__link {
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

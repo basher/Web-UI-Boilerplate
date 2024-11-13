@@ -1,0 +1,20 @@
+/* stylelint-disable selector-class-pattern */
+webui-predictive-search {
+    &:defined {
+        [type='submit'] {
+            display: none;
+        }
+    }
+
+    [role='region'] {
+        margin-block-start: var(--gutter-m);
+    }
+
+    .grid {
+        --grid-item-max-width: 10rem;
+    }
+
+    .search__result__link {
+        color: inherit;
+    }
+}

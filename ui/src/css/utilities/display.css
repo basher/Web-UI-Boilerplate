@@ -1,0 +1,27 @@
+/*
+----------------------------------------------------------------------------
+Visually hide content but make it available to screen readers.
+----------------------------------------------------------------------------
+*/
+.visually-hidden {
+    /* stylelint-disable-next-line selector-not-notation */
+    &:not(:focus):not(:active) {
+        block-size: 1px;
+        clip-path: inset(50%);
+        inline-size: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+    }
+}
+
+/*
+----------------------------------------------------------------------------
+Display.
+
+The CSS utility class behaves the same as the HTML attrribute.
+----------------------------------------------------------------------------
+*/
+:is(.u-hidden, [hidden]) {
+    display: none;
+}

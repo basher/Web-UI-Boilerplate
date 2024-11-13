@@ -1,0 +1,82 @@
+/* stylelint-disable selector-class-pattern */
+/* Cannot use existing CSS variables defined on :root element for ::backdrop. See https://stackoverflow.com/questions/58818299/css-variables-not-working-in-dialogbackdrop */
+::backdrop {
+    --color-backdrop: hsl(0 0% 0% / 70%);
+}
+
+webui-modal {
+    &:not(:defined) {
+        [data-open] {
+            display: none;
+        }
+    }
+
+    /* Browser already applies "position: fixed" and "width: fit-content". */
+    .modal__dialog {
+        background: var(--color-neutral-light);
+        margin: auto;
+        padding: 0 var(--gutter-m) var(--gutter-m);
+
+        /* stylelint-disable-next-line order/order */
+        @media (prefers-color-scheme: dark) {
+            background: var(--color-neutral-dark);
+        }
+
+        &::backdrop {
+            background: var(--color-backdrop);
+            pointer-events: none; /* So click outside works */
+        }
+    }
+
+    .modal__header {
+        background: var(--color-neutral-light);
+        display: flex;
+        justify-content: flex-end;
+        padding-block-start: var(--gutter-m);
+
+        /* stylelint-disable-next-line order/order */
+        @media (prefers-color-scheme: dark) {
+            background: var(--color-neutral-dark);
+        }
+    }
+
+    .modal__content {
+        margin-block-start: var(--gutter-m);
+
+        &:focus-visible {
+            box-shadow: inset var(--focus-shadow);
+            outline: var(--focus-outline);
+        }
+
+        &:focus:not(:focus-visible) {
+            outline: var(--focus-outline);
+        }
+    }
+
+    /* "dialogPolyfill" styles. */
+    .dialog-polyfill {
+        color: inherit;
+        inset: 0;
+        position: fixed;
+
+        &:not([open]) {
+            display: none;
+        }
+
+        + .backdrop {
+            background: var(--color-backdrop);
+            inset: 0;
+            position: fixed;
+        }
+
+        ~ ._dialog_overlay {
+            inset: 0;
+            position: fixed;
+        }
+    }
+}
+
+/* Class added to <body> by JS. */
+.has-modal-open {
+    overflow: hidden;
+}

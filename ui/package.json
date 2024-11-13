@@ -2,7 +2,7 @@
     "name": "web-ui-boilerplate",
     "description": "UI boilerplate for websites/webapps using vanilla HTML/CSS/JavaScript, powered by Storybook, bundled by Parcel.",
     "author": "basher",
-    "version": "3.1.25",
+    "version": "4.0.0",
     "license": "ISC",
     "repository": {
         "type": "git",
@@ -36,7 +36,6 @@
     "devDependencies": {
         "@babel/eslint-parser": "^7.13.14",
         "@etchteam/storybook-addon-status": "^4.2.4",
-        "@parcel/transformer-sass": "^2.11.0",
         "@storybook/addon-a11y": "^8.0.2",
         "@storybook/addon-docs": "^8.0.2",
         "@storybook/addon-essentials": "^8.0.2",
@@ -47,23 +46,22 @@
         "@typescript-eslint/eslint-plugin": "^5.41.0",
         "@typescript-eslint/parser": "^5.41.0",
         "cheerio": "^1.0.0-rc.11",
-        "eslint": "^7.24.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-prettier": "^4.2.1",
+        "eslint": "^8.57.1",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
         "fs-extra": "^10.1.0",
         "husky": "^8.0.3",
         "lint-staged": "^13.2.3",
-        "parcel": "^2.11.0",
+        "parcel": "^2.12.0",
         "postcss": "^8.4.18",
-        "prettier": "^2.7.1",
+        "prettier": "^3.3.3",
         "remark-gfm": "^4.0.0",
         "sass-export": "^2.1.2",
         "storybook": "^8.0.2",
-        "stylelint": "^14.14.0",
-        "stylelint-config-prettier": "^9.0.3",
-        "stylelint-config-recommended-scss": "^8.0.0",
-        "stylelint-order": "^5.0.0",
-        "stylelint-prettier": "^2.0.0",
+        "stylelint": "^16.10.0",
+        "stylelint-config-standard": "^36.0.1",
+        "stylelint-order": "^6.0.4",
+        "stylelint-prettier": "^5.0.2",
         "typescript": "^4.8.4"
     },
     "dependencies": {
@@ -74,8 +72,8 @@
             "eslint --fix",
             "prettier --write"
         ],
-        "src/**/*.scss": [
-            "stylelint --custom-syntax postcss-scss",
+        "src/**/*.css": [
+            "stylelint",
             "prettier --write"
         ]
     }

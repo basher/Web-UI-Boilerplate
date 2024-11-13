@@ -1,0 +1,50 @@
+/*
+----------------------------------------------------------------------------
+Typography settings.
+----------------------------------------------------------------------------
+*/
+
+/*
+----------------------------------------------------------------------------
+Font-face rules.
+
+'font-display: swap;' ensures that all text will be rendered with a fallback system font until custom font is ready.
+----------------------------------------------------------------------------
+*/
+@font-face {
+    font-display: swap;
+    font-family: robotolight;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../fonts/roboto-light/roboto-light.woff') format('woff');
+}
+
+:root {
+    --base-font-family: var(--webui-font-family), var(--webui-font-fallback);
+    --base-font-family-title: var(--webui-font-family-title),
+        var(--webui-font-fallback);
+    --base-font-family-monospace: var(--webui-font-family-monospace);
+    --base-font-size: 100%;
+    --base-font-size-2k: 110%; /* 2K screens */
+    --base-font-size-4k: 200%; /* 4K screens */
+    --font-size-body: var(--webui-step-0);
+    /* stylelint-disable-next-line custom-property-pattern */
+    --font-size-s: var(--webui-step--1);
+    --font-size-h5: var(--webui-step-1);
+    --font-size-h4: var(--webui-step-2);
+    --font-size-h3: var(--webui-step-3);
+    --font-size-h2: var(--webui-step-4);
+    --font-size-h1: var(--webui-step-5);
+    --font-size-xl: var(--webui-step-6);
+
+    /* Only adjust line-height when fonts get large */
+    --base-line-height: 1.5;
+    --line-height-h4: 1.3;
+    --line-height-h3: 1.3;
+    --line-height-h2: 1.2;
+    --line-height-h1: 1.2;
+    --line-height-xl: 1.2;
+
+    /* Max line-length (aka measure) to improve readability of editorial content */
+    --type-max-line-length: 65ch;
+}

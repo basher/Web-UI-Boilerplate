@@ -1,0 +1,39 @@
+webui-notify {
+    align-items: flex-start;
+    border: var(--border-width-s) solid;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--gutter-m);
+
+    .stack > * {
+        max-inline-size: none;
+    }
+
+    &[data-success] {
+        background: var(--color-success-100);
+        border-color: var(--color-success-500);
+    }
+
+    &[data-warning] {
+        background: var(--color-notify-100);
+        border-color: var(--color-notify-500);
+    }
+
+    &[data-error] {
+        background: var(--color-error-100);
+        border-color: var(--color-error-500);
+    }
+
+    [data-close] {
+        flex-shrink: 0;
+        inset-block-start: calc(var(--icon-size-s) * -1);
+        inset-inline-end: calc(var(--icon-size-s) * -1);
+        position: relative;
+    }
+
+    &:not(:defined) {
+        [data-close] {
+            display: none;
+        }
+    }
+}

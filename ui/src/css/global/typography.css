@@ -1,0 +1,124 @@
+/* stylelint-disable selector-class-pattern */
+/*
+----------------------------------------------------------------------------
+Element styles.
+
+No need for font smoothing - see https://ui.dev/rwd/articles/font-smoothing
+----------------------------------------------------------------------------
+*/
+
+html {
+    /* Zoom root font size on high density screens (e.g. 2K, 4K), but not to the extent that the additional real estate can't be utilised. */
+    @media (width >= 160em) {
+        font-size: var(--base-font-size-2k);
+    }
+
+    @media (width >= 240em) {
+        font-size: var(--base-font-size-4k);
+    }
+
+    font-size: var(--base-font-size);
+}
+
+body {
+    font-family: var(--base-font-family);
+    font-size: var(--font-size-body);
+    line-height: var(--base-line-height);
+}
+
+:where(h1, h2, h3, h4, h5, h6, [class*='h--']) {
+    font-family: var(--base-font-family-title);
+}
+
+.h--xl {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+    margin-block-end: var(--gutter-xl);
+}
+
+:where(h1, .h--1) {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+    margin-block-end: var(--gutter-l);
+}
+
+:where(h2, .h--2) {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+    margin-block-end: var(--gutter-m);
+}
+
+:where(h3, .h--3) {
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+    margin-block-end: var(--gutter-m);
+}
+
+:where(h4, .h--4) {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    margin-block-end: var(--gutter-s);
+}
+
+:where(h5, .h--5) {
+    font-size: var(--font-size-h5);
+    margin-block-end: var(--gutter-xs);
+}
+
+:where(h6, .h--6) {
+    font-size: var(--font-size-body);
+    margin-block-end: var(--gutter-xs);
+}
+
+/*
+----------------------------------------------------------------------------
+Margins on other prose elements.
+----------------------------------------------------------------------------
+*/
+:where(p, :is(ul, ol):not([class])) {
+    margin-block-end: var(--gutter-m);
+}
+
+/*
+----------------------------------------------------------------------------
+Validation styles.
+----------------------------------------------------------------------------
+*/
+.error {
+    color: var(--color-error-500);
+}
+
+.success {
+    color: var(--color-success-500);
+}
+
+/*
+----------------------------------------------------------------------------
+Miscellaneous styles.
+----------------------------------------------------------------------------
+*/
+:where(:is(p, li):not([class]), dd, small) {
+    max-inline-size: var(--type-max-line-length);
+}
+
+:is(button, input, select, textarea, datalist, datalist > option) {
+    font: inherit;
+    line-height: 1;
+}
+
+:is(caption, th, td) {
+    font-weight: normal;
+    text-align: start;
+}
+
+address {
+    font-style: normal;
+}
+
+small {
+    font-size: var(--font-size-s);
+}
+
+code {
+    font-family: var(--base-font-family-monospace);
+}

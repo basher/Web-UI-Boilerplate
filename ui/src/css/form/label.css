@@ -1,0 +1,9 @@
+/* stylelint-disable selector-class-pattern */
+.label {
+    display: block;
+}
+
+.label__hint {
+    display: block;
+    font-size: var(--font-size-s);
+}

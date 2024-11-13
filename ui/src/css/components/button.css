@@ -1,0 +1,103 @@
+/* stylelint-disable selector-class-pattern */
+.button {
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    padding: var(--gutter-s);
+    text-decoration: none;
+
+    &:hover {
+        opacity: var(--hover-opacity);
+    }
+
+    &:active {
+        transform: var(--active-transform);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    &[class*='text'] {
+        border: var(--border-width-s) solid;
+    }
+}
+
+.button--text-icon {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--gutter-s);
+    justify-content: space-between;
+
+    span {
+        text-align: start;
+    }
+}
+
+.button--reverse {
+    flex-direction: row-reverse;
+}
+
+/* Apply colours to button variants. */
+.button--primary {
+    background-color: var(--color-primary-500);
+    color: var(--color-neutral-light);
+
+    &[class*='text'] {
+        border-color: var(--color-primary-500);
+    }
+}
+
+.button--secondary {
+    color: var(--color-primary-500);
+
+    &[class*='text'] {
+        border-color: var(--color-primary-500);
+    }
+
+    /* stylelint-disable-next-line order/order */
+    @media (prefers-color-scheme: dark) {
+        color: inherit;
+    }
+}
+
+.button--positive {
+    background-color: var(--color-success-500);
+
+    &[class*='text'] {
+        border-color: var(--color-success-500);
+    }
+
+    /* stylelint-disable-next-line order/order */
+    @media (prefers-color-scheme: dark) {
+        color: var(--color-neutral-dark);
+    }
+}
+
+.button--negative {
+    background-color: var(--color-error-500);
+    color: var(--color-neutral-light);
+
+    &[class*='text'] {
+        border-color: var(--color-error-500);
+    }
+
+    /* stylelint-disable-next-line order/order */
+    @media (prefers-color-scheme: dark) {
+        color: var(--color-neutral-dark);
+    }
+}
+
+.button--icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+
+/* Text (and text + icons) buttons only. Icon button sizes are determined by the context of their parent container font-size (or their icon size overrides). */
+.button--small {
+    font-size: var(--font-size-s);
+    padding: var(--gutter-xs);
+}

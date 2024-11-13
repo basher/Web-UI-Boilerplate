@@ -1,0 +1,88 @@
+/* stylelint-disable selector-class-pattern */
+.flex {
+    --flex-gap: var(--gutter-m);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--flex-gap, 1rem);
+
+    /* When flex uses a UL/LI construct, override LI max-inline-size in 'typography.scss'. */
+    > li {
+        max-inline-size: none;
+    }
+
+    /* Let gap handle spacing between flex items. */
+    > * {
+        margin: 0;
+    }
+}
+
+/* Flex direction. */
+.flex--column {
+    flex-direction: column;
+}
+
+.flex--row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex--column-reverse {
+    flex-direction: column-reverse;
+}
+
+/* 0 gap between flex items. */
+.flex--no-gap {
+    --flex-gap: 0;
+}
+
+/* Gap variants. */
+.flex--gap-xs {
+    --flex-gap: var(--gutter-xs);
+}
+
+.flex--gap-s {
+    --flex-gap: var(--gutter-s);
+}
+
+.flex--gap-l {
+    --flex-gap: var(--gutter-l);
+}
+
+.flex--gap-xl {
+    --flex-gap: var(--gutter-xl);
+}
+
+/* Align items. */
+.flex--ai-center {
+    align-items: center;
+}
+
+.flex--ai-start {
+    align-items: flex-start;
+}
+
+.flex--ai-end {
+    align-items: flex-end;
+}
+
+/* Justify content. */
+.flex--jc-center {
+    justify-content: center;
+}
+
+.flex--jc-end {
+    justify-content: flex-end;
+}
+
+.flex--jc-between {
+    justify-content: space-between;
+}
+
+.flex--jc-evenly {
+    justify-content: space-evenly;
+}
+
+/* Make all flex items grow to fill available space. */
+.flex--grow-all > * {
+    flex-grow: 1;
+}

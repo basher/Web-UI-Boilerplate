@@ -1,0 +1,35 @@
+:root {
+    --slider-height: 0.25rem;
+}
+
+webui-range-input {
+    output {
+        margin-inline: auto;
+    }
+}
+
+[type='range'] {
+    appearance: none;
+    border: 0;
+    padding-inline: 0;
+
+    &::-webkit-slider-thumb {
+        appearance: none;
+    }
+
+    &::-webkit-slider-thumb,
+    &::-moz-range-thumb {
+        background-color: var(--color-primary-500);
+        block-size: var(--icon-size-l);
+        border: 0;
+        border-radius: 50%;
+        inline-size: var(--icon-size-l);
+        margin-block-start: calc(var(--slider-height) * -3);
+    }
+
+    &::-webkit-slider-runnable-track,
+    &::-moz-range-track {
+        background-color: var(--color-neutral-medium);
+        block-size: var(--slider-height);
+    }
+}

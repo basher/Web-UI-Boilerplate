@@ -1,0 +1,20 @@
+/* stylelint-disable selector-class-pattern */
+.page {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin-inline: auto;
+    max-inline-size: var(--site-max-width);
+    min-block-size: 100vh; /* 100dvb might have performance implications */
+
+    /* Main is a grid item, so this affects overflow behaviour on components like tables. */
+    .main {
+        overflow-x: hidden;
+    }
+}
+
+.page__sidebar {
+    .sidebar {
+        /* Set explicit flex-basis (width) for page sidebar. */
+        --sidebar-width: 20rem;
+    }
+}

@@ -1,0 +1,112 @@
+/* stylelint-disable selector-class-pattern */
+
+.nav {
+    [aria-current] {
+        color: var(--color-primary-500);
+        font-weight: bold;
+
+        /* stylelint-disable-next-line order/order */
+        @media (prefers-color-scheme: dark) {
+            color: inherit;
+        }
+    }
+}
+
+.nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter-m);
+}
+
+.nav__link {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Disclosure navigation (with dropdowns). */
+.nav--disclosure {
+    > .nav__list {
+        align-items: center;
+    }
+
+    .icon {
+        transition: transform var(--animation-fast);
+    }
+}
+
+.nav__list--dropdown {
+    background-color: var(--color-background);
+    border: var(--border-width-s) solid;
+    flex-direction: column;
+    inset-block-start: 100%;
+    inset-inline-start: 0;
+    padding: var(--gutter-m);
+    position: absolute;
+    z-index: var(--z-popup);
+}
+
+.nav__item--has-dropdown {
+    align-items: center;
+    display: flex;
+    gap: var(--gutter-s);
+    position: relative;
+
+    [aria-expanded='true'] {
+        .icon {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+/* Hamburger navigation. */
+.nav--hamburger__button {
+    &[aria-expanded='false'] {
+        .icon:last-of-type {
+            display: none;
+        }
+    }
+
+    &[aria-expanded='true'] {
+        .icon:first-of-type {
+            display: none;
+        }
+    }
+}
+
+.nav--hamburger {
+    position: relative;
+
+    .nav__list {
+        flex-direction: column;
+    }
+
+    /* Using <webui-disclosure> custom element. */
+    webui-disclosure:defined {
+        .nav__list {
+            background-color: var(--color-background);
+            border: var(--border-width-s) solid;
+            inset-block-start: 100%;
+            padding: var(--gutter-m);
+            position: absolute;
+            z-index: var(--z-popup);
+        }
+    }
+
+    /* Hamburger with disclosure navigation. */
+    &.nav--disclosure {
+        webui-disclosure:defined {
+            .nav__item--has-dropdown {
+                display: revert;
+            }
+
+            .nav__list--dropdown {
+                border: 0;
+                position: relative;
+            }
+        }
+    }
+}

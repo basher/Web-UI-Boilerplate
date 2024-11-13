@@ -1,0 +1,53 @@
+/*
+----------------------------------------------------------------------------
+Apply skin (or "theming" layer) to components.
+----------------------------------------------------------------------------
+*/
+:root {
+    --skin-gutter-offset: var(--gutter-xl);
+}
+
+/* Define new layer to ensure 'skin' has highest specificity (excluding any overrides applied in the 'utilities' layer). */
+@layer skin {
+    /* Arbitrary styling to demo the concept. */
+    .skin-1 {
+        border: var(--border-width-s) solid;
+        color: inherit;
+        padding: var(--gutter-m);
+    }
+
+    .skin-2 {
+        background-color: var(--color-primary-500);
+        color: var(--color-neutral-light);
+        padding: var(--gutter-m);
+    }
+
+    .skin-3 {
+        background-color: var(--color-primary-100);
+        color: inherit;
+        margin-block: var(--skin-gutter-offset);
+        padding: var(--gutter-m);
+        position: relative;
+
+        &::before,
+        &::after {
+            background-color: var(--color-primary-100);
+            clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0 100%);
+            content: '';
+            display: block;
+            inline-size: 100%;
+            inset-inline-start: 0;
+            padding-block-start: var(--skin-gutter-offset);
+            position: absolute;
+        }
+
+        &::before {
+            inset-block-end: 100%;
+        }
+
+        &::after {
+            inset-block-start: 100%;
+            transform: rotate(180deg);
+        }
+    }
+}

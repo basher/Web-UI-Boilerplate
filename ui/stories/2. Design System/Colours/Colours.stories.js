@@ -22,7 +22,7 @@ const style = `
     }
 
     .grid {
-        grid-template-columns: repeat(auto-fit, 12.5rem);
+        grid-template-columns: repeat(auto-fit, 17.5rem);
     }
     .grid li {
         border: 1px solid;
@@ -91,9 +91,10 @@ ${
                 );
 
                 const computedSpan = span.nextElementSibling.nextElementSibling;
-                computedSpan.innerHTML = `hsl(${getComputedStyle(
-                    span,
-                ).getPropertyValue(spanStyleValue)})`;
+
+                if (getComputedStyle(span).getPropertyValue(spanStyleValue) !== '') {
+                    computedSpan.innerHTML = `<b>hsl(${getComputedStyle(span).getPropertyValue(spanStyleValue)})</b>`;
+                }
             });
         }
     )
