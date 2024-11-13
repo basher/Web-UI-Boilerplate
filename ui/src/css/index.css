@@ -7,14 +7,14 @@ CSS Cascade Layers.
 
 /*
 ----------------------------------------------------------------------------
-Core CSS design tokens.
+"Primitive" CSS design tokens.
 ----------------------------------------------------------------------------
 */
 @import 'tokens.css' screen;
 
 /*
 ----------------------------------------------------------------------------
-Base scaffold, containing "system" design tokens.
+Base scaffold, containing "semantic" design tokens.
 ----------------------------------------------------------------------------
 */
 @import 'base/index.css' screen;
