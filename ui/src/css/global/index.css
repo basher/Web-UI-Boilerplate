@@ -1,3 +1,4 @@
-@import 'typography.css';
-@import 'icon.css';
+/* Import 'reset' first. */
 @import 'reset.css';
+@import 'icon.css';
+@import 'typography.css';
