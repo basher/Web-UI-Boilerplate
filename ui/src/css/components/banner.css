@@ -1,0 +1,90 @@
+/* stylelint-disable selector-class-pattern */
+.banner {
+    --banner-gap: var(--gutter-m);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--banner-gap);
+}
+
+.banner__media {
+    .image {
+        @media (prefers-color-scheme: dark) {
+            opacity: 1;
+            transition: none;
+        }
+    }
+}
+
+.banner__content {
+    color: var(--color-text);
+}
+
+.banner--fullwidth {
+    .banner__content {
+        padding-inline: var(--gutter-s);
+    }
+
+    /* TODO: Replace with container query. */
+    /* stylelint-disable-next-line order/order */
+    @media (width > 48em) {
+        display: grid;
+        grid-template-areas: 'fullwidth';
+        place-items: center start;
+
+        > * {
+            grid-area: fullwidth;
+        }
+
+        .banner__content {
+            /* So text is legible above image. */
+            /* stylelint-disable-next-line max-nesting-depth */
+            @media (prefers-color-scheme: dark) {
+                background: hsl(var(--color-brand) / 50%);
+            }
+
+            background: hsl(var(--color-brand) / 10%);
+            inline-size: 40vw;
+            margin-inline-start: var(--gutter-m);
+            padding: var(--gutter-m);
+        }
+    }
+}
+
+.banner__overlay {
+    /* TODO: Replace with container query. */
+    @media (width > 48em) {
+        /* So text is legible above image. */
+        @media (prefers-color-scheme: dark) {
+            background: linear-gradient(
+                to right,
+                hsl(var(--color-brand) / 90%),
+                transparent
+            );
+        }
+
+        background: linear-gradient(
+            to right,
+            hsl(var(--color-brand) / 20%),
+            transparent
+        );
+        block-size: 100%;
+        inline-size: 60%;
+    }
+
+    + .banner__content {
+        /* TODO: Replace with container query. */
+        @media (width > 48em) {
+            background: none;
+        }
+    }
+}
+
+/* Inline banner uses fullwidth card HTML. */
+.banner--inline {
+    align-items: center;
+
+    .card__content {
+        --content-min-width: 45%;
+    }
+}

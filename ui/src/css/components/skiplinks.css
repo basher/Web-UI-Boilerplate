@@ -1,0 +1,15 @@
+/* stylelint-disable selector-class-pattern */
+.skiplinks {
+    position: absolute;
+}
+
+.skiplinks__link {
+    background-color: var(--color-primary);
+    color: var(--color-neutral-light);
+    display: inline-block;
+    left: var(--gutter-m);
+    min-inline-size: 10vw;
+    padding: var(--gutter-s);
+    text-align: center;
+    z-index: var(--z-default);
+}

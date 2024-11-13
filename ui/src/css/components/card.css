@@ -1,10 +1,4 @@
-/*
-----------------------------------------------------------------------------
-Dependencies.
-----------------------------------------------------------------------------
-*/
-@use '../base' as *;
-
+/* stylelint-disable selector-class-pattern */
 .card {
     --card-gap: var(--gutter-m);
     --content-min-width: 50%;
@@ -15,15 +9,7 @@ Dependencies.
     gap: var(--card-gap);
     inline-size: clamp(1rem, 100%, 60ch);
 
-    &__media {
-        flex-grow: 1;
-    }
-
-    &--media-bottom {
-        flex-direction: column-reverse;
-    }
-
-    // Layout approach is same as sidebar layout.
+    /* Layout approach is same as sidebar layout. */
     &:is([class*='media-inline'], [class*='fullwidth']) {
         flex-wrap: wrap;
         inline-size: auto;
@@ -38,7 +24,7 @@ Dependencies.
     &[class*='fullwidth'] {
         --card-gap: var(--gutter-xl);
 
-        // Uses <picture> element. Set image to take up % of available space, which allows it to shrink and use the correct source.
+        /* Uses <picture> element. Set image to take up % of available space, which allows it to shrink and use the correct source. */
         .card__media {
             flex-basis: max(50% - var(--card-gap), var(--image-min-width));
         }
@@ -54,7 +40,7 @@ Dependencies.
         justify-content: flex-end;
     }
 
-    // Clickable card.
+    /* Clickable card. */
     &[href] {
         text-decoration: none;
 
@@ -67,23 +53,32 @@ Dependencies.
         }
     }
 
-    // Uses stack layout for card__content internal spacing.
+    /* Uses stack layout for card__content internal spacing. */
     .stack {
         --stack-gutter: var(--gutter-s);
     }
+}
 
-    // Cards in a grid.
-    &-grid.grid {
-        --card-max-width: 25rem; // Same width as image.: 100px;
-        --grid-item-max-width: max-content;
+/* stylelint-disable-next-line no-descending-specificity */
+.card__media {
+    flex-grow: 1;
+}
 
-        > * {
-            max-inline-size: var(--card-max-width);
-        }
+.card--media-bottom {
+    flex-direction: column-reverse;
+}
+
+/* Cards in a grid. */
+.card-grid.grid {
+    --card-max-width: 25rem; /* Same width as image */
+    --grid-item-max-width: max-content;
+
+    > * {
+        max-inline-size: var(--card-max-width);
     }
+}
 
-    // Cards in a carousel.
-    &-carousel.carousel {
-        --slide-min-width: 25rem; // Same width as image.
-    }
+/* Cards in a carousel. */
+.card-carousel.carousel {
+    --slide-min-width: 25rem; /* Same width as image */
 }

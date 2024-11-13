@@ -17,13 +17,14 @@ export default class WebUIFetchHtml extends HTMLElement {
         ajaxEventHandler({
             ajaxTrigger: this.fetchTrigger,
             eventType: 'click',
-            ajaxCallback: this.fetchHtmlFragment,
+            ajaxCallback: this.handleClick,
         });
     }
 
-    private fetchHtmlFragment(ajaxContainer: HTMLElement): void {
+    private handleClick(ajaxContainer: HTMLElement): void {
         const showAjaxLoader = true;
 
+        // TODO: Add 'data-' attribute on button to specifiy HTML source to be fetched.
         fetch('ajax/ajax.html', {
             method: 'GET',
             signal: ajaxAbortHandler({
