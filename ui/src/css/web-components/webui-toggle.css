@@ -1,10 +1,4 @@
-/*
-----------------------------------------------------------------------------
-Dependencies.
-----------------------------------------------------------------------------
-*/
-@use '../base' as *;
-
+/* stylelint-disable selector-class-pattern */
 webui-toggle {
     &:not(:defined) {
         display: none;

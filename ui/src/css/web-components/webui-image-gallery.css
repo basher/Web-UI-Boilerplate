@@ -1,16 +1,10 @@
-/*
-----------------------------------------------------------------------------
-Dependencies.
-----------------------------------------------------------------------------
-*/
-@use '../base' as *;
-
+/* stylelint-disable selector-class-pattern */
 webui-image-gallery {
     [data-open] {
         display: block;
     }
 
-    // Without JS, still show the modal open link so the target opens in the browser window rather than a modal.
+    /* Without JS, still show the modal open link so the target opens in the browser window rather than a modal. */
     &:not(:defined) {
         webui-modal [data-open] {
             display: block;
@@ -52,6 +46,7 @@ webui-image-gallery {
         @media (prefers-color-scheme: dark) {
             background: inherit;
         }
+
         background: var(--color-neutral-light);
         margin: var(--gutter-s);
     }

@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 webui-predictive-search {
     &:defined {
         [type='submit'] {
@@ -13,9 +14,7 @@ webui-predictive-search {
         --grid-item-max-width: 10rem;
     }
 
-    .search__result {
-        &__link {
-            color: inherit;
-        }
+    .search__result__link {
+        color: inherit;
     }
 }

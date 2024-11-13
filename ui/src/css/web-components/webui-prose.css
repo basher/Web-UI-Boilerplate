@@ -4,13 +4,13 @@ Prose content (e.g. from CMS editor).
 ----------------------------------------------------------------------------
 */
 webui-prose {
-    overflow-x: hidden; // Just in case CMS content is stupidly wide.
+    overflow-x: hidden; /* Just in case content is stupidly wide */
 
-    // Uses stack layout to handle spacing between prose elements, based on their rendered font size.
+    /* Uses stack layout to handle spacing between prose elements, based on their rendered font size. */
     > .stack {
         --stack-gutter: 1em;
 
-        // Remove spacing for adjacent headings.
+        /* Remove spacing for adjacent headings. */
         :is(h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6) {
             --stack-gutter: 0;
         }

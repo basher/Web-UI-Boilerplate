@@ -1,10 +1,3 @@
-/*
-----------------------------------------------------------------------------
-Dependencies.
-----------------------------------------------------------------------------
-*/
-@use '../base' as *;
-
 webui-tabs {
     [data-tablist] {
         display: flex;
@@ -20,7 +13,7 @@ webui-tabs {
     }
 
     &[data-vertical] {
-        // TODO: Replace with container query.
+        /* TODO: Replace with container query. */
         @media (width > 48em) {
             display: grid;
             gap: var(--gutter-m);
@@ -31,7 +24,7 @@ webui-tabs {
                 white-space: revert;
             }
 
-            // Roles are added by JavaScript.
+            /* Roles are added by JavaScript. */
             [role='tablist'] {
                 flex-direction: column;
                 grid-area: tabs;
@@ -45,7 +38,7 @@ webui-tabs {
         }
     }
 
-    // Roles are added by JavaScript.
+    /* Roles are added by JavaScript. */
     [role='tablist'] {
         flex-direction: row;
     }
@@ -69,7 +62,6 @@ webui-tabs {
         @media (prefers-color-scheme: dark) {
             background-color: hsl(var(--color-neutral-200) / 30%);
 
-            /* stylelint-disable max-nesting-depth */
             &[aria-selected='true'] {
                 color: inherit;
             }

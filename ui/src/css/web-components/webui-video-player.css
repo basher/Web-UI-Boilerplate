@@ -1,10 +1,4 @@
-/*
-----------------------------------------------------------------------------
-Dependencies.
-----------------------------------------------------------------------------
-*/
-@use '../base' as *;
-
+/* stylelint-disable selector-class-pattern */
 webui-video-player {
     [data-open] {
         display: grid;
@@ -21,7 +15,7 @@ webui-video-player {
         }
     }
 
-    // Without JS, still show the modal open link so the target opens in the browser window rather than a modal.
+    /* Without JS, still show the modal open link so the target opens in the browser window rather than a modal. */
     &:not(:defined) {
         webui-modal [data-open] {
             display: inline-block;
