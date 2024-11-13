@@ -16,10 +16,6 @@
     }
 }
 
-.banner__content {
-    color: var(--color-text);
-}
-
 .banner--fullwidth {
     .banner__content {
         padding-inline: var(--gutter-s);
@@ -38,12 +34,11 @@
 
         .banner__content {
             /* So text is legible above image. */
-            /* stylelint-disable-next-line max-nesting-depth */
             @media (prefers-color-scheme: dark) {
-                background: hsl(var(--color-primary) / 50%);
+                color: var(--color-neutral-dark);
             }
 
-            background: hsl(var(--color-primary) / 10%);
+            background: var(--color-primary-100);
             inline-size: 40vw;
             margin-inline-start: var(--gutter-m);
             padding: var(--gutter-m);
@@ -55,17 +50,9 @@
     /* TODO: Replace with container query. */
     @media (width > 48em) {
         /* So text is legible above image. */
-        @media (prefers-color-scheme: dark) {
-            background: linear-gradient(
-                to right,
-                hsl(var(--color-primary) / 90%),
-                transparent
-            );
-        }
-
         background: linear-gradient(
             to right,
-            hsl(var(--color-primary) / 20%),
+            var(--color-primary-100),
             transparent
         );
         block-size: 100%;

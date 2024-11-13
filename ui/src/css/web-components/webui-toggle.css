@@ -17,13 +17,13 @@ webui-toggle {
 
     [aria-checked='false'] {
         .toggle__off {
-            background-color: hsl(var(--color-text) / 30%);
+            background-color: var(--color-neutral-medium);
         }
     }
 
     [aria-checked='true'] {
         .toggle__on {
-            background-color: var(--color-primary);
+            background-color: var(--color-primary-500);
             color: var(--color-neutral-light);
         }
     }

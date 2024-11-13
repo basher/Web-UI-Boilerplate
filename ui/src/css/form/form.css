@@ -20,7 +20,7 @@
 
             /* stylelint-disable-next-line max-nesting-depth, no-descending-specificity */
             &::after {
-                color: var(--color-error);
+                color: var(--color-error-500);
                 content: '!';
                 display: block;
                 font-size: 1em;
@@ -36,7 +36,7 @@
         :is(.label, .checkbox__label, .radio__label) {
             /* stylelint-disable-next-line max-nesting-depth */
             &::after {
-                color: var(--color-success);
+                color: var(--color-success-500);
                 content: '✓';
             }
         }
@@ -45,7 +45,7 @@
 
 /* Errors rendered directly in HTML, or via JavaScript. */
 .form__error {
-    color: var(--color-error);
+    color: var(--color-error-500);
 }
 
 .form__field--has-error {
@@ -71,26 +71,26 @@
     }
 
     &:hover:not(:disabled) {
-        background-color: hsl(var(--color-primary) / 10%);
+        background-color: var(--color-primary-100);
     }
 
     /* Native HTML5 validation. */
     &:valid:required {
-        background-color: hsl(var(--color-success) / 10%);
-        border-color: var(--color-success);
+        background-color: var(--color-success-100);
+        border-color: var(--color-success-500);
         border-width: var(--border-width-m);
     }
 
     &:user-invalid:required {
-        background-color: hsl(var(--color-error) / 10%);
-        border-color: var(--color-error);
+        background-color: var(--color-error-100);
+        border-color: var(--color-error-500);
         border-width: var(--border-width-m);
     }
 
     /* ARIA. */
     &[aria-invalid='true'] {
-        background-color: hsl(var(--color-error) / 10%);
-        border-color: var(--color-error);
+        background-color: var(--color-error-100);
+        border-color: var(--color-error-500);
         border-width: var(--border-width-m);
     }
 }

@@ -9,6 +9,7 @@ CSS custom properties (e.g. from "design tokens") for dynamic theming.
     --webui-color-brand: 270 50% 40%; /* rebeccapurple */
     --webui-color-neutral-100: 0 0% 100%;
     --webui-color-neutral-200: 0 0% 95%;
+    --webui-color-neutral-500: 0 0% 70%;
     --webui-color-neutral-700: 0 0% 20%;
     --webui-color-neutral-900: 0 0% 0%;
     --webui-color-accent-positive: 116 44% 60%;
@@ -52,6 +53,7 @@ CSS custom properties (e.g. from "design tokens") for dynamic theming.
         --webui-color-brand: 270 50% 50%;
         --webui-color-neutral-100: 0 0% 13%;
         --webui-color-neutral-200: 0 0% 95%;
+        --webui-color-neutral-500: 0 0% 40%;
         --webui-color-neutral-700: 0 0% 95%;
         --webui-color-neutral-900: 0 0% 13%;
         --webui-color-accent-negative: 358 75% 63%;

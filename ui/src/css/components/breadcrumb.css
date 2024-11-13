@@ -1,6 +1,7 @@
 /* stylelint-disable selector-class-pattern */
 .breadcrumb {
     [aria-current] {
+        color: var(--color-primary-500);
         font-weight: bold;
     }
 }

@@ -19,7 +19,7 @@ webui-range-input {
 
     &::-webkit-slider-thumb,
     &::-moz-range-thumb {
-        background-color: var(--color-primary);
+        background-color: var(--color-primary-500);
         block-size: var(--icon-size-l);
         border: 0;
         border-radius: 50%;
@@ -29,7 +29,7 @@ webui-range-input {
 
     &::-webkit-slider-runnable-track,
     &::-moz-range-track {
-        background-color: hsl(var(--color-text) / 20%);
+        background-color: var(--color-neutral-medium);
         block-size: var(--slider-height);
     }
 }

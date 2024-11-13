@@ -54,13 +54,13 @@ webui-tabs {
         }
 
         &[aria-selected='true'] {
-            background-color: var(--color-primary);
+            background-color: var(--color-primary-500);
             color: var(--color-neutral-light);
         }
 
         /* stylelint-disable-next-line order/order */
         @media (prefers-color-scheme: dark) {
-            background-color: hsl(var(--color-neutral-light) / 30%);
+            background-color: var(--color-neutral-medium);
 
             &[aria-selected='true'] {
                 color: inherit;

@@ -22,7 +22,7 @@ webui-carousel {
     /* Identify current slide (when using PREV|NEXT buttons). */
     .is-current:not(:focus-visible) {
         /* For demo purposes */
-        box-shadow: inset 0 0 0 var(--border-width-l) var(--color-primary);
+        box-shadow: inset 0 0 0 var(--border-width-l) var(--color-primary-500);
     }
 
     .carousel__controls {
@@ -43,8 +43,8 @@ webui-carousel {
         padding: var(--gutter-s);
 
         &.is-current {
-            background-color: var(--color-primary);
-            color: var(--color-primary);
+            background-color: var(--color-primary-500);
+            color: var(--color-primary-500);
         }
     }
 }

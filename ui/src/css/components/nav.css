@@ -2,7 +2,7 @@
 
 .nav {
     [aria-current] {
-        color: var(--color-primary);
+        color: var(--color-primary-500);
         font-weight: bold;
 
         /* stylelint-disable-next-line order/order */

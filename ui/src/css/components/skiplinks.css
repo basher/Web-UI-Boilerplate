@@ -4,7 +4,7 @@
 }
 
 .skiplinks__link {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-500);
     color: var(--color-neutral-light);
     display: inline-block;
     left: var(--gutter-m);

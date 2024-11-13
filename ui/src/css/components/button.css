@@ -42,19 +42,19 @@
 
 /* Apply colours to button variants. */
 .button--primary {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-500);
     color: var(--color-neutral-light);
 
     &[class*='text'] {
-        border-color: var(--color-primary);
+        border-color: var(--color-primary-500);
     }
 }
 
 .button--secondary {
-    color: var(--color-primary);
+    color: var(--color-primary-500);
 
     &[class*='text'] {
-        border-color: var(--color-primary);
+        border-color: var(--color-primary-500);
     }
 
     /* stylelint-disable-next-line order/order */
@@ -64,10 +64,10 @@
 }
 
 .button--positive {
-    background-color: var(--color-success);
+    background-color: var(--color-success-500);
 
     &[class*='text'] {
-        border-color: var(--color-success);
+        border-color: var(--color-success-500);
     }
 
     /* stylelint-disable-next-line order/order */
@@ -77,11 +77,11 @@
 }
 
 .button--negative {
-    background-color: var(--color-error);
+    background-color: var(--color-error-500);
     color: var(--color-neutral-light);
 
     &[class*='text'] {
-        border-color: var(--color-error);
+        border-color: var(--color-error-500);
     }
 
     /* stylelint-disable-next-line order/order */

@@ -10,6 +10,6 @@
     inline-size: 1.5em;
 
     &:invalid:required:focus {
-        box-shadow: 0 0 0 var(--border-width-m) var(--color-error);
+        box-shadow: 0 0 0 var(--border-width-m) var(--color-error-500);
     }
 }

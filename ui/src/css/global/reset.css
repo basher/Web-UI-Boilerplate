@@ -10,7 +10,7 @@ Kilian Valkhof = https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-te
 ----------------------------------------------------------------------------
 */
 html {
-    accent-color: var(--color-primary);
+    accent-color: var(--color-primary-500);
     color-scheme: light dark;
     /* stylelint-disable-next-line property-no-unknown */
     interpolate-size: allow-keywords;

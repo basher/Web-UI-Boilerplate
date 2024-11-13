@@ -10,18 +10,18 @@ webui-notify {
     }
 
     &[data-success] {
-        background: hsl(var(--color-success) / 15%);
-        border-color: var(--color-success);
+        background: var(--color-success-100);
+        border-color: var(--color-success-500);
     }
 
     &[data-warning] {
-        background: hsl(var(--color-notify) / 15%);
-        border-color: var(--color-notify);
+        background: var(--color-notify-100);
+        border-color: var(--color-notify-500);
     }
 
     &[data-error] {
-        background: hsl(var(--color-error) / 15%);
-        border-color: var(--color-error);
+        background: var(--color-error-100);
+        border-color: var(--color-error-500);
     }
 
     [data-close] {

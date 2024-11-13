@@ -14,21 +14,26 @@ TODO:
     /**
     * @sass-export-section="main theme colours"
     */
-    --color-primary: hsl(var(--webui-color-brand));
+    --color-primary-100: hsl(var(--webui-color-brand) / 20%);
+    --color-primary-500: hsl(var(--webui-color-brand));
 
     /**
     * @sass-export-section="neutral colours"
     */
     --color-background: hsl(var(--webui-color-neutral-100));
     --color-neutral-light: hsl(var(--webui-color-neutral-200));
+    --color-neutral-medium: hsl(var(--webui-color-neutral-500));
     --color-text: hsl(var(--webui-color-neutral-700));
     --color-neutral-dark: hsl(var(--webui-color-neutral-900));
 
     /**
     * @sass-export-section="other accent colours"
     */
-    --color-success: hsl(var(--webui-color-accent-positive));
-    --color-error: hsl(var(--webui-color-accent-negative));
-    --color-notify: hsl(var(--webui-color-accent-neutral));
+    --color-success-100: hsl(var(--webui-color-accent-positive) / 10%);
+    --color-success-500: hsl(var(--webui-color-accent-positive));
+    --color-error-100: hsl(var(--webui-color-accent-negative) / 10%);
+    --color-error-500: hsl(var(--webui-color-accent-negative));
+    --color-notify-100: hsl(var(--webui-color-accent-neutral) / 10%);
+    --color-notify-500: hsl(var(--webui-color-accent-neutral));
     --color-focus: hsl(var(--webui-color-state-focused));
 }
