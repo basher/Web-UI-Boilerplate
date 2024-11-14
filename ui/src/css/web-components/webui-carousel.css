@@ -1,4 +1,3 @@
-/* stylelint-disable selector-class-pattern */
 webui-carousel {
     .carousel__slide {
         filter: grayscale(60%);

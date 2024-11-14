@@ -1,4 +1,3 @@
-/* stylelint-disable selector-class-pattern */
 .responsive-media__item {
     aspect-ratio: var(--media-aspect-ratio);
     block-size: auto;

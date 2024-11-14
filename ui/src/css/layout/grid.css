@@ -1,4 +1,3 @@
-/* stylelint-disable selector-class-pattern */
 [class*='grid'] {
     --grid-auto-layout: auto-fit;
     --grid-gap: var(--gutter-m);

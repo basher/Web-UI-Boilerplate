@@ -37,6 +37,8 @@
             }
         ],
         "import-notation": "string",
-        "hue-degree-notation": "number"
+        "hue-degree-notation": "number",
+        "selector-class-pattern": null,
+        "value-keyword-case": null
     }
 }

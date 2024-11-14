@@ -9,7 +9,6 @@ webui-ajax-loader {
     &::part(svg) {
         animation: 1.2s ease-in-out infinite both svg-animation;
         fill: transparent;
-        /* stylelint-disable-next-line value-keyword-case */
         stroke: currentColor;
         stroke-dasharray: 300;
         stroke-dashoffset: 75;

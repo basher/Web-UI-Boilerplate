@@ -1,8 +1,6 @@
-/* stylelint-disable selector-class-pattern */
 .icon {
     aspect-ratio: 1;
     block-size: 1em; /* Scale icon to match font-size of parent element */
-    /* stylelint-disable-next-line value-keyword-case */
     fill: currentColor;
 }
 

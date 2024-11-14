@@ -1,4 +1,3 @@
-/* stylelint-disable selector-class-pattern */
 .card {
     --card-gap: var(--gutter-m);
     --content-min-width: 50%;

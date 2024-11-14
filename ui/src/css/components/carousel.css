@@ -1,4 +1,3 @@
-/* stylelint-disable selector-class-pattern */
 .carousel {
     --slide-min-width: 18.75rem;
     --slide-gap: var(--gutter-m);
