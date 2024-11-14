@@ -59,14 +59,13 @@
 
 .button--positive {
     background-color: var(--color-success-500);
+    color: light-dark(
+        var(--color-neutral-darkest),
+        var(--color-neutral-darkest)
+    );
 
     &[class*='text'] {
         border-color: var(--color-success-500);
-    }
-
-    /* stylelint-disable-next-line order/order */
-    @media (prefers-color-scheme: dark) {
-        color: var(--color-neutral-darkest);
     }
 }
 

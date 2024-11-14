@@ -12,14 +12,12 @@ webui-modal {
 
     /* Browser already applies "position: fixed" and "width: fit-content". */
     .modal__dialog {
-        background: var(--color-neutral-lightest);
+        background: light-dark(
+            var(--color-neutral-lightest),
+            var(--color-neutral-dark)
+        );
         margin: auto;
         padding: 0 var(--gutter-m) var(--gutter-m);
-
-        /* stylelint-disable-next-line order/order */
-        @media (prefers-color-scheme: dark) {
-            background: var(--color-neutral-dark);
-        }
 
         &::backdrop {
             background: var(--color-backdrop);
@@ -28,15 +26,13 @@ webui-modal {
     }
 
     .modal__header {
-        background: var(--color-neutral-lightest);
+        background: light-dark(
+            var(--color-neutral-lightest),
+            var(--color-neutral-dark)
+        );
         display: flex;
         justify-content: flex-end;
         padding-block-start: var(--gutter-m);
-
-        /* stylelint-disable-next-line order/order */
-        @media (prefers-color-scheme: dark) {
-            background: var(--color-neutral-dark);
-        }
     }
 
     .modal__content {

@@ -44,7 +44,14 @@ webui-tabs {
     }
 
     [role='tab'] {
-        background-color: var(--color-neutral-light);
+        background-color: light-dark(
+            var(--color-neutral-light),
+            var(--color-neutral-darkest)
+        );
+        color: light-dark(
+            var(--color-neutral-darkest),
+            var(--color-neutral-lightest)
+        );
         padding: var(--gutter-s);
         text-decoration: none;
         transition: background-color var(--animation-fast);
@@ -56,15 +63,6 @@ webui-tabs {
         &[aria-selected='true'] {
             background-color: var(--color-primary-500);
             color: var(--color-neutral-lightest);
-        }
-
-        /* stylelint-disable-next-line order/order */
-        @media (prefers-color-scheme: dark) {
-            background-color: var(--color-neutral-medium);
-
-            &[aria-selected='true'] {
-                color: inherit;
-            }
         }
     }
 
