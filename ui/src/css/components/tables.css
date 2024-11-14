@@ -3,11 +3,6 @@ table,
     :is(th, td) {
         border: var(--border-width-s) solid;
         padding: var(--gutter-m);
-
-        /* stylelint-disable-next-line order/order */
-        @media (prefers-color-scheme: dark) {
-            border-color: inherit;
-        }
     }
 
     th {

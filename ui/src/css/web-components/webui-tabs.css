@@ -55,7 +55,7 @@ webui-tabs {
 
         &[aria-selected='true'] {
             background-color: var(--color-primary-500);
-            color: var(--color-neutral-light);
+            color: var(--color-neutral-lightest);
         }
 
         /* stylelint-disable-next-line order/order */
