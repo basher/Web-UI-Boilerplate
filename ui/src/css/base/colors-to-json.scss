@@ -14,7 +14,7 @@ TODO:
 /**
 * @sass-export-section="main theme colours"
 */
-$color-primary-100: hsl(var(--webui-color-brand) / 20%);
+$color-primary-100: hsl(var(--webui-color-brand) / 30%);
 $color-primary-500: hsl(var(--webui-color-brand));
 
 /**
@@ -29,10 +29,10 @@ $color-neutral-darkest: hsl(var(--webui-color-neutral-900));
 /**
 * @sass-export-section="other accent colours"
 */
-$color-success-100: hsl(var(--webui-color-accent-positive) / 10%);
+$color-success-100: hsl(var(--webui-color-accent-positive) / 30%);
 $color-success-500: hsl(var(--webui-color-accent-positive));
-$color-error-100: hsl(var(--webui-color-accent-negative) / 10%);
+$color-error-100: hsl(var(--webui-color-accent-negative) / 30%);
 $color-error-500: hsl(var(--webui-color-accent-negative));
-$color-notify-100: hsl(var(--webui-color-accent-neutral) / 10%);
+$color-notify-100: hsl(var(--webui-color-accent-neutral) / 30%);
 $color-notify-500: hsl(var(--webui-color-accent-neutral));
 $color-focus: hsl(var(--webui-color-state-focus));

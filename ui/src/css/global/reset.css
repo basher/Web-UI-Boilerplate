@@ -37,8 +37,11 @@ html {
         scroll-behavior: smooth;
     }
 
-    background-color: Canvas;
-    color: CanvasText;
+    background-color: light-dark(
+        var(--color-neutral-lightest),
+        var(--color-neutral-dark)
+    );
+    color: light-dark(var(--color-neutral-darkest), var(--color-neutral-light));
     min-block-size: 100vh; /* 100dvb might have performance implications */
 }
 
