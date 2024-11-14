@@ -39,6 +39,9 @@
         "import-notation": "string",
         "hue-degree-notation": "number",
         "selector-class-pattern": null,
-        "value-keyword-case": null
+        "value-keyword-case": null,
+        "custom-property-pattern": null,
+        "declaration-block-no-redundant-longhand-properties": null,
+        "selector-not-notation": null
     }
 }

@@ -28,7 +28,6 @@ Font-face rules.
     --base-font-size-2k: 110%; /* 2K screens */
     --base-font-size-4k: 200%; /* 4K screens */
     --font-size-body: var(--webui-step-0);
-    /* stylelint-disable-next-line custom-property-pattern */
     --font-size-s: var(--webui-step--1);
     --font-size-h5: var(--webui-step-1);
     --font-size-h4: var(--webui-step-2);

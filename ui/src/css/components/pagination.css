@@ -20,7 +20,6 @@
                     'select select'
                     'prev next';
                 grid-template-columns: 1fr 1fr;
-                /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
                 grid-template-rows: auto auto;
             }
         }

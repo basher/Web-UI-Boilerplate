@@ -17,7 +17,7 @@
             padding-inline-end: var(--gutter-m);
             position: relative;
 
-            /* stylelint-disable-next-line max-nesting-depth, no-descending-specificity */
+            /* stylelint-disable-next-line no-descending-specificity */
             &::after {
                 color: var(--color-error-500);
                 content: '!';
@@ -33,7 +33,6 @@
 
     &:has(:valid:required) {
         :is(.label, .checkbox__label, .radio__label) {
-            /* stylelint-disable-next-line max-nesting-depth */
             &::after {
                 color: var(--color-success-500);
                 content: '✓';

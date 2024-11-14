@@ -31,7 +31,7 @@
             minmax(var(--grid-item-min-width), var(--grid-asymmetric-col2));
     }
 
-    /* Fallback. */
+    /* Fallback. Uses old media query notation. */
     @supports not (container-type: inline-size) {
         /* stylelint-disable-next-line media-feature-range-notation */
         @media (min-width: 48.0625em) {

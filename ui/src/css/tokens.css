@@ -26,7 +26,6 @@
 
     /* Fluid type scale.
     @link https://utopia.fyi/type/calculator?c=480,16,1.25,1440,20,1.333,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-    /* stylelint-disable-next-line custom-property-pattern */
     --webui-step--1: clamp(0.8rem, 0.7311rem + 0.2296vw, 0.9377rem);
     --webui-step-0: clamp(1rem, 0.875rem + 0.4167vw, 1.25rem);
     --webui-step-1: clamp(1.25rem, 1.0419rem + 0.6938vw, 1.6663rem);
