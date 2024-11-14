@@ -14,7 +14,7 @@
     &:has(:user-invalid:required),
     &.form__field--has-error {
         :is(.label, .checkbox__label, .radio__label) {
-            padding-inline-end: var(--gutter-m);
+            padding-inline-start: var(--gutter-m);
             position: relative;
 
             /* stylelint-disable-next-line no-descending-specificity */
@@ -25,7 +25,7 @@
                 font-size: 1em;
                 font-weight: bold;
                 inset-block-start: 0;
-                inset-inline-end: 0;
+                inset-inline-start: 0;
                 position: absolute;
             }
         }
@@ -43,7 +43,9 @@
 
 /* Errors rendered directly in HTML, or via JavaScript. */
 .form__error {
-    color: var(--color-error-500);
+    background: var(--color-error-500);
+    color: var(--color-neutral-lightest);
+    padding-inline: var(--gutter-xs);
 }
 
 .form__field--has-error {
