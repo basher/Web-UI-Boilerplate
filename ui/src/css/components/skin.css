@@ -18,7 +18,7 @@ Apply skin (or "theming" layer) to components.
 
     .skin-2 {
         background-color: var(--color-primary-500);
-        color: var(--color-neutral-light);
+        color: var(--color-neutral-lightest);
         padding: var(--gutter-m);
     }
 

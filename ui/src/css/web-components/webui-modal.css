@@ -18,7 +18,7 @@ webui-modal {
 
         /* stylelint-disable-next-line order/order */
         @media (prefers-color-scheme: dark) {
-            background: var(--color-neutral-dark);
+            background: var(--color-neutral-darkest);
         }
 
         &::backdrop {
@@ -35,7 +35,7 @@ webui-modal {
 
         /* stylelint-disable-next-line order/order */
         @media (prefers-color-scheme: dark) {
-            background: var(--color-neutral-dark);
+            background: var(--color-neutral-darkest);
         }
     }
 

@@ -10,6 +10,7 @@ TODO:
 - Write custom Node script to convert CSS into JSON without the manual copy/paste step into this Sass file.
 ----------------------------------------------------------------------------
 */
+
 /**
 * @sass-export-section="main theme colours"
 */
@@ -19,11 +20,11 @@ $color-primary-500: hsl(var(--webui-color-brand));
 /**
 * @sass-export-section="neutral colours"
 */
-$color-background: hsl(var(--webui-color-neutral-100));
-$color-neutral-light: hsl(var(--webui-color-neutral-200));
+$color-neutral-lightest: hsl(var(--webui-color-neutral-100));
+$color-neutral-light: hsl(var(--webui-color-neutral-300));
 $color-neutral-medium: hsl(var(--webui-color-neutral-500));
-$color-text: hsl(var(--webui-color-neutral-700));
-$color-neutral-dark: hsl(var(--webui-color-neutral-900));
+$color-neutral-dark: hsl(var(--webui-color-neutral-700));
+$color-neutral-darkest: hsl(var(--webui-color-neutral-900));
 
 /**
 * @sass-export-section="other accent colours"
@@ -34,4 +35,4 @@ $color-error-100: hsl(var(--webui-color-accent-negative) / 10%);
 $color-error-500: hsl(var(--webui-color-accent-negative));
 $color-notify-100: hsl(var(--webui-color-accent-neutral) / 10%);
 $color-notify-500: hsl(var(--webui-color-accent-neutral));
-$color-focus: hsl(var(--webui-color-state-focused));
+$color-focus: hsl(var(--webui-color-state-focus));

@@ -15,12 +15,14 @@ export default {
 
 const style = `
 <style>
+    .sb-show-main {
+        background: Canvas;
+    }
     /* Hides the 1st empty auto-generated output from 'exported-colors.json'. */
     .stack h2:first-of-type,
     .grid:first-of-type {
         display: none;
     }
-
     .grid {
         grid-template-columns: repeat(auto-fit, 17.5rem);
     }

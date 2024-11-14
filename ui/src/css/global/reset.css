@@ -37,8 +37,8 @@ html {
         scroll-behavior: smooth;
     }
 
-    background-color: var(--color-background);
-    color: var(--color-text);
+    background-color: Canvas;
+    color: CanvasText;
     min-block-size: 100vh; /* 100dvb might have performance implications */
 }
 
@@ -145,8 +145,7 @@ summary {
     }
 }
 
-/* Anchor targets should have extra scroll margin. */
-/* Adjust value to account for sticky header/footer, etc. */
+/* Anchor targets should have extra scroll margin. Adjust value to account for sticky header/footer, etc. */
 :target {
     scroll-margin-block: var(--gutter-xl);
 }
