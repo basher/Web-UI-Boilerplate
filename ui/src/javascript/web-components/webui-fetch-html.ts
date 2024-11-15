@@ -6,26 +6,28 @@ import {
 
 export default class WebUIFetchHtml extends HTMLElement {
     private fetchTrigger: HTMLButtonElement | null;
+    private fetchUrl: string | undefined;
 
     constructor() {
         super();
 
         this.fetchTrigger = this.querySelector('[data-fetch-target]');
+        this.fetchUrl = this.fetchTrigger?.dataset.fetchUrl;
 
-        if (!this.fetchTrigger) return;
+        if (!this.fetchTrigger || !this.fetchUrl) return;
 
         ajaxEventHandler({
             ajaxTrigger: this.fetchTrigger,
             eventType: 'click',
             ajaxCallback: this.handleClick,
+            ajaxUrl: this.fetchUrl,
         });
     }
 
-    private handleClick(ajaxContainer: HTMLElement): void {
+    private handleClick(ajaxContainer: HTMLElement, ajaxUrl: string): void {
         const showAjaxLoader = true;
 
-        // TODO: Add 'data-' attribute on button to specifiy HTML source to be fetched.
-        fetch('ajax/ajax.html', {
+        fetch(ajaxUrl, {
             method: 'GET',
             signal: ajaxAbortHandler({
                 ajaxContainer,

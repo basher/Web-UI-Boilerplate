@@ -68,16 +68,18 @@ export const ajaxErrorHandler = (arg: AjaxError): void => {
  * @param {HTMLElement} ajaxTrigger - element that triggers the Ajax request
  * @param {string} eventType - event type that triggers the Ajax request
  * @param {Function} ajaxCallback - callback function that handles the Ajax request
+ *  * @param {string} ajaxUrl - URL of data to be fetched (e.g. HTML fragment or API endpoint)
  * @returns {void}
  */
 interface AjaxEvent {
     ajaxTrigger: HTMLElement;
     eventType: string;
-    ajaxCallback: (ajaxContainer: HTMLElement) => void;
+    ajaxCallback: (ajaxContainer: HTMLElement, ajaxUrl: string) => void;
+    ajaxUrl: string;
 }
 
 export const ajaxEventHandler = (arg: AjaxEvent): void => {
-    const { ajaxTrigger, eventType, ajaxCallback } = arg;
+    const { ajaxTrigger, eventType, ajaxCallback, ajaxUrl } = arg;
 
     // Value of 'data-fetch-trigger' must match 'data-fetch-container' so that an Ajax trigger (e.g. button) loads content into the correct container.
     const target = ajaxTrigger?.dataset.fetchTarget;
@@ -88,7 +90,7 @@ export const ajaxEventHandler = (arg: AjaxEvent): void => {
     ajaxTrigger.addEventListener(eventType, () => {
         if (ajaxContainer) {
             ajaxContainer.classList.remove('ajax__error');
-            ajaxCallback(ajaxContainer);
+            ajaxCallback(ajaxContainer, ajaxUrl);
         }
     });
 };

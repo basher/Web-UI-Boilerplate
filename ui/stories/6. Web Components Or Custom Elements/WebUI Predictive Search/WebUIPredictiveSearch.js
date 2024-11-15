@@ -10,6 +10,7 @@ export const WebUIPredictiveSearchHtml = () => `
                 placeholder="Search for a Pokemon"
                 required
                 data-fetch-target="search-results"
+                data-fetch-url="https://pokeapi.co/api/v2/pokemon?limit=1000"
             />
         </div>
         <button type="submit" class="button button--text button--positive">

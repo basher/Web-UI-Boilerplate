@@ -9,30 +9,33 @@ import searchResults from '../templates/search-results';
 export default class WebUIPredictiveSearch extends HTMLElement {
     private searchForm: HTMLFormElement | null;
     private searchInput: HTMLInputElement | null;
+    private fetchUrl: string | undefined;
 
     constructor() {
         super();
 
         this.searchForm = this.querySelector('[role="search"]');
         this.searchInput = this.querySelector('[type="search"]');
+        this.fetchUrl = this.searchInput?.dataset.fetchUrl;
 
-        if (!this.searchForm || !this.searchInput) return;
+        if (!this.searchForm || !this.searchInput || !this.fetchUrl) return;
 
         ajaxEventHandler({
             ajaxTrigger: this.searchInput,
             eventType: 'keyup',
             ajaxCallback: this.handleKeyUp,
+            ajaxUrl: this.fetchUrl,
         });
 
         this.searchForm.addEventListener('submit', this);
     }
 
-    private handleKeyUp = (ajaxContainer: HTMLElement): void => {
+    private handleKeyUp = (
+        ajaxContainer: HTMLElement,
+        ajaxUrl: string,
+    ): void => {
         const showAjaxLoader = true;
         const query = this.searchInput?.value.toLowerCase();
-
-        // API paths would normally be defined in a global config.
-        const API_PATH = 'https://pokeapi.co/api/v2/pokemon?limit=1000';
 
         if (!query) {
             ajaxContainer.innerHTML = '';
@@ -40,7 +43,7 @@ export default class WebUIPredictiveSearch extends HTMLElement {
         }
 
         if (query && query?.length > 2) {
-            fetch(API_PATH, {
+            fetch(ajaxUrl, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
