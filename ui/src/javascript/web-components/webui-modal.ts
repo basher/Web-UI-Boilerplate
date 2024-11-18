@@ -16,10 +16,20 @@ export default class WebUIModal extends HTMLElement {
 
         if (!this.btnModalOpen || !this.dialog) return;
 
+        this.setupA11y();
+
         this.btnModalOpen?.addEventListener('click', this);
+        this.btnModalOpen?.addEventListener('keydown', this);
         this.btnsModalClose.forEach((btnModalClose) => {
             btnModalClose?.addEventListener('click', this);
         });
+    }
+
+    private setupA11y(): void {
+        if (this.btnModalOpen?.nodeName === 'A') {
+            // Assign 'button' role to <a>.
+            this.btnModalOpen.setAttribute('role', 'button');
+        }
     }
 
     private handleOpen(): void {
@@ -58,12 +68,16 @@ export default class WebUIModal extends HTMLElement {
     }
 
     // Handle constructor() event listeners.
-    public handleEvent(e: MouseEvent) {
+    public handleEvent(e: KeyboardEvent) {
         const target = e.currentTarget as HTMLButtonElement;
+
+        // Ensure <a role="button"> can open modal with ENTER and SPACEBAR.
+        if (e.type === 'keydown' && e.code !== 'Enter' && e.code !== 'Space')
+            return;
 
         // Click 'open' button.
         if (target?.dataset.open === '') {
-            // Prevent default behaviour on any links that open a modal.
+            // Prevent default behaviour on <a role="button">.
             e.preventDefault();
 
             this.handleOpen();

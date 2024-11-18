@@ -15,7 +15,7 @@ export const WebUIImageGalleryHtml = () => `
                         <img
                             class="image"
                             src="https://dummyimage.com/400x300"
-                            alt="[alt]"
+                            alt="[thumbnail 1]"
                             loading="lazy"
                             height="300"
                             width="400"
@@ -59,7 +59,7 @@ export const WebUIImageGalleryHtml = () => `
                             <img
                                 class="image"
                                 src="https://dummyimage.com/1440x810&text=image+1"
-                                alt="[alt]"
+                                alt="[large image 1]"
                                 loading="lazy"
                                 height="810"
                                 width="1440"
@@ -83,7 +83,7 @@ export const WebUIImageGalleryHtml = () => `
                         <img
                             class="image"
                             src="https://dummyimage.com/400x300"
-                            alt="[alt]"
+                            alt="[thumbnail 2]"
                             loading="lazy"
                             height="300"
                             width="400"
@@ -127,7 +127,7 @@ export const WebUIImageGalleryHtml = () => `
                             <img
                                 class="image"
                                 src="https://dummyimage.com/1440x810&text=image+2"
-                                alt="[alt]"
+                                alt="[large image 2]"
                                 loading="lazy"
                                 height="810"
                                 width="1440"
@@ -151,7 +151,7 @@ export const WebUIImageGalleryHtml = () => `
                         <img
                             class="image"
                             src="https://dummyimage.com/400x300"
-                            alt="[alt]"
+                            alt="[thumbnail 3]"
                             loading="lazy"
                             height="300"
                             width="400"
@@ -195,7 +195,7 @@ export const WebUIImageGalleryHtml = () => `
                             <img
                                 class="image"
                                 src="https://dummyimage.com/1440x810&text=image+3"
-                                alt="[alt]"
+                                alt="[large image 3]"
                                 loading="lazy"
                                 height="810"
                                 width="1440"
@@ -219,7 +219,7 @@ export const WebUIImageGalleryHtml = () => `
                         <img
                             class="image"
                             src="https://dummyimage.com/400x300"
-                            alt="[alt]"
+                            alt="[thumbnail 4]"
                             loading="lazy"
                             height="300"
                             width="400"
@@ -263,7 +263,7 @@ export const WebUIImageGalleryHtml = () => `
                             <img
                                 class="image"
                                 src="https://dummyimage.com/1440x810&text=image+4"
-                                alt="[alt]"
+                                alt="[large image 4]"
                                 loading="lazy"
                                 height="810"
                                 width="1440"
@@ -287,7 +287,7 @@ export const WebUIImageGalleryHtml = () => `
                         <img
                             class="image"
                             src="https://dummyimage.com/400x300"
-                            alt="[alt]"
+                            alt="[thumbnail 5]"
                             loading="lazy"
                             height="300"
                             width="400"
@@ -331,7 +331,7 @@ export const WebUIImageGalleryHtml = () => `
                             <img
                                 class="image"
                                 src="https://dummyimage.com/1440x810&text=image+5"
-                                alt="[alt]"
+                                alt="[large image 5]"
                                 loading="lazy"
                                 height="810"
                                 width="1440"
