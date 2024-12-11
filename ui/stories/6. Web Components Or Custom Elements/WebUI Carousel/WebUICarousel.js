@@ -86,7 +86,11 @@ ${style}
                 </a>
             </li>
         </ul>
-        <p class="carousel-instructions">Scroll or use your arrow keys for more</p>
+        <p class="carousel-instructions">
+            Scroll or use your arrow keys for more
+        </p>
+        <p class="carousel__counter visually-hidden" data-counter aria-live="polite">
+        </p>
     </section>
 </webui-carousel>
 `;

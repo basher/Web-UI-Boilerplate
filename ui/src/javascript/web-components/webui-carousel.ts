@@ -7,6 +7,7 @@ export default class WebUICarousel extends HTMLElement {
     private visibleSlideClass: string;
     private currentSlideClass: string;
     private currentPipClass: string;
+    private slideCounter: HTMLParagraphElement | null;
 
     constructor() {
         super();
@@ -16,6 +17,7 @@ export default class WebUICarousel extends HTMLElement {
         this.hasPrevNextButtons = this.hasAttribute('data-prev-next-buttons');
         this.hasSlideCount = this.hasAttribute('data-slide-count');
         this.hasSlideCountPips = this.hasAttribute('data-slide-count-pips');
+        this.slideCounter = this.querySelector('[data-counter]');
 
         this.visibleSlideClass = 'is-visible';
         this.currentSlideClass = 'is-current';
@@ -28,6 +30,9 @@ export default class WebUICarousel extends HTMLElement {
 
     private init(): void {
         this.setVisibleSlide();
+
+        // Update slide counter aria-live region.
+        this.updateSlideCounter();
 
         // Show slide counter (text).
         if (this.hasSlideCount) {
@@ -95,12 +100,15 @@ export default class WebUICarousel extends HTMLElement {
         }
     }
 
+    private updateSlideCounter(): void {
+        if (this.slideCounter) {
+            this.slideCounter.innerHTML = `slide 1 of ${this.slides.length}`;
+        }
+    }
+
     private showSlideCount(): void {
-        const counter = document.createElement('p');
-        counter.classList.add('carousel__counter');
-        counter.setAttribute('data-counter', '');
-        counter.innerHTML = `slide 1 of ${this.slides.length}`;
-        this.carousel?.after(counter);
+        this.slideCounter &&
+            this.slideCounter.classList.remove('visually-hidden');
     }
 
     private showSlideCountPips(): void {
@@ -134,12 +142,10 @@ export default class WebUICarousel extends HTMLElement {
 
         buttonGroup.innerHTML = `
             <button class="button button--text" data-button="prev">
-                Previous slide
-                <span class="sr-only"></span>
+                Previous
             </button>
             <button class="button button--text" data-button="next">
-                Next slide
-                <span class="sr-only"></span>
+                Next
             </button>
         `;
 
@@ -180,37 +186,23 @@ export default class WebUICarousel extends HTMLElement {
 
     private goToPrevSlide(button?: HTMLButtonElement): void {
         const prevSlide = this.getCurrentSlide();
-        const btnLabelA11y = button?.querySelector('.sr-only');
 
         if (prevSlide && prevSlide > 1) {
             this.slides[prevSlide - 1].classList.remove(this.currentSlideClass);
             this.slides[prevSlide - 2].classList.add(this.currentSlideClass);
             this.setCurrentSlideCounter(prevSlide - 2);
             this.scrollToSlide(this.slides[prevSlide - 2], prevSlide - 2);
-
-            if (btnLabelA11y) {
-                btnLabelA11y.innerHTML = `${prevSlide - 1} of ${
-                    this.slides.length
-                }`;
-            }
         }
     }
 
     private goToNextSlide(button?: HTMLButtonElement): void {
         const nextSlide = this.getCurrentSlide();
-        const btnLabelA11y = button?.querySelector('.sr-only');
 
         if (nextSlide && nextSlide < this.slides.length) {
             this.slides[nextSlide - 1].classList.remove(this.currentSlideClass);
             this.slides[nextSlide].classList.add(this.currentSlideClass);
             this.setCurrentSlideCounter(nextSlide);
             this.scrollToSlide(this.slides[nextSlide], nextSlide);
-
-            if (btnLabelA11y) {
-                btnLabelA11y.innerHTML = `${nextSlide + 1} of ${
-                    this.slides.length
-                }`;
-            }
         }
     }
 
