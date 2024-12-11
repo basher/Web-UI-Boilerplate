@@ -4,9 +4,8 @@ import * as WebUICarousel from './WebUICarousel.stories';
 <Meta of={WebUICarousel} />
 
 # `<webui-carousel>`
-- This is an enhancement of the [default CSS carousel](/story/components-carousel--carousel) - optionally showing a slide count, PREV and NEXT buttons, etc.
-- Native scrolling with `LEFT|RIGHT` arrow keys is enhanced, allowing JavaScript to correctly update the slide count when using arrow keys.
-- When PREV and NEXT buttons are shown, keyboard `focus` is modified such that **only visible slides are focusable**.
+- This is an enhancement of the [default CSS carousel](/story/components-carousel--carousel), with NEXT/PREVIOUS buttons, and an `aria-live` region to announce slide count (which can be optionally shown).
+- When using NEXT/PREVIOUS buttons, keyboard `focus` is modified such that **only visible slides are focusable**.
 
 <Canvas of={WebUICarousel.WebUICarousel} />
 <Controls of={WebUICarousel.WebUICarousel} />
@@ -15,7 +14,6 @@ import * as WebUICarousel from './WebUICarousel.stories';
 
 Attribute | Behaviour
 --- | ---
-`data-prev-next-buttons` | Optional. Displays PREV and NEXT slide buttons.
 `data-slide-count` | Optional. Displays slide count & current slide.
 `data-slide-count-pips` | Optional. Displays slide count & current slide as pips instead of text.
 

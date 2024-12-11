@@ -1,7 +1,6 @@
 export default class WebUICarousel extends HTMLElement {
     private carousel: HTMLUListElement | null;
     private slides: NodeListOf<HTMLElement>;
-    private hasPrevNextButtons?: boolean;
     private hasSlideCount?: boolean;
     private hasSlideCountPips?: boolean;
     private visibleSlideClass: string;
@@ -14,7 +13,6 @@ export default class WebUICarousel extends HTMLElement {
 
         this.carousel = this.querySelector('.carousel');
         this.slides = this.querySelectorAll('.carousel__slide');
-        this.hasPrevNextButtons = this.hasAttribute('data-prev-next-buttons');
         this.hasSlideCount = this.hasAttribute('data-slide-count');
         this.hasSlideCountPips = this.hasAttribute('data-slide-count-pips');
         this.slideCounter = this.querySelector('[data-counter]');
@@ -45,9 +43,7 @@ export default class WebUICarousel extends HTMLElement {
         }
 
         // Show PREV/NEXT buttons.
-        if (this.hasPrevNextButtons) {
-            this.showPrevNextButtons();
-        }
+        this.showPrevNextButtons();
 
         // Manage :FOCUS event on slides.
         this.handleFocus();
@@ -77,21 +73,17 @@ export default class WebUICarousel extends HTMLElement {
                         entry.target.setAttribute('tabIndex', '0');
 
                         // Re-instate focusability of interactive child elements.
-                        if (this.hasPrevNextButtons) {
-                            focusableItems.forEach((focusableItem) => {
-                                focusableItem.removeAttribute('tabIndex');
-                            });
-                        }
+                        focusableItems.forEach((focusableItem) => {
+                            focusableItem.removeAttribute('tabIndex');
+                        });
                     } else {
                         entry.target.classList.remove(this.visibleSlideClass);
                         entry.target.removeAttribute('tabIndex');
 
                         // When using PREV/NEXT buttons, make interactive child elements inside non-visible slides non-focusable. This enables keyboard :FOCUS via TAB key to the "current" slide.
-                        if (this.hasPrevNextButtons) {
-                            focusableItems.forEach((focusableItem) => {
-                                focusableItem.setAttribute('tabIndex', '-1');
-                            });
-                        }
+                        focusableItems.forEach((focusableItem) => {
+                            focusableItem.setAttribute('tabIndex', '-1');
+                        });
                     }
                 });
             }, observerSettings);
@@ -157,14 +149,10 @@ export default class WebUICarousel extends HTMLElement {
         ) as HTMLButtonElement;
 
         buttonPrev &&
-            buttonPrev.addEventListener('click', () =>
-                this.goToPrevSlide(buttonPrev),
-            );
+            buttonPrev.addEventListener('click', () => this.goToPrevSlide());
 
         buttonNext &&
-            buttonNext.addEventListener('click', () =>
-                this.goToNextSlide(buttonNext),
-            );
+            buttonNext.addEventListener('click', () => this.goToNextSlide());
     }
 
     private getCurrentSlide(): number {
@@ -184,7 +172,7 @@ export default class WebUICarousel extends HTMLElement {
         return currentSlide;
     }
 
-    private goToPrevSlide(button?: HTMLButtonElement): void {
+    private goToPrevSlide(): void {
         const prevSlide = this.getCurrentSlide();
 
         if (prevSlide && prevSlide > 1) {
@@ -195,7 +183,7 @@ export default class WebUICarousel extends HTMLElement {
         }
     }
 
-    private goToNextSlide(button?: HTMLButtonElement): void {
+    private goToNextSlide(): void {
         const nextSlide = this.getCurrentSlide();
 
         if (nextSlide && nextSlide < this.slides.length) {
@@ -207,10 +195,8 @@ export default class WebUICarousel extends HTMLElement {
     }
 
     private setCurrentSlideCounter(i: number): void {
-        const counter =
-            this.carousel?.parentElement?.querySelector('[data-counter]');
-        if (counter) {
-            counter.innerHTML = `slide ${i + 1} of ${this.slides.length}`;
+        if (this.slideCounter) {
+            this.slideCounter.innerHTML = `slide ${i + 1} of ${this.slides.length}`;
         }
 
         const counterPips = this.carousel?.parentElement?.querySelector(

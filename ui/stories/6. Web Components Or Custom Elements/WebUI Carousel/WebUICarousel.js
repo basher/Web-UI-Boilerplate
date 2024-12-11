@@ -11,7 +11,6 @@ const style = `
 export const WebUICarouselHtml = (args) => `
 ${style}
 <webui-carousel
-    ${args.showPrevNextButtons === true ? 'data-prev-next-buttons' : ''}
     ${args.showSlideCount === true ? 'data-slide-count' : ''}
     ${args.showSlideCountPips === true ? 'data-slide-count-pips' : ''}
 >

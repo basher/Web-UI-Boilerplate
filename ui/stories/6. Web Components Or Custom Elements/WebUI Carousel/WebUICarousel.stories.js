@@ -16,14 +16,6 @@ export default {
                 defaultValue: { summary: false }
             },
         },
-        showPrevNextButtons: {
-            control: 'boolean',
-            description: 'Show previous & next buttons.',
-            table: {
-                type: { summary: 'boolean' },
-                defaultValue: { summary: false }
-            },
-        },
         showSlideCount: {
             control: 'boolean',
             description: 'Show slide counter.',
