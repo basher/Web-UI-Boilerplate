@@ -10,48 +10,48 @@ CSS Cascade Layers.
 "Primitive" CSS design tokens.
 ----------------------------------------------------------------------------
 */
-@import 'tokens.css' screen;
+@import 'tokens' screen;
 
 /*
 ----------------------------------------------------------------------------
 Base scaffold, containing "semantic" design tokens.
 ----------------------------------------------------------------------------
 */
-@import 'base/index.css' screen;
+@import 'base/index' screen;
 
 /*
 ----------------------------------------------------------------------------
 Globals (including reset).
 ----------------------------------------------------------------------------
 */
-@import 'global/index.css' layer(global) screen;
+@import 'global/index' layer(global) screen;
 
 /*
 ----------------------------------------------------------------------------
 Layout.
 ----------------------------------------------------------------------------
 */
-@import 'layout/index.css' layer(layout) screen;
+@import 'layout/index' layer(layout) screen;
 
 /*
 ----------------------------------------------------------------------------
 Forms, components and web components.
 ----------------------------------------------------------------------------
 */
-@import 'form/index.css' layer(components) screen;
-@import 'components/index.css' layer(components) screen;
-@import 'web-components/index.css' layer(components) screen;
+@import 'form/index' layer(components) screen;
+@import 'components/index' layer(components) screen;
+@import 'web-components/index' layer(components) screen;
 
 /*
 ----------------------------------------------------------------------------
 Utilities.
 ----------------------------------------------------------------------------
 */
-@import 'utilities/index.css' layer(utilities) screen;
+@import 'utilities/index' layer(utilities) screen;
 
 /*
 ----------------------------------------------------------------------------
 Print styles.
 ----------------------------------------------------------------------------
 */
-@import 'print.css' layer(print) print;
+@import 'print' layer(print) print;
