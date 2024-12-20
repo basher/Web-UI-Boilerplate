@@ -1,8 +1,6 @@
 /*
 ----------------------------------------------------------------------------
 Element styles.
-
-No need for font smoothing - see https://ui.dev/rwd/articles/font-smoothing
 ----------------------------------------------------------------------------
 */
 
@@ -22,6 +20,7 @@ html {
 body {
     font-family: var(--base-font-family);
     font-size: var(--font-size-body);
+    -webkit-font-smoothing: antialiased; /* https://www.joshwcomeau.com/css/custom-css-reset/#four-improve-text-rendering-5 */
     line-height: var(--base-line-height);
 }
 
