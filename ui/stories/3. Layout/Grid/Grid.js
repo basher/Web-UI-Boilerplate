@@ -101,6 +101,8 @@ ${style}
     </div>
 </div>
 
+<br>
+<p>Override column widths.</p>
 <div class="grid-container">
     <div class="grid--asymmetric-75-25 ${args.gap === undefined ? '' : `grid--${args.gap}`}">
         <div>
@@ -114,6 +116,8 @@ ${style}
     </div>
 </div>
 
+<br>
+<p>Override column widths.</p>
 <div class="grid-container">
     <div class="grid--asymmetric-25-75 ${args.gap === undefined ? '' : `grid--${args.gap}`}">
         <div>
