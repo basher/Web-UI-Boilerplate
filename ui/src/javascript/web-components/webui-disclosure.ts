@@ -16,7 +16,7 @@ export default class WebUIDisclosure extends HTMLElement {
 
         this.setupA11y();
 
-        this.trigger?.addEventListener('click', this);
+        this.trigger.addEventListener('click', this);
     }
 
     private setupA11y(): void {

@@ -4,7 +4,10 @@ export default class WebUINotify extends HTMLElement {
     constructor() {
         super();
         this.btnClose = this.querySelector('[data-close]');
-        this.btnClose?.addEventListener('click', this);
+
+        if (!this.btnClose) return;
+
+        this.btnClose.addEventListener('click', this);
     }
 
     // Handle constructor() event listeners.
