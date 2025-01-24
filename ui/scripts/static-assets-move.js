@@ -99,7 +99,7 @@ const moveFile = (file, fileType) => {
             if (err) {
                 return console.log(colors.red.bold('move files:', err));
             }
-            console.log(`Successfully moved ${file}`);
+            console.log(colors.green.bold(`Successfully moved ${file}`));
         },
     );
 };
@@ -115,7 +115,7 @@ const copyStatic = () => {
             if (err) {
                 return console.log(colors.red.bold('copy static assets:', err));
             }
-            console.log('Successfully copied other static assets!');
+            console.log(colors.green.bold('Successfully copied other static assets!'));
         },
     );
 };

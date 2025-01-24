@@ -98,7 +98,7 @@ const renameFile = (renamed, file) => {
             if (err) {
                 return console.log(colors.red.bold('static-assets-rename:', err));
             }
-            console.log(`Successfully renamed ${file} to ${renamed}`);
+            console.log(colors.green.bold(`Successfully renamed ${file} to ${renamed}`));
         },
     );
 };
