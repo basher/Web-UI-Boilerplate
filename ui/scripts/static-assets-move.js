@@ -63,12 +63,13 @@ const readProdDirectory = () => {
     });
 };
 
+// Use "default" theme if invalid theme is supplied.
+let themeName = themes[theme] !== undefined
+    ? theme
+    : 'default';
+
 // 2. Move file.
 const moveFile = (file, fileType) => {
-    // Use "default" if invalid theme is supplied.
-    let themeName = themes[theme] !== undefined
-        ? theme
-        : 'default';
     let themeFolder = `${prodDirectoryPath}/${themeName}`;
 
     if (fileType === 'js') {
@@ -86,7 +87,9 @@ const moveFile = (file, fileType) => {
     if (fileType === 'svg') {
         const filename = file.substring(0, file.lastIndexOf('.'));
         // Move SVG sprite into 'images' folder. Any other SVGs go in 'css' as they're referenced inside CSS.
-        themeFolder = filename === 'sprite' ? 'images' : 'css';
+        themeFolder = filename === 'sprite'
+            ? `${themeFolder}/images`
+            : `${themeFolder}/css`;
     }
 
     fs.move(
@@ -94,7 +97,7 @@ const moveFile = (file, fileType) => {
         `${themeFolder}/${file}`,
         (err) => {
             if (err) {
-                return console.log(colors.red.bold('static-assets-move:', err));
+                return console.log(colors.red.bold('move files:', err));
             }
             console.log(`Successfully moved ${file}`);
         },
@@ -103,12 +106,14 @@ const moveFile = (file, fileType) => {
 
 // 3. Copy other static UI files (i.e. '/images/interface').
 const copyStatic = () => {
+    const themeFolder = `${prodDirectoryPath}/${themeName}`;
+
     fs.copy(
         staticDirectoryPath,
-        `${prodDirectoryPath}/images/interface`,
+        `${themeFolder}/images/interface`,
         (err) => {
             if (err) {
-                return console.log(err);
+                return console.log(colors.red.bold('copy static assets:', err));
             }
             console.log('Successfully copied other static assets!');
         },

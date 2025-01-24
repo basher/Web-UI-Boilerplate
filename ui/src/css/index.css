@@ -1,27 +1,32 @@
 /*
 ----------------------------------------------------------------------------
+NOTE:
+
+DO NOT EDIT 'index.css' directly.
+
+Instead, make changes to '_index-template.css', which will then be copied to 'index.css' by Parcel bundler, using '.ui/scripts/ui-theme.js'.
+----------------------------------------------------------------------------
+*/
+
+/*
+----------------------------------------------------------------------------
 CSS Cascade Layers.
 ----------------------------------------------------------------------------
 */
-@layer global, layout, components, skin, utilities, print;
+@layer base, global, layout, components, skin, utilities, theme, print;
 
 /*
 ----------------------------------------------------------------------------
-"Primitive" CSS design tokens.
+1. "Primitive" CSS design tokens.
+2. Base scaffold, containing "semantic" design tokens.
 ----------------------------------------------------------------------------
 */
-@import 'tokens' screen;
+@import 'tokens' layer(base) screen;
+@import 'base/index' layer(base) screen;
 
 /*
 ----------------------------------------------------------------------------
-Base scaffold, containing "semantic" design tokens.
-----------------------------------------------------------------------------
-*/
-@import 'base/index' screen;
-
-/*
-----------------------------------------------------------------------------
-Globals (including reset).
+Global (including reset).
 ----------------------------------------------------------------------------
 */
 @import 'global/index' layer(global) screen;
@@ -48,6 +53,13 @@ Utilities.
 ----------------------------------------------------------------------------
 */
 @import 'utilities/index' layer(utilities) screen;
+
+/*
+----------------------------------------------------------------------------
+THEME overrides.
+----------------------------------------------------------------------------
+*/
+@import '_THEMES/theme1/index' layer(theme) screen;
 
 /*
 ----------------------------------------------------------------------------

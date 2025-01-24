@@ -13,21 +13,16 @@ Instead, make changes to '_index-template.css', which will then be copied to 'in
 CSS Cascade Layers.
 ----------------------------------------------------------------------------
 */
-@layer global, layout, components, skin, utilities, theme, print;
+@layer base, global, layout, components, skin, utilities, theme, print;
 
 /*
 ----------------------------------------------------------------------------
-"Primitive" CSS design tokens.
+1. "Primitive" CSS design tokens.
+2. Base scaffold, containing "semantic" design tokens.
 ----------------------------------------------------------------------------
 */
-@import 'tokens' screen;
-
-/*
-----------------------------------------------------------------------------
-Base scaffold, containing "semantic" design tokens.
-----------------------------------------------------------------------------
-*/
-@import 'base/index' screen;
+@import 'tokens' layer(base) screen;
+@import 'base/index' layer(base) screen;
 
 /*
 ----------------------------------------------------------------------------
@@ -64,8 +59,7 @@ Utilities.
 THEME overrides.
 ----------------------------------------------------------------------------
 */
-@import '_THEMES/{{ theme }}/' layer(theme) screen;
-@import '_THEMES/{{ theme }}/overrides/' layer(theme) screen;
+@import '_THEMES/{{ theme }}/index' layer(theme) screen;
 
 /*
 ----------------------------------------------------------------------------
