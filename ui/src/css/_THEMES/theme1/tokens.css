@@ -1,0 +1,9 @@
+/*
+----------------------------------------------------------------------------
+"Primitive" design tokens for dynamic theming.
+----------------------------------------------------------------------------
+*/
+:root {
+    /* Colors. Values are specified as a space-separated list of HSL values so they can be used in the CSS 'hsl()' function. */
+    --webui-color-brand: 82 39% 30%; /* darkolivegreen */
+}

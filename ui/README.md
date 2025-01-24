@@ -1,11 +1,11 @@
 # Web UI Boilerplate - the actual 'UI' code
 
-## Useful commands
+## Useful commands recap (described fully in project root README)
 From `ui` directory:
-- `npm run reset` - Deletes `node_modules` folder and reinstalls with `npm run install`.
-- `npm start` - Installs Node modules (if not already installed), launches Parcel bundler to compile/watch files, and sets the port for HMR (Hot Module Reloading) to work in Storybook.
-- `npm run storybook` - Launches Storybook/HTML component library. Run this in a different terminal instance to Parcel.
-- `npm run build` - Compiles and minifies files, for production and local dev environments.
+- `npm run start:theme --theme=[theme-name]`
+- `npm run storybook`
+- `npm run build:theme --theme=[theme-name]`
+- `npm run bundle-all-themes`
 
 ## Code authoring guidelines & accessibility
 - All UI components are authored with **semantic HTML5** markup, which is **progressively enhanced** with JavaScript and `WAI-ARIA` as appropriate.
@@ -57,7 +57,7 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 ```
 "start:parcel": "parcel watch src/javascript/index.ts --hmr-port 1234 --target app"
 ```
-- This command does not need to be explicitly run as `npm start` does it for you.
+- This command does not need to be explicitly run as `npm run start:theme...` does it for you.
 - See the `HMR` section further down for an explanation of the `--hmr-port 1234` argument.
 - The `--target app` argument enables transpilation of both CSS and JavaScript in **local DEV mode**. By default, Parcel only does this for production builds.
 
@@ -96,4 +96,4 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 ## Trouble-shooting bundling and build issues
 - If bundling breaks, or UI is not updated (in DEV mode) to reflect latest CSS/JavaScript changes:
     - Kill the Parcel Node process with `CTRL+C`.
-    - Run `npm start` again.
+    - Run `npm run start:theme...` again.

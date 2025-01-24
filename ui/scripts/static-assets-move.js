@@ -1,16 +1,24 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
+
 /**
  * Function for moving static assets into correct sub-folders.
  * 1. Move files bundled by Parcel that are renamed by "static-assets-rename" script.
  * 2. Copy any other static UI assets that are not bundled by Parcel.
+ * 3. Allows us to pass a "theme" argument. If an invalid or null theme is passed, "default" will be used.
+ *
+ * @param {string} %npm_config_theme% - UI theme name.
  *
  * @return {void}
  */
 
 const fs = require('fs-extra');
 const path = require('path');
-const prodDirectoryPath = path.join(__dirname, '../../build/ui');
+const colors = require('colors/safe');
+const themes = require('./theme-config');
+
+const theme = process.argv[2]; // Only passing 1 arg in Node cmd = theme name
+const prodDirectoryPath = path.join(__dirname, `../public/build/ui`);
 const staticDirectoryPath = path.join(__dirname, '../src/images/interface');
 
 // 1. Read the renamed files in PRODUCTION folder.
@@ -23,6 +31,12 @@ const readProdDirectory = () => {
         files.forEach((file) => {
             let fileType;
 
+            // Ignore folders (i.e. other themes).
+            if (file.indexOf('.') < 0) {
+                return;
+            }
+
+            // Ignore HTML file used for Parcel build.
             if (file.indexOf('html') >= 0) {
                 return;
             }
@@ -49,43 +63,59 @@ const readProdDirectory = () => {
     });
 };
 
-// 1. Move file.
-const moveFile = (file, type) => {
-    let subFolder;
-    if (type === 'js') {
-        subFolder = 'javascript';
+// Use "default" theme if invalid theme is supplied.
+let themeName = themes[theme] !== undefined
+    ? theme
+    : 'default';
+
+// 2. Move file.
+const moveFile = (file, fileType) => {
+    let themeFolder = `${prodDirectoryPath}/${themeName}`;
+
+    if (fileType === 'js') {
+        // Ignore unwanted "runtime" JS files.
+        if (fileType === 'js' && file.indexOf('runtime') > -1) {
+            return;
+        }
+        themeFolder = `${themeFolder}/javascript`;
     }
-    if (type === 'css') {
-        subFolder = 'css';
+
+    if (fileType === 'css') {
+        themeFolder = `${themeFolder}/css`;
     }
-    if (type === 'svg') {
+
+    if (fileType === 'svg') {
         const filename = file.substring(0, file.lastIndexOf('.'));
         // Move SVG sprite into 'images' folder. Any other SVGs go in 'css' as they're referenced inside CSS.
-        subFolder = filename === 'sprite' ? 'images' : 'css';
+        themeFolder = filename === 'sprite'
+            ? `${themeFolder}/images`
+            : `${themeFolder}/css`;
     }
 
     fs.move(
         `${prodDirectoryPath}/${file}`,
-        `${prodDirectoryPath}/${subFolder}/${file}`,
+        `${themeFolder}/${file}`,
         (err) => {
             if (err) {
-                return console.log(err);
+                return console.log(colors.red.bold('move files:', err));
             }
-            console.log(`Successfully moved ${file}`);
+            console.log(colors.green.bold(`Successfully moved ${file}`));
         },
     );
 };
 
-// 2. Copy other static UI files (i.e. '/images/interface').
+// 3. Copy other static UI files (i.e. '/images/interface').
 const copyStatic = () => {
+    const themeFolder = `${prodDirectoryPath}/${themeName}`;
+
     fs.copy(
         staticDirectoryPath,
-        `${prodDirectoryPath}/images/interface`,
+        `${themeFolder}/images/interface`,
         (err) => {
             if (err) {
-                return console.log(err);
+                return console.log(colors.red.bold('copy static assets:', err));
             }
-            console.log('Successfully copied other static assets!');
+            console.log(colors.green.bold('Successfully copied other static assets!'));
         },
     );
 };
