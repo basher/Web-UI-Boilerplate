@@ -78,3 +78,8 @@ From `ui` directory:
 ## Additional required files in project root directory
 - `.vscode/settings.json` defines the correct working directory for `.eslintignore` and `.stylelintrc`.
 - `.editorconfig` ensures all code uses the same indentation.
+
+## TODO
+- Override theme fonts.
+- Override a component partial.
+- Add theme switcher to Storybook.
