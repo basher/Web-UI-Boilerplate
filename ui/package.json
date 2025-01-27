@@ -65,6 +65,7 @@
         "remark-gfm": "^4.0.0",
         "sass-export": "^2.1.2",
         "storybook": "^8.4.7",
+        "storybook-theme-switch-addon": "^1.0.1",
         "stylelint": "^16.10.0",
         "stylelint-config-standard": "^36.0.1",
         "stylelint-order": "^6.0.4",
