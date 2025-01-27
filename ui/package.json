@@ -2,7 +2,7 @@
     "name": "web-ui-boilerplate",
     "description": "UI boilerplate for websites/webapps using vanilla HTML/CSS/JavaScript, powered by Storybook, bundled by Parcel.",
     "author": "basher",
-    "version": "4.1.0",
+    "version": "4.1.1",
     "license": "ISC",
     "repository": {
         "type": "git",
