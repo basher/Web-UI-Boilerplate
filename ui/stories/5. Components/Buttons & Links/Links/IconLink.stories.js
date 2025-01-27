@@ -3,9 +3,9 @@ import { IconLinkHtml } from './Link';
 export default {
     title: 'Components/Buttons & Links/Links',
     parameters: {
-        status: {
-            type: 'stable',
-        },
+        status: { type: 'stable' },
+        controls: { sort: 'alpha' },
+        docs: { controls: { sort: 'alpha' } }
     },
     argTypes: {
         iconRef: {

@@ -3,9 +3,9 @@ import { SkinHtml, SkinWrapperHtml } from './Skin';
 export default {
     title: 'Components/Skin',
     parameters: {
-        status: {
-            type: 'stable',
-        },
+        status: { type: 'stable' },
+        controls: { sort: 'alpha' },
+        docs: { controls: { sort: 'alpha' } }
     },
     argTypes: {
         skin: {

@@ -3,9 +3,9 @@ import { WebUICarouselHtml } from './WebUICarousel';
 export default {
     title: 'Web Components Or Custom Elements/<webui-carousel>',
     parameters: {
-        status: {
-            type: 'stable',
-        },
+        status: { type: 'stable' },
+        controls: { sort: 'alpha' },
+        docs: { controls: { sort: 'alpha' } }
     },
     argTypes: {
         makeSlidesFullwidth: {

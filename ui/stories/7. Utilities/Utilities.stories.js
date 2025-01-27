@@ -3,9 +3,9 @@ import { MarginPaddingHtml } from './Utilities';
 export default {
     title: 'Utilities/Helpers and Utilities',
     parameters: {
-        status: {
-            type: 'stable',
-        },
+        status: { type: 'stable' },
+        controls: { sort: 'alpha' },
+        docs: { controls: { sort: 'alpha' } }
     },
     argTypes: {
         marginBlock: {

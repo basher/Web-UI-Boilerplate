@@ -3,8 +3,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--gutter-s);
+}
 
-    &--centered {
-        justify-content: center;
-    }
+.button-group--centered {
+    justify-content: center;
 }

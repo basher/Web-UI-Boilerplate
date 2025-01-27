@@ -3,9 +3,9 @@ import { WrapperHtml } from './Wrapper';
 export default {
     title: 'Layout/Wrapper',
     parameters: {
-        status: {
-            type: 'stable',
-        },
+        status: { type: 'stable' },
+        controls: { sort: 'alpha' },
+        docs: { controls: { sort: 'alpha' } }
     },
     argTypes: {
         turnParentIntoStack: {

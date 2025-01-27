@@ -3,9 +3,9 @@ import { WebUIDisclosureHtml } from './WebUIDisclosure';
 export default {
     title: 'Web Components Or Custom Elements/<webui-disclosure>',
     parameters: {
-        status: {
-            type: 'stable',
-        },
+        status: { type: 'stable' },
+        controls: { sort: 'alpha' },
+        docs: { controls: { sort: 'alpha' } }
     },
     argTypes: {
         bindEscapeKey: {

@@ -7,9 +7,9 @@ import {
 export default {
     title: 'Components/Cards',
     parameters: {
-        status: {
-            type: 'stable',
-        },
+        status: { type: 'stable' },
+        controls: { sort: 'alpha' },
+        docs: { controls: { sort: 'alpha' } }
     },
     argTypes: {
         cardOrientation: {

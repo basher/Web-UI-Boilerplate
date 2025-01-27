@@ -9,9 +9,9 @@ import {
 export default {
     title: 'Layout/Grid',
     parameters: {
-        status: {
-            type: 'stable',
-        },
+        status: { type: 'stable' },
+        controls: { sort: 'alpha' },
+        docs: { controls: { sort: 'alpha' } }
     },
     argTypes: {
         gap: {

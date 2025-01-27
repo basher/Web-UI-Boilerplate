@@ -3,9 +3,9 @@ import { StackHtml } from './Stack';
 export default {
     title: 'Layout/Stack',
     parameters: {
-        status: {
-            type: 'stable',
-        },
+        status: { type: 'stable' },
+        controls: { sort: 'alpha' },
+        docs: { controls: { sort: 'alpha' } }
     },
     argTypes: {
         stackGutter: {

@@ -3,9 +3,9 @@ import { ButtonHtml } from './Button';
 export default {
     title: 'Components/Buttons & Links/Buttons',
     parameters: {
-        status: {
-            type: 'stable',
-        },
+        status: { type: 'stable' },
+        controls: { sort: 'alpha' },
+        docs: { controls: { sort: 'alpha' } }
     },
     argTypes: {
         label: {

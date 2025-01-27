@@ -3,9 +3,9 @@ import { ButtonsHtml, LinksHtml } from './ButtonGroup';
 export default {
     title: 'Components/Buttons & Links/Button Group',
     parameters: {
-        status: {
-            type: 'stable',
-        },
+        status: { type: 'stable' },
+        controls: { sort: 'alpha' },
+        docs: { controls: { sort: 'alpha' } }
     },
     argTypes: {
         centered: {
