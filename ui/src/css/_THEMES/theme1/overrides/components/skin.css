@@ -1,0 +1,29 @@
+/*
+----------------------------------------------------------------------------
+Apply skin (or "theming" layer) to components.
+----------------------------------------------------------------------------
+*/
+
+/* Define new layer to ensure 'skin' has highest specificity (excluding any overrides applied in the 'utilities' layer). */
+@layer skin {
+    /* Arbitrary styling to demo the concept. */
+    .skin-1 {
+        border-width: var(--border-width-l);
+    }
+
+    .skin-2 {
+        border: var(--border-width-l) solid var(--color-neutral-darkest);
+    }
+
+    .skin-3 {
+        font-style: italic;
+
+        &::before {
+            transform: scaleX(-1);
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}

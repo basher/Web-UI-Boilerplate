@@ -26,9 +26,3 @@ Font-face rules.
     font-weight: normal;
     src: url('../../fonts/roboto-regular/roboto-regular.woff') format('woff');
 }
-
-/* :root {
-    --base-font-family: var(--webui-font-family), var(--webui-font-fallback);
-    --base-font-family-title: var(--webui-font-family-title),
-        var(--webui-font-fallback);
-} */

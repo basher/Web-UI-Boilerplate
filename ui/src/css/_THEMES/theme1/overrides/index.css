@@ -31,7 +31,8 @@ Create sub-folders within this 'overrides' folder, as appropriate.
 ----------------------------------------------------------------------------
 */
 /* @import 'form/index' screen; */
-/* @import 'components/index' screen; */
+@import 'components/index' screen;
+
 /* @import 'web-components/index' screen; */
 
 /*
