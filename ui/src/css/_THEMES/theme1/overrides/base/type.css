@@ -1,0 +1,34 @@
+/*
+----------------------------------------------------------------------------
+Typography settings.
+----------------------------------------------------------------------------
+*/
+
+/*
+----------------------------------------------------------------------------
+Font-face rules.
+
+'font-display: swap;' ensures that all text will be rendered with a fallback system font until custom font is ready.
+----------------------------------------------------------------------------
+*/
+@font-face {
+    font-display: swap;
+    font-family: robotomedium;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../fonts/roboto-medium/roboto-medium.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: robotoregular;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../fonts/roboto-regular/roboto-regular.woff') format('woff');
+}
+
+/* :root {
+    --base-font-family: var(--webui-font-family), var(--webui-font-fallback);
+    --base-font-family-title: var(--webui-font-family-title),
+        var(--webui-font-fallback);
+} */

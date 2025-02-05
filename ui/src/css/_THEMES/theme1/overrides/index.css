@@ -9,7 +9,7 @@ Create sub-folders within this 'overrides' folder, as appropriate.
 1. Override base.
 ----------------------------------------------------------------------------
 */
-/* @import 'base/index' screen; */
+@import 'base/index' screen;
 
 /*
 ----------------------------------------------------------------------------
