@@ -66,7 +66,7 @@ From `ui` directory:
 - `npm run publish-storybook` - Runs Parcel build (using the `default` theme) to bundle CSS/JS in the `public` folder, which then gets copied to `storybook-static` folder.
 - `npx http-server ./storybook-static` - Test production build on local server.
 
-> NOTE: ALL themes are actually bundled, but only the default theme is rendered in Storybook.
+> NOTE: ALL themes are actually bundled, but only the default theme is rendered in Storybook when it first loads.
 
 ### Publish using GitHub pages
 - Uses the workflow defined in `.github/workflows/static.yml`.
