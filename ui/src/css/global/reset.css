@@ -38,10 +38,10 @@ html {
     }
 
     background-color: light-dark(
-        var(--color-neutral-lightest),
-        var(--color-neutral-dark)
+        var(--color-neutral-100),
+        var(--color-neutral-700)
     );
-    color: light-dark(var(--color-neutral-darkest), var(--color-neutral-light));
+    color: light-dark(var(--color-neutral-900), var(--color-neutral-300));
     min-block-size: 100vh; /* 100dvb might have performance implications */
 }
 

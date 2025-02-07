@@ -44,7 +44,7 @@
 /* Errors rendered directly in HTML, or via JavaScript. */
 .form__error {
     background: var(--color-error-500);
-    color: var(--color-neutral-lightest);
+    color: var(--color-neutral-100);
     padding-inline: var(--gutter-xs);
 }
 

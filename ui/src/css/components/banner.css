@@ -35,8 +35,8 @@
             /* So text is legible above image. */
             background: var(--color-primary-100);
             color: light-dark(
-                var(--color-neutral-darkest),
-                var(--color-neutral-darkest)
+                var(--color-neutral-900),
+                var(--color-neutral-900)
             );
             inline-size: 40vw;
             margin-inline-start: var(--gutter-m);

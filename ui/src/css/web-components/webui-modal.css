@@ -13,8 +13,8 @@ webui-modal {
     /* Browser already applies "position: fixed" and "width: fit-content". */
     .modal__dialog {
         background: light-dark(
-            var(--color-neutral-lightest),
-            var(--color-neutral-dark)
+            var(--color-neutral-100),
+            var(--color-neutral-700)
         );
         margin: auto;
         padding: 0 var(--gutter-m) var(--gutter-m);
@@ -27,8 +27,8 @@ webui-modal {
 
     .modal__header {
         background: light-dark(
-            var(--color-neutral-lightest),
-            var(--color-neutral-dark)
+            var(--color-neutral-100),
+            var(--color-neutral-700)
         );
         display: flex;
         justify-content: flex-end;

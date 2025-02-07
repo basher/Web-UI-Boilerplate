@@ -16,7 +16,7 @@ webui-toggle {
 
     [aria-checked='false'] {
         .toggle__off {
-            background-color: var(--color-neutral-medium);
+            background-color: var(--color-neutral-500);
             color: inherit;
         }
     }
@@ -24,7 +24,7 @@ webui-toggle {
     [aria-checked='true'] {
         .toggle__on {
             background-color: var(--color-primary-500);
-            color: var(--color-neutral-lightest);
+            color: var(--color-neutral-100);
         }
     }
 

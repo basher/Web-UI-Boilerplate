@@ -1,9 +1,6 @@
 .breadcrumb {
     [aria-current] {
-        color: light-dark(
-            var(--color-primary-500),
-            var(--color-neutral-lightest)
-        );
+        color: light-dark(var(--color-primary-500), var(--color-neutral-100));
         font-weight: bold;
     }
 }
