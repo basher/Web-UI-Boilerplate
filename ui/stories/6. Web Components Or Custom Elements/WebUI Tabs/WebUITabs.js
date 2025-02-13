@@ -17,7 +17,7 @@ export const WebUITabsHtml = () => `
     <div id="tab1" data-tabpanel>
         <p>1 - Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         <br>
-        <b><a href="#">Use the TAB key to access this link inside the tab content</a></b>.
+        <b><a href="#">Use the <kbd>tab</kbd> key to access this link inside the tab content</a></b>.
         <br>
         Voluptatum maxime amet omnis numquam voluptatem exercitationem nemo deleniti dolorem perferendis vitae? Qui molestias inventore illum ad ullam eum unde omnis temporibus.</p>
     </div>
@@ -52,7 +52,7 @@ export const WebUIVerticalTabsHtml = () => `
     <div id="tab1vertical" data-tabpanel>
         <p>1 - Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         <br>
-        <b><a href="#">Use the TAB key to access this link inside the tab content</a></b>.
+        <b><a href="#">Use the <kbd>tab</kbd> key to access this link inside the tab content</a></b>.
         <br>
         Voluptatum maxime amet omnis numquam voluptatem exercitationem nemo deleniti dolorem perferendis vitae? Qui molestias inventore illum ad ullam eum unde omnis temporibus.</p>
     </div>

@@ -94,7 +94,9 @@ ${style}
             </a>
         </li>
     </ul>
-    <p class="carousel-instructions">Scroll or use your arrow keys for more</p>
+    <p class="carousel-instructions">
+        Scroll or use your <kbd>left</kbd> or <kbd>right</kbd> arrow keys for more
+    </p>
 </section>
 `;
 
@@ -140,7 +142,9 @@ ${style}
             </a>
         </li>
     </ul>
-    <p class="carousel-instructions">Scroll or use your arrow keys for more</p>
+    <p class="carousel-instructions">
+        Scroll or use your <kbd>left</kbd> or <kbd>right</kbd> arrow keys for more
+    </p>
 </section>
 `;
 
@@ -187,6 +191,8 @@ ${style2}
             </a>
         </li>
     </ul>
-    <p class="carousel-instructions">Scroll or use your arrow keys for more</p>
+    <p class="carousel-instructions">
+        Scroll or use your <kbd>left</kbd> or <kbd>right</kbd> arrow keys for more
+    </p>
 </section>
 `;

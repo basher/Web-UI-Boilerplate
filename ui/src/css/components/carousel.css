@@ -49,8 +49,6 @@
 /* Clickable slides (e.g. cards, image thumbnails). */
 .carousel--has-clickable-slides {
     .carousel__slide > :is(a, button) {
-        block-size: 100%;
-
         &:focus-visible {
             box-shadow: inset var(--focus-shadow);
         }

@@ -86,7 +86,7 @@ ${style}
             </li>
         </ul>
         <p class="carousel-instructions">
-            Scroll or use your arrow keys for more
+            Scroll or use your <kbd>left</kbd> or <kbd>right</kbd> arrow keys for more
         </p>
         <p class="carousel__counter visually-hidden" data-counter aria-live="polite">
         </p>

@@ -125,5 +125,5 @@ kbd {
     border: var(--border-width-s) solid;
     border-radius: var(--border-radius-s);
     font-size: var(--font-size-s);
-    padding: 0.25em;
+    padding: 0.125em;
 }
