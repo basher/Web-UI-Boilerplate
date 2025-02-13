@@ -99,12 +99,12 @@ Miscellaneous styles.
     max-inline-size: var(--type-max-line-length);
 }
 
-:is(button, input, select, textarea, datalist, datalist > option) {
+:where(button, input, select, textarea, datalist, datalist > option) {
     font: inherit;
     line-height: 1;
 }
 
-:is(caption, th, td) {
+:where(caption, th, td) {
     font-weight: normal;
     text-align: start;
 }
@@ -117,6 +117,13 @@ small {
     font-size: var(--font-size-s);
 }
 
-code {
+:where(code, kbd) {
     font-family: var(--base-font-family-monospace);
+}
+
+kbd {
+    border: var(--border-width-s) solid;
+    border-radius: var(--border-radius-s);
+    font-size: var(--font-size-s);
+    padding: 0.25em;
 }
