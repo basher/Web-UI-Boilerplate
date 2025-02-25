@@ -7,6 +7,8 @@ From `ui` directory:
 - `npm run build:theme --theme=[theme-name]`
 - `npm run bundle-all-themes`
 
+> NOTE: Simply running `npm start` will launch Parcel bundler with the most recently specified theme.
+
 ## Code authoring guidelines & accessibility
 - All UI components are authored with **semantic HTML5** markup, which is **progressively enhanced** with JavaScript and `WAI-ARIA` as appropriate.
 - The HTML markup uses the `BEM` methodology to provide CSS namespacing.

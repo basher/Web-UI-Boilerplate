@@ -21,6 +21,8 @@ From `ui` directory:
 - `npm run start:theme --theme=[theme-name]` - Installs Node modules (if not already installed), launches Parcel bundler to compile/watch files (using the specified theme), and sets the port for HMR (Hot Module Reloading) to work in Storybook.
 - `npm run storybook` - Launches Storybook/HTML component library.
 
+> NOTE: Simply running `npm start` will launch Parcel bundler with the most recently specified theme.
+
 ### UI themes
 - Theme-specific CSS is located in `ui/src/css/_THEMES` folder.
 - Valid UI theme names are located in `ui/scripts/theme-config.js`.
@@ -34,7 +36,7 @@ From `ui` directory:
 - `npm run bundle-all-themes` - Bundles ALL themes.
 
 ## Local DEV environment (for example, .Net, PHP)
-In order to use the bundled CSS/JavaScript in `localhost`, both `npm start:theme...` and `npm run storybook` need to be run.
+In order to use the bundled CSS/JavaScript in `localhost`, both `npm run start:theme...` and `npm run storybook` need to be run.
 
 However, these can be concatenated together into a single background task so that the Storybook application doesn't need to be actually loaded in the browser.
 
