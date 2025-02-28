@@ -30,17 +30,23 @@ loaders: [
 export const Colours = (args, {loaded}) => `...`
 ```
 
-## Why the 'funky' syntax for the CSS variables?
+## Using `OKLCH()` to define colours
+> See [this OKLCH article](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) which explains why OKLCH is better than HSL. Also see this [OKLCH color picker](https://oklch.com/#70,0.1,293,100) tool.
 
-- The CSS variable colour values are specified as a space-separated list of individual `h`, `s`, `l` values:
+- For example, primitive tokens are declared like this:
 ```
-:root { --color-brand: 270 50% 40%; }
+:root {
+    /* rebeccapurple */
+    --webui-color-brand: oklch(44.03% 0.1603 303.37);
+}
 ```
-- This enables them to be passed in as arguments to the `hsl()` CSS function, providing access to the `alpha` channel for `opacity`:
+- Semantic tokens are declared like this, with access to the `alpha` channel for `opacity`:
 ```
-.my-selector { background: hsl(var(--color-brand) / 60%); }
+:root {
+    --color-primary-500: var(--webui-color-brand);
+    --color-primary-100: oklch(from var(--webui-color-brand) l c h / 30%);
+}
 ```
 
 ## TODO
 - Remove dependency on `sass-export` NPM script to generate JSON colours.
-- Migrate to CSS Color 4 `oklch()`?

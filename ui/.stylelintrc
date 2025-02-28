@@ -42,6 +42,9 @@
         "value-keyword-case": null,
         "custom-property-pattern": null,
         "declaration-block-no-redundant-longhand-properties": null,
-        "selector-not-notation": null
+        "selector-not-notation": null,
+        "function-disallowed-list": ["rgba", "hsla", "rgb", "hsl"],
+        "color-function-notation": "modern",
+        "color-no-hex": true
     }
 }

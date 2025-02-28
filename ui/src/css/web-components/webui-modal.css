@@ -1,6 +1,6 @@
 /* Cannot use existing CSS variables defined on :root element for ::backdrop. See https://stackoverflow.com/questions/58818299/css-variables-not-working-in-dialogbackdrop */
 ::backdrop {
-    --color-backdrop: hsl(0 0% 0% / 70%);
+    --color-backdrop: oklch(0% 0 0 / 70%);
 }
 
 webui-modal {
@@ -20,7 +20,7 @@ webui-modal {
         padding: 0 var(--gutter-m) var(--gutter-m);
 
         &::backdrop {
-            background: var(--color-backdrop);
+            background-color: var(--color-backdrop);
             pointer-events: none; /* So click outside works */
         }
     }

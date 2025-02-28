@@ -99,7 +99,7 @@ svg {
 :is(button, a) {
     appearance: none;
     cursor: pointer;
-    -webkit-tap-highlight-color: hsl(0 0% 0% / 0%);
+    -webkit-tap-highlight-color: oklch(0% 0 0 / 0%);
 }
 
 button {
