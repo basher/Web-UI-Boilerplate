@@ -31,15 +31,15 @@ TODO:
     */
     --color-success-500: var(--webui-color-accent-positive);
     --color-success-100: oklch(
-        from var(--webui-color-accent-positive) l c h / 30%
+        from var(--webui-color-accent-positive) l c h / 10%
     );
     --color-error-500: var(--webui-color-accent-negative);
     --color-error-100: oklch(
-        from var(--webui-color-accent-negative) l c h / 30%
+        from var(--webui-color-accent-negative) l c h / 10%
     );
     --color-notify-500: var(--webui-color-accent-neutral);
     --color-notify-100: oklch(
-        from var(--webui-color-accent-neutral) l c h / 30%
+        from var(--webui-color-accent-neutral) l c h / 10%
     );
     --color-focus: var(--webui-color-state-focus);
 }

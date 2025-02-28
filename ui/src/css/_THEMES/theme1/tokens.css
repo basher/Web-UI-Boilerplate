@@ -4,7 +4,7 @@
 ----------------------------------------------------------------------------
 */
 :root {
-    --webui-color-brand: 82 39% 30%; /* darkolivegreen */
+    --webui-color-brand: oklch(49.33% 0.0892 126.19); /* darkolivegreen */
     --webui-font-family: robotomedium;
     --webui-font-family-title: robotoregular;
 }

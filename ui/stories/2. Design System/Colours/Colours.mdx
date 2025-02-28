@@ -9,8 +9,7 @@ The default colour CSS custom properties get automatically exported to a JSON fi
 <Canvas of={Colours.Colours} />
 
 ## Dark mode
-Colours in the swatch will be updated automatically if the operating system preference for `dark mode` is selected.
-- This will trigger the `prefers-color-scheme: dark` media query, if specified in the CSS.
+- Colours will be updated automatically if the operating system preference for `dark mode` is selected, which triggers the `prefers-color-scheme: dark` media query, if specified in the CSS.
 - Dark mode colours can be defined in `src/css/tokens.css`, and/or via the CSS `light-dark()` function.
 
 ## Using the external `exported-colors.json` in this Storybook
