@@ -10,10 +10,10 @@
     --webui-color-neutral-500: oklch(59.82% 0 0);
     --webui-color-neutral-700: oklch(32.11% 0 0);
     --webui-color-neutral-900: oklch(15.79% 0 0);
-    --webui-color-accent-positive: oklch(75.14% 0.1489 142.55);
-    --webui-color-accent-negative: oklch(48.29% 0.1821 26.34);
-    --webui-color-accent-neutral: oklch(82.25% 0.1693 96.1742);
-    --webui-color-state-focus: oklch(71.69% 0.1378 226.5552);
+    --webui-color-accent-positive: oklch(75.14% 0.1603 142.55);
+    --webui-color-accent-negative: oklch(48.29% 0.1603 26.34);
+    --webui-color-accent-neutral: oklch(82.25% 0.1603 96.1742);
+    --webui-color-state-focus: oklch(71.69% 0.1603 226.5552);
 
     /* Typography. */
     --webui-font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,

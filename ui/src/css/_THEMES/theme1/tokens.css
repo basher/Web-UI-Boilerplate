@@ -5,6 +5,10 @@
 */
 :root {
     --webui-color-brand: oklch(49.33% 0.0892 126.19); /* darkolivegreen */
+    --webui-color-accent-positive: oklch(75.14% 0.0892 142.55);
+    --webui-color-accent-negative: oklch(48.29% 0.0892 26.34);
+    --webui-color-accent-neutral: oklch(82.25% 0.0892 96.1742);
+    --webui-color-state-focus: oklch(71.69% 0.0892 226.5552);
     --webui-font-family: robotomedium;
     --webui-font-family-title: robotoregular;
 }
