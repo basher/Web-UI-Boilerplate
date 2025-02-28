@@ -67,7 +67,8 @@ ${
                                         style="background: ${color.compiledValue}">
                                     </span>
                                     <span>
-                                        ${color.value.replace(/hsl\(/g, '').slice(0, -1)}
+                                        <!--${color.value.replace(/hsl\(/g, '').slice(0, -1)}-->
+                                        ${color.value}
                                     </span>
                                     <span></span>
                                 </li>
@@ -86,16 +87,11 @@ ${
         () => {
             const styledSpan = document.querySelectorAll('.styled');
             styledSpan.forEach((span) => {
-                const spanStyle = span.style.background;
-                const spanStyleValue = spanStyle.substring(
-                    spanStyle.indexOf('--'),
-                    spanStyle.length - 2,
-                );
-
+                const spanStyle = getComputedStyle(span).getPropertyValue('background-color');
                 const computedSpan = span.nextElementSibling.nextElementSibling;
 
-                if (getComputedStyle(span).getPropertyValue(spanStyleValue) !== '') {
-                    computedSpan.innerHTML = `<b>hsl(${getComputedStyle(span).getPropertyValue(spanStyleValue)})</b>`;
+                if (spanStyle !== '' && computedSpan) {
+                    computedSpan.innerHTML = `<b>${spanStyle}</b>`;
                 }
             });
         }

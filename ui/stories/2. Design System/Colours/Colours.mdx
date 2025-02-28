@@ -4,18 +4,16 @@ import * as Colours from './Colours.stories';
 <Meta of={Colours} />
 
 # Colour palette / swatch
-
 The default colour CSS custom properties get automatically exported to a JSON file when Parcel server is started with `npm start`.
 
 <Canvas of={Colours.Colours} />
 
 ## Dark mode
 Colours in the swatch will be updated automatically if the operating system preference for `dark mode` is selected.
-- This triggers the CSS `prefers-color-scheme: dark` media query.
-- Dark mode colours are defined in `src/css/tokens.css`.
+- This will trigger the `prefers-color-scheme: dark` media query, if specified in the CSS.
+- Dark mode colours can be defined in `src/css/tokens.css`, and/or via the CSS `light-dark()` function.
 
 ## Using the external `exported-colors.json` in this Storybook
-
 - The default export for this story contains an async loader which fetches the JSON before the story renders:
 ```
 loaders: [
@@ -31,7 +29,7 @@ export const Colours = (args, {loaded}) => `...`
 ```
 
 ## Using `OKLCH()` to define colours
-> See [this OKLCH article](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) which explains why OKLCH is better than HSL. Also see this [OKLCH color picker](https://oklch.com/#70,0.1,293,100) tool.
+> See [why OKLCH is better than HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) and [OKLCH color picker tool](https://oklch.com/#70,0.1,293,100).
 
 - For example, primitive tokens are declared like this:
 ```
@@ -40,11 +38,11 @@ export const Colours = (args, {loaded}) => `...`
     --webui-color-brand: oklch(44.03% 0.1603 303.37);
 }
 ```
-- Semantic tokens are declared like this, with access to the `alpha` channel for `opacity`:
+- Semantic tokens are declared like this (notice how the **lightness** value has been increased in `--color-primary-100`):
 ```
 :root {
     --color-primary-500: var(--webui-color-brand);
-    --color-primary-100: oklch(from var(--webui-color-brand) l c h / 30%);
+    --color-primary-100: oklch(from var(--webui-color-brand) calc(l + 0.2) c h);
 }
 ```
 

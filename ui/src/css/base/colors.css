@@ -15,7 +15,7 @@ TODO:
     * @sass-export-section="main theme colours"
     */
     --color-primary-500: var(--webui-color-brand);
-    --color-primary-100: oklch(from var(--webui-color-brand) l c h / 30%);
+    --color-primary-100: oklch(from var(--webui-color-brand) calc(l + 0.2) c h);
 
     /**
     * @sass-export-section="neutral colours"

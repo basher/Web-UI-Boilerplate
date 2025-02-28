@@ -51,9 +51,13 @@
 
 .button--secondary {
     color: var(--color-primary-500);
+    color: light-dark(var(--color-primary-500), var(--color-neutral-100));
 
     &[class*='text'] {
-        border-color: var(--color-primary-500);
+        border-color: light-dark(
+            var(--color-primary-500),
+            var(--color-primary-100)
+        );
     }
 }
 
