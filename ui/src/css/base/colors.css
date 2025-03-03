@@ -1,34 +1,21 @@
 /*
 ----------------------------------------------------------------------------
 Color settings.
-
-1. Copy the CSS custom properties inside the ':root {}' ruleset, along with their JSDoc comments, into 'base/colors-to-json.scss'.
-2. Replace '--' with '$'.
-3. The 'sass-export' Node package then correctly exports all the colors as JSON for consumption by Storybook.
-
-TODO:
-- Write custom Node script to convert these values into JSON without the manual copy/paste step into a Sass file.
 ----------------------------------------------------------------------------
 */
 :root {
-    /**
-    * @sass-export-section="main theme colours"
-    */
+    /* Theme */
     --color-primary-500: var(--webui-color-brand);
     --color-primary-100: oklch(from var(--webui-color-brand) calc(l + 0.2) c h);
 
-    /**
-    * @sass-export-section="neutral colours"
-    */
+    /* Neutral */
     --color-neutral-900: var(--webui-color-neutral-900);
     --color-neutral-700: var(--webui-color-neutral-700);
     --color-neutral-500: var(--webui-color-neutral-500);
     --color-neutral-300: var(--webui-color-neutral-300);
     --color-neutral-100: var(--webui-color-neutral-100);
 
-    /**
-    * @sass-export-section="other accent colours"
-    */
+    /* Accent */
     --color-success-500: var(--webui-color-accent-positive);
     --color-success-100: oklch(
         from var(--webui-color-accent-positive) l c h / 10%

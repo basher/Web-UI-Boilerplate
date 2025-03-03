@@ -4,28 +4,12 @@ import * as Colours from './Colours.stories';
 <Meta of={Colours} />
 
 # Colour palette / swatch
-The default colour CSS custom properties get automatically exported to a JSON file when Parcel server is started with `npm start`.
 
 <Canvas of={Colours.Colours} />
 
 ## Dark mode
 - Colours will be updated automatically if the operating system preference for `dark mode` is selected, which triggers the `prefers-color-scheme: dark` media query, if specified in the CSS.
 - Dark mode colours can be defined in `src/css/tokens.css`, and/or via the CSS `light-dark()` function.
-
-## Using the external `exported-colors.json` in this Storybook
-- The default export for this story contains an async loader which fetches the JSON before the story renders:
-```
-loaders: [
-    () =>
-        fetch('exported-colors.json')
-            .then((r) => r.json())
-            .then((json) => json),
-],
-```
-- The JSON is then passed as a `{loaded}` story argument, which can then be iterated:
-```
-export const Colours = (args, {loaded}) => `...`
-```
 
 ## Using `OKLCH()` to define colours
 > See [why OKLCH is better than HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) and [OKLCH color picker tool](https://oklch.com/#70,0.1,293,100).
@@ -44,6 +28,3 @@ export const Colours = (args, {loaded}) => `...`
     --color-primary-100: oklch(from var(--webui-color-brand) calc(l + 0.2) c h);
 }
 ```
-
-## TODO
-- Remove dependency on `sass-export` NPM script to generate JSON colours.

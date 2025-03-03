@@ -1,12 +1,12 @@
 {
     "name": "web-ui-boilerplate",
-    "version": "4.3.0",
+    "version": "4.3.1",
     "lockfileVersion": 3,
     "requires": true,
     "packages": {
         "": {
             "name": "web-ui-boilerplate",
-            "version": "4.3.0",
+            "version": "4.3.1",
             "license": "ISC",
             "dependencies": {
                 "dialog-polyfill": "^0.5.6"
@@ -37,7 +37,6 @@
                 "postcss": "^8.4.18",
                 "prettier": "^3.3.3",
                 "remark-gfm": "^4.0.0",
-                "sass-export": "^2.1.2",
                 "storybook": "^8.4.7",
                 "storybook-theme-switch-addon": "^1.0.1",
                 "stylelint": "^16.10.0",
@@ -6503,6 +6502,8 @@
             "resolved": "https://registry.npmjs.org/anymatch/-/anymatch-3.1.3.tgz",
             "integrity": "sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==",
             "dev": true,
+            "optional": true,
+            "peer": true,
             "dependencies": {
                 "normalize-path": "^3.0.0",
                 "picomatch": "^2.0.4"
@@ -6663,6 +6664,8 @@
             "resolved": "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.2.0.tgz",
             "integrity": "sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==",
             "dev": true,
+            "optional": true,
+            "peer": true,
             "engines": {
                 "node": ">=8"
             }
@@ -7079,6 +7082,8 @@
             "resolved": "https://registry.npmjs.org/chokidar/-/chokidar-3.6.0.tgz",
             "integrity": "sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==",
             "dev": true,
+            "optional": true,
+            "peer": true,
             "dependencies": {
                 "anymatch": "~3.1.2",
                 "braces": "~3.0.2",
@@ -8565,6 +8570,7 @@
             "os": [
                 "darwin"
             ],
+            "peer": true,
             "engines": {
                 "node": "^8.16.0 || ^10.6.0 || >=11.0.0"
             }
@@ -8969,7 +8975,9 @@
             "version": "4.3.5",
             "resolved": "https://registry.npmjs.org/immutable/-/immutable-4.3.5.tgz",
             "integrity": "sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==",
-            "dev": true
+            "dev": true,
+            "optional": true,
+            "peer": true
         },
         "node_modules/import-fresh": {
             "version": "3.3.0",
@@ -9063,6 +9071,8 @@
             "resolved": "https://registry.npmjs.org/is-binary-path/-/is-binary-path-2.1.0.tgz",
             "integrity": "sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==",
             "dev": true,
+            "optional": true,
+            "peer": true,
             "dependencies": {
                 "binary-extensions": "^2.0.0"
             },
@@ -10855,15 +10865,6 @@
                 "node": "*"
             }
         },
-        "node_modules/minimist": {
-            "version": "1.2.8",
-            "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz",
-            "integrity": "sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==",
-            "dev": true,
-            "funding": {
-                "url": "https://github.com/sponsors/ljharb"
-            }
-        },
         "node_modules/ms": {
             "version": "2.1.2",
             "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz",
@@ -11676,6 +11677,8 @@
             "resolved": "https://registry.npmjs.org/readdirp/-/readdirp-3.6.0.tgz",
             "integrity": "sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==",
             "dev": true,
+            "optional": true,
+            "peer": true,
             "dependencies": {
                 "picomatch": "^2.2.1"
             },
@@ -11921,6 +11924,8 @@
             "resolved": "https://registry.npmjs.org/sass/-/sass-1.70.0.tgz",
             "integrity": "sha512-uUxNQ3zAHeAx5nRFskBnrWzDUJrrvpCPD5FNAoRvTi0WwremlheES3tg+56PaVtCs5QDRX5CBLxxKMDJMEa1WQ==",
             "dev": true,
+            "optional": true,
+            "peer": true,
             "dependencies": {
                 "chokidar": ">=3.0.0 <4.0.0",
                 "immutable": "^4.0.0",
@@ -11931,23 +11936,6 @@
             },
             "engines": {
                 "node": ">=14.0.0"
-            }
-        },
-        "node_modules/sass-export": {
-            "version": "2.1.2",
-            "resolved": "https://registry.npmjs.org/sass-export/-/sass-export-2.1.2.tgz",
-            "integrity": "sha512-p6bLjnD/0l+aoVkoToClGSUgIK3PsL3x9/lratp4kVtcvYqoM/JFCxnhcumW8lFVkF8o7K9kWQ6q8upC22S0dA==",
-            "dev": true,
-            "dependencies": {
-                "glob": "^7.1.6",
-                "minimist": "^1.2.5",
-                "sass": "^1.32.8"
-            },
-            "bin": {
-                "sass-export": "bin/sass-export"
-            },
-            "engines": {
-                "node": ">=10"
             }
         },
         "node_modules/scheduler": {
