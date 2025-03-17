@@ -1,5 +1,5 @@
 # Web UI Boilerplate
-Accessible UI boilerplate and component library for websites/webapps.
+Accessible UI boilerplate and component library for websites & web apps.
 - Built with semantic HTML, CSS, native Web Components, vanilla JavaScript (TypeScript) and ARIA.
 - Powered by Storybook.
 - Bundled by Parcel.

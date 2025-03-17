@@ -71,6 +71,8 @@ export default class FormValidate extends HTMLElement {
         errorMsg.textContent = field.validationMessage;
 
         fieldWrapper?.classList.add(this.errorFieldClass);
+        field.setAttribute('aria-invalid', 'true');
+        field.setAttribute('aria-describedby', errorMsg.id);
 
         // Only add 1 error msg per field (e.g. a group of radio buttons).
         if (!fieldWrapper?.querySelector(`#${errorMsg.id}`)) {
@@ -91,9 +93,6 @@ export default class FormValidate extends HTMLElement {
 
             fieldWrapper?.insertBefore(errorMsg, field);
         }
-
-        field.setAttribute('aria-invalid', 'true');
-        field.setAttribute('aria-describedby', errorMsg.id);
     }
 
     private removeError(field: any): void {
