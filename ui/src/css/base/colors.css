@@ -6,7 +6,7 @@ Color settings.
 :root {
     /* Theme */
     --color-primary-500: var(--webui-color-brand);
-    --color-primary-100: oklch(from var(--webui-color-brand) calc(l + 0.2) c h);
+    --color-primary-100: oklch(from var(--webui-color-brand) calc(l + 0.3) c h);
 
     /* Neutral */
     --color-neutral-900: var(--webui-color-neutral-900);

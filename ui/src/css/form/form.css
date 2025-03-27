@@ -70,7 +70,7 @@
         outline: var(--focus-outline);
     }
 
-    &:hover:not(:disabled) {
+    &:hover:not(:disabled):not(:focus-visible) {
         background-color: var(--color-primary-100);
     }
 
