@@ -3,7 +3,6 @@ export default class WebUIModal extends HTMLElement {
     private modalContent: HTMLElement | null;
     private btnModalOpen: HTMLButtonElement | HTMLAnchorElement | null;
     private btnsModalClose: NodeListOf<HTMLElement>;
-    private classNameModalOpen: string;
 
     constructor() {
         super();
@@ -12,7 +11,6 @@ export default class WebUIModal extends HTMLElement {
         this.modalContent = this.querySelector('[data-content]');
         this.btnModalOpen = this.querySelector('[data-open]');
         this.btnsModalClose = this.querySelectorAll('[data-close]');
-        this.classNameModalOpen = 'has-modal-open';
 
         if (!this.btnModalOpen || !this.dialog) return;
 
@@ -39,14 +37,11 @@ export default class WebUIModal extends HTMLElement {
             // Set focus on content rather than the 'close' button.
             this.modalContent?.setAttribute('tabIndex', '-1');
             this.modalContent?.focus();
-
-            document.body.classList.add(this.classNameModalOpen);
         }
     }
 
     private handleClose(): void {
         this.dialog?.close();
-        document.body.classList.remove(this.classNameModalOpen);
     }
 
     private handleGlobalClick(e: MouseEvent): void {

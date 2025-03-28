@@ -71,7 +71,7 @@ webui-modal {
     }
 }
 
-/* Class added to <body> by JS. */
-.has-modal-open {
+/* Hide overflow on <body> when modal is open. */
+body:has(dialog[open]) {
     overflow: hidden;
 }
