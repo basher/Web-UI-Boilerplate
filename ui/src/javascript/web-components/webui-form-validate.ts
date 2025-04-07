@@ -64,6 +64,7 @@ export default class FormValidate extends HTMLElement {
     private showError(field: any): void {
         const errorMsg = document.createElement('span');
         const fieldWrapper = field.closest('.form__field');
+        const fieldset = fieldWrapper.querySelector('fieldset');
 
         errorMsg.classList.add(this.errorMsgClass);
         errorMsg.id =
@@ -74,7 +75,7 @@ export default class FormValidate extends HTMLElement {
         field.setAttribute('aria-invalid', 'true');
         field.setAttribute('aria-describedby', errorMsg.id);
 
-        // Only add 1 error msg per field (e.g. a group of radio buttons).
+        // Only add 1 error msg per field (inluding grouped fields inside a <fieldset>).
         if (!fieldWrapper?.querySelector(`#${errorMsg.id}`)) {
             let target;
 
@@ -84,9 +85,9 @@ export default class FormValidate extends HTMLElement {
                 return;
             }
 
-            if (field.type === 'radio') {
-                const fieldset = fieldWrapper.querySelector('fieldset');
-                target = fieldWrapper.querySelector('.radio');
+            // e.g. radio button groups.
+            if (fieldset) {
+                target = fieldWrapper.querySelector(`.${field.type}`);
                 fieldset?.insertBefore(errorMsg, target);
                 return;
             }
@@ -98,11 +99,24 @@ export default class FormValidate extends HTMLElement {
     private removeError(field: any): void {
         const fieldWrapper = field.closest('.form__field');
         const errorMsg = fieldWrapper.querySelector(`.${this.errorMsgClass}`);
+        const fieldset = fieldWrapper.querySelector('fieldset');
 
         field.removeAttribute('aria-invalid');
         field.removeAttribute('aria-describedby');
         fieldWrapper?.classList.remove(this.errorFieldClass);
         errorMsg?.remove();
+
+        // Also remove errors from any other grouped fields inside <fieldset>.
+        if (fieldset) {
+            const groupErrors = fieldset.querySelectorAll(
+                '[aria-invalid="true"]',
+            );
+
+            groupErrors.forEach((error: HTMLElement) => {
+                error.removeAttribute('aria-invalid');
+                error.removeAttribute('aria-describedby');
+            });
+        }
     }
 
     // Handle constructor() event listeners.
