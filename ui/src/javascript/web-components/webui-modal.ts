@@ -24,6 +24,8 @@ export default class WebUIModal extends HTMLElement {
     }
 
     private setupA11y(): void {
+        this.btnModalOpen?.setAttribute('aria-haspopup', 'dialog');
+
         if (this.btnModalOpen?.nodeName === 'A') {
             // Assign 'button' role to <a>.
             this.btnModalOpen.setAttribute('role', 'button');
@@ -63,7 +65,7 @@ export default class WebUIModal extends HTMLElement {
     }
 
     // Handle constructor() event listeners.
-    public handleEvent(e: KeyboardEvent) {
+    public handleEvent(e: KeyboardEvent): void {
         const target = e.currentTarget as HTMLButtonElement;
 
         // Ensure button can open modal with ENTER and SPACEBAR.
@@ -72,6 +74,8 @@ export default class WebUIModal extends HTMLElement {
 
         // Click 'open' button.
         if (target?.dataset.open === '') {
+            // Prevent opening <a href>.
+            e.preventDefault();
             this.handleOpen();
         }
 
@@ -82,7 +86,7 @@ export default class WebUIModal extends HTMLElement {
     }
 
     // Handle (global) event listeners which are not part of this web component.
-    public connectedCallback() {
+    public connectedCallback(): void {
         document.addEventListener('keyup', (e: KeyboardEvent) =>
             this.handleGlobalKeyup(e),
         );
@@ -91,7 +95,7 @@ export default class WebUIModal extends HTMLElement {
         );
     }
 
-    public disconnectedCallback() {
+    public disconnectedCallback(): void {
         document.removeEventListener('keyup', this.handleGlobalKeyup);
         document.removeEventListener('click', this.handleGlobalClick);
     }
