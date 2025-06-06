@@ -10,6 +10,7 @@ export default class WebUIPredictiveSearch extends HTMLElement {
     private searchForm: HTMLFormElement | null;
     private searchInput: HTMLInputElement | null;
     private fetchUrl: string | undefined;
+    private liveRegion: HTMLParagraphElement | null;
 
     constructor() {
         super();
@@ -17,6 +18,7 @@ export default class WebUIPredictiveSearch extends HTMLElement {
         this.searchForm = this.querySelector('[role="search"]');
         this.searchInput = this.querySelector('[type="search"]');
         this.fetchUrl = this.searchInput?.dataset.fetchUrl;
+        this.liveRegion = this.querySelector('[aria-live]');
 
         if (!this.searchForm || !this.searchInput || !this.fetchUrl) return;
 
@@ -65,13 +67,23 @@ export default class WebUIPredictiveSearch extends HTMLElement {
                         (result: { name: string | string[] }) =>
                             result.name.includes(query),
                     );
+                    const resultSummary =
+                        results.length > 1
+                            ? `There are ${results.length} results.`
+                            : 'There is 1 result.';
 
                     if (!results.length) {
-                        ajaxContainer.classList.add('ajax__error');
-                        ajaxContainer.innerHTML = main.message.noResults;
+                        if (this.liveRegion) {
+                            this.liveRegion.classList.add('ajax__error');
+                            this.liveRegion.innerHTML = main.message.noResults;
+                        }
+                        ajaxContainer.innerHTML = '';
                         return;
                     }
 
+                    if (this.liveRegion) {
+                        this.liveRegion.innerHTML = resultSummary;
+                    }
                     ajaxContainer.innerHTML = searchResults(results);
                 })
                 .catch((error) => {
@@ -84,7 +96,7 @@ export default class WebUIPredictiveSearch extends HTMLElement {
     };
 
     // Handle constructor() event listeners.
-    public handleEvent(e: SubmitEvent) {
+    public handleEvent(e: SubmitEvent): void {
         // Results are shown dynamically, so no need to submit.
         e.preventDefault();
     }

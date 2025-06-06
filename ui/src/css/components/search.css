@@ -16,7 +16,7 @@
         flex-basis: 100%;
     }
 
-    &:has(:valid:required) .label {
+    &:has(:valid:required, :invalid:required) .label {
         padding-inline-start: 0;
 
         &::after {

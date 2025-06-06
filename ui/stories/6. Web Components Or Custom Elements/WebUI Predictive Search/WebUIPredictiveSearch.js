@@ -2,7 +2,10 @@ export const WebUIPredictiveSearchHtml = () => `
 <webui-predictive-search class="search">
     <form class="form search__form" role="search">
         <div class="form__field">
-            <label for="search" class="label">Search</label>
+            <label for="search" class="label">
+                Search for a Pokemon
+                <span class="label__hint">Type at least 3 characters</span>
+            </label>
             <input
                 id="search"
                 type="search"
@@ -17,11 +20,8 @@ export const WebUIPredictiveSearchHtml = () => `
             Submit
         </button>
     </form>
-    <div
-        role="region"
-        aria-live="polite"
-        data-fetch-container="search-results"
-    >
+    <p role="region" aria-live="polite"></p>
+    <div data-fetch-container="search-results">
     </div>
 </webui-predictive-search>
 `;

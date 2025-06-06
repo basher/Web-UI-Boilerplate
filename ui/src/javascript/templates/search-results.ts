@@ -4,11 +4,6 @@
  * */
 
 const template = (data: []): string => {
-    const resultSummary =
-        data.length > 1
-            ? `There are ${data.length} results.`
-            : 'There is 1 result.';
-
     const resultTemplate = data.map((result: Record<string, string>) => {
         return `
                 <li class="search__result">
@@ -20,7 +15,6 @@ const template = (data: []): string => {
     });
 
     return `
-        <p>${resultSummary}</p>
         <ul class="grid">
             ${resultTemplate.join('')}
         </ul>
