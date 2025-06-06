@@ -15,4 +15,12 @@
     .input {
         flex-basis: 100%;
     }
+
+    &:has(:valid:required) .label {
+        padding-inline-start: 0;
+
+        &::after {
+            content: '';
+        }
+    }
 }
