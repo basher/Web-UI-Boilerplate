@@ -33,9 +33,10 @@ export const ResponsiveTableHtml = () => `
     class="table-wrapper"
     role="region"
     tabindex="0"
+    aria-labelledby="caption"
 >
     <table class="table">
-        <caption>Meaningful <code>&lt;caption&gt;</code></caption>
+        <caption id="caption">Meaningful <code>&lt;caption&gt;</code></caption>
         <thead>
             <tr>
                 <th scope="col">Col heading</th>
