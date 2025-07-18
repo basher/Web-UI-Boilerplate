@@ -104,6 +104,9 @@ export default class WebUITabs extends HTMLElement {
     }
 
     private bindKeyboardEvent(e: KeyboardEvent, index: number): void {
+        // Prevent viewport scrolling when tab focus changes.
+        e.preventDefault();
+
         switch (e.code) {
             case 'ArrowRight':
                 if (this.tabTriggers.length - index > 1) {
