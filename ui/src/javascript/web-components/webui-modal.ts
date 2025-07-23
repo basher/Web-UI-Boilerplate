@@ -58,12 +58,6 @@ export default class WebUIModal extends HTMLElement {
         }
     }
 
-    private handleGlobalKeyup(e: KeyboardEvent): void {
-        if (e.code === 'Escape') {
-            this.handleClose();
-        }
-    }
-
     // Handle constructor() event listeners.
     public handleEvent(e: KeyboardEvent): void {
         const target = e.currentTarget as HTMLButtonElement;
@@ -87,16 +81,12 @@ export default class WebUIModal extends HTMLElement {
 
     // Handle (global) event listeners which are not part of this web component.
     public connectedCallback(): void {
-        document.addEventListener('keyup', (e: KeyboardEvent) =>
-            this.handleGlobalKeyup(e),
-        );
         document.addEventListener('click', (e: MouseEvent) =>
             this.handleGlobalClick(e),
         );
     }
 
     public disconnectedCallback(): void {
-        document.removeEventListener('keyup', this.handleGlobalKeyup);
         document.removeEventListener('click', this.handleGlobalClick);
     }
 }
