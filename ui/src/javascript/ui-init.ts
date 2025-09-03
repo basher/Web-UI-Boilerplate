@@ -17,34 +17,19 @@ import WebUIVideoPlayer from './web-components/webui-video-player';
 
 export const uiInit = (): void => {
     // Define Web Components
-    !customElements.get('webui-ajax-loader') &&
-        customElements.define('webui-ajax-loader', WebUIAjaxLoader);
-    !customElements.get('webui-carousel') &&
-        customElements.define('webui-carousel', WebUICarousel);
-    !customElements.get('webui-disclosure') &&
-        customElements.define('webui-disclosure', WebUIDisclosure);
-    !customElements.get('webui-fetch-html') &&
-        customElements.define('webui-fetch-html', WebUIFetchHtml);
-    !customElements.get('webui-form-validate') &&
-        customElements.define('webui-form-validate', WebUIFormValidate);
-    !customElements.get('webui-make-clickable') &&
-        customElements.define('webui-make-clickable', WebUIMakeClickable);
-    !customElements.get('webui-modal') &&
-        customElements.define('webui-modal', WebUIModal);
-    !customElements.get('webui-notify') &&
-        customElements.define('webui-notify', WebUINotify);
-    !customElements.get('webui-predictive-search') &&
-        customElements.define('webui-predictive-search', WebUIPredictiveSearch);
-    !customElements.get('webui-prose') &&
-        customElements.define('webui-prose', WebUIProse);
-    !customElements.get('webui-range-input') &&
-        customElements.define('webui-range-input', WebUIRangeInput);
-    !customElements.get('webui-share') &&
-        customElements.define('webui-share', WebUIShare);
-    !customElements.get('webui-tabs') &&
-        customElements.define('webui-tabs', WebUITabs);
-    !customElements.get('webui-toggle') &&
-        customElements.define('webui-toggle', WebUIToggle);
-    !customElements.get('webui-video-player') &&
-        customElements.define('webui-video-player', WebUIVideoPlayer);
+    customElements.define('webui-ajax-loader', WebUIAjaxLoader);
+    customElements.define('webui-carousel', WebUICarousel);
+    customElements.define('webui-disclosure', WebUIDisclosure);
+    customElements.define('webui-fetch-html', WebUIFetchHtml);
+    customElements.define('webui-form-validate', WebUIFormValidate);
+    customElements.define('webui-make-clickable', WebUIMakeClickable);
+    customElements.define('webui-modal', WebUIModal);
+    customElements.define('webui-notify', WebUINotify);
+    customElements.define('webui-predictive-search', WebUIPredictiveSearch);
+    customElements.define('webui-prose', WebUIProse);
+    customElements.define('webui-range-input', WebUIRangeInput);
+    customElements.define('webui-share', WebUIShare);
+    customElements.define('webui-tabs', WebUITabs);
+    customElements.define('webui-toggle', WebUIToggle);
+    customElements.define('webui-video-player', WebUIVideoPlayer);
 };
