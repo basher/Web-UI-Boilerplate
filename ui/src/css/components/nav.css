@@ -6,9 +6,10 @@
 }
 
 .nav__list {
+    column-gap: var(--gutter-xl);
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gutter-m);
+    row-gap: var(--gutter-xs);
 }
 
 .nav__link {
@@ -45,13 +46,17 @@
 .nav__item--has-dropdown {
     align-items: center;
     display: flex;
-    gap: var(--gutter-s);
+    gap: var(--gutter-xs);
     position: relative;
 
     [aria-expanded='true'] {
         .icon {
             transform: rotate(180deg);
         }
+    }
+
+    .button {
+        padding: var(--gutter-xs);
     }
 }
 
