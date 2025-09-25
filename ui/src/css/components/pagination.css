@@ -1,43 +1,18 @@
 .pagination {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gutter-m);
-    justify-content: center;
-
-    .form__field {
-        align-items: center;
-        flex-direction: row;
-        justify-content: center;
+    [aria-current] {
+        background-color: var(--color-primary-500);
+        border-color: light-dark(
+            var(--color-primary-500),
+            var(--color-neutral-100)
+        );
+        color: var(--color-neutral-100);
+        font-weight: bold;
     }
 }
 
-.pagination-container {
-    @supports (container-type: inline-size) {
-        @container (inline-size <= 30rem) {
-            .pagination {
-                display: grid;
-                grid-template-areas:
-                    'select select'
-                    'prev next';
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto auto;
-            }
-        }
+.pagination__list {
+    --flex-gap: var(--gutter-xs);
 
-        container-type: inline-size;
-
-        .form__field {
-            grid-area: select;
-        }
-
-        .button:first-of-type {
-            grid-area: prev;
-            justify-self: flex-start;
-        }
-
-        .button:last-of-type {
-            grid-area: next;
-            justify-self: flex-end;
-        }
-    }
+    align-items: center;
+    justify-content: center;
 }

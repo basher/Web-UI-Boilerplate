@@ -6,17 +6,17 @@
     padding: var(--gutter-s);
     text-decoration: none;
 
+    &:where(:disabled, [aria-disabled='true']) {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
     &:hover {
         opacity: var(--hover-opacity);
     }
 
     &:active {
         transform: var(--active-transform);
-    }
-
-    &:disabled {
-        cursor: not-allowed;
-        opacity: 0.6;
     }
 
     &[class*='text'] {

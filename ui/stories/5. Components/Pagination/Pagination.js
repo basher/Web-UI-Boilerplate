@@ -1,44 +1,31 @@
 export const PaginationHtml = () => `
-<div class="pagination-container">
-    <div class="pagination" role="region" aria-label="Pagination Navigation">
-        <button
-            type="button"
-            class="button button--text-icon"
-            aria-label="Previous page"
-            disabled
-        >
-            <svg
-                aria-hidden="true"
-                focusable="false"
-                class="icon"
-            >
-                <use href="sprite.svg#left" />
-            </svg>
-            <span>Previous Page</span>
-        </button>
-        <div class="form__field">
-            <label for="select" class="label">Page</label>
-            <select class="select" id="select" aria-describedby="pages" >
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>
-            <span id="pages">of <span>3</span></span>
-        </div>
-        <button
-            type="button"
-            class="button button--text-icon button--reverse"
-            aria-label="Next page"
-        >
-            <svg
-                aria-hidden="true"
-                focusable="false"
-                class="icon"
-            >
-                <use href="sprite.svg#right" />
-            </svg>
-            <span>Next Page</span>
-    </button>
-    </div>
-</div>
+<nav class="pagination" aria-label="Pagination">
+    <ul class="pagination__list flex">
+        <li class="pagination__item">
+            <a class="button button--text button--small" href="#" aria-disabled="true" tabindex="-1">Previous</a>
+        </li>
+        <li class="pagination__item">
+            <a class="button button--text button--small" href="#" aria-current="page">1</a>
+        </li>
+        <li class="pagination__item">
+            <a class="button button--text button--small" href="#">2</a>
+        </li>
+        <li class="pagination__item">
+            <a class="button button--text button--small" href="#">3</a>
+        </li>
+        <li class="pagination__item">
+            <a class="button button--text button--small" href="#">4</a>
+        </li>
+        <li class="pagination__item">
+            <a class="button button--text button--small" href="#">5</a>
+        </li>
+        <li class="pagination__item">&hellip;</li>
+        <li class="pagination__item">
+            <a class="button button--text button--small" href="#">10</a>
+        </li>
+        <li class="pagination__item">
+            <a class="button button--text button--small" href="#">Next</a>
+        </li>
+    </ul>
+</nav>
 `;
