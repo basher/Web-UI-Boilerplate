@@ -45,7 +45,7 @@ export const ajaxAbortHandler = (arg: AjaxAbort): AbortSignal => {
  *      ajaxError({ error,  ajaxContainer });
  */
 interface AjaxError {
-    error: Error;
+    error: Error | unknown;
     ajaxContainer?: HTMLElement | null;
 }
 

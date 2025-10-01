@@ -45,23 +45,25 @@ export default class WebUIPredictiveSearch extends HTMLElement {
         }
 
         if (query && query?.length > 2) {
-            fetch(ajaxUrl, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                signal: ajaxAbortHandler({
-                    ajaxContainer,
-                    showAjaxLoader,
-                }),
-            })
-                .then((response) => {
+            const fetchData = async (): Promise<void> => {
+                try {
+                    const response = await fetch(ajaxUrl, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        signal: ajaxAbortHandler({
+                            ajaxContainer,
+                            showAjaxLoader,
+                        }),
+                    });
+
                     if (!response.ok) {
                         throw new Error(response.statusText);
                     }
-                    return response.json();
-                })
-                .then((data) => {
+
+                    const data = await response.json();
+
                     // Results array contains matches to search query.
                     const results: [] = data.results.filter(
                         (result: { name: string | string[] }) =>
@@ -85,13 +87,15 @@ export default class WebUIPredictiveSearch extends HTMLElement {
                         this.liveRegion.innerHTML = resultSummary;
                     }
                     ajaxContainer.innerHTML = searchResults(results);
-                })
-                .catch((error) => {
+                } catch (error) {
                     ajaxErrorHandler({
                         error,
                         ajaxContainer,
                     });
-                });
+                }
+            };
+
+            fetchData();
         }
     };
 

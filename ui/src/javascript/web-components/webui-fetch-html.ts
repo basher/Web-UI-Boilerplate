@@ -27,7 +27,7 @@ export default class WebUIFetchHtml extends HTMLElement {
     private handleClick(ajaxContainer: HTMLElement, ajaxUrl: string): void {
         const showAjaxLoader = true;
 
-        (async (): Promise<void> => {
+        const fetchData = async (): Promise<void> => {
             try {
                 const response = await fetch(ajaxUrl, {
                     method: 'GET',
@@ -49,6 +49,8 @@ export default class WebUIFetchHtml extends HTMLElement {
                     ajaxContainer,
                 });
             }
-        })();
+        };
+
+        fetchData();
     }
 }
