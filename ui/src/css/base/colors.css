@@ -9,11 +9,11 @@ Color settings.
     --color-primary-100: oklch(from var(--webui-color-brand) calc(l + 0.3) c h);
 
     /* Neutral */
-    --color-neutral-900: var(--webui-color-neutral-900);
-    --color-neutral-700: var(--webui-color-neutral-700);
-    --color-neutral-500: var(--webui-color-neutral-500);
-    --color-neutral-300: var(--webui-color-neutral-300);
-    --color-neutral-100: var(--webui-color-neutral-100);
+    --color-neutral-900: oklch(from var(--webui-color-neutral) 15.79% c h);
+    --color-neutral-700: oklch(from var(--webui-color-neutral) 32.11% c h);
+    --color-neutral-500: var(--webui-color-neutral);
+    --color-neutral-300: oklch(from var(--webui-color-neutral) 84.52% c h);
+    --color-neutral-100: oklch(from var(--webui-color-neutral) 96.19% c h);
 
     /* Accent */
     --color-success-500: var(--webui-color-accent-positive);

@@ -5,11 +5,7 @@
 */
 :root {
     --webui-color-brand: oklch(44.03% 0.1603 303.37); /* rebeccapurple */
-    --webui-color-neutral-100: oklch(96.19% 0 0);
-    --webui-color-neutral-300: oklch(84.52% 0 0);
-    --webui-color-neutral-500: oklch(59.82% 0 0);
-    --webui-color-neutral-700: oklch(32.11% 0 0);
-    --webui-color-neutral-900: oklch(15.79% 0 0);
+    --webui-color-neutral: oklch(59.82% 0 0);
     --webui-color-accent-positive: oklch(75.14% 0.1603 142.55);
     --webui-color-accent-negative: oklch(48.29% 0.1603 26.34);
     --webui-color-accent-neutral: oklch(82.25% 0.1603 96.1742);
