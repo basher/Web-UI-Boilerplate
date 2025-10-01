@@ -6,7 +6,7 @@ import '../../src/images/sprite.svg';
 import { browserSupportsAllFeatures } from './config/browser-supports-features';
 import { uiInit } from './ui-init';
 
-if (!browserSupportsAllFeatures()) {
+if (browserSupportsAllFeatures()) {
     uiInit();
 } else {
     // Dynamic import polyfills, then instantiate UI modules.
@@ -14,8 +14,8 @@ if (!browserSupportsAllFeatures()) {
         try {
             await import('./utils/polyfills');
             uiInit();
-        } catch (e) {
-            console.error(e);
+        } catch (error) {
+            console.error(error);
         }
     })();
 }

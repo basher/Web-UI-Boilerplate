@@ -27,27 +27,28 @@ export default class WebUIFetchHtml extends HTMLElement {
     private handleClick(ajaxContainer: HTMLElement, ajaxUrl: string): void {
         const showAjaxLoader = true;
 
-        fetch(ajaxUrl, {
-            method: 'GET',
-            signal: ajaxAbortHandler({
-                ajaxContainer,
-                showAjaxLoader,
-            }),
-        })
-            .then((response) => {
+        (async (): Promise<void> => {
+            try {
+                const response = await fetch(ajaxUrl, {
+                    method: 'GET',
+                    signal: ajaxAbortHandler({
+                        ajaxContainer,
+                        showAjaxLoader,
+                    }),
+                });
+
                 if (!response.ok) {
                     throw new Error(response.statusText);
                 }
-                return response.text();
-            })
-            .then((html) => {
+
+                const html = await response.text();
                 ajaxContainer.innerHTML = html;
-            })
-            .catch((error) => {
+            } catch (error) {
                 ajaxErrorHandler({
                     error,
                     ajaxContainer,
                 });
-            });
+            }
+        })();
     }
 }
