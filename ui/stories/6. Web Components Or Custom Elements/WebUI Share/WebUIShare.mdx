@@ -4,7 +4,7 @@ import * as WebUIShare from './WebUIShare.stories';
 <Meta of={WebUIShare} />
 
 # `<webui-share>`
-- Shares page URL, leveraging the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share).
+- Shares the current page's URL, leveraging the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share).
 - Fallback behaviour in non-supporting browsers allows user to copy the URL.
 - This Web Component contains a [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs).
 
@@ -20,4 +20,6 @@ Attribute | Behaviour
 `data-title` | Optional. Title of the different page.
 
 ## `<webui-share>` another URL
+- Shares another URL (e.g. inside a card).
+
 <Canvas of={WebUIShare.WebUIShareAnotherUrl} />

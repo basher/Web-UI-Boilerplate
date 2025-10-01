@@ -38,7 +38,7 @@ export const WebUIMakeClickableHtml = () => `
                         data-trigger
                         hidden
                     >
-                        Share
+                        Share [URL]
                     </button>
 
                     <div data-content>
@@ -52,7 +52,7 @@ export const WebUIMakeClickableHtml = () => `
                         />
                         <button
                             type="button"
-                            class="button button--text button--secondary"
+                            class="button button--text"
                             data-copy
                         >
                             Copy

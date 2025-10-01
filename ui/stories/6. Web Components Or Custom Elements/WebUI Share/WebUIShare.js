@@ -14,7 +14,7 @@ export const WebUIShareHtml = () => `
             >
                 <use href="sprite.svg#share" />
             </svg>
-            <span>Share</span>
+            <span>Share page</span>
         </button>
 
         <div data-content>
@@ -28,7 +28,7 @@ export const WebUIShareHtml = () => `
             />
             <button
                 type="button"
-                class="button button--text button--secondary"
+                class="button button--text"
                 data-copy
             >
                 Copy
@@ -56,7 +56,7 @@ export const WebUIShareAnotherUrlHtml = () => `
             >
                 <use href="sprite.svg#share" />
             </svg>
-            <span>Share</span>
+            <span>Share [URL]</span>
         </button>
 
         <div data-content>
