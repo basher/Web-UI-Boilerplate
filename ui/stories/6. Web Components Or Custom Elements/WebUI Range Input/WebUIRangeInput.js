@@ -3,6 +3,7 @@ export const WebUIRangeInputHtml = () => `
     <div class="form__field">
         <label for="range-input" class="label">
             Range slider
+            <span class="label__hint">Min 0, max 100</span>
         </label>
         <input
             class="input"
