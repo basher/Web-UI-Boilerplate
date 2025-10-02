@@ -12,11 +12,8 @@ export const WebUIRangeInputHtml = () => `
             min="0"
             max="100"
             step="10"
-            aria-valuenow="0"
-            aria-valuemin="0"
-            aria-valuemax="100"
         />
-        <output></output>
+        <output for="range-input"></output>
     </div>
 </webui-range-input>
 `;

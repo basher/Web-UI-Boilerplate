@@ -19,12 +19,11 @@ export default class WebUIRangeInput extends HTMLElement {
         bubble: HTMLOutputElement,
     ): void {
         range.setAttribute('value', range.value);
-        range.setAttribute('aria-valuenow', range.value);
         bubble.innerHTML = range.value;
     }
 
     // Handle constructor() event listeners.
-    public handleEvent() {
+    public handleEvent(): void {
         this.rangeInput &&
             this.rangeOutput &&
             this.handleValidRanges(this.rangeInput, this.rangeOutput);
