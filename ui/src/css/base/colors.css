@@ -20,7 +20,7 @@ Color settings.
         from var(--webui-color-neutral) calc(l + 0.25) c h
     );
     --color-neutral-100: oklch(
-        from var(--webui-color-neutral) calc(l + 0.35) c h
+        from var(--webui-color-neutral) calc(l + 0.38) c h
     );
 
     /* Accent */

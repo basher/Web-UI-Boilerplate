@@ -7,7 +7,7 @@ webui-prose {
     overflow-x: hidden; /* Just in case content is stupidly wide */
 
     /* Uses stack layout to handle spacing between prose elements, based on their rendered font size. */
-    > .stack {
+    > [class*='stack'] {
         --stack-gutter: 1em;
 
         /* Remove spacing for adjacent headings. */

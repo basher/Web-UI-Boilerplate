@@ -21,7 +21,7 @@ ${style}
             <a class="skiplinks__link  visually-hidden" href="#footer">Skip to footer</a>
         </nav>
 
-        <div class="wrapper wrapper--l">
+        <div class="wrapper--l">
             Page <code>&lt;header&gt;</code>
         </div>
     </header>
@@ -29,7 +29,7 @@ ${style}
     <main class="main" id="main">
         <h1 class="visually-hidden">Heading level 1</h1>
 
-        <div class="wrapper wrapper--fullbleed stack">
+        <div class="wrapper--fullbleed stack">
             <div class="banner banner--fullwidth">
                 <figure class="banner__media">
                     <picture>
@@ -78,7 +78,7 @@ ${style}
                 </div>
             </div>
 
-            <div class="wrapper wrapper--xl u-p-block--l">
+            <div class="wrapper--l u-p-block--l">
                 <div class="prose stack u-center">
                     <h2>Heading level 2</h2>
                     <h3>Heading level 3</h3>
@@ -86,86 +86,86 @@ ${style}
                 </div>
             </div>
 
-            <div class="wrapper wrapper--fullbleed skin-3">
-            <div class="wrapper wrapper--xl">
-                <ul class="grid grid--centered card-grid">
-                    <li>
-                        <a href="#" class="card">
-                            <figure class="card__media">
-                                <picture>
-                                    <source
-                                        srcset="https://dummyimage.com/400x300"
-                                        type="image/webp"
-                                    >
-                                    <img
-                                        class="image"
-                                        src="https://dummyimage.com/400x300"
-                                        alt="[alt]"
-                                        loading="lazy"
-                                        height="300"
-                                        width="400"
-                                    />
-                                </picture>
-                            </figure>
-                            <div class="card__content stack">
-                                <h3 class="card__title">Clickable card title</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="card">
-                            <figure class="card__media">
-                                <picture>
-                                    <source
-                                        srcset="https://dummyimage.com/400x300"
-                                        type="image/webp"
-                                    >
-                                    <img
-                                        class="image"
-                                        src="https://dummyimage.com/400x300"
-                                        alt="[alt]"
-                                        loading="lazy"
-                                        height="300"
-                                        width="400"
-                                    />
-                                </picture>
-                            </figure>
-                            <div class="card__content stack">
-                                <h3 class="card__title">Clickable card title</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="card">
-                            <figure class="card__media">
-                                <picture>
-                                    <source
-                                        srcset="https://dummyimage.com/400x300"
-                                        type="image/webp"
-                                    >
-                                    <img
-                                        class="image"
-                                        src="https://dummyimage.com/400x300"
-                                        alt="[alt]"
-                                        loading="lazy"
-                                        height="300"
-                                        width="400"
-                                    />
-                                </picture>
-                            </figure>
-                            <div class="card__content stack">
-                                <h3 class="card__title">Clickable card title</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium.</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <div class="wrapper--fullbleed skin-3">
+                <div class="wrapper--l">
+                    <ul class="grid grid--centered card-grid">
+                        <li>
+                            <a href="#" class="card">
+                                <figure class="card__media">
+                                    <picture>
+                                        <source
+                                            srcset="https://dummyimage.com/400x300"
+                                            type="image/webp"
+                                        >
+                                        <img
+                                            class="image"
+                                            src="https://dummyimage.com/400x300"
+                                            alt="[alt]"
+                                            loading="lazy"
+                                            height="300"
+                                            width="400"
+                                        />
+                                    </picture>
+                                </figure>
+                                <div class="card__content stack">
+                                    <h3 class="card__title">Clickable card title</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="card">
+                                <figure class="card__media">
+                                    <picture>
+                                        <source
+                                            srcset="https://dummyimage.com/400x300"
+                                            type="image/webp"
+                                        >
+                                        <img
+                                            class="image"
+                                            src="https://dummyimage.com/400x300"
+                                            alt="[alt]"
+                                            loading="lazy"
+                                            height="300"
+                                            width="400"
+                                        />
+                                    </picture>
+                                </figure>
+                                <div class="card__content stack">
+                                    <h3 class="card__title">Clickable card title</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="card">
+                                <figure class="card__media">
+                                    <picture>
+                                        <source
+                                            srcset="https://dummyimage.com/400x300"
+                                            type="image/webp"
+                                        >
+                                        <img
+                                            class="image"
+                                            src="https://dummyimage.com/400x300"
+                                            alt="[alt]"
+                                            loading="lazy"
+                                            height="300"
+                                            width="400"
+                                        />
+                                    </picture>
+                                </figure>
+                                <div class="card__content stack">
+                                    <h3 class="card__title">Clickable card title</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium.</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="wrapper wrapper--xl stack u-p-block--l">
+            <div class="wrapper--l stack u-p-block--l">
                 <h2>Heading level 2</h2>
                 <article class="card card--fullwidth">
                     <figure class="card__media">
@@ -220,7 +220,7 @@ ${style}
     </main>
 
     <footer class="footer" id="footer">
-        <div class="wrapper wrapper--l">
+        <div class="wrapper--l">
             Page <code>&lt;footer&gt;</code>
         </div>
     </footer>
