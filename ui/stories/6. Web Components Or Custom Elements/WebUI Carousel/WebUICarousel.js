@@ -15,7 +15,7 @@ ${style}
     ${args.showSlideCountPips === true ? 'data-slide-count-pips' : ''}
 >
     <section
-        class="carousel-wrapper"
+        class="carousel-container"
         aria-label="[meaningful label]"
         aria-roledescription="carousel"
     >

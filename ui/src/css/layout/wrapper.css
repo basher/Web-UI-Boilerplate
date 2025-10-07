@@ -1,4 +1,4 @@
-.wrapper {
+[class*='wrapper'] {
     --wrapper-max-width: 64rem;
 
     margin-inline: auto;

@@ -12,7 +12,7 @@ See https://every-layout.dev/layouts/sidebar/ for explanation of Flex behaviour.
     flex-grow: 1;
 }
 
-.sidebar-wrapper {
+.sidebar-container {
     display: flex;
     flex-wrap: wrap;
     gap: var(--gutter-m);

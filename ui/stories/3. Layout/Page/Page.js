@@ -40,7 +40,7 @@ ${style}
         Header.
     </header>
     <main class="main">
-        <div class="sidebar-wrapper page__sidebar">
+        <div class="sidebar-container page__sidebar">
             <div class="sidebar">
                 Sidebar.<br>
                 Can be an <code>&lt;aside&gt;</code>, depending on context and semantics.
@@ -64,7 +64,7 @@ ${style}
         Header.
     </header>
     <main class="main">
-        <div class="sidebar-wrapper page__sidebar">
+        <div class="sidebar-container page__sidebar">
             <div>
                 Content.
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>

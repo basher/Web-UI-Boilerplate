@@ -14,7 +14,7 @@ table,
     }
 }
 
-/* Responsive wrapper. */
-.table-wrapper[role='region'][tabindex] {
+/* Responsive container. */
+.table-container[role='region'][tabindex] {
     overflow: auto;
 }

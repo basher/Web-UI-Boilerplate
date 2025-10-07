@@ -3,7 +3,7 @@ const style = `
     .sb-show-main.sb-main-padded {
         padding: 0;
     }
-    .wrapper:not([class*="skin"]) {
+    [class*='wrapper']:not([class*="skin"]):not(.sbdocs-wrapper) {
         background: hsl(51, 100%, 45%, 15%);
         border: 1px dashed hsl(51, 100%, 45%);
     }
@@ -13,40 +13,40 @@ const style = `
 export const WrapperHtml = (args) => `
 ${style}
 <div ${args.turnParentIntoStack === true ? 'class="stack"' : ''}>
-    <div class="wrapper
-        u-${args.paddingBlock}
-        u-${args.paddingInline}
+    <div class="wrapper\
+ ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
+ ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
     ">
         Wrapper (default)
     </div>
-    <div class="wrapper
-        u-${args.paddingBlock}
-        u-${args.paddingInline}
-        ${args.skin}
+    <div class="wrapper\
+ ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
+ ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
+ ${args.skin === undefined ? '' : `${args.skin}`}\
     ">
         Apply a SKIN override to this wrapper
     </div>
-    <div class="wrapper wrapper--s
-        u-${args.paddingBlock}
-        u-${args.paddingInline}
+    <div class="wrapper--s\
+ ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
+ ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
     ">
         Wrapper (small)
     </div>
-    <div class="wrapper wrapper--l
-        u-${args.paddingBlock}
-        u-${args.paddingInline}
+    <div class="wrapper--l\
+ ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
+ ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
     ">
         Wrapper (large)
     </div>
-    <div class="wrapper wrapper--fullbleed
-        u-${args.paddingBlock}
-        u-${args.paddingInline}
+    <div class="wrapper--fullbleed\
+ ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
+ ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
     ">
         Wrapper (fullbleed)
     </div>
-    <div class="wrapper wrapper--fit-content
-        u-${args.paddingBlock}
-        u-${args.paddingInline}
+    <div class="wrapper--fit-content\
+ ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
+ ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
     ">
         Wrapper (fit-content)
     </div>

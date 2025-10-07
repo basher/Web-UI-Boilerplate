@@ -30,7 +30,7 @@ export const TableHtml = () => `
 
 export const ResponsiveTableHtml = () => `
 <div
-    class="table-wrapper"
+    class="table-container"
     role="region"
     tabindex="0"
     aria-labelledby="caption"

@@ -24,7 +24,7 @@ const style2 = `
 export const CarouselHtml = () => `
 ${style}
 <section
-    class="carousel-wrapper"
+    class="carousel-container"
     aria-label="[meaningful label]"
     aria-roledescription="carousel"
 >
@@ -103,7 +103,7 @@ ${style}
 export const CarouselFullwidthSlidesHtml = () => `
 ${style}
 <section
-    class="carousel-wrapper"
+    class="carousel-container"
     aria-label="[meaningful label]"
     aria-roledescription="carousel"
 >
@@ -151,7 +151,7 @@ ${style}
 export const CarouselClickableSlidesHtml = () => `
 ${style2}
 <section
-    class="carousel-wrapper"
+    class="carousel-container"
     aria-label="[meaningful label]"
     aria-roledescription="carousel"
 >

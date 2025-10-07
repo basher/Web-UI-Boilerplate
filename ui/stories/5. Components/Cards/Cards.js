@@ -168,7 +168,7 @@ export const CardGridHtml = () => `
 `;
 
 export const CardCarouselHtml = () => `
-<section class="carousel-wrapper" aria-label="[meaningful label for carousel]"
+<section class="carousel-container" aria-label="[meaningful label for carousel]"
 >
     <ul
         class="carousel carousel--has-clickable-slides card-carousel"
