@@ -7,6 +7,15 @@
     display: grid;
     gap: var(--grid-gap, 1rem);
 
+    /* Automatic grid layout (e.g. for galleries, card listings, etc) */
+    grid-template-columns: repeat(
+        var(--grid-auto-layout),
+        minmax(
+            min(var(--grid-item-min-width), 100%),
+            var(--grid-item-max-width)
+        )
+    );
+
     /* Let grid-gap handle spacing between grid items. */
     > * {
         margin: 0;
@@ -40,17 +49,6 @@
                 minmax(var(--grid-item-min-width), var(--grid-asymmetric-col2));
         }
     }
-}
-
-.grid {
-    /* Automatic grid layout (e.g. for galleries, card listings, etc) */
-    grid-template-columns: repeat(
-        var(--grid-auto-layout),
-        minmax(
-            min(var(--grid-item-min-width), 100%),
-            var(--grid-item-max-width)
-        )
-    );
 }
 
 /* Centered grid. */
