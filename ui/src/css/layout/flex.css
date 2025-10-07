@@ -1,4 +1,4 @@
-.flex {
+[class*='flex'] {
     --flex-gap: var(--gutter-m);
 
     display: flex;
