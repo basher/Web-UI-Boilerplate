@@ -120,7 +120,7 @@ export default class FormValidate extends HTMLElement {
     }
 
     // Handle constructor() event listeners.
-    public handleEvent(e: MouseEvent) {
+    public handleEvent(e: MouseEvent): void {
         if (e.type === 'submit') {
             this.handleSubmit(e);
         }

@@ -8,7 +8,7 @@ export default class WebUIMakeClickable extends HTMLElement {
     }
 
     // Handle constructor() event listeners.
-    public handleEvent(e: MouseEvent) {
+    public handleEvent(e: MouseEvent): void {
         // Enable text to be selectable.
         if (document.getSelection()?.type === 'Range') {
             return;
