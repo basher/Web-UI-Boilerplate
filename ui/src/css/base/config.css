@@ -42,10 +42,9 @@ Config settings.
     --animation-slow: 500ms ease-in-out;
 
     /* z-index.
-    1. Boilerplate uses native HTML <dialog> for modals, so 'z-modal' is probably redundant now.
-    2. There's a subtle distinction between a modal that sits above everything, and a popup (e.g. dropdown menu). These will probably be replaced by Popover API.
+    1. Boilerplate uses native HTML <dialog> for modals, so '--z-modal' has been deprecated.
+    2. Popups (e.g. dropdown navigation menu) using '--z-popup' will eventually be replaced by Popover API.
     */
-    --z-modal: 1000;
     --z-popup: 999;
     --z-default: 1;
     --z-reset: 0;
