@@ -4,11 +4,15 @@ import * as WebUICarousel from './WebUICarousel.stories';
 <Meta of={WebUICarousel} />
 
 # `<webui-carousel>`
-- This is an enhancement of the [default CSS carousel](/story/components-carousel--carousel), with NEXT/PREVIOUS buttons, and an `aria-live` region to announce slide count (which can be optionally shown).
-- When using NEXT/PREVIOUS buttons, keyboard `focus` is modified such that **only visible slides are focusable**.
+- This is an enhancement of the [default CSS carousel](/story/components-carousel--carousel), with NEXT/PREVIOUS buttons.
 
 <Canvas of={WebUICarousel.WebUICarousel} />
 <Controls of={WebUICarousel.WebUICarousel} />
+
+## Accessibility considerations
+- Keyboard `focus` is modified such that **only visible slides are focusable**.
+- The carousel can still be operated by the <kbd>left</kbd> or <kbd>right</kbd> arrow keys, but JavaScript now manages this behaviour.
+- An `aria-live` region is used for announcing which slide is currently selected. This region can be optionally shown in the UI.
 
 ## Required and optional HTML  or `data-` attributes
 

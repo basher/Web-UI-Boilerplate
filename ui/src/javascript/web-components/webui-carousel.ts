@@ -123,8 +123,8 @@ export default class WebUICarousel extends HTMLElement {
     }
 
     private showPrevNextButtons(): void {
-        // Prevent keyboard :FOCUS on carousel when displaying PREV/NEXT buttons.
-        this.carousel?.setAttribute('tabIndex', '-1');
+        // Need to remove 'tabindex' so that 'arrow' keys work (in 'handleKeyboard' method) to move the carousel to the prev/next slide. Setting 'tabindex="-1"' does not work.
+        this.carousel?.removeAttribute('tabIndex');
 
         const buttonGroup = document.createElement('div');
         buttonGroup.classList.add('carousel__controls', 'button-group');
@@ -239,14 +239,12 @@ export default class WebUICarousel extends HTMLElement {
     }
 
     private handleKeyboard(): void {
-        this.carousel?.addEventListener('keydown', (e) => {
+        this.carousel?.addEventListener('keydown', (e: KeyboardEvent) => {
             switch (e.code) {
                 case 'ArrowRight':
-                    e.preventDefault();
                     this.goToNextSlide();
                     break;
                 case 'ArrowLeft':
-                    e.preventDefault();
                     this.goToPrevSlide();
                     break;
                 default:

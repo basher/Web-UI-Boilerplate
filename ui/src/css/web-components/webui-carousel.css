@@ -1,4 +1,10 @@
 webui-carousel {
+    .carousel:focus-visible {
+        & ~ .carousel-instructions {
+            display: none;
+        }
+    }
+
     .carousel__slide {
         filter: grayscale(60%);
         opacity: 0.8;
