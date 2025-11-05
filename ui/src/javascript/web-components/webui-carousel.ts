@@ -123,9 +123,6 @@ export default class WebUICarousel extends HTMLElement {
     }
 
     private showPrevNextButtons(): void {
-        // Need to remove 'tabindex' so that 'arrow' keys work (in 'handleKeyboard' method) to move the carousel to the prev/next slide. Setting 'tabindex="-1"' does not work.
-        this.carousel?.removeAttribute('tabIndex');
-
         const buttonGroup = document.createElement('div');
         buttonGroup.classList.add('carousel__controls', 'button-group');
         buttonGroup.setAttribute('role', 'region');
