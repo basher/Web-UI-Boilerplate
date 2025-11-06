@@ -23,6 +23,8 @@ export default class WebUICarousel extends HTMLElement {
 
         if (!this.carousel || this.slides.length === 0) return;
 
+        this.carousel.addEventListener('keydown', this);
+
         this.init();
     }
 
@@ -45,11 +47,8 @@ export default class WebUICarousel extends HTMLElement {
         // Show PREV/NEXT buttons.
         this.showPrevNextButtons();
 
-        // Manage :FOCUS event on slides.
+        // Manage :FOCUS states on slides.
         this.handleFocus();
-
-        // Manage keyboard (ARROW keys) events on carousel.
-        this.handleKeyboard();
     }
 
     private setVisibleSlide(): void {
@@ -235,18 +234,17 @@ export default class WebUICarousel extends HTMLElement {
         });
     }
 
-    private handleKeyboard(): void {
-        this.carousel?.addEventListener('keydown', (e: KeyboardEvent) => {
-            switch (e.code) {
-                case 'ArrowRight':
-                    this.goToNextSlide();
-                    break;
-                case 'ArrowLeft':
-                    this.goToPrevSlide();
-                    break;
-                default:
-                    break;
-            }
-        });
+    // Handle constructor() event listeners.
+    public handleEvent(e: KeyboardEvent): void {
+        switch (e.code) {
+            case 'ArrowRight':
+                this.goToNextSlide();
+                break;
+            case 'ArrowLeft':
+                this.goToPrevSlide();
+                break;
+            default:
+                break;
+        }
     }
 }
