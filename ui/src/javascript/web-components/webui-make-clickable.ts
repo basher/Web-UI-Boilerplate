@@ -20,6 +20,7 @@ export default class WebUIMakeClickable extends HTMLElement {
             return;
         }
 
+        // Click anywhere else in the component to follow the primary link. Note that any other links will just work normally.
         if (e.target !== this.link) {
             this.link?.click();
         }
