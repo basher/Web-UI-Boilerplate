@@ -238,9 +238,11 @@ export default class WebUICarousel extends HTMLElement {
     public handleEvent(e: KeyboardEvent): void {
         switch (e.code) {
             case 'ArrowRight':
+                e.preventDefault();
                 this.goToNextSlide();
                 break;
             case 'ArrowLeft':
+                e.preventDefault();
                 this.goToPrevSlide();
                 break;
             default:
