@@ -1,5 +1,5 @@
 export default class WebUIVideoPlayer extends HTMLElement {
-    private btnPlay: HTMLAnchorElement | null;
+    private btnPlay: HTMLButtonElement | null;
     private mediaContainer: HTMLElement | null;
     private iframe: HTMLIFrameElement | null;
     private dialog: HTMLDialogElement | null;
@@ -7,7 +7,7 @@ export default class WebUIVideoPlayer extends HTMLElement {
     constructor() {
         super();
 
-        this.btnPlay = this.querySelector('[data-open]');
+        this.btnPlay = this.querySelector('[command]');
         this.mediaContainer = this.querySelector('.responsive-media');
         this.iframe = this.querySelector('.responsive-media__item');
         this.dialog = this.querySelector('dialog');
@@ -20,19 +20,15 @@ export default class WebUIVideoPlayer extends HTMLElement {
     }
 
     private lazyload(): void {
+        this.iframe?.setAttribute('data-src', this.iframe.src);
+
         // Browser does not support native lazyload for iframes.
-        if (
-            'loading' in HTMLIFrameElement.prototype === false &&
-            this.btnPlay?.href
-        ) {
-            this.iframe?.setAttribute('data-src', this.btnPlay.href);
+        if ('loading' in HTMLIFrameElement.prototype === false) {
             this.iframe?.setAttribute('src', '');
         }
     }
 
-    private handlePlay(e: MouseEvent): void {
-        e.preventDefault();
-
+    private handlePlay(): void {
         // Reset iframe 'src' back to original value.
         this.iframe?.dataset.src &&
             this.iframe?.setAttribute('src', this.iframe?.dataset.src);
@@ -49,8 +45,12 @@ export default class WebUIVideoPlayer extends HTMLElement {
         }
     }
 
-    // When modal is closed, the video still plays! Temp "fix" using MutationObserver to detect when the <dialog> 'open' attribute is removed.
-    // See https://bugs.chromium.org/p/chromium/issues/detail?id=1481718#c1.
+    /*
+        When modal is closed, the video still plays!
+        - Temp "fix" using MutationObserver to detect when the <dialog> 'open' attribute is removed.
+        - See https://bugs.chromium.org/p/chromium/issues/detail?id=1481718#c1.
+        - This "fix" does not work in Firefox.
+    */
     private handleModalClose(): void {
         const targetNode = this.dialog;
         const config = { attributes: true };
@@ -58,12 +58,7 @@ export default class WebUIVideoPlayer extends HTMLElement {
         const callback = (mutationList: MutationRecord[]): void => {
             for (const mutation of mutationList) {
                 if (mutation.attributeName === 'open') {
-                    if (
-                        targetNode?.hasAttribute('open') &&
-                        this.btnPlay?.href
-                    ) {
-                        this.iframe?.setAttribute('src', this.btnPlay.href);
-                    } else {
+                    if (!targetNode?.hasAttribute('open')) {
                         this.iframe?.setAttribute('src', '');
                     }
                 }
@@ -75,7 +70,7 @@ export default class WebUIVideoPlayer extends HTMLElement {
     }
 
     // Handle constructor() event listeners.
-    public handleEvent(e: MouseEvent): void {
-        this.handlePlay(e);
+    public handleEvent(): void {
+        this.handlePlay();
     }
 }
