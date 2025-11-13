@@ -9,7 +9,7 @@ export const ModalHtml = () => `
     type="button"
     class="button button--text button--primary"
     command="show-modal"
-	commandfor="modal1"
+    commandfor="modal1"
 >
     Open modal
 </button>
@@ -59,7 +59,7 @@ export const ModalOverflowHtml = () => `
     type="button"
     class="button button--text button--primary"
     command="show-modal"
-	commandfor="modal2"
+    commandfor="modal2"
 >
     Open modal
 </button>
@@ -125,7 +125,7 @@ export const ModalMultipleCloseButtonsHtml = () => `
     type="button"
     class="button button--text button--primary"
     command="show-modal"
-	commandfor="modal3"
+    commandfor="modal3"
 >
     Open modal
 </button>

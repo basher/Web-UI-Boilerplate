@@ -5,22 +5,26 @@ import * as Modal from './Modal.stories';
 
 # Modal
 - Uses the native HTML `<dialog>` element. See [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) docs on MDN.
+- The button that opens the modal uses the [Invoker Commands API](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API#creating_declarative_dialogs).
+- No JavaScript is required, except for non-supporting browsers (which use this [polyfill](https://github.com/keithamus/invokers-polyfill/)).
+- This boilerplate also includes an example of a [`<webui-modal>`](/docs/web-components-or-custom-elements-webui-modal--docs) Web Component.
 
 <Canvas of={Modal.Modal} />
 
 ## Accessibility considerations
 - There are ongoing discussions about the [initial focus behaviour](https://github.com/whatwg/html/wiki/dialog--initial-focus,-a-proposal) for `<dialog>`.
-    - Keyboard `focus` is currently being set on the `data-content` using `tabindex="-1"` to ensure that content gets announced first, before the `data-close` button.
-- When modal is closed using the native `close()` method, focus is set back to the button that opened the modal (default browser behaviour).
-- Modal can be closed by clicking the <kbd>esc</kbd> key (default browser behaviour), or by clicking outside the modal (JavaScript enhancement).
+    - Keyboard `focus` is currently being set on the first focusable element in the modal.
+- Closing the modal is handled by the [closedby](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute on the `<dialog>`, and focus is set on the button that invoked the modal.
 
-## Required and optional HTML  or `data-` attributes
+## Required and optional HTML attributes
 
 Attribute | Behaviour
 --- | ---
-`data-open` | Required. Button that opens the modal dialog.
-`data-close` | Required. Button(s) that close the modal dialog.
-`data-content` | Required. Identifies the modal dialog content.
+`command` | Required. Button that opens the modal dialog.
+`commandfor` | Required. Button that opens the modal dialog. This is a reference to the modal's `id`.
+`id` | Required. Modal dialog, which must match `commandfor` on the invoking button.
+`command` | Optional. Button that closes the modal dialog.
+`commandfor` | Optional. Button that closes the modal dialog. This is a reference to the modal's `id`.
 
 ### Useful articles
 - [Is dialog ready to be used?](https://www.scottohara.me/blog/2019/03/05/open-dialog.html)

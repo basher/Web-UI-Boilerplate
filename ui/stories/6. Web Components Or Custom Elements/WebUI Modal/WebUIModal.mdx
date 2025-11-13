@@ -4,15 +4,13 @@ import * as WebUIModal from './WebUIModal.stories';
 <Meta of={WebUIModal} />
 
 # `<webui-modal>`
-- Uses the native HTML `<dialog>` element. See [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) docs on MDN.
+- This is a JavaScript-based implementation of the native [modal](/docs/components-modal--docs) component.
+- It still uses the native HTML `<dialog>` element, but opening & closing are handled by JavaScript.
 
 <Canvas of={WebUIModal.WebUIModal} />
 
 ## Accessibility considerations
-- There are ongoing discussions about the [initial focus behaviour](https://github.com/whatwg/html/wiki/dialog--initial-focus,-a-proposal) for `<dialog>`.
-    - Keyboard `focus` is currently being set on the `data-content` using `tabindex="-1"` to ensure that content gets announced first, before the `data-close` button.
-- When modal is closed using the native `close()` method, focus is set back to the button that opened the modal (default browser behaviour).
-- Modal can be closed by clicking the <kbd>esc</kbd> key (default browser behaviour), or by clicking outside the modal (JavaScript enhancement).
+- Keyboard `focus` is currently being set on the `data-content` using `tabindex="-1"` to ensure that content gets announced first, before the `data-close` button.
 
 ## Required and optional HTML  or `data-` attributes
 
@@ -21,13 +19,3 @@ Attribute | Behaviour
 `data-open` | Required. Button that opens the modal dialog.
 `data-close` | Required. Button(s) that close the modal dialog.
 `data-content` | Required. Identifies the modal dialog content.
-
-### Useful articles
-- [Is dialog ready to be used?](https://www.scottohara.me/blog/2019/03/05/open-dialog.html)
-- [Defending dialog](https://samthor.au/2021/in-defence-of-dialog/) by the official polyfill maintainer.
-
-## Modal with overflowing content
-<Canvas of={WebUIModal.WebUIModalOverflow} />
-
-## Modal with multiple close buttons
-<Canvas of={WebUIModal.WebUIModalMultipleCloseButtons} />
