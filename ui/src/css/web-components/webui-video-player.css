@@ -1,8 +1,9 @@
 webui-video-player {
-    [data-open] {
+    [command] {
         display: grid;
         grid-template-areas: 'video';
         inline-size: fit-content;
+        padding: unset;
         place-items: center;
 
         > * {
@@ -14,18 +15,7 @@ webui-video-player {
         }
     }
 
-    /* Without JS, still show the modal open link so the target opens in the browser window rather than a modal. */
-    &:not(:defined) {
-        webui-modal [data-open] {
-            display: inline-block;
-        }
-
-        .icon {
-            display: none;
-        }
-    }
-
-    .modal__dialog {
+    dialog {
         inline-size: 100%;
     }
 }
