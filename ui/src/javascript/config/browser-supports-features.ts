@@ -10,5 +10,16 @@ export const browserSupportsAllFeatures = (): boolean => {
     const isDialog =
         typeof document.createElement('dialog').showModal === 'function';
 
-    return isDialog;
+    // Native Invoker Commands API.
+    const isInvokerCommand =
+        typeof HTMLButtonElement !== 'undefined' &&
+        'command' in HTMLButtonElement.prototype &&
+        'source' in ((globalThis.CommandEvent || {}).prototype || {});
+
+    return isDialog && isInvokerCommand;
 };
+
+declare global {
+    // eslint-disable-next-line no-var, @typescript-eslint/no-explicit-any
+    var CommandEvent: any;
+}

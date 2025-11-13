@@ -1,12 +1,12 @@
 import { Meta, Canvas } from '@storybook/blocks';
-import * as WebUIModal from './WebUIModal.stories';
+import * as Modal from './Modal.stories';
 
-<Meta of={WebUIModal} />
+<Meta of={Modal} />
 
-# `<webui-modal>`
+# Modal
 - Uses the native HTML `<dialog>` element. See [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) docs on MDN.
 
-<Canvas of={WebUIModal.WebUIModal} />
+<Canvas of={Modal.Modal} />
 
 ## Accessibility considerations
 - There are ongoing discussions about the [initial focus behaviour](https://github.com/whatwg/html/wiki/dialog--initial-focus,-a-proposal) for `<dialog>`.
@@ -27,7 +27,7 @@ Attribute | Behaviour
 - [Defending dialog](https://samthor.au/2021/in-defence-of-dialog/) by the official polyfill maintainer.
 
 ## Modal with overflowing content
-<Canvas of={WebUIModal.WebUIModalOverflow} />
+<Canvas of={Modal.ModalOverflow} />
 
 ## Modal with multiple close buttons
-<Canvas of={WebUIModal.WebUIModalMultipleCloseButtons} />
+<Canvas of={Modal.ModalMultipleCloseButtons} />
