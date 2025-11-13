@@ -29,7 +29,11 @@ export const WebUIVideoPlayerHtml = () => `
         </svg>
     </button>
 
-    <dialog class="modal__dialog" id="video1">
+    <dialog
+        class="modal__dialog"
+        closedby="any"
+        id="video1"
+    >
         <div class="modal__header">
             <button
                 type="button"

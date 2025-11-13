@@ -14,7 +14,11 @@ export const ModalHtml = () => `
     Open modal
 </button>
 
-<dialog class="modal__dialog" id="modal1">
+<dialog
+    class="modal__dialog"
+    closedby="any"
+    id="modal1"
+>
     <div class="modal__header">
         <button
             type="button"
@@ -64,7 +68,11 @@ export const ModalOverflowHtml = () => `
     Open modal
 </button>
 
-<dialog class="modal__dialog" id="modal2">
+<dialog
+    class="modal__dialog"
+    closedby="any"
+    id="modal2"
+>
     <div class="modal__header">
         <button
             type="button"
@@ -130,7 +138,11 @@ export const ModalMultipleCloseButtonsHtml = () => `
     Open modal
 </button>
 
-<dialog class="modal__dialog" id="modal3">
+<dialog
+    class="modal__dialog"
+    closedby="any"
+    id="modal3"
+>
     <div class="modal__content">
         <h2>Modal dialog</h2>
 
