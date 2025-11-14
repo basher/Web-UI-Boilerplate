@@ -10,6 +10,7 @@ export const ModalHtml = () => `
     class="button button--text button--primary"
     command="show-modal"
     commandfor="modal1"
+    aria-haspopup="dialog"
 >
     Open modal
 </button>
@@ -64,6 +65,7 @@ export const ModalOverflowHtml = () => `
     class="button button--text button--primary"
     command="show-modal"
     commandfor="modal2"
+    aria-haspopup="dialog"
 >
     Open modal
 </button>
@@ -134,6 +136,7 @@ export const ModalMultipleCloseButtonsHtml = () => `
     class="button button--text button--primary"
     command="show-modal"
     commandfor="modal3"
+    aria-haspopup="dialog"
 >
     Open modal
 </button>

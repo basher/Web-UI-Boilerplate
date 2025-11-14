@@ -25,11 +25,6 @@ export default class WebUIModal extends HTMLElement {
 
     private setupA11y(): void {
         this.btnModalOpen?.setAttribute('aria-haspopup', 'dialog');
-
-        if (this.btnModalOpen?.nodeName === 'A') {
-            // Assign 'button' role to <a>.
-            this.btnModalOpen.setAttribute('role', 'button');
-        }
     }
 
     private handleOpen(): void {
@@ -63,13 +58,13 @@ export default class WebUIModal extends HTMLElement {
         const target = e.currentTarget as HTMLButtonElement;
 
         // Ensure button can open modal with ENTER and SPACEBAR.
-        if (e.type === 'keydown' && e.code !== 'Enter' && e.code !== 'Space')
-            return;
+        // if (e.type === 'keydown' && e.code !== 'Enter' && e.code !== 'Space')
+        //     return;
 
         // Click 'open' button.
         if (target?.dataset.open === '') {
             // Prevent opening <a href>.
-            e.preventDefault();
+            // e.preventDefault();
             this.handleOpen();
         }
 

@@ -5,6 +5,7 @@ export const WebUIVideoPlayerHtml = () => `
         class="button"
         command="show-modal"
         commandfor="video1"
+        aria-haspopup="dialog"
     >
         <picture>
             <source

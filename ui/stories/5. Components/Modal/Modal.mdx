@@ -15,13 +15,15 @@ import * as Modal from './Modal.stories';
 - There are ongoing discussions about the [initial focus behaviour](https://github.com/whatwg/html/wiki/dialog--initial-focus,-a-proposal) for `<dialog>`.
     - Keyboard `focus` is currently being set, by default, on the first focusable element in the modal (e.g. the close button).
 - Closing the modal is handled by the [closedby](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute on the `<dialog>`, and focus is set on the button that invoked the modal.
+- Add `aria-haspopup="dialog"` to the button that invokes the modal dialog, to announce to assistive technologies that the button opens a dialog.
 
 ## Required and optional HTML attributes
 
 Attribute | Behaviour
 --- | ---
-`command` | Required. On the button that opens the modal dialog.
-`commandfor` | Required. On the button that opens the modal dialog. This is a reference to the modal's `id`.
+`command` | Required. On the button that invokes the modal dialog.
+`commandfor` | Required. On the button that invokes the modal dialog. This is a reference to the modal's `id`.
+`aria-haspopup="dialog"` | Required. On the button that invokes the modal dialog.
 `id` | Required. On the dialog. Must match `commandfor` on the invoking button.
 `closedby` | Optional. On the dialog. Defines how the [modal can be closed](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby).
 `command` | Optional. On the button that closes the modal dialog.

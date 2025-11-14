@@ -6,6 +6,7 @@ export const ImageGalleryHtml = () => `
             class="button"
             command="show-modal"
             commandfor="image1"
+            aria-haspopup="dialog"
         >
             <picture>
                 <source
@@ -76,6 +77,7 @@ export const ImageGalleryHtml = () => `
             class="button"
             command="show-modal"
             commandfor="image2"
+            aria-haspopup="dialog"
         >
             <picture>
                 <source
@@ -146,6 +148,7 @@ export const ImageGalleryHtml = () => `
             class="button"
             command="show-modal"
             commandfor="image3"
+            aria-haspopup="dialog"
         >
             <picture>
                 <source
@@ -216,6 +219,7 @@ export const ImageGalleryHtml = () => `
             class="button"
             command="show-modal"
             commandfor="image4"
+            aria-haspopup="dialog"
         >
             <picture>
                 <source
@@ -286,6 +290,7 @@ export const ImageGalleryHtml = () => `
             class="button"
             command="show-modal"
             commandfor="image5"
+            aria-haspopup="dialog"
         >
             <picture>
                 <source
