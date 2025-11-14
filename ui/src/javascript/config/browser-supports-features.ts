@@ -6,17 +6,13 @@
     - https://golb.hplar.ch/2018/02/Conditionally-load-polyfills.html.
 */
 export const browserSupportsAllFeatures = (): boolean => {
-    // Native <dialog>.
-    const isDialog =
-        typeof document.createElement('dialog').showModal === 'function';
-
     // Native Invoker Commands API.
     const isInvokerCommand =
         typeof HTMLButtonElement !== 'undefined' &&
         'command' in HTMLButtonElement.prototype &&
         'source' in ((globalThis.CommandEvent || {}).prototype || {});
 
-    return isDialog && isInvokerCommand;
+    return isInvokerCommand;
 };
 
 declare global {

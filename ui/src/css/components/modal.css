@@ -35,28 +35,6 @@ dialog {
     }
 }
 
-/* "dialogPolyfill" styles. */
-.dialog-polyfill {
-    color: inherit;
-    inset: 0;
-    position: fixed;
-
-    &:not([open]) {
-        display: none;
-    }
-
-    + .backdrop {
-        background: var(--color-backdrop);
-        inset: 0;
-        position: fixed;
-    }
-
-    ~ ._dialog_overlay {
-        inset: 0;
-        position: fixed;
-    }
-}
-
 /* Hide overflow on <body> when modal is open. */
 body:has(dialog[open]) {
     overflow: hidden;
