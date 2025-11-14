@@ -48,6 +48,7 @@
         "@storybook/html-vite": "^8.4.7",
         "@typescript-eslint/eslint-plugin": "^5.41.0",
         "@typescript-eslint/parser": "^5.41.0",
+        "baseline-status": "^1.0.11",
         "cheerio": "^1.0.0-rc.11",
         "colors": "^1.4.0",
         "cross-env": "^7.0.3",
