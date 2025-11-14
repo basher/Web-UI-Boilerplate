@@ -57,14 +57,12 @@ export default class WebUIModal extends HTMLElement {
     public handleEvent(e: KeyboardEvent): void {
         const target = e.currentTarget as HTMLButtonElement;
 
-        // Ensure button can open modal with ENTER and SPACEBAR.
-        // if (e.type === 'keydown' && e.code !== 'Enter' && e.code !== 'Space')
-        //     return;
+        // Ignore all keypresses except ENTER and SPACEBAR.
+        if (e.type === 'keydown' && e.code !== 'Enter' && e.code !== 'Space')
+            return;
 
         // Click 'open' button.
         if (target?.dataset.open === '') {
-            // Prevent opening <a href>.
-            // e.preventDefault();
             this.handleOpen();
         }
 
