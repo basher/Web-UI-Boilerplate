@@ -5,6 +5,7 @@ import * as Accordion from './Accordion.stories';
 
 # Accordion
 - Uses the native HTML `<details>`|`<summary>` elements.
+- The `::details-content` pseudo-element is used to animate the accordion opening & closing.
 
 <Canvas of={Accordion.Accordion} />
 
@@ -13,6 +14,9 @@ import * as Accordion from './Accordion.stories';
     - [Scott O'Hara](https://www.scottohara.me//blog/2022/09/12/details-summary.html).
     - [Dave Rupert](https://daverupert.com/2019/12/why-details-is-not-an-accordion/).
 - An alternative approach is to use the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) Web Component.
+
+## Browser compatibility
+<baseline-status featureId="details-content"></baseline-status>
 
 ## Exclusive accordion
 Uses the `name` attribute on `<details>` elements to create an exclusive accordion, where only one section can be open at a time.
