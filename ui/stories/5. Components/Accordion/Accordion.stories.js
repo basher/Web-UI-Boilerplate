@@ -15,7 +15,7 @@ export const Accordion = {
 export const AccordionExclusive = {
     render: () => AccordionExclusiveHtml(),
 };
-AccordionExclusive.storyName = 'Accordion Exclusive';
+AccordionExclusive.storyName = 'Exclusive Accordion';
 
 export const AccordionCustomIcon = {
     render: () => AccordionCustomIconHtml(),

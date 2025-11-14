@@ -1,0 +1,12 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as ImageGallery from './ImageGallery.stories';
+
+<Meta of={ImageGallery} />
+
+# Image gallery
+- This component uses the [modal](/docs/components-modal--docs) component to create a simple "lightbox".
+- The image thumbnails are arranged with a simple [grid list layout](/story/layout-grid--grid-list).
+
+> Please note: For brevity, the large images only have a subset of the [responsive image](/docs/components-images--docs) `<source>` markup in the `<picture>` element.
+
+<Canvas of={ImageGallery.ImageGallery} />

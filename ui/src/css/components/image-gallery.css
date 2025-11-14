@@ -1,21 +1,10 @@
-webui-image-gallery {
-    [data-open] {
-        display: block;
-    }
-
-    /* Without JS, still show the modal open link so the target opens in the browser window rather than a modal. */
-    &:not(:defined) {
-        webui-modal [data-open] {
-            display: block;
-        }
-    }
-
-    .grid {
+.image-gallery {
+    &.grid {
         --grid-auto-layout: auto-fill;
+    }
 
-        > * {
-            display: block;
-        }
+    [command='show-modal'] {
+        padding: unset;
     }
 
     .modal__dialog[open] {
@@ -38,7 +27,6 @@ webui-image-gallery {
 
     .modal__content {
         margin-block-start: 0;
-        z-index: var(--z-reset);
     }
 
     .modal__close {

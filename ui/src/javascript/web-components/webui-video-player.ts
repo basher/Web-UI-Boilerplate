@@ -20,6 +20,7 @@ export default class WebUIVideoPlayer extends HTMLElement {
     }
 
     private lazyload(): void {
+        // 'data-src' attribute is used later in 'handlePlay()' method.
         this.iframe?.setAttribute('data-src', this.iframe.src);
 
         // Browser does not support native lazyload for iframes.

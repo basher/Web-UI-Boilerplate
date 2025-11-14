@@ -1,5 +1,5 @@
 webui-video-player {
-    [command] {
+    [command='show-modal'] {
         display: grid;
         grid-template-areas: 'video';
         inline-size: fit-content;
