@@ -1,7 +1,6 @@
 /* Github Flavoured Markdown */
 import remarkGfm from 'remark-gfm';
 
-/** @type { import('@storybook/html-webpack5').StorybookConfig } */
 const config = {
     stories: [
         '../stories/**/*.mdx',
@@ -21,15 +20,8 @@ const config = {
                 },
             },
         },
-        // {
-        //     name: '@storybook/addon-essentials',
-        //     options: {
-        //         actions: false,
-        //         backgrounds: false,
-        //     }
-        // },
         '@etchteam/storybook-addon-status',
-        'storybook-theme-switch-addon'
+        // 'storybook-theme-switch-addon'
     ],
 
     framework: {

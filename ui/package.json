@@ -38,7 +38,7 @@
   ],
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",
-    "@etchteam/storybook-addon-status": "^4.2.4",
+    "@etchteam/storybook-addon-status": "^8.0.0",
     "@storybook/addon-a11y": "^10.0.8",
     "@storybook/addon-docs": "^10.0.8",
     "@storybook/addon-links": "^10.0.8",
@@ -60,7 +60,6 @@
     "prettier": "^3.3.3",
     "remark-gfm": "^4.0.0",
     "storybook": "^10.0.8",
-    "storybook-theme-switch-addon": "^1.0.1",
     "stylelint": "^16.10.0",
     "stylelint-config-standard": "^36.0.1",
     "stylelint-order": "^6.0.4",
