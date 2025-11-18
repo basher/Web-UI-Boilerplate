@@ -21,13 +21,13 @@ const config = {
                 },
             },
         },
-        {
-            name: '@storybook/addon-essentials',
-            options: {
-                actions: false,
-                backgrounds: false,
-            }
-        },
+        // {
+        //     name: '@storybook/addon-essentials',
+        //     options: {
+        //         actions: false,
+        //         backgrounds: false,
+        //     }
+        // },
         '@etchteam/storybook-addon-status',
         'storybook-theme-switch-addon'
     ],
