@@ -1,4 +1,4 @@
-import { Meta, Canvas } from '@storybook/blocks';
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
 import * as WebUIPredictiveSearch from './WebUIPredictiveSearch.stories';
 
 <Meta of={WebUIPredictiveSearch} />
@@ -17,6 +17,6 @@ import * as WebUIPredictiveSearch from './WebUIPredictiveSearch.stories';
 
 Attribute | Behaviour
 --- | ---
-`data-fetch-target` | Required. On the button that triggers the Fetch request. The value must match `data-fetch-container`.
+`data-fetch-url` | Required. On the search input that triggers the Fetch request. API endpoint for data to be fetched.
+`data-fetch-target` | Required. On the search input that triggers the Fetch request. The value must match `data-fetch-container`.
 `data-fetch-container` | Required. On the ARIA live region. The value must match `data-fetch-target`.
-`data-fetch-url` | Required. API endpoint for data to be fetched.

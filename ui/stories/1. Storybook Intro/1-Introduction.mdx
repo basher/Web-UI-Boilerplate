@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { Meta } from '@storybook/addon-docs/blocks';
 
 <Meta title="Web UI Storybook/Introduction" />
 
@@ -43,6 +43,9 @@ Storybook comes with 2 default accessibility testing tools:
 - Valid UI theme names are located in `ui/scripts/theme-config.js`
 
 ### 2. In Storybook
+- Uses the [storybook-theme-switch-addon](https://www.npmjs.com/package/storybook-theme-switch-addon).
+> NOTE: This addon has been temporarily disabled in Storybook 10 due to compatibility issues. It will be re-enabled in a future update.
+
 > When running Storybook locally, theme switching is only possible if CSS themes have been bundled via `npm run bundle-all-themes`. This happens automatically in the live published Storybook.
 
 - Override the CSS theme by clicking the paintbrush icon in Storybook's main toolbar:

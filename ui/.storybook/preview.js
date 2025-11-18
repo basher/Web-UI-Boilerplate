@@ -1,4 +1,4 @@
-/** @type { import('@storybook/html').Preview } */
+/** @type { import('@storybook/html-vite').Preview } */
 const preview = {
     parameters: {
         options: {
@@ -7,22 +7,25 @@ const preview = {
             },
         },
     },
-    globalTypes: {
-        stylesheets: {
-            themes: [
-                {
-                    id: "default-theme",
-                    title: "Whitelabel",
-                    url: "./build/ui/default/css/index.css",
-                },
-                {
-                    id: "theme1-theme",
-                    title: "Theme1",
-                    url: "./build/ui/theme1/css/index.css",
-                }
-            ],
-        },
-    },
+
+    // globalTypes: {
+    //     stylesheets: {
+    //         themes: [
+    //             {
+    //                 id: "default-theme",
+    //                 title: "Whitelabel",
+    //                 url: "./build/ui/default/css/index.css",
+    //             },
+    //             {
+    //                 id: "theme1-theme",
+    //                 title: "Theme1",
+    //                 url: "./build/ui/theme1/css/index.css",
+    //             }
+    //         ],
+    //     },
+    // },
+
+    tags: ['autodocs']
 };
 
 export default preview;
