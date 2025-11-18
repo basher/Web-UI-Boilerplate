@@ -1,4 +1,4 @@
-/** @type { import('@storybook/html').Preview } */
+/** @type { import('@storybook/html-vite').Preview } */
 const preview = {
     parameters: {
         options: {
@@ -7,6 +7,7 @@ const preview = {
             },
         },
     },
+
     globalTypes: {
         stylesheets: {
             themes: [
@@ -23,6 +24,8 @@ const preview = {
             ],
         },
     },
+
+    tags: ['autodocs']
 };
 
 export default preview;
