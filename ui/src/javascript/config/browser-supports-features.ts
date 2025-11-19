@@ -14,8 +14,3 @@ export const browserSupportsAllFeatures = (): boolean => {
 
     return isInvokerCommand;
 };
-
-declare global {
-    // eslint-disable-next-line no-var, @typescript-eslint/no-explicit-any
-    var CommandEvent: any;
-}
