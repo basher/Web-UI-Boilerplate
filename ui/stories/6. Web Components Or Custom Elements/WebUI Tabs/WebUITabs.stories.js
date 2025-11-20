@@ -6,6 +6,7 @@ export default {
             type: 'stable',
         },
     },
+    tags: ['web components'],
 };
 
 export const WebUITabs = {

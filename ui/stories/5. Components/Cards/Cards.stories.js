@@ -11,6 +11,7 @@ export default {
         controls: { sort: 'alpha' },
         docs: { controls: { sort: 'alpha' } }
     },
+    tags: ['components'],
     argTypes: {
         cardOrientation: {
             control: 'select',

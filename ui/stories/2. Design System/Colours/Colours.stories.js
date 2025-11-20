@@ -7,6 +7,7 @@ export default {
             type: 'stable',
         },
     },
+    tags: ['design system'],
 };
 
 export const Colours = {

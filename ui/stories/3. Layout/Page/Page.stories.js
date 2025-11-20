@@ -7,6 +7,7 @@ export default {
             type: 'stable',
         },
     },
+    tags: ['layout'],
 };
 
 export const Page = {

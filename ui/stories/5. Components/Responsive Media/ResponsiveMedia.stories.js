@@ -6,6 +6,7 @@ export default {
             type: 'stable',
         },
     },
+    tags: ['components'],
 };
 
 export const ResponsiveIframe = {

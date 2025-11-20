@@ -11,6 +11,7 @@ export default {
             type: 'stable',
         },
     },
+    tags: ['forms'],
 };
 
 export const InputText = {

@@ -7,6 +7,7 @@ export default {
         controls: { sort: 'alpha' },
         docs: { controls: { sort: 'alpha' } }
     },
+    tags: ['utilities'],
     argTypes: {
         marginBlock: {
             control: 'select',

@@ -13,6 +13,7 @@ export default {
         controls: { sort: 'alpha' },
         docs: { controls: { sort: 'alpha' } }
     },
+    tags: ['layout'],
     argTypes: {
         gap: {
             control: 'select',

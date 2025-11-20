@@ -11,6 +11,7 @@ export default {
             type: 'stable',
         },
     },
+    tags: ['utilities'],
 };
 
 export const ScreenReader = {
