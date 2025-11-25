@@ -255,8 +255,11 @@ export default class WebUICarousel extends HTMLElement {
         if (touch.type !== 'touchend') return;
 
         // We don't need to calculate swipe distance/direction.
-        // getCurrentSlide() determines which slide is visible after the swipe.
-        this.setCurrentSlideCounter(this.getCurrentSlide());
+        // 1. getCurrentSlide() already determines which slide is visible after the swipe.
+        // 2. Set a timeout to allow for scroll animation to finish before updating slide counter.
+        setTimeout(() => {
+            this.setCurrentSlideCounter(this.getCurrentSlide());
+        }, 300);
     }
 
     // Handle constructor() event listeners.
