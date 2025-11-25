@@ -24,7 +24,6 @@ export default class WebUICarousel extends HTMLElement {
         if (!this.carousel || this.slides.length === 0) return;
 
         this.carousel.addEventListener('keydown', this);
-        this.carousel.addEventListener('touchstart', this);
         this.carousel.addEventListener('touchend', this);
 
         this.init();
@@ -253,32 +252,11 @@ export default class WebUICarousel extends HTMLElement {
     }
 
     private handleTouchEvent(touch: TouchEvent): void {
-        if (touch.type !== 'touchstart' && touch.type !== 'touchend') return;
+        if (touch.type !== 'touchend') return;
 
-        const currentSlide = this.getCurrentSlide();
-        const minSwipeDistance = 50;
-        let startX = 0;
-        let endX = 0;
-
-        if (touch.type === 'touchstart') {
-            startX = currentSlide;
-            console.log(touch.type, startX);
-        }
-
-        if (touch.type === 'touchend') {
-            endX = currentSlide;
-            console.log(touch.type, endX);
-        }
-
-        if (Math.abs(endX - startX) < minSwipeDistance) return;
-
-        if (endX > startX) {
-            // Swipe left, so carousel shows next slide.
-            this.setCurrentSlideCounter(currentSlide);
-        } else {
-            // Swipe right, so carousel shows previous slide.
-            this.setCurrentSlideCounter(currentSlide - 1);
-        }
+        // We don't need to calculate swipe distance/direction.
+        // getCurrentSlide() determines which slide is visible after the swipe.
+        this.setCurrentSlideCounter(this.getCurrentSlide());
     }
 
     // Handle constructor() event listeners.
