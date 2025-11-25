@@ -259,7 +259,7 @@ export default class WebUICarousel extends HTMLElement {
         // 2. Set a timeout to allow for scroll animation to finish before updating slide counter.
         setTimeout(() => {
             this.setCurrentSlideCounter(this.getCurrentSlide());
-        }, 300);
+        }, 500);
     }
 
     // Handle constructor() event listeners.
