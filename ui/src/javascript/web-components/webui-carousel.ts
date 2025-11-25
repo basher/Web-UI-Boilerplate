@@ -24,6 +24,8 @@ export default class WebUICarousel extends HTMLElement {
         if (!this.carousel || this.slides.length === 0) return;
 
         this.carousel.addEventListener('keydown', this);
+        this.carousel.addEventListener('touchstart', this);
+        this.carousel.addEventListener('touchend', this);
 
         this.init();
     }
@@ -156,6 +158,7 @@ export default class WebUICarousel extends HTMLElement {
         const arrIsVisible: Array<number> = [];
         const arrIsCurrent: Array<number> = [];
         this.slides.forEach((slide: HTMLElement, i: number) => {
+            // Add 1 to index so 1st slide = slide 1.
             if (slide.classList.contains(this.visibleSlideClass)) {
                 arrIsVisible.push(i + 1);
             }
@@ -164,7 +167,7 @@ export default class WebUICarousel extends HTMLElement {
             }
         });
 
-        const currentSlide = arrIsCurrent.shift() || arrIsVisible.shift() || 0;
+        const currentSlide = arrIsCurrent.shift() || arrIsVisible.shift() || 1;
         return currentSlide;
     }
 
@@ -234,19 +237,61 @@ export default class WebUICarousel extends HTMLElement {
         });
     }
 
-    // Handle constructor() event listeners.
-    public handleEvent(e: KeyboardEvent): void {
-        switch (e.code) {
+    private handleKeyboardEvent(key: KeyboardEvent): void {
+        switch (key.code) {
             case 'ArrowRight':
-                e.preventDefault();
+                key.preventDefault();
                 this.goToNextSlide();
                 break;
             case 'ArrowLeft':
-                e.preventDefault();
+                key.preventDefault();
                 this.goToPrevSlide();
                 break;
             default:
                 break;
+        }
+    }
+
+    private handleTouchEvent(touch: TouchEvent): void {
+        if (touch.type !== 'touchstart' && touch.type !== 'touchend') return;
+
+        const currentSlide = this.getCurrentSlide();
+        const minSwipeDistance = 50;
+        let startX = 0;
+        let endX = 0;
+
+        if (touch.type === 'touchstart') {
+            startX = currentSlide;
+            console.log(touch.type, startX);
+        }
+
+        if (touch.type === 'touchend') {
+            endX = currentSlide;
+            console.log(touch.type, endX);
+        }
+
+        if (Math.abs(endX - startX) < minSwipeDistance) return;
+
+        if (endX > startX) {
+            // Swipe left, so carousel shows next slide.
+            this.setCurrentSlideCounter(currentSlide);
+        } else {
+            // Swipe right, so carousel shows previous slide.
+            this.setCurrentSlideCounter(currentSlide - 1);
+        }
+    }
+
+    // Handle constructor() event listeners.
+    public handleEvent(e: KeyboardEvent | TouchEvent): void {
+        const key = e as KeyboardEvent;
+        const touch = e as TouchEvent;
+
+        if (key) {
+            this.handleKeyboardEvent(key);
+        }
+
+        if (touch) {
+            this.handleTouchEvent(touch);
         }
     }
 }
