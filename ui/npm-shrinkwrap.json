@@ -9,7 +9,8 @@
       "version": "5.0.5",
       "license": "ISC",
       "dependencies": {
-        "invokers-polyfill": "^0.5.7"
+        "invokers-polyfill": "^0.5.7",
+        "scrollyfills": "^1.0.4"
       },
       "devDependencies": {
         "@babel/eslint-parser": "^7.28.5",
@@ -9851,6 +9852,12 @@
       "integrity": "sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==",
       "dev": true,
       "license": "MIT"
+    },
+    "node_modules/scrollyfills": {
+      "version": "1.0.4",
+      "resolved": "https://registry.npmjs.org/scrollyfills/-/scrollyfills-1.0.4.tgz",
+      "integrity": "sha512-5V9QrElky6ZOHMQPRVQBYzgviOpW5Y1sqj3yBUuUOXI6QbZW7WztmNkBBHE9WFF3oX5jRfg/K3Gx3I5RgYq8gw==",
+      "license": "ISC"
     },
     "node_modules/semver": {
       "version": "6.3.1",

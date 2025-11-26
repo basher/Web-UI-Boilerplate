@@ -12,5 +12,8 @@ export const browserSupportsAllFeatures = (): boolean => {
         'command' in HTMLButtonElement.prototype &&
         'source' in ((globalThis.CommandEvent || {}).prototype || {});
 
-    return isInvokerCommand;
+    // Native scrollend event.
+    const isScrollEnd = 'onscrollend' in window;
+
+    return isInvokerCommand && isScrollEnd;
 };

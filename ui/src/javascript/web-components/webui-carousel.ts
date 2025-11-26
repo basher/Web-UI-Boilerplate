@@ -187,6 +187,9 @@ export default class WebUICarousel extends HTMLElement {
             this.slides[nextSlide - 1].classList.remove(this.currentSlideClass);
             this.slides[nextSlide].classList.add(this.currentSlideClass);
             this.scrollToSlide(this.slides[nextSlide], nextSlide);
+
+            // If carousel can't scroll any further, ensure correct slide is identified in the counter.
+            this.setCurrentSlideCounter(nextSlide);
         }
     }
 

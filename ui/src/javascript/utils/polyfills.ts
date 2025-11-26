@@ -6,3 +6,6 @@
 
 // Polyfill for Invoker Commands API.
 import 'invokers-polyfill';
+
+// Polyfill for scrollend event.
+import 'scrollyfills';
