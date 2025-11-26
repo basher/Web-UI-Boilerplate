@@ -5,6 +5,7 @@ import * as WebUICarousel from './WebUICarousel.stories';
 
 # `<webui-carousel>`
 - This is an enhancement of the [default CSS carousel](/story/components-carousel--carousel), with NEXT/PREVIOUS buttons.
+- It uses the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to determine which slide is currently visible.
 
 <Canvas of={WebUICarousel.WebUICarousel} />
 <Controls of={WebUICarousel.WebUICarousel} />
@@ -20,3 +21,6 @@ Attribute | Behaviour
 --- | ---
 `data-slide-count` | Optional. Displays slide count & current slide.
 `data-slide-count-pips` | Optional. Displays slide count & current slide as pips instead of text.
+
+## Browser compatibility
+<baseline-status featureId="intersection-observer"></baseline-status>
