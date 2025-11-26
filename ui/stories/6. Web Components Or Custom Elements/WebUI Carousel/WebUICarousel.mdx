@@ -6,7 +6,7 @@ import * as WebUICarousel from './WebUICarousel.stories';
 # `<webui-carousel>`
 - This is an enhancement of the [default CSS carousel](/story/components-carousel--carousel), with NEXT/PREVIOUS buttons.
 - It uses the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to determine which slide is currently visible.
-- The optional slide counter is updated via a [scrollend event](https://developer.mozilla.org/en-US/docs/Web/API/Document/scrollend_event) listener, which is [polyfilled](https://github.com/argyleink/scrollyfills) in non-supporting browsers.
+- There's an optional slide counter, which is updated via a [scrollend event](https://developer.mozilla.org/en-US/docs/Web/API/Document/scrollend_event) listener. A [polyfill](https://github.com/argyleink/scrollyfills) is included for non-supporting browsers.
 
 <Canvas of={WebUICarousel.WebUICarousel} />
 <Controls of={WebUICarousel.WebUICarousel} />
@@ -14,7 +14,7 @@ import * as WebUICarousel from './WebUICarousel.stories';
 ## Accessibility considerations
 - Keyboard `focus` is modified such that **only visible slides are focusable**.
 - The carousel can still be operated by the <kbd>left</kbd> or <kbd>right</kbd> arrow keys, but JavaScript now manages this behaviour.
-- An `aria-live` region is used for announcing which slide is currently selected. This region can be optionally shown in the UI.
+- An `aria-live` region is used to announce which slide is currently selected in assistive technologies. This region can be optionally shown in the UI by adding the `data-slide-count` attribute to the web component.
 
 ## Required and optional HTML  or `data-` attributes
 

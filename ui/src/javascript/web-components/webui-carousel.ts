@@ -107,6 +107,7 @@ export default class WebUICarousel extends HTMLElement {
         const counterPips = document.createElement('p');
         counterPips.classList.add('carousel__counter--pips');
         counterPips.setAttribute('data-counter-pips', '');
+        counterPips.setAttribute('aria-hidden', 'true');
 
         this.slides.forEach((_slide, i) => {
             counterPips.innerHTML += `
