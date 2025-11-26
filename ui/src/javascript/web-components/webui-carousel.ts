@@ -24,7 +24,7 @@ export default class WebUICarousel extends HTMLElement {
         if (!this.carousel || this.slides.length === 0) return;
 
         this.carousel.addEventListener('keydown', this);
-        this.carousel.addEventListener('touchend', this);
+        this.carousel.addEventListener('scrollend', this);
 
         this.init();
     }
@@ -176,7 +176,6 @@ export default class WebUICarousel extends HTMLElement {
         if (prevSlide && prevSlide > 1) {
             this.slides[prevSlide - 1].classList.remove(this.currentSlideClass);
             this.slides[prevSlide - 2].classList.add(this.currentSlideClass);
-            this.setCurrentSlideCounter(prevSlide - 2);
             this.scrollToSlide(this.slides[prevSlide - 2], prevSlide - 2);
         }
     }
@@ -187,7 +186,6 @@ export default class WebUICarousel extends HTMLElement {
         if (nextSlide && nextSlide < this.slides.length) {
             this.slides[nextSlide - 1].classList.remove(this.currentSlideClass);
             this.slides[nextSlide].classList.add(this.currentSlideClass);
-            this.setCurrentSlideCounter(nextSlide);
             this.scrollToSlide(this.slides[nextSlide], nextSlide);
         }
     }
@@ -236,14 +234,14 @@ export default class WebUICarousel extends HTMLElement {
         });
     }
 
-    private handleKeyboardEvent(key: KeyboardEvent): void {
-        switch (key.code) {
+    private handleKeyboardEvent(evtKey: KeyboardEvent): void {
+        switch (evtKey.code) {
             case 'ArrowRight':
-                key.preventDefault();
+                evtKey.preventDefault();
                 this.goToNextSlide();
                 break;
             case 'ArrowLeft':
-                key.preventDefault();
+                evtKey.preventDefault();
                 this.goToPrevSlide();
                 break;
             default:
@@ -251,28 +249,21 @@ export default class WebUICarousel extends HTMLElement {
         }
     }
 
-    private handleTouchEvent(touch: TouchEvent): void {
-        if (touch.type !== 'touchend') return;
-
-        // We don't need to calculate swipe distance/direction.
-        // 1. getCurrentSlide() already determines which slide is visible after the swipe.
-        // 2. Set a timeout to allow for scroll animation to finish before updating slide counter.
-        setTimeout(() => {
-            this.setCurrentSlideCounter(this.getCurrentSlide());
-        }, 500);
+    private handleScrollEvent(): void {
+        this.setCurrentSlideCounter(this.getCurrentSlide() - 1);
     }
 
     // Handle constructor() event listeners.
-    public handleEvent(e: KeyboardEvent | TouchEvent): void {
-        const key = e as KeyboardEvent;
-        const touch = e as TouchEvent;
+    public handleEvent(e: KeyboardEvent | UIEvent): void {
+        const evtKey = e as KeyboardEvent;
+        const evtScroll = e as UIEvent;
 
-        if (key) {
-            this.handleKeyboardEvent(key);
+        if (evtKey) {
+            this.handleKeyboardEvent(evtKey);
         }
 
-        if (touch) {
-            this.handleTouchEvent(touch);
+        if (evtScroll) {
+            this.handleScrollEvent();
         }
     }
 }
