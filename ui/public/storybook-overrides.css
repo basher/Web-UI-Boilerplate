@@ -8,14 +8,13 @@
 }
 
 .sbdocs-content code {
-    color: inherit !important;
     font-size: inherit !important;
     font-weight: 600;
 }
 
-/* Override dark mode in Storybook UI so text (e.g. in docs mode) is legible. */
+/* Ensure dark mode in Storybook UI works (especiallyin docs mode). */
 .dark {
-    /* Nuke --lightningcss custom props. No idea why Parcel-bundled CSS contains these! */
+    /* Nuke --lightningcss custom props. See https://lightningcss.dev/transpilation.html#light-dark()-color-function */
     --lightningcss-light: ;
     --lightningcss-dark: ;
 

@@ -8,8 +8,11 @@ import * as Colours from './Colours.stories';
 <Canvas of={Colours.Colours} />
 
 ## Dark mode
-- Colours will be updated automatically if the operating system preference for `dark mode` is selected, which triggers the `prefers-color-scheme: dark` media query, if specified in the CSS.
-- Dark mode colours can be defined in `src/css/tokens.css`, and/or via the CSS `light-dark()` function.
+- Colours will be updated automatically if the operating system preference for `dark mode` is selected. This triggers the CSS `prefers-color-scheme: dark` media query and/or `light-dark()` function.
+- Specific dark mode colours can also be defined in `src/css/tokens.css`.
+
+### Storybook dark mode addon
+- This Storybook addon allows you to toggle between light (default) and dark mode manually in the Storybook UI.
 
 ## Using `OKLCH()` to define colours
 > See [why OKLCH is better than HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) and [OKLCH color picker tool](https://oklch.com/#70,0.1,293,100).
@@ -31,3 +34,4 @@ import * as Colours from './Colours.stories';
 ## Browser compatibility
 <baseline-status featureId="oklab"></baseline-status>
 <baseline-status featureId="relative-color"></baseline-status>
+<baseline-status featureId="color-scheme"></baseline-status>
