@@ -21,10 +21,13 @@ import * as Colours from './Colours.stories';
     --webui-color-brand: oklch(44.03% 0.1603 303.37);
 }
 ```
-- Semantic tokens are declared like this (notice how the **lightness** value has been increased in `--color-primary-100`):
+- Semantic tokens are declared like this (notice the use of [relative colors](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) to increase the **lightness** of `--color-primary-100`):
 ```
 :root {
     --color-primary-500: var(--webui-color-brand);
     --color-primary-100: oklch(from var(--webui-color-brand) calc(l + 0.2) c h);
 }
 ```
+## Browser compatibility
+<baseline-status featureId="oklab"></baseline-status>
+<baseline-status featureId="relative-color"></baseline-status>
