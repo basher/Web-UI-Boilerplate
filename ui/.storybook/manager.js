@@ -3,4 +3,4 @@ import WebUIBoilerplate from "./theme";
 
 addons.setConfig({
     theme: WebUIBoilerplate,
-})
+});

@@ -1,12 +1,12 @@
 {
   "name": "web-ui-boilerplate",
-  "version": "5.0.6",
+  "version": "5.1.0",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "web-ui-boilerplate",
-      "version": "5.0.6",
+      "version": "5.1.0",
       "license": "ISC",
       "dependencies": {
         "invokers-polyfill": "^0.5.7",
@@ -21,6 +21,7 @@
         "@storybook/html-vite": "^10.0.8",
         "@typescript-eslint/eslint-plugin": "^5.62.0",
         "@typescript-eslint/parser": "^5.62.0",
+        "@vueless/storybook-dark-mode": "^10.0.4",
         "cheerio": "^1.0.0-rc.11",
         "colors": "^1.4.0",
         "cross-env": "^7.0.3",
@@ -4584,6 +4585,22 @@
         "url": "https://opencollective.com/vitest"
       }
     },
+    "node_modules/@vueless/storybook-dark-mode": {
+      "version": "10.0.4",
+      "resolved": "https://registry.npmjs.org/@vueless/storybook-dark-mode/-/storybook-dark-mode-10.0.4.tgz",
+      "integrity": "sha512-0sNP9i7OkjVx+0JqKipd3rlaulv0bxcZFZ7OQL5+8Z2VXrQQR+jLBclRoLlZCoRA/wnNZA/gjia8dI8aqiF+DA==",
+      "dev": true,
+      "dependencies": {
+        "@storybook/global": "^5.0.0",
+        "lodash-es": "^4.17.21"
+      },
+      "engines": {
+        "node": ">=20"
+      },
+      "peerDependencies": {
+        "storybook": "^10.0.0"
+      }
+    },
     "node_modules/abortcontroller-polyfill": {
       "version": "1.7.8",
       "resolved": "https://registry.npmjs.org/abortcontroller-polyfill/-/abortcontroller-polyfill-1.7.8.tgz",
@@ -7549,6 +7566,13 @@
       "version": "4.17.21",
       "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz",
       "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==",
+      "dev": true,
+      "license": "MIT"
+    },
+    "node_modules/lodash-es": {
+      "version": "4.17.21",
+      "resolved": "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.21.tgz",
+      "integrity": "sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==",
       "dev": true,
       "license": "MIT"
     },

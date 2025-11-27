@@ -13,13 +13,15 @@
     font-weight: 600;
 }
 
-/* Override dark mode in Storybook docs so text is legible. */
-@media (prefers-color-scheme: dark) {
-    /* Nuke --lightningcss custom props. No idea why compiled CSS contains these! */
-    [data-story-block='true'] {
-        --lightningcss-light: ;
-        --lightningcss-dark: ;
-    }
+/* Override dark mode in Storybook UI so text (e.g. in docs mode) is legible. */
+.dark {
+    /* Nuke --lightningcss custom props. No idea why Parcel-bundled CSS contains these! */
+    --lightningcss-light: ;
+    --lightningcss-dark: ;
+
+    background-color: var(--color-neutral-700);
+    color: var(--color-neutral-300);
+    color-scheme: dark;
 
     [data-story-block='true'],
     baseline-status {

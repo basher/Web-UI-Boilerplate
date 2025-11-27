@@ -2,7 +2,7 @@
   "name": "web-ui-boilerplate",
   "description": "UI boilerplate for websites & web apps using vanilla HTML/CSS/JavaScript, powered by Storybook, bundled by Parcel.",
   "author": "basher",
-  "version": "5.0.6",
+  "version": "5.1.0",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -45,6 +45,7 @@
     "@storybook/html-vite": "^10.0.8",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
+    "@vueless/storybook-dark-mode": "^10.0.4",
     "cheerio": "^1.0.0-rc.11",
     "colors": "^1.4.0",
     "cross-env": "^7.0.3",

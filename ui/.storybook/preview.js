@@ -1,10 +1,17 @@
 /** @type { import('@storybook/html-vite').Preview } */
+import { themes } from 'storybook/theming';
 const preview = {
     parameters: {
         options: {
             storySort: {
                 order: ['Web UI Storybook', 'Foundations', 'Layout','Forms', 'Components', 'Web Components Or Custom Elements', 'Utilities', 'Pages'],
             },
+        },
+        darkMode: {
+            classTarget: 'html',
+            stylePreview: true,
+            current: 'WebUIBoilerplate',
+            dark: { ...themes.dark },
         },
     },
 
