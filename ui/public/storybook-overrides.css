@@ -12,15 +12,33 @@
     font-weight: 600;
 }
 
-/* Ensure dark mode in Storybook UI works (especiallyin docs mode). */
+/*
+    - Ensure dark mode in Storybook UI works (especially in docs mode).
+    - Nuke "--lightningcss" custom props. See https://lightningcss.dev/transpilation.html#light-dark()-color-function.
+*/
 .dark {
-    /* Nuke --lightningcss custom props. See https://lightningcss.dev/transpilation.html#light-dark()-color-function */
     --lightningcss-light: ;
     --lightningcss-dark: ;
 
     background-color: var(--color-neutral-700);
     color: var(--color-neutral-300);
     color-scheme: dark;
+
+    [data-story-block='true'],
+    baseline-status {
+        color: initial;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --lightningcss-light: ;
+        --lightningcss-dark: ;
+
+        background-color: var(--color-neutral-700);
+        color: var(--color-neutral-300);
+        color-scheme: dark;
+    }
 
     [data-story-block='true'],
     baseline-status {
