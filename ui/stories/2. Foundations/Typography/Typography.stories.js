@@ -1,13 +1,13 @@
 import { TypographyHtml } from './Typography';
 
 export default {
-    title: 'Design System/Typography',
+    title: 'Foundations/Typography',
     parameters: {
         status: {
             type: 'stable',
         },
     },
-    tags: ['design system'],
+    tags: ['foundations'],
 };
 
 export const Typography = {

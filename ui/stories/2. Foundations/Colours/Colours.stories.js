@@ -1,13 +1,13 @@
 import { ColoursHtml } from './Colours';
 
 export default {
-    title: 'Design System/Colours',
+    title: 'Foundations/Colours',
     parameters: {
         status: {
             type: 'stable',
         },
     },
-    tags: ['design system'],
+    tags: ['foundations'],
 };
 
 export const Colours = {

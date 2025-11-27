@@ -1,13 +1,13 @@
 import { IconsHtml } from './Icons';
 
 export default {
-    title: 'Design System/Icons',
+    title: 'Foundations/Icons',
     parameters: {
         status: { type: 'stable' },
         controls: { sort: 'alpha' },
         docs: { controls: { sort: 'alpha' } }
     },
-    tags: ['design system'],
+    tags: ['foundations'],
     argTypes: {
         iconSize: {
             control: 'select',
