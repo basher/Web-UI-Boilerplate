@@ -5,7 +5,7 @@ webui-toggle {
 
     [role='switch'] {
         align-items: center;
-        border: var(--border-width-s) solid;
+        border: var(--webui-border-width-s) solid;
         display: inline-flex;
         padding: 0;
 
@@ -29,15 +29,15 @@ webui-toggle {
     }
 
     :is(.toggle__on, .toggle__off) {
-        padding: var(--gutter-s);
+        padding: var(--webui-gutter-s);
     }
 
     .toggle--has-label {
         border: 0;
-        gap: var(--gutter-s);
+        gap: var(--webui-gutter-s);
 
         .toggle__indicator {
-            border: var(--border-width-s) solid;
+            border: var(--webui-border-width-s) solid;
             display: flex;
         }
     }

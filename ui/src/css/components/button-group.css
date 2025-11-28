@@ -2,7 +2,7 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gutter-s);
+    gap: var(--webui-gutter-s);
 }
 
 .button-group--centered {

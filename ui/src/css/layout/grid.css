@@ -1,6 +1,6 @@
 [class*='grid'] {
     --grid-auto-layout: auto-fit;
-    --grid-gap: var(--gutter-m);
+    --grid-gap: var(--webui-gutter-m);
     --grid-item-min-width: 12.5rem;
     --grid-item-max-width: 1fr;
 
@@ -63,19 +63,19 @@
 
 /* Gap variants. */
 .grid--gap-xs {
-    --grid-gap: var(--gutter-xs);
+    --grid-gap: var(--webui-gutter-xs);
 }
 
 .grid--gap-s {
-    --grid-gap: var(--gutter-s);
+    --grid-gap: var(--webui-gutter-s);
 }
 
 .grid--gap-l {
-    --grid-gap: var(--gutter-l);
+    --grid-gap: var(--webui-gutter-l);
 }
 
 .grid--gap-xl {
-    --grid-gap: var(--gutter-xl);
+    --grid-gap: var(--webui-gutter-xl);
 }
 
 /* Enable 2-col on small screens (even without a media query)... though eventually the column 'min-width' will enforce stacking when space is too limited, to avoid overflows. */

@@ -15,7 +15,7 @@ See https://every-layout.dev/layouts/sidebar/ for explanation of Flex behaviour.
 .sidebar-container {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gutter-m);
+    gap: var(--webui-gutter-m);
 
     :not(.sidebar) {
         --content-min-width: 50%;

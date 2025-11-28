@@ -5,8 +5,8 @@
     &::details-content {
         block-size: 0;
         transition:
-            block-size var(--animation-fast),
-            content-visibility var(--animation-fast);
+            block-size var(--webui-animation-fast),
+            content-visibility var(--webui-animation-fast);
         transition-behavior: allow-discrete;
     }
 
@@ -17,24 +17,24 @@
 }
 
 .accordion__details + .accordion__details {
-    margin-block-start: var(--gutter-m);
+    margin-block-start: var(--webui-gutter-m);
 }
 
 .accordion__summary {
     font-family: var(--webui-font-family-title);
     font-size: var(--type-step-2);
     line-height: var(--webui-line-height-h4);
-    margin-block-end: var(--gutter-s);
+    margin-block-end: var(--webui-gutter-s);
 }
 
 .accordion--custom-icon {
     .accordion__summary {
         align-items: center;
-        border-block-end: var(--border-width-s) solid;
+        border-block-end: var(--webui-border-width-s) solid;
         display: flex;
         justify-content: space-between;
         list-style: none;
-        padding-block-end: var(--gutter-s);
+        padding-block-end: var(--webui-gutter-s);
 
         &::-webkit-details-marker {
             display: none;
@@ -42,7 +42,7 @@
     }
 
     .icon {
-        transition: transform var(--animation-fast);
+        transition: transform var(--webui-animation-fast);
     }
 
     [open] {

@@ -15,7 +15,7 @@ webui-predictive-search {
     }
 
     [role='region'] {
-        margin-block-start: var(--gutter-m);
+        margin-block-start: var(--webui-gutter-m);
     }
 
     .grid {

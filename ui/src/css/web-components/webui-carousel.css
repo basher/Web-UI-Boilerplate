@@ -10,12 +10,12 @@ webui-carousel {
         opacity: 0.8;
 
         &:focus-visible {
-            box-shadow: inset var(--focus-shadow);
-            outline: var(--focus-outline);
+            box-shadow: inset var(--webui-focus-shadow);
+            outline: var(--webui-focus-outline);
         }
 
         &:focus:not(:focus-visible) {
-            outline: var(--focus-outline);
+            outline: var(--webui-focus-outline);
         }
     }
 
@@ -27,26 +27,26 @@ webui-carousel {
     /* Identify current slide (when using PREV|NEXT buttons). */
     .is-current:not(:focus-visible) {
         /* For demo purposes */
-        box-shadow: inset 0 0 0 var(--border-width-l)
+        box-shadow: inset 0 0 0 var(--webui-border-width-l)
             var(--webui-color-primary-500);
     }
 
     .carousel__controls {
-        margin-block-end: var(--gutter-m);
+        margin-block-end: var(--webui-gutter-m);
     }
 
     .carousel__counter--pips {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--gutter-s);
-        margin-block-start: var(--gutter-m);
+        gap: var(--webui-gutter-s);
+        margin-block-start: var(--webui-gutter-m);
     }
 
     .carousel__counter__pip {
-        border: var(--border-width-s) solid;
+        border: var(--webui-border-width-s) solid;
         border-radius: 50%;
         font-size: 0;
-        padding: var(--gutter-s);
+        padding: var(--webui-gutter-s);
 
         &.is-current {
             background-color: var(--webui-color-primary-500);

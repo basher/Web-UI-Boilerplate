@@ -61,7 +61,7 @@ ol ol ol {
 }
 
 :is(ol, ul):not([class]) {
-    padding-inline-start: var(--gutter-l);
+    padding-inline-start: var(--webui-gutter-l);
 }
 
 :where([type='submit'], label, summary) {
@@ -76,7 +76,7 @@ table {
 img {
     @media (prefers-color-scheme: dark) {
         opacity: 0.8;
-        transition: opacity var(--animation-slow);
+        transition: opacity var(--webui-animation-slow);
 
         &:hover {
             opacity: 1;
@@ -129,31 +129,31 @@ iframe {
 }
 
 hr {
-    border: var(--border-width-s) solid;
-    margin-block: var(--gutter-m);
+    border: var(--webui-border-width-s) solid;
+    margin-block: var(--webui-gutter-m);
 }
 
 /* :focus. */
 :where(a, button, summary, [role='region'][tabindex]) {
     &:focus-visible {
-        box-shadow: var(--focus-shadow);
-        outline: var(--focus-outline);
+        box-shadow: var(--webui-focus-shadow);
+        outline: var(--webui-focus-outline);
     }
 
     &:focus:not(:focus-visible) {
-        outline: var(--focus-outline);
+        outline: var(--webui-focus-outline);
     }
 }
 
 summary {
     &:focus-visible {
-        box-shadow: inset var(--focus-shadow);
+        box-shadow: inset var(--webui-focus-shadow);
     }
 }
 
 /* Anchor targets should have extra scroll margin. Adjust value to account for sticky header/footer, etc. */
 :target {
-    scroll-margin-block: var(--gutter-xl);
+    scroll-margin-block: var(--webui-gutter-xl);
 }
 
 /* Remove all animations & transitions for people that prefer not to see them */

@@ -10,7 +10,7 @@
     .modal__dialog[open] {
         display: grid;
         grid-template-areas: 'modal';
-        padding: var(--gutter-s);
+        padding: var(--webui-gutter-s);
         place-items: start end;
     }
 
@@ -22,7 +22,7 @@
     .modal__header {
         background: transparent;
         padding-block-start: 0;
-        z-index: var(--z-default);
+        z-index: var(--webui-z-default);
     }
 
     .modal__content {
@@ -32,6 +32,6 @@
     .modal__close {
         background-color: var(--webui-color-neutral-100);
         color: light-dark(inherit, var(--webui-color-neutral-900));
-        margin: var(--gutter-s);
+        margin: var(--webui-gutter-s);
     }
 }

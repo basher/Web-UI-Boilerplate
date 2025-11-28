@@ -11,7 +11,7 @@ webui-video-player {
         }
 
         .icon {
-            block-size: var(--icon-size-l);
+            block-size: var(--webui-icon-size-l);
         }
     }
 

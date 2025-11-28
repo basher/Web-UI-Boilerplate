@@ -11,7 +11,7 @@
 .breadcrumb__list {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gutter-m);
+    gap: var(--webui-gutter-m);
 }
 
 .breadcrumb__item {

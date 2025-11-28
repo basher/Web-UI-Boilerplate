@@ -6,7 +6,7 @@ See https://every-layout.dev/layouts/stack/.
 ----------------------------------------------------------------------------
 */
 [class*='stack'] {
-    --stack-gutter: var(--gutter-m);
+    --stack-gutter: var(--webui-gutter-m);
 
     > * + * {
         margin-block-start: var(--stack-gutter, 1em);
@@ -18,17 +18,17 @@ See https://every-layout.dev/layouts/stack/.
 }
 
 .stack--gutter-xs {
-    --stack-gutter: var(--gutter-xs);
+    --stack-gutter: var(--webui-gutter-xs);
 }
 
 .stack--gutter-s {
-    --stack-gutter: var(--gutter-s);
+    --stack-gutter: var(--webui-gutter-s);
 }
 
 .stack--gutter-l {
-    --stack-gutter: var(--gutter-l);
+    --stack-gutter: var(--webui-gutter-l);
 }
 
 .stack--gutter-xl {
-    --stack-gutter: var(--gutter-xl);
+    --stack-gutter: var(--webui-gutter-xl);
 }

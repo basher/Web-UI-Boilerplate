@@ -2,8 +2,8 @@ webui-tabs {
     [data-tablist] {
         display: flex;
         flex-direction: column;
-        gap: var(--gutter-s);
-        margin-block-end: var(--gutter-m);
+        gap: var(--webui-gutter-s);
+        margin-block-end: var(--webui-gutter-m);
         overflow-x: auto;
     }
 
@@ -16,7 +16,7 @@ webui-tabs {
         /* TODO: Replace with container query. */
         @media (width > 48em) {
             display: grid;
-            gap: var(--gutter-m);
+            gap: var(--webui-gutter-m);
             grid-template-areas: 'tabs content';
             grid-template-columns: minmax(auto, 10rem) 1fr;
 
@@ -52,12 +52,12 @@ webui-tabs {
             var(--webui-color-neutral-900),
             var(--webui-color-neutral-100)
         );
-        padding: var(--gutter-s);
+        padding: var(--webui-gutter-s);
         text-decoration: none;
-        transition: background-color var(--animation-fast);
+        transition: background-color var(--webui-animation-fast);
 
         &:focus-visible {
-            box-shadow: inset var(--focus-shadow);
+            box-shadow: inset var(--webui-focus-shadow);
         }
 
         &[aria-selected='true'] {
@@ -68,12 +68,12 @@ webui-tabs {
 
     [role='tabpanel'] {
         &:focus-visible {
-            box-shadow: var(--focus-shadow);
-            outline: var(--focus-outline);
+            box-shadow: var(--webui-focus-shadow);
+            outline: var(--webui-focus-outline);
         }
 
         &:focus:not(:focus-visible) {
-            outline: var(--focus-outline);
+            outline: var(--webui-focus-outline);
         }
     }
 }

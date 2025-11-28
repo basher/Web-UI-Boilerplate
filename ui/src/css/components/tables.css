@@ -1,8 +1,8 @@
 table,
 .table {
     :is(th, td) {
-        border: var(--border-width-s) solid;
-        padding: var(--gutter-m);
+        border: var(--webui-border-width-s) solid;
+        padding: var(--webui-gutter-m);
     }
 
     th {
@@ -10,7 +10,7 @@ table,
     }
 
     caption {
-        margin-block-end: var(--gutter-xs);
+        margin-block-end: var(--webui-gutter-xs);
     }
 }
 

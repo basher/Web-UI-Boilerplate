@@ -34,11 +34,11 @@
     /* Fluid space scale. */
     /* @link https://utopia.fyi/space/calculator?c=480,16,1.25,1440,20,1.333,6,1,&s=0.75|0.5,1.5|2|3,s-l&g=s,l,xl,12 */
     /* One-up pairs */
-    --webui-space-2xs-xs: clamp(0.5rem, 0.2813rem + 0.7292vw, 0.9375rem);
-    --webui-space-xs-s: clamp(0.75rem, 0.5rem + 0.8333vw, 1.25rem);
-    --webui-space-s-m: clamp(1rem, 0.5625rem + 1.4583vw, 1.875rem);
-    --webui-space-m-l: clamp(1.5rem, 1rem + 1.6667vw, 2.5rem);
-    --webui-space-l-xl: clamp(2rem, 1.125rem + 2.9167vw, 3.75rem);
+    --space-2xs-xs: clamp(0.5rem, 0.2813rem + 0.7292vw, 0.9375rem);
+    --space-xs-s: clamp(0.75rem, 0.5rem + 0.8333vw, 1.25rem);
+    --space-s-m: clamp(1rem, 0.5625rem + 1.4583vw, 1.875rem);
+    --space-m-l: clamp(1.5rem, 1rem + 1.6667vw, 2.5rem);
+    --space-l-xl: clamp(2rem, 1.125rem + 2.9167vw, 3.75rem);
 }
 
 @media (prefers-color-scheme: dark) {

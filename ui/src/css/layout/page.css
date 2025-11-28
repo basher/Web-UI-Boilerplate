@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     margin-inline: auto;
-    max-inline-size: var(--site-max-width);
+    max-inline-size: var(--webui-site-max-width);
     min-block-size: 100vh; /* 100dvb might have performance implications */
 
     /* Main is a grid item, so this affects overflow behaviour on components like tables. */

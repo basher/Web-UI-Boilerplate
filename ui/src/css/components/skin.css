@@ -4,29 +4,29 @@ Apply skin (or "theming" layer) to components.
 ----------------------------------------------------------------------------
 */
 :root {
-    --skin-gutter-offset: var(--gutter-xl);
+    --skin-gutter-offset: var(--webui-gutter-xl);
 }
 
 /* Define new layer to ensure 'skin' has highest specificity (excluding any overrides applied in the 'utilities' layer). */
 @layer skin {
     /* Arbitrary styling to demo the concept. */
     .skin-1 {
-        border: var(--border-width-s) solid;
+        border: var(--webui-border-width-s) solid;
         color: inherit;
-        padding: var(--gutter-m);
+        padding: var(--webui-gutter-m);
     }
 
     .skin-2 {
         background-color: var(--webui-color-primary-500);
         color: var(--webui-color-neutral-100);
-        padding: var(--gutter-m);
+        padding: var(--webui-gutter-m);
     }
 
     .skin-3 {
         background-color: var(--webui-color-primary-100);
         color: inherit;
         margin-block: var(--skin-gutter-offset);
-        padding: var(--gutter-m);
+        padding: var(--webui-gutter-m);
         position: relative;
 
         &::before,

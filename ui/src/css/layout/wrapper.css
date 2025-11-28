@@ -3,7 +3,7 @@
 
     margin-inline: auto;
     max-inline-size: var(--wrapper-max-width);
-    padding-inline: var(--gutter-m);
+    padding-inline: var(--webui-gutter-m);
 }
 
 .wrapper--s {

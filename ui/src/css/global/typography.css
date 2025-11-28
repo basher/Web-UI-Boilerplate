@@ -31,41 +31,41 @@ body {
 .h--xl {
     font-size: var(--webui-font-size-xl);
     line-height: var(--webui-line-height-xl);
-    margin-block-end: var(--gutter-xl);
+    margin-block-end: var(--webui-gutter-xl);
 }
 
 :where(h1, .h--1) {
     font-size: var(--webui-font-size-h1);
     line-height: var(--webui-line-height-h1);
-    margin-block-end: var(--gutter-l);
+    margin-block-end: var(--webui-gutter-l);
 }
 
 :where(h2, .h--2) {
     font-size: var(--webui-font-size-h2);
     line-height: var(--webui-line-height-h2);
-    margin-block-end: var(--gutter-m);
+    margin-block-end: var(--webui-gutter-m);
 }
 
 :where(h3, .h--3) {
     font-size: var(--webui-font-size-h3);
     line-height: var(--webui-line-height-h3);
-    margin-block-end: var(--gutter-m);
+    margin-block-end: var(--webui-gutter-m);
 }
 
 :where(h4, .h--4) {
     font-size: var(--webui-font-size-h4);
     line-height: var(--webui-line-height-h4);
-    margin-block-end: var(--gutter-s);
+    margin-block-end: var(--webui-gutter-s);
 }
 
 :where(h5, .h--5) {
     font-size: var(--webui-font-size-h5);
-    margin-block-end: var(--gutter-xs);
+    margin-block-end: var(--webui-gutter-xs);
 }
 
 :where(h6, .h--6) {
     font-size: var(--webui-font-size-body);
-    margin-block-end: var(--gutter-xs);
+    margin-block-end: var(--webui-gutter-xs);
 }
 
 /*
@@ -74,7 +74,7 @@ Margins on other prose elements.
 ----------------------------------------------------------------------------
 */
 :where(p, :is(ul, ol):not([class])) {
-    margin-block-end: var(--gutter-m);
+    margin-block-end: var(--webui-gutter-m);
 }
 
 /*
@@ -122,8 +122,8 @@ small {
 }
 
 kbd {
-    border: var(--border-width-s) solid;
-    border-radius: var(--border-radius-s);
+    border: var(--webui-border-width-s) solid;
+    border-radius: var(--webui-border-radius-s);
     font-size: var(--webui-font-size-s);
     padding: 0.125em;
 }

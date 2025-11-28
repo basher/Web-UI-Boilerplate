@@ -1,5 +1,5 @@
 .card {
-    --card-gap: var(--gutter-m);
+    --card-gap: var(--webui-gutter-m);
     --content-min-width: 50%;
     --image-min-width: 15rem;
 
@@ -21,7 +21,7 @@
     }
 
     &[class*='fullwidth'] {
-        --card-gap: var(--gutter-xl);
+        --card-gap: var(--webui-gutter-xl);
 
         /* Uses <picture> element. Set image to take up % of available space, which allows it to shrink and use the correct source. */
         .card__media {
@@ -34,7 +34,7 @@
         text-decoration: none;
 
         &:hover {
-            opacity: var(--hover-opacity);
+            opacity: var(--webui-hover-opacity);
         }
 
         &:not([class*='skin']) {
@@ -44,7 +44,7 @@
 
     /* Uses stack layout for card__content internal spacing. */
     .stack {
-        --stack-gutter: var(--gutter-s);
+        --stack-gutter: var(--webui-gutter-s);
     }
 }
 

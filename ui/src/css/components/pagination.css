@@ -11,7 +11,7 @@
 }
 
 .pagination__list {
-    --flex-gap: var(--gutter-xs);
+    --flex-gap: var(--webui-gutter-xs);
 
     align-items: center;
     justify-content: center;

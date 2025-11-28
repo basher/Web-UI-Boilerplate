@@ -1,20 +1,20 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: var(--gutter-m);
+    gap: var(--webui-gutter-m);
 }
 
 .form__field {
     display: flex;
     flex-direction: column;
-    gap: var(--gutter-xs);
+    gap: var(--webui-gutter-xs);
 
     /* Native HTML5 validation, and errors rendered directly in HTML, or via JavaScript. */
     &:has(:valid:required),
     &:has(:user-invalid:required),
     &.form__field--has-error {
         :is(.label, .checkbox__label, .radio__label) {
-            padding-inline-start: var(--gutter-l);
+            padding-inline-start: var(--webui-gutter-l);
             position: relative;
 
             /* stylelint-disable-next-line no-descending-specificity */
@@ -48,7 +48,7 @@
 .form__error {
     background: var(--webui-color-error-500);
     color: var(--webui-color-neutral-100);
-    padding-inline: var(--gutter-xs);
+    padding-inline: var(--webui-gutter-xs);
 }
 
 .form__field--has-error {
@@ -61,16 +61,16 @@
 
 /* Basic form component styles. */
 :is(.input, .select, .textarea) {
-    border: var(--border-width-s) solid;
-    padding: var(--gutter-s);
+    border: var(--webui-border-width-s) solid;
+    padding: var(--webui-gutter-s);
 
     &:focus-visible {
-        box-shadow: var(--focus-shadow);
-        outline: var(--focus-outline);
+        box-shadow: var(--webui-focus-shadow);
+        outline: var(--webui-focus-outline);
     }
 
     &:focus:not(:focus-visible) {
-        outline: var(--focus-outline);
+        outline: var(--webui-focus-outline);
     }
 
     &:hover:not(:disabled):not(:focus-visible) {
@@ -81,25 +81,25 @@
     &:valid:required {
         background-color: var(--webui-color-success-100);
         border-color: var(--webui-color-success-500);
-        border-width: var(--border-width-m);
+        border-width: var(--webui-border-width-m);
     }
 
     &:user-invalid:required {
         background-color: var(--webui-color-error-100);
         border-color: var(--webui-color-error-500);
-        border-width: var(--border-width-m);
+        border-width: var(--webui-border-width-m);
     }
 
     /* ARIA. */
     &[aria-invalid='true'] {
         background-color: var(--webui-color-error-100);
         border-color: var(--webui-color-error-500);
-        border-width: var(--border-width-m);
+        border-width: var(--webui-border-width-m);
     }
 }
 
 .message--error {
     + .form {
-        margin-block-start: var(--gutter-m);
+        margin-block-start: var(--webui-gutter-m);
     }
 }

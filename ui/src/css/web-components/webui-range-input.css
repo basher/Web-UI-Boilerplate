@@ -20,10 +20,10 @@ webui-range-input {
     &::-webkit-slider-thumb,
     &::-moz-range-thumb {
         background-color: var(--webui-color-primary-500);
-        block-size: var(--icon-size-l);
+        block-size: var(--webui-icon-size-l);
         border: 0;
         border-radius: 50%;
-        inline-size: var(--icon-size-l);
+        inline-size: var(--webui-icon-size-l);
         margin-block-start: calc(var(--slider-height) * -3);
     }
 

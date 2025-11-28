@@ -1,6 +1,6 @@
 .carousel {
     --slide-min-width: 18.75rem;
-    --slide-gap: var(--gutter-m);
+    --slide-gap: var(--webui-gutter-m);
 
     display: flex;
     gap: var(--slide-gap, 1rem);
@@ -10,12 +10,12 @@
     scroll-snap-type: inline mandatory;
 
     &:focus-visible {
-        box-shadow: var(--focus-shadow);
-        outline: var(--focus-outline);
+        box-shadow: var(--webui-focus-shadow);
+        outline: var(--webui-focus-outline);
     }
 
     &:focus:not(:focus-visible) {
-        outline: var(--focus-outline);
+        outline: var(--webui-focus-outline);
     }
 }
 
@@ -50,7 +50,7 @@
 .carousel--has-clickable-slides {
     .carousel__slide > :is(a, button) {
         &:focus-visible {
-            box-shadow: inset var(--focus-shadow);
+            box-shadow: inset var(--webui-focus-shadow);
         }
     }
 }

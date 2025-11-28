@@ -5,52 +5,53 @@ Config settings.
 */
 :root {
     /* Layout. */
-    --site-max-width: null;
+    --webui-site-max-width: null;
 
     /* Spacing and gutters. Use for margin|padding, and gap in flex|grid layouts. */
-    --gutter-xs: var(--webui-space-2xs-xs);
-    --gutter-s: var(--webui-space-xs-s);
-    --gutter-m: var(--webui-space-s-m);
-    --gutter-l: var(--webui-space-m-l);
-    --gutter-xl: var(--webui-space-l-xl);
+    --webui-gutter-xs: var(--space-2xs-xs);
+    --webui-gutter-s: var(--space-xs-s);
+    --webui-gutter-m: var(--space-s-m);
+    --webui-gutter-l: var(--space-m-l);
+    --webui-gutter-xl: var(--space-l-xl);
 
     /* :focus-visible.
         - Uses transparent outline so high contrast mode works.
         - See https://css-tricks.com/the-focus-visible-trick/.
     */
-    --focus-shadow: 0 0 0 var(--border-width-l) var(--webui-color-focus);
-    --focus-outline: var(--border-width-l) solid transparent;
+    --webui-focus-shadow: 0 0 0 var(--webui-border-width-l)
+        var(--webui-color-focus);
+    --webui-focus-outline: var(--webui-border-width-l) solid transparent;
 
     /* :hover and :active */
-    --hover-opacity: 0.8;
-    --active-transform: scale(0.975);
+    --webui-hover-opacity: 0.8;
+    --webui-active-transform: scale(0.975);
 
     /* Borders. */
-    --border-width-s: 0.0625rem;
-    --border-width-m: 0.125rem;
-    --border-width-l: 0.25rem;
-    --border-radius-s: 0.25rem;
+    --webui-border-width-s: 0.0625rem;
+    --webui-border-width-m: 0.125rem;
+    --webui-border-width-l: 0.25rem;
+    --webui-border-radius-s: 0.25rem;
 
     /* Icons. */
-    --icon-size-s: 1rem;
-    --icon-size-m: 1.5rem;
-    --icon-size-l: 2rem;
+    --webui-icon-size-s: 1rem;
+    --webui-icon-size-m: 1.5rem;
+    --webui-icon-size-l: 2rem;
 
     /* Animations. */
-    --animation-fast: 150ms ease-in-out;
-    --animation-medium: 250ms ease-in-out;
-    --animation-slow: 500ms ease-in-out;
+    --webui-animation-fast: 150ms ease-in-out;
+    --webui-animation-medium: 250ms ease-in-out;
+    --webui-animation-slow: 500ms ease-in-out;
 
     /* z-index.
-    1. Boilerplate uses native HTML <dialog> for modals, so '--z-modal' has been deprecated.
-    2. Popups (e.g. dropdown navigation menu) using '--z-popup' will eventually be replaced by Popover API.
+    1. Boilerplate uses native HTML <dialog> for modals, so '--webui-z-modal' has been deprecated.
+    2. Popups (e.g. dropdown navigation menu) using '--webui-z-popup' will eventually be replaced by Popover API.
     */
-    --z-popup: 999;
-    --z-default: 1;
-    --z-reset: 0;
-    --z-below: -1;
+    --webui-z-popup: 999;
+    --webui-z-default: 1;
+    --webui-z-reset: 0;
+    --webui-z-below: -1;
 
     /* Miscellaneous. */
-    --media-aspect-ratio: 16/9;
-    --base-image-path: '../images/interface';
+    --webui-media-aspect-ratio: 16/9;
+    --webui-base-image-path: '../images/interface';
 }

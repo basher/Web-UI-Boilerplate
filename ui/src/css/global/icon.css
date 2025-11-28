@@ -5,13 +5,13 @@
 }
 
 .icon--small {
-    block-size: var(--icon-size-s);
+    block-size: var(--webui-icon-size-s);
 }
 
 .icon--medium {
-    block-size: var(--icon-size-m);
+    block-size: var(--webui-icon-size-m);
 }
 
 .icon--large {
-    block-size: var(--icon-size-l);
+    block-size: var(--webui-icon-size-l);
 }

@@ -6,9 +6,9 @@
     background-color: var(--webui-color-primary-500);
     color: var(--webui-color-neutral-300);
     display: inline-block;
-    left: var(--gutter-m);
+    left: var(--webui-gutter-m);
     min-inline-size: 10vw;
-    padding: var(--gutter-s);
+    padding: var(--webui-gutter-s);
     text-align: center;
-    z-index: var(--z-default);
+    z-index: var(--webui-z-default);
 }

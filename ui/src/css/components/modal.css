@@ -10,7 +10,7 @@ dialog {
         var(--webui-color-neutral-700)
     );
     margin: auto;
-    padding: 0 var(--gutter-m) var(--gutter-m);
+    padding: 0 var(--webui-gutter-m) var(--webui-gutter-m);
 
     &::backdrop {
         background-color: var(--webui-color-backdrop);
@@ -25,19 +25,19 @@ dialog {
     );
     display: flex;
     justify-content: flex-end;
-    padding-block-start: var(--gutter-m);
+    padding-block-start: var(--webui-gutter-m);
 }
 
 .modal__content {
-    margin-block-start: var(--gutter-m);
+    margin-block-start: var(--webui-gutter-m);
 
     &:focus-visible {
-        box-shadow: inset var(--focus-shadow);
-        outline: var(--focus-outline);
+        box-shadow: inset var(--webui-focus-shadow);
+        outline: var(--webui-focus-outline);
     }
 
     &:focus:not(:focus-visible) {
-        outline: var(--focus-outline);
+        outline: var(--webui-focus-outline);
     }
 }
 

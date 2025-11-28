@@ -1,5 +1,5 @@
 [class*='flex'] {
-    --flex-gap: var(--gutter-m);
+    --flex-gap: var(--webui-gutter-m);
 
     display: flex;
     flex-wrap: wrap;
@@ -36,19 +36,19 @@
 
 /* Gap variants. */
 .flex--gap-xs {
-    --flex-gap: var(--gutter-xs);
+    --flex-gap: var(--webui-gutter-xs);
 }
 
 .flex--gap-s {
-    --flex-gap: var(--gutter-s);
+    --flex-gap: var(--webui-gutter-s);
 }
 
 .flex--gap-l {
-    --flex-gap: var(--gutter-l);
+    --flex-gap: var(--webui-gutter-l);
 }
 
 .flex--gap-xl {
-    --flex-gap: var(--gutter-xl);
+    --flex-gap: var(--webui-gutter-xl);
 }
 
 /* Align items. */

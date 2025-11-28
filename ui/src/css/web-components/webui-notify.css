@@ -1,9 +1,9 @@
 webui-notify {
     align-items: flex-start;
-    border: var(--border-width-s) solid;
+    border: var(--webui-border-width-s) solid;
     display: flex;
     justify-content: space-between;
-    padding: var(--gutter-m);
+    padding: var(--webui-gutter-m);
 
     .stack > * {
         max-inline-size: none;
@@ -26,8 +26,8 @@ webui-notify {
 
     [data-close] {
         flex-shrink: 0;
-        inset-block-start: calc(var(--icon-size-s) * -1);
-        inset-inline-end: calc(var(--icon-size-s) * -1);
+        inset-block-start: calc(var(--webui-icon-size-s) * -1);
+        inset-inline-end: calc(var(--webui-icon-size-s) * -1);
         position: relative;
     }
 

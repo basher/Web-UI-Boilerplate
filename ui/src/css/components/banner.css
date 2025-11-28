@@ -1,5 +1,5 @@
 .banner {
-    --banner-gap: var(--gutter-m);
+    --banner-gap: var(--webui-gutter-m);
 
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
 
 .banner--fullwidth {
     .banner__content {
-        padding-inline: var(--gutter-s);
+        padding-inline: var(--webui-gutter-s);
     }
 
     /* TODO: Replace with container query. */
@@ -39,8 +39,8 @@
                 var(--webui-color-neutral-900)
             );
             inline-size: 40vw;
-            margin-inline-start: var(--gutter-m);
-            padding: var(--gutter-m);
+            margin-inline-start: var(--webui-gutter-m);
+            padding: var(--webui-gutter-m);
         }
     }
 }
