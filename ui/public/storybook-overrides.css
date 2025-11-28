@@ -18,6 +18,7 @@
 */
 .dark {
     --lightningcss-light: ;
+    --lightningcss-dark: initial;
 
     background-color: var(--color-neutral-700);
     color: var(--color-neutral-300);
@@ -32,6 +33,7 @@
 @media (prefers-color-scheme: dark) {
     html {
         --lightningcss-light: ;
+        --lightningcss-dark: initial;
 
         background-color: var(--color-neutral-700);
         color: var(--color-neutral-300);
