@@ -1,11 +1,11 @@
 .pagination {
     [aria-current] {
-        background-color: var(--color-primary-500);
+        background-color: var(--webui-color-primary-500);
         border-color: light-dark(
-            var(--color-primary-500),
-            var(--color-neutral-100)
+            var(--webui-color-primary-500),
+            var(--webui-color-neutral-100)
         );
-        color: var(--color-neutral-100);
+        color: var(--webui-color-neutral-100);
         font-weight: bold;
     }
 }

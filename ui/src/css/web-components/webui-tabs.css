@@ -45,10 +45,13 @@ webui-tabs {
 
     [role='tab'] {
         background-color: light-dark(
-            var(--color-neutral-300),
-            var(--color-neutral-900)
+            var(--webui-color-neutral-300),
+            var(--webui-color-neutral-900)
         );
-        color: light-dark(var(--color-neutral-900), var(--color-neutral-100));
+        color: light-dark(
+            var(--webui-color-neutral-900),
+            var(--webui-color-neutral-100)
+        );
         padding: var(--gutter-s);
         text-decoration: none;
         transition: background-color var(--animation-fast);
@@ -58,8 +61,8 @@ webui-tabs {
         }
 
         &[aria-selected='true'] {
-            background-color: var(--color-primary-500);
-            color: var(--color-neutral-100);
+            background-color: var(--webui-color-primary-500);
+            color: var(--webui-color-neutral-100);
         }
     }
 

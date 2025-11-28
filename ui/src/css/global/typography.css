@@ -83,11 +83,11 @@ Validation styles.
 ----------------------------------------------------------------------------
 */
 .error {
-    color: var(--color-error-500);
+    color: var(--webui-color-error-500);
 }
 
 .success {
-    color: var(--color-success-500);
+    color: var(--webui-color-success-500);
 }
 
 /*

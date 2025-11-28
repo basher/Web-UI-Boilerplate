@@ -30,8 +30,8 @@
     }
 
     .modal__close {
-        background-color: var(--color-neutral-100);
-        color: light-dark(inherit, var(--color-neutral-900));
+        background-color: var(--webui-color-neutral-100);
+        color: light-dark(inherit, var(--webui-color-neutral-900));
         margin: var(--gutter-s);
     }
 }

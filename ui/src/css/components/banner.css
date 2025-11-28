@@ -33,10 +33,10 @@
 
         .banner__content {
             /* So text is legible above image. */
-            background: var(--color-primary-100);
+            background: var(--webui-color-primary-100);
             color: light-dark(
-                var(--color-neutral-900),
-                var(--color-neutral-900)
+                var(--webui-color-neutral-900),
+                var(--webui-color-neutral-900)
             );
             inline-size: 40vw;
             margin-inline-start: var(--gutter-m);
@@ -51,7 +51,7 @@
         /* So text is legible above image. */
         background: linear-gradient(
             to right,
-            var(--color-primary-100),
+            var(--webui-color-primary-100),
             transparent
         );
         block-size: 100%;

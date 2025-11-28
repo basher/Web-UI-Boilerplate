@@ -45,17 +45,17 @@ ${style}
         <li>
             <span
                 class="styled"
-                style="background: var(--color-primary-500)">
+                style="background: var(--webui-color-primary-500)">
             </span>
-            <span>var(--color-primary-500)</span>
+            <span>var(--webui-color-primary-500)</span>
             <span></span>
         </li>
         <li>
             <span
                 class="styled"
-                style="background: var(--color-primary-100)">
+                style="background: var(--webui-color-primary-100)">
             </span>
-            <span>var(--color-primary-100)</span>
+            <span>var(--webui-color-primary-100)</span>
             <span></span>
         </li>
     </ul>
@@ -65,41 +65,41 @@ ${style}
         <li>
             <span
                 class="styled"
-                style="background: var(--color-neutral-900)">
+                style="background: var(--webui-color-neutral-900)">
             </span>
-            <span>var(--color-neutral-900)</span>
+            <span>var(--webui-color-neutral-900)</span>
             <span></span>
         </li>
         <li>
             <span
                 class="styled"
-                style="background: var(--color-neutral-700)">
+                style="background: var(--webui-color-neutral-700)">
             </span>
-            <span>var(--color-neutral-700)</span>
+            <span>var(--webui-color-neutral-700)</span>
             <span></span>
         </li>
         <li>
             <span
                 class="styled"
-                style="background: var(--color-neutral-500)">
+                style="background: var(--webui-color-neutral-500)">
             </span>
-            <span>var(--color-neutral-500)</span>
+            <span>var(--webui-color-neutral-500)</span>
             <span></span>
         </li>
         <li>
             <span
                 class="styled"
-                style="background: var(--color-neutral-300)">
+                style="background: var(--webui-color-neutral-300)">
             </span>
-            <span>var(--color-neutral-300)</span>
+            <span>var(--webui-color-neutral-300)</span>
             <span></span>
         </li>
         <li>
             <span
                 class="styled"
-                style="background: var(--color-neutral-100)">
+                style="background: var(--webui-color-neutral-100)">
             </span>
-            <span>var(--color-neutral-100)</span>
+            <span>var(--webui-color-neutral-100)</span>
             <span></span>
         </li>
     </ul>
@@ -109,57 +109,57 @@ ${style}
         <li>
             <span
                 class="styled"
-                style="background: var(--color-success-500)">
+                style="background: var(--webui-color-success-500)">
             </span>
-            <span>var(--color-success-500)</span>
+            <span>var(--webui-color-success-500)</span>
             <span></span>
         </li>
         <li>
             <span
                 class="styled"
-                style="background: var(--color-success-100)">
+                style="background: var(--webui-color-success-100)">
             </span>
-            <span>var(--color-success-100)</span>
+            <span>var(--webui-color-success-100)</span>
             <span></span>
         </li>
         <li>
             <span
                 class="styled"
-                style="background: var(--color-error-500)">
+                style="background: var(--webui-color-error-500)">
             </span>
-            <span>var(--color-error-500)</span>
+            <span>var(--webui-color-error-500)</span>
             <span></span>
         </li>
         <li>
             <span
                 class="styled"
-                style="background: var(--color-error-100)">
+                style="background: var(--webui-color-error-100)">
             </span>
-            <span>var(--color-error-100)</span>
+            <span>var(--webui-color-error-100)</span>
             <span></span>
         </li>
         <li>
             <span
                 class="styled"
-                style="background: var(--color-notify-500)">
+                style="background: var(--webui-color-notify-500)">
             </span>
-            <span>var(--color-notify-500)</span>
+            <span>var(--webui-color-notify-500)</span>
             <span></span>
         </li>
         <li>
             <span
                 class="styled"
-                style="background: var(--color-notify-100)">
+                style="background: var(--webui-color-notify-100)">
             </span>
-            <span>var(--color-notify-100)</span>
+            <span>var(--webui-color-notify-100)</span>
             <span></span>
         </li>
         <li>
             <span
                 class="styled"
-                style="background: var(--color-focus)">
+                style="background: var(--webui-color-focus)">
             </span>
-            <span>var(--color-focus)</span>
+            <span>var(--webui-color-focus)</span>
             <span></span>
         </li>
     </ul>

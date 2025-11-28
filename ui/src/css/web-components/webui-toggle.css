@@ -16,15 +16,15 @@ webui-toggle {
 
     [aria-checked='false'] {
         .toggle__off {
-            background-color: var(--color-neutral-500);
+            background-color: var(--webui-color-neutral-500);
             color: inherit;
         }
     }
 
     [aria-checked='true'] {
         .toggle__on {
-            background-color: var(--color-primary-500);
-            color: var(--color-neutral-100);
+            background-color: var(--webui-color-primary-500);
+            color: var(--webui-color-neutral-100);
         }
     }
 

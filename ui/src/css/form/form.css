@@ -19,9 +19,9 @@
 
             /* stylelint-disable-next-line no-descending-specificity */
             &::after {
-                background-color: var(--color-error-500);
+                background-color: var(--webui-color-error-500);
                 border-radius: 50%;
-                color: var(--color-neutral-100);
+                color: var(--webui-color-neutral-100);
                 content: 'X';
                 display: grid;
                 font-size: 1em;
@@ -37,7 +37,7 @@
     &:has(:valid:required) {
         :is(.label, .checkbox__label, .radio__label) {
             &::after {
-                background-color: var(--color-success-500);
+                background-color: var(--webui-color-success-500);
                 content: '✓';
             }
         }
@@ -46,8 +46,8 @@
 
 /* Errors rendered directly in HTML, or via JavaScript. */
 .form__error {
-    background: var(--color-error-500);
-    color: var(--color-neutral-100);
+    background: var(--webui-color-error-500);
+    color: var(--webui-color-neutral-100);
     padding-inline: var(--gutter-xs);
 }
 
@@ -74,26 +74,26 @@
     }
 
     &:hover:not(:disabled):not(:focus-visible) {
-        background-color: var(--color-primary-100);
+        background-color: var(--webui-color-primary-100);
     }
 
     /* Native HTML5 validation. */
     &:valid:required {
-        background-color: var(--color-success-100);
-        border-color: var(--color-success-500);
+        background-color: var(--webui-color-success-100);
+        border-color: var(--webui-color-success-500);
         border-width: var(--border-width-m);
     }
 
     &:user-invalid:required {
-        background-color: var(--color-error-100);
-        border-color: var(--color-error-500);
+        background-color: var(--webui-color-error-100);
+        border-color: var(--webui-color-error-500);
         border-width: var(--border-width-m);
     }
 
     /* ARIA. */
     &[aria-invalid='true'] {
-        background-color: var(--color-error-100);
-        border-color: var(--color-error-500);
+        background-color: var(--webui-color-error-100);
+        border-color: var(--webui-color-error-500);
         border-width: var(--border-width-m);
     }
 }

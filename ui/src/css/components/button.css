@@ -41,41 +41,47 @@
 
 /* Apply colours to button variants. */
 .button--primary {
-    background-color: var(--color-primary-500);
-    color: var(--color-neutral-100);
+    background-color: var(--webui-color-primary-500);
+    color: var(--webui-color-neutral-100);
 
     &[class*='text'] {
-        border-color: var(--color-primary-500);
+        border-color: var(--webui-color-primary-500);
     }
 }
 
 .button--secondary {
-    color: var(--color-primary-500);
-    color: light-dark(var(--color-primary-500), var(--color-neutral-100));
+    color: var(--webui-color-primary-500);
+    color: light-dark(
+        var(--webui-color-primary-500),
+        var(--webui-color-neutral-100)
+    );
 
     &[class*='text'] {
         border-color: light-dark(
-            var(--color-primary-500),
-            var(--color-primary-100)
+            var(--webui-color-primary-500),
+            var(--webui-color-primary-100)
         );
     }
 }
 
 .button--positive {
-    background-color: var(--color-success-500);
-    color: light-dark(var(--color-neutral-900), var(--color-neutral-900));
+    background-color: var(--webui-color-success-500);
+    color: light-dark(
+        var(--webui-color-neutral-900),
+        var(--webui-color-neutral-900)
+    );
 
     &[class*='text'] {
-        border-color: var(--color-success-500);
+        border-color: var(--webui-color-success-500);
     }
 }
 
 .button--negative {
-    background-color: var(--color-error-500);
-    color: var(--color-neutral-100);
+    background-color: var(--webui-color-error-500);
+    color: var(--webui-color-neutral-100);
 
     &[class*='text'] {
-        border-color: var(--color-error-500);
+        border-color: var(--webui-color-error-500);
     }
 }
 

@@ -10,7 +10,7 @@ Kilian Valkhof = https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-te
 ----------------------------------------------------------------------------
 */
 html {
-    accent-color: var(--color-primary-500);
+    accent-color: var(--webui-color-primary-500);
     color-scheme: light dark;
     /* stylelint-disable-next-line property-no-unknown */
     interpolate-size: allow-keywords;
@@ -38,10 +38,13 @@ html {
     }
 
     background-color: light-dark(
-        var(--color-neutral-100),
-        var(--color-neutral-700)
+        var(--webui-color-neutral-100),
+        var(--webui-color-neutral-700)
     );
-    color: light-dark(var(--color-neutral-900), var(--color-neutral-300));
+    color: light-dark(
+        var(--webui-color-neutral-900),
+        var(--webui-color-neutral-300)
+    );
     min-block-size: 100vh; /* 100dvb might have performance implications */
 }
 

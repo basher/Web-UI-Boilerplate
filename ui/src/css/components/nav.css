@@ -1,6 +1,9 @@
 .nav {
     [aria-current] {
-        color: light-dark(var(--color-primary-500), var(--color-neutral-100));
+        color: light-dark(
+            var(--webui-color-primary-500),
+            var(--webui-color-neutral-100)
+        );
         font-weight: bold;
     }
 }
@@ -33,7 +36,7 @@
 }
 
 .nav__list--dropdown {
-    background-color: var(--color-neutral-100);
+    background-color: var(--webui-color-neutral-100);
     border: var(--border-width-s) solid;
     flex-direction: column;
     inset-block-start: 100%;
@@ -85,7 +88,7 @@
     /* Using <webui-disclosure> custom element. */
     webui-disclosure:defined {
         .nav__list {
-            background-color: var(--color-neutral-100);
+            background-color: var(--webui-color-neutral-100);
             border: var(--border-width-s) solid;
             inset-block-start: 100%;
             padding: var(--gutter-m);

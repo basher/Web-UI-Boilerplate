@@ -4,12 +4,12 @@
 ----------------------------------------------------------------------------
 */
 :root {
-    --webui-color-brand: oklch(44.03% 0.1603 303.37); /* rebeccapurple */
-    --webui-color-neutral: oklch(59.82% 0 0);
-    --webui-color-accent-positive: oklch(75.14% 0.1603 142.55);
-    --webui-color-accent-negative: oklch(48.29% 0.1603 26.34);
-    --webui-color-accent-neutral: oklch(82.25% 0.1603 96.1742);
-    --webui-color-state-focus: oklch(71.69% 0.1603 226.5552);
+    --color-brand: oklch(44.03% 0.1603 303.37); /* rebeccapurple */
+    --color-neutral: oklch(59.82% 0 0);
+    --color-accent-green: oklch(75.14% 0.1603 142.55);
+    --color-accent-red: oklch(48.29% 0.1603 26.34);
+    --color-accent-yellow: oklch(82.25% 0.1603 96.1742);
+    --color-accent-blue: oklch(71.69% 0.1603 226.5552);
 
     /* Typography. */
     --webui-font-fallback:

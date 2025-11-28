@@ -17,13 +17,13 @@ Apply skin (or "theming" layer) to components.
     }
 
     .skin-2 {
-        background-color: var(--color-primary-500);
-        color: var(--color-neutral-100);
+        background-color: var(--webui-color-primary-500);
+        color: var(--webui-color-neutral-100);
         padding: var(--gutter-m);
     }
 
     .skin-3 {
-        background-color: var(--color-primary-100);
+        background-color: var(--webui-color-primary-100);
         color: inherit;
         margin-block: var(--skin-gutter-offset);
         padding: var(--gutter-m);
@@ -31,7 +31,7 @@ Apply skin (or "theming" layer) to components.
 
         &::before,
         &::after {
-            background-color: var(--color-primary-100);
+            background-color: var(--webui-color-primary-100);
             clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0 100%);
             content: '';
             display: block;

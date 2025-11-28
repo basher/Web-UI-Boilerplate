@@ -3,8 +3,8 @@
 }
 
 .skiplinks__link {
-    background-color: var(--color-primary-500);
-    color: var(--color-neutral-300);
+    background-color: var(--webui-color-primary-500);
+    color: var(--webui-color-neutral-300);
     display: inline-block;
     left: var(--gutter-m);
     min-inline-size: 10vw;

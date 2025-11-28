@@ -5,36 +5,34 @@ Color settings.
 */
 :root {
     /* Theme */
-    --color-primary-500: var(--webui-color-brand);
-    --color-primary-100: oklch(from var(--webui-color-brand) calc(l + 0.3) c h);
+    --webui-color-primary-500: var(--color-brand);
+    --webui-color-primary-100: oklch(from var(--color-brand) calc(l + 0.3) c h);
 
     /* Neutral */
-    --color-neutral-900: oklch(
-        from var(--webui-color-neutral) calc(l - 0.45) c h
+    --webui-color-neutral-900: oklch(
+        from var(--color-neutral) calc(l - 0.45) c h
     );
-    --color-neutral-700: oklch(
-        from var(--webui-color-neutral) calc(l - 0.25) c h
+    --webui-color-neutral-700: oklch(
+        from var(--color-neutral) calc(l - 0.25) c h
     );
-    --color-neutral-500: var(--webui-color-neutral);
-    --color-neutral-300: oklch(
-        from var(--webui-color-neutral) calc(l + 0.25) c h
+    --webui-color-neutral-500: var(--color-neutral);
+    --webui-color-neutral-300: oklch(
+        from var(--color-neutral) calc(l + 0.25) c h
     );
-    --color-neutral-100: oklch(
-        from var(--webui-color-neutral) calc(l + 0.38) c h
+    --webui-color-neutral-100: oklch(
+        from var(--color-neutral) calc(l + 0.38) c h
     );
 
     /* Accent */
-    --color-success-500: var(--webui-color-accent-positive);
-    --color-success-100: oklch(
-        from var(--webui-color-accent-positive) l c h / 10%
+    --webui-color-success-500: var(--color-accent-green);
+    --webui-color-success-100: oklch(
+        from var(--color-accent-green) l c h / 10%
     );
-    --color-error-500: var(--webui-color-accent-negative);
-    --color-error-100: oklch(
-        from var(--webui-color-accent-negative) l c h / 10%
+    --webui-color-error-500: var(--color-accent-red);
+    --webui-color-error-100: oklch(from var(--color-accent-red) l c h / 10%);
+    --webui-color-notify-500: var(--color-accent-yellow);
+    --webui-color-notify-100: oklch(
+        from var(--color-accent-yellow) l c h / 10%
     );
-    --color-notify-500: var(--webui-color-accent-neutral);
-    --color-notify-100: oklch(
-        from var(--webui-color-accent-neutral) l c h / 10%
-    );
-    --color-focus: var(--webui-color-state-focus);
+    --webui-color-focus: var(--color-accent-blue);
 }

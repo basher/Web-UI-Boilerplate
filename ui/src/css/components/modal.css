@@ -1,22 +1,28 @@
 /* Cannot use existing CSS variables defined on :root element for ::backdrop. See https://stackoverflow.com/questions/58818299/css-variables-not-working-in-dialogbackdrop */
 ::backdrop {
-    --color-backdrop: oklch(0% 0 0 / 80%);
+    --webui-color-backdrop: oklch(0% 0 0 / 80%);
 }
 
 /* Browser already applies "position: fixed" and "width: fit-content". */
 dialog {
-    background: light-dark(var(--color-neutral-100), var(--color-neutral-700));
+    background: light-dark(
+        var(--webui-color-neutral-100),
+        var(--webui-color-neutral-700)
+    );
     margin: auto;
     padding: 0 var(--gutter-m) var(--gutter-m);
 
     &::backdrop {
-        background-color: var(--color-backdrop);
+        background-color: var(--webui-color-backdrop);
         pointer-events: none; /* So click outside works */
     }
 }
 
 .modal__header {
-    background: light-dark(var(--color-neutral-100), var(--color-neutral-700));
+    background: light-dark(
+        var(--webui-color-neutral-100),
+        var(--webui-color-neutral-700)
+    );
     display: flex;
     justify-content: flex-end;
     padding-block-start: var(--gutter-m);

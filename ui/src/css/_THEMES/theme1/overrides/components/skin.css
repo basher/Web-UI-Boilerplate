@@ -8,11 +8,11 @@ Apply skin (or "theming" layer) to components.
 @layer skin {
     /* Arbitrary styling to demo the concept. */
     .skin-1 {
-        border-width: var(--border-width-l);
+        border-width: var(--webui-border-width-l);
     }
 
     .skin-2 {
-        border: var(--border-width-l) solid var(--color-neutral-900);
+        border: var(--webui-border-width-l) solid var(--webui-color-neutral-900);
     }
 
     .skin-3 {
