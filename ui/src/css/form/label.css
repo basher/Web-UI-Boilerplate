@@ -4,5 +4,5 @@
 
 .label__hint {
     display: block;
-    font-size: var(--font-size-s);
+    font-size: var(--webui-font-size-s);
 }

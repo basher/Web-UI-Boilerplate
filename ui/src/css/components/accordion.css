@@ -21,9 +21,9 @@
 }
 
 .accordion__summary {
-    font-family: var(--base-font-family-title);
-    font-size: var(--webui-step-2);
-    line-height: var(--line-height-h4);
+    font-family: var(--webui-font-family-title);
+    font-size: var(--type-step-2);
+    line-height: var(--webui-line-height-h4);
     margin-block-end: var(--gutter-s);
 }
 
