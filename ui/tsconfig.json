@@ -3,6 +3,7 @@
         "strict": true,
         "allowSyntheticDefaultImports": true,
         "forceConsistentCasingInFileNames": true,
+        "lib": ["ES2020", "DOM"],
     },
     "include": [
         "src/javascript/**/*",

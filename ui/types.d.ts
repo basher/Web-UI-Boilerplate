@@ -1,6 +1,8 @@
+/* eslint-disable no-var */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 declare global {
-    // eslint-disable-next-line no-var, @typescript-eslint/no-explicit-any
     var CommandEvent: any;
+    var module: any;
 }
 
 export {};
