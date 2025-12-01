@@ -35,7 +35,9 @@ const readIndexHtml = () =>
     new Promise((resolve, reject) => {
         fs.readFile(`${prodDirectoryPath}/index.html`, 'utf8', (err, data) => {
             if (err) {
-                reject(console.log(colors.red.bold('static-assets-rename:', err)));
+                reject(
+                    console.log(colors.red.bold('static-assets-rename:', err)),
+                );
             } else {
                 resolve(data);
             }
@@ -48,8 +50,10 @@ const processFile = (file) => {
     const hashed = file.substring(0, file.lastIndexOf('.'));
     let renamed = hashed.substring(0, hashed.lastIndexOf('.'));
 
-    // JS. Don't rename map files.
-    if (ext === '.js' && renamed === 'index') {
+    // JS.
+    // 1. Don't rename map files.
+    // 2. Most recent versions of Parcel bundler generate JS files with filename starting with 'ui', not 'index'.
+    if (ext === '.js' && renamed === 'ui') {
         readIndexHtml().then((data) => {
             // Use cheerio to parse HTML DOM.
             const $ = cheerio.load(data);
@@ -57,7 +61,6 @@ const processFile = (file) => {
             const lastScript = $('body script:last');
 
             // Rename modern bundle to "index.js" and legacy bundle to "legacy.js".
-            // TODO: Might not even need to worry about browsers that don't support type="module".
             if (file === firstScript.attr('src').substring(1)) {
                 renamed =
                     firstScript.attr('type') === 'module'
@@ -96,9 +99,13 @@ const renameFile = (renamed, file) => {
         `${prodDirectoryPath}/${renamed}`,
         (err) => {
             if (err) {
-                return console.log(colors.red.bold('static-assets-rename:', err));
+                return console.log(
+                    colors.red.bold('static-assets-rename:', err),
+                );
             }
-            console.log(colors.green.bold(`Successfully renamed ${file} to ${renamed}`));
+            console.log(
+                colors.green.bold(`Successfully renamed ${file} to ${renamed}`),
+            );
         },
     );
 };

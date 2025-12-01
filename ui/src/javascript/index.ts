@@ -7,7 +7,15 @@ import { browserSupportsAllFeatures } from './config/browser-supports-features';
 import { uiInit } from './ui-init';
 
 if (browserSupportsAllFeatures()) {
-    uiInit();
+    if (module.hot) {
+        // In DEV mode, ensure Parcel bundler's HMR is running to re-instantiate UI modules on file changes, so Storybook updates automatically
+        module.hot.accept(() => {
+            uiInit();
+        });
+    } else {
+        // In PROD mode, simply instantiate UI modules.
+        uiInit();
+    }
 } else {
     // Dynamic import polyfills, then instantiate UI modules.
     (async (): Promise<void> => {

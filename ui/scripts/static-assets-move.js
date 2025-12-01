@@ -64,9 +64,7 @@ const readProdDirectory = () => {
 };
 
 // Use "default" theme if invalid theme is supplied.
-let themeName = themes[theme] !== undefined
-    ? theme
-    : 'default';
+let themeName = themes[theme] !== undefined ? theme : 'default';
 
 // 2. Move file.
 const moveFile = (file, fileType) => {
@@ -87,37 +85,32 @@ const moveFile = (file, fileType) => {
     if (fileType === 'svg') {
         const filename = file.substring(0, file.lastIndexOf('.'));
         // Move SVG sprite into 'images' folder. Any other SVGs go in 'css' as they're referenced inside CSS.
-        themeFolder = filename === 'sprite'
-            ? `${themeFolder}/images`
-            : `${themeFolder}/css`;
+        themeFolder =
+            filename === 'sprite'
+                ? `${themeFolder}/images`
+                : `${themeFolder}/css`;
     }
 
-    fs.move(
-        `${prodDirectoryPath}/${file}`,
-        `${themeFolder}/${file}`,
-        (err) => {
-            if (err) {
-                return console.log(colors.red.bold('move files:', err));
-            }
-            console.log(colors.green.bold(`Successfully moved ${file}`));
-        },
-    );
+    fs.move(`${prodDirectoryPath}/${file}`, `${themeFolder}/${file}`, (err) => {
+        if (err) {
+            return console.log(colors.red.bold('move files:', err));
+        }
+        console.log(colors.green.bold(`Successfully moved ${file}`));
+    });
 };
 
 // 3. Copy other static UI files (i.e. '/images/interface').
 const copyStatic = () => {
     const themeFolder = `${prodDirectoryPath}/${themeName}`;
 
-    fs.copy(
-        staticDirectoryPath,
-        `${themeFolder}/images/interface`,
-        (err) => {
-            if (err) {
-                return console.log(colors.red.bold('copy static assets:', err));
-            }
-            console.log(colors.green.bold('Successfully copied other static assets!'));
-        },
-    );
+    fs.copy(staticDirectoryPath, `${themeFolder}/images/interface`, (err) => {
+        if (err) {
+            return console.log(colors.red.bold('copy static assets:', err));
+        }
+        console.log(
+            colors.green.bold('Successfully copied other static assets!'),
+        );
+    });
 };
 
 readProdDirectory();

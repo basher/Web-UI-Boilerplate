@@ -2,7 +2,7 @@
   "name": "web-ui-boilerplate",
   "description": "UI boilerplate for websites & web apps using vanilla HTML/CSS/JavaScript, powered by Storybook, bundled by Parcel.",
   "author": "basher",
-  "version": "5.2.1",
+  "version": "5.2.2",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -57,7 +57,7 @@
     "fs-extra": "^10.1.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
-    "parcel": "^2.12.0",
+    "parcel": "^2.14.4",
     "postcss": "^8.4.18",
     "prettier": "^3.6.2",
     "remark-gfm": "^4.0.0",
@@ -66,6 +66,7 @@
     "stylelint-config-standard": "^36.0.1",
     "stylelint-order": "^6.0.4",
     "stylelint-prettier": "^5.0.3",
+    "svgo": "^3.3.2",
     "typescript": "^4.9.5"
   },
   "dependencies": {
