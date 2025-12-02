@@ -8,7 +8,9 @@ import * as FormNoArgs from './FormNoArgs.stories';
 
 ## Accessibility considerations
 - All form fields need a `<label>`, which is explicitly associated with the relevant field with `for | id` attribute pairs.
-- Additionally, any "grouped" form fields (e.g. `<input type="radio">`) should be enclosed in a `<fieldset>` with an appropriate `<legend>` to provide additional context for screen readers.
+- Any "grouped" form fields (e.g. `<input type="radio">`) should be enclosed in a `<fieldset>` with an appropriate `<legend>` to provide additional context for screen readers.
+- Required fields need a `required` attribute on the inputs, etc. There is no need to add a visual indicator.
+- Optional fields should be identified as such in the `<label>`.
 - Invalid fields should be identified with `aria-invalid="true"` and `aria-describedby` which references the `id` of appropriate error text.
 
 ### Additional reading
@@ -18,8 +20,7 @@ import * as FormNoArgs from './FormNoArgs.stories';
 - [Form input types for better mobile user experiences](https://css-tricks.com/better-form-inputs-for-better-mobile-user-experiences/).
 
 ## Native HTML5 browser validation
-- Using `:valid`, `:invalid` and `:required` CSS pseudo classes.
-- Adding a `title` attribute to a form field can improve the default browser validation error message.
+- Uses `:valid`, `:invalid`, `:user-invalid` and `:required` CSS pseudo classes.
 
 <Canvas of={Form.Form} />
 <Controls of={Form.Form} />
