@@ -8,13 +8,6 @@ import { uiInit } from './ui-init';
 
 if (browserSupportsAllFeatures()) {
     uiInit();
-
-    // In DEV mode, ensure Parcel bundler's HMR is running. This re-instantiates UI modules on file changes and updates Storybook automatically.
-    if (module.hot) {
-        module.hot.accept(() => {
-            uiInit();
-        });
-    }
 } else {
     // Dynamic import polyfills, then instantiate UI modules.
     (async (): Promise<void> => {
