@@ -34,10 +34,7 @@
         .banner__content {
             /* So text is legible above image. */
             background: var(--webui-color-primary-100);
-            color: light-dark(
-                var(--webui-color-neutral-900),
-                var(--webui-color-neutral-900)
-            );
+            color: var(--webui-color-neutral-900);
             inline-size: 40vw;
             margin-inline-start: var(--webui-gutter-m);
             padding: var(--webui-gutter-m);
