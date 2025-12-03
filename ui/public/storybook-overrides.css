@@ -8,7 +8,6 @@
 }
 
 .sbdocs-content code {
-    font-size: inherit !important;
     font-weight: 600;
 }
 
@@ -35,17 +34,17 @@ html {
     color-scheme: light dark;
 }
 
-.light {
-    /* color-scheme: light; */
-}
-
 .dark {
-    /* color-scheme: dark; */
+    color-scheme: dark;
 
-    /* [data-story-block='true'],
+    [id='storybook-docs'] {
+        color-scheme: light;
+    }
+
+    [data-story-block='true'],
     baseline-status {
         color: initial;
-    } */
+    }
 }
 
 @media (prefers-color-scheme: dark) {
