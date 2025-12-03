@@ -3,7 +3,7 @@
     max-inline-size: none;
 }
 
-.sbdocs-content ul ul {
+.sbdocs-content ul ul:not([class]) {
     list-style-type: circle;
 }
 
