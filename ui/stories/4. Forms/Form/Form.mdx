@@ -9,8 +9,10 @@ import * as FormNoArgs from './FormNoArgs.stories';
 ## Accessibility considerations
 - All form fields need a `<label>`, which is explicitly associated with the relevant field with `for | id` attribute pairs.
 - Any "grouped" form fields (e.g. `<input type="radio">`) should be enclosed in a `<fieldset>` with an appropriate `<legend>` to provide additional context for screen readers.
-- Required fields need a `required` attribute on the inputs, etc. There is no need to add a visual indicator.
-- Optional fields should be identified as such in the `<label>`.
+- Required fields need a `required` attribute on the interactive controls.
+    - This boilerplate does not use a visual indicator (such as an asterisk) to identify required fields.
+    - Instead, optional fields are clearly identified in the `<label>`.
+    - If required fields are visually indicated, hide the indicator from assistive technologies with `aria-hidden="true"`.
 - Invalid fields should be identified with `aria-invalid="true"` and `aria-describedby` which references the `id` of appropriate error text.
 
 ### Additional reading
