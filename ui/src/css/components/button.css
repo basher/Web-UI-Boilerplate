@@ -66,10 +66,7 @@
 
 .button--positive {
     background-color: var(--webui-color-success-500);
-    color: light-dark(
-        var(--webui-color-neutral-900),
-        var(--webui-color-neutral-900)
-    );
+    color: var(--webui-color-neutral-900);
 
     &[class*='text'] {
         border-color: var(--webui-color-success-500);
