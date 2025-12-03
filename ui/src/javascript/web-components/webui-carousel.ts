@@ -69,7 +69,7 @@ export default class WebUICarousel extends HTMLElement {
                     if (entry.isIntersecting) {
                         entry.target.classList.add(this.visibleSlideClass);
 
-                        // Make visible slides keyboard focusable.Screen readers will read out content.
+                        // Make visible slides keyboard focusable. Assistive technologies will read out content.
                         entry.target.setAttribute('tabIndex', '0');
 
                         // Re-instate focusability of interactive child elements.

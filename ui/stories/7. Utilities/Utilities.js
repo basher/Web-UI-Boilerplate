@@ -29,10 +29,10 @@ ${args.paddingInline && args.paddingInline !== '' ? `u-p-inline--${args.paddingI
 `;
 
 export const ScreenReaderHtml = () => `
-<p>The content in the <code>&lt;div&gt;</code> below is hidden visually, but still announced by screen readers...</p>
+<p>The content in the <code>&lt;div&gt;</code> below is hidden visually, but still announced by assistive technologies...</p>
 
 <div class="visually-hidden">
-    Visually hide content, but still make it available to screen readers.
+    Visually hide content, but still make it available to assistive technologys.
 </div>
 `;
 
