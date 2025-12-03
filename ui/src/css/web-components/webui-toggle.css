@@ -28,7 +28,7 @@ webui-toggle {
         }
     }
 
-    :is(.toggle__on, .toggle__off) {
+    :where(.toggle__on, .toggle__off) {
         padding: var(--webui-gutter-s);
     }
 

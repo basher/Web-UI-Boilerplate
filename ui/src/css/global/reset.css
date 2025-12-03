@@ -31,7 +31,7 @@ html {
     vertical-align: baseline;
 }
 
-:is(html, body) {
+:where(html, body) {
     /* Smooth scrolling IF user doesn't have a preference due to motion sensitivities. */
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
@@ -48,7 +48,7 @@ html {
     min-block-size: 100vh; /* 100dvb might have performance implications */
 }
 
-:is(ol, ul)[class] {
+:where(ol, ul)[class] {
     list-style-type: '';
 }
 
@@ -60,7 +60,7 @@ ol ol ol {
     list-style-type: lower-roman;
 }
 
-:is(ol, ul):not([class]) {
+:where(ol, ul):not([class]) {
     padding-inline-start: var(--webui-gutter-l);
 }
 
@@ -93,13 +93,13 @@ svg {
     max-inline-size: 100%;
 }
 
-:is(input, textarea, select) {
+:where(input, textarea, select) {
     color: inherit;
     vertical-align: middle;
 }
 
 /* <a> needs to be included here to remove the default tab focus. */
-:is(button, a) {
+:where(button, a) {
     appearance: none;
     cursor: pointer;
     -webkit-tap-highlight-color: oklch(0% 0 0 / 0%);
@@ -117,7 +117,7 @@ a:not([class]) {
     text-underline-offset: 0.25em;
 }
 
-:is(sub, sup) {
+:where(sub, sup) {
     vertical-align: revert;
 }
 

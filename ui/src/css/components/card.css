@@ -9,7 +9,7 @@
     inline-size: clamp(1rem, 100%, 60ch);
 
     /* Layout approach is same as sidebar layout. */
-    &:is([class*='media-inline'], [class*='fullwidth']) {
+    &:where([class*='media-inline'], [class*='fullwidth']) {
         flex-wrap: wrap;
         inline-size: auto;
 

@@ -48,7 +48,7 @@
 
 /* Clickable slides (e.g. cards, image thumbnails). */
 .carousel--has-clickable-slides {
-    .carousel__slide > :is(a, button) {
+    .carousel__slide > :where(a, button) {
         &:focus-visible {
             box-shadow: inset var(--webui-focus-shadow);
         }

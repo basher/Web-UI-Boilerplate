@@ -14,7 +14,7 @@ Basic reset.
 }
 
 body {
-    color: #000; /* Black prints faster */
+    color: black; /* Prints faster */
     font-family: sans-serif;
     font-size: 10pt;
 }
@@ -44,11 +44,11 @@ h6 {
     margin: 0;
 }
 
-:is(h1, h2, h3, h4, h5, p) {
+:where(h1, h2, h3, h4, h5, p) {
     margin: 0 0 5pt;
 }
 
-:is(th, td) {
+:where(th, td) {
     border: 1pt solid grey;
     font-size: 8pt;
     padding: 3pt;
@@ -68,16 +68,16 @@ a {
     content: '(' attr(href) ')';
 }
 
-:is([href='/'], [href='#'], [href^='mailto'], [href^='tel'])::after {
+:where([href='/'], [href='#'], [href^='mailto'], [href^='tel'])::after {
     content: '';
 }
 
-:is(table, figure, pre) {
+:where(table, figure, pre) {
     margin-block-end: 10pt;
     page-break-inside: avoid;
 }
 
-:is(h1, h2, h3, h4, h5, h6) {
+:where(h1, h2, h3, h4, h5, h6) {
     page-break-after: avoid;
 }
 

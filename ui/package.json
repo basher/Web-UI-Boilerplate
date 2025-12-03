@@ -33,8 +33,7 @@
     "app": {}
   },
   "browserslist": [
-    "defaults",
-    "not dead"
+    "defaults"
   ],
   "devDependencies": {
     "@babel/eslint-parser": "^7.28.5",

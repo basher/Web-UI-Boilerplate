@@ -73,7 +73,7 @@ body {
 Margins on other prose elements.
 ----------------------------------------------------------------------------
 */
-:where(p, :is(ul, ol):not([class])) {
+:where(p, :where(ul, ol):not([class])) {
     margin-block-end: var(--webui-gutter-m);
 }
 
@@ -95,7 +95,7 @@ Validation styles.
 Miscellaneous styles.
 ----------------------------------------------------------------------------
 */
-:where(:is(p, li):not([class]), dd, small) {
+:where(:where(p, li):not([class]), dd, small) {
     max-inline-size: var(--webui-type-max-line-length);
 }
 

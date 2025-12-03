@@ -1,6 +1,6 @@
 table,
 .table {
-    :is(th, td) {
+    :where(th, td) {
         border: var(--webui-border-width-s) solid;
         padding: var(--webui-gutter-m);
     }

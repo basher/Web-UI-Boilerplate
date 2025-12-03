@@ -13,7 +13,7 @@
     &:has(:valid:required),
     &:has(:user-invalid:required),
     &.form__field--has-error {
-        :is(.label, .checkbox__label, .radio__label) {
+        :where(.label, .checkbox__label, .radio__label) {
             padding-inline-start: var(--webui-gutter-l);
             position: relative;
 
@@ -22,7 +22,7 @@
                 background-color: var(--webui-color-error-500);
                 border-radius: 50%;
                 color: var(--webui-color-neutral-100);
-                content: 'X';
+                content: 'X' / '';
                 display: grid;
                 font-size: 1em;
                 inline-size: 1.5em;
@@ -35,10 +35,10 @@
     }
 
     &:has(:valid:required) {
-        :is(.label, .checkbox__label, .radio__label) {
+        :where(.label, .checkbox__label, .radio__label) {
             &::after {
                 background-color: var(--webui-color-success-500);
-                content: '✓';
+                content: '✓' / '';
             }
         }
     }
@@ -60,7 +60,7 @@
 }
 
 /* Basic form component styles. */
-:is(.input, .select, .textarea) {
+:where(.input, .select, .textarea) {
     border: var(--webui-border-width-s) solid;
     padding: var(--webui-gutter-s);
 

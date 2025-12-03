@@ -7,7 +7,7 @@
         flex-grow: 1;
     }
 
-    :is(.form, .form__field) {
+    :where(.form, .form__field) {
         align-items: center;
         flex-direction: row;
     }
