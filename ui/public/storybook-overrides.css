@@ -17,38 +17,41 @@
     - NOTE: Firefox reports inconclusive color contrast in Storybook a11y addon for most/all components, but Chrome is OK.
 */
 :where(html, body) {
-    --lightningcss-light: ;
-    --lightningcss-dark: ;
+    /* --lightningcss-light: ;
+    --lightningcss-dark: ; */
 
-    background-color: light-dark(
+    /* background-color: light-dark(
         var(--webui-color-neutral-100),
         var(--webui-color-neutral-700)
     );
     color: light-dark(
         var(--webui-color-neutral-900),
         var(--webui-color-neutral-300)
-    );
+    ); */
 }
 
 html {
-    color-scheme: light dark;
+    /* color-scheme: light dark; */
 }
 
 .dark {
-    color-scheme: dark;
+    /* color-scheme: dark; */
 
-    [id='storybook-docs'] {
+    /* [id='storybook-docs'] {
         color-scheme: light;
     }
 
     [data-story-block='true'],
     baseline-status {
         color: initial;
-    }
+    } */
 }
 
 @media (prefers-color-scheme: dark) {
     [id='storybook-docs'] {
+        --lightningcss-light: ;
+        --lightningcss-dark: ;
+
         color-scheme: light;
     }
 

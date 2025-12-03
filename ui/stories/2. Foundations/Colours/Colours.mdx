@@ -9,12 +9,12 @@ import * as Colours from './Colours.stories';
 
 ## Dark mode
 - Colours will be updated automatically if the operating system preference for `dark mode` is selected. This triggers the CSS `prefers-color-scheme: dark` media query and/or `light-dark()` function.
-- Specific dark mode colours can also be defined in `./ui/src/css/tokens.css`.
+- Specific dark mode colour tokens can also be defined in `./ui/src/css/tokens.css`.
 
 ### Storybook dark mode addon
 - This Storybook addon allows you to toggle between light (default) and dark mode manually in the Storybook UI.
 
-> NOTE: The Storybook UI and stories switch to dark mode, but docs pages do not. There is a temporary workaround in `ui/public/storybook-overrides.css` to ensure docs text is legible (rendered as light mode).
+> NOTE: The Storybook UI and stories switch to dark mode, but docs pages do not. There is a temporary workaround in `ui/public/storybook-overrides.css` to ensure docs text is legible (docs pages are rendered in light mode).
 
 ## Using `OKLCH()` to define colours
 > See [why OKLCH is better than HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) and [OKLCH color picker tool](https://oklch.com/#70,0.1,293,100).
