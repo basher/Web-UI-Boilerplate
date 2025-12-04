@@ -1,4 +1,4 @@
-export const ModalHtml = () => `
+export const ModalHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
@@ -53,7 +53,7 @@ export const ModalHtml = () => `
 </p>
 `;
 
-export const ModalOverflowHtml = () => `
+export const ModalOverflowHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
@@ -124,7 +124,7 @@ export const ModalOverflowHtml = () => `
 </p>
 `;
 
-export const ModalMultipleCloseButtonsHtml = () => `
+export const ModalMultipleCloseButtonsHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>

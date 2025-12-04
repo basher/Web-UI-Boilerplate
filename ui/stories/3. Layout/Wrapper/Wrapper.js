@@ -1,4 +1,4 @@
-const style = `
+const style = /*html*/ `
 <style>
     .sb-show-main.sb-main-padded {
         padding: 0;
@@ -10,7 +10,7 @@ const style = `
 </style>
 `;
 
-export const WrapperHtml = (args) => `
+export const WrapperHtml = (args) => /*html*/ `
 ${style}
 <div ${args.turnParentIntoStack === true ? 'class="stack"' : ''}>
     <div class="wrapper\

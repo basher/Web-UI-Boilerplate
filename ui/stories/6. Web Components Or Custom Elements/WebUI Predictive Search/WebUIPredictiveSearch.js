@@ -1,4 +1,4 @@
-export const WebUIPredictiveSearchHtml = () => `
+export const WebUIPredictiveSearchHtml = () => /*html*/ `
 <webui-predictive-search class="search">
     <form class="form search__form" role="search">
         <div class="form__field">

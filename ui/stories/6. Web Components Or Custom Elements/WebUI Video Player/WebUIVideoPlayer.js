@@ -1,4 +1,4 @@
-export const WebUIVideoPlayerHtml = () => `
+export const WebUIVideoPlayerHtml = () => /*html*/ `
 <webui-video-player>
     <button
         type="button"

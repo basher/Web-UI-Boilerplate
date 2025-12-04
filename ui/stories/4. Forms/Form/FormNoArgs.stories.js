@@ -16,7 +16,7 @@ export const FormServerValidation = {
 FormServerValidation.storyName = 'Form (Server Validation)';
 
 export const WebUIFormValidate = {
-    render: () => `
+    render: () => /*html*/ `
         <p>
             See the
             <code>&lt;webui-form-validate&gt;</code>

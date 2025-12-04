@@ -1,4 +1,4 @@
-export const WebUINotifyHtml = (args) => `
+export const WebUINotifyHtml = (args) => /*html*/ `
 <webui-notify
     ${args.notificationType === 'error' ? 'role="alert"' : 'role="status"'}
     ${args.notificationType === undefined ? '' : `data-${args.notificationType}`}

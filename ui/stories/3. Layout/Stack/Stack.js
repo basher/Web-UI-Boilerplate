@@ -1,4 +1,4 @@
-const style = `
+const style = /*html*/ `
 <style>
     .stack > * {
         background: hsl(51, 100%, 45%, 15%);
@@ -7,7 +7,7 @@ const style = `
 </style>
 `;
 
-export const StackHtml = (args) => `
+export const StackHtml = (args) => /*html*/ `
 ${style}
 <div class="stack\
  ${args.stackGutter === undefined ? '' : `stack--${args.stackGutter}`}">

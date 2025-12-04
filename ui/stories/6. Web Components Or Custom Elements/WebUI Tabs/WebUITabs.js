@@ -1,4 +1,4 @@
-export const WebUITabsHtml = () => `
+export const WebUITabsHtml = () => /*html*/ `
 <webui-tabs>
     <div data-tablist>
         <a href="#tab1" data-tab>
@@ -33,7 +33,7 @@ export const WebUITabsHtml = () => `
 </webui-tabs>
 `;
 
-export const WebUIVerticalTabsHtml = () => `
+export const WebUIVerticalTabsHtml = () => /*html*/ `
 <webui-tabs data-vertical>
     <div data-tablist>
         <a href="#tab1vertical" data-tab>

@@ -1,4 +1,4 @@
-export const ButtonsHtml = (args) => `
+export const ButtonsHtml = (args) => /*html*/ `
 <div class="button-group ${
     args.centered === true ? 'button-group--centered' : ''
 }">
@@ -24,7 +24,7 @@ export const ButtonsHtml = (args) => `
 `;
 
 
-export const LinksHtml = (args) => `
+export const LinksHtml = (args) => /*html*/ `
 <div class="button-group ${
     args.centered === true ? 'button-group--centered' : ''
 }">

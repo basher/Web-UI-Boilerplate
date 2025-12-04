@@ -1,4 +1,4 @@
-export const ResponsiveIframeHtml = () => `
+export const ResponsiveIframeHtml = () => /*html*/ `
 <div class="responsive-media">
     <iframe
         class="responsive-media__item"
@@ -12,7 +12,7 @@ export const ResponsiveIframeHtml = () => `
 </div>
 `;
 
-export const ResponsiveVideoHtml = () => `
+export const ResponsiveVideoHtml = () => /*html*/ `
 <p>My old band!</p>
 <div class="responsive-media">
     <iframe

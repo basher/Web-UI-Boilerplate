@@ -1,4 +1,4 @@
-export const AccordionHtml = () => `
+export const AccordionHtml = () => /*html*/ `
 <div class="accordion">
     <details class="accordion__details">
         <summary class="accordion__summary">Accordion title 1</summary>
@@ -15,7 +15,7 @@ export const AccordionHtml = () => `
 </div>
 `;
 
-export const AccordionExclusiveHtml = () => `
+export const AccordionExclusiveHtml = () => /*html*/ `
 <div class="accordion">
     <details class="accordion__details" name="acc1">
         <summary class="accordion__summary">Accordion title 1</summary>
@@ -32,7 +32,7 @@ export const AccordionExclusiveHtml = () => `
 </div>
 `;
 
-export const AccordionCustomIconHtml = () => `
+export const AccordionCustomIconHtml = () => /*html*/ `
 <div class="accordion accordion--custom-icon">
     <details class="accordion__details">
         <summary class="accordion__summary">

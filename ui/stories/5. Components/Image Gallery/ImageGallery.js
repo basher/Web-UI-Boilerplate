@@ -1,4 +1,4 @@
-export const ImageGalleryHtml = () => `
+export const ImageGalleryHtml = () => /*html*/ `
 <ul class="image-gallery grid">
     <li>
         <button

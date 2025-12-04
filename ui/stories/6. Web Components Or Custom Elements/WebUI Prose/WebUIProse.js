@@ -1,4 +1,4 @@
-export const WebUIProseHtml = () => `
+export const WebUIProseHtml = () => /*html*/ `
 <webui-prose>
     <div class="stack">
         <h2>Heading level 2</h2>

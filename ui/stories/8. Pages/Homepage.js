@@ -1,4 +1,4 @@
-const style = `
+const style = /*html*/ `
 <style>
     .sb-show-main.sb-main-padded {
         padding: 0;
@@ -12,7 +12,7 @@ const style = `
 </style>
 `;
 
-export const HomepageHtml = () => `
+export const HomepageHtml = () => /*html*/ `
 ${style}
 <div class="page">
     <header class="header">

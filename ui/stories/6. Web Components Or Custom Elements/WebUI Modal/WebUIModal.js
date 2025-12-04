@@ -1,4 +1,4 @@
-export const WebUIModalHtml = () => `
+export const WebUIModalHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>

@@ -1,4 +1,4 @@
-export const WebUIRangeInputHtml = () => `
+export const WebUIRangeInputHtml = () => /*html*/ `
 <webui-range-input>
     <div class="form__field">
         <label for="range-input" class="label">

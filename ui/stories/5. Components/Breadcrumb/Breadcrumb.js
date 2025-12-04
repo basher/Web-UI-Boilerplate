@@ -1,4 +1,4 @@
-export const BreadcrumbHtml = () => `
+export const BreadcrumbHtml = () => /*html*/ `
 <nav class="breadcrumb" aria-label="Breadcrumb">
     <ol class="breadcrumb__list">
         <li class="breadcrumb__item">

@@ -1,4 +1,4 @@
-export const TypographyHtml = () => `
+export const TypographyHtml = () => /*html*/ `
 <h1 class="h--xl">Heading level 1 with "h--xl" class</h1>
 
 <h1>Heading level 1 <br/>with line break to test line-height</h1>

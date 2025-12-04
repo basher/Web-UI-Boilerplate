@@ -1,4 +1,4 @@
-export const ResponsiveImageHtml = () => `
+export const ResponsiveImageHtml = () => /*html*/ `
 <picture>
     <source
         media="(min-width: 1440px)"
@@ -36,7 +36,7 @@ export const ResponsiveImageHtml = () => `
 </picture>
 `;
 
-export const FixedSizeImageHtml = () => `
+export const FixedSizeImageHtml = () => /*html*/ `
 <picture>
     <source
         srcset="https://dummyimage.com/400x300"

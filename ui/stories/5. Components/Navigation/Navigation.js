@@ -1,4 +1,4 @@
-export const NavigationHtml = () => `
+export const NavigationHtml = () => /*html*/ `
 <nav
     class="nav"
     id="navigation"
@@ -24,7 +24,7 @@ export const NavigationHtml = () => `
 </nav>
 `;
 
-export const HamburgerNavigationHtml = () => `
+export const HamburgerNavigationHtml = () => /*html*/ `
 <nav
     class="nav nav--hamburger"
     id="navigation"
@@ -81,7 +81,7 @@ export const HamburgerNavigationHtml = () => `
 <p>Some content below the navigation, to test the CSS positioning & stacking context of the navigation when it is shown.</p>
 `;
 
-export const DisclosureNavigationHtml = () => `
+export const DisclosureNavigationHtml = () => /*html*/ `
 <nav
     class="nav nav--disclosure"
     id="navigation"
@@ -191,7 +191,7 @@ export const DisclosureNavigationHtml = () => `
 <p>Some content below the navigation, to test the CSS positioning & stacking context of the navigation dropdowns when they are shown.</p>
 `;
 
-export const HamburgerDisclosureNavigationHtml = () => `
+export const HamburgerDisclosureNavigationHtml = () => /*html*/ `
 <nav
     class="nav nav--hamburger nav--disclosure"
     id="navigation"
@@ -332,6 +332,6 @@ export const HamburgerDisclosureNavigationHtml = () => `
 <p>Some content below the navigation, to test the CSS positioning & stacking context of the navigation when it is shown.</p>
 `;
 
-export const MegaDropdownHtml = () => `
+export const MegaDropdownHtml = () => /*html*/ `
 TODO...
 `;

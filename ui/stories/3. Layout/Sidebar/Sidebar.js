@@ -1,4 +1,4 @@
-const style = `
+const style = /*html*/ `
 <style>
     .sidebar {
         background: hsl(51, 100%, 45%, 15%);
@@ -7,7 +7,7 @@ const style = `
 </style>
 `;
 
-export const SidebarHtml = () => `
+export const SidebarHtml = () => /*html*/ `
 ${style}
 <div class="sidebar-container">
     <div class="sidebar">
@@ -19,7 +19,7 @@ ${style}
 </div>
 `;
 
-export const SidebarRightHtml = () => `
+export const SidebarRightHtml = () => /*html*/ `
 ${style}
 <div class="sidebar-container">
     <div>

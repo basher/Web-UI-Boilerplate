@@ -1,4 +1,4 @@
-export const ButtonHtml = (args) => `
+export const ButtonHtml = (args) => /*html*/ `
 <button
     type="button"
     class="button button--text button--${args.buttonType} button--${
@@ -10,7 +10,7 @@ export const ButtonHtml = (args) => `
 </button>
 `;
 
-export const IconButtonHtml = (args) => `
+export const IconButtonHtml = (args) => /*html*/ `
 <button
     type="button"
     class="button button--icon"
@@ -27,7 +27,7 @@ export const IconButtonHtml = (args) => `
 </button>
 `;
 
-export const TextIconButtonHtml = (args) => `
+export const TextIconButtonHtml = (args) => /*html*/ `
 <button
     type="button"
     class="

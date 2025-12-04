@@ -1,4 +1,4 @@
-export const CardHtml = (args) => `
+export const CardHtml = (args) => /*html*/ `
 <article class="card card--${args.cardOrientation} ${args.skin}">
     <figure class="card__media">
         <picture>
@@ -25,7 +25,7 @@ export const CardHtml = (args) => `
 </article>
 `;
 
-export const FullwidthCardHtml = (args) => `
+export const FullwidthCardHtml = (args) => /*html*/ `
 <article class="card card--fullwidth${
     args.fullwidthFlipOrientation === true ? '-reverse' : ''
 } ${args.skin}">
@@ -65,7 +65,7 @@ export const FullwidthCardHtml = (args) => `
 </article>
 `;
 
-export const ClickableCardHtml = (args) => `
+export const ClickableCardHtml = (args) => /*html*/ `
 <a href="#" class="card card--${args.cardOrientation} ${args.skin}">
     <figure class="card__media">
         <picture>
@@ -90,7 +90,7 @@ export const ClickableCardHtml = (args) => `
 </a>
 `;
 
-export const CardGridHtml = () => `
+export const CardGridHtml = () => /*html*/ `
 <ul class="grid card-grid">
     <li>
         <a href="#" class="card">
@@ -167,7 +167,7 @@ export const CardGridHtml = () => `
 </ul>
 `;
 
-export const CardCarouselHtml = () => `
+export const CardCarouselHtml = () => /*html*/ `
 <section class="carousel-container" aria-label="[meaningful label for carousel]"
 >
     <ul

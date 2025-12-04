@@ -1,4 +1,4 @@
-export const InputTextHtml = () => `
+export const InputTextHtml = () => /*html*/ `
 <label for="input-text" class="label">Text input label</label>
 <input
     type="text"
@@ -8,7 +8,7 @@ export const InputTextHtml = () => `
 />
 `;
 
-export const InputEmailHtml = () => `
+export const InputEmailHtml = () => /*html*/ `
 <label for="input-email" class="label">Email input label</label>
 <input
     type="email"
@@ -19,7 +19,7 @@ export const InputEmailHtml = () => `
 />
 `;
 
-export const InputTelHtml = () => `
+export const InputTelHtml = () => /*html*/ `
 <label for="input-tel" class="label">
     Telephone input label
     <span class="label__hint">UK number, usually 11 digits, can also include spaces</span>

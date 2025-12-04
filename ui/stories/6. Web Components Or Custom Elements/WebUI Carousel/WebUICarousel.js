@@ -1,4 +1,4 @@
-const style = `
+const style = /*html*/ `
 <style>
     .carousel > * {
         background: hsl(51, 100%, 45%, 15%);
@@ -8,7 +8,7 @@ const style = `
 </style>
 `;
 
-export const WebUICarouselHtml = (args) => `
+export const WebUICarouselHtml = (args) => /*html*/ `
 ${style}
 <webui-carousel
     ${args.showSlideCount === true ? 'data-slide-count' : ''}

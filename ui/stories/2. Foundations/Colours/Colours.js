@@ -1,4 +1,4 @@
-const style = `
+const style = /*html*/ `
 <style>
     .sb-show-main {
         background: Canvas;
@@ -31,13 +31,13 @@ window.addEventListener('DOMContentLoaded',
             const computedSpan = span.nextElementSibling.nextElementSibling;
 
             if (computedSpan) {
-                computedSpan.innerHTML = `<b>${spanStyle}</b>`;
+                computedSpan.innerHTML = /*html*/ `<b>${spanStyle}</b>`;
             }
         });
     }
 )
 
-export const ColoursHtml = () => `
+export const ColoursHtml = () => /*html*/ `
 ${style}
 <div class="stack">
     <h2 class="h--3">Main theme colours</h2>

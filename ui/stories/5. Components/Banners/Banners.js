@@ -1,4 +1,4 @@
-export const FullwidthBannerHtml = () => `
+export const FullwidthBannerHtml = () => /*html*/ `
 <div class="banner banner--fullwidth">
     <figure class="banner__media">
         <picture>
@@ -48,7 +48,7 @@ export const FullwidthBannerHtml = () => `
 </div>
 `;
 
-export const FullwidthBannerOverlayHtml = () => `
+export const FullwidthBannerOverlayHtml = () => /*html*/ `
 <div class="banner banner--fullwidth">
     <figure class="banner__media">
         <picture>
@@ -99,7 +99,7 @@ export const FullwidthBannerOverlayHtml = () => `
 </div>
 `;
 
-export const InlineBannerHtml = () => `
+export const InlineBannerHtml = () => /*html*/ `
 <div class="banner banner--inline card card--fullwidth-reverse">
     <figure class="card__media">
         <picture>

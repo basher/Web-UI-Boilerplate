@@ -1,4 +1,4 @@
-const style = `
+const style = /*html*/ `
 <style>
     [class*="u-m"],
     [class*="u-p"] {
@@ -12,7 +12,7 @@ const style = `
 </style>
 `;
 
-export const MarginPaddingHtml = (args) => `
+export const MarginPaddingHtml = (args) => /*html*/ `
 ${style}
 <div class="
 ${args.marginBlock && args.marginBlock !== '' ? `u-m-block--${args.marginBlock}` : 'u-m-block'}
@@ -28,7 +28,7 @@ ${args.paddingInline && args.paddingInline !== '' ? `u-p-inline--${args.paddingI
 </div>
 `;
 
-export const ScreenReaderHtml = () => `
+export const ScreenReaderHtml = () => /*html*/ `
 <p>The content in the <code>&lt;div&gt;</code> below is hidden visually, but still announced by assistive technologies...</p>
 
 <div class="visually-hidden">
@@ -36,7 +36,7 @@ export const ScreenReaderHtml = () => `
 </div>
 `;
 
-export const HideContentHtml = () => `
+export const HideContentHtml = () => /*html*/ `
 <p>The content in the <code>&lt;div&gt;</code> below is removed from the DOM entirely...</p>
 <div class="u-hidden">
     Remove content from the DOM.
@@ -48,7 +48,7 @@ export const HideContentHtml = () => `
 </div>
 `;
 
-export const CenterContentHtml = () => `
+export const CenterContentHtml = () => /*html*/ `
 <div class="u-center">
     <h2>Heading level 2</h2>
     <h3>Heading level 3</h2>

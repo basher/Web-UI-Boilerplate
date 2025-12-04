@@ -1,4 +1,4 @@
-export const DateOfBirthHtml = () => `
+export const DateOfBirthHtml = () => /*html*/ `
 <fieldset class="fieldset">
     <legend class="legend">Date of birth</legend>
     <div class="flex">

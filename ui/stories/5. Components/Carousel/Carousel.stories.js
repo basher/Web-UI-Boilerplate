@@ -30,7 +30,7 @@ export const CarouselClickableSlides = {
 CarouselClickableSlides.storyName = 'CSS-Only Clickable Slides';
 
 export const WebUICarousel = {
-    render: () => `
+    render: () => /*html*/ `
         <p>
             See the
             <code>&lt;webui-carousel&gt;</code>

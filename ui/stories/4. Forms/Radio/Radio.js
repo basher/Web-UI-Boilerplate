@@ -1,4 +1,4 @@
-export const RadioHtml = () => `
+export const RadioHtml = () => /*html*/ `
 <fieldset class="fieldset">
     <legend class="legend">Radio legend</legend>
     <div class="radio">

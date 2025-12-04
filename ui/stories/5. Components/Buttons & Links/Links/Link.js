@@ -1,4 +1,4 @@
-export const LinkHtml = (args) => `
+export const LinkHtml = (args) => /*html*/ `
 <a
     href="#"
     class="button button--text button--${args.linkType} button--${args.linkSize}"
@@ -7,7 +7,7 @@ export const LinkHtml = (args) => `
 </a>
 `;
 
-export const IconLinkHtml = (args) => `
+export const IconLinkHtml = (args) => /*html*/ `
 <a
     href="#"
     class="button button--icon"
@@ -23,7 +23,7 @@ export const IconLinkHtml = (args) => `
 </a>
 `;
 
-export const TextIconLinkHtml = (args) => `
+export const TextIconLinkHtml = (args) => /*html*/ `
 <a
     href="#"
     class="

@@ -1,4 +1,4 @@
-const style = `
+const style = /*html*/ `
 <style>
     .carousel > * {
         background: hsl(51, 100%, 45%, 15%);
@@ -8,7 +8,7 @@ const style = `
 </style>
 `;
 
-const style2 = `
+const style2 = /*html*/ `
 <style>
     .carousel > * {
         background: hsl(51, 100%, 45%, 15%);
@@ -21,7 +21,7 @@ const style2 = `
 </style>
 `;
 
-export const CarouselHtml = () => `
+export const CarouselHtml = () => /*html*/ `
 ${style}
 <section
     class="carousel-container"
@@ -100,7 +100,7 @@ ${style}
 </section>
 `;
 
-export const CarouselFullwidthSlidesHtml = () => `
+export const CarouselFullwidthSlidesHtml = () => /*html*/ `
 ${style}
 <section
     class="carousel-container"
@@ -148,7 +148,7 @@ ${style}
 </section>
 `;
 
-export const CarouselClickableSlidesHtml = () => `
+export const CarouselClickableSlidesHtml = () => /*html*/ `
 ${style2}
 <section
     class="carousel-container"

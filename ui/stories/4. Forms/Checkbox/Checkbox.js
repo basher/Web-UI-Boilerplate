@@ -1,4 +1,4 @@
-export const CheckboxHtml = () => `
+export const CheckboxHtml = () => /*html*/ `
 <div class="checkbox">
     <input
         type="checkbox"

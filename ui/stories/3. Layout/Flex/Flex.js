@@ -1,4 +1,4 @@
-const style = `
+const style = /*html*/ `
 <style>
     [class*='flex'] > * {
         background: hsl(51, 100%, 45%, 15%);
@@ -8,7 +8,7 @@ const style = `
 </style>
 `;
 
-export const FlexHtml = (args) => `
+export const FlexHtml = (args) => /*html*/ `
 ${style}
 <div class="flex\
  ${args.growAllFlexItems === true ? 'flex--grow-all' : ''}\

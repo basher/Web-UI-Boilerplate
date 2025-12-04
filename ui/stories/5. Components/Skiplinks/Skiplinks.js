@@ -1,4 +1,4 @@
-export const SkiplinksHtml = () => `
+export const SkiplinksHtml = () => /*html*/ `
 <nav class="skiplinks" aria-label="skiplinks">
     <a class="skiplinks__link visually-hidden" href="#main">Skip to main content</a>
 </nav>

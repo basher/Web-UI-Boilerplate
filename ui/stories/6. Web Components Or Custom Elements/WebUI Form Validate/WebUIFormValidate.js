@@ -1,4 +1,4 @@
-export const WebUIFormValidateHtml = () => `
+export const WebUIFormValidateHtml = () => /*html*/ `
 <webui-form-validate>
     <form class="form" action="#">
         <div class="form__field">

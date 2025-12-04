@@ -1,4 +1,4 @@
-export const SelectHtml = () => `
+export const SelectHtml = () => /*html*/ `
 <label for="select" class="label">Select label</label>
 <select
     class="select"

@@ -1,4 +1,4 @@
-export const FormHtml = (args) => `
+export const FormHtml = (args) => /*html*/ `
 <form class="form" action="#">
     <div class="form__field">
         <label for="input-text" class="label">
@@ -107,7 +107,7 @@ export const FormHtml = (args) => `
 </form>
 `;
 
-export const FormServerValidationHtml = () => `
+export const FormServerValidationHtml = () => /*html*/ `
 <form class="form" action="#">
     <webui-notify data-error role="alert">
         <div class="stack">

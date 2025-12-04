@@ -1,4 +1,4 @@
-export const WebUIDisclosureHtml = (args) => `
+export const WebUIDisclosureHtml = (args) => /*html*/ `
 <webui-disclosure
     ${args.bindEscapeKey === true ? 'data-bind-escape-key' : ''}
     ${args.bindClickOutside === true ? 'data-bind-click-outside' : ''}

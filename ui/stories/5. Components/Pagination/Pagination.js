@@ -1,4 +1,4 @@
-export const PaginationHtml = () => `
+export const PaginationHtml = () => /*html*/ `
 <nav class="pagination" aria-label="Pagination">
     <ul class="pagination__list flex">
         <li>

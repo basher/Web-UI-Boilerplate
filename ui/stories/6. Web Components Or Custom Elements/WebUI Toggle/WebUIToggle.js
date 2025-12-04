@@ -1,4 +1,4 @@
-export const WebUIToggleHtml = () => `
+export const WebUIToggleHtml = () => /*html*/ `
 <webui-toggle>
     <button
         class="button"
@@ -13,7 +13,7 @@ export const WebUIToggleHtml = () => `
 </webui-toggle>
 `;
 
-export const WebUIToggleWithLabelHtml = () => `
+export const WebUIToggleWithLabelHtml = () => /*html*/ `
 <webui-toggle>
     <button
         class="button toggle--has-label"

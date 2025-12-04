@@ -1,4 +1,4 @@
-export const WebUIShareHtml = () => `
+export const WebUIShareHtml = () => /*html*/ `
 <webui-share>
     <webui-disclosure>
         <button
@@ -38,7 +38,7 @@ export const WebUIShareHtml = () => `
 </webui-share>
 `;
 
-export const WebUIShareAnotherUrlHtml = () => `
+export const WebUIShareAnotherUrlHtml = () => /*html*/ `
 <webui-share>
     <webui-disclosure>
         <button

@@ -1,4 +1,4 @@
-export const WebUIMakeClickableHtml = () => `
+export const WebUIMakeClickableHtml = () => /*html*/ `
 <webui-make-clickable>
     <article class="card">
         <figure class="card__media">

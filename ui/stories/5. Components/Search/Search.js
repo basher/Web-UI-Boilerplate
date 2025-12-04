@@ -1,4 +1,4 @@
-export const SearchHtml = () => `
+export const SearchHtml = () => /*html*/ `
 <div class="search">
     <form class="form search__form" role="search">
         <div class="form__field">
@@ -18,7 +18,7 @@ export const SearchHtml = () => `
 </div>
 `;
 
-export const SearchDatalistHtml = () => `
+export const SearchDatalistHtml = () => /*html*/ `
 <div class="search">
     <form class="form search__form" role="search">
         <div class="form__field">

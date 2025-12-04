@@ -1,4 +1,4 @@
-export const WebUIFetchHtmlHtml = () => `
+export const WebUIFetchHtmlHtml = () => /*html*/ `
 <p>This is simply a demo to show the core features of a component that has some Ajax dependencies (e.g. fetching an HTML fragment).</p>
 
 <webui-fetch-html>

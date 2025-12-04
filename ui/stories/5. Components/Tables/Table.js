@@ -1,4 +1,4 @@
-export const TableHtml = () => `
+export const TableHtml = () => /*html*/ `
 <table class="table">
     <caption>Meaningful <code>&lt;caption&gt;</code></caption>
     <thead>
@@ -28,7 +28,7 @@ export const TableHtml = () => `
 </table>
 `;
 
-export const ResponsiveTableHtml = () => `
+export const ResponsiveTableHtml = () => /*html*/ `
 <div
     class="table-container"
     role="region"

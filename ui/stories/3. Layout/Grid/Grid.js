@@ -1,4 +1,4 @@
-const style = `
+const style = /*html*/ `
 <style>
     [class*="grid"] > * {
         background: hsl(51, 100%, 45%, 15%);
@@ -14,7 +14,7 @@ const style = `
 </style>
 `;
 
-export const GridHtml = (args) => `
+export const GridHtml = (args) => /*html*/ `
 ${style}
 <p>Try removing grid items via devtools to see how grid auto-arranges itself.</p>
 <div class="grid ${args.gap === undefined ? '' : `${args.gap === undefined ? '' : `grid--${args.gap}`}`}">
@@ -27,7 +27,7 @@ ${style}
 </div>
 `;
 
-export const GridListHtml = (args) => `
+export const GridListHtml = (args) => /*html*/ `
 ${style}
 <p>Use semantic <code>&lt;ul&gt;</code> if it makes sense to have a <strong>list of related items</strong> rendered in a grid.</p>
 <p>For example, a gallery of images, or a collection of product cards.</p>
@@ -42,7 +42,7 @@ ${style}
 </ul>
 `;
 
-export const Grid2EqualColsHtml = (args) => `
+export const Grid2EqualColsHtml = (args) => /*html*/ `
 ${style}
 <p>Divide a page (or section of a page) into <strong>equal width</strong> columns, etc.</p>
 <div class="grid ${args.gap === undefined ? '' : `grid--${args.gap}`}">
@@ -66,7 +66,7 @@ Use the <code>grid--2-cols@small</code> classname to override the <code>grid-tem
 </div>
 `;
 
-export const Grid3EqualColsHtml = (args) => `
+export const Grid3EqualColsHtml = (args) => /*html*/ `
 ${style}
 <p>Divide a page (or section of a page) into <strong>equal width</strong> columns, etc.</p>
 <div class="grid ${args.gap === undefined ? '' : `grid--${args.gap}`}">
@@ -84,7 +84,7 @@ ${style}
 </div>
 `;
 
-export const GridAsymmetricHtml = (args) => `
+export const GridAsymmetricHtml = (args) => /*html*/ `
 ${style}
 <p>All these examples use <code>container queries</code> in supported browsers, rather than <code>media queries</code>.<p>
 
