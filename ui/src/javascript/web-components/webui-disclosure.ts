@@ -14,11 +14,46 @@ export default class WebUIDisclosure extends HTMLElement {
 
         if (!this.trigger || !this.content) return;
 
-        this.setupA11y();
-
         this.trigger.addEventListener('click', this);
     }
 
+    /**
+     * @description Handle (global) event listeners which are not part of this web component. Setup accessibility attributes.
+     */
+    public connectedCallback(): void {
+        document.addEventListener('keyup', (e: KeyboardEvent) =>
+            this.handleGlobalKeyup(e),
+        );
+        document.addEventListener('click', (e: MouseEvent) =>
+            this.handleGlobalClick(e),
+        );
+
+        this.setupA11y();
+    }
+
+    /**
+     * @description Remove (global) event listeners.
+     */
+    public disconnectedCallback(): void {
+        document.removeEventListener('keyup', this.handleGlobalKeyup);
+        document.removeEventListener('click', this.handleGlobalClick);
+    }
+
+    /**
+     * @description Handle constructor() event listeners.
+     */
+    public handleEvent(e: MouseEvent): void {
+        const target = e.currentTarget as HTMLElement;
+        const isExpanded =
+            target?.getAttribute('aria-expanded') === 'true' || false;
+
+        target?.setAttribute('aria-expanded', Boolean(!isExpanded).toString());
+        this.content?.toggleAttribute('hidden');
+    }
+
+    /**
+     * @description Setup accessibility attributes.
+     */
     private setupA11y(): void {
         this.trigger?.removeAttribute('hidden');
         this.trigger?.setAttribute('aria-expanded', 'false');
@@ -35,6 +70,9 @@ export default class WebUIDisclosure extends HTMLElement {
         }
     }
 
+    /**
+     * @description Generate a random string using a given prefix.
+     */
     private randomString(string: string): string {
         const random = `${string}-${Math.random()
             .toString(36)
@@ -43,6 +81,9 @@ export default class WebUIDisclosure extends HTMLElement {
         return random;
     }
 
+    /**
+     * @description Hide the disclosure content.
+     */
     private hideContent(e?: KeyboardEvent): void {
         if (this.trigger?.getAttribute('aria-expanded') === 'true') {
             this.trigger?.setAttribute('aria-expanded', 'false');
@@ -55,12 +96,18 @@ export default class WebUIDisclosure extends HTMLElement {
         }
     }
 
+    /**
+     * @description Handle global 'keyup' event to close the disclosure.
+     */
     private handleGlobalKeyup(e: KeyboardEvent): void {
         if (this.bindEscapeKey && e.code === 'Escape') {
             this.hideContent(e);
         }
     }
 
+    /**
+     * @description Handle global 'click' event to close the disclosure.
+     */
     private handleGlobalClick(e: MouseEvent): void {
         if (this.bindClickOutside) {
             const target = e.target as HTMLElement;
@@ -71,30 +118,5 @@ export default class WebUIDisclosure extends HTMLElement {
                 this.hideContent();
             }
         }
-    }
-
-    // Handle constructor() event listeners.
-    public handleEvent(e: MouseEvent): void {
-        const target = e.currentTarget as HTMLElement;
-        const isExpanded =
-            target?.getAttribute('aria-expanded') === 'true' || false;
-
-        target?.setAttribute('aria-expanded', Boolean(!isExpanded).toString());
-        this.content?.toggleAttribute('hidden');
-    }
-
-    // Handle (global) event listeners which are not part of this web component.
-    public connectedCallback(): void {
-        document.addEventListener('keyup', (e: KeyboardEvent) =>
-            this.handleGlobalKeyup(e),
-        );
-        document.addEventListener('click', (e: MouseEvent) =>
-            this.handleGlobalClick(e),
-        );
-    }
-
-    public disconnectedCallback(): void {
-        document.removeEventListener('keyup', this.handleGlobalKeyup);
-        document.removeEventListener('click', this.handleGlobalClick);
     }
 }
