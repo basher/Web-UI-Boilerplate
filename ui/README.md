@@ -49,7 +49,8 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 > Run `npm run prepare` from `ui` directory to install husky shell script. Do this just ONCE after cloning the repo.
 
 ### Other recommended extensions for VSCode
-- [ES6 template literal syntax highlighter](https://marketplace.visualstudio.com/items?itemName=julienetie.vscode-template-literals). Useful when editing Storybook/HTML stories, which use ES6 template literals.
+- [ES6 template literal HTML syntax highlighter](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html).
+- [ES6 template literal CSS syntax highlighter](https://marketplace.visualstudio.com/items?itemName=bashmish.es6-string-css).
 
 ## Supported browsers
 - The [default browserslist configuration](https://github.com/browserslist/browserslist#best-practices) has been defined in `package.json`.

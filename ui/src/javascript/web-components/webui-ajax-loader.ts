@@ -4,7 +4,7 @@ export default class WebUIAjaxLoader extends HTMLElement {
 
         const shadow = this.attachShadow({ mode: 'open' });
 
-        shadow.innerHTML = `
+        shadow.innerHTML = /*html*/ `
             <svg
                 role="img"
                 focusable="false"

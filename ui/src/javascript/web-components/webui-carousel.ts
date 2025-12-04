@@ -110,7 +110,7 @@ export default class WebUICarousel extends HTMLElement {
         counterPips.setAttribute('aria-hidden', 'true');
 
         this.slides.forEach((_slide, i) => {
-            counterPips.innerHTML += `
+            counterPips.innerHTML += /*html*/ `
                 <span class="carousel__counter__pip" data-pip>
                     ${i + 1}
                 </span>
@@ -130,7 +130,7 @@ export default class WebUICarousel extends HTMLElement {
         buttonGroup.setAttribute('aria-label', 'carousel controls');
         this.carousel?.before(buttonGroup);
 
-        buttonGroup.innerHTML = `
+        buttonGroup.innerHTML = /*html*/ `
             <button class="button button--text" data-button="prev">
                 Previous
             </button>
