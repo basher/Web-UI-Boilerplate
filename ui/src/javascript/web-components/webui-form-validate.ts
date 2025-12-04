@@ -20,6 +20,26 @@ export default class FormValidate extends HTMLElement {
         this.form.addEventListener('blur', this, true);
     }
 
+    /**
+     * @description Handle constructor() event listeners.
+     */
+    public handleEvent(e: MouseEvent): void {
+        if (e.type === 'submit') {
+            this.handleSubmit(e);
+        }
+
+        if (e.type === 'reset') {
+            this.handleReset();
+        }
+
+        if (e.type === 'blur') {
+            this.handleBlur(e);
+        }
+    }
+
+    /**
+     * @description Handle form submission.
+     */
     private handleSubmit(e: Event): void {
         if (!this.form?.checkValidity()) {
             e.preventDefault();
@@ -38,6 +58,9 @@ export default class FormValidate extends HTMLElement {
         }
     }
 
+    /**
+     * @description Handle form reset.
+     */
     private handleReset(): void {
         if (!this.form?.checkValidity()) {
             [...(this.form?.elements as any)].forEach((field) => {
@@ -48,6 +71,9 @@ export default class FormValidate extends HTMLElement {
         }
     }
 
+    /**
+     * @description Handle blur event on form fields.
+     */
     private handleBlur(e: Event): void {
         // Need to use 'any' type as 'checkValidity' & 'type' properties do not exist on 'HTMLElement'.
         const field = e.target as any;
@@ -61,6 +87,9 @@ export default class FormValidate extends HTMLElement {
         }
     }
 
+    /**
+     * @description Show validation error messages, and add appropriate ARIA properties/states.
+     */
     private showError(field: any): void {
         const errorMsg = document.createElement('span');
         const fieldWrapper = field.closest('.form__field');
@@ -96,6 +125,9 @@ export default class FormValidate extends HTMLElement {
         }
     }
 
+    /**
+     * @description Remove validation error messages.
+     */
     private removeError(field: any): void {
         const fieldWrapper = field.closest('.form__field');
         const errorMsg = fieldWrapper.querySelector(`.${this.errorMsgClass}`);
@@ -116,21 +148,6 @@ export default class FormValidate extends HTMLElement {
                 error.removeAttribute('aria-invalid');
                 error.removeAttribute('aria-describedby');
             });
-        }
-    }
-
-    // Handle constructor() event listeners.
-    public handleEvent(e: MouseEvent): void {
-        if (e.type === 'submit') {
-            this.handleSubmit(e);
-        }
-
-        if (e.type === 'reset') {
-            this.handleReset();
-        }
-
-        if (e.type === 'blur') {
-            this.handleBlur(e);
         }
     }
 }

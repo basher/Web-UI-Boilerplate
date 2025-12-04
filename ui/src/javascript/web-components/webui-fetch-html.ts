@@ -24,6 +24,9 @@ export default class WebUIFetchHtml extends HTMLElement {
         });
     }
 
+    /**
+     * @description Use Fetch API to request data when button is clicked.
+     */
     private handleClick(ajaxContainer: HTMLElement, ajaxUrl: string): void {
         const showAjaxLoader = true;
 
