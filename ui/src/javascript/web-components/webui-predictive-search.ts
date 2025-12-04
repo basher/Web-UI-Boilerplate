@@ -32,6 +32,17 @@ export default class WebUIPredictiveSearch extends HTMLElement {
         this.searchForm.addEventListener('submit', this);
     }
 
+    /**
+     * @description Handle constructor() event listeners.
+     */
+    public handleEvent(e: SubmitEvent): void {
+        // Results are shown dynamically, so no need to submit.
+        e.preventDefault();
+    }
+
+    /**
+     * @description Ajax callback function. Uses Fetch API.
+     */
     private handleKeyUp = (
         ajaxContainer: HTMLElement,
         ajaxUrl: string,
@@ -98,10 +109,4 @@ export default class WebUIPredictiveSearch extends HTMLElement {
             fetchData();
         }
     };
-
-    // Handle constructor() event listeners.
-    public handleEvent(e: SubmitEvent): void {
-        // Results are shown dynamically, so no need to submit.
-        e.preventDefault();
-    }
 }

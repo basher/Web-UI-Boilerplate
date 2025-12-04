@@ -6,10 +6,18 @@ export default class WebUIProse extends HTMLElement {
         this.tables = this.querySelectorAll('table');
 
         if (this.tables.length === 0) return;
+    }
 
+    /**
+     * @description Setup table wrapper.
+     */
+    public connectedCallback(): void {
         this.wrapTables();
     }
 
+    /**
+     * @description Add table wrapper and accessibility properties.
+     */
     private wrapTables(): void {
         this.tables.forEach((table) => {
             const tableWrapper = document.createElement('div');

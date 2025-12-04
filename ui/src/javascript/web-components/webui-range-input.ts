@@ -14,18 +14,23 @@ export default class WebUIRangeInput extends HTMLElement {
         this.rangeInput.addEventListener('input', this);
     }
 
+    /**
+     * @description Handle constructor() event listeners.
+     */
+    public handleEvent(): void {
+        this.rangeInput &&
+            this.rangeOutput &&
+            this.handleValidRanges(this.rangeInput, this.rangeOutput);
+    }
+
+    /**
+     * @description Update range <input> and <output> values.
+     */
     private handleValidRanges(
         range: HTMLInputElement,
         bubble: HTMLOutputElement,
     ): void {
         range.setAttribute('value', range.value);
         bubble.innerHTML = range.value;
-    }
-
-    // Handle constructor() event listeners.
-    public handleEvent(): void {
-        this.rangeInput &&
-            this.rangeOutput &&
-            this.handleValidRanges(this.rangeInput, this.rangeOutput);
     }
 }
