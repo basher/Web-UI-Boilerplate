@@ -10,7 +10,9 @@ export default class WebUIToggle extends HTMLElement {
         this.switch.addEventListener('click', this);
     }
 
-    // Handle constructor() event listeners.
+    /**
+     * @description Handle constructor() event listeners.
+     */
     public handleEvent(): void {
         const isChecked = this.switch?.getAttribute('aria-checked') === 'true';
 

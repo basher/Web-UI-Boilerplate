@@ -14,21 +14,40 @@ export default class WebUIVideoPlayer extends HTMLElement {
 
         if (!this.btnPlay || !this.dialog) return;
 
-        this.lazyload();
         this.btnPlay.addEventListener('click', this);
+    }
+
+    /**
+     * @description Setup <iframe> attributes. Handle modal closing.
+     */
+    public connectedCallback(): void {
+        this.lazyload();
         this.handleModalClose();
     }
 
+    /**
+     * @description Handle constructor() event listeners.
+     */
+    public handleEvent(): void {
+        this.handlePlay();
+    }
+
+    /**
+     * @description Setup <iframe> attributes for lazy loading.
+     */
     private lazyload(): void {
         // 'data-src' attribute is used later in 'handlePlay()' method.
         this.iframe?.setAttribute('data-src', this.iframe.src);
 
-        // Browser does not support native lazyload for iframes.
+        // If browser does not support native lazyload for iframes.
         if ('loading' in HTMLIFrameElement.prototype === false) {
             this.iframe?.setAttribute('src', '');
         }
     }
 
+    /**
+     * @description Lazy load <iframe> when play button is clicked.
+     */
     private handlePlay(): void {
         // Reset iframe 'src' back to original value.
         this.iframe?.dataset.src &&
@@ -46,12 +65,9 @@ export default class WebUIVideoPlayer extends HTMLElement {
         }
     }
 
-    /*
-        When modal is closed, the video still plays!
-        - Temp "fix" using MutationObserver to detect when the <dialog> 'open' attribute is removed.
-        - See https://bugs.chromium.org/p/chromium/issues/detail?id=1481718#c1.
-        - This "fix" does not work in Firefox.
-    */
+    /**
+     * @description Stop video playing when modal is closed. Uses MutationObserver to detect when <dialog> 'open' attribute is removed. See https://bugs.chromium.org/p/chromium/issues/detail?id=1481718#c1. Note that this "fix" does not work in Firefox.
+     */
     private handleModalClose(): void {
         const targetNode = this.dialog;
         const config = { attributes: true };
@@ -68,10 +84,5 @@ export default class WebUIVideoPlayer extends HTMLElement {
 
         const observer = new MutationObserver(callback);
         targetNode && observer.observe(targetNode, config);
-    }
-
-    // Handle constructor() event listeners.
-    public handleEvent(): void {
-        this.handlePlay();
     }
 }

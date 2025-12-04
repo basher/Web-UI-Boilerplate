@@ -33,23 +33,18 @@ export default class WebUICarousel extends HTMLElement {
     public connectedCallback(): void {
         this.setVisibleSlide();
 
-        // Update slide counter aria-live region.
         this.updateSlideCounter();
 
-        // Show slide counter (text).
         if (this.hasSlideCount) {
             this.showSlideCount();
         }
 
-        // Show slide counter (coins/pips).
         if (this.hasSlideCountPips) {
             this.showSlideCountPips();
         }
 
-        // Show PREV/NEXT buttons.
         this.showPrevNextButtons();
 
-        // Manage :FOCUS on any interactive elements inside slides.
         this.handleFocus();
     }
 

@@ -29,8 +29,27 @@ export default class WebUIShare extends HTMLElement {
         this.btnCopy?.addEventListener('click', this);
     }
 
+    /**
+     * @description Handle constructor() event listeners.
+     */
+    public handleEvent(e: MouseEvent): void {
+        const target = e.currentTarget as HTMLButtonElement;
+
+        // Click 'share' button.
+        if (target?.dataset.trigger === '') {
+            this.handleShare();
+        }
+
+        // Click 'copy' button.
+        if (target?.dataset.copy === '') {
+            this.shareInput && this.handleCopyUrl(this.shareInput);
+        }
+    }
+
+    /**
+     * @description Use native Share API, or fallback to <webui-disclosure>.
+     */
     private handleShare(): void {
-        // Use native Share API, or fallback to <webui-disclosure>.
         if (navigator.share) {
             this.shareFallback?.remove();
 
@@ -45,26 +64,14 @@ export default class WebUIShare extends HTMLElement {
         }
     }
 
+    /**
+     * @description Fallback behaviour. Allows URL to be copied to clipboard.
+     */
     private handleCopyUrl(fallbackInput: HTMLInputElement): void {
         if (!navigator.clipboard) {
             return;
         }
         fallbackInput.select();
         navigator.clipboard.writeText(fallbackInput.value);
-    }
-
-    // Handle constructor() event listeners.
-    public handleEvent(e: MouseEvent): void {
-        const target = e.currentTarget as HTMLButtonElement;
-
-        // Click 'share' button.
-        if (target?.dataset.trigger === '') {
-            this.handleShare();
-        }
-
-        // Click 'copy' button.
-        if (target?.dataset.copy === '') {
-            this.shareInput && this.handleCopyUrl(this.shareInput);
-        }
     }
 }
