@@ -14,8 +14,6 @@ export default class WebUIModal extends HTMLElement {
 
         if (!this.btnModalOpen || !this.dialog) return;
 
-        this.setupA11y();
-
         this.btnModalOpen.addEventListener('click', this);
         this.btnModalOpen.addEventListener('keydown', this);
         this.btnsModalClose.forEach((btnModalClose) => {
@@ -23,37 +21,27 @@ export default class WebUIModal extends HTMLElement {
         });
     }
 
-    private setupA11y(): void {
-        this.btnModalOpen?.setAttribute('aria-haspopup', 'dialog');
+    /**
+     * @description Handle (global) event listeners which are not part of this web component. Setup accessibility attributes.
+     */
+    public connectedCallback(): void {
+        document.addEventListener('click', (e: MouseEvent) =>
+            this.handleGlobalClick(e),
+        );
+
+        this.setupA11y();
     }
 
-    private handleOpen(): void {
-        if (!this.dialog?.open) {
-            this.dialog?.showModal();
-
-            // Set focus on content rather than the 'close' button.
-            this.modalContent?.setAttribute('tabIndex', '-1');
-            this.modalContent?.focus();
-        }
+    /**
+     * @description Remove (global) event listeners.
+     */
+    public disconnectedCallback(): void {
+        document.removeEventListener('click', this.handleGlobalClick);
     }
 
-    private handleClose(): void {
-        this.dialog?.close();
-    }
-
-    private handleGlobalClick(e: MouseEvent): void {
-        const target = e.target as HTMLElement;
-        if (
-            this.dialog?.open &&
-            !this.dialog.contains(target) &&
-            !this.btnModalOpen?.contains(target)
-        ) {
-            // Close modal when clicking outside.
-            this.handleClose();
-        }
-    }
-
-    // Handle constructor() event listeners.
+    /**
+     * @description Handle constructor() event listeners.
+     */
     public handleEvent(e: KeyboardEvent): void {
         const target = e.currentTarget as HTMLButtonElement;
 
@@ -72,14 +60,45 @@ export default class WebUIModal extends HTMLElement {
         }
     }
 
-    // Handle (global) event listeners which are not part of this web component.
-    public connectedCallback(): void {
-        document.addEventListener('click', (e: MouseEvent) =>
-            this.handleGlobalClick(e),
-        );
+    /**
+     * @description Setup accessibility attributes.
+     */
+    private setupA11y(): void {
+        this.btnModalOpen?.setAttribute('aria-haspopup', 'dialog');
     }
 
-    public disconnectedCallback(): void {
-        document.removeEventListener('click', this.handleGlobalClick);
+    /**
+     * @description Set focus on modal content when <dialog> is opened.
+     */
+    private handleOpen(): void {
+        if (!this.dialog?.open) {
+            this.dialog?.showModal();
+
+            // Set focus on content rather than the 'close' button.
+            this.modalContent?.setAttribute('tabIndex', '-1');
+            this.modalContent?.focus();
+        }
+    }
+
+    /**
+     * @description Close modal.
+     */
+    private handleClose(): void {
+        this.dialog?.close();
+    }
+
+    /**
+     * @description Handle global 'click' event to close modal.
+     */
+    private handleGlobalClick(e: MouseEvent): void {
+        const target = e.target as HTMLElement;
+        if (
+            this.dialog?.open &&
+            !this.dialog.contains(target) &&
+            !this.btnModalOpen?.contains(target)
+        ) {
+            // Close modal when clicking outside.
+            this.handleClose();
+        }
     }
 }

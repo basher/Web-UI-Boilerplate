@@ -82,7 +82,7 @@ export default class WebUIDisclosure extends HTMLElement {
     }
 
     /**
-     * @description Hide the disclosure content.
+     * @description Hide disclosure content.
      */
     private hideContent(e?: KeyboardEvent): void {
         if (this.trigger?.getAttribute('aria-expanded') === 'true') {
@@ -97,7 +97,7 @@ export default class WebUIDisclosure extends HTMLElement {
     }
 
     /**
-     * @description Handle global 'keyup' event to close the disclosure.
+     * @description Handle global 'keyup' event to close disclosure.
      */
     private handleGlobalKeyup(e: KeyboardEvent): void {
         if (this.bindEscapeKey && e.code === 'Escape') {
@@ -106,7 +106,7 @@ export default class WebUIDisclosure extends HTMLElement {
     }
 
     /**
-     * @description Handle global 'click' event to close the disclosure.
+     * @description Handle global 'click' event to close disclosure.
      */
     private handleGlobalClick(e: MouseEvent): void {
         if (this.bindClickOutside) {
