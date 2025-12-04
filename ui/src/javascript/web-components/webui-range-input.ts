@@ -1,4 +1,4 @@
-export default class WebUIRangeInput extends HTMLElement {
+class WebUIRangeInput extends HTMLElement {
     private rangeInput: HTMLInputElement | null;
     private rangeOutput: HTMLOutputElement | null;
 
@@ -34,3 +34,6 @@ export default class WebUIRangeInput extends HTMLElement {
         bubble.innerHTML = range.value;
     }
 }
+
+customElements.define('webui-range-input', WebUIRangeInput);
+export default WebUIRangeInput;

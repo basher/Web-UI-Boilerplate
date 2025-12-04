@@ -1,4 +1,4 @@
-export default class WebUIProse extends HTMLElement {
+class WebUIProse extends HTMLElement {
     private tables: NodeListOf<HTMLTableElement>;
 
     constructor() {
@@ -30,3 +30,6 @@ export default class WebUIProse extends HTMLElement {
         });
     }
 }
+
+customElements.define('webui-prose', WebUIProse);
+export default WebUIProse;

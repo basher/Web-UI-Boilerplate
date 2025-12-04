@@ -1,4 +1,4 @@
-export default class FormValidate extends HTMLElement {
+class WebUIFormValidate extends HTMLElement {
     private form: HTMLFormElement | null;
     private errorFieldClass: string;
     private errorMsgClass: string;
@@ -151,3 +151,6 @@ export default class FormValidate extends HTMLElement {
         }
     }
 }
+
+customElements.define('webui-form-validate', WebUIFormValidate);
+export default WebUIFormValidate;

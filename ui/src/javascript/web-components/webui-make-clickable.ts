@@ -1,4 +1,4 @@
-export default class WebUIMakeClickable extends HTMLElement {
+class WebUIMakeClickable extends HTMLElement {
     private link: HTMLAnchorElement | null;
 
     constructor() {
@@ -28,3 +28,6 @@ export default class WebUIMakeClickable extends HTMLElement {
         }
     }
 }
+
+customElements.define('webui-make-clickable', WebUIMakeClickable);
+export default WebUIMakeClickable;

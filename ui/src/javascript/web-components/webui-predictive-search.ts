@@ -6,7 +6,7 @@ import {
 } from '../utils/ajax-helpers';
 import searchResults from '../templates/search-results';
 
-export default class WebUIPredictiveSearch extends HTMLElement {
+class WebUIPredictiveSearch extends HTMLElement {
     private searchForm: HTMLFormElement | null;
     private searchInput: HTMLInputElement | null;
     private fetchUrl: string | undefined;
@@ -110,3 +110,6 @@ export default class WebUIPredictiveSearch extends HTMLElement {
         }
     };
 }
+
+customElements.define('webui-predictive-search', WebUIPredictiveSearch);
+export default WebUIPredictiveSearch;

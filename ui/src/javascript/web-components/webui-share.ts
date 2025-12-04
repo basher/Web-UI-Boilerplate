@@ -1,4 +1,4 @@
-export default class WebUIShare extends HTMLElement {
+class WebUIShare extends HTMLElement {
     private btnShare: HTMLButtonElement | null;
     private btnCopy: HTMLButtonElement | null;
     private shareFallback: HTMLElement | null;
@@ -75,3 +75,6 @@ export default class WebUIShare extends HTMLElement {
         navigator.clipboard.writeText(fallbackInput.value);
     }
 }
+
+customElements.define('webui-share', WebUIShare);
+export default WebUIShare;

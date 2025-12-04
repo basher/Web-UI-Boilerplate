@@ -1,4 +1,4 @@
-export default class WebUIDisclosure extends HTMLElement {
+class WebUIDisclosure extends HTMLElement {
     private trigger: HTMLButtonElement | null;
     private content: HTMLElement | null;
     private bindEscapeKey?: boolean;
@@ -120,3 +120,6 @@ export default class WebUIDisclosure extends HTMLElement {
         }
     }
 }
+
+customElements.define('webui-disclosure', WebUIDisclosure);
+export default WebUIDisclosure;

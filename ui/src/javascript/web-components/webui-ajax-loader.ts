@@ -1,4 +1,4 @@
-export default class WebUIAjaxLoader extends HTMLElement {
+class WebUIAjaxLoader extends HTMLElement {
     constructor() {
         super();
 
@@ -19,3 +19,6 @@ export default class WebUIAjaxLoader extends HTMLElement {
         `;
     }
 }
+
+customElements.define('webui-ajax-loader', WebUIAjaxLoader);
+export default WebUIAjaxLoader;

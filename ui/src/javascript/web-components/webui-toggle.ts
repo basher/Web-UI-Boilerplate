@@ -1,4 +1,4 @@
-export default class WebUIToggle extends HTMLElement {
+class WebUIToggle extends HTMLElement {
     private switch: HTMLButtonElement | null;
 
     constructor() {
@@ -22,3 +22,6 @@ export default class WebUIToggle extends HTMLElement {
         );
     }
 }
+
+customElements.define('webui-toggle', WebUIToggle);
+export default WebUIToggle;

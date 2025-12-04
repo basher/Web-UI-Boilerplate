@@ -1,4 +1,4 @@
-export default class WebUITabs extends HTMLElement {
+class WebUITabs extends HTMLElement {
     private tablist: HTMLElement | null;
     private tabpanels: NodeListOf<HTMLElement>;
     private tabTriggers: NodeListOf<HTMLElement>;
@@ -152,3 +152,6 @@ export default class WebUITabs extends HTMLElement {
         });
     }
 }
+
+customElements.define('webui-tabs', WebUITabs);
+export default WebUITabs;

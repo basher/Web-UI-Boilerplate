@@ -4,7 +4,7 @@ import {
     ajaxEventHandler,
 } from '../utils/ajax-helpers';
 
-export default class WebUIFetchHtml extends HTMLElement {
+class WebUIFetchHtml extends HTMLElement {
     private fetchTrigger: HTMLButtonElement | null;
     private fetchUrl: string | undefined;
 
@@ -57,3 +57,6 @@ export default class WebUIFetchHtml extends HTMLElement {
         fetchData();
     }
 }
+
+customElements.define('webui-fetch-html', WebUIFetchHtml);
+export default WebUIFetchHtml;

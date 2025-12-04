@@ -1,4 +1,4 @@
-export default class WebUIVideoPlayer extends HTMLElement {
+class WebUIVideoPlayer extends HTMLElement {
     private btnPlay: HTMLButtonElement | null;
     private mediaContainer: HTMLElement | null;
     private iframe: HTMLIFrameElement | null;
@@ -86,3 +86,6 @@ export default class WebUIVideoPlayer extends HTMLElement {
         targetNode && observer.observe(targetNode, config);
     }
 }
+
+customElements.define('webui-video-player', WebUIVideoPlayer);
+export default WebUIVideoPlayer;

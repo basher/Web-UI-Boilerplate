@@ -2,7 +2,7 @@
   "name": "web-ui-boilerplate",
   "description": "UI boilerplate for websites & web apps using vanilla HTML/CSS/JavaScript, powered by Storybook, bundled by Parcel.",
   "author": "basher",
-  "version": "5.2.6",
+  "version": "5.3.0",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -27,7 +27,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "publish-storybook": "npm install && npm run bundle-all-themes && npm run build-storybook",
-    "prepare": "cd .. && husky install ui/.husky"
+    "prepare": "cd .. && husky install ui/.husky",
+    "cem-analyze": "cem analyze --globs src/javascript/web-components/*.ts"
   },
   "targets": {
     "app": {}
@@ -37,6 +38,7 @@
   ],
   "devDependencies": {
     "@babel/eslint-parser": "^7.28.5",
+    "@custom-elements-manifest/analyzer": "^0.11.0",
     "@etchteam/storybook-addon-status": "^8.0.0",
     "@storybook/addon-a11y": "^10.0.8",
     "@storybook/addon-docs": "^10.0.8",
@@ -81,5 +83,6 @@
       "stylelint",
       "prettier --write"
     ]
-  }
+  },
+  "customElements": "custom-elements.json"
 }

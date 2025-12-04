@@ -1,4 +1,4 @@
-export default class WebUIModal extends HTMLElement {
+class WebUIModal extends HTMLElement {
     private dialog: HTMLDialogElement | null;
     private modalContent: HTMLElement | null;
     private btnModalOpen: HTMLButtonElement | HTMLAnchorElement | null;
@@ -102,3 +102,6 @@ export default class WebUIModal extends HTMLElement {
         }
     }
 }
+
+customElements.define('webui-modal', WebUIModal);
+export default WebUIModal;

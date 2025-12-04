@@ -1,4 +1,4 @@
-export default class WebUICarousel extends HTMLElement {
+class WebUICarousel extends HTMLElement {
     private carousel: HTMLUListElement | null;
     private slides: NodeListOf<HTMLElement>;
     private hasSlideCount?: boolean;
@@ -308,3 +308,6 @@ export default class WebUICarousel extends HTMLElement {
         this.setCurrentSlideCounter(this.getCurrentSlide() - 1);
     }
 }
+
+customElements.define('webui-carousel', WebUICarousel);
+export default WebUICarousel;

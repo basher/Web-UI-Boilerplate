@@ -1,4 +1,4 @@
-export default class WebUINotify extends HTMLElement {
+class WebUINotify extends HTMLElement {
     private btnClose: HTMLButtonElement | null;
 
     constructor() {
@@ -17,3 +17,6 @@ export default class WebUINotify extends HTMLElement {
         this.setAttribute('hidden', '');
     }
 }
+
+customElements.define('webui-notify', WebUINotify);
+export default WebUINotify;
