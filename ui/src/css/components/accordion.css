@@ -1,16 +1,15 @@
 .accordion__details {
     overflow: hidden;
 
-    /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
     &::details-content {
+        --webui-animation-slow: 1s;
+
         block-size: 0;
-        transition:
-            block-size var(--webui-animation-fast),
-            content-visibility var(--webui-animation-fast);
         transition-behavior: allow-discrete;
+        transition-duration: var(--webui-animation-slow);
+        transition-property: block-size, content-visibility;
     }
 
-    /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
     &[open]::details-content {
         block-size: auto;
     }

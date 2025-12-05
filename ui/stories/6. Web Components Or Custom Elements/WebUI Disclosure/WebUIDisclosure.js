@@ -13,8 +13,7 @@ export const WebUIDisclosureHtml = (args) => /*html*/ `
     </button>
 
     <div data-content>
-        <p>Content to be shown/hidden.</p>
-        <p>Use this component when <code>accordion</code> or <code>tabs</code> components cannot be used.</p>
+        <p>Content to be shown/hidden.<br/>Use this component when <code>accordion</code> or <code>tabs</code> components cannot be used.</p>
     </div>
 </webui-disclosure>
 `;
