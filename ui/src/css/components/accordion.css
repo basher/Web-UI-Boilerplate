@@ -2,7 +2,8 @@
     overflow: hidden;
 
     &::details-content {
-        --webui-animation-slow: 1s;
+        /* Need to specify value here again, as the global custom property doesn't appear to pass through to this shadow root (even though devtools computes it)! */
+        --webui-animation-slow: 500ms;
 
         block-size: 0;
         transition-behavior: allow-discrete;
