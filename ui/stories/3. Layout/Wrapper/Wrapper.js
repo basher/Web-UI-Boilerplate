@@ -3,7 +3,7 @@ const style = /*html*/ `
     .sb-show-main.sb-main-padded {
         padding: 0;
     }
-    [class*='wrapper']:not([class*="skin"]):not(.sbdocs-wrapper) {
+    .wrapper:not([class*="skin"]):not(.sbdocs-wrapper) {
         background: hsl(51, 100%, 45%, 15%);
         border: 1px dashed hsl(51, 100%, 45%);
     }
@@ -26,28 +26,28 @@ ${style}
     ">
         Apply a SKIN override to this wrapper
     </div>
-    <div class="wrapper--s\
+    <div class="wrapper\
  ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
  ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
-    ">
+    " data-size="small">
         Wrapper (small)
     </div>
-    <div class="wrapper--l\
+    <div class="wrapper\
  ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
  ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
-    ">
+    " data-size="large">
         Wrapper (large)
     </div>
-    <div class="wrapper--fullbleed\
+    <div class="wrapper\
  ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
  ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
-    ">
+    " data-size="fullbleed">
         Wrapper (fullbleed)
     </div>
-    <div class="wrapper--fit-content\
+    <div class="wrapper\
  ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
  ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
-    ">
+    " data-size="fit-content">
         Wrapper (fit-content)
     </div>
 </div>

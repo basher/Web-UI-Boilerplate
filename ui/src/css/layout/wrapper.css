@@ -1,27 +1,27 @@
-[class*='wrapper'] {
+.wrapper {
     --wrapper-max-width: 64rem;
 
     margin-inline: auto;
     max-inline-size: var(--wrapper-max-width);
     padding-inline: var(--webui-gutter-m);
-}
 
-.wrapper--s {
-    --wrapper-max-width: 48rem;
-}
+    &[data-size='small'] {
+        --wrapper-max-width: 48rem;
+    }
 
-.wrapper--l {
-    --wrapper-max-width: 75rem;
-}
+    &[data-size='large'] {
+        --wrapper-max-width: 75rem;
+    }
 
-.wrapper--fullbleed {
-    --wrapper-max-width: 100vw; /* 100dvi might have performance implications */
+    &[data-size='fullbleed'] {
+        --wrapper-max-width: 100vw; /* 100dvi might have performance implications */
 
-    padding-inline: 0;
-}
+        padding-inline: 0;
+    }
 
-.wrapper--fit-content {
-    --wrapper-max-width: revert;
+    &[data-size='fit-content'] {
+        --wrapper-max-width: revert;
 
-    inline-size: fit-content;
+        inline-size: fit-content;
+    }
 }
