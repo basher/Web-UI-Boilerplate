@@ -4,14 +4,14 @@
     fill: currentColor;
 }
 
-.icon--small {
+[data-size='small'] {
     block-size: var(--webui-icon-size-s);
 }
 
-.icon--medium {
+[data-size='medium'] {
     block-size: var(--webui-icon-size-m);
 }
 
-.icon--large {
+[data-size='large'] {
     block-size: var(--webui-icon-size-l);
 }

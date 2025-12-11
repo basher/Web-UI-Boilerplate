@@ -13,7 +13,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>search</title>
         <use href="sprite.svg#search" />
@@ -22,7 +23,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>menu</title>
         <use href="sprite.svg#hamburger" />
@@ -31,7 +33,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>close</title>
         <use href="sprite.svg#close" />
@@ -40,7 +43,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>open</title>
         <use href="sprite.svg#plus" />
@@ -49,7 +53,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>close</title>
         <use href="sprite.svg#minus" />
@@ -59,7 +64,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>next</title>
         <use href="sprite.svg#right" />
@@ -68,7 +74,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>previous</title>
         <use href="sprite.svg#left" />
@@ -77,7 +84,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>close</title>
         <use href="sprite.svg#up" />
@@ -86,7 +94,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>open</title>
         <use href="sprite.svg#down" />
@@ -95,7 +104,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>share</title>
         <use href="sprite.svg#share" />
@@ -104,7 +114,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>twitter</title>
         <use href="sprite.svg#twitter" />
@@ -113,7 +124,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>facebook</title>
         <use href="sprite.svg#facebook" />
@@ -122,7 +134,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>linkedin</title>
         <use href="sprite.svg#linkedin" />
@@ -131,7 +144,8 @@ ${style}
     <svg
         role="img"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <title>play video</title>
         <use href="sprite.svg#video" />
