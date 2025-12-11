@@ -2,16 +2,16 @@
     aspect-ratio: 1;
     block-size: 1em; /* Scale icon to match font-size of parent element */
     fill: currentColor;
-}
 
-[data-size='small'] {
-    block-size: var(--webui-icon-size-s);
-}
+    &[data-size='small'] {
+        block-size: var(--webui-icon-size-s);
+    }
 
-[data-size='medium'] {
-    block-size: var(--webui-icon-size-m);
-}
+    &[data-size='medium'] {
+        block-size: var(--webui-icon-size-m);
+    }
 
-[data-size='large'] {
-    block-size: var(--webui-icon-size-l);
+    &[data-size='large'] {
+        block-size: var(--webui-icon-size-l);
+    }
 }
