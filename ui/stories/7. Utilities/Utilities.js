@@ -32,7 +32,7 @@ export const ScreenReaderHtml = () => /*html*/ `
 <p>The content in the <code>&lt;div&gt;</code> below is hidden visually, but still announced by assistive technologies...</p>
 
 <div class="visually-hidden">
-    Visually hide content, but still make it available to assistive technologys.
+    Visually hide content, but still make it available to assistive technologies.
 </div>
 `;
 
