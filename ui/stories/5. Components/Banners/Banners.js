@@ -1,5 +1,5 @@
 export const FullwidthBannerHtml = () => /*html*/ `
-<div class="banner banner--fullwidth">
+<div class="banner" data-banner="fullwidth">
     <figure class="banner__media">
         <picture>
             <source
@@ -38,7 +38,7 @@ export const FullwidthBannerHtml = () => /*html*/ `
         </picture>
     </figure>
     <div class="banner__content stack">
-        <h2 class="banner__title">Fullwidth banner title</h2>
+        <h2>Fullwidth banner title</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
         <a href="#" class="button button--text button--primary"
         >
@@ -49,7 +49,7 @@ export const FullwidthBannerHtml = () => /*html*/ `
 `;
 
 export const FullwidthBannerOverlayHtml = () => /*html*/ `
-<div class="banner banner--fullwidth">
+<div class="banner" data-banner="fullwidth">
     <figure class="banner__media">
         <picture>
             <source
@@ -89,7 +89,7 @@ export const FullwidthBannerOverlayHtml = () => /*html*/ `
     </figure>
     <div class="banner__overlay"></div>
     <div class="banner__content stack">
-        <h2 class="banner__title">Fullwidth banner title</h2>
+        <h2>Fullwidth banner title</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
         <a href="#" class="button button--text button--primary"
         >
@@ -100,7 +100,7 @@ export const FullwidthBannerOverlayHtml = () => /*html*/ `
 `;
 
 export const InlineBannerHtml = () => /*html*/ `
-<div class="banner banner--inline card card--fullwidth-reverse">
+<div class="banner card card--fullwidth-reverse" data-banner="inline">
     <figure class="card__media">
         <picture>
             <source
@@ -129,7 +129,7 @@ export const InlineBannerHtml = () => /*html*/ `
         </picture>
     </figure>
     <div class="card__content stack">
-        <h2 class="banner__title">Inline banner title</h2>
+        <h2>Inline banner title</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
         <a href="#" class="button button--text button--primary"
         >

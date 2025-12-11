@@ -4,6 +4,46 @@
     display: flex;
     flex-direction: column;
     gap: var(--banner-gap);
+
+    /* Fullwidth banner. */
+    &[data-banner='fullwidth'] {
+        .banner__content {
+            padding-inline: var(--webui-gutter-s);
+        }
+
+        /* TODO: Replace with container query. */
+        /* stylelint-disable-next-line order/order */
+        @media (width > 48em) {
+            display: grid;
+            grid-template-areas: 'fullwidth';
+            place-items: center start;
+
+            > * {
+                grid-area: fullwidth;
+            }
+
+            &:not(:has(.banner__overlay)) {
+                /* stylelint-disable-next-line max-nesting-depth */
+                .banner__content {
+                    /* So text is legible above image. */
+                    background: var(--webui-color-primary-100);
+                    color: var(--webui-color-neutral-900);
+                    inline-size: 40vw;
+                    margin-inline-start: var(--webui-gutter-m);
+                    padding: var(--webui-gutter-m);
+                }
+            }
+        }
+    }
+
+    /* Inline banner uses fullwidth card HTML. */
+    &[data-banner='inline'] {
+        align-items: center;
+
+        .card__content {
+            --content-min-width: 45%;
+        }
+    }
 }
 
 .banner__media {
@@ -11,33 +51,6 @@
         @media (prefers-color-scheme: dark) {
             opacity: 1;
             transition: none;
-        }
-    }
-}
-
-.banner--fullwidth {
-    .banner__content {
-        padding-inline: var(--webui-gutter-s);
-    }
-
-    /* TODO: Replace with container query. */
-    /* stylelint-disable-next-line order/order */
-    @media (width > 48em) {
-        display: grid;
-        grid-template-areas: 'fullwidth';
-        place-items: center start;
-
-        > * {
-            grid-area: fullwidth;
-        }
-
-        .banner__content {
-            /* So text is legible above image. */
-            background: var(--webui-color-primary-100);
-            color: var(--webui-color-neutral-900);
-            inline-size: 40vw;
-            margin-inline-start: var(--webui-gutter-m);
-            padding: var(--webui-gutter-m);
         }
     }
 }
@@ -53,21 +66,5 @@
         );
         block-size: 100%;
         inline-size: 60%;
-    }
-
-    + .banner__content {
-        /* TODO: Replace with container query. */
-        @media (width > 48em) {
-            background: none;
-        }
-    }
-}
-
-/* Inline banner uses fullwidth card HTML. */
-.banner--inline {
-    align-items: center;
-
-    .card__content {
-        --content-min-width: 45%;
     }
 }

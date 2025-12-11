@@ -30,7 +30,7 @@ ${style}
         <h1 class="visually-hidden">Heading level 1</h1>
 
         <div class="wrapper stack" data-size="fullbleed">
-            <div class="banner banner--fullwidth">
+            <div class="banner" data-banner="fullwidth">
                 <figure class="banner__media">
                     <picture>
                         <source
@@ -69,7 +69,7 @@ ${style}
                     </picture>
                 </figure>
                 <div class="banner__content stack">
-                    <h2 class="banner__title">Fullwidth banner title</h2>
+                    <h2>Fullwidth banner title</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
                     <a href="#" class="button button--text button--primary"
                     >
