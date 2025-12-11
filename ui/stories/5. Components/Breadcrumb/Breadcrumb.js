@@ -1,17 +1,17 @@
 export const BreadcrumbHtml = () => /*html*/ `
 <nav class="breadcrumb" aria-label="Breadcrumb">
-    <ol class="breadcrumb__list">
-        <li class="breadcrumb__item">
-            <a class="breadcrumb__link" href="#">Home</a>
+    <ol>
+        <li>
+            <a href="#">Home</a>
         </li>
-        <li class="breadcrumb__item">
-            <a class="breadcrumb__link" href="#">Parent</a>
+        <li>
+            <a href="#">Parent</a>
         </li>
-        <li class="breadcrumb__item">
-            <a class="breadcrumb__link" href="#">Parent</a>
+        <li>
+            <a href="#">Parent</a>
         </li>
-        <li class="breadcrumb__item">
-            <a class="breadcrumb__link" href="#" aria-current="page">Current page</a>
+        <li>
+            <a href="#" aria-current="page">Current page</a>
         </li>
     </ol>
 </nav>
