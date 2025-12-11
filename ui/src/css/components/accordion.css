@@ -1,53 +1,51 @@
-.accordion__details {
-    overflow: hidden;
+.accordion {
+    details {
+        overflow: hidden;
 
-    &::details-content {
-        /* Need to specify value here again, as the global custom property doesn't appear to pass through to this shadow root (even though devtools computes it)! */
-        --webui-animation-slow: 500ms;
+        &::details-content {
+            /* Need to specify value here again, as the global custom property doesn't appear to pass through to this shadow root (even though devtools computes it)! */
+            --webui-animation-slow: 500ms;
 
-        block-size: 0;
-        transition-behavior: allow-discrete;
-        transition-duration: var(--webui-animation-slow);
-        transition-property: block-size, content-visibility;
-    }
+            block-size: 0;
+            transition-behavior: allow-discrete;
+            transition-duration: var(--webui-animation-slow);
+            transition-property: block-size, content-visibility;
+        }
 
-    &[open]::details-content {
-        block-size: auto;
-    }
-}
-
-.accordion__details + .accordion__details {
-    margin-block-start: var(--webui-gutter-m);
-}
-
-.accordion__summary {
-    font-family: var(--webui-font-family-title);
-    font-size: var(--type-step-2);
-    line-height: var(--webui-line-height-h4);
-    margin-block-end: var(--webui-gutter-s);
-}
-
-.accordion--custom-icon {
-    .accordion__summary {
-        align-items: center;
-        border-block-end: var(--webui-border-width-s) solid;
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        padding-block-end: var(--webui-gutter-s);
-
-        &::-webkit-details-marker {
-            display: none;
+        &[open]::details-content {
+            block-size: auto;
         }
     }
 
-    .icon {
-        transition: transform var(--webui-animation-fast);
+    summary {
+        font-family: var(--webui-font-family-title);
+        font-size: var(--type-step-2);
+        line-height: var(--webui-line-height-h4);
+        margin-block-end: var(--webui-gutter-s);
     }
 
-    [open] {
+    &[data-custom-icon] {
+        summary {
+            align-items: center;
+            border-block-end: var(--webui-border-width-s) solid;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding-block-end: var(--webui-gutter-s);
+
+            &::-webkit-details-marker {
+                display: none;
+            }
+        }
+
         .icon {
-            transform: rotate(180deg);
+            transition: transform var(--webui-animation-fast);
+        }
+
+        [open] {
+            .icon {
+                transform: rotate(180deg);
+            }
         }
     }
 }

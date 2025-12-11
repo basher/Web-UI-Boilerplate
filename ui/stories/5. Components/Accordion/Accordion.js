@@ -1,14 +1,14 @@
 export const AccordionHtml = () => /*html*/ `
-<div class="accordion">
-    <details class="accordion__details">
-        <summary class="accordion__summary">Accordion title 1</summary>
-        <div class="accordion__copy">
+<div class="accordion stack">
+    <details>
+        <summary>Accordion title 1</summary>
+        <div class="accordion__content">
             Accordion 1 content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequatur temporibus, modi ab necessitatibus voluptatum sed harum voluptatem non sunt quidem, ut illo porro illum corporis mollitia perferendis nihil reiciendis.
         </div>
     </details>
-    <details class="accordion__details">
-        <summary class="accordion__summary">Accordion title 2</summary>
-        <div class="accordion__copy">
+    <details>
+        <summary>Accordion title 2</summary>
+        <div class="accordion__content">
             Accordion 2 content - Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </div>
     </details>
@@ -16,16 +16,16 @@ export const AccordionHtml = () => /*html*/ `
 `;
 
 export const AccordionExclusiveHtml = () => /*html*/ `
-<div class="accordion">
-    <details class="accordion__details" name="acc1">
-        <summary class="accordion__summary">Accordion title 1</summary>
-        <div class="accordion__copy">
+<div class="accordion stack">
+    <details name="acc1">
+        <summary>Accordion title 1</summary>
+        <div class="accordion__content">
             Accordion 1 content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequatur temporibus, modi ab necessitatibus voluptatum sed harum voluptatem non sunt quidem, ut illo porro illum corporis mollitia perferendis nihil reiciendis.
         </div>
     </details>
-    <details class="accordion__details" name="acc1">
-        <summary class="accordion__summary">Accordion title 2</summary>
-        <div class="accordion__copy">
+    <details name="acc1">
+        <summary>Accordion title 2</summary>
+        <div class="accordion__content">
             Accordion 2 content - Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </div>
     </details>
@@ -33,9 +33,9 @@ export const AccordionExclusiveHtml = () => /*html*/ `
 `;
 
 export const AccordionCustomIconHtml = () => /*html*/ `
-<div class="accordion accordion--custom-icon">
-    <details class="accordion__details">
-        <summary class="accordion__summary">
+<div class="accordion stack" data-custom-icon>
+    <details>
+        <summary>
             Accordion title 1
 
             <svg
@@ -46,12 +46,12 @@ export const AccordionCustomIconHtml = () => /*html*/ `
                 <use href="sprite.svg#down" />
             </svg>
         </summary>
-        <div class="accordion__copy">
+        <div class="accordion__content">
             Accordion 1 content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequatur temporibus, modi ab necessitatibus voluptatum sed harum voluptatem non sunt quidem, ut illo porro illum corporis mollitia perferendis nihil reiciendis.
         </div>
     </details>
-    <details class="accordion__details">
-        <summary class="accordion__summary">
+    <details>
+        <summary>
             Accordion title 2
 
             <svg
@@ -62,7 +62,7 @@ export const AccordionCustomIconHtml = () => /*html*/ `
                 <use href="sprite.svg#down" />
             </svg>
         </summary>
-        <div class="accordion__copy">
+        <div class="accordion__content">
             Accordion 2 content - Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </div>
     </details>
