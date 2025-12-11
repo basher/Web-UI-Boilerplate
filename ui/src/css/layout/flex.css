@@ -1,4 +1,4 @@
-[class*='flex'] {
+.flex {
     --flex-gap: var(--webui-gutter-m);
 
     display: flex;
@@ -14,74 +14,74 @@
     > * {
         margin: 0;
     }
-}
 
-/* Flex direction. */
-.flex--column {
-    flex-direction: column;
-}
+    /* Flex direction. */
+    &[data-direction='row-reverse'] {
+        flex-direction: row-reverse;
+    }
 
-.flex--row-reverse {
-    flex-direction: row-reverse;
-}
+    &[data-direction='column'] {
+        flex-direction: column;
+    }
 
-.flex--column-reverse {
-    flex-direction: column-reverse;
-}
+    &[data-direction='column-reverse'] {
+        flex-direction: column-reverse;
+    }
 
-/* 0 gap between flex items. */
-.flex--no-gap {
-    --flex-gap: 0;
-}
+    /* 0 gap between flex items. */
+    &[data-gap='no-gap'] {
+        --flex-gap: 0;
+    }
 
-/* Gap variants. */
-.flex--gap-xs {
-    --flex-gap: var(--webui-gutter-xs);
-}
+    /* Gap variants. */
+    &[data-gap='xsmall'] {
+        --flex-gap: var(--webui-gutter-xs);
+    }
 
-.flex--gap-s {
-    --flex-gap: var(--webui-gutter-s);
-}
+    &[data-gap='small'] {
+        --flex-gap: var(--webui-gutter-s);
+    }
 
-.flex--gap-l {
-    --flex-gap: var(--webui-gutter-l);
-}
+    &[data-gap='large'] {
+        --flex-gap: var(--webui-gutter-l);
+    }
 
-.flex--gap-xl {
-    --flex-gap: var(--webui-gutter-xl);
-}
+    &[data-gap='xlarge'] {
+        --flex-gap: var(--webui-gutter-xl);
+    }
 
-/* Align items. */
-.flex--ai-center {
-    align-items: center;
-}
+    /* Align items. */
+    &[data-align='center'] {
+        align-items: center;
+    }
 
-.flex--ai-start {
-    align-items: flex-start;
-}
+    &[data-align='start'] {
+        align-items: flex-start;
+    }
 
-.flex--ai-end {
-    align-items: flex-end;
-}
+    &[data-align='end'] {
+        align-items: flex-end;
+    }
 
-/* Justify content. */
-.flex--jc-center {
-    justify-content: center;
-}
+    /* Justify content. */
+    &[data-justify='center'] {
+        justify-content: center;
+    }
 
-.flex--jc-end {
-    justify-content: flex-end;
-}
+    &[data-justify='end'] {
+        justify-content: flex-end;
+    }
 
-.flex--jc-between {
-    justify-content: space-between;
-}
+    &[data-justify='between'] {
+        justify-content: space-between;
+    }
 
-.flex--jc-evenly {
-    justify-content: space-evenly;
-}
+    &[data-justify='evenly'] {
+        justify-content: space-evenly;
+    }
 
-/* Make all flex items grow to fill available space. */
-.flex--grow-all > * {
-    flex-grow: 1;
+    /* Make all flex items grow to fill available space. */
+    &[data-grow='true'] > * {
+        flex-grow: 1;
+    }
 }

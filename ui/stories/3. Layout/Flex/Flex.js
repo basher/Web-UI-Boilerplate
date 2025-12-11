@@ -10,13 +10,14 @@ const style = /*html*/ `
 
 export const FlexHtml = (args) => /*html*/ `
 ${style}
-<div class="flex\
- ${args.growAllFlexItems === true ? 'flex--grow-all' : ''}\
- ${args.direction === undefined ? '' : `flex--${args.direction}`}\
- ${args.gap === undefined ? '' : `flex--${args.gap}`}\
- ${args.alignItems === undefined ? '' : `flex--${args.alignItems}`}\
- ${args.justifyContent === undefined ? '' : `flex--${args.justifyContent}`}\
-">
+<div
+    class="flex"
+    ${args.alignItems ? `data-align="${args.alignItems}"` : ''}
+    ${args.direction ? `data-direction="${args.direction}"` : ''}
+    ${args.gap ? `data-gap="${args.gap}"` : ''}
+    ${args.growAllFlexItems ? `data-grow="${args.growAllFlexItems}"` : ''}
+    ${args.justifyContent ? `data-justify="${args.justifyContent}"` : ''}
+>
     <div>Flex item 1 - lots more content<br><br>
     to demonstrate (default) equal height columns</div>
     <div>Flex item 2</div>

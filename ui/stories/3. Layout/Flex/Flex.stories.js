@@ -11,7 +11,7 @@ export default {
     argTypes: {
         direction: {
             control: 'select',
-            options: ['column', 'row-reverse', 'column-reverse'],
+            options: ['row-reverse', 'column', 'column-reverse'],
             description: 'Flex direction.',
             table: { defaultValue: { summary: 'row' } },
             table: {
@@ -21,7 +21,7 @@ export default {
         },
         gap: {
             control: 'select',
-            options: ['no-gap', 'gap-xs', 'gap-s', 'gap-l', 'gap-xl'],
+            options: ['no-gap', 'xsmall', 'small', 'large', 'xlarge'],
             description: 'Flex gap.',
             table: {
                 type: { summary: 'select' },
@@ -30,7 +30,7 @@ export default {
         },
         alignItems: {
             control: 'select',
-            options: ['ai-center', 'ai-start', 'ai-end'],
+            options: ['center', 'start', 'end'],
             description: 'Vertical alignment of flex children.',
             table: {
                 type: { summary: 'select' },
@@ -39,7 +39,7 @@ export default {
         },
         justifyContent: {
             control: 'select',
-            options: ['jc-center', 'jc-end', 'jc-between', 'jc-evenly'],
+            options: ['center', 'end', 'between', 'evenly'],
             description: 'Horizontal alignment of flex children.',
             table: {
                 type: { summary: 'select' },
