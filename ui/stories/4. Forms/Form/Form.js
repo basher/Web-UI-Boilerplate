@@ -143,7 +143,7 @@ export const FormServerValidationHtml = () => /*html*/ `
             required
         />
     </div>
-    <div class="form__field form__field--has-error">
+    <div class="form__field" data-field-has-error>
         <label for="input-tel" class="label">
             Telephone input label
             <span class="label__hint">UK number, usually 11 digits, can also include spaces</span>
@@ -162,7 +162,7 @@ export const FormServerValidationHtml = () => /*html*/ `
             aria-describedby="input-tel-error"
         />
     </div>
-    <div class="form__field form__field--has-error">
+    <div class="form__field" data-field-has-error>
         <label for="select" class="label">
             Select label
         </label>
@@ -182,7 +182,7 @@ export const FormServerValidationHtml = () => /*html*/ `
             <option value="3">option 3</option>
         </select>
     </div>
-    <div class="form__field form__field--has-error">
+    <div class="form__field" data-field-has-error>
         <span class="form__error" id="checkbox-1-error">
             Error text...
         </span>
@@ -199,7 +199,7 @@ export const FormServerValidationHtml = () => /*html*/ `
             </label>
         </div>
     </div>
-    <div class="form__field form__field--has-error">
+    <div class="form__field" data-field-has-error>
         <fieldset class="fieldset">
             <legend class="legend">
                 Radio legend

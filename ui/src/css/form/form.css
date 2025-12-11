@@ -12,8 +12,8 @@
     /* Native HTML5 validation, and errors rendered directly in HTML, or via JavaScript. */
     &:has(:valid:required),
     &:has(:user-invalid:required),
-    &.form__field--has-error {
-        :where(.label, .checkbox__label, .radio__label) {
+    &[data-field-has-error] {
+        :where(label) {
             padding-inline-start: var(--webui-gutter-l);
             position: relative;
 
@@ -35,7 +35,7 @@
     }
 
     &:has(:valid:required) {
-        :where(.label, .checkbox__label, .radio__label) {
+        :where(label) {
             &::after {
                 background-color: var(--webui-color-success-500);
                 content: '✓' / '';
@@ -51,7 +51,7 @@
     padding-inline: var(--webui-gutter-xs);
 }
 
-.form__field--has-error {
+[data-field-has-error] {
     &:has(:valid) {
         .form__error {
             display: none;
@@ -95,11 +95,5 @@
         background-color: var(--webui-color-error-100);
         border-color: var(--webui-color-error-500);
         border-width: var(--webui-border-width-m);
-    }
-}
-
-.message--error {
-    + .form {
-        margin-block-start: var(--webui-gutter-m);
     }
 }

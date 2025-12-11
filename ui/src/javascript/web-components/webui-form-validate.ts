@@ -1,13 +1,13 @@
 class WebUIFormValidate extends HTMLElement {
     private form: HTMLFormElement | null;
-    private errorFieldClass: string;
+    private errorFieldName: string;
     private errorMsgClass: string;
 
     constructor() {
         super();
 
         this.form = this.querySelector('form');
-        this.errorFieldClass = 'form__field--has-error';
+        this.errorFieldName = 'data-field-has-error';
         this.errorMsgClass = 'form__error';
 
         if (!this.form) return;
@@ -100,7 +100,7 @@ class WebUIFormValidate extends HTMLElement {
             field.name !== '' ? `${field.name}-error` : `${field.id}-error`;
         errorMsg.textContent = field.validationMessage;
 
-        fieldWrapper?.classList.add(this.errorFieldClass);
+        fieldWrapper?.setAttribute(this.errorFieldName, 'true');
         field.setAttribute('aria-invalid', 'true');
         field.setAttribute('aria-describedby', errorMsg.id);
 
@@ -135,7 +135,7 @@ class WebUIFormValidate extends HTMLElement {
 
         field.removeAttribute('aria-invalid');
         field.removeAttribute('aria-describedby');
-        fieldWrapper?.classList.remove(this.errorFieldClass);
+        fieldWrapper?.removeAttribute(this.errorFieldName);
         errorMsg?.remove();
 
         // Also remove errors from any other grouped fields inside <fieldset>.
