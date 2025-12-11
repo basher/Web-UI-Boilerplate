@@ -21,7 +21,7 @@ ${style}
             <a class="skiplinks__link  visually-hidden" href="#footer">Skip to footer</a>
         </nav>
 
-        <div class="wrapper--l">
+        <div class="wrapper" data-size="large">
             Page <code>&lt;header&gt;</code>
         </div>
     </header>
@@ -29,7 +29,7 @@ ${style}
     <main class="main" id="main">
         <h1 class="visually-hidden">Heading level 1</h1>
 
-        <div class="wrapper--fullbleed stack">
+        <div class="wrapper stack" data-size="fullbleed">
             <div class="banner banner--fullwidth">
                 <figure class="banner__media">
                     <picture>
@@ -78,7 +78,7 @@ ${style}
                 </div>
             </div>
 
-            <div class="wrapper--l u-p-block--l">
+            <div class="wrapper u-p-block--l" data-size="large">
                 <div class="prose stack u-center">
                     <h2>Heading level 2</h2>
                     <h3>Heading level 3</h3>
@@ -86,8 +86,8 @@ ${style}
                 </div>
             </div>
 
-            <div class="wrapper--fullbleed skin-3">
-                <div class="wrapper--l">
+            <div class="wrapper skin-3" data-size="fullbleed">
+                <div class="wrapper" data-size="large">
                     <ul class="grid grid--centered card-grid">
                         <li>
                             <a href="#" class="card">
@@ -165,7 +165,7 @@ ${style}
                 </div>
             </div>
 
-            <div class="wrapper--l stack u-p-block--l">
+            <div class="wrapper stack u-p-block--l">
                 <h2>Heading level 2</h2>
                 <article class="card card--fullwidth">
                     <figure class="card__media">
@@ -220,7 +220,7 @@ ${style}
     </main>
 
     <footer class="footer" id="footer">
-        <div class="wrapper--l">
+        <div class="wrapper" data-size="large">
             Page <code>&lt;footer&gt;</code>
         </div>
     </footer>
