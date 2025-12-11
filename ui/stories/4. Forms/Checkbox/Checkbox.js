@@ -3,8 +3,7 @@ export const CheckboxHtml = () => /*html*/ `
     <input
         type="checkbox"
         id="checkbox"
-        class="checkbox__input"
     />
-    <label for="checkbox" class="checkbox__label">Checkbox label</label>
+    <label for="checkbox">Checkbox label</label>
 </div>
 `;

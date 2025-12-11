@@ -47,10 +47,9 @@ export const WebUIFormValidateHtml = () => /*html*/ `
                 <input
                     type="checkbox"
                     id="checkbox-1"
-                    class="checkbox__input"
                     required
                 />
-                <label for="checkbox-1" class="checkbox__label">
+                <label for="checkbox-1">
                     Checkbox label
                 </label>
             </div>
@@ -64,21 +63,19 @@ export const WebUIFormValidateHtml = () => /*html*/ `
                     <input
                         type="radio"
                         id="radio-1"
-                        class="radio__input"
                         name="radio_group"
                         required
                     />
-                    <label for="radio-1" class="radio__label">Radio 1 label</label>
+                    <label for="radio-1">Radio 1 label</label>
                 </div>
                 <div class="radio">
                     <input
                         type="radio"
                         id="radio-2"
-                        class="radio__input"
                         name="radio_group"
                         required
                     />
-                    <label for="radio-2" class="radio__label">Radio 2 label</label>
+                    <label for="radio-2">Radio 2 label</label>
                 </div>
             </fieldset>
         </div>
