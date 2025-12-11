@@ -157,9 +157,17 @@ ${style}
         <li>
             <span
                 class="styled"
-                style="background: var(--webui-color-focus)">
+                style="background: var(--webui-color-focus-500)">
             </span>
-            <span>var(--webui-color-focus)</span>
+            <span>var(--webui-color-focus-500)</span>
+            <span></span>
+        </li>
+        <li>
+            <span
+                class="styled"
+                style="background: var(--webui-color-focus-100)">
+            </span>
+            <span>var(--webui-color-focus-100)</span>
             <span></span>
         </li>
     </ul>

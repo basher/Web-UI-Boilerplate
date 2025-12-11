@@ -16,7 +16,7 @@ webui-make-clickable {
         &:focus-within {
             &:has([data-url]:focus-visible) {
                 box-shadow: 0 0 0 var(--webui-border-width-l)
-                    var(--webui-color-focus);
+                    var(--webui-color-focus-500);
                 outline: var(--webui-border-width-l) solid transparent; /* So high contrast mode works */
             }
         }

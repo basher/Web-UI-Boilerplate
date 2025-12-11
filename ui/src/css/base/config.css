@@ -19,7 +19,7 @@ Config settings.
         - See https://css-tricks.com/the-focus-visible-trick/.
     */
     --webui-focus-shadow: 0 0 0 var(--webui-border-width-l)
-        var(--webui-color-focus);
+        var(--webui-color-focus-500);
     --webui-focus-outline: var(--webui-border-width-l) solid transparent;
 
     /* :hover and :active */

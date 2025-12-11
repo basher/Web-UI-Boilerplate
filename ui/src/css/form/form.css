@@ -74,7 +74,7 @@
     }
 
     &:hover:not(:disabled):not(:focus-visible) {
-        background-color: var(--webui-color-primary-100);
+        background-color: var(--webui-color-focus-100);
     }
 
     /* Native HTML5 validation. */

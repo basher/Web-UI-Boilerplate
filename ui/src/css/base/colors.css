@@ -34,5 +34,6 @@ Color settings.
     --webui-color-notify-100: oklch(
         from var(--color-accent-yellow) l c h / 10%
     );
-    --webui-color-focus: var(--color-accent-blue);
+    --webui-color-focus-500: var(--color-accent-blue);
+    --webui-color-focus-100: oklch(from var(--color-accent-blue) l c h / 10%);
 }
