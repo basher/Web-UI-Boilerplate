@@ -111,7 +111,11 @@ ${style}
 <p>All these examples use <code>container queries</code> in supported browsers, rather than <code>media queries</code>.<p>
 
 <div class="grid-container">
-    <div class="grid--asymmetric ${args.gap === undefined ? '' : `grid--${args.gap}`}">
+    <div
+        class="grid"
+        data-variant="asymmetric"
+        ${args.gap ? `data-gap="${args.gap}"` : ''}
+    >
         <div>
             Asymmetric col 1<br>
             <b>Default width = 66.66%</b>
@@ -126,7 +130,11 @@ ${style}
 <br>
 <p>Override column widths.</p>
 <div class="grid-container">
-    <div class="grid--asymmetric-75-25 ${args.gap === undefined ? '' : `grid--${args.gap}`}">
+    <div
+        class="grid"
+        data-variant="asymmetric-75-25"
+        ${args.gap ? `data-gap="${args.gap}"` : ''}
+    >
         <div>
             Asymmetric col 1<br>
             Override width = 75%
@@ -141,7 +149,11 @@ ${style}
 <br>
 <p>Override column widths.</p>
 <div class="grid-container">
-    <div class="grid--asymmetric-25-75 ${args.gap === undefined ? '' : `grid--${args.gap}`}">
+    <div
+        class="grid"
+        data-variant="asymmetric-25-75"
+        ${args.gap ? `data-gap="${args.gap}"` : ''}
+    >
         <div>
             Asymmetric col 1<br>
             Override width = 25%
