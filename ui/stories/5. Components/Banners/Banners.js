@@ -1,5 +1,5 @@
 export const FullwidthBannerHtml = () => /*html*/ `
-<div class="banner" data-banner="fullwidth">
+<div class="banner flex">
     <figure class="banner__media">
         <picture>
             <source
@@ -49,7 +49,7 @@ export const FullwidthBannerHtml = () => /*html*/ `
 `;
 
 export const FullwidthBannerOverlayHtml = () => /*html*/ `
-<div class="banner" data-banner="fullwidth">
+<div class="banner flex" data-variant="overlay-mask">
     <figure class="banner__media">
         <picture>
             <source
@@ -87,49 +87,8 @@ export const FullwidthBannerOverlayHtml = () => /*html*/ `
             />
         </picture>
     </figure>
-    <div class="banner__overlay"></div>
     <div class="banner__content stack">
         <h2>Fullwidth banner title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
-        <a href="#" class="button button--text button--primary"
-        >
-            Primary CTA
-        </a>
-    </div>
-</div>
-`;
-
-export const InlineBannerHtml = () => /*html*/ `
-<div class="banner card flex card--fullwidth-reverse" data-banner="inline">
-    <figure class="card__media">
-        <picture>
-            <source
-                media="(min-width: 1024px)"
-                srcset="https://dummyimage.com/768x576/ccc/ddd"
-                type="image/webp"
-            >
-            <source
-                media="(min-width: 480px)"
-                srcset="https://dummyimage.com/400x300/ccc/ddd"
-                type="image/webp"
-            >
-            <source
-                media="(max-width: 479px)"
-                srcset="https://dummyimage.com/400x300/ccc/ddd"
-                type="image/webp"
-            >
-            <img
-                class="image"
-                src="https://dummyimage.com/800x600/ccc/ddd"
-                alt="[alt]"
-                loading="lazy"
-                height="576"
-                width="768"
-            />
-        </picture>
-    </figure>
-    <div class="card__content stack">
-        <h2>Inline banner title</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
         <a href="#" class="button button--text button--primary"
         >

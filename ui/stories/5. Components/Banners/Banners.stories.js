@@ -1,7 +1,6 @@
 import {
     FullwidthBannerHtml,
-    FullwidthBannerOverlayHtml,
-    InlineBannerHtml
+    FullwidthBannerOverlayHtml
 } from './Banners';
 
 export default {
@@ -21,8 +20,4 @@ export const FullwidthBanner = {
 export const FullwidthBannerOverlay = {
     render: () => FullwidthBannerOverlayHtml(),
 };
-FullwidthBannerOverlay.storyName = 'Fullwidth Banner With Image Overlay';
-
-export const InlineBanner = {
-    render: () => InlineBannerHtml(),
-};
+FullwidthBannerOverlay.storyName = 'Fullwidth Banner With Image Overlay Mask';
