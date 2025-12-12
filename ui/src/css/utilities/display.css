@@ -21,6 +21,6 @@ Display.
 The CSS utility class behaves the same as the HTML attrribute.
 ----------------------------------------------------------------------------
 */
-.u-hidden {
+:is(.u-hidden, [hidden]) {
     display: none;
 }
