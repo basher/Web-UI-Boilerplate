@@ -38,7 +38,8 @@ export const WebUIVideoPlayerHtml = () => /*html*/ `
         <div class="modal__header">
             <button
                 type="button"
-                class="button button--icon modal__close"
+                class="button modal__close"
+                data-variant="icon"
                 command="close"
                 commandfor="video1"
             >

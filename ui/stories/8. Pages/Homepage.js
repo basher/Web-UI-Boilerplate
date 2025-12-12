@@ -71,8 +71,7 @@ ${style}
                 <div class="banner__content stack">
                     <h2>Fullwidth banner title</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
-                    <a href="#" class="button button--text button--primary"
-                    >
+                    <a href="#" class="button" data-variant="text" data-style="primary">
                         Primary CTA
                     </a>
                 </div>
@@ -167,7 +166,7 @@ ${style}
 
             <div class="wrapper stack u-p-block--l">
                 <h2>Heading level 2</h2>
-                <article class="card card--fullwidth">
+                <article class="card flex" data-variant="fullwidth">
                     <figure class="card__media">
                         <picture>
                             <source
@@ -191,7 +190,7 @@ ${style}
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
                     </div>
                 </article>
-                <article class="card card--fullwidth-reverse">
+                <article class="card flex" data-variant="fullwidth-reverse">
                     <figure class="card__media">
                         <picture>
                             <source

@@ -2,13 +2,15 @@ export const WebUIModalHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button button--text">Am I clickable?</button>
+    <button type="button" class="button" data-variant="text">Am I clickable?</button>
 </p>
 
 <webui-modal>
     <button
         type="button"
-        class="button button--text button--primary"
+        class="button"
+        data-variant="text"
+        data-style="primary"
         data-open
     >
         Open modal
@@ -18,7 +20,8 @@ export const WebUIModalHtml = () => /*html*/ `
         <div class="modal__header">
             <button
                 type="button"
-                class="button button--icon modal__close"
+                class="button modal__close"
+                data-variant="icon"
                 data-close
             >
                 <svg
@@ -47,6 +50,6 @@ export const WebUIModalHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button button--text">Am I clickable?</button>
+    <button type="button" class="button" data-variant="text">Am I clickable?</button>
 </p>
 `;

@@ -36,7 +36,8 @@ export const HamburgerNavigationHtml = () => /*html*/ `
     >
         <button
             type="button"
-            class="button button--icon nav--hamburger__button"
+            class="button nav--hamburger__button"
+            data-variant="icon"
             data-trigger
             hidden
         >
@@ -97,7 +98,8 @@ export const DisclosureNavigationHtml = () => /*html*/ `
             >
                 <button
                     type="button"
-                    class="button button--icon"
+                    class="button"
+                    data-variant="icon"
                     data-trigger
                     hidden
                 >
@@ -147,7 +149,8 @@ export const DisclosureNavigationHtml = () => /*html*/ `
             >
                 <button
                     type="button"
-                    class="button button--icon"
+                    class="button"
+                    data-variant="icon"
                     data-trigger
                     hidden
                 >
@@ -203,7 +206,8 @@ export const HamburgerDisclosureNavigationHtml = () => /*html*/ `
     >
         <button
             type="button"
-            class="button button--icon nav--hamburger__button"
+            class="button nav--hamburger__button"
+            data-variant="icon"
             data-trigger
             hidden
         >
@@ -237,7 +241,8 @@ export const HamburgerDisclosureNavigationHtml = () => /*html*/ `
                 >
                     <button
                         type="button"
-                        class="button button--icon"
+                        class="button"
+                        data-variant="icon"
                         data-trigger
                         hidden
                     >
@@ -287,7 +292,8 @@ export const HamburgerDisclosureNavigationHtml = () => /*html*/ `
                 >
                     <button
                         type="button"
-                        class="button button--icon"
+                        class="button"
+                        data-variant="icon"
                         data-trigger
                         hidden
                     >

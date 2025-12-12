@@ -158,10 +158,10 @@ class WebUICarousel extends HTMLElement {
         this.carousel?.before(buttonGroup);
 
         buttonGroup.innerHTML = /*html*/ `
-            <button class="button button--text" data-button="prev">
+            <button class="button" data-variant="text" data-button="prev">
                 Previous
             </button>
-            <button class="button button--text" data-button="next">
+            <button class="button" data-variant="text" data-button="next">
                 Next
             </button>
         `;

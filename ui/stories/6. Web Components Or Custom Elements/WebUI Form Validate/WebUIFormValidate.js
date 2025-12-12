@@ -83,13 +83,16 @@ export const WebUIFormValidateHtml = () => /*html*/ `
         <div class="button-group">
             <button
                 type="submit"
-                class="button button--text button--positive"
+                class="button"
+                data-variant="text"
+                data-style="positive"
             >
                 Submit
             </button>
             <button
                 type="reset"
-                class="button button--text"
+                class="button"
+                data-variant="text"
             >
                 Reset
             </button>

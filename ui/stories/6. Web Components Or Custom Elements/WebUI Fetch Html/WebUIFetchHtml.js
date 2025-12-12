@@ -3,7 +3,9 @@ export const WebUIFetchHtmlHtml = () => /*html*/ `
 
 <webui-fetch-html>
     <button
-        class="button button--text button--primary"
+        class="button"
+        data-variant="text"
+        data-style="primary"
         data-fetch-target="test-1"
         data-fetch-url="ajax/ajax.html"
     >

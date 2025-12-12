@@ -32,7 +32,8 @@ export const ImageGalleryHtml = () => /*html*/ `
             <div class="modal__header">
                 <button
                     type="button"
-                    class="button button--icon modal__close"
+                    class="button modal__close"
+                    data-variant="icon"
                     command="close"
                     commandfor="image1"
                 >
@@ -103,7 +104,8 @@ export const ImageGalleryHtml = () => /*html*/ `
             <div class="modal__header">
                 <button
                     type="button"
-                    class="button button--icon modal__close"
+                    class="button modal__close"
+                    data-variant="icon"
                     command="close"
                     commandfor="image2"
                 >
@@ -174,7 +176,8 @@ export const ImageGalleryHtml = () => /*html*/ `
             <div class="modal__header">
                 <button
                     type="button"
-                    class="button button--icon modal__close"
+                    class="button modal__close"
+                    data-variant="icon"
                     command="close"
                     commandfor="image3"
                 >
@@ -245,7 +248,8 @@ export const ImageGalleryHtml = () => /*html*/ `
             <div class="modal__header">
                 <button
                     type="button"
-                    class="button button--icon modal__close"
+                    class="button modal__close"
+                    data-variant="icon"
                     command="close"
                     commandfor="image4"
                 >
@@ -316,7 +320,8 @@ export const ImageGalleryHtml = () => /*html*/ `
             <div class="modal__header">
                 <button
                     type="button"
-                    class="button button--icon modal__close"
+                    class="button modal__close"
+                    data-variant="icon"
                     command="close"
                     commandfor="image5"
                 >

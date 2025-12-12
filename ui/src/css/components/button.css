@@ -50,7 +50,7 @@
         background-color: var(--webui-color-primary-500);
         color: var(--webui-color-neutral-100);
 
-        &[class*='text'] {
+        &[data-variant*='text'] {
             border-color: var(--webui-color-primary-500);
         }
     }

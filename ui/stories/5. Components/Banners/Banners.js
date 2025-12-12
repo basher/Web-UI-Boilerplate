@@ -40,8 +40,7 @@ export const FullwidthBannerHtml = () => /*html*/ `
     <div class="banner__content stack">
         <h2>Fullwidth banner title</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
-        <a href="#" class="button button--text button--primary"
-        >
+        <a href="#" class="button" data-variant="text" data-style="primary">
             Primary CTA
         </a>
     </div>
@@ -90,7 +89,7 @@ export const FullwidthBannerOverlayHtml = () => /*html*/ `
     <div class="banner__content stack">
         <h2>Fullwidth banner title</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
-        <a href="#" class="button button--text button--primary"
+        <a href="#" class="button" data-variant="text" data-style="primary"
         >
             Primary CTA
         </a>

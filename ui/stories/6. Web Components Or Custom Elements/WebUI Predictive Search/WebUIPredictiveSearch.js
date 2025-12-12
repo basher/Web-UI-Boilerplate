@@ -16,7 +16,7 @@ export const WebUIPredictiveSearchHtml = () => /*html*/ `
                 data-fetch-url="https://pokeapi.co/api/v2/pokemon?limit=1000"
             />
         </div>
-        <button type="submit" class="button button--text button--positive">
+        <button type="submit" class="button" data-variant="text" data-style="positive">
             Submit
         </button>
     </form>

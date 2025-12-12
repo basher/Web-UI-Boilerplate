@@ -38,7 +38,9 @@ ${style}
             <br><br>
             <a
                 href="#"
-                class="button button--text button--primary"
+                class="button"
+                data-variant="text"
+                data-style="primary"
             >
                 Link 1
             </a>
@@ -48,7 +50,9 @@ ${style}
             <br><br>
             <a
                 href="#"
-                class="button button--text button--primary"
+                class="button"
+                data-variant="text"
+                data-style="primary"
             >
                 Link 2
             </a>
@@ -58,7 +62,9 @@ ${style}
             <br><br>
             <a
                 href="#"
-                class="button button--text button--primary"
+                class="button"
+                data-variant="text"
+                data-style="primary"
             >
                 Link 3
             </a>
@@ -68,7 +74,9 @@ ${style}
             <br><br>
             <a
                 href="#"
-                class="button button--text button--primary"
+                class="button"
+                data-variant="text"
+                data-style="primary"
             >
                 Link 4
             </a>
@@ -78,7 +86,9 @@ ${style}
             <br><br>
             <a
                 href="#"
-                class="button button--text button--primary"
+                class="button"
+                data-variant="text"
+                data-style="primary"
             >
                 Link 5
             </a>
@@ -88,7 +98,9 @@ ${style}
             <br><br>
             <a
                 href="#"
-                class="button button--text button--primary"
+                class="button"
+                data-variant="text"
+                data-style="primary"
             >
                 Link 6
             </a>
@@ -116,7 +128,9 @@ ${style}
             <br><br>
             <a
                 href="#"
-                class="button button--text button--primary"
+                class="button"
+                data-variant="text"
+                data-style="primary"
             >
                 Link 1
             </a>
@@ -126,7 +140,9 @@ ${style}
             <br><br>
             <a
                 href="#"
-                class="button button--text button--primary"
+                class="button"
+                data-variant="text"
+                data-style="primary"
             >
                 Link 2
             </a>
@@ -136,7 +152,9 @@ ${style}
             <br><br>
             <a
                 href="#"
-                class="button button--text button--primary"
+                class="button"
+                data-variant="text"
+                data-style="primary"
             >
                 Link 3
             </a>

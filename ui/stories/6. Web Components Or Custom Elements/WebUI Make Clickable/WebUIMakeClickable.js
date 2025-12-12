@@ -34,7 +34,8 @@ export const WebUIMakeClickableHtml = () => /*html*/ `
                 <webui-disclosure>
                     <button
                         type="button"
-                        class="button button--text"
+                        class="button"
+                        data-variant="text"
                         data-trigger
                         hidden
                     >
@@ -52,7 +53,8 @@ export const WebUIMakeClickableHtml = () => /*html*/ `
                         />
                         <button
                             type="button"
-                            class="button button--text"
+                            class="button"
+                            data-variant="text"
                             data-copy
                         >
                             Copy

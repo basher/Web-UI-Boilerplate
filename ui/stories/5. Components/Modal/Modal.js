@@ -2,12 +2,14 @@ export const ModalHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button button--text">Am I clickable?</button>
+    <button type="button" class="button" data-variant="text">Am I clickable?</button>
 </p>
 
 <button
     type="button"
-    class="button button--text button--primary"
+    class="button"
+    data-variant="text"
+    data-style="primary"
     command="show-modal"
     commandfor="modal1"
     aria-haspopup="dialog"
@@ -23,7 +25,8 @@ export const ModalHtml = () => /*html*/ `
     <div class="modal__header">
         <button
             type="button"
-            class="button button--icon modal__close"
+            class="button modal__close"
+            data-variant="icon"
             command="close"
             commandfor="modal1"
         >
@@ -49,7 +52,7 @@ export const ModalHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button button--text">Am I clickable?</button>
+    <button type="button" class="button" data-variant="text">Am I clickable?</button>
 </p>
 `;
 
@@ -57,12 +60,14 @@ export const ModalOverflowHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button button--text">Am I clickable?</button>
+    <button type="button" class="button" data-variant="text">Am I clickable?</button>
 </p>
 
 <button
     type="button"
-    class="button button--text button--primary"
+    class="button"
+    data-variant="text"
+    data-style="primary"
     command="show-modal"
     commandfor="modal2"
     aria-haspopup="dialog"
@@ -78,7 +83,8 @@ export const ModalOverflowHtml = () => /*html*/ `
     <div class="modal__header">
         <button
             type="button"
-            class="button button--icon modal__close"
+            class="button modal__close"
+            data-variant="icon"
             command="close"
             commandfor="modal2"
         >
@@ -120,7 +126,7 @@ export const ModalOverflowHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button button--text">Am I clickable?</button>
+    <button type="button" class="button" data-variant="text">Am I clickable?</button>
 </p>
 `;
 
@@ -128,12 +134,14 @@ export const ModalMultipleCloseButtonsHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button button--text">Am I clickable?</button>
+    <button type="button" class="button" data-variant="text">Am I clickable?</button>
 </p>
 
 <button
     type="button"
-    class="button button--text button--primary"
+    class="button"
+    data-variant="text"
+    data-style="primary"
     command="show-modal"
     commandfor="modal3"
     aria-haspopup="dialog"
@@ -154,7 +162,8 @@ export const ModalMultipleCloseButtonsHtml = () => /*html*/ `
         <div class="button-group ">
             <button
                 type="button"
-                class="button button--text"
+                class="button"
+                data-variant="text"
                 command="close"
                 commandfor="modal3"
             >
@@ -162,7 +171,9 @@ export const ModalMultipleCloseButtonsHtml = () => /*html*/ `
             </button>
             <button
                 type="button"
-                class="button button--text button--positive"
+                class="button"
+                data-variant="text"
+                data-style="positive"
                 command="close"
                 commandfor="modal3"
             >
@@ -176,6 +187,6 @@ export const ModalMultipleCloseButtonsHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button button--text">Am I clickable?</button>
+    <button type="button" class="button" data-variant="text">Am I clickable?</button>
 </p>
 `;

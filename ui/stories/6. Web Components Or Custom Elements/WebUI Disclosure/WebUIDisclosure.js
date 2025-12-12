@@ -5,7 +5,8 @@ export const WebUIDisclosureHtml = (args) => /*html*/ `
 >
     <button
         type="button"
-        class="button button--text"
+        class="button"
+        data-variant="text"
         data-trigger
         hidden
     >
