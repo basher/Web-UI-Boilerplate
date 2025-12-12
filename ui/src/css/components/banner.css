@@ -6,7 +6,7 @@
 
     /* TODO: Replace with container query. */
     /* stylelint-disable-next-line order/order */
-    @media (width > 48em) {
+    @media (width > 56em) {
         display: grid;
         grid-template-areas: 'fullwidth';
         place-items: center start;
@@ -38,7 +38,7 @@
             /* TODO: Replace with container query. */
             &::after {
                 /* stylelint-disable-next-line max-nesting-depth */
-                @media (width > 48em) {
+                @media (width > 56em) {
                     /* So text is legible above image. */
                     background: linear-gradient(
                         to right,
