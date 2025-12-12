@@ -1,4 +1,4 @@
-[class*='grid'] {
+.grid {
     --grid-auto-layout: auto-fit;
     --grid-gap: var(--webui-gutter-m);
     --grid-item-min-width: 12.5rem;
@@ -23,7 +23,39 @@
 
     /* When grid uses a UL/LI construct, override LI max-inline-size in 'typography.scss'. */
     > li {
-        max-inline-size: none;
+        max-inline-size: revert;
+    }
+
+    /* 0 gap between grid items. */
+    &[data-gap='no-gap'] {
+        --grid-gap: 0;
+    }
+
+    /* Gap variants. */
+    &[data-gap='xsmall'] {
+        --grid-gap: var(--webui-gutter-xs);
+    }
+
+    &[data-gap='small'] {
+        --grid-gap: var(--webui-gutter-s);
+    }
+
+    &[data-gap='large'] {
+        --grid-gap: var(--webui-gutter-l);
+    }
+
+    &[data-gap='xlarge'] {
+        --grid-gap: var(--webui-gutter-xl);
+    }
+
+    /* Centered grid. */
+    &[data-variant='centered'] {
+        justify-content: center;
+    }
+
+    /* Enable 2-col on small screens (even without a media query)... though eventually the column 'min-width' will enforce stacking when space is too limited, to avoid overflows. */
+    &[data-variant='2-cols\@small'] {
+        --grid-item-min-width: 6.25rem;
     }
 }
 
@@ -49,38 +81,6 @@
                 minmax(var(--grid-item-min-width), var(--grid-asymmetric-col2));
         }
     }
-}
-
-/* Centered grid. */
-.grid--centered {
-    justify-content: center;
-}
-
-/* 0 gap between grid items. */
-.grid--no-gap {
-    --grid-gap: 0;
-}
-
-/* Gap variants. */
-.grid--gap-xs {
-    --grid-gap: var(--webui-gutter-xs);
-}
-
-.grid--gap-s {
-    --grid-gap: var(--webui-gutter-s);
-}
-
-.grid--gap-l {
-    --grid-gap: var(--webui-gutter-l);
-}
-
-.grid--gap-xl {
-    --grid-gap: var(--webui-gutter-xl);
-}
-
-/* Enable 2-col on small screens (even without a media query)... though eventually the column 'min-width' will enforce stacking when space is too limited, to avoid overflows. */
-.grid--2-cols\@small {
-    --grid-item-min-width: 6.25rem;
 }
 
 /* Asymmetric 2-col grid (with column width overrides). */

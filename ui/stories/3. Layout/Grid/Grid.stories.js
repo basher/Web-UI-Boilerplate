@@ -17,11 +17,11 @@ export default {
     argTypes: {
         gap: {
             control: 'select',
-            options: ['no-gap', 'gap-xs', 'gap-s', 'gap-l', 'gap-xl'],
+            options: ['no-gap', 'xsmall', 'small', 'large', 'xlarge'],
             description: 'Grid gap.',
             table: {
                 type: { summary: 'select' },
-                defaultValue: { summary: 'gap-m' }
+                defaultValue: { summary: 'medium' }
             },
         },
     },

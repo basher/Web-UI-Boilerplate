@@ -1,6 +1,6 @@
 /* Reset Docs typography to use theme settings. */
 .sbdocs-content :where(:is(p, li):not([class]), dd, small) {
-    max-inline-size: none;
+    max-inline-size: revert;
 }
 
 .sbdocs-content ul ul:not([class]) {

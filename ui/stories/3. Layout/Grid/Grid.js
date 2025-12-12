@@ -17,7 +17,10 @@ const style = /*html*/ `
 export const GridHtml = (args) => /*html*/ `
 ${style}
 <p>Try removing grid items via devtools to see how grid auto-arranges itself.</p>
-<div class="grid ${args.gap === undefined ? '' : `${args.gap === undefined ? '' : `grid--${args.gap}`}`}">
+<div
+    class="grid"
+    ${args.gap ? `data-gap="${args.gap}"` : ''}
+>
     <div>Grid item 1 - lots more content<br><br>
     to demonstrate (default) equal height columns</div>
     <div>Grid item 2</div>
@@ -32,7 +35,10 @@ ${style}
 <p>Use semantic <code>&lt;ul&gt;</code> if it makes sense to have a <strong>list of related items</strong> rendered in a grid.</p>
 <p>For example, a gallery of images, or a collection of product cards.</p>
 
-<ul class="grid ${args.gap === undefined ? '' : `grid--${args.gap}`}">
+<ul
+    class="grid"
+    ${args.gap ? `data-gap="${args.gap}"` : ''}
+>
     <li>Grid item 1 - lots more content<br><br>
     to demonstrate (default) equal height columns</li>
     <li>Grid item 2</li>
@@ -45,22 +51,32 @@ ${style}
 export const Grid2EqualColsHtml = (args) => /*html*/ `
 ${style}
 <p>Divide a page (or section of a page) into <strong>equal width</strong> columns, etc.</p>
-<div class="grid ${args.gap === undefined ? '' : `grid--${args.gap}`}">
+<div
+    class="grid"
+    ${args.gap ? `data-gap="${args.gap}"` : ''}
+>
     <div>Col 1</div>
     <div>Col 2</div>
 </div>
 
 <br>
 <p>And here's another grid on same page.</p>
-<div class="grid ${args.gap === undefined ? '' : `grid--${args.gap}`}">
+<div
+    class="grid"
+    ${args.gap ? `data-gap="${args.gap}"` : ''}
+>
     <div>Col 1</div>
     <div>Col 2</div>
 </div>
 
 <br>
 <p>What if you <em>really</em> want 2 columns on small screens?<br>
-Use the <code>grid--2-cols@small</code> classname to override the <code>grid-template-columns</code>.</p>
-<div class="grid grid--2-cols@small ${args.gap === undefined ? '' : `grid--${args.gap}`}">
+Use the <code>data-variant="2-cols@small"</code> attribute to override the <code>grid-template-columns</code>.</p>
+<div
+    class="grid"
+    data-variant="2-cols@small"
+    ${args.gap ? `data-gap="${args.gap}"` : ''}
+>
     <div>Col 1</div>
     <div>Col 2</div>
 </div>
@@ -69,7 +85,10 @@ Use the <code>grid--2-cols@small</code> classname to override the <code>grid-tem
 export const Grid3EqualColsHtml = (args) => /*html*/ `
 ${style}
 <p>Divide a page (or section of a page) into <strong>equal width</strong> columns, etc.</p>
-<div class="grid ${args.gap === undefined ? '' : `grid--${args.gap}`}">
+<div
+    class="grid"
+    ${args.gap ? `data-gap="${args.gap}"` : ''}
+>
     <div>Col 1</div>
     <div>Col 2</div>
     <div>Col 3</div>
@@ -77,7 +96,10 @@ ${style}
 
 <br>
 <p>And here's another grid on same page.</p>
-<div class="grid ${args.gap === undefined ? '' : `grid--${args.gap}`}">
+<div
+    class="grid"
+    ${args.gap ? `data-gap="${args.gap}"` : ''}
+>
     <div>Col 1</div>
     <div>Col 2</div>
     <div>Col 3</div>

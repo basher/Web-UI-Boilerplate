@@ -88,7 +88,7 @@ ${style}
 
             <div class="wrapper skin-3" data-size="fullbleed">
                 <div class="wrapper" data-size="large">
-                    <ul class="grid grid--centered card-grid">
+                    <ul class="grid card-grid" data-variant="centered">
                         <li>
                             <a href="#" class="card">
                                 <figure class="card__media">

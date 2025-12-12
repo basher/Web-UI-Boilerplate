@@ -25,7 +25,7 @@ export default {
             description: 'Flex gap.',
             table: {
                 type: { summary: 'select' },
-                defaultValue: { summary: 'gap-m' }
+                defaultValue: { summary: 'medium' }
             },
         },
         alignItems: {
