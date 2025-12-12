@@ -17,7 +17,7 @@ export default {
                 defaultValue: { summary: 'Non-empty string' }
             },
         },
-        buttonType: {
+        buttonStyle: {
             control: 'select',
             options: ['primary', 'secondary', 'positive', 'negative'],
             description: 'Button style override.',

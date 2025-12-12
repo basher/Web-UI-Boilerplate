@@ -19,77 +19,78 @@
         transform: var(--webui-active-transform);
     }
 
-    &[class*='text'] {
+    /* Button variants. */
+    &[data-variant*='text'] {
         border: var(--webui-border-width-m) solid;
     }
-}
 
-.button--text-icon {
-    align-items: center;
-    display: inline-flex;
-    gap: var(--webui-gutter-s);
-    justify-content: space-between;
+    &[data-variant*='text-icon'] {
+        align-items: center;
+        display: inline-flex;
+        gap: var(--webui-gutter-s);
+        justify-content: space-between;
 
-    span {
-        text-align: start;
+        span {
+            text-align: start;
+        }
     }
-}
 
-.button--reverse {
-    flex-direction: row-reverse;
-}
-
-/* Apply colours to button variants. */
-.button--primary {
-    background-color: var(--webui-color-primary-500);
-    color: var(--webui-color-neutral-100);
-
-    &[class*='text'] {
-        border-color: var(--webui-color-primary-500);
+    &[data-variant='text-icon-reverse'] {
+        flex-direction: row-reverse;
     }
-}
 
-.button--secondary {
-    color: var(--webui-color-primary-500);
-    color: light-dark(
-        var(--webui-color-primary-500),
-        var(--webui-color-neutral-100)
-    );
+    &[data-variant='icon'] {
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+    }
 
-    &[class*='text'] {
-        border-color: light-dark(
+    /* Button styles. */
+    &[data-style='primary'] {
+        background-color: var(--webui-color-primary-500);
+        color: var(--webui-color-neutral-100);
+
+        &[class*='text'] {
+            border-color: var(--webui-color-primary-500);
+        }
+    }
+
+    &[data-style='secondary'] {
+        color: var(--webui-color-primary-500);
+        color: light-dark(
             var(--webui-color-primary-500),
-            var(--webui-color-primary-100)
+            var(--webui-color-neutral-100)
         );
+
+        &[data-variant*='text'] {
+            border-color: light-dark(
+                var(--webui-color-primary-500),
+                var(--webui-color-primary-100)
+            );
+        }
     }
-}
 
-.button--positive {
-    background-color: var(--webui-color-success-500);
-    color: var(--webui-color-neutral-900);
+    &[data-style='positive'] {
+        background-color: var(--webui-color-success-500);
+        color: var(--webui-color-neutral-900);
 
-    &[class*='text'] {
-        border-color: var(--webui-color-success-500);
+        &[data-variant*='text'] {
+            border-color: var(--webui-color-success-500);
+        }
     }
-}
 
-.button--negative {
-    background-color: var(--webui-color-error-500);
-    color: var(--webui-color-neutral-100);
+    &[data-style='negative'] {
+        background-color: var(--webui-color-error-500);
+        color: var(--webui-color-neutral-100);
 
-    &[class*='text'] {
-        border-color: var(--webui-color-error-500);
+        &[data-variant*='text'] {
+            border-color: var(--webui-color-error-500);
+        }
     }
-}
 
-.button--icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-}
-
-/* Text (and text + icons) buttons only. Icon button sizes are determined by the context of their parent container font-size (or their icon size overrides). */
-.button--small {
-    font-size: var(--webui-font-size-s);
-    padding: var(--webui-gutter-xs);
+    /* Small buttons. Text (and text + icons) buttons only. Icon button sizes are determined by the context of their parent container font-size (or their icon size overrides). */
+    &[data-size='small'] {
+        font-size: var(--webui-font-size-s);
+        padding: var(--webui-gutter-xs);
+    }
 }

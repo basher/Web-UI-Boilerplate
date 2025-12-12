@@ -1,7 +1,10 @@
 export const LinkHtml = (args) => /*html*/ `
 <a
     href="#"
-    class="button button--text button--${args.linkType} button--${args.linkSize}"
+    class="button"
+    data-variant="text"
+    ${args.linkSize ? `data-size="${args.linkSize}"` : ''}
+    ${args.linkStyle ? `data-style="${args.linkStyle}"` : ''}
 >
     ${args.label}
 </a>
@@ -10,12 +13,14 @@ export const LinkHtml = (args) => /*html*/ `
 export const IconLinkHtml = (args) => /*html*/ `
 <a
     href="#"
-    class="button button--icon"
+    class="button"
+    data-variant="icon"
 >
     <svg
         aria-hidden="true"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <use href="sprite.svg#${args.iconRef}" />
     </svg>
@@ -26,12 +31,10 @@ export const IconLinkHtml = (args) => /*html*/ `
 export const TextIconLinkHtml = (args) => /*html*/ `
 <a
     href="#"
-    class="
-        button button--text-icon
-        button--${args.linkType}
-        button--${args.linkSize}
-        ${args.swapIconPosition === true ? 'button--reverse' : ''}
-    "
+    class="button"
+    data-variant="text-icon${args.swapIconPosition ? '-reverse' : ''}"
+    ${args.linkSize ? `data-size="${args.linkSize}"` : ''}
+    ${args.linkStyle ? `data-style="${args.linkStyle}"` : ''}
 >
     <svg
         aria-hidden="true"

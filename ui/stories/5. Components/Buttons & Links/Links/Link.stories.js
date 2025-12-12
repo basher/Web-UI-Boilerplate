@@ -17,7 +17,7 @@ export default {
                 defaultValue: { summary: 'Non-empty string' }
             },
         },
-        linkType: {
+        linkStyle: {
             control: 'select',
             options: ['primary', 'secondary', 'positive', 'negative'],
             description: 'Link style override.',

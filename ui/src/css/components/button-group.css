@@ -1,9 +1,3 @@
 .button-group {
-    /* &[data-align='center'] {
-        align-items: center;
-    } */
-}
-
-.button-group--centered {
-    justify-content: center;
+    /* n/a */
 }

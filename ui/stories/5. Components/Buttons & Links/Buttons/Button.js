@@ -1,10 +1,11 @@
 export const ButtonHtml = (args) => /*html*/ `
 <button
     type="button"
-    class="button button--text button--${args.buttonType} button--${
-        args.buttonSize
-    }"
-    ${args.disabled === true ? 'disabled' : ''}
+    class="button"
+    data-variant="text"
+    ${args.buttonSize ? `data-size="${args.buttonSize}"` : ''}
+    ${args.buttonStyle ? `data-style="${args.buttonStyle}"` : ''}
+    ${args.disabled ? 'disabled' : ''}
 >
     ${args.label}
 </button>
@@ -13,13 +14,15 @@ export const ButtonHtml = (args) => /*html*/ `
 export const IconButtonHtml = (args) => /*html*/ `
 <button
     type="button"
-    class="button button--icon"
+    class="button"
+    data-variant="icon"
     ${args.disabled === true ? 'disabled' : ''}
 >
     <svg
         aria-hidden="true"
         focusable="false"
-        class="icon icon--${args.iconSize}"
+        class="icon"
+        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
     >
         <use href="sprite.svg#${args.iconRef}" />
     </svg>
@@ -30,13 +33,11 @@ export const IconButtonHtml = (args) => /*html*/ `
 export const TextIconButtonHtml = (args) => /*html*/ `
 <button
     type="button"
-    class="
-        button button--text-icon
-        button--${args.buttonType}
-        button--${args.buttonSize}
-        ${args.swapIconPosition === true ? 'button--reverse' : ''}
-    "
-    ${args.disabled === true ? 'disabled' : ''}
+    class="button"
+    data-variant="text-icon${args.swapIconPosition ? '-reverse' : ''}"
+    ${args.buttonSize ? `data-size="${args.buttonSize}"` : ''}
+    ${args.buttonStyle ? `data-style="${args.buttonStyle}"` : ''}
+    ${args.disabled ? 'disabled' : ''}
 >
     <svg
         aria-hidden="true"
