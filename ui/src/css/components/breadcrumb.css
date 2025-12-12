@@ -7,13 +7,6 @@
         font-weight: bold;
     }
 
-    ol {
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--webui-gutter-m);
-        list-style-type: '';
-    }
-
     li {
         position: relative;
 

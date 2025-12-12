@@ -1,15 +1,30 @@
 .card {
-    --card-gap: var(--webui-gutter-m);
     --content-min-width: 50%;
     --image-min-width: 15rem;
 
-    display: flex;
-    flex-direction: column;
-    gap: var(--card-gap);
     inline-size: clamp(1rem, 100%, 60ch);
 
-    /* Layout approach is same as sidebar layout. */
-    &:where([class*='media-inline'], [class*='fullwidth']) {
+    /* Media is at the bottom. */
+    &[data-variant='media-bottom'] {
+        flex-direction: column-reverse;
+    }
+
+    /* Media is inline... */
+    &:where([data-variant='media-inline'], [data-variant='fullwidth']) {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    &:where(
+        [data-variant*='media-inline-reverse'],
+        [data-variant*='fullwidth-reverse']
+    ) {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+    /* ...uses same layout approach as sidebar layout. */
+    &:where([data-variant*='media-inline'], [data-variant*='fullwidth']) {
         flex-wrap: wrap;
         inline-size: auto;
 
@@ -20,7 +35,7 @@
         }
     }
 
-    &[class*='fullwidth'] {
+    &[data-variant*='fullwidth'] {
         --card-gap: var(--webui-gutter-xl);
 
         /* Uses <picture> element. Set image to take up % of available space, which allows it to shrink and use the correct source. */
@@ -42,29 +57,15 @@
         }
     }
 
-    /* Uses stack layout for card__content internal spacing. */
+    /* card__content uses stack layout for internal spacing. */
     .stack {
         --stack-gutter: var(--webui-gutter-s);
     }
 }
 
-:is(.card--media-inline, .card--fullwidth) {
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-:is(.card--media-inline-reverse, .card--fullwidth-reverse) {
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-}
-
 /* stylelint-disable-next-line no-descending-specificity */
 .card__media {
     flex-grow: 1;
-}
-
-.card--media-bottom {
-    flex-direction: column-reverse;
 }
 
 /* Cards in a grid. */

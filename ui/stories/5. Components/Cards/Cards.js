@@ -1,5 +1,8 @@
 export const CardHtml = (args) => /*html*/ `
-<article class="card card--${args.cardOrientation} ${args.skin}">
+<article
+    class="card flex ${args.skin ? args.skin : ''}"
+    ${args.cardOrientation ? `data-variant="${args.cardOrientation}"` : ''}
+>
     <figure class="card__media">
         <picture>
             <source
@@ -26,9 +29,10 @@ export const CardHtml = (args) => /*html*/ `
 `;
 
 export const FullwidthCardHtml = (args) => /*html*/ `
-<article class="card card--fullwidth${
-    args.fullwidthFlipOrientation === true ? '-reverse' : ''
-} ${args.skin}">
+<article
+    class="card flex ${args.skin ? args.skin : ''}"
+    ${args.fullwidthFlipOrientation ? 'data-variant="fullwidth-reverse"' : 'data-variant="fullwidth"'}
+>
     <figure class="card__media">
         <picture>
             <source
@@ -66,7 +70,11 @@ export const FullwidthCardHtml = (args) => /*html*/ `
 `;
 
 export const ClickableCardHtml = (args) => /*html*/ `
-<a href="#" class="card card--${args.cardOrientation} ${args.skin}">
+<a
+    href="#"
+    class="card flex ${args.skin ? args.skin : ''}"
+    ${args.cardOrientation ? `data-variant="${args.cardOrientation}"` : ''}
+>
     <figure class="card__media">
         <picture>
             <source
@@ -93,7 +101,7 @@ export const ClickableCardHtml = (args) => /*html*/ `
 export const CardGridHtml = () => /*html*/ `
 <ul class="grid card-grid">
     <li>
-        <a href="#" class="card">
+        <a href="#" class="card flex">
             <figure class="card__media">
                 <picture>
                     <source
@@ -117,7 +125,7 @@ export const CardGridHtml = () => /*html*/ `
         </a>
     </li>
     <li>
-        <a href="#" class="card">
+        <a href="#" class="card flex">
             <figure class="card__media">
                 <picture>
                     <source
@@ -141,7 +149,7 @@ export const CardGridHtml = () => /*html*/ `
         </a>
     </li>
     <li>
-        <a href="#" class="card">
+        <a href="#" class="card flex">
             <figure class="card__media">
                 <picture>
                     <source
@@ -175,7 +183,7 @@ export const CardCarouselHtml = () => /*html*/ `
         tabindex="0"
     >
         <li class="carousel__slide">
-            <a href="#" class="card">
+            <a href="#" class="card flex">
                 <figure class="card__media">
                     <picture>
                         <source
@@ -199,7 +207,7 @@ export const CardCarouselHtml = () => /*html*/ `
             </a>
         </li>
         <li class="carousel__slide">
-            <a href="#" class="card">
+            <a href="#" class="card flex">
                 <figure class="card__media">
                     <picture>
                         <source
@@ -223,7 +231,7 @@ export const CardCarouselHtml = () => /*html*/ `
             </a>
         </li>
         <li class="carousel__slide">
-            <a href="#" class="card">
+            <a href="#" class="card flex">
                 <figure class="card__media">
                     <picture>
                         <source
@@ -247,7 +255,7 @@ export const CardCarouselHtml = () => /*html*/ `
             </a>
         </li>
         <li class="carousel__slide">
-            <a href="#" class="card">
+            <a href="#" class="card flex">
                 <figure class="card__media">
                     <picture>
                         <source
@@ -271,7 +279,7 @@ export const CardCarouselHtml = () => /*html*/ `
             </a>
         </li>
         <li class="carousel__slide">
-            <a href="#" class="card">
+            <a href="#" class="card flex">
                 <figure class="card__media">
                     <picture>
                         <source
@@ -295,7 +303,7 @@ export const CardCarouselHtml = () => /*html*/ `
             </a>
         </li>
         <li class="carousel__slide">
-            <a href="#" class="card">
+            <a href="#" class="card flex">
                 <figure class="card__media">
                     <picture>
                         <source

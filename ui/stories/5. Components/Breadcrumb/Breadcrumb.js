@@ -1,6 +1,6 @@
 export const BreadcrumbHtml = () => /*html*/ `
 <nav class="breadcrumb" aria-label="Breadcrumb">
-    <ol>
+    <ol class="flex">
         <li>
             <a href="#">Home</a>
         </li>
