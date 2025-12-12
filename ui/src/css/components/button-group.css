@@ -1,8 +1,7 @@
 .button-group {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--webui-gutter-s);
+    /* &[data-align='center'] {
+        align-items: center;
+    } */
 }
 
 .button-group--centered {

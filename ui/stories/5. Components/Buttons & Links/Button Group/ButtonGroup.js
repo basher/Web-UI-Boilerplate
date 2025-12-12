@@ -1,7 +1,9 @@
 export const ButtonsHtml = (args) => /*html*/ `
-<div class="button-group ${
-    args.centered === true ? 'button-group--centered' : ''
-}">
+<div
+    class="button-group flex"
+    data-align="center"
+    ${args.centered ? 'data-justify="center"' : ''}
+>
     <button
         type="button"
         class="button button--text"
@@ -25,9 +27,11 @@ export const ButtonsHtml = (args) => /*html*/ `
 
 
 export const LinksHtml = (args) => /*html*/ `
-<div class="button-group ${
-    args.centered === true ? 'button-group--centered' : ''
-}">
+<div
+    class="button-group flex"
+    data-align="center"
+    ${args.centered ? 'data-justify="center"' : ''}
+>
     <a
         href="#"
         class="button button--text button--primary"
