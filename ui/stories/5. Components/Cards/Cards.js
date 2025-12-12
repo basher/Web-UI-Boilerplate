@@ -20,7 +20,7 @@ export const CardHtml = (args) => /*html*/ `
         </picture>
     </figure>
     <div class="card__content stack">
-        <h3 class="card__title">
+        <h3>
             <a href="#">Default card title</a>
         </h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
@@ -61,7 +61,7 @@ export const FullwidthCardHtml = (args) => /*html*/ `
         </picture>
     </figure>
     <div class="card__content stack">
-        <h3 class="card__title">
+        <h3>
             <a href="#">Fullwidth card title</a>
         </h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
@@ -92,7 +92,7 @@ export const ClickableCardHtml = (args) => /*html*/ `
         </picture>
     </figure>
     <div class="card__content stack">
-        <h3 class="card__title">Clickable card title</h3>
+        <h3>Clickable card title</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae.</p>
     </div>
 </a>
@@ -119,7 +119,7 @@ export const CardGridHtml = () => /*html*/ `
                 </picture>
             </figure>
             <div class="card__content stack">
-                <h3 class="card__title">Clickable card title</h3>
+                <h3>Clickable card title</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae.</p>
             </div>
         </a>
@@ -143,7 +143,7 @@ export const CardGridHtml = () => /*html*/ `
                 </picture>
             </figure>
             <div class="card__content stack">
-                <h3 class="card__title">Clickable card title</h3>
+                <h3>Clickable card title</h3>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
         </a>
@@ -167,7 +167,7 @@ export const CardGridHtml = () => /*html*/ `
                 </picture>
             </figure>
             <div class="card__content stack">
-                <h3 class="card__title">Clickable card title</h3>
+                <h3>Clickable card title</h3>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
         </a>
@@ -201,7 +201,7 @@ export const CardCarouselHtml = () => /*html*/ `
                     </picture>
                 </figure>
                 <div class="card__content stack">
-                    <h3 class="card__title">Clickable card title</h3>
+                    <h3>Clickable card title</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae.</p>
                 </div>
             </a>
@@ -225,7 +225,7 @@ export const CardCarouselHtml = () => /*html*/ `
                     </picture>
                 </figure>
                 <div class="card__content stack">
-                    <h3 class="card__title">Clickable card title</h3>
+                    <h3>Clickable card title</h3>
                     <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
             </a>
@@ -249,7 +249,7 @@ export const CardCarouselHtml = () => /*html*/ `
                     </picture>
                 </figure>
                 <div class="card__content stack">
-                    <h3 class="card__title">Clickable card title</h3>
+                    <h3>Clickable card title</h3>
                     <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
             </a>
@@ -273,7 +273,7 @@ export const CardCarouselHtml = () => /*html*/ `
                     </picture>
                 </figure>
                 <div class="card__content stack">
-                    <h3 class="card__title">Clickable card title</h3>
+                    <h3>Clickable card title</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae.</p>
                 </div>
             </a>
@@ -297,7 +297,7 @@ export const CardCarouselHtml = () => /*html*/ `
                     </picture>
                 </figure>
                 <div class="card__content stack">
-                    <h3 class="card__title">Clickable card title</h3>
+                    <h3>Clickable card title</h3>
                     <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
             </a>
@@ -321,7 +321,7 @@ export const CardCarouselHtml = () => /*html*/ `
                     </picture>
                 </figure>
                 <div class="card__content stack">
-                    <h3 class="card__title">Clickable card title</h3>
+                    <h3>Clickable card title</h3>
                     <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
             </a>

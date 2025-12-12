@@ -100,7 +100,7 @@ export const FullwidthBannerOverlayHtml = () => /*html*/ `
 `;
 
 export const InlineBannerHtml = () => /*html*/ `
-<div class="banner card card--fullwidth-reverse" data-banner="inline">
+<div class="banner card flex card--fullwidth-reverse" data-banner="inline">
     <figure class="card__media">
         <picture>
             <source

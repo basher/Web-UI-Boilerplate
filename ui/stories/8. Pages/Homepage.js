@@ -90,7 +90,7 @@ ${style}
                 <div class="wrapper" data-size="large">
                     <ul class="grid card-grid" data-variant="centered">
                         <li>
-                            <a href="#" class="card">
+                            <a href="#" class="card flex">
                                 <figure class="card__media">
                                     <picture>
                                         <source
@@ -108,13 +108,13 @@ ${style}
                                     </picture>
                                 </figure>
                                 <div class="card__content stack">
-                                    <h3 class="card__title">Clickable card title</h3>
+                                    <h3>Clickable card title</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="card">
+                            <a href="#" class="card flex">
                                 <figure class="card__media">
                                     <picture>
                                         <source
@@ -132,13 +132,13 @@ ${style}
                                     </picture>
                                 </figure>
                                 <div class="card__content stack">
-                                    <h3 class="card__title">Clickable card title</h3>
+                                    <h3>Clickable card title</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="card">
+                            <a href="#" class="card flex">
                                 <figure class="card__media">
                                     <picture>
                                         <source
@@ -156,7 +156,7 @@ ${style}
                                     </picture>
                                 </figure>
                                 <div class="card__content stack">
-                                    <h3 class="card__title">Clickable card title</h3>
+                                    <h3>Clickable card title</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium.</p>
                                 </div>
                             </a>
@@ -186,7 +186,7 @@ ${style}
                         </picture>
                     </figure>
                     <div class="card__content stack">
-                        <h3 class="card__title">Fullwidth card title</h3>
+                        <h3>Fullwidth card title</h3>
                         <p>Paragraph of text with a <a href="#">simple text link</a> inside it.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
                     </div>
@@ -210,7 +210,7 @@ ${style}
                         </picture>
                     </figure>
                     <div class="card__content stack">
-                        <h3 class="card__title">Fullwidth card title</h3>
+                        <h3>Fullwidth card title</h3>
                         <p>Paragraph of text with a <a href="#">simple text link</a> inside it.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, totam molestiae. Soluta voluptatem deleniti excepturi laudantium. Officia at repudiandae quo nulla reiciendis optio modi nemo.</p>
                     </div>

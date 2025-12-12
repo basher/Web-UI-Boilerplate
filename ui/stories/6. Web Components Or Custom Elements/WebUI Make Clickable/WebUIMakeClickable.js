@@ -1,6 +1,6 @@
 export const WebUIMakeClickableHtml = () => /*html*/ `
 <webui-make-clickable>
-    <article class="card">
+    <article class="card flex">
         <figure class="card__media">
             <picture>
                 <source
@@ -18,7 +18,7 @@ export const WebUIMakeClickableHtml = () => /*html*/ `
             </picture>
         </figure>
         <div class="card__content stack">
-            <h3 class="card__title">
+            <h3>
                 <a
                     href="#"
                     data-url
