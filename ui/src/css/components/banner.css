@@ -54,7 +54,7 @@
         }
 
         .banner__content {
-            z-index: var(--webui-z-default);
+            isolation: isolate;
         }
     }
 }
