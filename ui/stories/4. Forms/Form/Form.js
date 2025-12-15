@@ -1,6 +1,6 @@
 export const FormHtml = (args) => /*html*/ `
-<form class="form" action="#">
-    <div class="form__field">
+<form class="form flex" action="#">
+    <div class="form__field flex">
         <label for="input-text" class="label">
             Text input label ${
                 args.makeFieldsRequired === true ? '' : '(optional)'
@@ -14,7 +14,7 @@ export const FormHtml = (args) => /*html*/ `
             ${args.makeFieldsRequired === true ? 'required' : ''}
         />
     </div>
-    <div class="form__field">
+    <div class="form__field flex">
         <label for="input-tel" class="label">
             Telephone input label ${
                 args.makeFieldsRequired === true ? '' : '(optional)'
@@ -30,7 +30,7 @@ export const FormHtml = (args) => /*html*/ `
             ${args.makeFieldsRequired === true ? 'required' : ''}
         />
     </div>
-    <div class="form__field">
+    <div class="form__field flex">
         <label for="select" class="label">
             Select label ${args.makeFieldsRequired === true ? '' : '(optional)'}
         </label>
@@ -45,8 +45,8 @@ export const FormHtml = (args) => /*html*/ `
             <option value="3">option 3</option>
         </select>
     </div>
-    <div class="form__field">
-        <div class="checkbox">
+    <div class="form__field flex">
+        <div class="checkbox flex">
             <input
                 type="checkbox"
                 id="checkbox-1"
@@ -59,14 +59,14 @@ export const FormHtml = (args) => /*html*/ `
             </label>
         </div>
     </div>
-    <div class="form__field">
-        <fieldset class="fieldset">
+    <div class="form__field flex">
+        <fieldset class="fieldset flex">
             <legend class="legend">
                 Radio legend ${
                     args.makeFieldsRequired === true ? '' : '(optional)'
                 }
             </legend>
-            <div class="radio">
+            <div class="radio flex">
                 <input
                     type="radio"
                     id="radio-1"
@@ -75,7 +75,7 @@ export const FormHtml = (args) => /*html*/ `
                 />
                 <label for="radio-1">Radio 1 label</label>
             </div>
-            <div class="radio">
+            <div class="radio flex">
                 <input
                     type="radio"
                     id="radio-2"
@@ -87,7 +87,7 @@ export const FormHtml = (args) => /*html*/ `
         </fieldset>
     </div>
 
-    <div class="button-group">
+    <div class="button-group flex">
         <button
             type="submit"
             class="button"
@@ -108,7 +108,7 @@ export const FormHtml = (args) => /*html*/ `
 `;
 
 export const FormServerValidationHtml = () => /*html*/ `
-<form class="form" action="#">
+<form class="form flex" action="#">
     <webui-notify data-error role="alert">
         <div class="stack">
             <h2>Form errors</h2>
@@ -133,7 +133,7 @@ export const FormServerValidationHtml = () => /*html*/ `
         </div>
     </webui-notify>
 
-    <div class="form__field">
+    <div class="form__field flex">
         <label for="input-text1" class="label">
             Text input 1 label
         </label>
@@ -146,7 +146,7 @@ export const FormServerValidationHtml = () => /*html*/ `
             required
         />
     </div>
-    <div class="form__field" data-field-has-error>
+    <div class="form__field flex" data-field-has-error>
         <label for="input-tel" class="label">
             Telephone input label
             <span class="label__hint">UK number, usually 11 digits, can also include spaces</span>
@@ -165,7 +165,7 @@ export const FormServerValidationHtml = () => /*html*/ `
             aria-describedby="input-tel-error"
         />
     </div>
-    <div class="form__field" data-field-has-error>
+    <div class="form__field flex" data-field-has-error>
         <label for="select" class="label">
             Select label
         </label>
@@ -185,11 +185,11 @@ export const FormServerValidationHtml = () => /*html*/ `
             <option value="3">option 3</option>
         </select>
     </div>
-    <div class="form__field" data-field-has-error>
+    <div class="form__field flex" data-field-has-error>
         <span class="form__error" id="checkbox-1-error">
             Error text...
         </span>
-        <div class="checkbox">
+        <div class="checkbox flex">
             <input
                 type="checkbox"
                 id="checkbox-1"
@@ -202,15 +202,15 @@ export const FormServerValidationHtml = () => /*html*/ `
             </label>
         </div>
     </div>
-    <div class="form__field" data-field-has-error>
-        <fieldset class="fieldset">
+    <div class="form__field flex" data-field-has-error>
+        <fieldset class="fieldset flex">
             <legend class="legend">
                 Radio legend
             </legend>
             <span class="form__error" id="radio_group-error">
                 Error text...
             </span>
-            <div class="radio">
+            <div class="radio flex">
                 <input
                     type="radio"
                     id="radio-1"
@@ -221,7 +221,7 @@ export const FormServerValidationHtml = () => /*html*/ `
                 />
                 <label for="radio-1">Radio 1 label</label>
             </div>
-            <div class="radio">
+            <div class="radio flex">
                 <input
                     type="radio"
                     id="radio-2"
@@ -235,7 +235,7 @@ export const FormServerValidationHtml = () => /*html*/ `
         </fieldset>
     </div>
 
-    <div class="button-group">
+    <div class="button-group flex">
         <button
             type="submit"
             class="button"

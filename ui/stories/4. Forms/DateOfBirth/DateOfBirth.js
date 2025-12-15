@@ -1,8 +1,8 @@
 export const DateOfBirthHtml = () => /*html*/ `
-<fieldset class="fieldset">
+<fieldset class="fieldset flex">
     <legend class="legend">Date of birth</legend>
     <div class="flex">
-        <div class="form__field">
+        <div class="form__field flex">
             <label for="dob-day" class="label">
                 Day
             </label>
@@ -18,7 +18,7 @@ export const DateOfBirthHtml = () => /*html*/ `
                 required
             />
         </div>
-        <div class="form__field">
+        <div class="form__field flex">
             <label for="dob-month" class="label">
                 Month
             </label>
@@ -44,7 +44,7 @@ export const DateOfBirthHtml = () => /*html*/ `
                 <option value="December">December</option>
             </select>
         </div>
-        <div class="form__field">
+        <div class="form__field flex">
             <label for="dob-year" class="label">
                 Year
             </label>

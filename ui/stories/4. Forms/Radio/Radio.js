@@ -1,7 +1,7 @@
 export const RadioHtml = () => /*html*/ `
-<fieldset class="fieldset">
+<fieldset class="fieldset flex">
     <legend class="legend">Radio legend</legend>
-    <div class="radio">
+    <div class="radio flex">
         <input
             type="radio"
             id="radio-1"
@@ -9,7 +9,7 @@ export const RadioHtml = () => /*html*/ `
         />
         <label for="radio-1">Radio 1 label</label>
     </div>
-    <div class="radio">
+    <div class="radio flex">
         <input
             type="radio"
             id="radio-2"

@@ -1,7 +1,5 @@
 .radio {
-    align-items: center;
-    display: flex;
-    gap: var(--webui-gutter-s);
+    --flex-gap: var(--webui-gutter-s);
 
     [type='radio'] {
         block-size: 1.5em;

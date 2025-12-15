@@ -11,11 +11,11 @@ export default {
     argTypes: {
         stackGutter: {
             control: 'select',
-            options: ['gutter-xs', 'gutter-s', 'gutter-l', 'gutter-xl'],
+            options: ['xsmall', 'small', 'large', 'xlarge'],
             description: '"Gutter" (block margin) between child elements.',
             table: {
-                type: { summary: 'gutter-xs, gutter-s, gutter-l, gutter-xl' },
-                defaultValue: { summary: 'gutter-m' }
+                type: { summary: 'select' },
+                defaultValue: { summary: 'medium' }
             },
         },
     },

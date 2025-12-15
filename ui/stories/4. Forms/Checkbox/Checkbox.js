@@ -1,5 +1,5 @@
 export const CheckboxHtml = () => /*html*/ `
-<div class="checkbox">
+<div class="checkbox flex">
     <input
         type="checkbox"
         id="checkbox"
