@@ -114,6 +114,10 @@ a:not([class]) {
     color: inherit;
     text-decoration-thickness: 0.125rem;
     text-underline-offset: 0.25em;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 :where(sub, sup) {

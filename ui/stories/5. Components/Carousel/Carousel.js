@@ -3,20 +3,7 @@ const style = /*html*/ `
     .carousel > * {
         background: hsl(51, 100%, 45%, 15%);
         border: 1px dashed hsl(51, 100%, 45%);
-        padding: 5rem;
-    }
-</style>
-`;
-
-const style2 = /*html*/ `
-<style>
-    .carousel > * {
-        background: hsl(51, 100%, 45%, 15%);
-        border: 1px dashed hsl(51, 100%, 45%);
-    }
-    .carousel--has-clickable-slides a {
-        display: block;
-        padding: 5rem;
+        padding: 2rem;
     }
 </style>
 `;
@@ -106,7 +93,7 @@ ${style}
             </a>
         </li>
     </ul>
-    <p class="carousel-instructions">
+    <p class="carousel__instructions">
         Scroll or use your <kbd>left</kbd> or <kbd>right</kbd> arrow keys for more
     </p>
 </section>
@@ -120,7 +107,8 @@ ${style}
     aria-roledescription="carousel"
 >
     <ul
-        class="carousel carousel--fullwidth"
+        class="carousel"
+        data-variant="fullwidth-slides"
         tabindex="0"
     >
          <li class="carousel__slide">
@@ -160,21 +148,22 @@ ${style}
             </a>
         </li>
     </ul>
-    <p class="carousel-instructions">
+    <p class="carousel__instructions">
         Scroll or use your <kbd>left</kbd> or <kbd>right</kbd> arrow keys for more
     </p>
 </section>
 `;
 
 export const CarouselClickableSlidesHtml = () => /*html*/ `
-${style2}
+${style}
 <section
     class="carousel-container"
     aria-label="[meaningful label]"
     aria-roledescription="carousel"
 >
     <ul
-        class="carousel carousel--has-clickable-slides"
+        class="carousel"
+        data-variant="clickable-slides"
         tabindex="0"
     >
         <li class="carousel__slide">
@@ -209,7 +198,7 @@ ${style2}
             </a>
         </li>
     </ul>
-    <p class="carousel-instructions">
+    <p class="carousel__instructions">
         Scroll or use your <kbd>left</kbd> or <kbd>right</kbd> arrow keys for more
     </p>
 </section>
