@@ -1,19 +1,7 @@
 .search {
-    .form {
-        flex-wrap: wrap;
-    }
-
-    .form__field {
-        flex-grow: 1;
-    }
-
     :where(.form, .form__field) {
         align-items: center;
         flex-direction: row;
-    }
-
-    .input {
-        flex-basis: 100%;
     }
 
     &:has(:valid:required, :invalid:required) .label {

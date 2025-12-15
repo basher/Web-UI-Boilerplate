@@ -4,11 +4,6 @@ webui-predictive-search {
             display: none;
         }
 
-        .form__field {
-            align-items: flex-start;
-            flex-direction: column;
-        }
-
         .input {
             inline-size: 100%;
         }

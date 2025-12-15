@@ -1,7 +1,7 @@
 export const SearchHtml = () => /*html*/ `
 <div class="search">
-    <form class="form search__form" role="search">
-        <div class="form__field">
+    <form class="form flex search__form" role="search">
+        <div class="form__field flex">
             <label for="search" class="label">Search</label>
             <input
                 id="search"
@@ -20,8 +20,8 @@ export const SearchHtml = () => /*html*/ `
 
 export const SearchDatalistHtml = () => /*html*/ `
 <div class="search">
-    <form class="form search__form" role="search">
-        <div class="form__field">
+    <form class="form flex search__form" role="search">
+        <div class="form__field flex">
             <label for="search" class="label">Search</label>
             <input
                 id="search"

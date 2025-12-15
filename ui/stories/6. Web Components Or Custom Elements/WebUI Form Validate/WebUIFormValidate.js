@@ -1,7 +1,7 @@
 export const WebUIFormValidateHtml = () => /*html*/ `
 <webui-form-validate>
-    <form class="form" action="#">
-        <div class="form__field">
+    <form class="form flex" action="#">
+        <div class="form__field flex">
             <label for="input-text1" class="label">
                 Text input 1 label
             </label>
@@ -13,7 +13,7 @@ export const WebUIFormValidateHtml = () => /*html*/ `
                 required
             />
         </div>
-        <div class="form__field">
+        <div class="form__field flex">
             <label for="input-tel" class="label">
                 Telephone input label
                 <span class="label__hint">UK number, usually 11 digits, can also include spaces</span>
@@ -27,7 +27,7 @@ export const WebUIFormValidateHtml = () => /*html*/ `
                 required
             />
         </div>
-        <div class="form__field">
+        <div class="form__field flex">
             <label for="select" class="label">
                 Select label
             </label>
@@ -42,8 +42,8 @@ export const WebUIFormValidateHtml = () => /*html*/ `
                 <option value="3">option 3</option>
             </select>
         </div>
-        <div class="form__field">
-            <div class="checkbox">
+        <div class="form__field flex">
+            <div class="checkbox flex">
                 <input
                     type="checkbox"
                     id="checkbox-1"
@@ -54,12 +54,12 @@ export const WebUIFormValidateHtml = () => /*html*/ `
                 </label>
             </div>
         </div>
-        <div class="form__field">
-            <fieldset class="fieldset">
+        <div class="form__field flex">
+            <fieldset class="fieldset flex">
                 <legend class="legend">
                     Radio legend
                 </legend>
-                <div class="radio">
+                <div class="radio flex">
                     <input
                         type="radio"
                         id="radio-1"
@@ -68,7 +68,7 @@ export const WebUIFormValidateHtml = () => /*html*/ `
                     />
                     <label for="radio-1">Radio 1 label</label>
                 </div>
-                <div class="radio">
+                <div class="radio flex">
                     <input
                         type="radio"
                         id="radio-2"
@@ -80,7 +80,7 @@ export const WebUIFormValidateHtml = () => /*html*/ `
             </fieldset>
         </div>
 
-        <div class="button-group">
+        <div class="button-group flex">
             <button
                 type="submit"
                 class="button"
