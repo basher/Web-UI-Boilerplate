@@ -1,6 +1,6 @@
 export const WebUIPredictiveSearchHtml = () => /*html*/ `
 <webui-predictive-search class="search">
-    <form class="form flex search__form" role="search">
+    <form class="form flex" role="search">
         <div class="form__field flex">
             <label for="search" class="label">
                 Search for a Pokemon
