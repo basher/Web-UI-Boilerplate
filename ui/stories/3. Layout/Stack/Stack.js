@@ -9,7 +9,10 @@ const style = /*html*/ `
 
 export const StackHtml = (args) => /*html*/ `
 ${style}
-<div class="stack" ${args.stackGutter === undefined ? '' : `data-gutter="${args.stackGutter}"`}>
+<div
+    class="stack"
+    ${args.stackGutter === undefined ? '' : `data-gutter="${args.stackGutter}"`}
+>
     <div>Child item of "stack" parent...</div>
     <div>Child item of "stack" parent...</div>
     <div>Child item of "stack" parent...</div>

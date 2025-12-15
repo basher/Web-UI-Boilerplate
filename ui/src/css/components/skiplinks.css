@@ -1,14 +1,14 @@
 .skiplinks {
     position: absolute;
-}
 
-.skiplinks__link {
-    background-color: var(--webui-color-primary-500);
-    color: var(--webui-color-neutral-300);
-    display: inline-block;
-    left: var(--webui-gutter-m);
-    min-inline-size: 10vw;
-    padding: var(--webui-gutter-s);
-    text-align: center;
-    z-index: var(--webui-z-default);
+    a {
+        background-color: var(--webui-color-primary-500);
+        color: var(--webui-color-neutral-300);
+        display: inline-block;
+        left: var(--webui-gutter-m);
+        min-inline-size: 10vw;
+        padding: var(--webui-gutter-s);
+        text-align: center;
+        z-index: var(--webui-z-default);
+    }
 }

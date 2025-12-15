@@ -1,5 +1,5 @@
 export const SkinHtml = (args) => /*html*/ `
-<div class="${args.skin}">
+<div ${args.skin ? `class="${args.skin}"` : ''}>
     <p>Skin component allows us to add a <i>&quot;skin&quot;</i> or theming layer to components. For example:<p>
     <ul>
         <li>Background &amp; foreground colours</li>
@@ -11,7 +11,7 @@ export const SkinHtml = (args) => /*html*/ `
 `;
 
 export const SkinWrapperHtml = (args) => /*html*/ `
-<div class="wrapper ${args.skin}">
+<div class="wrapper ${args.skin ? `${args.skin}` : ''}">
 <p>Skin component allows us to add a <i>&quot;skin&quot;</i> or theming layer to components.</p>
 <p>Wrapper (default)</p>
 </div>

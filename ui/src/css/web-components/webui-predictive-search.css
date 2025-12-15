@@ -16,8 +16,4 @@ webui-predictive-search {
     .grid {
         --grid-item-max-width: 10rem;
     }
-
-    .search__result__link {
-        color: inherit;
-    }
 }
