@@ -1,8 +1,8 @@
 import {
     NavigationHtml,
     HamburgerNavigationHtml,
-    DisclosureNavigationHtml,
-    HamburgerDisclosureNavigationHtml,
+    DropdownNavigationHtml,
+    HamburgerDropdownNavigationHtml,
     MegaDropdownHtml
 } from './Navigation';
 
@@ -24,17 +24,17 @@ export const HamburgerNavigation = {
     render: () => HamburgerNavigationHtml(),
 };
 
-export const DisclosureNavigation = {
-    render: () => DisclosureNavigationHtml(),
+export const DropdownNavigation = {
+    render: () => DropdownNavigationHtml(),
 };
-DisclosureNavigation.storyName =
-    'Disclosure Navigation (With Dropdown Menus)';
+DropdownNavigation.storyName =
+    'Navigation With Dropdown Lists';
 
-export const HamburgerDisclosureNavigation = {
-    render: () => HamburgerDisclosureNavigationHtml(),
+export const HamburgerDropdownNavigation = {
+    render: () => HamburgerDropdownNavigationHtml(),
 };
-HamburgerDisclosureNavigation.storyName =
-    'Hamburger (With Disclosure Navigation)';
+HamburgerDropdownNavigation.storyName =
+    'Hamburger With Nested Dropdown Lists';
 
 export const MegaDropdown = {
     render: () => MegaDropdownHtml(),

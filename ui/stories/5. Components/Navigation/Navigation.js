@@ -4,21 +4,21 @@ export const NavigationHtml = () => /*html*/ `
     id="navigation"
     aria-label="Primary"
 >
-    <ul class="nav__list">
-        <li class="nav__item">
-            <a class="nav__link" href="#">Nav link</a>
+    <ul class="nav__list flex">
+        <li>
+            <a href="#">Nav link</a>
         </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#" aria-current="page">Nav link = current page</a>
+        <li>
+            <a href="#" aria-current="page">Nav link = current page</a>
         </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#">Nav link</a>
+        <li>
+            <a href="#">Nav link</a>
         </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#">Nav link</a>
+        <li>
+            <a href="#">Nav link</a>
         </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#">Nav link</a>
+        <li>
+            <a href="#">Nav link</a>
         </li>
     </ul>
 </nav>
@@ -26,7 +26,8 @@ export const NavigationHtml = () => /*html*/ `
 
 export const HamburgerNavigationHtml = () => /*html*/ `
 <nav
-    class="nav nav--hamburger"
+    class="nav"
+    data-variant="hamburger"
     id="navigation"
     aria-label="Primary"
 >
@@ -36,7 +37,7 @@ export const HamburgerNavigationHtml = () => /*html*/ `
     >
         <button
             type="button"
-            class="button nav--hamburger__button"
+            class="button nav__hamburger-button"
             data-variant="icon"
             data-trigger
             hidden
@@ -59,20 +60,20 @@ export const HamburgerNavigationHtml = () => /*html*/ `
         </button>
 
         <ul
-            class="nav__list"
+            class="nav__list flex"
             data-content
         >
-            <li class="nav__item">
-                <a class="nav__link" href="#">Nav link</a>
+            <li>
+                <a href="#">Nav link</a>
             </li>
-            <li class="nav__item">
-                <a class="nav__link" href="#" aria-current="page">Nav link = current page</a>
+            <li>
+                <a href="#" aria-current="page">Nav link = current page</a>
             </li>
-            <li class="nav__item">
-                <a class="nav__link" href="#">Nav link</a>
+            <li>
+                <a href="#">Nav link</a>
             </li>
-            <li class="nav__item">
-                <a class="nav__link" href="#">Nav link</a>
+            <li>
+                <a href="#">Nav link</a>
             </li>
         </ul>
     </webui-disclosure>
@@ -82,15 +83,16 @@ export const HamburgerNavigationHtml = () => /*html*/ `
 <p>Some content below the navigation, to test the CSS positioning & stacking context of the navigation when it is shown.</p>
 `;
 
-export const DisclosureNavigationHtml = () => /*html*/ `
+export const DropdownNavigationHtml = () => /*html*/ `
 <nav
-    class="nav nav--disclosure"
+    class="nav"
+    data-variant="dropdown"
     id="navigation"
     aria-label="Primary"
 >
-    <ul class="nav__list">
-        <li class="nav__item nav__item--has-dropdown">
-            <a class="nav__link" href="#">Nav link with dropdown</a>
+    <ul class="nav__list flex">
+        <li data-has-dropdown>
+            <a href="#">Nav link with dropdown</a>
 
             <webui-disclosure
                 data-bind-escape-key
@@ -114,34 +116,35 @@ export const DisclosureNavigationHtml = () => /*html*/ `
                 </button>
 
                 <ul
-                    class="nav__list nav__list--dropdown"
+                    class="nav__list flex"
+                    data-variant="dropdown"
                     data-content
                 >
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Nested nav link</a>
+                    <li>
+                        <a href="#">Nested nav link</a>
                     </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Nested nav link with longer name</a>
+                    <li>
+                        <a href="#">Nested nav link with longer name</a>
                     </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Nested nav link</a>
+                    <li>
+                        <a href="#">Nested nav link</a>
                     </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Nested nav link</a>
+                    <li>
+                        <a href="#">Nested nav link</a>
                     </li>
                 </ul>
             </webui-disclosure>
         </li>
 
-        <li class="nav__item">
-            <a class="nav__link" href="#" aria-current="page">Nav link = current page</a>
+        <li>
+            <a href="#" aria-current="page">Nav link = current page</a>
         </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#">Nav link</a>
+        <li>
+            <a href="#">Nav link</a>
         </li>
 
-        <li class="nav__item nav__item--has-dropdown">
-            <a class="nav__link" href="#">Nav link with dropdown</a>
+        <li data-has-dropdown>
+            <a href="#">Nav link with dropdown</a>
 
             <webui-disclosure
                 data-bind-escape-key
@@ -165,27 +168,28 @@ export const DisclosureNavigationHtml = () => /*html*/ `
                 </button>
 
                 <ul
-                    class="nav__list nav__list--dropdown"
+                    class="nav__list flex"
+                    data-variant="dropdown"
                     data-content
                 >
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Nested nav link</a>
+                    <li>
+                        <a href="#">Nested nav link</a>
                     </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Nested nav link with longer name</a>
+                    <li>
+                        <a href="#">Nested nav link with longer name</a>
                     </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Nested nav link</a>
+                    <li>
+                        <a href="#">Nested nav link</a>
                     </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Nested nav link</a>
+                    <li>
+                        <a href="#">Nested nav link</a>
                     </li>
                 </ul>
             </webui-disclosure>
         </li>
 
-        <li class="nav__item">
-            <a class="nav__link" href="#">Nav link</a>
+        <li>
+            <a href="#">Nav link</a>
         </li>
     </ul>
 </nav>
@@ -194,9 +198,10 @@ export const DisclosureNavigationHtml = () => /*html*/ `
 <p>Some content below the navigation, to test the CSS positioning & stacking context of the navigation dropdowns when they are shown.</p>
 `;
 
-export const HamburgerDisclosureNavigationHtml = () => /*html*/ `
+export const HamburgerDropdownNavigationHtml = () => /*html*/ `
 <nav
-    class="nav nav--hamburger nav--disclosure"
+    class="nav"
+    data-variant="hamburger-dropdown"
     id="navigation"
     aria-label="Primary"
 >
@@ -206,7 +211,7 @@ export const HamburgerDisclosureNavigationHtml = () => /*html*/ `
     >
         <button
             type="button"
-            class="button nav--hamburger__button"
+            class="button nav__hamburger-button"
             data-variant="icon"
             data-trigger
             hidden
@@ -229,11 +234,11 @@ export const HamburgerDisclosureNavigationHtml = () => /*html*/ `
         </button>
 
         <ul
-            class="nav__list"
+            class="nav__list flex"
             data-content
         >
-            <li class="nav__item nav__item--has-dropdown">
-                <a class="nav__link" href="#">Nav link with dropdown</a>
+            <li data-has-dropdown>
+                <a href="#">Nav link with dropdown</a>
 
                 <webui-disclosure
                     data-bind-escape-key
@@ -257,34 +262,35 @@ export const HamburgerDisclosureNavigationHtml = () => /*html*/ `
                     </button>
 
                     <ul
-                        class="nav__list nav__list--dropdown"
+                        class="nav__list flex"
+                        data-variant="dropdown"
                         data-content
                     >
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Nested nav link</a>
+                        <li>
+                            <a href="#">Nested nav link</a>
                         </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Nested nav link with longer name</a>
+                        <li>
+                            <a href="#">Nested nav link with longer name</a>
                         </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Nested nav link</a>
+                        <li>
+                            <a href="#">Nested nav link</a>
                         </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Nested nav link</a>
+                        <li>
+                            <a href="#">Nested nav link</a>
                         </li>
                     </ul>
                 </webui-disclosure>
             </li>
 
-            <li class="nav__item">
-                <a class="nav__link" href="#" aria-current="page">Nav link = current page</a>
+            <li>
+                <a href="#" aria-current="page">Nav link = current page</a>
             </li>
-            <li class="nav__item">
-                <a class="nav__link" href="#">Nav link</a>
+            <li>
+                <a href="#">Nav link</a>
             </li>
 
-            <li class="nav__item nav__item--has-dropdown">
-                <a class="nav__link" href="#">Nav link with dropdown</a>
+            <li data-has-dropdown>
+                <a href="#">Nav link with dropdown</a>
 
                 <webui-disclosure
                     data-bind-escape-key
@@ -308,27 +314,28 @@ export const HamburgerDisclosureNavigationHtml = () => /*html*/ `
                     </button>
 
                     <ul
-                        class="nav__list nav__list--dropdown"
+                        class="nav__list flex"
+                        data-variant="dropdown"
                         data-content
                     >
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Nested nav link</a>
+                        <li>
+                            <a href="#">Nested nav link</a>
                         </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Nested nav link with longer name</a>
+                        <li>
+                            <a href="#">Nested nav link with longer name</a>
                         </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Nested nav link</a>
+                        <li>
+                            <a href="#">Nested nav link</a>
                         </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Nested nav link</a>
+                        <li>
+                            <a href="#">Nested nav link</a>
                         </li>
                     </ul>
                 </webui-disclosure>
             </li>
 
-            <li class="nav__item">
-                <a class="nav__link" href="#">Nav link</a>
+            <li>
+                <a href="#">Nav link</a>
             </li>
         </ul>
     </webui-disclosure>

@@ -12,32 +12,35 @@ import * as Navigation from './Navigation.stories';
 - Don't use [ARIA menu role](https://adrianroselli.com/2017/10/dont-use-aria-menu-roles-for-site-nav.html) for site navigation. Also see [Inclusive Components menus](https://inclusive-components.design/menus-menu-buttons/).
 - Responsive behaviour can be handled in a number of ways:
     - For simplicity, use `flex-wrap` to make the primary navigation items wrap onto a new row when space is limited.
-    - And/or add `overflow-x: auto` to the parent container to allow horizontal scrolling.
-    - And/or add `media` or `container` queries to stack the navigation vertically when space is limited.
-    - And/or use the hamburger navigaton pattern(s), as shown further down.
-    - And/or use JavaScript to handle *"fly-in"* or *"slide-in/out"* behaviour.
+    - Or add `overflow-x: auto` to the parent container to allow horizontal scrolling instead.
+    - Or add `container` queries to stack the navigation vertically when space is limited.
+    - Or use the hamburger navigaton pattern(s), as shown further down.
+    - Or use JavaScript to handle *"fly-in"* or *"slide-in/out"* behaviour.
 
 ## Simple navigation
 <Canvas of={Navigation.Navigation} />
 
-## Hamburger (with simple navigation)
+## Hamburger with simple navigation
+- This navigation pattern has a parent `<nav data-variant="hamburger">` landmark.
 - Uses the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) Web Component to show/hide the navigation.
 - Clicking the <kbd>esc</kbd> key or clicking outside the navigation both close the hamburger navigation.
 - The disclosure button is placed **inside** the navigation region, allowing assistive technology users who move to the `<nav>` using a shortcut to access the button directly.
 
 <Canvas of={Navigation.HamburgerNavigation} />
 
-## Disclosure navigation (with top-level links and dropdown menus)
+## Navigation with top-level links and dropdown lists
+- This navigation pattern has a parent `<nav data-variant="dropdown">` landmark.
 - Uses the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) Web Component to show/hide the dropdowns via a `<button>` click, not CSS `:hover`.
 - Clicking the <kbd>esc</kbd> key and clicking outside the dropdown both close the dropdown.
 - See the [ARIA APG navigation pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation-hybrid/) and [Adrian Roselli's article](https://adrianroselli.com/2019/06/link-disclosure-widget-navigation.html) for more details.
 - Also see this article that explains why [native HTML details/summary should not be used for navigation disclosure](https://melsumner.github.io/details-as-a-menu).
 
-<Canvas of={Navigation.DisclosureNavigation} />
+<Canvas of={Navigation.DropdownNavigation} />
 
-## Hamburger (with disclosure navigation)
+## Hamburger with nested dropdown lists
+- This navigation pattern has a parent `<nav data-variant="hamburger-dropdown">` landmark.
 
-<Canvas of={Navigation.HamburgerDisclosureNavigation} />
+<Canvas of={Navigation.HamburgerDropdownNavigation} />
 
 ## Mega-dropdown navigation
 <Canvas of={Navigation.MegaDropdown} />

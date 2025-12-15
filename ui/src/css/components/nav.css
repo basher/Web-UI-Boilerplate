@@ -6,69 +6,106 @@
         );
         font-weight: bold;
     }
-}
 
-.nav__list {
-    column-gap: var(--webui-gutter-xl);
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: var(--webui-gutter-xs);
-}
+    a {
+        color: inherit;
+        text-decoration: none;
 
-.nav__link {
-    color: inherit;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-/* Disclosure navigation (with dropdowns). */
-.nav--disclosure {
-    > .nav__list {
-        align-items: center;
-    }
-
-    .icon {
-        transition: transform var(--webui-animation-fast);
-    }
-}
-
-.nav__list--dropdown {
-    /* background-color: var(--webui-color-neutral-100); */
-    background-color: light-dark(
-        var(--webui-color-neutral-100),
-        var(--webui-color-neutral-900)
-    );
-    border: var(--webui-border-width-s) solid;
-    flex-direction: column;
-    inset-block-start: 100%;
-    inset-inline-start: 0;
-    padding: var(--webui-gutter-m);
-    position: absolute;
-    z-index: var(--webui-z-popup);
-}
-
-.nav__item--has-dropdown {
-    align-items: center;
-    display: flex;
-    gap: var(--webui-gutter-xs);
-    position: relative;
-
-    [aria-expanded='true'] {
-        .icon {
-            transform: rotate(180deg);
+        &:hover {
+            text-decoration: underline;
         }
     }
 
-    .button {
-        padding: var(--webui-gutter-xs);
+    /* Navigation with dropdown lists. */
+    &[data-variant*='dropdown'] {
+        > .nav__list {
+            align-items: center;
+        }
+
+        .icon {
+            transition: transform var(--webui-animation-fast);
+        }
+    }
+
+    [data-has-dropdown] {
+        align-items: center;
+        display: flex;
+        gap: var(--webui-gutter-xs);
+        position: relative;
+
+        [aria-expanded='true'] {
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+
+        .button {
+            padding: var(--webui-gutter-xs);
+        }
+    }
+
+    /* Hamburger navigation. */
+    &[data-variant*='hamburger'] {
+        position: relative;
+
+        .nav__list {
+            flex-direction: column;
+        }
+
+        /* Uses <webui-disclosure> custom element to show/hide nav. */
+        webui-disclosure:defined {
+            .nav__list {
+                background-color: light-dark(
+                    var(--webui-color-neutral-100),
+                    var(--webui-color-neutral-900)
+                );
+                border: var(--webui-border-width-s) solid;
+                inset-block-start: 100%;
+                padding: var(--webui-gutter-m);
+                position: absolute;
+                z-index: var(--webui-z-popup);
+            }
+        }
+    }
+
+    /* Hamburger with nested dropdown lists. */
+    &[data-variant='hamburger-dropdown'] {
+        webui-disclosure:defined {
+            [data-has-dropdown] {
+                display: revert;
+            }
+
+            [data-variant='dropdown'] {
+                border: 0;
+                position: relative;
+            }
+        }
+    }
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.nav__list {
+    column-gap: var(--webui-gutter-xl);
+    row-gap: var(--webui-gutter-xs);
+
+    /* Dropdown list. */
+    &[data-variant='dropdown'] {
+        background-color: light-dark(
+            var(--webui-color-neutral-100),
+            var(--webui-color-neutral-900)
+        );
+        border: var(--webui-border-width-s) solid;
+        flex-direction: column;
+        inset-block-start: 100%;
+        inset-inline-start: 0;
+        padding: var(--webui-gutter-m);
+        position: absolute;
+        z-index: var(--webui-z-popup);
     }
 }
 
 /* Hamburger navigation. */
-.nav--hamburger__button {
+.nav__hamburger-button {
     &[aria-expanded='false'] {
         .icon:last-of-type {
             display: none;
@@ -78,43 +115,6 @@
     &[aria-expanded='true'] {
         .icon:first-of-type {
             display: none;
-        }
-    }
-}
-
-.nav--hamburger {
-    position: relative;
-
-    .nav__list {
-        flex-direction: column;
-    }
-
-    /* Using <webui-disclosure> custom element. */
-    webui-disclosure:defined {
-        .nav__list {
-            background-color: light-dark(
-                var(--webui-color-neutral-100),
-                var(--webui-color-neutral-900)
-            );
-            border: var(--webui-border-width-s) solid;
-            inset-block-start: 100%;
-            padding: var(--webui-gutter-m);
-            position: absolute;
-            z-index: var(--webui-z-popup);
-        }
-    }
-
-    /* Hamburger with disclosure navigation. */
-    &.nav--disclosure {
-        webui-disclosure:defined {
-            .nav__item--has-dropdown {
-                display: revert;
-            }
-
-            .nav__list--dropdown {
-                border: 0;
-                position: relative;
-            }
         }
     }
 }
