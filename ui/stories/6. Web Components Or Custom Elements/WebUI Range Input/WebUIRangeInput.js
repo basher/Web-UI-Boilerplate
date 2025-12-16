@@ -1,6 +1,6 @@
 export const WebUIRangeInputHtml = () => /*html*/ `
 <webui-range-input>
-    <div class="form__field">
+    <div class="form__field flex">
         <label for="range-input" class="label">
             Range slider
             <span class="label__hint">Min 0, max 100</span>

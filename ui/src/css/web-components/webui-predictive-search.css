@@ -3,10 +3,6 @@ webui-predictive-search {
         [type='submit'] {
             display: none;
         }
-
-        .input {
-            inline-size: 100%;
-        }
     }
 
     [role='region'] {
