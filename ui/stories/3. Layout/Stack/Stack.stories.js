@@ -12,7 +12,7 @@ export default {
         stackGutter: {
             control: 'select',
             options: ['xsmall', 'small', 'large', 'xlarge'],
-            description: '"Gutter" (block margin) between child elements.',
+            description: '"Gutter" (i.e. block margin) between adjacent child elements.',
             table: {
                 type: { summary: 'select' },
                 defaultValue: { summary: 'medium' }

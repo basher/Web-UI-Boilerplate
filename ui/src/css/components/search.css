@@ -4,6 +4,10 @@
         flex-direction: row;
     }
 
+    :where(.form__field, .input) {
+        flex-grow: 1;
+    }
+
     &:has(:valid:required, :invalid:required) .label {
         padding-inline-start: 0;
 
