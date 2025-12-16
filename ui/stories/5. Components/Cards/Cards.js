@@ -179,7 +179,8 @@ export const CardCarouselHtml = () => /*html*/ `
 <section class="carousel-container" aria-label="[meaningful label for carousel]"
 >
     <ul
-        class="carousel carousel--has-clickable-slides card-carousel"
+        class="carousel card-carousel"
+        data-variant="clickable-slides"
         tabindex="0"
     >
         <li class="carousel__slide">
@@ -327,7 +328,7 @@ export const CardCarouselHtml = () => /*html*/ `
             </a>
         </li>
     </ul>
-    <p class="carousel-instructions">
+    <p class="carousel__instructions">
         Scroll or use your <kbd>left</kbd> or <kbd>right</kbd> arrow keys for more
     </p>
 </section>
