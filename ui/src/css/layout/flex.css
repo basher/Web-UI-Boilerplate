@@ -29,7 +29,7 @@
     }
 
     /* 0 gap between flex items. */
-    &[data-gap='no-gap'] {
+    &[data-gap='0'] {
         --flex-gap: 0;
     }
 

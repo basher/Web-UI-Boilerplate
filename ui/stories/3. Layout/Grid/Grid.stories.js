@@ -17,7 +17,7 @@ export default {
     argTypes: {
         gap: {
             control: 'select',
-            options: ['no-gap', 'xsmall', 'small', 'large', 'xlarge'],
+            options: ['0', 'xsmall', 'small', 'large', 'xlarge'],
             description: 'Grid gap.',
             table: {
                 type: { summary: 'select' },

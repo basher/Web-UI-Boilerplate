@@ -27,7 +27,7 @@
     }
 
     /* 0 gap between grid items. */
-    &[data-gap='no-gap'] {
+    &[data-gap='0'] {
         --grid-gap: 0;
     }
 

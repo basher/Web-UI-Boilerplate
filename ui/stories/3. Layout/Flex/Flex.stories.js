@@ -21,7 +21,7 @@ export default {
         },
         gap: {
             control: 'select',
-            options: ['no-gap', 'xsmall', 'small', 'large', 'xlarge'],
+            options: ['0', 'xsmall', 'small', 'large', 'xlarge'],
             description: 'Flex gap.',
             table: {
                 type: { summary: 'select' },
