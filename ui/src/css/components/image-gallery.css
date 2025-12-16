@@ -22,7 +22,7 @@
     .modal__header {
         background: transparent;
         padding-block-start: 0;
-        z-index: var(--webui-z-default);
+        isolation: isolate;
     }
 
     .modal__content {

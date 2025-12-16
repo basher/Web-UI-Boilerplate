@@ -63,7 +63,6 @@
                 inset-block-start: 100%;
                 padding: var(--webui-gutter-m);
                 position: absolute;
-                z-index: var(--webui-z-popup);
             }
         }
     }
@@ -100,7 +99,6 @@
         inset-inline-start: 0;
         padding: var(--webui-gutter-m);
         position: absolute;
-        z-index: var(--webui-z-popup);
     }
 }
 

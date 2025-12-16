@@ -42,15 +42,6 @@ Config settings.
     --webui-animation-medium: 250ms ease-in-out;
     --webui-animation-slow: 500ms ease-in-out;
 
-    /* z-index.
-    1. Boilerplate uses native HTML <dialog> for modals, so '--webui-z-modal' has been deprecated.
-    2. Popups (e.g. dropdown navigation menu) using '--webui-z-popup' will eventually be replaced by Popover API.
-    */
-    --webui-z-popup: 999;
-    --webui-z-default: 1;
-    --webui-z-reset: 0;
-    --webui-z-below: -1;
-
     /* Miscellaneous. */
     --webui-media-aspect-ratio: 16/9;
     --webui-base-image-path: '../images/interface';
