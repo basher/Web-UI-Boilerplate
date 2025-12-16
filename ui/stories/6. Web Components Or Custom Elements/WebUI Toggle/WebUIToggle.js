@@ -16,10 +16,11 @@ export const WebUIToggleHtml = () => /*html*/ `
 export const WebUIToggleWithLabelHtml = () => /*html*/ `
 <webui-toggle>
     <button
-        class="button toggle--has-label"
+        class="button"
         type="button"
         role="switch"
         aria-checked="false"
+        data-has-label
     >
         <span class="toggle__label">toggle label</span>
         <span class="toggle__indicator">

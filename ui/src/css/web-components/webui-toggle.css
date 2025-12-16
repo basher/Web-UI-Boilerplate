@@ -32,7 +32,7 @@ webui-toggle {
         padding: var(--webui-gutter-s);
     }
 
-    .toggle--has-label {
+    [data-has-label] {
         border: 0;
         gap: var(--webui-gutter-s);
 
