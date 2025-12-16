@@ -131,13 +131,13 @@ class WebUICarousel extends HTMLElement {
      */
     private showSlideCountPips(): void {
         const counterPips = document.createElement('p');
-        counterPips.classList.add('carousel__counter--pips');
+        counterPips.classList.add('carousel__counter-pips');
         counterPips.setAttribute('data-counter-pips', '');
         counterPips.setAttribute('aria-hidden', 'true');
 
         this.slides.forEach((_slide, i) => {
             counterPips.innerHTML += /*html*/ `
-                <span class="carousel__counter__pip" data-pip>
+                <span class="carousel__counter-pip" data-pip>
                     ${i + 1}
                 </span>
             `;

@@ -35,14 +35,14 @@ webui-carousel {
         margin-block-end: var(--webui-gutter-m);
     }
 
-    .carousel__counter--pips {
+    .carousel__counter-pips {
         display: flex;
         flex-wrap: wrap;
         gap: var(--webui-gutter-s);
         margin-block-start: var(--webui-gutter-m);
     }
 
-    .carousel__counter__pip {
+    .carousel__counter-pip {
         border: var(--webui-border-width-s) solid;
         border-radius: 50%;
         font-size: 0;
