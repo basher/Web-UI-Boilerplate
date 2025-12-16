@@ -12,7 +12,7 @@ export const SkinHtml = (args) => /*html*/ `
 
 export const SkinWrapperHtml = (args) => /*html*/ `
 <div class="wrapper ${args.skin ? `${args.skin}` : ''}">
-<p>Skin component allows us to add a <i>&quot;skin&quot;</i> or theming layer to components.</p>
+<p>Skin component also allows us to add a <i>&quot;skin&quot;</i> or theming layer to wrapper component.</p>
 <p>Wrapper (default)</p>
 </div>
 `;

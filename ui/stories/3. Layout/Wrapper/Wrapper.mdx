@@ -7,7 +7,7 @@ import * as Wrapper from './Wrapper.stories';
 - Simple wrapper layout component whose only job is to constrain width of content and apply auto margins.
 - Normally, this would be used to divide content areas into _"slices"_, going down the page.
 - For more complex layouts (e.g. multi-column), use one of the [grid layouts](/docs/layout-grid--docs).
-- Ideally, there should be **NO visual styles** applied to wrappers (e.g. background colour).
+- There should be **NO visual styles** applied directly to wrappers (e.g. background colour). Add extra classes (e.g. `skin-1`) to apply visual styles.
 
 <Canvas of={Wrapper.Wrapper} />
 <Controls of={Wrapper.Wrapper} />

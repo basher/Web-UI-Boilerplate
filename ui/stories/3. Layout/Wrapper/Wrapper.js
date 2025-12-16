@@ -12,42 +12,37 @@ const style = /*html*/ `
 
 export const WrapperHtml = (args) => /*html*/ `
 ${style}
-<div ${args.turnParentIntoStack === true ? 'class="stack"' : ''}>
-    <div class="wrapper\
- ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
- ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
-    ">
+<div ${args.turnParentIntoStack ? 'class="stack"' : ''}>
+    <div class="wrapper">
         Wrapper (default)
     </div>
+
     <div class="wrapper\
- ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
- ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
  ${args.skin === undefined ? '' : `${args.skin}`}\
     ">
-        Apply a SKIN override to this wrapper
+        Apply SKIN override to this wrapper
     </div>
+
     <div class="wrapper\
- ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
- ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
-    " data-size="small">
+ ${args.paddingBlock ? `${args.paddingBlock}` : ''}\
+ ${args.paddingInline ? `${args.paddingInline}` : ''}\
+    ">
+        Apply PADDING override to this wrapper
+    </div>
+
+    <div class="wrapper" data-size="small">
         Wrapper (small)
     </div>
-    <div class="wrapper\
- ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
- ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
-    " data-size="large">
+
+    <div class="wrapper" data-size="large">
         Wrapper (large)
     </div>
-    <div class="wrapper\
- ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
- ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
-    " data-size="fullbleed">
+
+    <div class="wrapper" data-size="fullbleed">
         Wrapper (fullbleed)
     </div>
-    <div class="wrapper\
- ${args.paddingBlock === undefined ? '' : `u-${args.paddingBlock}`}\
- ${args.paddingInline === undefined ? '' : `u-${args.paddingInline}`}\
-    " data-size="fit-content">
+
+    <div class="wrapper" data-size="fit-content">
         Wrapper (fit-content)
     </div>
 </div>

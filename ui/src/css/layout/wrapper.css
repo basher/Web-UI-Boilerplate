@@ -3,7 +3,6 @@
 
     margin-inline: auto;
     max-inline-size: var(--wrapper-max-width);
-    padding-inline: var(--webui-gutter-m);
 
     &[data-size='small'] {
         --wrapper-max-width: 48rem;
@@ -15,8 +14,6 @@
 
     &[data-size='fullbleed'] {
         --wrapper-max-width: 100vw; /* 100dvi might have performance implications */
-
-        padding-inline: 0;
     }
 
     &[data-size='fit-content'] {

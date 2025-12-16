@@ -20,11 +20,11 @@ export default {
         paddingBlock: {
             control: 'select',
             options: [
-                'p-block--xs',
-                'p-block--s',
-                'p-block--m',
-                'p-block--l',
-                'p-block--xl',
+                'p-block-xsmall',
+                'p-block-small',
+                'p-block-medium',
+                'p-block-large',
+                'p-block-xlarge',
             ],
             description: 'Add "padding-block" to wrapper.',
             table: {
@@ -35,16 +35,16 @@ export default {
         paddingInline: {
             control: 'select',
             options: [
-                'p-inline--xs',
-                'p-inline--s',
-                'p-inline--m',
-                'p-inline--l',
-                'p-inline--xl',
+                'p-inline-xsmall',
+                'p-inline-small',
+                'p-inline-medium',
+                'p-inline-large',
+                'p-inline-xlarge',
             ],
             description: 'Add "padding-inline" to wrapper.',
             table: {
                 type: { summary: 'select' },
-                defaultValue: { summary: 'p-inline--m' }
+                defaultValue: { summary: '0' }
             },
         },
         skin: {

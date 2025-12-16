@@ -77,7 +77,7 @@ ${style}
                 </div>
             </div>
 
-            <div class="wrapper u-p-block--l" data-size="large">
+            <div class="wrapper p-block-large" data-size="large">
                 <div class="prose stack u-center">
                     <h2>Heading level 2</h2>
                     <h3>Heading level 3</h3>
@@ -164,7 +164,7 @@ ${style}
                 </div>
             </div>
 
-            <div class="wrapper stack u-p-block--l">
+            <div class="wrapper stack p-block-large p-inline">
                 <h2>Heading level 2</h2>
                 <article class="card flex" data-variant="fullwidth">
                     <figure class="card__media">
