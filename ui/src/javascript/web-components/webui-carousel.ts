@@ -13,8 +13,10 @@ class WebUICarousel extends HTMLElement {
 
         this.carousel = this.querySelector('.carousel');
         this.slides = this.querySelectorAll('.carousel__slide');
-        this.hasSlideCount = this.hasAttribute('data-slide-count');
-        this.hasSlideCountPips = this.hasAttribute('data-slide-count-pips');
+        this.hasSlideCount = this.hasAttribute('data-show-slide-count');
+        this.hasSlideCountPips = this.hasAttribute(
+            'data-show-slide-count-pips',
+        );
         this.slideCounter = this.querySelector('[data-counter]');
 
         this.visibleSlideClass = 'is-visible';
