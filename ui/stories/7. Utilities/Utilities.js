@@ -1,33 +1,3 @@
-const style = /*html*/ `
-<style>
-    [class*="u-m"],
-    [class*="u-p"] {
-        background: hsl(51, 100%, 45%, 15%);
-        border: 1px dashed hsl(51, 100%, 45%);
-    }
-
-    [class*="u-m"] ul {
-        margin: 0;
-    }
-</style>
-`;
-
-export const MarginPaddingHtml = (args) => /*html*/ `
-${style}
-<div class="
-${args.marginBlock && args.marginBlock !== '' ? `u-m-block--${args.marginBlock}` : 'u-m-block'}
-${args.marginInline && args.marginInline !== '' ? `u-m-inline--${args.marginInline}` : 'u-m-inline'}
-${args.paddingBlock && args.paddingBlock !== '' ? `u-p-block--${args.paddingBlock}` : 'u-p-block'}
-${args.paddingInline && args.paddingInline !== '' ? `u-p-inline--${args.paddingInline}` : 'u-p-inline'}
-">
-    <p>Adjust <code>margin-block</code> | <code>margin-inline</code> and <code>padding-block</code> | <code>padding-inline</code> values.</p>
-    <ul>
-        <li>Default values are set for <code>.u-m-block</code> | <code>.u-m-inline</code> and <code>.u-p-block</code> | <code>.u-p-inline</code> classes.</li>
-        <li>Additional modifiers can be applied. For example, <code>--0</code>, <code>--xs</code>, <code>--xl</code>, etc.</li>
-    </ul>
-</div>
-`;
-
 export const ScreenReaderHtml = () => /*html*/ `
 <p>The content in the <code>&lt;div&gt;</code> below is hidden visually, but still announced by assistive technologies...</p>
 

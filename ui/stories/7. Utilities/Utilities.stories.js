@@ -1,54 +1,28 @@
-import { MarginPaddingHtml } from './Utilities';
+import {
+    ScreenReaderHtml,
+    HideContentHtml,
+    CenterContentHtml
+} from './Utilities';
 
 export default {
     title: 'Utilities/Helpers and Utilities',
     parameters: {
-        status: { type: 'stable' },
-        controls: { sort: 'alpha' },
-        docs: { controls: { sort: 'alpha' } }
+        status: {
+            type: 'stable',
+        },
     },
     tags: ['utilities'],
-    argTypes: {
-        marginBlock: {
-            control: 'select',
-            options: ['0', 'xs', 's', 'l', 'xl'],
-            description: 'Add block margin to component.',
-            table: {
-                type: { summary: 'select' },
-                defaultValue: { summary: 'm' }
-            },
-        },
-        marginInline: {
-            control: 'select',
-            options: ['0', 'xs', 's', 'l', 'xl'],
-            description: 'Add inline margin to component.',
-            table: {
-                type: { summary: 'select' },
-                defaultValue: { summary: 'm' }
-            },
-        },
-        paddingBlock: {
-            control: 'select',
-            options: ['0', 'xs', 's', 'l', 'xl'],
-            description: 'Add block padding to component.',
-            table: {
-                type: { summary: 'select' },
-                defaultValue: { summary: 'm' }
-            },
-        },
-        paddingInline: {
-            control: 'select',
-            options: ['0', 'xs', 's', 'l', 'xl'],
-            description: 'Add inline padding to component.',
-            table: {
-                type: { summary: 'select' },
-                defaultValue: { summary: 'm' }
-            },
-        },
-    },
 };
 
-export const MarginPadding = {
-    render: (args) => MarginPaddingHtml(args),
+export const ScreenReader = {
+    render: () => ScreenReaderHtml(),
 };
-MarginPadding.storyName = 'Adjust Margin & Padding';
+ScreenReader.storyName = 'Screen Reader Only Content';
+
+export const HideContent = {
+    render: () => HideContentHtml(),
+};
+
+export const CenterContent = {
+    render: () => CenterContentHtml(),
+};
