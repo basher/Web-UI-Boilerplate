@@ -1,6 +1,6 @@
 export const WebUIShareHtml = () => /*html*/ `
 <webui-share>
-    <webui-disclosure>
+    <webui-disclosure class="stack">
         <button
             type="button"
             class="button"
@@ -18,7 +18,7 @@ export const WebUIShareHtml = () => /*html*/ `
             <span>Share page</span>
         </button>
 
-        <div data-content>
+        <div class="flex" data-content>
             <label for="share-input" class="label">Share page</label>
             <input
                 type="text"
@@ -42,7 +42,7 @@ export const WebUIShareHtml = () => /*html*/ `
 
 export const WebUIShareAnotherUrlHtml = () => /*html*/ `
 <webui-share>
-    <webui-disclosure>
+    <webui-disclosure class="stack">
         <button
             type="button"
             class="button"
@@ -62,7 +62,7 @@ export const WebUIShareAnotherUrlHtml = () => /*html*/ `
             <span>Share [URL]</span>
         </button>
 
-        <div data-content>
+        <div class="flex" data-content>
             <label for="share-input" class="label">Share page</label>
             <input
                 type="text"

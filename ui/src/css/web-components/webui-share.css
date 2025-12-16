@@ -6,8 +6,8 @@ webui-share {
     }
 
     [data-content] {
+        --flex-gap: var(--webui-gutter-s);
+
         align-items: center;
-        display: flex;
-        gap: var(--webui-gutter-s);
     }
 }
