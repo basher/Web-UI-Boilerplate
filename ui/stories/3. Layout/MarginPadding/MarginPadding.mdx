@@ -1,0 +1,11 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as MarginPadding from './MarginPadding.stories';
+
+<Meta of={MarginPadding} />
+
+# Margin and padding
+- Applies `m-block`|`m-inline` and `p-block`|`p-inline` override classes.
+- Uses the [Utopia fluid space calculator](https://utopia.fyi/) to output the **minimum**, **maximum** and **ideal** gutter sizes.
+
+<Canvas of={MarginPadding.MarginPadding} />
+<Controls of={MarginPadding.MarginPadding} />
