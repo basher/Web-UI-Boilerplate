@@ -22,7 +22,7 @@ export const IconButtonHtml = (args) => /*html*/ `
         aria-hidden="true"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <use href="sprite.svg#${args.iconRef}" />
     </svg>

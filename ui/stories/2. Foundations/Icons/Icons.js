@@ -14,7 +14,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>search</title>
         <use href="sprite.svg#search" />
@@ -24,7 +24,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>menu</title>
         <use href="sprite.svg#hamburger" />
@@ -34,7 +34,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>close</title>
         <use href="sprite.svg#close" />
@@ -44,7 +44,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>open</title>
         <use href="sprite.svg#plus" />
@@ -54,7 +54,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>close</title>
         <use href="sprite.svg#minus" />
@@ -65,7 +65,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>next</title>
         <use href="sprite.svg#right" />
@@ -75,7 +75,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>previous</title>
         <use href="sprite.svg#left" />
@@ -85,7 +85,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>close</title>
         <use href="sprite.svg#up" />
@@ -95,7 +95,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>open</title>
         <use href="sprite.svg#down" />
@@ -105,7 +105,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>share</title>
         <use href="sprite.svg#share" />
@@ -115,7 +115,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>twitter</title>
         <use href="sprite.svg#twitter" />
@@ -125,7 +125,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>facebook</title>
         <use href="sprite.svg#facebook" />
@@ -135,7 +135,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>linkedin</title>
         <use href="sprite.svg#linkedin" />
@@ -145,7 +145,7 @@ ${style}
         role="img"
         focusable="false"
         class="icon"
-        ${args.iconSize ? `data-size="${args.iconSize}"` : ''}
+        ${args.iconSize ? `data-icon-size="${args.iconSize}"` : ''}
     >
         <title>play video</title>
         <use href="sprite.svg#video" />
