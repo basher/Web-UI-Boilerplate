@@ -33,7 +33,7 @@ export const AccordionExclusiveHtml = () => /*html*/ `
 `;
 
 export const AccordionCustomIconHtml = () => /*html*/ `
-<div class="accordion stack" data-custom-icon>
+<div class="accordion stack" data-accordion="custom-icon">
     <details>
         <summary>
             Accordion title 1

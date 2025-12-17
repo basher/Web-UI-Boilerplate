@@ -23,29 +23,29 @@
         line-height: var(--webui-line-height-h4);
         margin-block-end: var(--webui-gutter-s);
     }
+}
 
-    &[data-custom-icon] {
-        summary {
-            align-items: center;
-            border-block-end: var(--webui-border-width-s) solid;
-            display: flex;
-            justify-content: space-between;
-            list-style: none;
-            padding-block-end: var(--webui-gutter-s);
+[data-accordion='custom-icon'] {
+    summary {
+        align-items: center;
+        border-block-end: var(--webui-border-width-s) solid;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding-block-end: var(--webui-gutter-s);
 
-            &::-webkit-details-marker {
-                display: none;
-            }
+        &::-webkit-details-marker {
+            display: none;
         }
+    }
 
+    .icon {
+        transition: transform var(--webui-animation-fast);
+    }
+
+    [open] {
         .icon {
-            transition: transform var(--webui-animation-fast);
-        }
-
-        [open] {
-            .icon {
-                transform: rotate(180deg);
-            }
+            transform: rotate(180deg);
         }
     }
 }
