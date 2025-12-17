@@ -4,47 +4,7 @@
 
     inline-size: clamp(1rem, 100%, 60ch);
 
-    /* Media is at the bottom. */
-    &[data-variant='media-bottom'] {
-        flex-direction: column-reverse;
-    }
-
-    /* Media is inline... */
-    &:where([data-variant='media-inline'], [data-variant='fullwidth']) {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-
-    &:where(
-        [data-variant*='media-inline-reverse'],
-        [data-variant*='fullwidth-reverse']
-    ) {
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-    }
-
-    /* ...uses same layout approach as sidebar layout. */
-    &:where([data-variant*='media-inline'], [data-variant*='fullwidth']) {
-        flex-wrap: wrap;
-        inline-size: auto;
-
-        .card__content {
-            flex-basis: 0;
-            flex-grow: 999;
-            min-inline-size: var(--content-min-width);
-        }
-    }
-
-    &[data-variant*='fullwidth'] {
-        --card-gap: var(--webui-gutter-xl);
-
-        /* Uses <picture> element. Set image to take up % of available space, which allows it to shrink and use the correct source. */
-        .card__media {
-            flex-basis: max(50% - var(--card-gap), var(--image-min-width));
-        }
-    }
-
-    /* Clickable card. */
+    /* Clickable card (i.e. it's an <a href>). */
     &[href] {
         text-decoration: none;
 
@@ -63,9 +23,44 @@
     }
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 .card__media {
     flex-grow: 1;
+}
+
+/* Media is at the bottom. */
+[data-card='media-bottom'] {
+    flex-direction: column-reverse;
+}
+
+/* Media is inline... */
+:is([data-card='media-inline'], [data-card='fullwidth']) {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+:is([data-card*='media-inline-reverse'], [data-card*='fullwidth-reverse']) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+/* ...uses same layout approach as sidebar layout. */
+:is([data-card*='media-inline'], [data-card*='fullwidth']) {
+    inline-size: auto;
+
+    .card__content {
+        flex-basis: 0;
+        flex-grow: 999;
+        min-inline-size: var(--content-min-width);
+    }
+}
+
+[data-card*='fullwidth'] {
+    --card-gap: var(--webui-gutter-xl);
+
+    /* Uses <picture> element. Set image to take up % of available space, which allows it to shrink and use the correct source. */
+    .card__media {
+        flex-basis: max(50% - var(--card-gap), var(--image-min-width));
+    }
 }
 
 /* Cards in a grid. */

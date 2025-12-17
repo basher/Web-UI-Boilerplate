@@ -20,13 +20,13 @@ import * as CardsNoArgs from './CardsNoArgs.stories';
 
 ## Fullwidth card
 - This card uses `<picture>` so that the image size can be optimised at different breakpoints.
-- It's a wider version of a `data-variant="media-inline"` card.
+- It's a wider version of a `data-card="media-inline"` card.
 
 <Canvas of={Cards.FullwidthCard} />
 <Controls of={Cards.FullwidthCard} />
 
 ## Clickable card
-- This card replaces `<article>` with an `<a>`.
+- Uses `<a href>` instead of `<article>`.
 
 ### Accessibility considerations
 - The image has an empty `alt` attribute.

@@ -1,7 +1,7 @@
 export const CardHtml = (args) => /*html*/ `
 <article
     class="card flex ${args.skin ? args.skin : ''}"
-    ${args.cardOrientation ? `data-variant="${args.cardOrientation}"` : ''}
+    ${args.cardOrientation ? `data-card="${args.cardOrientation}"` : ''}
 >
     <figure class="card__media">
         <picture>
@@ -31,7 +31,7 @@ export const CardHtml = (args) => /*html*/ `
 export const FullwidthCardHtml = (args) => /*html*/ `
 <article
     class="card flex ${args.skin ? args.skin : ''}"
-    ${args.fullwidthFlipOrientation ? 'data-variant="fullwidth-reverse"' : 'data-variant="fullwidth"'}
+    ${args.fullwidthFlipOrientation ? 'data-card="fullwidth-reverse"' : 'data-card="fullwidth"'}
 >
     <figure class="card__media">
         <picture>
@@ -73,7 +73,7 @@ export const ClickableCardHtml = (args) => /*html*/ `
 <a
     href="#"
     class="card flex ${args.skin ? args.skin : ''}"
-    ${args.cardOrientation ? `data-variant="${args.cardOrientation}"` : ''}
+    ${args.cardOrientation ? `data-card="${args.cardOrientation}"` : ''}
 >
     <figure class="card__media">
         <picture>
