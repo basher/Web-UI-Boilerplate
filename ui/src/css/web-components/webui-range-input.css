@@ -29,6 +29,11 @@ webui-range-input {
             &::-moz-range-track {
                 background-color: var(--webui-color-neutral-500);
                 block-size: var(--slider-height);
+
+                /* stylelint-disable-next-line order/order, max-nesting-depth */
+                @media (forced-colors: active) {
+                    background-color: CanvasText;
+                }
             }
         }
     }

@@ -63,6 +63,12 @@ webui-tabs {
         &[aria-selected='true'] {
             background-color: var(--webui-color-primary-500);
             color: var(--webui-color-neutral-100);
+
+            /* stylelint-disable-next-line order/order */
+            @media (forced-colors: active) {
+                background-color: CanvasText;
+                color: Canvas;
+            }
         }
     }
 

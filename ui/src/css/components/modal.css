@@ -16,6 +16,12 @@ dialog {
         background-color: var(--webui-color-backdrop);
         pointer-events: none; /* So click outside works */
     }
+
+    /* stylelint-disable-next-line order/order */
+    @media (forced-colors: active) {
+        background-color: CanvasText;
+        color: Canvas;
+    }
 }
 
 .modal__header {
@@ -26,6 +32,12 @@ dialog {
     display: flex;
     justify-content: flex-end;
     padding-block-start: var(--webui-gutter-m);
+
+    /* stylelint-disable-next-line order/order */
+    @media (forced-colors: active) {
+        background-color: CanvasText;
+        color: Canvas;
+    }
 }
 
 .modal__content {

@@ -160,19 +160,19 @@ class WebUICarousel extends HTMLElement {
         this.carousel?.before(buttonGroup);
 
         buttonGroup.innerHTML = /*html*/ `
-            <button class="button" data-variant="text" data-button="prev">
+            <button class="button" data-button="text" data-button-prev>
                 Previous
             </button>
-            <button class="button" data-variant="text" data-button="next">
+            <button class="button" data-button="text" data-button-next>
                 Next
             </button>
         `;
 
         const buttonPrev = buttonGroup.querySelector(
-            '[data-button="prev"]',
+            '[data-button-prev]',
         ) as HTMLButtonElement;
         const buttonNext = buttonGroup.querySelector(
-            '[data-button="next"]',
+            '[data-button-next]',
         ) as HTMLButtonElement;
 
         buttonPrev &&

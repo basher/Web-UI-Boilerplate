@@ -47,6 +47,12 @@
     background: var(--webui-color-error-500);
     color: var(--webui-color-neutral-100);
     padding-inline: var(--webui-gutter-xs);
+
+    /* stylelint-disable-next-line order/order */
+    @media (forced-colors: active) {
+        background-color: CanvasText;
+        color: Canvas;
+    }
 }
 
 [data-field-has-error] {
