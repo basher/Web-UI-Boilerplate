@@ -3,22 +3,22 @@
 
     margin-inline: auto;
     max-inline-size: var(--wrapper-max-width);
+}
 
-    &[data-size='small'] {
-        --wrapper-max-width: 48rem;
-    }
+[data-wrapper='small'] {
+    --wrapper-max-width: 48rem;
+}
 
-    &[data-size='large'] {
-        --wrapper-max-width: 75rem;
-    }
+[data-wrapper='large'] {
+    --wrapper-max-width: 75rem;
+}
 
-    &[data-size='fullbleed'] {
-        --wrapper-max-width: 100vw; /* 100dvi might have performance implications */
-    }
+[data-wrapper='fullbleed'] {
+    --wrapper-max-width: 100vw; /* 100dvi might have performance implications */
+}
 
-    &[data-size='fit-content'] {
-        --wrapper-max-width: revert;
+[data-wrapper='fit-content'] {
+    --wrapper-max-width: revert;
 
-        inline-size: fit-content;
-    }
+    inline-size: fit-content;
 }

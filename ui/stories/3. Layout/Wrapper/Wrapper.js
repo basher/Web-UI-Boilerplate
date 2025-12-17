@@ -30,19 +30,19 @@ ${style}
         Apply PADDING override to this wrapper
     </div>
 
-    <div class="wrapper" data-size="small">
+    <div class="wrapper" data-wrapper="small">
         Wrapper (small)
     </div>
 
-    <div class="wrapper" data-size="large">
+    <div class="wrapper" data-wrapper="large">
         Wrapper (large)
     </div>
 
-    <div class="wrapper" data-size="fullbleed">
+    <div class="wrapper" data-wrapper="fullbleed">
         Wrapper (fullbleed)
     </div>
 
-    <div class="wrapper" data-size="fit-content">
+    <div class="wrapper" data-wrapper="fit-content">
         Wrapper (fit-content)
     </div>
 </div>
