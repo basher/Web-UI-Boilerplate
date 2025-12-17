@@ -14,7 +14,7 @@ ${style}
     class="flex"
     ${args.alignItems ? `data-align="${args.alignItems}"` : ''}
     ${args.direction ? `data-direction="${args.direction}"` : ''}
-    ${args.gap ? `data-gap="${args.gap}"` : ''}
+    ${args.gap ? `data-flex-gap="${args.gap}"` : ''}
     ${args.growAllFlexItems ? `data-grow="${args.growAllFlexItems}"` : ''}
     ${args.justifyContent ? `data-justify="${args.justifyContent}"` : ''}
 >

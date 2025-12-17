@@ -19,7 +19,7 @@ ${style}
 <p>Try removing grid items via devtools to see how grid auto-arranges itself.</p>
 <div
     class="grid"
-    ${args.gap ? `data-gap="${args.gap}"` : ''}
+    ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
 >
     <div>Grid item 1 - lots more content<br><br>
     to demonstrate (default) equal height columns</div>
@@ -37,7 +37,7 @@ ${style}
 
 <ul
     class="grid"
-    ${args.gap ? `data-gap="${args.gap}"` : ''}
+    ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
 >
     <li>Grid item 1 - lots more content<br><br>
     to demonstrate (default) equal height columns</li>
@@ -53,7 +53,7 @@ ${style}
 <p>Divide a page (or section of a page) into <strong>equal width</strong> columns, etc.</p>
 <div
     class="grid"
-    ${args.gap ? `data-gap="${args.gap}"` : ''}
+    ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
 >
     <div>Col 1</div>
     <div>Col 2</div>
@@ -63,7 +63,7 @@ ${style}
 <p>And here's another grid on same page.</p>
 <div
     class="grid"
-    ${args.gap ? `data-gap="${args.gap}"` : ''}
+    ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
 >
     <div>Col 1</div>
     <div>Col 2</div>
@@ -75,7 +75,7 @@ Use the <code>data-variant="2-cols@small"</code> attribute to override the <code
 <div
     class="grid"
     data-variant="2-cols@small"
-    ${args.gap ? `data-gap="${args.gap}"` : ''}
+    ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
 >
     <div>Col 1</div>
     <div>Col 2</div>
@@ -87,7 +87,7 @@ ${style}
 <p>Divide a page (or section of a page) into <strong>equal width</strong> columns, etc.</p>
 <div
     class="grid"
-    ${args.gap ? `data-gap="${args.gap}"` : ''}
+    ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
 >
     <div>Col 1</div>
     <div>Col 2</div>
@@ -98,7 +98,7 @@ ${style}
 <p>And here's another grid on same page.</p>
 <div
     class="grid"
-    ${args.gap ? `data-gap="${args.gap}"` : ''}
+    ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
 >
     <div>Col 1</div>
     <div>Col 2</div>
@@ -114,7 +114,7 @@ ${style}
     <div
         class="grid"
         data-variant="asymmetric"
-        ${args.gap ? `data-gap="${args.gap}"` : ''}
+        ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
     >
         <div>
             Asymmetric col 1<br>
@@ -133,7 +133,7 @@ ${style}
     <div
         class="grid"
         data-variant="asymmetric-75-25"
-        ${args.gap ? `data-gap="${args.gap}"` : ''}
+        ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
     >
         <div>
             Asymmetric col 1<br>
@@ -152,7 +152,7 @@ ${style}
     <div
         class="grid"
         data-variant="asymmetric-25-75"
-        ${args.gap ? `data-gap="${args.gap}"` : ''}
+        ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
     >
         <div>
             Asymmetric col 1<br>

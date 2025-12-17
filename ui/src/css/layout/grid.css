@@ -26,28 +26,6 @@
         max-inline-size: revert;
     }
 
-    /* 0 gap between grid items. */
-    &[data-gap='0'] {
-        --grid-gap: 0;
-    }
-
-    /* Gap variants. */
-    &[data-gap='xsmall'] {
-        --grid-gap: var(--webui-gutter-xs);
-    }
-
-    &[data-gap='small'] {
-        --grid-gap: var(--webui-gutter-s);
-    }
-
-    &[data-gap='large'] {
-        --grid-gap: var(--webui-gutter-l);
-    }
-
-    &[data-gap='xlarge'] {
-        --grid-gap: var(--webui-gutter-xl);
-    }
-
     /* Centered grid. */
     &[data-variant='centered'] {
         justify-content: center;
@@ -98,6 +76,27 @@
         --grid-asymmetric-col1: 25%;
         --grid-asymmetric-col2: 75%;
     }
+}
+
+/* Gap variants. */
+[data-grid-gap='0'] {
+    --grid-gap: 0;
+}
+
+[data-grid-gap='xsmall'] {
+    --grid-gap: var(--webui-gutter-xs);
+}
+
+[data-grid-gap='small'] {
+    --grid-gap: var(--webui-gutter-s);
+}
+
+[data-grid-gap='large'] {
+    --grid-gap: var(--webui-gutter-l);
+}
+
+[data-grid-gap='xlarge'] {
+    --grid-gap: var(--webui-gutter-xl);
 }
 
 /* Using container queries for (asymmetric) grids. */
