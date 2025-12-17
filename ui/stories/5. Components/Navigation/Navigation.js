@@ -27,7 +27,7 @@ export const NavigationHtml = () => /*html*/ `
 export const HamburgerNavigationHtml = () => /*html*/ `
 <nav
     class="nav"
-    data-variant="hamburger"
+    data-nav="hamburger"
     id="navigation"
     aria-label="Primary"
 >
@@ -86,12 +86,12 @@ export const HamburgerNavigationHtml = () => /*html*/ `
 export const DropdownNavigationHtml = () => /*html*/ `
 <nav
     class="nav"
-    data-variant="dropdown"
+    data-nav="dropdown"
     id="navigation"
     aria-label="Primary"
 >
     <ul class="nav__list flex">
-        <li data-has-dropdown>
+        <li data-nav-item-dropdown>
             <a href="#">Nav link with dropdown</a>
 
             <webui-disclosure
@@ -117,7 +117,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
 
                 <ul
                     class="nav__list flex"
-                    data-variant="dropdown"
+                    data-nav-list-dropdown
                     data-content
                 >
                     <li>
@@ -143,7 +143,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
             <a href="#">Nav link</a>
         </li>
 
-        <li data-has-dropdown>
+        <li data-nav-item-dropdown>
             <a href="#">Nav link with dropdown</a>
 
             <webui-disclosure
@@ -169,7 +169,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
 
                 <ul
                     class="nav__list flex"
-                    data-variant="dropdown"
+                    data-nav-list-dropdown
                     data-content
                 >
                     <li>
@@ -201,7 +201,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
 export const HamburgerDropdownNavigationHtml = () => /*html*/ `
 <nav
     class="nav"
-    data-variant="hamburger-dropdown"
+    data-nav="hamburger-dropdown"
     id="navigation"
     aria-label="Primary"
 >
@@ -237,7 +237,7 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
             class="nav__list flex"
             data-content
         >
-            <li data-has-dropdown>
+            <li data-nav-item-dropdown>
                 <a href="#">Nav link with dropdown</a>
 
                 <webui-disclosure
@@ -263,7 +263,7 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
 
                     <ul
                         class="nav__list flex"
-                        data-variant="dropdown"
+                        data-nav-list-dropdown
                         data-content
                     >
                         <li>
@@ -289,7 +289,7 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
                 <a href="#">Nav link</a>
             </li>
 
-            <li data-has-dropdown>
+            <li data-nav-item-dropdown>
                 <a href="#">Nav link with dropdown</a>
 
                 <webui-disclosure
@@ -315,7 +315,7 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
 
                     <ul
                         class="nav__list flex"
-                        data-variant="dropdown"
+                        data-nav-list-dropdown
                         data-content
                     >
                         <li>

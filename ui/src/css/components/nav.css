@@ -15,94 +15,45 @@
             text-decoration: underline;
         }
     }
-
-    /* Navigation with dropdown lists. */
-    &[data-variant*='dropdown'] {
-        > .nav__list {
-            align-items: center;
-        }
-
-        .icon {
-            transition: transform var(--webui-animation-fast);
-        }
-    }
-
-    [data-has-dropdown] {
-        align-items: center;
-        display: flex;
-        gap: var(--webui-gutter-xs);
-        position: relative;
-
-        [aria-expanded='true'] {
-            .icon {
-                transform: rotate(180deg);
-            }
-        }
-
-        .button {
-            padding: var(--webui-gutter-xs);
-        }
-    }
-
-    /* Hamburger navigation. */
-    &[data-variant*='hamburger'] {
-        position: relative;
-
-        .nav__list {
-            flex-direction: column;
-        }
-
-        /* Uses <webui-disclosure> custom element to show/hide nav. */
-        webui-disclosure:defined {
-            .nav__list {
-                background-color: light-dark(
-                    var(--webui-color-neutral-100),
-                    var(--webui-color-neutral-900)
-                );
-                border: var(--webui-border-width-s) solid;
-                inset-block-start: 100%;
-                padding: var(--webui-gutter-m);
-                position: absolute;
-            }
-        }
-    }
-
-    /* Hamburger with nested dropdown lists. */
-    &[data-variant='hamburger-dropdown'] {
-        webui-disclosure:defined {
-            [data-has-dropdown] {
-                display: revert;
-            }
-
-            [data-variant='dropdown'] {
-                border: 0;
-                position: relative;
-            }
-        }
-    }
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 .nav__list {
     column-gap: var(--webui-gutter-xl);
     row-gap: var(--webui-gutter-xs);
+}
 
-    /* Dropdown list. */
-    &[data-variant='dropdown'] {
-        background-color: light-dark(
-            var(--webui-color-neutral-100),
-            var(--webui-color-neutral-900)
-        );
-        border: var(--webui-border-width-s) solid;
-        flex-direction: column;
-        inset-block-start: 100%;
-        inset-inline-start: 0;
-        padding: var(--webui-gutter-m);
-        position: absolute;
+/* Nav item that contains dropdown list. */
+[data-nav-item-dropdown] {
+    align-items: center;
+    display: flex;
+    gap: var(--webui-gutter-xs);
+    position: relative;
+
+    [aria-expanded='true'] {
+        .icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    .button {
+        padding: var(--webui-gutter-xs);
     }
 }
 
-/* Hamburger navigation. */
+/* Dropdown list. */
+[data-nav-list-dropdown] {
+    background-color: light-dark(
+        var(--webui-color-neutral-100),
+        var(--webui-color-neutral-900)
+    );
+    border: var(--webui-border-width-s) solid;
+    flex-direction: column;
+    inset-block-start: 100%;
+    inset-inline-start: 0;
+    padding: var(--webui-gutter-m);
+    position: absolute;
+}
+
 .nav__hamburger-button {
     &[aria-expanded='false'] {
         .icon:last-of-type {
@@ -113,6 +64,55 @@
     &[aria-expanded='true'] {
         .icon:first-of-type {
             display: none;
+        }
+    }
+}
+
+/* Navigation with dropdown lists. */
+[data-nav*='dropdown'] {
+    > .nav__list {
+        align-items: center;
+    }
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    .icon {
+        transition: transform var(--webui-animation-fast);
+    }
+}
+
+/* Hamburger navigation. */
+[data-nav*='hamburger'] {
+    position: relative;
+
+    .nav__list {
+        flex-direction: column;
+    }
+
+    /* Uses <webui-disclosure> custom element to show/hide nav. */
+    webui-disclosure:defined {
+        .nav__list {
+            background-color: light-dark(
+                var(--webui-color-neutral-100),
+                var(--webui-color-neutral-900)
+            );
+            border: var(--webui-border-width-s) solid;
+            inset-block-start: 100%;
+            padding: var(--webui-gutter-m);
+            position: absolute;
+        }
+    }
+}
+
+/* Hamburger with nested dropdown lists. */
+[data-nav='hamburger-dropdown'] {
+    webui-disclosure:defined {
+        [data-nav-item-dropdown] {
+            display: revert;
+        }
+
+        [data-nav-list-dropdown] {
+            border: 0;
+            position: relative;
         }
     }
 }
