@@ -11,7 +11,7 @@ export const StackHtml = (args) => /*html*/ `
 ${style}
 <div
     class="stack"
-    ${args.stackGutter === undefined ? '' : `data-gutter="${args.stackGutter}"`}
+    ${args.stackGutter === undefined ? '' : `data-stack-gutter="${args.stackGutter}"`}
 >
     <div>Child item of "stack" parent...</div>
     <div>Child item of "stack" parent...</div>
