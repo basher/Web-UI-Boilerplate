@@ -17,36 +17,12 @@
     &:focus:not(:focus-visible) {
         outline: var(--webui-focus-outline);
     }
-
-    /* Fullwidth slides. */
-    &[data-variant='fullwidth-slides'] {
-        --slide-gap: 0;
-
-        .carousel__slide {
-            min-inline-size: 100%;
-        }
-    }
-
-    /* Clickable slides (e.g. cards, image thumbnails). */
-    &[data-variant='clickable-slides'] {
-        .carousel__slide > :where(a, button) {
-            &:focus-visible {
-                box-shadow: inset var(--webui-focus-shadow);
-            }
-        }
-
-        .carousel__slide > a {
-            display: block;
-        }
-    }
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 .carousel__slide {
     min-inline-size: min(var(--slide-min-width), 100%);
     scroll-snap-align: start;
 
-    /* stylelint-disable-next-line no-descending-specificity */
     &:not([class]) {
         max-inline-size: none;
     }
@@ -56,6 +32,22 @@
     display: none;
 
     .carousel:focus-visible ~ & {
+        display: block;
+    }
+}
+
+/* Fullwidth slides. */
+[data-carousel='fullwidth-slides'] {
+    --slide-gap: 0;
+
+    .carousel__slide {
+        min-inline-size: 100%;
+    }
+}
+
+/* Clickable slides (e.g. cards, image thumbnails). */
+[data-carousel='clickable-slides'] {
+    .carousel__slide > a {
         display: block;
     }
 }

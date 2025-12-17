@@ -41,7 +41,6 @@
     }
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 .banner__content {
     padding-inline: var(--webui-gutter-s);
 }

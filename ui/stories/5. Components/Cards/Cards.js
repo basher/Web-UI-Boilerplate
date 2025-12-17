@@ -180,7 +180,7 @@ export const CardCarouselHtml = () => /*html*/ `
 >
     <ul
         class="carousel card-carousel"
-        data-variant="clickable-slides"
+        data-carousel="clickable-slides"
         tabindex="0"
     >
         <li class="carousel__slide">

@@ -108,7 +108,7 @@ ${style}
 >
     <ul
         class="carousel"
-        data-variant="fullwidth-slides"
+        data-carousel="fullwidth-slides"
         tabindex="0"
     >
          <li class="carousel__slide">
@@ -163,7 +163,7 @@ ${style}
 >
     <ul
         class="carousel"
-        data-variant="clickable-slides"
+        data-carousel="clickable-slides"
         tabindex="0"
     >
         <li class="carousel__slide">

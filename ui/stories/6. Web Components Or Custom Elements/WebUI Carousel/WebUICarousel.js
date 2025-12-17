@@ -21,7 +21,7 @@ ${style}
     >
         <ul
             class="carousel"
-            ${args.makeSlidesFullwidth ? 'data-variant="fullwidth-slides"' : ''}
+            ${args.makeSlidesFullwidth ? 'data-carousel="fullwidth-slides"' : ''}
             tabindex="0"
         >
             <li class="carousel__slide">
