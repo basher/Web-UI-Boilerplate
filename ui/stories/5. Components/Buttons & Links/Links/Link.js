@@ -3,7 +3,7 @@ export const LinkHtml = (args) => /*html*/ `
     href="#"
     class="button"
     data-button="text"
-    ${args.linkSize ? `data-size="${args.linkSize}"` : ''}
+    ${args.linkSize ? `data-button-size="${args.linkSize}"` : ''}
     ${args.linkStyle ? `data-button-style="${args.linkStyle}"` : ''}
 >
     ${args.label}
@@ -33,7 +33,7 @@ export const TextIconLinkHtml = (args) => /*html*/ `
     href="#"
     class="button"
     data-button="text-icon${args.swapIconPosition ? '-reverse' : ''}"
-    ${args.linkSize ? `data-size="${args.linkSize}"` : ''}
+    ${args.linkSize ? `data-button-size="${args.linkSize}"` : ''}
     ${args.linkStyle ? `data-button-style="${args.linkStyle}"` : ''}
 >
     <svg
