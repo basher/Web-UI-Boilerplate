@@ -38,7 +38,7 @@ export const HamburgerNavigationHtml = () => /*html*/ `
         <button
             type="button"
             class="button nav__hamburger-button"
-            data-variant="icon"
+            data-button="icon"
             data-trigger
             hidden
         >
@@ -101,7 +101,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
                 <button
                     type="button"
                     class="button"
-                    data-variant="icon"
+                    data-button="icon"
                     data-trigger
                     hidden
                 >
@@ -153,7 +153,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
                 <button
                     type="button"
                     class="button"
-                    data-variant="icon"
+                    data-button="icon"
                     data-trigger
                     hidden
                 >
@@ -212,7 +212,7 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
         <button
             type="button"
             class="button nav__hamburger-button"
-            data-variant="icon"
+            data-button="icon"
             data-trigger
             hidden
         >
@@ -247,7 +247,7 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
                     <button
                         type="button"
                         class="button"
-                        data-variant="icon"
+                        data-button="icon"
                         data-trigger
                         hidden
                     >
@@ -299,7 +299,7 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
                     <button
                         type="button"
                         class="button"
-                        data-variant="icon"
+                        data-button="icon"
                         data-trigger
                         hidden
                     >

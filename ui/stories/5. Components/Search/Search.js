@@ -11,7 +11,7 @@ export const SearchHtml = () => /*html*/ `
                 required
             />
         </div>
-        <button type="submit" class="button" data-variant="text" data-style="positive">
+        <button type="submit" class="button" data-button="text" data-button-style="positive">
             Submit
         </button>
     </form>
@@ -43,7 +43,7 @@ export const SearchDatalistHtml = () => /*html*/ `
                 <option value="longer text3">
             </datalist>
         </div>
-        <button type="submit" class="button" data-variant="text" data-style="positive">
+        <button type="submit" class="button" data-button="text" data-button-style="positive">
             Submit
         </button>
     </form>

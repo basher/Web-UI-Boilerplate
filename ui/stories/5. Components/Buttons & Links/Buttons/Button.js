@@ -2,9 +2,9 @@ export const ButtonHtml = (args) => /*html*/ `
 <button
     type="button"
     class="button"
-    data-variant="text"
-    ${args.buttonSize ? `data-size="${args.buttonSize}"` : ''}
-    ${args.buttonStyle ? `data-style="${args.buttonStyle}"` : ''}
+    data-button="text"
+    ${args.buttonSize ? `data-button-size="${args.buttonSize}"` : ''}
+    ${args.buttonStyle ? `data-button-style="${args.buttonStyle}"` : ''}
     ${args.disabled ? 'disabled' : ''}
 >
     ${args.label}
@@ -15,7 +15,7 @@ export const IconButtonHtml = (args) => /*html*/ `
 <button
     type="button"
     class="button"
-    data-variant="icon"
+    data-button="icon"
     ${args.disabled === true ? 'disabled' : ''}
 >
     <svg
@@ -34,9 +34,9 @@ export const TextIconButtonHtml = (args) => /*html*/ `
 <button
     type="button"
     class="button"
-    data-variant="text-icon${args.swapIconPosition ? '-reverse' : ''}"
-    ${args.buttonSize ? `data-size="${args.buttonSize}"` : ''}
-    ${args.buttonStyle ? `data-style="${args.buttonStyle}"` : ''}
+    data-button="text-icon${args.swapIconPosition ? '-reverse' : ''}"
+    ${args.buttonSize ? `data-button-size="${args.buttonSize}"` : ''}
+    ${args.buttonStyle ? `data-button-style="${args.buttonStyle}"` : ''}
     ${args.disabled ? 'disabled' : ''}
 >
     <svg

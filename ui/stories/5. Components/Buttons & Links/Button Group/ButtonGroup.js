@@ -6,23 +6,23 @@ export const ButtonsHtml = (args) => /*html*/ `
     <button
         type="button"
         class="button"
-        data-variant="text"
+        data-button="text"
     >
         Cancel
     </button>
     <button
         type="button"
         class="button"
-        data-variant="text"
-        data-style="positive"
+        data-button="text"
+        data-button-style="positive"
     >
         Yes please
     </button>
     <button
         type="button"
         class="button"
-        data-variant="text"
-        data-style="negative"
+        data-button="text"
+        data-button-style="negative"
     >
         No thanks
     </button>
@@ -38,16 +38,16 @@ export const LinksHtml = (args) => /*html*/ `
     <a
         href="#"
         class="button"
-        data-variant="text"
-        data-style="primary"
+        data-button="text"
+        data-button-style="primary"
     >
         Primary
     </a>
     <a
         href="#"
         class="button"
-        data-variant="text"
-        data-style="secondary"
+        data-button="text"
+        data-button-style="secondary"
     >
         Secondary
     </a>

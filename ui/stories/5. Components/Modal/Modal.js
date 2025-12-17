@@ -2,14 +2,14 @@ export const ModalHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button" data-variant="text">Am I clickable?</button>
+    <button type="button" class="button" data-button="text">Am I clickable?</button>
 </p>
 
 <button
     type="button"
     class="button"
-    data-variant="text"
-    data-style="primary"
+    data-button="text"
+    data-button-style="primary"
     command="show-modal"
     commandfor="modal1"
     aria-haspopup="dialog"
@@ -26,7 +26,7 @@ export const ModalHtml = () => /*html*/ `
         <button
             type="button"
             class="button modal__close"
-            data-variant="icon"
+            data-button="icon"
             command="close"
             commandfor="modal1"
         >
@@ -52,7 +52,7 @@ export const ModalHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button" data-variant="text">Am I clickable?</button>
+    <button type="button" class="button" data-button="text">Am I clickable?</button>
 </p>
 `;
 
@@ -60,14 +60,14 @@ export const ModalOverflowHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button" data-variant="text">Am I clickable?</button>
+    <button type="button" class="button" data-button="text">Am I clickable?</button>
 </p>
 
 <button
     type="button"
     class="button"
-    data-variant="text"
-    data-style="primary"
+    data-button="text"
+    data-button-style="primary"
     command="show-modal"
     commandfor="modal2"
     aria-haspopup="dialog"
@@ -84,7 +84,7 @@ export const ModalOverflowHtml = () => /*html*/ `
         <button
             type="button"
             class="button modal__close"
-            data-variant="icon"
+            data-button="icon"
             command="close"
             commandfor="modal2"
         >
@@ -126,7 +126,7 @@ export const ModalOverflowHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button" data-variant="text">Am I clickable?</button>
+    <button type="button" class="button" data-button="text">Am I clickable?</button>
 </p>
 `;
 
@@ -134,14 +134,14 @@ export const ModalMultipleCloseButtonsHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button" data-variant="text">Am I clickable?</button>
+    <button type="button" class="button" data-button="text">Am I clickable?</button>
 </p>
 
 <button
     type="button"
     class="button"
-    data-variant="text"
-    data-style="primary"
+    data-button="text"
+    data-button-style="primary"
     command="show-modal"
     commandfor="modal3"
     aria-haspopup="dialog"
@@ -163,7 +163,7 @@ export const ModalMultipleCloseButtonsHtml = () => /*html*/ `
             <button
                 type="button"
                 class="button"
-                data-variant="text"
+                data-button="text"
                 command="close"
                 commandfor="modal3"
             >
@@ -172,8 +172,8 @@ export const ModalMultipleCloseButtonsHtml = () => /*html*/ `
             <button
                 type="button"
                 class="button"
-                data-variant="text"
-                data-style="positive"
+                data-button="text"
+                data-button-style="positive"
                 command="close"
                 commandfor="modal3"
             >
@@ -187,6 +187,6 @@ export const ModalMultipleCloseButtonsHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>
-    <button type="button" class="button" data-variant="text">Am I clickable?</button>
+    <button type="button" class="button" data-button="text">Am I clickable?</button>
 </p>
 `;

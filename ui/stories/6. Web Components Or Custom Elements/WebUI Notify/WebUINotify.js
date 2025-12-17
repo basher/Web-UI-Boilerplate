@@ -15,7 +15,7 @@ export const WebUINotifyHtml = (args) => /*html*/ `
             ? `<button
             type="button"
             class="button"
-            data-variant="icon"
+            data-button="icon"
             data-close
         >
             <svg

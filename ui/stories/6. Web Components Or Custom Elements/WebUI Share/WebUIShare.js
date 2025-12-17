@@ -4,7 +4,7 @@ export const WebUIShareHtml = () => /*html*/ `
         <button
             type="button"
             class="button"
-            data-variant="text-icon"
+            data-button="text-icon"
             data-trigger
             hidden
         >
@@ -30,7 +30,7 @@ export const WebUIShareHtml = () => /*html*/ `
             <button
                 type="button"
                 class="button"
-                data-variant="text"
+                data-button="text"
                 data-copy
             >
                 Copy
@@ -46,7 +46,7 @@ export const WebUIShareAnotherUrlHtml = () => /*html*/ `
         <button
             type="button"
             class="button"
-            data-variant="text-icon"
+            data-button="text-icon"
             data-trigger
             data-url="https://www.google.com"
             data-title="google"
@@ -74,7 +74,7 @@ export const WebUIShareAnotherUrlHtml = () => /*html*/ `
             <button
                 type="button"
                 class="button"
-                data-variant="text"
+                data-button="text"
                 data-copy
             >
                 Copy

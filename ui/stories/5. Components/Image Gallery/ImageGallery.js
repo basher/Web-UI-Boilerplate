@@ -33,7 +33,7 @@ export const ImageGalleryHtml = () => /*html*/ `
                 <button
                     type="button"
                     class="button modal__close"
-                    data-variant="icon"
+                    data-button="icon"
                     command="close"
                     commandfor="image1"
                 >
@@ -105,7 +105,7 @@ export const ImageGalleryHtml = () => /*html*/ `
                 <button
                     type="button"
                     class="button modal__close"
-                    data-variant="icon"
+                    data-button="icon"
                     command="close"
                     commandfor="image2"
                 >
@@ -177,7 +177,7 @@ export const ImageGalleryHtml = () => /*html*/ `
                 <button
                     type="button"
                     class="button modal__close"
-                    data-variant="icon"
+                    data-button="icon"
                     command="close"
                     commandfor="image3"
                 >
@@ -249,7 +249,7 @@ export const ImageGalleryHtml = () => /*html*/ `
                 <button
                     type="button"
                     class="button modal__close"
-                    data-variant="icon"
+                    data-button="icon"
                     command="close"
                     commandfor="image4"
                 >
@@ -321,7 +321,7 @@ export const ImageGalleryHtml = () => /*html*/ `
                 <button
                     type="button"
                     class="button modal__close"
-                    data-variant="icon"
+                    data-button="icon"
                     command="close"
                     commandfor="image5"
                 >

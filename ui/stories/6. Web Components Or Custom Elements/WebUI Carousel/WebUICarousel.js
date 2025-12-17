@@ -30,7 +30,7 @@ ${style}
                 <br><br>
                 <a
                     href="#"
-                    class="button" data-variant="text" data-style="primary"
+                    class="button" data-button="text" data-button-style="primary"
                 >
                     Link 1
                 </a>
@@ -40,7 +40,7 @@ ${style}
                 <br><br>
                 <a
                     href="#"
-                    class="button" data-variant="text" data-style="primary"
+                    class="button" data-button="text" data-button-style="primary"
                 >
                     Link 2
                 </a>
@@ -50,7 +50,7 @@ ${style}
                 <br><br>
                 <a
                     href="#"
-                    class="button" data-variant="text" data-style="primary"
+                    class="button" data-button="text" data-button-style="primary"
                 >
                     Link 3
                 </a>
@@ -60,7 +60,7 @@ ${style}
                 <br><br>
                 <a
                     href="#"
-                    class="button" data-variant="text" data-style="primary"
+                    class="button" data-button="text" data-button-style="primary"
                 >
                     Link 4
                 </a>
@@ -70,7 +70,7 @@ ${style}
                 <br><br>
                 <a
                     href="#"
-                    class="button" data-variant="text" data-style="primary"
+                    class="button" data-button="text" data-button-style="primary"
                 >
                     Link 5
                 </a>
@@ -80,7 +80,7 @@ ${style}
                 <br><br>
                 <a
                     href="#"
-                    class="button" data-variant="text" data-style="primary"
+                    class="button" data-button="text" data-button-style="primary"
                 >
                     Link 6
                 </a>

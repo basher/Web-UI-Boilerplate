@@ -26,8 +26,8 @@ ${style}
             <a
                 href="#"
                 class="button"
-                data-variant="text"
-                data-style="primary"
+                data-button="text"
+                data-button-style="primary"
             >
                 Link 1
             </a>
@@ -38,8 +38,8 @@ ${style}
             <a
                 href="#"
                 class="button"
-                data-variant="text"
-                data-style="primary"
+                data-button="text"
+                data-button-style="primary"
             >
                 Link 2
             </a>
@@ -50,8 +50,8 @@ ${style}
             <a
                 href="#"
                 class="button"
-                data-variant="text"
-                data-style="primary"
+                data-button="text"
+                data-button-style="primary"
             >
                 Link 3
             </a>
@@ -62,8 +62,8 @@ ${style}
             <a
                 href="#"
                 class="button"
-                data-variant="text"
-                data-style="primary"
+                data-button="text"
+                data-button-style="primary"
             >
                 Link 4
             </a>
@@ -74,8 +74,8 @@ ${style}
             <a
                 href="#"
                 class="button"
-                data-variant="text"
-                data-style="primary"
+                data-button="text"
+                data-button-style="primary"
             >
                 Link 5
             </a>
@@ -86,8 +86,8 @@ ${style}
             <a
                 href="#"
                 class="button"
-                data-variant="text"
-                data-style="primary"
+                data-button="text"
+                data-button-style="primary"
             >
                 Link 6
             </a>
@@ -117,8 +117,8 @@ ${style}
             <a
                 href="#"
                 class="button"
-                data-variant="text"
-                data-style="primary"
+                data-button="text"
+                data-button-style="primary"
             >
                 Link 1
             </a>
@@ -129,8 +129,8 @@ ${style}
             <a
                 href="#"
                 class="button"
-                data-variant="text"
-                data-style="primary"
+                data-button="text"
+                data-button-style="primary"
             >
                 Link 2
             </a>
@@ -141,8 +141,8 @@ ${style}
             <a
                 href="#"
                 class="button"
-                data-variant="text"
-                data-style="primary"
+                data-button="text"
+                data-button-style="primary"
             >
                 Link 3
             </a>
