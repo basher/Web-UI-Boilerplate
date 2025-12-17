@@ -71,10 +71,10 @@ ${style}
 
 <br>
 <p>What if you <em>really</em> want 2 columns on small screens?<br>
-Use the <code>data-variant="2-cols@small"</code> attribute to override the <code>grid-template-columns</code>.</p>
+Use the <code>data-grid="2-cols@small"</code> attribute to override the <code>grid-template-columns</code>.</p>
 <div
     class="grid"
-    data-variant="2-cols@small"
+    data-grid="2-cols@small"
     ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
 >
     <div>Col 1</div>
@@ -113,7 +113,7 @@ ${style}
 <div class="grid-container">
     <div
         class="grid"
-        data-variant="asymmetric"
+        data-grid="asymmetric"
         ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
     >
         <div>
@@ -132,7 +132,7 @@ ${style}
 <div class="grid-container">
     <div
         class="grid"
-        data-variant="asymmetric-75-25"
+        data-grid="asymmetric-75-25"
         ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
     >
         <div>
@@ -151,7 +151,7 @@ ${style}
 <div class="grid-container">
     <div
         class="grid"
-        data-variant="asymmetric-25-75"
+        data-grid="asymmetric-25-75"
         ${args.gap ? `data-grid-gap="${args.gap}"` : ''}
     >
         <div>

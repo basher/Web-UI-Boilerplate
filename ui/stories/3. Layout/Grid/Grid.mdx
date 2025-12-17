@@ -66,7 +66,7 @@ widget-grid.grid {
 - Add the appropriate `data-grid-gap` attribute in the HTML - e.g. `data-grid-gap="0"`, `data-grid-gap="large"`, etc.
 
 ### 3. Center the grid
-- Add the `data-variant="centered"` attribute in the HTML. This will only work if the grid does not use the full width of its container.
+- Add the `data-grid="centered"` attribute in the HTML. This will only work if the grid does not use the full width of its container.
 
 ## Grid layout using `<ul>` elements
 
@@ -87,10 +87,10 @@ widget-grid.grid {
 
 ## Asymmetric 2-column layouts
 ### 1. Use default column widths (66.66% and 33.33%)
-- Simply define a `.grid` parent with 2 direct children, and add `data-variant="asymmetric"` attribute.
+- Simply define a `.grid` parent with 2 direct children, and add `data-grid="asymmetric"` attribute.
 
 ### 2. Override asymmetric column widths
-- For example, use `data-variant="asymmetric-75-25"` or `data-variant="asymmetric-25-75"`.
+- For example, use `data-grid="asymmetric-75-25"` or `data-grid="asymmetric-25-75"`.
 
 <Canvas of={Grid.GridAsymmetric} />
 <Controls of={Grid.GridAsymmetric} />

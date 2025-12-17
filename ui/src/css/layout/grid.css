@@ -25,57 +25,6 @@
     > li {
         max-inline-size: revert;
     }
-
-    /* Centered grid. */
-    &[data-variant='centered'] {
-        justify-content: center;
-    }
-
-    /* Enable 2-col on small screens (even without a media query)... though eventually the column 'min-width' will enforce stacking when space is too limited, to avoid overflows. */
-    &[data-variant='2-cols\@small'] {
-        --grid-item-min-width: 6.25rem;
-    }
-
-    /* Asymmetric 2-col grid (with default column widths). */
-    &[data-variant*='asymmetric'] {
-        --grid-asymmetric-col1: 66.66%;
-        --grid-asymmetric-col2: 33.33%;
-        --grid-container-width: 25rem; /* --grid-item-min-width * 2 */
-
-        /* Container queries. */
-        @container (inline-size >= 25rem) {
-            grid-template-columns:
-                minmax(var(--grid-item-min-width), var(--grid-asymmetric-col1))
-                minmax(var(--grid-item-min-width), var(--grid-asymmetric-col2));
-        }
-
-        /* Fallback. Uses old media query notation. */
-        @supports not (container-type: inline-size) {
-            /* stylelint-disable-next-line media-feature-range-notation */
-            @media (min-width: 48.0625em) {
-                grid-template-columns:
-                    minmax(
-                        var(--grid-item-min-width),
-                        var(--grid-asymmetric-col1)
-                    )
-                    minmax(
-                        var(--grid-item-min-width),
-                        var(--grid-asymmetric-col2)
-                    );
-            }
-        }
-    }
-
-    /* Asymmetric 2-col grid (with column width overrides). */
-    &[data-variant='asymmetric-75-25'] {
-        --grid-asymmetric-col1: 75%;
-        --grid-asymmetric-col2: 25%;
-    }
-
-    &[data-variant='asymmetric-25-75'] {
-        --grid-asymmetric-col1: 25%;
-        --grid-asymmetric-col2: 75%;
-    }
 }
 
 /* Gap variants. */
@@ -97,6 +46,51 @@
 
 [data-grid-gap='xlarge'] {
     --grid-gap: var(--webui-gutter-xl);
+}
+
+/* Centered grid. */
+[data-grid='centered'] {
+    justify-content: center;
+}
+
+/* Enable 2-col on small screens (even without a media query)... though eventually the column 'min-width' will enforce stacking when space is too limited, to avoid overflows. */
+[data-grid='2-cols\@small'] {
+    --grid-item-min-width: 6.25rem;
+}
+
+/* Asymmetric 2-col grid (with default column widths). */
+[data-grid*='asymmetric'] {
+    --grid-asymmetric-col1: 66.66%;
+    --grid-asymmetric-col2: 33.33%;
+    --grid-container-width: 25rem; /* --grid-item-min-width * 2 */
+
+    /* Container queries. */
+    @container (inline-size >= 25rem) {
+        grid-template-columns:
+            minmax(var(--grid-item-min-width), var(--grid-asymmetric-col1))
+            minmax(var(--grid-item-min-width), var(--grid-asymmetric-col2));
+    }
+
+    /* Fallback. Uses old media query notation. */
+    @supports not (container-type: inline-size) {
+        /* stylelint-disable-next-line media-feature-range-notation */
+        @media (min-width: 48.0625em) {
+            grid-template-columns:
+                minmax(var(--grid-item-min-width), var(--grid-asymmetric-col1))
+                minmax(var(--grid-item-min-width), var(--grid-asymmetric-col2));
+        }
+    }
+}
+
+/* Asymmetric 2-col grid (with column width overrides). */
+[data-grid='asymmetric-75-25'] {
+    --grid-asymmetric-col1: 75%;
+    --grid-asymmetric-col2: 25%;
+}
+
+[data-grid='asymmetric-25-75'] {
+    --grid-asymmetric-col1: 25%;
+    --grid-asymmetric-col2: 75%;
 }
 
 /* Using container queries for (asymmetric) grids. */
