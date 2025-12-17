@@ -52,6 +52,7 @@
     inset-inline-start: 0;
     padding: var(--webui-gutter-m);
     position: absolute;
+    z-index: 1; /* TODO: replace dropdown with popover API. */
 }
 
 .nav__hamburger-button {
