@@ -1,5 +1,5 @@
 export const FullwidthBannerHtml = () => /*html*/ `
-<div class="banner flex">
+<div class="banner flex" data-banner="fullwidth">
     <figure class="banner__media">
         <picture>
             <source
@@ -48,7 +48,7 @@ export const FullwidthBannerHtml = () => /*html*/ `
 `;
 
 export const FullwidthBannerOverlayHtml = () => /*html*/ `
-<div class="banner flex" data-variant="overlay-mask">
+<div class="banner flex" data-banner="overlay-mask">
     <figure class="banner__media">
         <picture>
             <source

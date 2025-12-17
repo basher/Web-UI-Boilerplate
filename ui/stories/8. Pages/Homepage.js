@@ -30,7 +30,7 @@ ${style}
         <h1 class="visually-hidden">Heading level 1</h1>
 
         <div class="wrapper stack" data-wrapper="fullbleed">
-            <div class="banner" data-banner="fullwidth">
+            <div class="banner flex" data-banner="fullwidth">
                 <figure class="banner__media">
                     <picture>
                         <source

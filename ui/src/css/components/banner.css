@@ -21,40 +21,13 @@
             padding: var(--webui-gutter-m);
         }
 
-        &:not([data-variant='overlay-mask']) {
+        &:not([data-banner='overlay-mask']) {
             /* stylelint-disable-next-line max-nesting-depth */
             .banner__content {
                 /* So text is legible above image. */
                 background: var(--webui-color-primary-100);
                 color: var(--webui-color-neutral-900);
             }
-        }
-    }
-
-    &[data-variant='overlay-mask'] {
-        .banner__media {
-            position: relative;
-
-            /* TODO: Replace with container query. */
-            &::after {
-                /* stylelint-disable-next-line max-nesting-depth */
-                @media (width > 56em) {
-                    /* So text is legible above image. */
-                    background: linear-gradient(
-                        to right,
-                        var(--webui-color-primary-100),
-                        transparent
-                    );
-                    content: '';
-                    inline-size: var(--mask-width);
-                    inset: 0;
-                    position: absolute;
-                }
-            }
-        }
-
-        .banner__content {
-            isolation: isolate;
         }
     }
 }
@@ -71,4 +44,36 @@
 /* stylelint-disable-next-line no-descending-specificity */
 .banner__content {
     padding-inline: var(--webui-gutter-s);
+}
+
+/* Banner variants. */
+[data-banner='fullwidth'] {
+    /* This is the default. */
+}
+
+[data-banner='overlay-mask'] {
+    .banner__media {
+        position: relative;
+
+        /* TODO: Replace with container query. */
+        &::after {
+            /* stylelint-disable-next-line max-nesting-depth */
+            @media (width > 56em) {
+                /* So text is legible above image. */
+                background: linear-gradient(
+                    to right,
+                    var(--webui-color-primary-100),
+                    transparent
+                );
+                content: '';
+                inline-size: var(--mask-width);
+                inset: 0;
+                position: absolute;
+            }
+        }
+    }
+
+    .banner__content {
+        isolation: isolate;
+    }
 }
