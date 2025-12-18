@@ -1,6 +1,6 @@
 webui-fetch-html {
     &:not(:defined) {
-        [data-fetch-target] {
+        [data-fetch-trigger] {
             display: none;
         }
     }

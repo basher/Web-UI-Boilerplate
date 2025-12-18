@@ -6,21 +6,19 @@ import {
 
 class WebUIFetchHtml extends HTMLElement {
     private fetchTrigger: HTMLButtonElement | null;
-    private fetchUrl: string | undefined;
 
     constructor() {
         super();
 
         this.fetchTrigger = this.querySelector('[data-fetch-target]');
-        this.fetchUrl = this.fetchTrigger?.dataset.fetchUrl;
 
-        if (!this.fetchTrigger || !this.fetchUrl) return;
+        if (!this.dataset.fetchUrl || !this.fetchTrigger) return;
 
         ajaxEventHandler({
             ajaxTrigger: this.fetchTrigger,
             eventType: 'click',
             ajaxCallback: this.handleClick,
-            ajaxUrl: this.fetchUrl,
+            ajaxUrl: this.dataset.fetchUrl,
         });
     }
 
