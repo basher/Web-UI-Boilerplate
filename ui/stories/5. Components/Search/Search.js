@@ -29,9 +29,9 @@ export const SearchDatalistHtml = () => /*html*/ `
                 class="input"
                 placeholder="Search"
                 required
-                list="search-terms"
+                list="search-results"
             />
-            <datalist id="search-terms">
+            <datalist id="search-results">
                 <option value="test1">
                 <option value="test2">
                 <option value="test3">

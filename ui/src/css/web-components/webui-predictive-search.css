@@ -1,15 +1,3 @@
 webui-predictive-search {
-    &:defined {
-        [type='submit'] {
-            display: none;
-        }
-    }
-
-    [role='region'] {
-        margin-block-start: var(--webui-gutter-m);
-    }
-
-    .grid {
-        --grid-item-max-width: 10rem;
-    }
+    /* N/A */
 }

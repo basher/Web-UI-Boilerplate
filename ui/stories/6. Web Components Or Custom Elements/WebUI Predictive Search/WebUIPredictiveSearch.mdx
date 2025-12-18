@@ -5,18 +5,14 @@ import * as WebUIPredictiveSearch from './WebUIPredictiveSearch.stories';
 
 # `<webui-predictive-search>`
 - Predictive search (with dynamic results from an API).
-- Uses a standard text input field rather than an [ARIA combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/).
-- When JavaScript is enabled, form submit is disabled and submit button is hidden.
+- This is a progressive enhancement of the [`<datalist>`](/docs/components-search--docs#predictive-search-using-datalist) search component, rather than using an [ARIA combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/).
 
 <Canvas of={WebUIPredictiveSearch.WebUIPredictiveSearch} />
-
-## Accessibility considerations
-- Dynamic search results are displayed in an [ARIA live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
 
 ## Required and optional HTML  or `data-` attributes
 
 Attribute | Behaviour
 --- | ---
-`data-fetch-url` | Required. On the search input that triggers the Fetch request. API endpoint for data to be fetched.
+`data-fetch-url` | Required. On the web component. API endpoint for data to be fetched.
 `data-fetch-target` | Required. On the search input that triggers the Fetch request. The value must match `data-fetch-container`.
-`data-fetch-container` | Required. On the ARIA live region. The value must match `data-fetch-target`.
+`data-fetch-container` | Required. On the datalist. The value must match `data-fetch-target`.

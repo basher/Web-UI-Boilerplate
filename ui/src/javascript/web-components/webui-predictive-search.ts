@@ -1,4 +1,3 @@
-import main from '../config/main';
 import {
     ajaxAbortHandler,
     ajaxErrorHandler,
@@ -9,24 +8,21 @@ import searchResults from '../templates/search-results';
 class WebUIPredictiveSearch extends HTMLElement {
     private searchForm: HTMLFormElement | null;
     private searchInput: HTMLInputElement | null;
-    private fetchUrl: string | undefined;
-    private liveRegion: HTMLParagraphElement | null;
 
     constructor() {
         super();
 
         this.searchForm = this.querySelector('[role="search"]');
         this.searchInput = this.querySelector('[type="search"]');
-        this.fetchUrl = this.searchInput?.dataset.fetchUrl;
-        this.liveRegion = this.querySelector('[aria-live]');
 
-        if (!this.searchForm || !this.searchInput || !this.fetchUrl) return;
+        if (!this.dataset.fetchUrl || !this.searchForm || !this.searchInput)
+            return;
 
         ajaxEventHandler({
             ajaxTrigger: this.searchInput,
-            eventType: 'keyup',
-            ajaxCallback: this.handleKeyUp,
-            ajaxUrl: this.fetchUrl,
+            eventType: 'input',
+            ajaxCallback: this.handleInput,
+            ajaxUrl: this.dataset.fetchUrl,
         });
 
         this.searchForm.addEventListener('submit', this);
@@ -36,18 +32,18 @@ class WebUIPredictiveSearch extends HTMLElement {
      * @description Handle constructor() event listeners.
      */
     public handleEvent(e: SubmitEvent): void {
-        // Results are shown dynamically, so no need to submit.
+        // For demo purposes, prevent actual form submission. In reality, need to process form data (i.e. the selected option's value).
         e.preventDefault();
     }
 
     /**
      * @description Ajax callback function. Uses Fetch API.
      */
-    private handleKeyUp = (
+    private handleInput = (
         ajaxContainer: HTMLElement,
         ajaxUrl: string,
     ): void => {
-        const showAjaxLoader = true;
+        const showAjaxLoader = false;
         const query = this.searchInput?.value.toLowerCase();
 
         if (!query) {
@@ -80,23 +76,7 @@ class WebUIPredictiveSearch extends HTMLElement {
                         (result: { name: string | string[] }) =>
                             result.name.includes(query),
                     );
-                    const resultSummary =
-                        results.length > 1
-                            ? `There are ${results.length} results.`
-                            : 'There is 1 result.';
 
-                    if (!results.length) {
-                        if (this.liveRegion) {
-                            this.liveRegion.classList.add('ajax__error');
-                            this.liveRegion.innerHTML = main.message.noResults;
-                        }
-                        ajaxContainer.innerHTML = '';
-                        return;
-                    }
-
-                    if (this.liveRegion) {
-                        this.liveRegion.innerHTML = resultSummary;
-                    }
                     ajaxContainer.innerHTML = searchResults(results);
                 } catch (error) {
                     ajaxErrorHandler({

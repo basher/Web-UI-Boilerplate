@@ -6,19 +6,13 @@
 const template = (data: []): string => {
     const resultTemplate = data.map((result: Record<string, string>) => {
         return `
-                <li>
-                    <a href="${result.url}">
-                        ${result.name}
-                    </a>
-                </li>
-            `;
+            <option value="${result.name} = ${result.url}">
+                ${result.name}
+            </option>
+        `;
     });
 
-    return `
-        <ul class="grid">
-            ${resultTemplate.join('')}
-        </ul>
-    `;
+    return `${resultTemplate.join('')}`;
 };
 
 export default template;
