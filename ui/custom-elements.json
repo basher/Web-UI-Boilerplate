@@ -511,14 +511,6 @@
               "privacy": "private"
             },
             {
-              "kind": "field",
-              "name": "fetchUrl",
-              "type": {
-                "text": "string | undefined"
-              },
-              "privacy": "private"
-            },
-            {
               "kind": "method",
               "name": "handleClick",
               "privacy": "private",
@@ -588,12 +580,12 @@
             },
             {
               "kind": "field",
-              "name": "errorFieldClass",
+              "name": "errorFieldName",
               "type": {
                 "text": "string"
               },
               "privacy": "private",
-              "default": "'form__field--has-error'"
+              "default": "'data-field-has-error'"
             },
             {
               "kind": "field",
@@ -1016,14 +1008,6 @@
             },
             {
               "kind": "field",
-              "name": "fetchUrl",
-              "type": {
-                "text": "string | undefined"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
               "name": "liveRegion",
               "type": {
                 "text": "HTMLParagraphElement | null"
@@ -1050,7 +1034,7 @@
             },
             {
               "kind": "field",
-              "name": "handleKeyUp",
+              "name": "handleInput",
               "privacy": "private"
             }
           ],

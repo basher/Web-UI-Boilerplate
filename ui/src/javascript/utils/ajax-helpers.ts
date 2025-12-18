@@ -4,7 +4,7 @@ import main from '../config/main';
  * Function - handle Fetch aborts/timeouts, using AbortController with a timeout - see https://developer.mozilla.org/en-US/docs/Web/API/AbortController.
  *
  * @param {HTMLElement} [ajaxContainer] - DOM node into which Ajax loader is injected.
- * @param {boolean} [showAjaxLoader] - show Ajax loader.
+ * @param {boolean | HTMLElement} [showAjaxLoader] - show Ajax loader (by default, in the Ajax container, otherwise in the specified DOM node).
  * @param {number} [ajaxTimeout] - timeout for Fetch before aborting request (default = 5000).
  *
  * @return {AbortSignal}
@@ -14,7 +14,7 @@ import main from '../config/main';
  */
 interface AjaxAbort {
     ajaxContainer?: HTMLElement | null;
-    showAjaxLoader?: boolean;
+    showAjaxLoader?: boolean | HTMLElement | null;
     ajaxTimeout?: number;
 }
 
@@ -23,7 +23,9 @@ export const ajaxAbortHandler = (arg: AjaxAbort): AbortSignal => {
 
     if (showAjaxLoader && ajaxContainer) {
         const loader = document.createElement('webui-ajax-loader');
-        ajaxContainer.appendChild(loader);
+        typeof showAjaxLoader === 'boolean'
+            ? ajaxContainer.appendChild(loader)
+            : showAjaxLoader.appendChild(loader);
     }
 
     const timeout = ajaxTimeout === undefined ? 5000 : ajaxTimeout;

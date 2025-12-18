@@ -8,12 +8,14 @@ import searchResults from '../templates/search-results';
 class WebUIPredictiveSearch extends HTMLElement {
     private searchForm: HTMLFormElement | null;
     private searchInput: HTMLInputElement | null;
+    private liveRegion: HTMLParagraphElement | null;
 
     constructor() {
         super();
 
         this.searchForm = this.querySelector('[role="search"]');
         this.searchInput = this.querySelector('[type="search"]');
+        this.liveRegion = this.querySelector('[aria-live]');
 
         if (!this.dataset.fetchUrl || !this.searchForm || !this.searchInput)
             return;
@@ -43,8 +45,9 @@ class WebUIPredictiveSearch extends HTMLElement {
         ajaxContainer: HTMLElement,
         ajaxUrl: string,
     ): void => {
-        const showAjaxLoader = false;
         const query = this.searchInput?.value.toLowerCase();
+        // Show loader in live region because it won't be visible in the <datalist>.
+        const showAjaxLoader = this.liveRegion;
 
         if (!query) {
             ajaxContainer.innerHTML = '';
@@ -77,6 +80,11 @@ class WebUIPredictiveSearch extends HTMLElement {
                             result.name.includes(query),
                     );
 
+                    if (this.liveRegion) {
+                        this.liveRegion.innerHTML = `Number of matches = ${results.length}`;
+                    }
+
+                    // Inject results into <datalist>.
                     ajaxContainer.innerHTML = searchResults(results);
                 } catch (error) {
                     ajaxErrorHandler({

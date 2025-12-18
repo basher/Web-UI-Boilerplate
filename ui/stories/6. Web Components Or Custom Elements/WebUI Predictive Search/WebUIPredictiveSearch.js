@@ -27,5 +27,6 @@ export const WebUIPredictiveSearchHtml = () => /*html*/ `
             Submit
         </button>
     </form>
+    <p role="region" aria-live="polite"></p>
 </webui-predictive-search>
 `;
