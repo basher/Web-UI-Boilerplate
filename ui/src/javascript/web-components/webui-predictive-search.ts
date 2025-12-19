@@ -81,7 +81,18 @@ class WebUIPredictiveSearch extends HTMLElement {
                     );
 
                     if (this.liveRegion) {
-                        this.liveRegion.innerHTML = `Number of matches = ${results.length}`;
+                        if (this.dataset.fetchUrl) {
+                            const url = new URL(this.dataset.fetchUrl);
+                            if (
+                                this.searchInput?.value.includes(url.pathname)
+                            ) {
+                                // User has already made a selection.
+                                this.liveRegion.innerHTML = '';
+                            } else {
+                                // Otherwise announce number of matches.
+                                this.liveRegion.innerHTML = `Number of matches = ${results.length}`;
+                            }
+                        }
                     }
 
                     // Inject results into <datalist>.
