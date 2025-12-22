@@ -9,9 +9,14 @@ import * as Banners from './Banners.stories';
 - The `banner__content` container uses the [stack layout](/docs/layout-stack--docs) to manage spacing between all its children.
 
 ## Fullwidth banner with text overlay
+- Wrap the banner component in a `banner-container` to enable container queries to switch layout.
+
 <Canvas of={Banners.FullwidthBanner} />
 
 ## Fullwidth banner with image overlay mask
 - e.g. Gradient overlay to make text content more readable.
 
 <Canvas of={Banners.FullwidthBannerOverlay} />
+
+## Browser compatibility
+<baseline-status featureId="container-queries"></baseline-status>
