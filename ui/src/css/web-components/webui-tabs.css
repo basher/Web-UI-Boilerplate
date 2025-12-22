@@ -13,8 +13,7 @@ webui-tabs {
     }
 
     &[data-vertical] {
-        /* TODO: Replace with container query. */
-        @media (width > 48em) {
+        @container (inline-size >= 40rem) {
             display: grid;
             gap: var(--webui-gutter-m);
             grid-template-areas: 'tabs content';
@@ -82,4 +81,9 @@ webui-tabs {
             outline: var(--webui-focus-outline);
         }
     }
+}
+
+/* Using container queries for vertical tabs. */
+.tabs-container {
+    container-type: inline-size;
 }
