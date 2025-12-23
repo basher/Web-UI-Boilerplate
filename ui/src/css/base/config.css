@@ -38,9 +38,9 @@ Config settings.
     --webui-icon-size-l: 2rem;
 
     /* Animations. */
-    --webui-animation-fast: 150ms ease-in-out;
-    --webui-animation-medium: 250ms ease-in-out;
-    --webui-animation-slow: 500ms ease-in-out;
+    --webui-animation-fast: 150ms;
+    --webui-animation-medium: 300ms;
+    --webui-animation-slow: 500ms;
 
     /* Miscellaneous. */
     --webui-media-aspect-ratio: 16/9;

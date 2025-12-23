@@ -40,7 +40,7 @@
     }
 
     .icon {
-        transition: transform var(--webui-animation-fast);
+        transition: transform var(--webui-animation-medium);
     }
 
     [open] {

@@ -7,7 +7,7 @@ webui-ajax-loader {
 
     /* Pseudo element represents SVG in shadow DOM with matching part attribute. */
     &::part(svg) {
-        animation: 1.2s ease-in-out infinite both svg-animation;
+        animation: 1.2s infinite both svg-animation;
         fill: transparent;
         stroke: currentColor;
         stroke-dasharray: 300;
