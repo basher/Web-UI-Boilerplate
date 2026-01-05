@@ -1,0 +1,25 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as WebUIPopover from './WebUIPopover.stories';
+
+<Meta of={WebUIPopover} />
+
+# `<webui-popover>`
+- Shows/hides content using the HTML `hidden` attribute.
+- Use this Web Component when [accordion](/docs/components-accordion--docs) or [tabs](/docs/web-components-or-custom-elements-webui-tabs--docs) components cannot be used.
+- Also see the [ARIA APG disclosure pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/).
+
+<Canvas of={WebUIPopover.WebUIPopover} />
+<Controls of={WebUIPopover.WebUIPopover} />
+
+## Accessibility considerations
+- The content can be hidden via clicking the <kbd>esc</kbd> key or clicking outside the Web Component. See the table below.
+
+## Required and optional HTML  or `data-` attributes
+
+Attribute | Behaviour
+--- | ---
+`hidden` | Required. Hides button until JavaScript is initialised.
+`data-trigger` | Required. Button that shows/hides the content.
+`data-content` | Required. Content to be shown/hidden.
+`data-bind-escape-key` | Optional. Clicking the <kbd>esc</kbd> key hides the content.
+`data-bind-click-outside` | Optional. Hides the content when clicking anywhere outside the Web Component.

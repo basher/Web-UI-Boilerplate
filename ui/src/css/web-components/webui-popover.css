@@ -1,0 +1,31 @@
+webui-popover {
+    [popovertarget] {
+        anchor-name: --webui-anchor;
+    }
+
+    [popover] {
+        inset-block-start: anchor(bottom);
+        inset-inline-start: anchor(left);
+        position-anchor: --webui-anchor;
+    }
+
+    :is([popover], [data-content]) {
+        background-color: light-dark(
+            var(--webui-color-neutral-100),
+            var(--webui-color-neutral-900)
+        );
+        border: var(--webui-border-width-s) solid;
+        padding: var(--webui-gutter-m);
+    }
+
+    /* Fallback to <webui-disclosure>. */
+    /* stylelint-disable-next-line order/order */
+    @supports not (anchor-name: none) {
+        position: relative;
+    }
+
+    [data-content] {
+        position: absolute;
+        width: max-content;
+    }
+}

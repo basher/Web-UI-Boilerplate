@@ -4,6 +4,7 @@
 @import 'webui-fetch-html';
 @import 'webui-make-clickable';
 @import 'webui-notify';
+@import 'webui-popover';
 @import 'webui-predictive-search';
 @import 'webui-prose';
 @import 'webui-range-input';

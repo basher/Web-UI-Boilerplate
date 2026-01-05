@@ -1,6 +1,6 @@
 class WebUIDisclosure extends HTMLElement {
-    private trigger: HTMLButtonElement | null;
-    private content: HTMLElement | null;
+    protected trigger: HTMLButtonElement | null;
+    protected content: HTMLElement | null;
     private bindEscapeKey?: boolean;
     private bindClickOutside?: boolean;
 
@@ -59,14 +59,16 @@ class WebUIDisclosure extends HTMLElement {
         this.trigger?.setAttribute('aria-expanded', 'false');
         this.content?.setAttribute('hidden', '');
 
-        // Auto-generate unique 'id' and 'aria-controls' attributes, using button 'parentElement' className or nodeName as a sensible prefix.
+        // Auto-generate unique 'id' and 'aria-controls' attributes, using button 'parentElement' className or nodeName as a sensible prefix (only if the content to be shown does not already have an 'id').
         if (this.trigger?.parentElement) {
+            const contentId = this.content?.id || null;
             const unique = this.randomString(
                 this.trigger.parentElement.classList[0] ||
                     this.trigger.parentElement.nodeName.toLowerCase(),
             );
-            this.content?.setAttribute('id', unique);
-            this.trigger.setAttribute('aria-controls', unique);
+
+            this.content?.setAttribute('id', contentId ?? unique);
+            this.trigger.setAttribute('aria-controls', contentId ?? unique);
         }
     }
 

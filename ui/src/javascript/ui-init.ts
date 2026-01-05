@@ -7,6 +7,7 @@ import WebUIFormValidate from './web-components/webui-form-validate';
 import WebUIMakeClickable from './web-components/webui-make-clickable';
 import WebUIModal from './web-components/webui-modal';
 import WebUINotify from './web-components/webui-notify';
+import WebUIPopover from './web-components/webui-popover';
 import WebUIPredictiveSearch from './web-components/webui-predictive-search';
 import WebUIProse from './web-components/webui-prose';
 import WebUIRangeInput from './web-components/webui-range-input';
@@ -42,6 +43,9 @@ export const uiInit = (): void => {
     }
     if (!customElements.get('webui-notify')) {
         customElements.define('webui-notify', WebUINotify);
+    }
+    if (!customElements.get('webui-popover')) {
+        customElements.define('webui-popover', WebUIPopover);
     }
     if (!customElements.get('webui-predictive-search')) {
         customElements.define('webui-predictive-search', WebUIPredictiveSearch);
