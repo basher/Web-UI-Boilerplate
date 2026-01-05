@@ -1,4 +1,4 @@
-export const WebUIPopoverHtml = (args) => /*html*/ `
+export const WebUIPopoverHtml = () => /*html*/ `
 <webui-popover>
     <button
         type="button"

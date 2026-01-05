@@ -8,27 +8,9 @@ export default {
         docs: { controls: { sort: 'alpha' } }
     },
     tags: ['web components'],
-    argTypes: {
-        bindEscapeKey: {
-            control: 'boolean',
-            description: 'Close with ESC key.',
-            table: {
-                type: { summary: 'boolean' },
-                defaultValue: { summary: false }
-            },
-        },
-        bindClickOutside: {
-            control: 'boolean',
-            description: 'Close by clicking outside component.',
-            table: {
-                type: { summary: 'boolean' },
-                defaultValue: { summary: false }
-            },
-        },
-    },
 };
 
 export const WebUIPopover = {
-    render: (args) => WebUIPopoverHtml(args),
+    render: () => WebUIPopoverHtml(),
 };
 WebUIPopover.storyName = '<webui-popover>';
