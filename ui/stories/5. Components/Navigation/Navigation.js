@@ -58,22 +58,24 @@ export const HamburgerNavigationHtml = () => /*html*/ `
             <span class="visually-hidden">Toggle menu</span>
         </button>
 
-        <div id="menu" popover>
-            <ul class="nav__list flex">
-                <li>
-                    <a href="#">Nav link</a>
-                </li>
-                <li>
-                    <a href="#" aria-current="page">Nav link = current page</a>
-                </li>
-                <li>
-                    <a href="#">Nav link</a>
-                </li>
-                <li>
-                    <a href="#">Nav link</a>
-                </li>
-            </ul>
-        </div>
+        <ul
+            class="nav__list flex"
+            id="menu"
+            popover
+        >
+            <li>
+                <a href="#">Nav link</a>
+            </li>
+            <li>
+                <a href="#" aria-current="page">Nav link = current page</a>
+            </li>
+            <li>
+                <a href="#">Nav link</a>
+            </li>
+            <li>
+                <a href="#">Nav link</a>
+            </li>
+        </ul>
     </webui-popover>
 </nav>
 
@@ -92,7 +94,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
         <li data-nav-item-dropdown>
             <a href="#">Nav link with dropdown</a>
 
-            <webui-disclosure
+            <webui-popover
                 data-bind-escape-key
                 data-bind-click-outside
             >
@@ -100,8 +102,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
                     type="button"
                     class="button"
                     data-button="icon"
-                    data-trigger
-                    hidden
+                    popovertarget="dropdown1"
                 >
                     <svg
                         aria-hidden="true"
@@ -116,7 +117,8 @@ export const DropdownNavigationHtml = () => /*html*/ `
                 <ul
                     class="nav__list flex"
                     data-nav-list-dropdown
-                    data-content
+                    id="dropdown1"
+                    popover
                 >
                     <li>
                         <a href="#">Nested nav link</a>
@@ -131,7 +133,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
                         <a href="#">Nested nav link</a>
                     </li>
                 </ul>
-            </webui-disclosure>
+            </webui-popover>
         </li>
 
         <li>
@@ -144,7 +146,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
         <li data-nav-item-dropdown>
             <a href="#">Nav link with dropdown</a>
 
-            <webui-disclosure
+            <webui-popover
                 data-bind-escape-key
                 data-bind-click-outside
             >
@@ -152,8 +154,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
                     type="button"
                     class="button"
                     data-button="icon"
-                    data-trigger
-                    hidden
+                    popovertarget="dropdown2"
                 >
                     <svg
                         aria-hidden="true"
@@ -168,7 +169,8 @@ export const DropdownNavigationHtml = () => /*html*/ `
                 <ul
                     class="nav__list flex"
                     data-nav-list-dropdown
-                    data-content
+                    id="dropdown2"
+                    popover
                 >
                     <li>
                         <a href="#">Nested nav link</a>
@@ -183,7 +185,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
                         <a href="#">Nested nav link</a>
                     </li>
                 </ul>
-            </webui-disclosure>
+            </webui-popover>
         </li>
 
         <li>

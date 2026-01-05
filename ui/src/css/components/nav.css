@@ -29,7 +29,21 @@
     gap: var(--webui-gutter-xs);
     position: relative;
 
-    [aria-expanded='true'] {
+    webui-popover {
+        position: static;
+
+        [popover] {
+            inset-inline-start: revert;
+        }
+    }
+
+    :where(:has([popover]:not(:popover-open))) {
+        .nav__list {
+            display: none;
+        }
+    }
+
+    :where(:has([popover]:popover-open), [aria-expanded='true']) {
         .icon {
             transform: rotate(180deg);
         }
@@ -42,17 +56,11 @@
 
 /* Dropdown list. */
 [data-nav-list-dropdown] {
-    background-color: light-dark(
-        var(--webui-color-neutral-100),
-        var(--webui-color-neutral-900)
-    );
-    border: var(--webui-border-width-s) solid;
     flex-direction: column;
     inset-block-start: 100%;
     inset-inline-start: 0;
-    padding: var(--webui-gutter-m);
     position: absolute;
-    z-index: 1; /* TODO: replace dropdown with popover API. */
+    z-index: 1; /* Needed when popover API falls back to using <webui-disclosure>. */
 }
 
 /* Navigation with dropdown lists. */
@@ -73,7 +81,6 @@
         flex-direction: column;
     }
 
-    /* Hamburger button icons toggle. */
     /* 1. Native popover API. */
     &:has([popover]:popover-open) {
         .nav__hamburger-button {
@@ -84,6 +91,10 @@
     }
 
     &:has([popover]:not(:popover-open)) {
+        .nav__list {
+            display: none;
+        }
+
         .nav__hamburger-button {
             .icon:last-of-type {
                 display: none;
