@@ -5,13 +5,13 @@ import * as WebUIPopover from './WebUIPopover.stories';
 
 # `<webui-popover>`
 - Uses the native browser [popover API](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API), along with [CSS anchor positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning).
-- Fallback behaviour uses the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) web component.
+- Fallback behaviour inherits functionality from the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) Web Component.
 
 <Canvas of={WebUIPopover.WebUIPopover} />
 <Controls of={WebUIPopover.WebUIPopover} />
 
 ## Accessibility considerations
-- The native browser `popover` content can be hidden via clicking the <kbd>esc</kbd> key or clicking outside the Web Component.
+- The `popover` content can be hidden via clicking the <kbd>esc</kbd> key or clicking outside the Web Component. This behaviour is standard when using the native browser API, and can be enabled via the `data-bind-escape-key` and `data-bind-click-outside` attributes in the fallback behaviour.
 
 ## Required and optional HTML  or `data-` attributes
 
@@ -20,6 +20,8 @@ Attribute | Behaviour
 `popovertarget` | Required. Button that shows/hides the popover. Value should match the `id` of the popover content.
 `popover` | Required. Popover content.
 `id` | Required. Popover content. Value should match the `popovertarget` attribute of the button.
+`data-bind-escape-key` | Optional. Clicking the <kbd>esc</kbd> key hides the content.
+`data-bind-click-outside` | Optional. Hides the content when clicking anywhere outside the Web Component.
 
 ## Browser compatibility
 <baseline-status featureId="popover"></baseline-status>

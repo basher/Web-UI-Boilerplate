@@ -1,5 +1,8 @@
 export const WebUIPopoverHtml = () => /*html*/ `
-<webui-popover>
+<webui-popover
+    data-bind-escape-key
+    data-bind-click-outside
+>
     <button
         type="button"
         class="button"

@@ -55,20 +55,6 @@
     z-index: 1; /* TODO: replace dropdown with popover API. */
 }
 
-.nav__hamburger-button {
-    &[aria-expanded='false'] {
-        .icon:last-of-type {
-            display: none;
-        }
-    }
-
-    &[aria-expanded='true'] {
-        .icon:first-of-type {
-            display: none;
-        }
-    }
-}
-
 /* Navigation with dropdown lists. */
 [data-nav*='dropdown'] {
     > .nav__list {
@@ -83,23 +69,42 @@
 
 /* Hamburger navigation. */
 [data-nav*='hamburger'] {
-    position: relative;
-
     .nav__list {
         flex-direction: column;
     }
 
-    /* Uses <webui-disclosure> custom element to show/hide nav. */
-    webui-disclosure:defined {
-        .nav__list {
-            background-color: light-dark(
-                var(--webui-color-neutral-100),
-                var(--webui-color-neutral-900)
-            );
-            border: var(--webui-border-width-s) solid;
-            inset-block-start: 100%;
-            padding: var(--webui-gutter-m);
-            position: absolute;
+    /* Hamburger button icons toggle. */
+    /* 1. Native popover API. */
+    &:has([popover]:popover-open) {
+        .nav__hamburger-button {
+            .icon:first-of-type {
+                display: none;
+            }
+        }
+    }
+
+    &:has([popover]:not(:popover-open)) {
+        .nav__hamburger-button {
+            .icon:last-of-type {
+                display: none;
+            }
+        }
+    }
+
+    /* 2. Fallback using <webui-disclosure> functionality. */
+    .nav__hamburger-button {
+        &[aria-expanded='false'] {
+            /* stylelint-disable-next-line no-descending-specificity */
+            .icon:last-of-type {
+                display: none;
+            }
+        }
+
+        &[aria-expanded='true'] {
+            /* stylelint-disable-next-line no-descending-specificity */
+            .icon:first-of-type {
+                display: none;
+            }
         }
     }
 }

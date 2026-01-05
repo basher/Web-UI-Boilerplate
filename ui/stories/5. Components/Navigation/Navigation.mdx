@@ -22,15 +22,15 @@ import * as Navigation from './Navigation.stories';
 
 ## Hamburger with simple navigation
 - This navigation pattern has a parent `<nav data-nav="hamburger">` landmark.
-- Uses the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) Web Component to show/hide the navigation.
+- Uses the [`<webui-popover>`](/docs/web-components-or-custom-elements-webui-popover--docs) Web Component to show/hide the navigation.
 - Clicking the <kbd>esc</kbd> key or clicking outside the navigation both close the hamburger navigation.
-- The disclosure button is placed **inside** the navigation region, allowing assistive technology users who move to the `<nav>` using a shortcut to access the button directly.
+- The popover button is placed **inside** the navigation region, allowing assistive technology users who move to the `<nav>` using a shortcut to access the button directly.
 
 <Canvas of={Navigation.HamburgerNavigation} />
 
 ## Navigation with top-level links and dropdown lists
 - This navigation pattern has a parent `<nav data-nav="dropdown">` landmark.
-- Uses the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) Web Component to show/hide the dropdowns via a `<button>` click, not CSS `:hover`.
+- Uses the [`<webui-popover>`](/docs/web-components-or-custom-elements-webui-popover--docs) Web Component to show/hide the dropdowns via a `<button>` click, not CSS `:hover`.
 - Clicking the <kbd>esc</kbd> key and clicking outside the dropdown both close the dropdown.
 - See the [ARIA APG navigation pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation-hybrid/) and [Adrian Roselli's article](https://adrianroselli.com/2019/06/link-disclosure-widget-navigation.html) for more details.
 - Also see this article that explains why [native HTML details/summary should not be used for navigation disclosure](https://melsumner.github.io/details-as-a-menu).

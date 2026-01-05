@@ -31,7 +31,7 @@ export const HamburgerNavigationHtml = () => /*html*/ `
     id="navigation"
     aria-label="Primary"
 >
-    <webui-disclosure
+    <webui-popover
         data-bind-escape-key
         data-bind-click-outside
     >
@@ -39,8 +39,7 @@ export const HamburgerNavigationHtml = () => /*html*/ `
             type="button"
             class="button nav__hamburger-button"
             data-button="icon"
-            data-trigger
-            hidden
+            popovertarget="menu"
         >
             <svg
                 aria-hidden="true"
@@ -59,24 +58,23 @@ export const HamburgerNavigationHtml = () => /*html*/ `
             <span class="visually-hidden">Toggle menu</span>
         </button>
 
-        <ul
-            class="nav__list flex"
-            data-content
-        >
-            <li>
-                <a href="#">Nav link</a>
-            </li>
-            <li>
-                <a href="#" aria-current="page">Nav link = current page</a>
-            </li>
-            <li>
-                <a href="#">Nav link</a>
-            </li>
-            <li>
-                <a href="#">Nav link</a>
-            </li>
-        </ul>
-    </webui-disclosure>
+        <div id="menu" popover>
+            <ul class="nav__list flex">
+                <li>
+                    <a href="#">Nav link</a>
+                </li>
+                <li>
+                    <a href="#" aria-current="page">Nav link = current page</a>
+                </li>
+                <li>
+                    <a href="#">Nav link</a>
+                </li>
+                <li>
+                    <a href="#">Nav link</a>
+                </li>
+            </ul>
+        </div>
+    </webui-popover>
 </nav>
 
 <br/>
