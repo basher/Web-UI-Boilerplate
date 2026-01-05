@@ -1,9 +1,9 @@
 webui-popover {
-    [popovertarget] {
+    :where([popovertarget]) {
         anchor-name: --webui-anchor;
     }
 
-    [popover] {
+    :where([popover]) {
         inset-block-start: anchor(bottom);
         inset-inline-start: anchor(left);
         position-anchor: --webui-anchor;

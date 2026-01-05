@@ -75,6 +75,25 @@
     }
 }
 
+/* Popovers: define multiple anchors for dropdown lists. */
+webui-popover {
+    [popovertarget='dropdown1'] {
+        anchor-name: --dropdown1;
+    }
+
+    [popovertarget='dropdown2'] {
+        anchor-name: --dropdown2;
+    }
+
+    [id='dropdown1'] {
+        inset-block-start: anchor(--dropdown1 bottom);
+    }
+
+    [id='dropdown2'] {
+        inset-block-start: anchor(--dropdown2 bottom);
+    }
+}
+
 /* Hamburger navigation. */
 [data-nav*='hamburger'] {
     .nav__list {
