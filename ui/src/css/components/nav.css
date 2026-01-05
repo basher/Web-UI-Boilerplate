@@ -87,10 +87,12 @@ webui-popover {
 
     [id='dropdown1'] {
         inset-block-start: anchor(--dropdown1 bottom);
+        inset-inline-start: anchor(--dropdown1 left);
     }
 
     [id='dropdown2'] {
         inset-block-start: anchor(--dropdown2 bottom);
+        inset-inline-start: anchor(--dropdown2 left);
     }
 }
 
