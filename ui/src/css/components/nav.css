@@ -29,21 +29,7 @@
     gap: var(--webui-gutter-xs);
     position: relative;
 
-    webui-popover {
-        position: static;
-
-        [popover] {
-            inset-inline-start: revert;
-        }
-    }
-
-    :where(:has([popover]:not(:popover-open))) {
-        .nav__list {
-            display: none;
-        }
-    }
-
-    :where(:has([popover]:popover-open), [aria-expanded='true']) {
+    [aria-expanded='true'] {
         .icon {
             transform: rotate(180deg);
         }
@@ -56,11 +42,17 @@
 
 /* Dropdown list. */
 [data-nav-list-dropdown] {
+    background-color: light-dark(
+        var(--webui-color-neutral-100),
+        var(--webui-color-neutral-900)
+    );
+    border: var(--webui-border-width-s) solid;
     flex-direction: column;
     inset-block-start: 100%;
     inset-inline-start: 0;
+    padding: var(--webui-gutter-m);
     position: absolute;
-    z-index: 1; /* Needed when popover API falls back to using <webui-disclosure>. */
+    z-index: 1; /* Needed when using <webui-disclosure>. */
 }
 
 /* Navigation with dropdown lists. */
@@ -72,27 +64,6 @@
     /* stylelint-disable-next-line no-descending-specificity */
     .icon {
         transition: transform var(--webui-animation-fast);
-    }
-}
-
-/* Popovers: define multiple anchors for dropdown lists. */
-webui-popover {
-    [popovertarget='dropdown1'] {
-        anchor-name: --dropdown1;
-    }
-
-    [popovertarget='dropdown2'] {
-        anchor-name: --dropdown2;
-    }
-
-    [id='dropdown1'] {
-        inset-block-start: anchor(--dropdown1 bottom);
-        inset-inline-start: anchor(--dropdown1 left);
-    }
-
-    [id='dropdown2'] {
-        inset-block-start: anchor(--dropdown2 bottom);
-        inset-inline-start: anchor(--dropdown2 left);
     }
 }
 

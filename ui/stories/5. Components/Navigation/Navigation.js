@@ -39,7 +39,8 @@ export const HamburgerNavigationHtml = () => /*html*/ `
             type="button"
             class="button nav__hamburger-button"
             data-button="icon"
-            popovertarget="menu"
+            aria-haspopup="menu"
+            popovertarget="hamburger"
         >
             <svg
                 aria-hidden="true"
@@ -55,12 +56,12 @@ export const HamburgerNavigationHtml = () => /*html*/ `
             >
                 <use href="sprite.svg#close" />
             </svg>
-            <span class="visually-hidden">Toggle menu</span>
+            <span class="visually-hidden">Menu</span>
         </button>
 
         <ul
             class="nav__list flex"
-            id="menu"
+            id="hamburger"
             popover
         >
             <li>
@@ -94,7 +95,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
         <li data-nav-item-dropdown>
             <a href="#">Nav link with dropdown</a>
 
-            <webui-popover
+            <webui-disclosure
                 data-bind-escape-key
                 data-bind-click-outside
             >
@@ -102,7 +103,8 @@ export const DropdownNavigationHtml = () => /*html*/ `
                     type="button"
                     class="button"
                     data-button="icon"
-                    popovertarget="dropdown1"
+                    data-trigger
+                    hidden
                 >
                     <svg
                         aria-hidden="true"
@@ -117,8 +119,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
                 <ul
                     class="nav__list flex"
                     data-nav-list-dropdown
-                    id="dropdown1"
-                    popover
+                    data-content
                 >
                     <li>
                         <a href="#">Nested nav link</a>
@@ -133,7 +134,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
                         <a href="#">Nested nav link</a>
                     </li>
                 </ul>
-            </webui-popover>
+            </webui-disclosure>
         </li>
 
         <li>
@@ -146,7 +147,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
         <li data-nav-item-dropdown>
             <a href="#">Nav link with dropdown</a>
 
-            <webui-popover
+            <webui-disclosure
                 data-bind-escape-key
                 data-bind-click-outside
             >
@@ -154,7 +155,8 @@ export const DropdownNavigationHtml = () => /*html*/ `
                     type="button"
                     class="button"
                     data-button="icon"
-                    popovertarget="dropdown2"
+                    data-trigger
+                    hidden
                 >
                     <svg
                         aria-hidden="true"
@@ -169,8 +171,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
                 <ul
                     class="nav__list flex"
                     data-nav-list-dropdown
-                    id="dropdown2"
-                    popover
+                    data-content
                 >
                     <li>
                         <a href="#">Nested nav link</a>
@@ -185,7 +186,7 @@ export const DropdownNavigationHtml = () => /*html*/ `
                         <a href="#">Nested nav link</a>
                     </li>
                 </ul>
-            </webui-popover>
+            </webui-disclosure>
         </li>
 
         <li>
@@ -205,7 +206,7 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
     id="navigation"
     aria-label="Primary"
 >
-    <webui-disclosure
+    <webui-popover
         data-bind-escape-key
         data-bind-click-outside
     >
@@ -213,8 +214,8 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
             type="button"
             class="button nav__hamburger-button"
             data-button="icon"
-            data-trigger
-            hidden
+            aria-haspopup="menu"
+            popovertarget="hamburger"
         >
             <svg
                 aria-hidden="true"
@@ -230,12 +231,13 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
             >
                 <use href="sprite.svg#close" />
             </svg>
-            <span class="visually-hidden">Toggle menu</span>
+            <span class="visually-hidden">Menu</span>
         </button>
 
         <ul
             class="nav__list flex"
-            data-content
+            id="hamburger"
+            popover
         >
             <li data-nav-item-dropdown>
                 <a href="#">Nav link with dropdown</a>
@@ -338,7 +340,7 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
                 <a href="#">Nav link</a>
             </li>
         </ul>
-    </webui-disclosure>
+    </webui-popover>
 </nav>
 
 <br/>
