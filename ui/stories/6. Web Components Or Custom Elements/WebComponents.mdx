@@ -22,5 +22,6 @@ import { Meta } from '@storybook/addon-docs/blocks';
 - Simple example from Chris Ferdinandi showing how to [create a Web Component from scratch](https://gomakethings.com/lets-create-a-web-component-from-scratch/). He also has lots more articles on this topic in his blog.
 - Some notes on the recommended use of [connectedCallback() lifecycle method and event listeners](https://hawkticehurst.com/writing/you-are-probably-using-connectedcallback-wrong/).
 
-## TODO
-- Consider a [minor refactor](https://gomakethings.com/my-html-web-component-boilerplate-for-2026/), as per Chris Ferdinandi's article.
+> NOTES:
+> 1. The `<webui-popover>` JavaScript class extends the `<webui-disclosure>` class, so the latter's click event listener has been moved to `connectedCallback()` so that the listener does not have to be declared in both classes.
+> 2. See Chris Ferdinandi's explanation about [why this might be necessary](https://gomakethings.com/my-html-web-component-boilerplate-for-2026/#instantiate-in-the-connectedcallback-method).
