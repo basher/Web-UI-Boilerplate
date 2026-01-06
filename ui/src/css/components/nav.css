@@ -114,7 +114,7 @@
 
 /* Hamburger with nested dropdown lists. */
 [data-nav='hamburger-dropdown'] {
-    webui-disclosure:defined {
+    webui-popover:defined {
         [data-nav-item-dropdown] {
             display: revert;
         }

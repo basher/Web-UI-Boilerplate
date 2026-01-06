@@ -13,14 +13,14 @@ class WebUIDisclosure extends HTMLElement {
         this.bindClickOutside = this.hasAttribute('data-bind-click-outside');
 
         if (!this.trigger || !this.content) return;
-
-        this.trigger.addEventListener('click', this);
     }
 
     /**
-     * @description Handle (global) event listeners which are not part of this web component. Setup accessibility attributes.
+     * @description Setup event listeners and accessibility attributes.
      */
     public connectedCallback(): void {
+        this.trigger?.addEventListener('click', this);
+
         document.addEventListener('keyup', (e: KeyboardEvent) =>
             this.handleGlobalKeyup(e),
         );
@@ -32,7 +32,7 @@ class WebUIDisclosure extends HTMLElement {
     }
 
     /**
-     * @description Remove (global) event listeners.
+     * @description Remove global event listeners.
      */
     public disconnectedCallback(): void {
         document.removeEventListener('keyup', this.handleGlobalKeyup);
@@ -40,7 +40,7 @@ class WebUIDisclosure extends HTMLElement {
     }
 
     /**
-     * @description Handle constructor() event listeners.
+     * @description Handle web component event listeners.
      */
     public handleEvent(e: MouseEvent): void {
         const target = e.currentTarget as HTMLElement;
