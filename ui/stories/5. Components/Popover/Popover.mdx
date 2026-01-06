@@ -5,6 +5,7 @@ import * as Popover from './Popover.stories';
 
 # Popover
 - Uses the native browser [popover API](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API), along with [CSS anchor positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning).
+- Polyfills are available for these native APIs. However, you can use the [`<webui-popover>`](/docs/web-components-or-custom-elements-webui-popover--docs) Web Component instead, whose fallback behaviour inherits functionality from `<webui-disclosure>` to create a similar experience.
 
 <Canvas of={Popover.Popover} />
 <Controls of={Popover.Popover} />
@@ -15,5 +16,4 @@ import * as Popover from './Popover.stories';
 
 ## Browser compatibility
 <baseline-status featureId="popover"></baseline-status>
-<baseline-status featureId="anchor-name"></baseline-status>
-<baseline-status featureId="position-anchor"></baseline-status>
+<baseline-status featureId="anchor-positioning"></baseline-status>

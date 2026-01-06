@@ -4,8 +4,7 @@ import * as WebUIPopover from './WebUIPopover.stories';
 <Meta of={WebUIPopover} />
 
 # `<webui-popover>`
-- Uses the native browser [popover API](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API), along with [CSS anchor positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning).
-- Fallback behaviour inherits functionality from the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) Web Component.
+- This is a progressive enhancement of the native [popover](/docs/components-popover--docs) component, providing fallback behaviour inherited  from the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) Web Component.
 
 <Canvas of={WebUIPopover.WebUIPopover} />
 <Controls of={WebUIPopover.WebUIPopover} />
@@ -22,8 +21,3 @@ Attribute | Behaviour
 `id` | Required. Popover content. Value should match the `popovertarget` attribute of the button.
 `data-bind-escape-key` | Optional. Clicking the <kbd>esc</kbd> key hides the content.
 `data-bind-click-outside` | Optional. Hides the content when clicking anywhere outside the Web Component.
-
-## Browser compatibility
-<baseline-status featureId="popover"></baseline-status>
-<baseline-status featureId="anchor-name"></baseline-status>
-<baseline-status featureId="position-anchor"></baseline-status>
