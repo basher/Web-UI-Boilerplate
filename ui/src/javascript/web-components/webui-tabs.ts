@@ -35,7 +35,7 @@ class WebUITabs extends HTMLElement {
     }
 
     /**
-     * @description Handle constructor() click event listener.
+     * @description Handle web component click event listener.
      */
     private bindClickEvent(e: MouseEvent): void {
         e.preventDefault();
@@ -63,7 +63,7 @@ class WebUITabs extends HTMLElement {
     }
 
     /**
-     * @description Handle constructor() keyboard event listener. Prevent viewport scrolling when tab focus changes.
+     * @description Handle web component keyboard event listener. Prevent viewport scrolling when tab focus changes.
      */
     private bindKeyboardEvent(e: KeyboardEvent, index: number): void {
         switch (e.code) {
@@ -122,12 +122,12 @@ class WebUITabs extends HTMLElement {
             tabTrigger.setAttribute('aria-selected', 'false');
             tabTrigger.setAttribute('tabIndex', '-1');
 
-            // "triggerId" should match the ID on tabpanel.
+            // 'triggerId' should match the ID on tabpanel.
             if (triggerId) {
                 tabTrigger.setAttribute('aria-controls', triggerId);
             }
 
-            // Make 1st tab "active" by default.
+            // Make 1st tab active by default.
             if (index === 0) {
                 tabTrigger.setAttribute('aria-selected', 'true');
                 tabTrigger.setAttribute('tabIndex', '0');

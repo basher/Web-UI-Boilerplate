@@ -21,7 +21,7 @@ class WebUIFormValidate extends HTMLElement {
     }
 
     /**
-     * @description Handle constructor() event listeners.
+     * @description Handle web component event listeners.
      */
     public handleEvent(e: MouseEvent): void {
         if (e.type === 'submit') {

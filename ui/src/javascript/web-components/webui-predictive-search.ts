@@ -31,7 +31,7 @@ class WebUIPredictiveSearch extends HTMLElement {
     }
 
     /**
-     * @description Handle constructor() event listeners.
+     * @description Handle web component event listeners.
      */
     public handleEvent(e: SubmitEvent): void {
         // For demo purposes, prevent actual form submission. In reality, need to process form data (i.e. the selected option's value).

@@ -12,17 +12,15 @@ class WebUIPopover extends WebUIDisclosure {
         )
             return;
 
-        // Otherwise, remove 'popover' attributes, and fallback to <webui-disclosure> behaviour.
+        // Otherwise, fallback to <webui-disclosure> behaviour: add required 'data-' attributes, remove 'popover' attributes.
         this.trigger = this.querySelector('[popovertarget]');
         this.content = this.querySelector('[popover]');
 
+        this.trigger?.setAttribute('data-trigger', '');
         this.trigger?.removeAttribute('popovertarget');
+        this.content?.setAttribute('data-content', '');
         this.content?.removeAttribute('popover');
         this.content?.removeAttribute('id');
-
-        // Add required 'data-' attributes for <webui-disclosure> functionality.
-        this.trigger?.setAttribute('data-trigger', '');
-        this.content?.setAttribute('data-content', '');
     }
 }
 

@@ -19,6 +19,7 @@ class WebUIDisclosure extends HTMLElement {
      * @description Setup event listeners and accessibility attributes.
      */
     public connectedCallback(): void {
+        // Moved this event listener from constructor() so that webui-popover works without having to re-add the listener in that class.
         this.trigger?.addEventListener('click', this);
 
         document.addEventListener('keyup', (e: KeyboardEvent) =>

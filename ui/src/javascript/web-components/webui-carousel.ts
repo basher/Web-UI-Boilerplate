@@ -25,17 +25,18 @@ class WebUICarousel extends HTMLElement {
 
         if (!this.carousel || this.slides.length === 0) return;
 
-        this.carousel.addEventListener('keydown', this);
-        this.carousel.addEventListener('scrollend', this);
+        this.carousel?.addEventListener('keydown', this);
+        this.carousel?.addEventListener('scrollend', this);
     }
 
     /**
-     * @description Initialise carousel. Setup buttons, slide counters and focus management.
+     * @description Initialise carousel. Setup event listeners, buttons, slide counters and focus management.
      */
     public connectedCallback(): void {
         this.setVisibleSlide();
-
         this.updateSlideCounter();
+        this.showPrevNextButtons();
+        this.handleFocus();
 
         if (this.hasSlideCount) {
             this.showSlideCount();
@@ -44,14 +45,10 @@ class WebUICarousel extends HTMLElement {
         if (this.hasSlideCountPips) {
             this.showSlideCountPips();
         }
-
-        this.showPrevNextButtons();
-
-        this.handleFocus();
     }
 
     /**
-     * @description Handle constructor() event listeners.
+     * @description Handle web component event listeners.
      */
     public handleEvent(e: KeyboardEvent | UIEvent): void {
         const evtKey = e as KeyboardEvent;

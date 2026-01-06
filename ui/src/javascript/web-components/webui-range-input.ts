@@ -15,7 +15,7 @@ class WebUIRangeInput extends HTMLElement {
     }
 
     /**
-     * @description Handle constructor() event listeners.
+     * @description Handle web component event listeners.
      */
     public handleEvent(): void {
         this.rangeInput &&

@@ -8,7 +8,7 @@ class WebUIMakeClickable extends HTMLElement {
     }
 
     /**
-     * @description Handle constructor() event listeners.
+     * @description Handle web component event listeners.
      */
     public handleEvent(e: MouseEvent): void {
         // Enable text to be selectable.

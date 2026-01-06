@@ -26,7 +26,7 @@ class WebUIVideoPlayer extends HTMLElement {
     }
 
     /**
-     * @description Handle constructor() event listeners.
+     * @description Handle web component event listeners.
      */
     public handleEvent(): void {
         this.handlePlay();

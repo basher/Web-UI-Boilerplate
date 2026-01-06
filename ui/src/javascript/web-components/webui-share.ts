@@ -30,7 +30,7 @@ class WebUIShare extends HTMLElement {
     }
 
     /**
-     * @description Handle constructor() event listeners.
+     * @description Handle web component event listeners.
      */
     public handleEvent(e: MouseEvent): void {
         const target = e.currentTarget as HTMLButtonElement;

@@ -11,7 +11,7 @@ class WebUINotify extends HTMLElement {
     }
 
     /**
-     * @description Handle constructor() event listeners.
+     * @description Handle web component event listeners.
      */
     public handleEvent(): void {
         this.setAttribute('hidden', '');

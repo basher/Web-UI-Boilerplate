@@ -22,7 +22,7 @@ class WebUIModal extends HTMLElement {
     }
 
     /**
-     * @description Handle (global) event listeners which are not part of this web component. Setup accessibility attributes.
+     * @description Setup global event listeners which are not part of this web component. Setup accessibility attributes.
      */
     public connectedCallback(): void {
         document.addEventListener('click', (e: MouseEvent) =>
@@ -33,14 +33,14 @@ class WebUIModal extends HTMLElement {
     }
 
     /**
-     * @description Remove (global) event listeners.
+     * @description Remove global event listeners.
      */
     public disconnectedCallback(): void {
         document.removeEventListener('click', this.handleGlobalClick);
     }
 
     /**
-     * @description Handle constructor() event listeners.
+     * @description Handle web component event listeners.
      */
     public handleEvent(e: KeyboardEvent): void {
         const target = e.currentTarget as HTMLButtonElement;
