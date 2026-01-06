@@ -1,0 +1,19 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Popover from './Popover.stories';
+
+<Meta of={Popover} />
+
+# Popover
+- Uses the native browser [popover API](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API), along with [CSS anchor positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning).
+
+<Canvas of={Popover.Popover} />
+<Controls of={Popover.Popover} />
+
+## Accessibility considerations
+- The `popover` content can be hidden via clicking the <kbd>esc</kbd> key or clicking outside the popover. This behaviour is standard when using the native browser API.
+- If the popover contains interactive content, add `aria-haspopup` to the button, with an appropriate value. See [MDN article](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) for more details.
+
+## Browser compatibility
+<baseline-status featureId="popover"></baseline-status>
+<baseline-status featureId="anchor-name"></baseline-status>
+<baseline-status featureId="position-anchor"></baseline-status>

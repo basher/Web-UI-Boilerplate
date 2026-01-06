@@ -1,0 +1,19 @@
+[popovertarget] {
+    anchor-name: --webui-anchor;
+}
+
+[popover] {
+    @supports not (anchor-name: none) {
+        inset: auto;
+    }
+
+    background-color: light-dark(
+        var(--webui-color-neutral-100),
+        var(--webui-color-neutral-900)
+    );
+    border: var(--webui-border-width-s) solid;
+    inset-block-start: anchor(bottom);
+    inset-inline-start: anchor(left);
+    padding: var(--webui-gutter-m);
+    position-anchor: --webui-anchor;
+}
