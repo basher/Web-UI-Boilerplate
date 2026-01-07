@@ -339,7 +339,7 @@
               "type": {
                 "text": "HTMLButtonElement | null"
               },
-              "privacy": "private"
+              "privacy": "protected"
             },
             {
               "kind": "field",
@@ -347,7 +347,7 @@
               "type": {
                 "text": "HTMLElement | null"
               },
-              "privacy": "private"
+              "privacy": "protected"
             },
             {
               "kind": "field",
@@ -386,7 +386,7 @@
             {
               "kind": "method",
               "name": "setupA11y",
-              "privacy": "private",
+              "privacy": "protected",
               "return": {
                 "type": {
                   "text": "void"
@@ -433,7 +433,7 @@
             {
               "kind": "method",
               "name": "handleGlobalKeyup",
-              "privacy": "private",
+              "privacy": "protected",
               "return": {
                 "type": {
                   "text": "void"
@@ -451,7 +451,7 @@
             {
               "kind": "method",
               "name": "handleGlobalClick",
-              "privacy": "private",
+              "privacy": "protected",
               "return": {
                 "type": {
                   "text": "void"
@@ -977,6 +977,225 @@
           "declaration": {
             "name": "WebUINotify",
             "module": "src/javascript/web-components/webui-notify.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/javascript/web-components/webui-popover.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "WebUIPopover",
+          "members": [
+            {
+              "kind": "field",
+              "name": "browserSupportsPopover",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "trigger",
+              "type": {
+                "text": "HTMLButtonElement | null"
+              },
+              "privacy": "protected",
+              "inheritedFrom": {
+                "name": "WebUIDisclosure",
+                "module": "src/javascript/web-components/webui-disclosure.ts"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "content",
+              "type": {
+                "text": "HTMLElement | null"
+              },
+              "privacy": "protected",
+              "inheritedFrom": {
+                "name": "WebUIDisclosure",
+                "module": "src/javascript/web-components/webui-disclosure.ts"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "bindEscapeKey",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "WebUIDisclosure",
+                "module": "src/javascript/web-components/webui-disclosure.ts"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "bindClickOutside",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "WebUIDisclosure",
+                "module": "src/javascript/web-components/webui-disclosure.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleEvent",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "WebUIDisclosure",
+                "module": "src/javascript/web-components/webui-disclosure.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "setupA11y",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "WebUIDisclosure",
+                "module": "src/javascript/web-components/webui-disclosure.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "randomString",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "string",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "WebUIDisclosure",
+                "module": "src/javascript/web-components/webui-disclosure.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "hideContent",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "e",
+                  "optional": true,
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "WebUIDisclosure",
+                "module": "src/javascript/web-components/webui-disclosure.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleGlobalKeyup",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "WebUIDisclosure",
+                "module": "src/javascript/web-components/webui-disclosure.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleGlobalClick",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "WebUIDisclosure",
+                "module": "src/javascript/web-components/webui-disclosure.ts"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "WebUIDisclosure",
+            "module": "/src/javascript/web-components/webui-disclosure"
+          },
+          "tagName": "webui-popover",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "webui-popover",
+          "declaration": {
+            "name": "WebUIPopover",
+            "module": "src/javascript/web-components/webui-popover.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "WebUIPopover",
+            "module": "src/javascript/web-components/webui-popover.ts"
           }
         }
       ]

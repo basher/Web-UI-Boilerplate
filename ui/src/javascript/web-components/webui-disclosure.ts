@@ -19,7 +19,7 @@ class WebUIDisclosure extends HTMLElement {
      * @description Setup event listeners and accessibility attributes.
      */
     public connectedCallback(): void {
-        // Moved this event listener from constructor() so that webui-popover works without having to re-add the listener in that class.
+        // Moved trigger event listener from constructor() so that <webui-popover> fallback behaviour works.
         this.trigger?.addEventListener('click', this);
 
         document.addEventListener('keyup', (e: KeyboardEvent) =>
@@ -55,7 +55,7 @@ class WebUIDisclosure extends HTMLElement {
     /**
      * @description Setup accessibility attributes.
      */
-    private setupA11y(): void {
+    protected setupA11y(): void {
         this.trigger?.removeAttribute('hidden');
         this.trigger?.setAttribute('aria-expanded', 'false');
         this.content?.setAttribute('hidden', '');
@@ -102,7 +102,7 @@ class WebUIDisclosure extends HTMLElement {
     /**
      * @description Handle global 'keyup' event to close disclosure.
      */
-    private handleGlobalKeyup(e: KeyboardEvent): void {
+    protected handleGlobalKeyup(e: KeyboardEvent): void {
         if (this.bindEscapeKey && e.code === 'Escape') {
             this.hideContent(e);
         }
@@ -111,7 +111,7 @@ class WebUIDisclosure extends HTMLElement {
     /**
      * @description Handle global 'click' event to close disclosure.
      */
-    private handleGlobalClick(e: MouseEvent): void {
+    protected handleGlobalClick(e: MouseEvent): void {
         if (this.bindClickOutside) {
             const target = e.target as HTMLElement;
             const insideButton = this.trigger?.contains(target);
