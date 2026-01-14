@@ -1,6 +1,8 @@
 # Web UI Boilerplate - the actual 'UI' code
 
 ## Useful commands recap (described fully in project root README)
+> NOTE: In Windows, use `Git Bash` rather than `CMD` or `Powershell` terminal, as some of the NPM scripts use Unix commands.
+
 From `ui` directory:
 - `npm run start:theme --theme=[theme-name]`
 - `npm run storybook`

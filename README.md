@@ -13,9 +13,10 @@ Just plain vanilla code. 😜
 - Live Storybook URL = https://basher.github.io/Web-UI-Boilerplate/
 
 ## Compile and watch for UI changes
-> NOTE: Use the correct Node version as listed in `ui/.nvmrc`. If necessary, install Node Version Manager (NVM).
-
-Run both the following commands in **separate terminal instances** in order to be able to compile CSS/JavaScript and test the UI in Storybook.
+> NOTES:
+> 1. Use the correct Node version as listed in `ui/.nvmrc`. If necessary, install Node Version Manager (NVM).
+> 2. Run both the following commands in **separate terminal instances** in order to be able to compile CSS/JavaScript and test the UI in Storybook.
+> 3. In Windows, use `Git Bash` rather than `CMD` or `Powershell` terminal, as some of the NPM scripts use Unix commands.
 
 From `ui` directory:
 - `npm run start:theme --theme=[theme-name]` - Installs Node modules (if not already installed), launches Parcel bundler to compile/watch files (using the specified theme), and sets the port for HMR (Hot Module Reloading) to work in Storybook.
