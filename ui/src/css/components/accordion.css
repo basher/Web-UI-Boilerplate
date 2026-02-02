@@ -30,9 +30,10 @@
         align-items: center;
         border-block-end: var(--webui-border-width-s) solid;
         display: flex;
-        justify-content: space-between;
         list-style: none;
         padding-block-end: var(--webui-gutter-s);
+        padding-inline-start: 1.5em; /* Default icon size is 1em */
+        position: relative;
 
         &::-webkit-details-marker {
             display: none;
@@ -40,6 +41,8 @@
     }
 
     .icon {
+        inset-inline-start: 0;
+        position: absolute;
         transition: transform var(--webui-animation-medium);
     }
 

@@ -36,8 +36,6 @@ export const AccordionCustomIconHtml = () => /*html*/ `
 <div class="accordion stack" data-accordion="custom-icon">
     <details>
         <summary>
-            Accordion title 1
-
             <svg
                 aria-hidden="true"
                 focusable="false"
@@ -45,6 +43,7 @@ export const AccordionCustomIconHtml = () => /*html*/ `
             >
                 <use href="sprite.svg#down" />
             </svg>
+            Accordion title 1
         </summary>
         <div class="accordion__content">
             Accordion 1 content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequatur temporibus, modi ab necessitatibus voluptatum sed harum voluptatem non sunt quidem, ut illo porro illum corporis mollitia perferendis nihil reiciendis.
@@ -52,8 +51,6 @@ export const AccordionCustomIconHtml = () => /*html*/ `
     </details>
     <details>
         <summary>
-            Accordion title 2
-
             <svg
                 aria-hidden="true"
                 focusable="false"
@@ -61,6 +58,7 @@ export const AccordionCustomIconHtml = () => /*html*/ `
             >
                 <use href="sprite.svg#down" />
             </svg>
+            Accordion title 2
         </summary>
         <div class="accordion__content">
             Accordion 2 content - Lorem ipsum dolor sit amet consectetur adipisicing elit.
