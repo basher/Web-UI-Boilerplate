@@ -39,7 +39,6 @@ export const HamburgerNavigationHtml = () => /*html*/ `
             type="button"
             class="button nav__hamburger-button"
             data-button="icon"
-            aria-haspopup="menu"
             popovertarget="hamburger"
         >
             <svg
@@ -214,7 +213,6 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
             type="button"
             class="button nav__hamburger-button"
             data-button="icon"
-            aria-haspopup="menu"
             popovertarget="hamburger"
         >
             <svg

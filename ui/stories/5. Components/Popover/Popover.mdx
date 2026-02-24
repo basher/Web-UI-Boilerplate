@@ -13,6 +13,7 @@ import * as Popover from './Popover.stories';
 ## Accessibility considerations
 - The `popover` content can be hidden via clicking the <kbd>esc</kbd> key or clicking outside the popover. This behaviour is standard when using the native browser API.
 - If the popover contains interactive content, add `aria-haspopup` to the button, with an appropriate value. See [MDN article](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) for more details.
+> NOTE: Don't use `aria-haspopup="menu"` for popovers that aren't actually menus (e.g. navigation) as this can cause confusion for assistive technology users. See [Manuel Matuzovic's article](https://matuzo.at/blog/2026/aria-haspopup-menu).
 
 ## Browser compatibility
 <baseline-status featureId="popover"></baseline-status>
