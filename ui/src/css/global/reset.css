@@ -154,11 +154,15 @@ summary {
     }
 }
 
-/* Anchor targets should have extra scroll margin. Adjust value to account for sticky header/footer, etc. Also, apply focus styles to visually identify the target. */
+/* Anchor targets should have extra scroll margin. Adjust value to account for sticky header/footer, etc. */
 :target {
-    box-shadow: var(--webui-focus-shadow);
-    outline: var(--webui-focus-outline);
     scroll-margin-block: var(--webui-gutter-xl);
+
+    /* Apply focus styles to visually identify the target. */
+    &:focus {
+        box-shadow: var(--webui-focus-shadow);
+        outline: var(--webui-focus-outline);
+    }
 }
 
 /* Remove all animations & transitions for people that prefer not to see them */
