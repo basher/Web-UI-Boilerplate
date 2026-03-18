@@ -16,7 +16,6 @@ export default {
 export const Modal = {
     render: () => ModalHtml(),
 };
-Modal.storyName = 'Modal With Overflowing Content';
 
 export const ModalMultipleCloseButtons = {
     render: () => ModalMultipleCloseButtonsHtml(),
