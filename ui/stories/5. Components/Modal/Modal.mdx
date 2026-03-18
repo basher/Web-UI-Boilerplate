@@ -9,7 +9,11 @@ import * as Modal from './Modal.stories';
 - No JavaScript is required, except for non-supporting browsers (which use this [polyfill](https://github.com/keithamus/invokers-polyfill/)).
 - This Storybook also includes an example of a [`<webui-modal>`](/docs/web-components-or-custom-elements-webui-modal--docs) Web Component.
 
-<Canvas of={Modal.Modal} />
+## Modal with overflowing content
+<Canvas of={Modal.ModalOverflow} />
+
+## Modal with multiple close buttons
+<Canvas of={Modal.ModalMultipleCloseButtons} />
 
 ## Accessibility considerations
 - There are ongoing discussions about the [initial focus behaviour](https://github.com/whatwg/html/wiki/dialog--initial-focus,-a-proposal) for `<dialog>`.
@@ -37,9 +41,3 @@ Attribute | Behaviour
 <baseline-status featureId="dialog"></baseline-status>
 <baseline-status featureId="invoker-commands"></baseline-status>
 <baseline-status featureId="dialog-closedby"></baseline-status>
-
-## Modal with overflowing content
-<Canvas of={Modal.ModalOverflow} />
-
-## Modal with multiple close buttons
-<Canvas of={Modal.ModalMultipleCloseButtons} />
