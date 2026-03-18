@@ -43,12 +43,12 @@
     .icon {
         inset-inline-start: 0;
         position: absolute;
-        transition: transform var(--webui-animation-medium);
+        transition: rotate var(--webui-animation-medium);
     }
 
     [open] {
         .icon {
-            transform: rotate(180deg);
+            rotate: 180deg;
         }
     }
 }

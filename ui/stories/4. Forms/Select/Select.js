@@ -6,7 +6,7 @@ export const SelectHtml = () => /*html*/ `
 >
     <option value="">choose...</option>
     <option value="1">option 1</option>
-    <option value="2">option 2</option>
+    <option value="2">option 2 is long</option>
     <option value="3">option 3</option>
 </select>
 `;

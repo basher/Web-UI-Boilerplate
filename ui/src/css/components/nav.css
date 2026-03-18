@@ -29,9 +29,15 @@
     gap: var(--webui-gutter-xs);
     position: relative;
 
+    [data-trigger] {
+        .icon {
+            transition: rotate var(--webui-animation-medium);
+        }
+    }
+
     [aria-expanded='true'] {
         .icon {
-            transform: rotate(180deg);
+            rotate: 180deg;
         }
     }
 

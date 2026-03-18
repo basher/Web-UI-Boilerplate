@@ -1,3 +1,46 @@
-.select {
-    /* Basic component styles are in "form.css". */
+select,
+::picker(select) {
+    appearance: base-select;
+}
+
+select {
+    border-radius: 0;
+
+    &::picker-icon {
+        color: var(--webui-color-primary-500);
+        transition: rotate var(--webui-animation-medium);
+    }
+
+    &:open::picker-icon {
+        rotate: 180deg;
+    }
+}
+
+option {
+    @supports (appearance: base-select) {
+        display: flex;
+        padding: var(--webui-gutter-xs);
+
+        &:is(:hover, :focus) {
+            background: var(--webui-color-focus-100);
+        }
+
+        &:focus-visible {
+            box-shadow: inset var(--webui-focus-shadow);
+            outline: var(--webui-focus-outline);
+        }
+
+        &:checked {
+            background: var(--webui-color-primary-100);
+            font-weight: bold;
+        }
+
+        &::checkmark {
+            background: var(--webui-color-primary-500);
+            color: var(--webui-color-neutral-100);
+            margin-inline-start: auto;
+            order: 1;
+            padding: calc(var(--webui-gutter-xs) / 2);
+        }
+    }
 }
