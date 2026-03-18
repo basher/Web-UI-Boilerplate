@@ -1,4 +1,4 @@
-export const ModalOverflowHtml = () => /*html*/ `
+export const ModalHtml = () => /*html*/ `
 <p>
     Can this button be clicked/focused when modal dialog is open?
     <br/>

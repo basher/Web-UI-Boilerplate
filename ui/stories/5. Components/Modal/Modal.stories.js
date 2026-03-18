@@ -1,5 +1,5 @@
 import {
-    ModalOverflowHtml,
+    ModalHtml,
     ModalMultipleCloseButtonsHtml
 } from './Modal';
 
@@ -13,10 +13,10 @@ export default {
     tags: ['components'],
 };
 
-export const ModalOverflow = {
-    render: () => ModalOverflowHtml(),
+export const Modal = {
+    render: () => ModalHtml(),
 };
-ModalOverflow.storyName = 'Modal With Overflowing Content';
+Modal.storyName = 'Modal With Overflowing Content';
 
 export const ModalMultipleCloseButtons = {
     render: () => ModalMultipleCloseButtonsHtml(),
