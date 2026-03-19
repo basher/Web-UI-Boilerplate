@@ -22,7 +22,6 @@ const config = {
         },
         '@etchteam/storybook-addon-status',
         '@vueless/storybook-dark-mode',
-        // 'storybook-theme-switch-addon'
     ],
 
     framework: {

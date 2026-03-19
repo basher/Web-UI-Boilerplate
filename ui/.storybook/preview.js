@@ -15,24 +15,44 @@ const preview = {
         },
     },
 
-    // globalTypes: {
-    //     stylesheets: {
-    //         themes: [
-    //             {
-    //                 id: "default-theme",
-    //                 title: "Whitelabel",
-    //                 url: "./build/ui/default/css/index.css",
-    //             },
-    //             {
-    //                 id: "theme1-theme",
-    //                 title: "Theme1",
-    //                 url: "./build/ui/theme1/css/index.css",
-    //             }
-    //         ],
-    //     },
-    // },
+    tags: ['autodocs'],
 
-    tags: ['autodocs']
+    // 'theme' globalType will be accessible in the decorator as 'context.globals.theme'.
+    globalTypes: {
+        theme: {
+            description: 'Theme',
+            toolbar: {
+                title: 'Theme',
+                icon: 'paintbrush',
+                items: [
+                    {
+                        value: 'default',
+                        title: 'Whitelabel',
+                    },
+                    {
+                        value: 'theme1',
+                        title: 'Theme1',
+                    },
+                ],
+                dynamicTitle: true,
+            },
+        },
+    },
+
+    initialGlobals: {
+        theme: 'default',
+    },
+
+    decorators: [
+        (Story, context) => {
+            const stylesheet = `/build/ui/${context.globals.theme}/css/index.css`;
+
+            return `
+                <link rel="stylesheet" href=${stylesheet} />
+                ${Story()}
+            `;
+        },
+    ]
 };
 
 export default preview;

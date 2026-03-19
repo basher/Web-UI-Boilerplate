@@ -43,14 +43,13 @@ Storybook comes with 2 default accessibility testing tools:
 - Valid UI theme names are located in `ui/scripts/theme-config.js`
 
 ### 2. In Storybook
-- Uses the [storybook-theme-switch-addon](https://www.npmjs.com/package/storybook-theme-switch-addon).
-> NOTE: This addon has been temporarily disabled in [Storybook 10 due to compatibility issues](https://github.com/krzysztof01-sz/storybook-theme-switch-addon/issues/7).
-
-> When running Storybook locally, theme switching is only possible if CSS themes have been bundled via `npm run bundle-all-themes`. This happens automatically in the live published Storybook.
-
 - Override the CSS theme by clicking the paintbrush icon in Storybook's main toolbar:
 
 ![Storybook theme switcher](theme-switcher.png)
+
+- This toolbar button uses a custom storybook `decorator` defined in `./ui/.storybook/preview.js` to select from available themes.
+
+> NOTE: When running Storybook locally, theme switching is only possible if CSS themes have been bundled via `npm run bundle-all-themes`. CSS themes get bundled automatically in the live published Storybook.
 
 ## Browser compatibility
 Some of the docs pages include a [`<baseline-status>` web component](https://github.com/web-platform-dx/baseline-status) that shows the browser compatibility for the feature being demonstrated. For example:
