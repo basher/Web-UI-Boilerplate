@@ -48,6 +48,7 @@ Storybook comes with 2 default accessibility testing tools:
 ![Storybook theme switcher](theme-switcher.png)
 
 - This toolbar button uses a custom storybook `decorator` defined in `./ui/.storybook/preview.js` to select from available themes.
+- The decorator adds a `<link>` element inside the story `<iframe>`, overriding the default CSS theme.
 
 > NOTE: When running Storybook locally, theme switching is only possible if CSS themes have been bundled via `npm run bundle-all-themes`. CSS themes get bundled automatically in the live published Storybook.
 
