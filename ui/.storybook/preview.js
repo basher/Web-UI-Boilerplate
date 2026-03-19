@@ -45,7 +45,7 @@ const preview = {
 
     decorators: [
         (Story, context) => {
-            const stylesheet = `/build/ui/${context.globals.theme}/css/index.css`;
+            const stylesheet = `build/ui/${context.globals.theme}/css/index.css`;
 
             return `
                 <link rel="stylesheet" href=${stylesheet} />
