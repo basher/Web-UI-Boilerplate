@@ -24,7 +24,7 @@ Apply skin (or "theming" layer) to components.
 
     .skin-3 {
         background-color: var(--webui-color-primary-100);
-        color: inherit;
+        color: light-dark(inherit, var(--webui-color-neutral-900));
         margin-block: var(--skin-gutter-offset);
         padding: var(--webui-gutter-m);
         position: relative;

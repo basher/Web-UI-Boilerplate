@@ -27,11 +27,11 @@ const preview = {
                 items: [
                     {
                         value: 'default',
-                        title: 'Whitelabel',
+                        title: 'Whitelabel (default)',
                     },
                     {
                         value: 'theme1',
-                        title: 'Theme1',
+                        title: 'Theme 1',
                     },
                 ],
                 dynamicTitle: true,
