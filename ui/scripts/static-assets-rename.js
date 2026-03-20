@@ -9,7 +9,6 @@
 const fs = require('fs');
 const path = require('path');
 const colors = require('colors/safe');
-const cheerio = require('cheerio');
 const validExt = require('./static-assets-config');
 const prodDirectoryPath = path.join(__dirname, '../public/build/ui');
 
@@ -30,64 +29,21 @@ const readProdDirectory = () => {
     });
 };
 
-// Read bundled "index.html" file contents.
-const readIndexHtml = () =>
-    new Promise((resolve, reject) => {
-        fs.readFile(`${prodDirectoryPath}/index.html`, 'utf8', (err, data) => {
-            if (err) {
-                reject(
-                    console.log(colors.red.bold('static-assets-rename:', err)),
-                );
-            } else {
-                resolve(data);
-            }
-        });
-    });
-
 // Process valid files.
 const processFile = (file) => {
     const ext = file.substring(file.lastIndexOf('.'));
     const hashed = file.substring(0, file.lastIndexOf('.'));
     let renamed = hashed.substring(0, hashed.lastIndexOf('.'));
 
-    // JS.
-    // 1. Don't rename map files.
-    // 2. Most recent versions of Parcel bundler generate JS files with filename starting with 'ui', not 'index'.
-    if (ext === '.js' && renamed === 'ui') {
-        readIndexHtml().then((data) => {
-            // Use cheerio to parse HTML DOM.
-            const $ = cheerio.load(data);
-            const firstScript = $('body script:first');
-            const lastScript = $('body script:last');
-
-            // Rename modern bundle to "index.js" and legacy bundle to "legacy.js".
-            if (file === firstScript.attr('src').substring(1)) {
-                renamed =
-                    firstScript.attr('type') === 'module'
-                        ? `index${ext}`
-                        : `legacy${ext}`;
-            }
-
-            if (file === lastScript.attr('src').substring(1)) {
-                renamed =
-                    lastScript.attr('type') === 'module'
-                        ? `index${ext}`
-                        : `legacy${ext}`;
-            }
-
-            renameFile(renamed, file);
-        });
+    // JS entry file isn't hashed. Don't rename map files.
+    if (ext === '.js') {
+        console.log(colors.yellow.bold(`Processing ${file}`));
     }
 
     // CSS. Don't rename map files.
     if (ext === '.css') {
+        console.log(colors.yellow.bold(`Processing ${file}`));
         renamed = `index${ext}`;
-        renameFile(renamed, file);
-    }
-
-    // SVG sprite.
-    if (ext === '.svg') {
-        renamed = `${renamed}${ext}`;
         renameFile(renamed, file);
     }
 };

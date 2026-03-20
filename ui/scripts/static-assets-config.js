@@ -3,4 +3,4 @@
 */
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const validExt = (module.exports = ['.css', '.js', '.svg']);
+const validExt = (module.exports = ['.css', '.js']);
