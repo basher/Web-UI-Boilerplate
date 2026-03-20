@@ -19,7 +19,7 @@ const themes = require('./theme-config');
 
 const theme = process.argv[2]; // Only passing 1 arg in Node cmd = theme name
 const prodDirectoryPath = path.join(__dirname, `../public/build/ui`);
-const staticDirectoryPath = path.join(__dirname, '../src/images/interface');
+const staticDirectoryPath = path.join(__dirname, '../src/images');
 
 // 1. Read the renamed files in PRODUCTION folder.
 const readProdDirectory = () => {
@@ -36,11 +36,6 @@ const readProdDirectory = () => {
                 return;
             }
 
-            // Ignore HTML file used for Parcel build.
-            if (file.indexOf('html') >= 0) {
-                return;
-            }
-
             if (file.indexOf('js') >= 0) {
                 fileType = 'js';
             }
@@ -52,10 +47,6 @@ const readProdDirectory = () => {
             // Fonts need to be in same folder as CSS.
             if (file.indexOf('woff') >= 0 || file.indexOf('ttf') >= 0) {
                 fileType = 'css';
-            }
-
-            if (file.indexOf('svg') >= 0) {
-                fileType = 'svg';
             }
 
             moveFile(file, fileType);
@@ -82,15 +73,6 @@ const moveFile = (file, fileType) => {
         themeFolder = `${themeFolder}/css`;
     }
 
-    if (fileType === 'svg') {
-        const filename = file.substring(0, file.lastIndexOf('.'));
-        // Move SVG sprite into 'images' folder. Any other SVGs go in 'css' as they're referenced inside CSS.
-        themeFolder =
-            filename === 'sprite'
-                ? `${themeFolder}/images`
-                : `${themeFolder}/css`;
-    }
-
     fs.move(`${prodDirectoryPath}/${file}`, `${themeFolder}/${file}`, (err) => {
         if (err) {
             return console.log(colors.red.bold('move files:', err));
@@ -103,7 +85,7 @@ const moveFile = (file, fileType) => {
 const copyStatic = () => {
     const themeFolder = `${prodDirectoryPath}/${themeName}`;
 
-    fs.copy(staticDirectoryPath, `${themeFolder}/images/interface`, (err) => {
+    fs.copy(staticDirectoryPath, `${themeFolder}/images`, (err) => {
         if (err) {
             return console.log(colors.red.bold('copy static assets:', err));
         }
