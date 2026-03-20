@@ -17,7 +17,7 @@ const preview = {
 
     tags: ['autodocs'],
 
-    // 'theme' globalType will be accessible in the decorator as 'context.globals.theme'.
+    // Theme override - globalType 'theme' is passed to decorator as 'context.globals.theme'.
     globalTypes: {
         theme: {
             description: 'Theme',
@@ -39,18 +39,16 @@ const preview = {
         },
     },
 
-    initialGlobals: {
-        theme: 'default',
-    },
-
     decorators: [
         (Story, context) => {
             const stylesheet = `build/ui/${context.globals.theme}/css/index.css`;
 
-            return `
-                <link rel="stylesheet" href=${stylesheet} />
-                ${Story()}
-            `;
+            // Only include theme CSS when running in published Storybook.
+            const linkCSS = window.location.hostname !== 'localhost'
+                ? `<link rel="stylesheet" href=${stylesheet} />`
+                : '';
+
+            return `${linkCSS}${Story()}`;
         },
     ]
 };

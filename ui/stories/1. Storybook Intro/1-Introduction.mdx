@@ -40,17 +40,16 @@ Storybook comes with 2 default accessibility testing tools:
 ### 1. Using Parcel bundler in local `DEV` mode
 - Set the starting CSS theme that Storybook uses via a terminal prompt:
     - `npm run start:theme --theme=[theme-name]`
-- Valid UI theme names are located in `ui/scripts/theme-config.js`
+- Valid UI theme names are located in `./ui/scripts/theme-config.js`
 
 ### 2. In Storybook
-- Override the CSS theme by clicking the paintbrush icon in Storybook's main toolbar:
+> NOTE: Storybook theme switching is only enabled in the published Storybook. It is disabled in local `DEV` mode (i.e. when running `localhost`) so that Hot Module Reloading still works.
 
-![Storybook theme switcher](theme-switcher.png)
+![Storybook theme switcher](theme-switcher.webp)
 
+- Override the CSS theme by clicking the theme button (with the paintbrush icon) in Storybook's main toolbar, as seen in the above screenshot.
 - This toolbar button uses a custom storybook `decorator` defined in `./ui/.storybook/preview.js` to select from available themes.
 - The decorator adds a `<link>` element inside the story `<iframe>`, overriding the default CSS theme.
-
-> NOTE: When running Storybook locally, theme switching is only possible if CSS themes have been bundled via `npm run bundle-all-themes`. CSS themes get bundled automatically in the live published Storybook.
 
 ## Browser compatibility
 Some of the docs pages include a [`<baseline-status>` web component](https://github.com/web-platform-dx/baseline-status) that shows the browser compatibility for the feature being demonstrated. For example:
