@@ -213,7 +213,7 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
             type="button"
             class="button nav__hamburger-button"
             data-button="icon"
-            popovertarget="hamburger"
+            popovertarget="hamburger-dropdown"
         >
             <svg
                 aria-hidden="true"
@@ -234,7 +234,7 @@ export const HamburgerDropdownNavigationHtml = () => /*html*/ `
 
         <ul
             class="nav__list flex"
-            id="hamburger"
+            id="hamburger-dropdown"
             popover
         >
             <li data-nav-item-dropdown>

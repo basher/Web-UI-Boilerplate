@@ -1,6 +1,5 @@
-// Import Sass entry file and SVG sprite.
+// Import CSS entry file so it gets bundled by Parcel.
 import '../../src/css/index.css';
-import '../../src/images/sprite.svg';
 
 // Import config and UI module initialisation.
 import { browserSupportsAllFeatures } from './config/browser-supports-features';
