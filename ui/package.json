@@ -12,7 +12,6 @@
   "scripts": {
     "reset": "rm -rf node_modules/ && npm install",
     "ui-theme": "node ./scripts/ui-theme",
-    "static-assets-rename": "node ./scripts/static-assets-rename",
     "static-assets-move": "node ./scripts/static-assets-move",
     "bundle-all-themes": "node ./scripts/bundle-all-themes",
     "prestart": "rm -rf .parcel-cache",
@@ -23,7 +22,7 @@
     "build:theme": "cross-env NODE_ENV=production && cross-var npm run ui-theme $npm_config_theme && npm run build",
     "build": "npm install && npm run build:parcel",
     "build:parcel": "parcel build src/javascript/index.ts --dist-dir public/build/ui",
-    "postbuild": "npm run static-assets-rename && cross-var npm run static-assets-move $npm_config_theme && rm -rf public/build/ui/index.runtime.*",
+    "postbuild": "cross-var npm run static-assets-move $npm_config_theme",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "publish-storybook": "npm install && npm run bundle-all-themes && npm run build-storybook",
