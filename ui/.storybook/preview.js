@@ -44,7 +44,7 @@ const preview = {
             const stylesheet = `build/ui/${context.globals.theme}/css/index.css`;
 
             // Only include theme CSS when running in published Storybook.
-            const linkCSS = window.location.hostname !== 'localhost'
+            const linkCSS = import.meta.env.MODE === 'production'
                 ? `<link rel="stylesheet" href=${stylesheet} />`
                 : '';
 
