@@ -19,7 +19,7 @@ Just plain vanilla code. 😜
 > 3. In Windows, use `Git Bash` rather than `CMD` or `Powershell` terminal, as some of the NPM scripts use Unix commands.
 
 From `ui` directory:
-- `npm run start:theme --theme=[theme-name]` - Installs Node modules (if not already installed), launches Parcel bundler to compile/watch files (using the specified theme), and sets the port for HMR (Hot Module Reloading) to work in Storybook.
+- `npm run start:theme --theme=[theme-name]` - Installs Node modules (if not already installed), launches Parcel bundler to compile/watch files (using the specified theme), and sets the port for HMR (Hot Module Replacement) to work in Storybook.
 - `npm run storybook` - Launches Storybook/HTML component library.
 
 > NOTE: Simply running `npm start` will launch Parcel bundler with the most recently specified theme.

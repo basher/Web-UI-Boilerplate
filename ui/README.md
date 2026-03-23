@@ -89,7 +89,7 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 
 ## Storybook/HTML component library
 
-### Hot module reloading (HMR)
+### Hot module replacement (HMR)
 - The `start:parcel` NPM script mentioned earlier doesn't actually start the default Parcel server.
 - Instead, it simply [watches files and defines a port for the HMR server](https://parceljs.org/features/cli/#parcel-watch-%3Centries%3E).
 - This means that Storybook updates automatically with any CSS/JavaScript changes.
