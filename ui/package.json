@@ -33,7 +33,7 @@
     "app": {}
   },
   "browserslist": [
-    "defaults"
+    "defaults and fully supports es6-module"
   ],
   "devDependencies": {
     "@babel/eslint-parser": "^7.28.5",
