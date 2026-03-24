@@ -3,7 +3,7 @@
 
 /**
  * Function for moving static assets into correct sub-folders for production.
- * 1. Allows us to pass a "theme" argument. If an invalid or null theme is passed, "default" will be used.
+ * 1. Allows the passing of a 'theme' argument. If an invalid or null theme is passed, 'default' will be used.
  * 2. Move files bundled by Parcel.
  * 3. Copy any other static UI assets that are not bundled by Parcel.
  *
@@ -12,12 +12,14 @@
  * @return {void}
  */
 
-const fs = require('fs-extra');
-const path = require('path');
-const colors = require('colors/safe');
-const themes = require('./theme-config');
+import fs from 'fs-extra';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import colors from 'colors/safe.js';
+import { themes } from './theme-config.js';
 
 const theme = process.argv[2]; // Only passing 1 arg in Node cmd = theme name
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const prodDirectoryPath = path.join(__dirname, `../public/build/ui`);
 const staticDirectoryPath = path.join(__dirname, '../src/images');
 
@@ -28,7 +30,7 @@ let themeName = themes[theme] !== undefined ? theme : 'default';
 const readProdDirectory = () => {
     fs.readdir(prodDirectoryPath, (err, files) => {
         if (err) {
-            return console.log(err);
+            return console.log(colors.red.bold('read files:', err));
         }
 
         files.forEach((file) => {
@@ -77,7 +79,7 @@ const moveFile = (file, fileType) => {
     });
 };
 
-// 3. Copy other static UI files (i.e. '/images/interface').
+// 3. Copy other static UI files (e.g. images).
 const copyStatic = () => {
     const themeFolderStatic = `${prodDirectoryPath}/${themeName}/images`;
 

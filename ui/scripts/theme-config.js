@@ -2,7 +2,7 @@
 	Valid themes for use with 'ui-theme.js' Node script.
 */
 
-var themes = (module.exports = {
+export const themes = {
     default: 'Whitelabel',
-    theme1: 'Theme1'
-});
+    theme1: 'Theme1',
+};

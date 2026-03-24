@@ -4,8 +4,8 @@
  * @return {void}
  */
 
-const { exec } = require('node:child_process');
-const themes = require('./theme-config');
+import { exec } from 'node:child_process';
+import { themes } from './theme-config.js';
 
 let strNpm = '';
 for (const [key] of Object.entries(themes)) {

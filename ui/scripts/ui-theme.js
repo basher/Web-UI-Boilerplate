@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /**
  * Theme-specific CSS compilation.
  *
@@ -9,18 +10,18 @@
  * @return {void}
  */
 
-const fs = require('fs');
-const colors = require('colors/safe');
-const themes = require('./theme-config');
+import fs from 'fs-extra';
+import colors from 'colors/safe.js';
+import { themes } from './theme-config.js';
 
 let theme = process.argv[2]; // Only passing 1 arg in Node cmd = theme name
 const cssFile = `./src/css/index.css`;
 const cssFileTemplate = `./src/css/_index-template.css`;
 let result;
 
-const writeThemeCSS = data =>
+const writeThemeCSS = (data) =>
     new Promise((resolve, reject) => {
-        fs.writeFile(cssFile, data, { flag: 'w', encoding: 'utf8' }, err => {
+        fs.writeFile(cssFile, data, { flag: 'w', encoding: 'utf8' }, (err) => {
             if (err) {
                 reject(console.log(colors.red.bold('ui-theme:', err)));
             } else {
@@ -31,26 +32,28 @@ const writeThemeCSS = data =>
 
 const updateFromCSSTemplate = (data, whichTheme) =>
     new Promise((resolve, reject) => {
-        fs.copyFile(cssFileTemplate, cssFile, err => {
+        fs.copyFile(cssFileTemplate, cssFile, (err) => {
             if (err) {
                 reject(console.log(colors.red.bold('ui-theme:', err)));
             } else {
                 resolve(
-                    console.log(`"${cssFile}" successfully updated from template`)
-            );
-
-            if (whichTheme === undefined) {
-                console.log(
-                    colors.red.bold(
-                        `Invalid or null theme: ${whichTheme}. Using "default" theme instead...`
-                    )
+                    console.log(
+                        `"${cssFile}" successfully updated from template`,
+                    ),
                 );
-                theme = 'default';
-            }
 
-            // Update CSS @imports in 'index.css' with correct theme filepath.
-            result = data.replace(/{{ theme }}/g, theme);
-            writeThemeCSS(result);
+                if (whichTheme === undefined) {
+                    console.log(
+                        colors.red.bold(
+                            `Invalid or null theme: ${whichTheme}. Using "default" theme instead...`,
+                        ),
+                    );
+                    theme = 'default';
+                }
+
+                // Update CSS @imports in 'index.css' with correct theme filepath.
+                result = data.replace(/{{ theme }}/g, theme);
+                writeThemeCSS(result);
             }
         });
     });

@@ -2,13 +2,14 @@
   "name": "web-ui-boilerplate",
   "description": "UI boilerplate for websites & web apps using vanilla HTML/CSS/JavaScript, powered by Storybook, bundled by Parcel.",
   "author": "basher",
-  "version": "6.3.2",
+  "version": "6.3.3",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/basher/Web-UI-Boilerplate/"
   },
   "homepage": "https://basher.github.io/Web-UI-Boilerplate",
+  "type": "module",
   "scripts": {
     "reset": "rm -rf node_modules/ && npm install",
     "ui-theme": "node ./scripts/ui-theme",
