@@ -58,11 +58,11 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 - The [default browserslist configuration](https://github.com/browserslist/browserslist#best-practices) has been defined in `package.json`.
 - Run `npx browserslist` to see a list of supported browsers.
 
-## Parcel bundler
+## Explanation of the Parcel bundler `start` command
 ```
 "start:parcel": "parcel watch src/javascript/index.ts --hmr-port 1234 --target app"
 ```
-- This command does not need to be explicitly run as `npm run start:theme...` does it for you.
+- This command does not need to be explicitly run. The `npm run start:theme...` does it for you.
 - See the `HMR` section further down for an explanation of the `--hmr-port 1234` argument.
 - The `--target app` argument enables transpilation of both CSS and JavaScript in **local DEV mode**. By default, Parcel only does this for production builds.
 
@@ -78,7 +78,7 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
     - A `tsconfig.json` is needed, even if it's empty. Otherwise, TypeScript errors/warnings are not displayed in the editor.
 
 ### Polyfills
-- A separate `polyfills` bundle is created for browsers that don't support the required features in `src/javascript/config/browser-supports-features.ts`.
+- A separate `polyfills` bundle is created for browsers that don't support the required features in `ui/src/javascript/config/browser-supports-features.ts`.
 
 ### CSS
 - CSS compilation is done automatically.
@@ -92,7 +92,7 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 ### Hot module replacement (HMR)
 - The `start:parcel` NPM script mentioned earlier doesn't actually start the default Parcel server.
 - Instead, it simply [watches files and defines a port for the HMR server](https://parceljs.org/features/cli/#parcel-watch-%3Centries%3E).
-- This means that Storybook updates automatically with any CSS/JavaScript changes.
+- This means that Storybook should update automatically with any CSS/JavaScript changes. However, it is sometimes necessary to reload the Storybook page in the browser.
 
 ### Re-ordering stories in sidebar navigation
 - All stories and docs are ordered according to the `storySort` configuration in `ui/.storybook/preview.js`.

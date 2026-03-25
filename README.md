@@ -22,7 +22,7 @@ From `ui` directory:
 - `npm run start:theme --theme=[theme-name]` - Installs Node modules (if not already installed), launches Parcel bundler to compile/watch files (using the specified theme), and sets the port for HMR (Hot Module Replacement) to work in Storybook.
 - `npm run storybook` - Launches Storybook/HTML component library.
 
-> NOTE: Simply running `npm start` will launch Parcel bundler with the most recently specified theme.
+> NOTE: Simply running `npm start` without a theme argument will launch Parcel bundler with the most recently specified theme.
 
 ### UI themes
 - Theme-specific CSS is located in `ui/src/css/_THEMES` folder.
@@ -31,17 +31,12 @@ From `ui` directory:
 - This uses an NPM config variable in `ui/.npmrc`.
 - The new theme will be loaded in Storybook.
 
-## Bundle CSS/JavaScript for production without watch
+## Bundle CSS/JavaScript for production
 From `ui` directory:
-- `npm run build:theme --theme=[theme-name]` - Compiles and minifies files, for production and local dev environments.
-- `npm run bundle-all-themes` - Bundles ALL themes.
+- `npm run build:theme --theme=[theme-name]` - Compiles and minifies files for production environment.
+- `npm run bundle-all-themes` - Bundles ALL themes. This command is used when publishing Storybook.
 
-## Local DEV environment (for example, .Net, PHP)
-In order to use the bundled CSS/JavaScript in `localhost`, both `npm run start:theme...` and `npm run storybook` need to be run.
-
-However, these can be concatenated together into a single background task so that the Storybook application doesn't need to be actually loaded in the browser.
-
-### Linking to compiled CSS/JavaScript
+## Linking to Parcel-bundled CSS/JavaScript in Storybook
 - There is a difference between `development` and `production` environments in terms of the locations of the compiled CSS/JavaScript.
 - The `<link>` and `<script>` tags in `ui/.storybook/preview-head.html` use placeholders, which reference environment variables defined in `ui/.env` files:
 
@@ -50,19 +45,24 @@ However, these can be concatenated together into a single background task so tha
 <script defer src="%STORYBOOK_JS_PATH%"></script>
 ```
 
-#### DEVELOPMENT
+### DEVELOPMENT
 Uses the Storybook dev server, with paths defined in `ui/.env.development`:
 ```
 STORYBOOK_CSS_PATH=index.css
 STORYBOOK_JS_PATH=index.js
 ```
 
-#### PRODUCTION
+### PRODUCTION
 Uses whatever build folder has been defined for the website / web application in `ui/.env.production`:
 ```
 STORYBOOK_CSS_PATH=build/ui/default/css/index.css
 STORYBOOK_JS_PATH=build/ui/default/javascript/index.js
 ```
+
+## Linking to Parcel-bundled CSS/JavaScript in local DEV environment (for example, .Net, PHP)
+In order to use the bundled CSS/JavaScript in `localhost`, both `npm run start:theme...` and `npm run storybook` need to be run.
+
+However, these can be concatenated together into a single background task so that the Storybook application doesn't need to be actually loaded in the browser.
 
 ## Build and publish Storybook
 From `ui` directory:
