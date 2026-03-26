@@ -97,6 +97,12 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 ### Re-ordering stories in sidebar navigation
 - All stories and docs are ordered according to the `storySort` configuration in `ui/.storybook/preview.js`.
 
+## Custom Elements Manifest
+- The `npm start` command has been modified to include `cem-analyze`.
+- This results in updates to the manifest JSON file whenever the web components' TypeScript code is changed.
+- The manifest config is defined in `ui/custom-elements-manifest.config.mjs`.
+- See [official docs](https://custom-elements-manifest.open-wc.org/).
+
 ## Trouble-shooting bundling and build issues
 - If bundling breaks, or UI is not updated (in DEV mode) to reflect latest CSS/JavaScript changes:
     - Kill the Parcel Node process with `CTRL+C`.

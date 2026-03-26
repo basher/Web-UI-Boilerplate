@@ -2,7 +2,7 @@
   "name": "web-ui-boilerplate",
   "description": "UI boilerplate for websites & web apps using vanilla HTML/CSS/JavaScript, powered by Storybook, bundled by Parcel.",
   "author": "basher",
-  "version": "6.3.5",
+  "version": "6.3.6",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "bundle-all-themes": "node ./scripts/bundle-all-themes",
     "prestart": "rm -rf .parcel-cache",
     "start:theme": "cross-env NODE_ENV=development && cross-var npm run ui-theme $npm_config_theme && npm start",
-    "start": "npm install && npm run start:parcel",
+    "start": "npm install && npm run start:parcel && npm run cem-analyze",
     "start:parcel": "parcel watch src/javascript/index.ts --dist-dir public --hmr-port 1234 --target app",
     "prebuild": "cross-var rm -rf public/build/ui/$npm_config_theme",
     "build:theme": "cross-env NODE_ENV=production && cross-var npm run ui-theme $npm_config_theme && npm run build",
@@ -28,7 +28,7 @@
     "build-storybook": "storybook build",
     "publish-storybook": "npm install && npm run bundle-all-themes && npm run build-storybook",
     "prepare": "cd .. && husky install ui/.husky",
-    "cem-analyze": "cem analyze --globs src/javascript/web-components/*.ts"
+    "cem-analyze": "cem analyze --config custom-elements-manifest.config.mjs"
   },
   "targets": {
     "app": {}
@@ -86,5 +86,5 @@
   "@parcel/transformer-css": {
     "errorRecovery": true
   },
-  "customElements": "custom-elements.json"
+  "customElements": "public/custom-elements.json"
 }
