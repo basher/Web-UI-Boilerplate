@@ -1,6 +1,6 @@
 # Web UI Boilerplate
 Accessible UI boilerplate and component library for websites & web apps.
-- Built with ❤️love❤️ using semantic HTML, vanilla CSS, vanilla JavaScript (TypeScript), HTML Web Components, and ARIA.
+- Built with ❤️love❤️ &mdash; using semantic HTML, vanilla CSS, vanilla JavaScript (TypeScript), HTML Web Components, and ARIA.
 - Powered by Storybook.
 - Bundled by Parcel.
 
