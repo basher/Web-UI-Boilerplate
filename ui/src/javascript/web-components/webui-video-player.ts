@@ -1,5 +1,5 @@
 /**
- * Class. Web component that uses a native HTML <dialog> to create a simple "lightbox", containing an embedded video inside a lazy-loaded <iframe>.
+ * Class. Web component that progressively enhances a "lightbox" built with native HTML <dialog> and Invoker Commands API, to lazy load an embedded video <iframe>.
  */
 class WebUIVideoPlayer extends HTMLElement {
     private btnPlay: HTMLButtonElement | null;

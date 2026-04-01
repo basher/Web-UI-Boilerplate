@@ -12,12 +12,12 @@ import { uiInit } from './ui-init';
  * If no, dynamically import polyfills, then instantiate UI modules.
  */
 if (browserSupportsAllFeatures()) {
-    // uiInit();
+    uiInit();
 } else {
     (async (): Promise<void> => {
         try {
             await import('./utils/polyfills');
-            // uiInit();
+            uiInit();
         } catch (error) {
             console.error(error);
         }
