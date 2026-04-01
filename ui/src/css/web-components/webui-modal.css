@@ -1,0 +1,7 @@
+webui-modal {
+    &:not(:defined) {
+        [data-open] {
+            display: none;
+        }
+    }
+}
