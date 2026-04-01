@@ -1,3 +1,6 @@
+/**
+ * Class. Custom element
+ */
 class WebUITabs extends HTMLElement {
     private tablist: HTMLElement | null;
     private tabpanels: NodeListOf<HTMLElement>;

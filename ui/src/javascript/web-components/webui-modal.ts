@@ -1,3 +1,6 @@
+/**
+ * Class. Custom element
+ */
 class WebUIModal extends HTMLElement {
     private dialog: HTMLDialogElement | null;
     private modalContent: HTMLElement | null;

@@ -1,3 +1,6 @@
+/**
+ * Class. Custom element
+ */
 class WebUIDisclosure extends HTMLElement {
     protected trigger: HTMLButtonElement | null;
     protected content: HTMLElement | null;

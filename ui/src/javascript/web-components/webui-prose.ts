@@ -1,3 +1,6 @@
+/**
+ * Class. Custom element
+ */
 class WebUIProse extends HTMLElement {
     private tables: NodeListOf<HTMLTableElement>;
 

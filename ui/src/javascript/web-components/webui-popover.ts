@@ -1,5 +1,8 @@
 import WebUIDisclosure from './webui-disclosure';
 
+/**
+ * Class. Custom element
+ */
 class WebUIPopover extends WebUIDisclosure {
     private browserSupportsPopover: boolean;
 

@@ -1,3 +1,6 @@
+/**
+ * Class. Custom element
+ */
 class WebUICarousel extends HTMLElement {
     private carousel: HTMLUListElement | null;
     private slides: NodeListOf<HTMLElement>;

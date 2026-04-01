@@ -1,3 +1,6 @@
+/**
+ * Class. Custom element
+ */
 class WebUINotify extends HTMLElement {
     private btnClose: HTMLButtonElement | null;
 

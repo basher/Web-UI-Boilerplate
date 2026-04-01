@@ -5,6 +5,9 @@ import {
 } from '../utils/ajax-helpers';
 import searchResults from '../templates/search-results';
 
+/**
+ * Class. Custom element
+ */
 class WebUIPredictiveSearch extends HTMLElement {
     private searchForm: HTMLFormElement | null;
     private searchInput: HTMLInputElement | null;

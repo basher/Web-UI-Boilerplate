@@ -1,3 +1,6 @@
+/**
+ * Class. Custom element
+ */
 class WebUIRangeInput extends HTMLElement {
     private rangeInput: HTMLInputElement | null;
     private rangeOutput: HTMLOutputElement | null;

@@ -1,3 +1,6 @@
+/**
+ * Class. Custom element
+ */
 class WebUIVideoPlayer extends HTMLElement {
     private btnPlay: HTMLButtonElement | null;
     private mediaContainer: HTMLElement | null;

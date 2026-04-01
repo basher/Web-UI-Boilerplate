@@ -1,3 +1,6 @@
+/**
+ * Class. Custom element
+ */
 class WebUIAjaxLoader extends HTMLElement {
     constructor() {
         super();

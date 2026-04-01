@@ -1,3 +1,6 @@
+/**
+ * Class. Custom element
+ */
 class WebUIShare extends HTMLElement {
     private btnShare: HTMLButtonElement | null;
     private btnCopy: HTMLButtonElement | null;

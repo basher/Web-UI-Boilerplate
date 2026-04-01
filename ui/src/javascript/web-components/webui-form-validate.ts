@@ -1,3 +1,6 @@
+/**
+ * Class. Custom element
+ */
 class WebUIFormValidate extends HTMLElement {
     private form: HTMLFormElement | null;
     private errorFieldName: string;

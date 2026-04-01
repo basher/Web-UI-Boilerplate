@@ -4,6 +4,9 @@ import {
     ajaxEventHandler,
 } from '../utils/ajax-helpers';
 
+/**
+ * Class. Custom element
+ */
 class WebUIFetchHtml extends HTMLElement {
     private fetchTrigger: HTMLButtonElement | null;
 

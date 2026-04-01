@@ -1,3 +1,6 @@
+/**
+ * Class. Custom element
+ */
 class WebUIToggle extends HTMLElement {
     private switch: HTMLButtonElement | null;
 

@@ -1,3 +1,6 @@
+/**
+ * Class. Custom element
+ */
 class WebUIMakeClickable extends HTMLElement {
     private link: HTMLAnchorElement | null;
 
