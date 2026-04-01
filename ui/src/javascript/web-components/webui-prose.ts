@@ -1,5 +1,5 @@
 /**
- * Class. Custom element
+ * Class. Web component that progressively enhances HTML <table> elements by wrapping them with an overflowing container.
  */
 class WebUIProse extends HTMLElement {
     private tables: NodeListOf<HTMLTableElement>;

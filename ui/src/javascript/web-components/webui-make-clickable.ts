@@ -1,5 +1,5 @@
 /**
- * Class. Custom element
+ * Class. Web component that makes a componenent clickable by following a primary link.
  */
 class WebUIMakeClickable extends HTMLElement {
     private link: HTMLAnchorElement | null;

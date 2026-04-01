@@ -1,5 +1,5 @@
 /**
- * Class. Custom element
+ * Class. Web component that progressively enhances native HTML5 <form> validation.
  */
 class WebUIFormValidate extends HTMLElement {
     private form: HTMLFormElement | null;

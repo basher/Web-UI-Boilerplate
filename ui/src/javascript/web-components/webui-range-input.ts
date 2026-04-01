@@ -1,5 +1,5 @@
 /**
- * Class. Custom element
+ * Class. Web component that progressively enhances HTML <input type="range"> elements by displaying the value inside an <output>.
  */
 class WebUIRangeInput extends HTMLElement {
     private rangeInput: HTMLInputElement | null;

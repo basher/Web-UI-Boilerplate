@@ -1,5 +1,5 @@
 /**
- * Class. Custom element that progressively enhances the default CSS carousel.
+ * Class. Web component that progressively enhances the default CSS carousel.
  */
 class WebUICarousel extends HTMLElement {
     private carousel: HTMLUListElement | null;

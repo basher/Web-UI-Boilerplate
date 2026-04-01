@@ -6,7 +6,7 @@ import {
 import searchResults from '../templates/search-results';
 
 /**
- * Class. Custom element
+ * Class. Web component that progressively enhances a native HTML <datalist> search component, fetching results from an API endpoint.
  */
 class WebUIPredictiveSearch extends HTMLElement {
     private searchForm: HTMLFormElement | null;

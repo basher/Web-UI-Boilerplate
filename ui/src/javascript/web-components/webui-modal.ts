@@ -1,5 +1,5 @@
 /**
- * Class. Custom element
+ * Class. Web component that progressively enhances the native HTML <dialog> element, managing opening/closing and keyboard focus.
  */
 class WebUIModal extends HTMLElement {
     private dialog: HTMLDialogElement | null;

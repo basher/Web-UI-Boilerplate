@@ -5,7 +5,7 @@ import {
 } from '../utils/ajax-helpers';
 
 /**
- * Class. Custom element
+ * Class. Web component to demo the core features of a component that has some Ajax dependencies.
  */
 class WebUIFetchHtml extends HTMLElement {
     private fetchTrigger: HTMLButtonElement | null;

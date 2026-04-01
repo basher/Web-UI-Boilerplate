@@ -1,5 +1,5 @@
 /**
- * Class. Custom element
+ * Class. Web component that turns a container into a (dismissable) notification.
  */
 class WebUINotify extends HTMLElement {
     private btnClose: HTMLButtonElement | null;

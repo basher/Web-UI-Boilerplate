@@ -1,5 +1,5 @@
 /**
- * Class. Custom element
+ * Class. Web component that enables a share <button> to use the native Share API, falling back to a <webui-disclosure> containing a URL that can be copied to clipboard.
  */
 class WebUIShare extends HTMLElement {
     private btnShare: HTMLButtonElement | null;

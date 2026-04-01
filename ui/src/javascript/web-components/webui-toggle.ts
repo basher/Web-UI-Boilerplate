@@ -1,5 +1,5 @@
 /**
- * Class. Custom element
+ * Class. Web component that updates the ARIA state of an HTML <button role="switch"> when clicked.
  */
 class WebUIToggle extends HTMLElement {
     private switch: HTMLButtonElement | null;

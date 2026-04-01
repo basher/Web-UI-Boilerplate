@@ -8,7 +8,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that renders an animated loader while Ajax requests are being handled.",
           "name": "WebUIAjaxLoader",
           "members": [
             {
@@ -49,7 +49,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that progressively enhances the default CSS carousel.",
           "name": "WebUICarousel",
           "members": [
             {
@@ -135,7 +135,8 @@
                     "text": "KeyboardEvent | UIEvent"
                   }
                 }
-              ]
+              ],
+              "description": "Handle web component event listeners."
             },
             {
               "kind": "method",
@@ -145,7 +146,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Use Intersection Observer API to identify visible slides, and manage focus states."
             },
             {
               "kind": "method",
@@ -155,7 +157,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Update slide counter."
             },
             {
               "kind": "method",
@@ -165,7 +168,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Show slide counter."
             },
             {
               "kind": "method",
@@ -175,7 +179,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Show slide counter pips."
             },
             {
               "kind": "method",
@@ -185,7 +190,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Show previous & next buttons."
             },
             {
               "kind": "method",
@@ -195,7 +201,8 @@
                 "type": {
                   "text": "number"
                 }
-              }
+              },
+              "description": "Get current slide number."
             },
             {
               "kind": "method",
@@ -205,7 +212,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Go to next slide."
             },
             {
               "kind": "method",
@@ -215,7 +223,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Go to previous slide."
             },
             {
               "kind": "method",
@@ -233,7 +242,8 @@
                     "text": "number"
                   }
                 }
-              ]
+              ],
+              "description": "Set current slide, and update counters."
             },
             {
               "kind": "method",
@@ -257,7 +267,8 @@
                     "text": "number"
                   }
                 }
-              ]
+              ],
+              "description": "Scroll to current slide."
             },
             {
               "kind": "method",
@@ -267,7 +278,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "If any interactive elements inside slides receive focus, update current slide & counter."
             },
             {
               "kind": "method",
@@ -285,7 +297,8 @@
                     "text": "KeyboardEvent"
                   }
                 }
-              ]
+              ],
+              "description": "Move carousel to previous or next slide with arrow keys."
             },
             {
               "kind": "method",
@@ -295,7 +308,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Update slide counters when carousel is scrolled (swiped) on touch devices."
             }
           ],
           "superclass": {
@@ -330,7 +344,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that shows/hides content.",
           "name": "WebUIDisclosure",
           "members": [
             {
@@ -381,7 +395,8 @@
                     "text": "MouseEvent"
                   }
                 }
-              ]
+              ],
+              "description": "Handle web component event listeners."
             },
             {
               "kind": "method",
@@ -391,7 +406,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Setup accessibility attributes."
             },
             {
               "kind": "method",
@@ -409,7 +425,8 @@
                     "text": "string"
                   }
                 }
-              ]
+              ],
+              "description": "Generate a random string using a given prefix."
             },
             {
               "kind": "method",
@@ -428,7 +445,8 @@
                     "text": "KeyboardEvent"
                   }
                 }
-              ]
+              ],
+              "description": "Hide disclosure content."
             },
             {
               "kind": "method",
@@ -446,7 +464,8 @@
                     "text": "KeyboardEvent"
                   }
                 }
-              ]
+              ],
+              "description": "Handle global 'keyup' event to close disclosure."
             },
             {
               "kind": "method",
@@ -464,7 +483,8 @@
                     "text": "MouseEvent"
                   }
                 }
-              ]
+              ],
+              "description": "Handle global 'click' event to close disclosure."
             }
           ],
           "superclass": {
@@ -499,7 +519,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component to demo the core features of a component that has some Ajax dependencies.",
           "name": "WebUIFetchHtml",
           "members": [
             {
@@ -532,7 +552,8 @@
                     "text": "string"
                   }
                 }
-              ]
+              ],
+              "description": "Ajax callback function. Uses Fetch API."
             }
           ],
           "superclass": {
@@ -567,7 +588,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that progressively enhances native HTML5 <form> validation.",
           "name": "WebUIFormValidate",
           "members": [
             {
@@ -612,7 +633,8 @@
                     "text": "MouseEvent"
                   }
                 }
-              ]
+              ],
+              "description": "Handle web component event listeners."
             },
             {
               "kind": "method",
@@ -630,7 +652,8 @@
                     "text": "Event"
                   }
                 }
-              ]
+              ],
+              "description": "Handle form submission."
             },
             {
               "kind": "method",
@@ -640,7 +663,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Handle form reset."
             },
             {
               "kind": "method",
@@ -658,7 +682,8 @@
                     "text": "Event"
                   }
                 }
-              ]
+              ],
+              "description": "Handle blur event on form fields."
             },
             {
               "kind": "method",
@@ -676,7 +701,8 @@
                     "text": "any"
                   }
                 }
-              ]
+              ],
+              "description": "Show validation error messages, and add appropriate ARIA properties/states."
             },
             {
               "kind": "method",
@@ -694,7 +720,8 @@
                     "text": "any"
                   }
                 }
-              ]
+              ],
+              "description": "Remove validation error messages."
             },
             {
               "kind": "field",
@@ -737,7 +764,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that makes a componenent clickable by following a primary link.",
           "name": "WebUIMakeClickable",
           "members": [
             {
@@ -764,7 +791,8 @@
                     "text": "MouseEvent"
                   }
                 }
-              ]
+              ],
+              "description": "Handle web component event listeners."
             }
           ],
           "superclass": {
@@ -799,7 +827,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that progressively enhances the native HTML <dialog> element, managing opening/closing and keyboard focus.",
           "name": "WebUIModal",
           "members": [
             {
@@ -850,7 +878,8 @@
                     "text": "KeyboardEvent"
                   }
                 }
-              ]
+              ],
+              "description": "Handle web component event listeners."
             },
             {
               "kind": "method",
@@ -860,7 +889,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Setup accessibility attributes."
             },
             {
               "kind": "method",
@@ -870,7 +900,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Set focus on modal content when <dialog> is opened."
             },
             {
               "kind": "method",
@@ -880,7 +911,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Close modal."
             },
             {
               "kind": "method",
@@ -898,7 +930,8 @@
                     "text": "MouseEvent"
                   }
                 }
-              ]
+              ],
+              "description": "Handle global 'click' event to close modal."
             }
           ],
           "superclass": {
@@ -933,7 +966,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that turns a container into a (dismissable) notification.",
           "name": "WebUINotify",
           "members": [
             {
@@ -952,7 +985,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Handle web component event listeners."
             }
           ],
           "superclass": {
@@ -987,7 +1021,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that progressively enhances native HTML popovers, falling back to <webui-disclosure> behaviour.",
           "name": "WebUIPopover",
           "members": [
             {
@@ -1064,6 +1098,7 @@
                   }
                 }
               ],
+              "description": "Handle web component event listeners.",
               "inheritedFrom": {
                 "name": "WebUIDisclosure",
                 "module": "src/javascript/web-components/webui-disclosure.ts"
@@ -1078,6 +1113,7 @@
                   "text": "void"
                 }
               },
+              "description": "Setup accessibility attributes.",
               "inheritedFrom": {
                 "name": "WebUIDisclosure",
                 "module": "src/javascript/web-components/webui-disclosure.ts"
@@ -1100,6 +1136,7 @@
                   }
                 }
               ],
+              "description": "Generate a random string using a given prefix.",
               "inheritedFrom": {
                 "name": "WebUIDisclosure",
                 "module": "src/javascript/web-components/webui-disclosure.ts"
@@ -1123,6 +1160,7 @@
                   }
                 }
               ],
+              "description": "Hide disclosure content.",
               "inheritedFrom": {
                 "name": "WebUIDisclosure",
                 "module": "src/javascript/web-components/webui-disclosure.ts"
@@ -1145,6 +1183,7 @@
                   }
                 }
               ],
+              "description": "Handle global 'keyup' event to close disclosure.",
               "inheritedFrom": {
                 "name": "WebUIDisclosure",
                 "module": "src/javascript/web-components/webui-disclosure.ts"
@@ -1167,6 +1206,7 @@
                   }
                 }
               ],
+              "description": "Handle global 'click' event to close disclosure.",
               "inheritedFrom": {
                 "name": "WebUIDisclosure",
                 "module": "src/javascript/web-components/webui-disclosure.ts"
@@ -1206,7 +1246,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that progressively enhances a native HTML <datalist> search component, fetching results from an API endpoint.",
           "name": "WebUIPredictiveSearch",
           "members": [
             {
@@ -1249,12 +1289,14 @@
                     "text": "SubmitEvent"
                   }
                 }
-              ]
+              ],
+              "description": "Handle web component event listeners."
             },
             {
               "kind": "field",
               "name": "handleInput",
-              "privacy": "private"
+              "privacy": "private",
+              "description": "Ajax callback function. Uses Fetch API."
             }
           ],
           "superclass": {
@@ -1289,7 +1331,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that progressively enhances HTML <table> elements by wrapping them with an overflowing container.",
           "name": "WebUIProse",
           "members": [
             {
@@ -1308,7 +1350,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Add table wrapper and accessibility properties."
             }
           ],
           "superclass": {
@@ -1343,7 +1386,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that progressively enhances HTML <input type=\"range\"> elements by displaying the value inside an <output>.",
           "name": "WebUIRangeInput",
           "members": [
             {
@@ -1370,7 +1413,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Handle web component event listeners."
             },
             {
               "kind": "method",
@@ -1394,7 +1438,8 @@
                     "text": "HTMLOutputElement"
                   }
                 }
-              ]
+              ],
+              "description": "Update range <input> and <output> values."
             },
             {
               "kind": "field",
@@ -1433,7 +1478,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that enables a share <button> to use the native Share API, falling back to a <webui-disclosure> containing a URL that can be copied to clipboard.",
           "name": "WebUIShare",
           "members": [
             {
@@ -1508,7 +1553,8 @@
                     "text": "MouseEvent"
                   }
                 }
-              ]
+              ],
+              "description": "Handle web component event listeners."
             },
             {
               "kind": "method",
@@ -1518,7 +1564,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Use native Share API, or fallback to <webui-disclosure>."
             },
             {
               "kind": "method",
@@ -1536,7 +1583,8 @@
                     "text": "HTMLInputElement"
                   }
                 }
-              ]
+              ],
+              "description": "Fallback behaviour. Allows URL to be copied to clipboard."
             }
           ],
           "superclass": {
@@ -1571,7 +1619,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that progressively enhances a set of in-page HTML <a> elements into an accessible tab interface.",
           "name": "WebUITabs",
           "members": [
             {
@@ -1614,7 +1662,8 @@
                     "text": "MouseEvent"
                   }
                 }
-              ]
+              ],
+              "description": "Handle web component click event listener."
             },
             {
               "kind": "method",
@@ -1638,7 +1687,8 @@
                     "text": "number"
                   }
                 }
-              ]
+              ],
+              "description": "Handle web component keyboard event listener. Prevent viewport scrolling when tab focus changes."
             },
             {
               "kind": "method",
@@ -1648,7 +1698,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Setup tabs structure. Add accessibility attributes."
             }
           ],
           "superclass": {
@@ -1683,7 +1734,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that updates the ARIA state of an HTML <button role=\"switch\"> when clicked.",
           "name": "WebUIToggle",
           "members": [
             {
@@ -1702,7 +1753,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Handle constructor() event listeners."
             }
           ],
           "superclass": {
@@ -1737,7 +1789,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Class. Web component that uses a native HTML <dialog> to create a simple \"lightbox\", containing an embedded video inside a lazy-loaded <iframe>.",
           "name": "WebUIVideoPlayer",
           "members": [
             {
@@ -1780,7 +1832,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Handle web component event listeners."
             },
             {
               "kind": "method",
@@ -1790,7 +1843,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Setup <iframe> attributes for lazy loading."
             },
             {
               "kind": "method",
@@ -1800,7 +1854,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Lazy load <iframe> when play button is clicked."
             },
             {
               "kind": "method",
@@ -1810,7 +1865,8 @@
                 "type": {
                   "text": "void"
                 }
-              }
+              },
+              "description": "Stop video playing when modal is closed. Uses MutationObserver to detect when <dialog> 'open' attribute is removed. See https://bugs.chromium.org/p/chromium/issues/detail?id=1481718#c1. Note that this \"fix\" does not work in Firefox."
             }
           ],
           "superclass": {

@@ -1,5 +1,5 @@
 /**
- * Class. Custom element
+ * Class. Web component that uses a native HTML <dialog> to create a simple "lightbox", containing an embedded video inside a lazy-loaded <iframe>.
  */
 class WebUIVideoPlayer extends HTMLElement {
     private btnPlay: HTMLButtonElement | null;

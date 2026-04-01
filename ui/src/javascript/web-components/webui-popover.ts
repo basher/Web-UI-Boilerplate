@@ -1,7 +1,8 @@
 import WebUIDisclosure from './webui-disclosure';
 
 /**
- * Class. Custom element
+ * Class. Web component that progressively enhances native HTML popovers, falling back to <webui-disclosure> behaviour.
+ * @extends WebUIDisclosure.
  */
 class WebUIPopover extends WebUIDisclosure {
     private browserSupportsPopover: boolean;

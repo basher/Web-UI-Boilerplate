@@ -1,5 +1,5 @@
 /**
- * Class. Custom element
+ * Class. Web component that shows/hides content.
  */
 class WebUIDisclosure extends HTMLElement {
     protected trigger: HTMLButtonElement | null;

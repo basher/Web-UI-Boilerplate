@@ -1,5 +1,5 @@
 /**
- * Class. Custom element
+ * Class. Web component that progressively enhances a set of in-page HTML <a> elements into an accessible tab interface.
  */
 class WebUITabs extends HTMLElement {
     private tablist: HTMLElement | null;
