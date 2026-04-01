@@ -3,6 +3,7 @@
 @import 'webui-disclosure';
 @import 'webui-fetch-html';
 @import 'webui-make-clickable';
+@import 'webui-modal';
 @import 'webui-notify';
 @import 'webui-popover';
 @import 'webui-predictive-search';
