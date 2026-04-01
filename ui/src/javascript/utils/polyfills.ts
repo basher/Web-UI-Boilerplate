@@ -1,11 +1,9 @@
-/*
-    Import polyfills/ponyfills (for legacy browsers).
+/**
+ * Browsers polyfills. Called in 'javascript/index.ts'.
+ */
 
-    Please refer to "browserSupportsAllFeatures()" function in "javascript/config/browser-supports-features.ts".
-*/
-
-// Polyfill for Invoker Commands API.
+// Invoker Commands API.
 import 'invokers-polyfill';
 
-// Polyfill for scrollend event.
+// Scrollend event.
 import 'scrollyfills';

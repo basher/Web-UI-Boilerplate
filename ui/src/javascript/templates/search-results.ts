@@ -1,4 +1,5 @@
 /**
+ * Template for search results.
  * @param {object} data - Array of matched search terms
  * @returns {string}
  * */

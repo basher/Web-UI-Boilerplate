@@ -17,7 +17,7 @@ import WebUITabs from './web-components/webui-tabs';
 import WebUIVideoPlayer from './web-components/webui-video-player';
 
 /**
- * @description Define Web Components (but only if not already defined).
+ * Define Web Components (but only if not already defined).
  */
 export const uiInit = (): void => {
     if (!customElements.get('webui-ajax-loader')) {

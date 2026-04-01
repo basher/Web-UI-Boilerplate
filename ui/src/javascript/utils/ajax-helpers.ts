@@ -1,7 +1,8 @@
 import main from '../config/main';
 
 /**
- * Function - handle Fetch aborts/timeouts, using AbortController with a timeout - see https://developer.mozilla.org/en-US/docs/Web/API/AbortController.
+ * @function ajaxAbortHandler
+ * Handle Fetch aborts/timeouts, using AbortController with a timeout - see https://developer.mozilla.org/en-US/docs/Web/API/AbortController.
  *
  * @param {HTMLElement} [ajaxContainer] - DOM node into which Ajax loader is injected.
  * @param {boolean | HTMLElement} [showAjaxLoader] - show Ajax loader (by default, in the Ajax container, otherwise in the specified DOM node).
@@ -36,7 +37,8 @@ export const ajaxAbortHandler = (arg: AjaxAbort): AbortSignal => {
 };
 
 /**
- * Function - handle Ajax errors.
+ * @function ajaxErrorHandler
+ * Handle Ajax errors
  *
  * @param {string} error - Ajax error text.
  * @param {HTMLElement} [ajaxContainer] - DOM node into which Ajax error text is injected.
@@ -66,11 +68,13 @@ export const ajaxErrorHandler = (arg: AjaxError): void => {
 
 /**
  * @function ajaxEventHandler
- * Function to handle Ajax events
+ * Handle Ajax events
+ *
  * @param {HTMLElement} ajaxTrigger - element that triggers the Ajax request
  * @param {string} eventType - event type that triggers the Ajax request
  * @param {Function} ajaxCallback - callback function that handles the Ajax request
  *  * @param {string} ajaxUrl - URL of data to be fetched (e.g. HTML fragment or API endpoint)
+ *
  * @returns {void}
  */
 interface AjaxEvent {
