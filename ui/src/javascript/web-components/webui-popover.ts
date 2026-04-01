@@ -32,7 +32,7 @@ class WebUIPopover extends WebUIDisclosure {
     }
 
     /**
-     * @description Setup event listeners and accessibility attributes, as per <webui-disclosure>, but only if browser does not fully support popover.
+     * Setup event listeners and accessibility attributes, as per <webui-disclosure>, but only if browser does not fully support popover.
      */
     public connectedCallback(): void {
         if (this.browserSupportsPopover) return;

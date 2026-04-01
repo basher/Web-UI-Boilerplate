@@ -24,7 +24,7 @@ class WebUIFormValidate extends HTMLElement {
     }
 
     /**
-     * @description Handle web component event listeners.
+     * Handle web component event listeners.
      */
     public handleEvent(e: MouseEvent): void {
         if (e.type === 'submit') {
@@ -41,7 +41,7 @@ class WebUIFormValidate extends HTMLElement {
     }
 
     /**
-     * @description Handle form submission.
+     * Handle form submission.
      */
     private handleSubmit(e: Event): void {
         if (!this.form?.checkValidity()) {
@@ -62,7 +62,7 @@ class WebUIFormValidate extends HTMLElement {
     }
 
     /**
-     * @description Handle form reset.
+     * Handle form reset.
      */
     private handleReset(): void {
         if (!this.form?.checkValidity()) {
@@ -75,7 +75,7 @@ class WebUIFormValidate extends HTMLElement {
     }
 
     /**
-     * @description Handle blur event on form fields.
+     * Handle blur event on form fields.
      */
     private handleBlur(e: Event): void {
         // Need to use 'any' type as 'checkValidity' & 'type' properties do not exist on 'HTMLElement'.
@@ -91,7 +91,7 @@ class WebUIFormValidate extends HTMLElement {
     }
 
     /**
-     * @description Show validation error messages, and add appropriate ARIA properties/states.
+     * Show validation error messages, and add appropriate ARIA properties/states.
      */
     private showError(field: any): void {
         const errorMsg = document.createElement('span');
@@ -129,7 +129,7 @@ class WebUIFormValidate extends HTMLElement {
     }
 
     /**
-     * @description Remove validation error messages.
+     * Remove validation error messages.
      */
     private removeError(field: any): void {
         const fieldWrapper = field.closest('.form__field');

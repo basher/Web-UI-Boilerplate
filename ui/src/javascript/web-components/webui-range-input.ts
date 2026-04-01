@@ -18,7 +18,7 @@ class WebUIRangeInput extends HTMLElement {
     }
 
     /**
-     * @description Handle web component event listeners.
+     * Handle web component event listeners.
      */
     public handleEvent(): void {
         this.rangeInput &&
@@ -27,7 +27,7 @@ class WebUIRangeInput extends HTMLElement {
     }
 
     /**
-     * @description Update range <input> and <output> values.
+     * Update range <input> and <output> values.
      */
     private handleValidRanges(
         range: HTMLInputElement,

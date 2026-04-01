@@ -1,5 +1,5 @@
 /**
- * Class. Custom element
+ * Class. Custom element that renders an animated loader while Ajax requests are being handled.
  */
 class WebUIAjaxLoader extends HTMLElement {
     constructor() {

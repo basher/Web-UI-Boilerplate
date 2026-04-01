@@ -12,14 +12,14 @@ class WebUIProse extends HTMLElement {
     }
 
     /**
-     * @description Setup table wrapper.
+     * Setup table wrapper.
      */
     public connectedCallback(): void {
         this.wrapTables();
     }
 
     /**
-     * @description Add table wrapper and accessibility properties.
+     * Add table wrapper and accessibility properties.
      */
     private wrapTables(): void {
         this.tables.forEach((table) => {

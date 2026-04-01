@@ -26,7 +26,7 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
     - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint).
     - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
 - Where appropriate, additional NPM packages have been installed according to the `parser`, `extends`, `plugins` and `rules` fields in these configs:
-    - `.eslintrc.js`
+    - `.eslintrc.cjs`
     - `.stylelintrc`
     - `.prettierrc`
 

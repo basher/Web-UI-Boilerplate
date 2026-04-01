@@ -1,5 +1,5 @@
 /**
- * Class. Custom element
+ * Class. Custom element that progressively enhances the default CSS carousel.
  */
 class WebUICarousel extends HTMLElement {
     private carousel: HTMLUListElement | null;
@@ -33,7 +33,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Initialise carousel. Setup event listeners, buttons, slide counters and focus management.
+     * Initialise carousel. Setup event listeners, buttons, slide counters and focus management.
      */
     public connectedCallback(): void {
         this.setVisibleSlide();
@@ -51,7 +51,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Handle web component event listeners.
+     * Handle web component event listeners.
      */
     public handleEvent(e: KeyboardEvent | UIEvent): void {
         const evtKey = e as KeyboardEvent;
@@ -67,7 +67,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Use Intersection Observer API to identify visible slides, and manage focus states.
+     * Use Intersection Observer API to identify visible slides, and manage focus states.
      */
     private setVisibleSlide(): void {
         const observerSettings = {
@@ -110,7 +110,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Update slide counter.
+     * Update slide counter.
      */
     private updateSlideCounter(): void {
         if (this.slideCounter) {
@@ -119,7 +119,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Show slide counter.
+     * Show slide counter.
      */
     private showSlideCount(): void {
         this.slideCounter &&
@@ -127,7 +127,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Show slide counter pips.
+     * Show slide counter pips.
      */
     private showSlideCountPips(): void {
         const counterPips = document.createElement('p');
@@ -150,7 +150,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Show previous & next buttons.
+     * Show previous & next buttons.
      */
     private showPrevNextButtons(): void {
         const buttonGroup = document.createElement('div');
@@ -183,7 +183,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Get current slide number.
+     * Get current slide number.
      */
     private getCurrentSlide(): number {
         // Store references to visible & current slides.
@@ -204,7 +204,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Go to next slide.
+     * Go to next slide.
      */
     private goToPrevSlide(): void {
         const prevSlide = this.getCurrentSlide();
@@ -217,7 +217,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Go to previous slide.
+     * Go to previous slide.
      */
     private goToNextSlide(): void {
         const nextSlide = this.getCurrentSlide();
@@ -233,7 +233,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Set current slide, and update counters.
+     * Set current slide, and update counters.
      */
     private setCurrentSlideCounter(i: number): void {
         if (this.slideCounter) {
@@ -253,7 +253,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Scroll to current slide.
+     * Scroll to current slide.
      */
     private scrollToSlide(slide: HTMLElement, i: number): void {
         const scrollWidth = this.carousel?.scrollWidth || 0;
@@ -272,7 +272,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description If any interactive elements inside slides receive focus, update current slide & counter.
+     * If any interactive elements inside slides receive focus, update current slide & counter.
      */
     private handleFocus(): void {
         this.slides.forEach((slide: HTMLElement, i: number) => {
@@ -286,7 +286,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Move carousel to previous or next slide with arrow keys.
+     * Move carousel to previous or next slide with arrow keys.
      */
     private handleKeyboardEvent(evtKey: KeyboardEvent): void {
         switch (evtKey.code) {
@@ -304,7 +304,7 @@ class WebUICarousel extends HTMLElement {
     }
 
     /**
-     * @description Update slide counters when carousel is scrolled (swiped) on touch devices.
+     * Update slide counters when carousel is scrolled (swiped) on touch devices.
      */
     private handleScrollEvent(): void {
         this.setCurrentSlideCounter(this.getCurrentSlide() - 1);

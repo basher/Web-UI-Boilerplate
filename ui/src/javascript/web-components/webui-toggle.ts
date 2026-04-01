@@ -14,7 +14,7 @@ class WebUIToggle extends HTMLElement {
     }
 
     /**
-     * @description Handle constructor() event listeners.
+     * Handle constructor() event listeners.
      */
     public handleEvent(): void {
         const isChecked = this.switch?.getAttribute('aria-checked') === 'true';

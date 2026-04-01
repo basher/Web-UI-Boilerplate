@@ -34,7 +34,7 @@ class WebUIPredictiveSearch extends HTMLElement {
     }
 
     /**
-     * @description Handle web component event listeners.
+     * Handle web component event listeners.
      */
     public handleEvent(e: SubmitEvent): void {
         // For demo purposes, prevent actual form submission. In reality, need to process form data (i.e. the selected option's value).
@@ -42,7 +42,7 @@ class WebUIPredictiveSearch extends HTMLElement {
     }
 
     /**
-     * @description Ajax callback function. Uses Fetch API.
+     * Ajax callback function. Uses Fetch API.
      */
     private handleInput = (
         ajaxContainer: HTMLElement,

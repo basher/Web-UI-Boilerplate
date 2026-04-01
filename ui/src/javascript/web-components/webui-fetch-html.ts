@@ -26,7 +26,7 @@ class WebUIFetchHtml extends HTMLElement {
     }
 
     /**
-     * @description Ajax callback function. Uses Fetch API.
+     * Ajax callback function. Uses Fetch API.
      */
     private handleClick(ajaxContainer: HTMLElement, ajaxUrl: string): void {
         const showAjaxLoader = true;

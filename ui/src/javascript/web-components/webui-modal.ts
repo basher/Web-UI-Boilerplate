@@ -25,7 +25,7 @@ class WebUIModal extends HTMLElement {
     }
 
     /**
-     * @description Setup global event listeners which are not part of this web component. Setup accessibility attributes.
+     * Setup global event listeners which are not part of this web component. Setup accessibility attributes.
      */
     public connectedCallback(): void {
         document.addEventListener('click', (e: MouseEvent) =>
@@ -36,14 +36,14 @@ class WebUIModal extends HTMLElement {
     }
 
     /**
-     * @description Remove global event listeners.
+     * Remove global event listeners.
      */
     public disconnectedCallback(): void {
         document.removeEventListener('click', this.handleGlobalClick);
     }
 
     /**
-     * @description Handle web component event listeners.
+     * Handle web component event listeners.
      */
     public handleEvent(e: KeyboardEvent): void {
         const target = e.currentTarget as HTMLButtonElement;
@@ -64,14 +64,14 @@ class WebUIModal extends HTMLElement {
     }
 
     /**
-     * @description Setup accessibility attributes.
+     * Setup accessibility attributes.
      */
     private setupA11y(): void {
         this.btnModalOpen?.setAttribute('aria-haspopup', 'dialog');
     }
 
     /**
-     * @description Set focus on modal content when <dialog> is opened.
+     * Set focus on modal content when <dialog> is opened.
      */
     private handleOpen(): void {
         if (!this.dialog?.open) {
@@ -84,14 +84,14 @@ class WebUIModal extends HTMLElement {
     }
 
     /**
-     * @description Close modal.
+     * Close modal.
      */
     private handleClose(): void {
         this.dialog?.close();
     }
 
     /**
-     * @description Handle global 'click' event to close modal.
+     * Handle global 'click' event to close modal.
      */
     private handleGlobalClick(e: MouseEvent): void {
         const target = e.target as HTMLElement;

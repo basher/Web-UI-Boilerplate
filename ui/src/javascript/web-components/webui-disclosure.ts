@@ -19,7 +19,7 @@ class WebUIDisclosure extends HTMLElement {
     }
 
     /**
-     * @description Setup event listeners and accessibility attributes.
+     * Setup event listeners and accessibility attributes.
      */
     public connectedCallback(): void {
         // Moved trigger event listener from constructor() so that <webui-popover> fallback behaviour works.
@@ -36,7 +36,7 @@ class WebUIDisclosure extends HTMLElement {
     }
 
     /**
-     * @description Remove global event listeners.
+     * Remove global event listeners.
      */
     public disconnectedCallback(): void {
         document.removeEventListener('keyup', this.handleGlobalKeyup);
@@ -44,7 +44,7 @@ class WebUIDisclosure extends HTMLElement {
     }
 
     /**
-     * @description Handle web component event listeners.
+     * Handle web component event listeners.
      */
     public handleEvent(e: MouseEvent): void {
         const target = e.currentTarget as HTMLElement;
@@ -56,7 +56,7 @@ class WebUIDisclosure extends HTMLElement {
     }
 
     /**
-     * @description Setup accessibility attributes.
+     * Setup accessibility attributes.
      */
     protected setupA11y(): void {
         this.trigger?.removeAttribute('hidden');
@@ -77,7 +77,7 @@ class WebUIDisclosure extends HTMLElement {
     }
 
     /**
-     * @description Generate a random string using a given prefix.
+     * Generate a random string using a given prefix.
      */
     private randomString(string: string): string {
         const random = `${string}-${Math.random()
@@ -88,7 +88,7 @@ class WebUIDisclosure extends HTMLElement {
     }
 
     /**
-     * @description Hide disclosure content.
+     * Hide disclosure content.
      */
     private hideContent(e?: KeyboardEvent): void {
         if (this.trigger?.getAttribute('aria-expanded') === 'true') {
@@ -103,7 +103,7 @@ class WebUIDisclosure extends HTMLElement {
     }
 
     /**
-     * @description Handle global 'keyup' event to close disclosure.
+     * Handle global 'keyup' event to close disclosure.
      */
     protected handleGlobalKeyup(e: KeyboardEvent): void {
         if (this.bindEscapeKey && e.code === 'Escape') {
@@ -112,7 +112,7 @@ class WebUIDisclosure extends HTMLElement {
     }
 
     /**
-     * @description Handle global 'click' event to close disclosure.
+     * Handle global 'click' event to close disclosure.
      */
     protected handleGlobalClick(e: MouseEvent): void {
         if (this.bindClickOutside) {

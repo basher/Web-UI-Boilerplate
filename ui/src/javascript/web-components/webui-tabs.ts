@@ -31,14 +31,14 @@ class WebUITabs extends HTMLElement {
     }
 
     /**
-     * @description Create tabs.
+     * Create tabs.
      */
     public connectedCallback(): void {
         this.createTabs();
     }
 
     /**
-     * @description Handle web component click event listener.
+     * Handle web component click event listener.
      */
     private bindClickEvent(e: MouseEvent): void {
         e.preventDefault();
@@ -66,7 +66,7 @@ class WebUITabs extends HTMLElement {
     }
 
     /**
-     * @description Handle web component keyboard event listener. Prevent viewport scrolling when tab focus changes.
+     * Handle web component keyboard event listener. Prevent viewport scrolling when tab focus changes.
      */
     private bindKeyboardEvent(e: KeyboardEvent, index: number): void {
         switch (e.code) {
@@ -104,7 +104,7 @@ class WebUITabs extends HTMLElement {
     }
 
     /**
-     * @description Setup tabs structure. Add accessibility attributes.
+     * Setup tabs structure. Add accessibility attributes.
      */
     private createTabs(): void {
         // Hide all tabpanels initially.

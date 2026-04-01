@@ -21,7 +21,7 @@ class WebUIVideoPlayer extends HTMLElement {
     }
 
     /**
-     * @description Setup <iframe> attributes. Handle modal closing.
+     * Setup <iframe> attributes. Handle modal closing.
      */
     public connectedCallback(): void {
         this.lazyload();
@@ -29,14 +29,14 @@ class WebUIVideoPlayer extends HTMLElement {
     }
 
     /**
-     * @description Handle web component event listeners.
+     * Handle web component event listeners.
      */
     public handleEvent(): void {
         this.handlePlay();
     }
 
     /**
-     * @description Setup <iframe> attributes for lazy loading.
+     * Setup <iframe> attributes for lazy loading.
      */
     private lazyload(): void {
         // 'data-src' attribute is used later in 'handlePlay()' method.
@@ -49,7 +49,7 @@ class WebUIVideoPlayer extends HTMLElement {
     }
 
     /**
-     * @description Lazy load <iframe> when play button is clicked.
+     * Lazy load <iframe> when play button is clicked.
      */
     private handlePlay(): void {
         // Reset iframe 'src' back to original value.
@@ -69,7 +69,7 @@ class WebUIVideoPlayer extends HTMLElement {
     }
 
     /**
-     * @description Stop video playing when modal is closed. Uses MutationObserver to detect when <dialog> 'open' attribute is removed. See https://bugs.chromium.org/p/chromium/issues/detail?id=1481718#c1. Note that this "fix" does not work in Firefox.
+     * Stop video playing when modal is closed. Uses MutationObserver to detect when <dialog> 'open' attribute is removed. See https://bugs.chromium.org/p/chromium/issues/detail?id=1481718#c1. Note that this "fix" does not work in Firefox.
      */
     private handleModalClose(): void {
         const targetNode = this.dialog;

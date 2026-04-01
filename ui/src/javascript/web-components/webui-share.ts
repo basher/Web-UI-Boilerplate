@@ -33,7 +33,7 @@ class WebUIShare extends HTMLElement {
     }
 
     /**
-     * @description Handle web component event listeners.
+     * Handle web component event listeners.
      */
     public handleEvent(e: MouseEvent): void {
         const target = e.currentTarget as HTMLButtonElement;
@@ -50,7 +50,7 @@ class WebUIShare extends HTMLElement {
     }
 
     /**
-     * @description Use native Share API, or fallback to <webui-disclosure>.
+     * Use native Share API, or fallback to <webui-disclosure>.
      */
     private handleShare(): void {
         if (navigator.share) {
@@ -68,7 +68,7 @@ class WebUIShare extends HTMLElement {
     }
 
     /**
-     * @description Fallback behaviour. Allows URL to be copied to clipboard.
+     * Fallback behaviour. Allows URL to be copied to clipboard.
      */
     private handleCopyUrl(fallbackInput: HTMLInputElement): void {
         if (!navigator.clipboard) {
