@@ -31,10 +31,11 @@
 
     /* stylelint-disable-next-line order/order */
     @supports (container-type: scroll-state) {
-        /* TODO: @parcel/transformer-css bug - see https://github.com/parcel-bundler/parcel/issues/10288. */
         @container carousel scroll-state(snapped: inline) {
-            box-shadow: inset 0 0 0 var(--webui-border-width-l)
-                var(--webui-color-primary-500);
+            > * {
+                box-shadow: inset 0 0 0 var(--webui-border-width-l)
+                    var(--webui-color-primary-500);
+            }
         }
     }
 }

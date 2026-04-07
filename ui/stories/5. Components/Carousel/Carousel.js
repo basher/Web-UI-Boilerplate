@@ -20,77 +20,89 @@ ${style}
         tabindex="0"
     >
         <li class="carousel__slide">
-            Content 1
-            <br>Slides have equal height
-            <br><br>
-            <a
-                href="#"
-                class="button"
-                data-button="text"
-                data-button-style="primary"
-            >
-                Link 1
-            </a>
+            <div>
+                Content 1
+                <br>Slides have equal height
+                <br><br>
+                <a
+                    href="#"
+                    class="button"
+                    data-button="text"
+                    data-button-style="primary"
+                >
+                    Link 1
+                </a>
+            </div>
         </li>
         <li class="carousel__slide">
-            Content 2
-            <br><br>
-            <a
-                href="#"
-                class="button"
-                data-button="text"
-                data-button-style="primary"
-            >
-                Link 2
-            </a>
+            <div>
+                Content 2
+                <br><br>
+                <a
+                    href="#"
+                    class="button"
+                    data-button="text"
+                    data-button-style="primary"
+                >
+                    Link 2
+                </a>
+            </div>
         </li>
         <li class="carousel__slide">
-            Content 3
-            <br><br>
-            <a
-                href="#"
-                class="button"
-                data-button="text"
-                data-button-style="primary"
-            >
-                Link 3
-            </a>
+            <div>
+                Content 3
+                <br><br>
+                <a
+                    href="#"
+                    class="button"
+                    data-button="text"
+                    data-button-style="primary"
+                >
+                    Link 3
+                </a>
+            </div>
         </li>
         <li class="carousel__slide">
-            Content 4
-            <br><br>
-            <a
-                href="#"
-                class="button"
-                data-button="text"
-                data-button-style="primary"
-            >
-                Link 4
-            </a>
+            <div>
+                Content 4
+                <br><br>
+                <a
+                    href="#"
+                    class="button"
+                    data-button="text"
+                    data-button-style="primary"
+                >
+                    Link 4
+                </a>
+            </div>
         </li>
         <li class="carousel__slide">
-            Content 5
-            <br><br>
-            <a
-                href="#"
-                class="button"
-                data-button="text"
-                data-button-style="primary"
-            >
-                Link 5
-            </a>
+            <div>
+                Content 5
+                <br><br>
+                <a
+                    href="#"
+                    class="button"
+                    data-button="text"
+                    data-button-style="primary"
+                >
+                    Link 5
+                </a>
+            </div>
         </li>
         <li class="carousel__slide">
-            Content 6
-            <br><br>
-            <a
-                href="#"
-                class="button"
-                data-button="text"
-                data-button-style="primary"
-            >
-                Link 6
-            </a>
+            <div>
+                Content 6
+                <br><br>
+                <a
+                    href="#"
+                    class="button"
+                    data-button="text"
+                    data-button-style="primary"
+                >
+                    Link 6
+                </a>
+            </div>
         </li>
     </ul>
     <p class="carousel__instructions">
@@ -112,40 +124,46 @@ ${style}
         tabindex="0"
     >
          <li class="carousel__slide">
-            Fullwidth 1
-            <br><br>
-            <a
-                href="#"
-                class="button"
-                data-button="text"
-                data-button-style="primary"
-            >
-                Link 1
-            </a>
+            <div>
+                Fullwidth 1
+                <br><br>
+                <a
+                    href="#"
+                    class="button"
+                    data-button="text"
+                    data-button-style="primary"
+                >
+                    Link 1
+                </a>
+            </div>
         </li>
         <li class="carousel__slide">
-            Fullwidth 2
-            <br><br>
-            <a
-                href="#"
-                class="button"
-                data-button="text"
-                data-button-style="primary"
-            >
-                Link 2
-            </a>
+            <div>
+                Fullwidth 2
+                <br><br>
+                <a
+                    href="#"
+                    class="button"
+                    data-button="text"
+                    data-button-style="primary"
+                >
+                    Link 2
+                </a>
+            </div>
         </li>
         <li class="carousel__slide">
-            Fullwidth 3
-            <br><br>
-            <a
-                href="#"
-                class="button"
-                data-button="text"
-                data-button-style="primary"
-            >
-                Link 3
-            </a>
+            <div>
+                Fullwidth 3
+                <br><br>
+                <a
+                    href="#"
+                    class="button"
+                    data-button="text"
+                    data-button-style="primary"
+                >
+                    Link 3
+                </a>
+            </div>
         </li>
     </ul>
     <p class="carousel__instructions">
