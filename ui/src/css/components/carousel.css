@@ -1,6 +1,8 @@
 .carousel {
     --slide-min-width: 18.75rem;
     --slide-gap: var(--webui-gutter-m);
+    --slide-current-shadow: inset 0 0 0 var(--webui-border-width-l)
+        var(--webui-color-primary-500);
 
     display: flex;
     gap: var(--slide-gap, 1rem);
@@ -29,13 +31,15 @@
         max-inline-size: none;
     }
 
+    > * {
+        block-size: 100%;
+    }
+
     /* stylelint-disable-next-line order/order */
-    @supports (container-type: scroll-state) {
-        @container carousel scroll-state(snapped: inline) {
-            > * {
-                box-shadow: inset 0 0 0 var(--webui-border-width-l)
-                    var(--webui-color-primary-500);
-            }
+    @container carousel scroll-state(snapped: inline) {
+        > * {
+            /* For demo purposes. */
+            box-shadow: var(--slide-current-shadow);
         }
     }
 }

@@ -1,9 +1,12 @@
 const style = /*html*/ `
 <style>
-    .carousel > * {
+    .carousel__slide {
         background: hsl(51, 100%, 45%, 15%);
         border: 1px dashed hsl(51, 100%, 45%);
-        padding: 2rem;
+
+        > * {
+            padding: 2rem;
+        }
     }
 </style>
 `;
