@@ -16,7 +16,7 @@
     }
 
     &:active {
-        transform: var(--webui-active-transform);
+        scale: var(--webui-active-scale);
     }
 }
 

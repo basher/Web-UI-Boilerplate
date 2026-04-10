@@ -10,7 +10,7 @@ webui-toggle {
         padding: 0;
 
         &:active {
-            transform: none;
+            scale: none;
         }
     }
 

@@ -24,7 +24,7 @@ Config settings.
 
     /* :hover and :active */
     --webui-hover-opacity: 0.8;
-    --webui-active-transform: scale(0.975);
+    --webui-active-scale: 0.975;
 
     /* Borders. */
     --webui-border-width-s: 0.0625rem;

@@ -47,7 +47,7 @@ Apply skin (or "theming" layer) to components.
 
         &::after {
             inset-block-start: 100%;
-            transform: rotate(180deg);
+            rotate: 180deg;
         }
     }
 }

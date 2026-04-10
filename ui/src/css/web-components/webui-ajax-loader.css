@@ -19,10 +19,6 @@ webui-ajax-loader {
 }
 
 @keyframes loader-animation {
-    0% {
-        transform: rotateZ(0deg);
-    }
-
     100% {
         transform: rotateZ(360deg);
     }
@@ -31,18 +27,18 @@ webui-ajax-loader {
 @keyframes svg-animation {
     0%,
     25% {
+        rotate: 0;
         stroke-dashoffset: 280;
-        transform: rotate(0);
     }
 
     50%,
     75% {
+        rotate: 45deg;
         stroke-dashoffset: 75;
-        transform: rotate(45deg);
     }
 
     100% {
+        rotate: 360deg;
         stroke-dashoffset: 280;
-        transform: rotate(360deg);
     }
 }

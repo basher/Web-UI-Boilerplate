@@ -66,11 +66,6 @@
     > .nav__list {
         align-items: center;
     }
-
-    /* stylelint-disable-next-line no-descending-specificity */
-    .icon {
-        transition: transform var(--webui-animation-fast);
-    }
 }
 
 /* Hamburger navigation. */
