@@ -33,9 +33,10 @@ Just plain vanilla code. 😜
 > To test how these enhanced components behave without JavaScript (in local `DEV` mode only), comment out both calls to `uiInit()` in `./ui/src/javascript/index.ts` while running the local Parcel server.
 
 ### Accessibility testing
-Storybook comes with 2 default accessibility testing tools:
-- `Accessibility addon`. This is in the Storybook `addons` toolbar, and is built on the same [AxeCore API](https://www.deque.com/axe/) that Lighthouse uses.
+Storybook has the following accessibility testing tools:
+- `Accessibility addon`. This is in the Storybook `addons` toolbar, and allows you to manually test each story individually. It is built on the same [AxeCore API](https://www.deque.com/axe/) that Lighthouse uses.
 - `Vision simulator`. This is in Storybook's main toolbar at the top of each story page.
+- `Vitest addon`. This is in Storybook's left sidebar, and runs a complete set of tests against all stories. See [official docs](https://storybook.js.org/docs/writing-tests/accessibility-testing#run-accessibility-tests).
 
 ## CSS theme override
 ### 1. Using Parcel bundler in local `DEV` mode
