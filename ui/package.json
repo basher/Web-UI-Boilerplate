@@ -27,6 +27,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "publish-storybook": "npm install && npm run bundle-all-themes && npm run build-storybook",
+    "test-storybook": "vitest --project=storybook",
     "prepare": "cd .. && husky install ui/.husky",
     "cem-analyze": "cem analyze --config custom-elements-manifest.config.mjs"
   },
