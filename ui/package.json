@@ -2,7 +2,7 @@
   "name": "web-ui-boilerplate",
   "description": "UI boilerplate for websites & web apps using vanilla HTML/CSS/JavaScript, powered by Storybook, bundled by Parcel.",
   "author": "basher",
-  "version": "6.3.11",
+  "version": "6.4.0",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
     "app": {}
   },
   "browserslist": [
-    "defaults and fully supports es6-module"
+    "baseline 2024"
   ],
   "devDependencies": {
     "@babel/eslint-parser": "^7.28.5",
@@ -43,6 +43,7 @@
     "@storybook/addon-a11y": "^10.0.8",
     "@storybook/addon-docs": "^10.0.8",
     "@storybook/addon-links": "^10.0.8",
+    "@storybook/addon-vitest": "^10.3.5",
     "@storybook/html-vite": "^10.0.8",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
@@ -67,7 +68,11 @@
     "stylelint-order": "^6.0.4",
     "stylelint-prettier": "^5.0.3",
     "svgo": "^3.3.2",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "vitest": "^4.1.4",
+    "playwright": "^1.59.1",
+    "@vitest/browser-playwright": "^4.1.4",
+    "@vitest/coverage-v8": "^4.1.4"
   },
   "dependencies": {
     "invokers-polyfill": "^0.5.7",

@@ -1,8 +1,5 @@
 const style = /*html*/ `
 <style>
-    .sb-show-main {
-        background: Canvas;
-    }
     .grid {
         grid-template-columns: repeat(auto-fit, 17.5rem);
     }

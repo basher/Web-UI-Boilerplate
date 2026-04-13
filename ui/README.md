@@ -55,7 +55,7 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 - [ES6 template literal CSS syntax highlighter](https://marketplace.visualstudio.com/items?itemName=bashmish.es6-string-css).
 
 ## Supported browsers
-- The [default browserslist configuration](https://github.com/browserslist/browserslist#best-practices) has been defined in `package.json`.
+- A [custom browserslist configuration](https://browsersl.ist/) has been defined in `package.json`.
 - Run `npx browserslist` to see a list of supported browsers.
 
 ## Explanation of the Parcel bundler `start` command
