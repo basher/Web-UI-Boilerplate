@@ -38,7 +38,7 @@ From `ui` directory:
 
 ## Linking to Parcel-bundled CSS/JavaScript in Storybook
 - There is a difference between `development` and `production` environments in terms of the locations of the compiled CSS/JavaScript.
-- The `<link>` and `<script>` tags in `ui/.storybook/preview-head.html` use placeholders, which reference environment variables defined in `ui/.env` files:
+- The `<link>` and `<script>` tags in `ui/.storybook/main.js` use placeholders, which reference environment variables defined in `ui/.env` files:
 
 ```
 <link href="%STORYBOOK_CSS_PATH%" rel="stylesheet" />
