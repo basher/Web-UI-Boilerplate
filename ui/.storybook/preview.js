@@ -65,7 +65,7 @@ const preview = {
         (Story, context) => {
             const stylesheet = `build/ui/${context.globals.theme}/css/index.css`;
 
-            // Only include theme CSS when running in published Storybook.
+            // Only include theme CSS when running in published Storybook, using Vite environment variables.
             const linkCSS =
                 import.meta.env.MODE === 'production'
                     ? `<link rel="stylesheet" href=${stylesheet} />`
