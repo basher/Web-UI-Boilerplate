@@ -36,9 +36,11 @@ Just plain vanilla code. 😜
 Storybook has the following accessibility testing tools:
 - `Accessibility addon`. This is in the Storybook `addons` toolbar, and allows manual testing of each story individually. It is built on the [AxeCore API](https://www.deque.com/axe/).
 - `Vision simulator`. This is in Storybook's main toolbar at the top of each story page.
-- `Vitest addon`. This is available in Storybook's left sidebar (in local `DEV` mode only), and runs a complete set of tests against all stories. It can also be run from the CLI with `npm run test-storybook`. See [official docs](https://storybook.js.org/docs/writing-tests/accessibility-testing#run-accessibility-tests).
+- `Vitest addon`. See [official docs](https://storybook.js.org/docs/writing-tests/accessibility-testing#run-accessibility-tests).
+    - This is in Storybook's left sidebar (in local `DEV` mode only), and runs a complete set of tests against all stories.
+    - It can also be run from the CLI. `cd ui` then `npm run test-storybook`.
 
-> NOTE: I have raised a [Github issue for Vitest](https://github.com/storybookjs/storybook/issues/34613), as it is not currently working as expected.
+> NOTE: I have raised a [Github issue for Vitest](https://github.com/storybookjs/storybook/issues/34613).
 
 ## CSS theme override
 ### 1. Using Parcel bundler in local `DEV` mode
