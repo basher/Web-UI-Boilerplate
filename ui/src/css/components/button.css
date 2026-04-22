@@ -1,7 +1,5 @@
 .button {
-    background: transparent;
     color: inherit;
-    cursor: pointer;
     display: inline-block;
     padding: var(--webui-gutter-s);
     text-decoration: none;

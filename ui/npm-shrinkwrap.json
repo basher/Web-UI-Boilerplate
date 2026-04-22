@@ -1,12 +1,12 @@
 {
   "name": "web-ui-boilerplate",
-  "version": "6.4.1",
+  "version": "6.4.2",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "web-ui-boilerplate",
-      "version": "6.4.1",
+      "version": "6.4.2",
       "license": "ISC",
       "dependencies": {
         "invokers-polyfill": "^0.5.7",
