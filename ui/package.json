@@ -2,7 +2,7 @@
   "name": "web-ui-boilerplate",
   "description": "UI boilerplate for websites & web apps using vanilla HTML/CSS/JavaScript, powered by Storybook, bundled by Parcel.",
   "author": "basher",
-  "version": "6.4.3",
+  "version": "6.4.4",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -88,9 +88,6 @@
       "stylelint",
       "prettier --write"
     ]
-  },
-  "@parcel/transformer-css": {
-    "errorRecovery": true
   },
   "customElements": "public/custom-elements.json"
 }

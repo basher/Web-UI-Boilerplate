@@ -13,7 +13,7 @@ export default defineConfig({
             {
                 extends: true,
                 plugins: [
-                    // The plugin will run tests for the stories defined in your Storybook config
+                    // The plugin will run tests for the stories defined in your Storybook config.
                     storybookTest({
                         configDir: path.join(dirname, '.storybook'),
                     }),
@@ -26,6 +26,9 @@ export default defineConfig({
                         provider: playwright(),
                         instances: [{ browser: 'chromium' }],
                     },
+                    // To fix tests hanging.
+                    fileParallelism: false,
+                    isolate: false,
                 },
             },
         ],
