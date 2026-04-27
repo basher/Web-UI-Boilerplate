@@ -116,7 +116,7 @@ export const FormServerValidationHtml = () => /*html*/ `
                 Optional error summary.<br/>
                 For example, rendered in the HTML on server postback.
             </p>
-            <ul>
+            <ul class="stack">
                 <li>
                     <a href="#input-tel">Error text... tel</a>
                 </li>

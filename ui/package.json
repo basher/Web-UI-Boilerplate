@@ -2,7 +2,7 @@
   "name": "web-ui-boilerplate",
   "description": "UI boilerplate for websites & web apps using vanilla HTML/CSS/JavaScript, powered by Storybook, bundled by Parcel.",
   "author": "basher",
-  "version": "6.4.4",
+  "version": "6.4.5",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "publish-storybook": "npm install && npm run bundle-all-themes && npm run build-storybook",
-    "test-storybook": "vitest --project=storybook --run --reporter verbose",
+    "test-storybook": "vitest --project=storybook --run --no-cache",
     "prepare": "cd .. && husky install ui/.husky",
     "cem-analyze": "cem analyze --config custom-elements-manifest.config.mjs"
   },
@@ -70,10 +70,10 @@
     "stylelint-prettier": "^5.0.3",
     "svgo": "^3.3.2",
     "typescript": "^4.9.5",
-    "vitest": "^4.1.4",
+    "vitest": "^4.1.5",
     "playwright": "^1.59.1",
-    "@vitest/browser-playwright": "^4.1.4",
-    "@vitest/coverage-v8": "^4.1.4"
+    "@vitest/browser-playwright": "^4.1.5",
+    "@vitest/coverage-v8": "^4.1.5"
   },
   "dependencies": {
     "invokers-polyfill": "^0.5.7",
