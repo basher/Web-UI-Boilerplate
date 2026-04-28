@@ -57,8 +57,10 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      # Only run on successful deployments
-      - if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+  test:
+    # Only run on successful deployments
+    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+    steps:
       - name: Run tests
         run: npm run test-storybook
       # Pass the Storybook URL as an environment variable
