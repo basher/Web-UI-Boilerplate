@@ -45,7 +45,7 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
 > ```
 
 ### Git pre-commit hooks
-Configured using `husky` and `lint-staged` to ensure no linting errors are committed to the remote codebase.
+Configured using `husky` to run `lint-staged` and `vitest` to ensure no linting or accessibility errors are committed to the remote codebase.
 
 > NOTE:
 > Run `npm run prepare` from `ui` directory to install husky shell script. Do this just ONCE after cloning the repo.
@@ -96,6 +96,16 @@ Configured using `husky` and `lint-staged` to ensure no linting errors are commi
 
 ### Re-ordering stories in sidebar navigation
 - All stories and docs are ordered according to the `storySort` configuration in `ui/.storybook/preview.js`.
+
+### Accessibility testing
+Storybook has the following accessibility testing tools:
+- `Accessibility addon`. This is in the Storybook `addons` toolbar, and allows manual testing of each story individually. It is built on the [AxeCore API](https://www.deque.com/axe/).
+- `Vision simulator`. This is in Storybook's main toolbar at the top of each story page.
+- `Vitest addon`. See [official docs](https://storybook.js.org/docs/writing-tests/accessibility-testing#run-accessibility-tests).
+    - This is in Storybook's left sidebar (in local `DEV` mode only), and runs a complete set of tests against all stories.
+    - Vitest can also be run from the CLI with `npm run test-storybook` in the `ui` directory.
+
+> NOTE: There is a [Github issue for Vitest](https://github.com/storybookjs/storybook/issues/34613), and  another [issue for Storybook addon-a11y](https://github.com/storybookjs/storybook/issues/34647).
 
 ## Custom Elements Manifest
 - The `npm start` command has been modified to include `cem-analyze`.
