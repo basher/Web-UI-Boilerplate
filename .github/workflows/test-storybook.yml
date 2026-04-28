@@ -16,7 +16,7 @@ jobs:
       # https://playwright.dev/docs/docker#pull-the-image
       image: mcr.microsoft.com/playwright:v1.58.2-noble
     # Only run on successful deployments
-    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+    # if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
