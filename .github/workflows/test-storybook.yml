@@ -1,0 +1,25 @@
+name: Test Storybook using GitHub Pages
+
+# Only run when a deployment status is emitted
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Build and Publish Storybook using GitHub Pages"]
+    types:
+      - completed
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      # Make sure to grab the latest version of the Playwright image
+      # https://playwright.dev/docs/docker#pull-the-image
+      image: mcr.microsoft.com/playwright:v1.58.2-noble
+    # Only run on successful deployments
+    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+    steps:
+      - name: Run tests
+        run: npm run test-storybook
+      # Pass the Storybook URL as an environment variable
+        env:
+          SB_URL: '${{ github.event.deployment_status.environment_url }}'
