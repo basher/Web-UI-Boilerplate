@@ -23,10 +23,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      # Make sure to grab the latest version of the Playwright image
-      # https://playwright.dev/docs/docker#pull-the-image
-      image: mcr.microsoft.com/playwright:v1.58.2-noble
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -58,6 +54,11 @@ jobs:
         uses: actions/deploy-pages@v4
 
   test:
+    runs-on: ubuntu-latest
+    container:
+      # Make sure to grab the latest version of the Playwright image
+      # https://playwright.dev/docs/docker#pull-the-image
+      image: mcr.microsoft.com/playwright:v1.58.2-noble
     # Only run on successful deployments
     if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
     steps:
