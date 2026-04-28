@@ -16,6 +16,7 @@ export default defineConfig({
                     // The plugin will run tests for the stories defined in your Storybook config.
                     storybookTest({
                         configDir: path.join(dirname, '.storybook'),
+                        storybookUrl: process.env.SB_URL,
                     }),
                 ],
                 test: {
