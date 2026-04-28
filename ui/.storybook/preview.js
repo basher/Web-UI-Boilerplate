@@ -30,17 +30,14 @@ const preview = {
             // 'off' - skip a11y checks entirely
             test: 'error',
             context: 'body',
-            config: {
-                // TODO: Temporarily disable the following rules. CLI wrongly reports errors, whereas Storybook UI passes.
-                rules: [
-                    {
-                        id: 'target-size',
-                        enabled: false,
-                    }
-                ],
-            },
+            config: {},
             options: {
                 runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice', 'wcag22a', 'wcag22aa'],
+                // TODO: Temporarily disable the following rules. CLI wrongly reports errors, whereas Storybook UI passes. See https://github.com/storybookjs/storybook/issues/34613
+                rules: {
+                    'target-size': { enabled: false },
+                    'region': { enabled: false },
+                },
             },
         },
     },
