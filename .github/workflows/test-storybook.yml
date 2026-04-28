@@ -16,8 +16,22 @@ jobs:
     # Only run on successful deployments
     if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          # Add dependency caching
+          cache: 'npm'
+          cache-dependency-path: 'ui/npm-shrinkwrap.json'
+
       - name: Run tests
-        run: npm run test-storybook
+        run: |
+          cd ui
+          npm install
+          npm run test-storybook
       # Pass the Storybook URL as an environment variable
         env:
           SB_URL: '${{ github.event.deployment_status.environment_url }}'
