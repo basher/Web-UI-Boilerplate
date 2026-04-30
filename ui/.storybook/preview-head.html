@@ -10,12 +10,11 @@
 <script>
     const link = document.createElement('link');
     const script = document.createElement('script');
-    const host = window.location.hostname;
 
-    const cssPath = host === 'localhost'
+    const cssPath = window.location.hostname === 'localhost'
         ? 'index.css'
         : 'build/ui/default/css/index.css';
-    const jsPath = host === 'localhost'
+    const jsPath = window.location.hostname === 'localhost'
         ? 'index.js'
         : 'build/ui/default/javascript/index.js';
 

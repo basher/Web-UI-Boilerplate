@@ -113,7 +113,7 @@ class WebUITabs extends HTMLElement {
         });
 
         // Update tablist properties.
-        //this.tablist?.setAttribute('role', 'tablist');
+        this.tablist?.setAttribute('role', 'tablist');
 
         // Update tab properties.
         this.tabTriggers.forEach((tabTrigger, index) => {
