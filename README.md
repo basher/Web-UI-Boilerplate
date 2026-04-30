@@ -38,26 +38,7 @@ From `ui` directory:
 
 ## Linking to Parcel-bundled CSS/JavaScript in Storybook
 - There is a difference between `development` and `production` environments in terms of the locations of the compiled CSS/JavaScript.
-- The `<link>` and `<script>` tags in `ui/.storybook/main.js` use placeholders, which reference environment variables defined in `ui/.env` files:
-
-```
-<link href="%STORYBOOK_CSS_PATH%" rel="stylesheet" />
-<script defer src="%STORYBOOK_JS_PATH%"></script>
-```
-
-### DEVELOPMENT
-Uses the Storybook dev server, with paths defined in `ui/.env.development`:
-```
-STORYBOOK_CSS_PATH=index.css
-STORYBOOK_JS_PATH=index.js
-```
-
-### PRODUCTION
-Uses whatever build folder has been defined for the website / web application in `ui/.env.production`:
-```
-STORYBOOK_CSS_PATH=build/ui/default/css/index.css
-STORYBOOK_JS_PATH=build/ui/default/javascript/index.js
-```
+- The `<link>` and `<script>` tags in `ui/.storybook/preview-head.html` use different filepaths.
 
 ## Linking to Parcel-bundled CSS/JavaScript in local DEV environment (for example, .Net, PHP)
 In order to use the bundled CSS/JavaScript in `localhost`, both `npm run start:theme...` and `npm run storybook` need to be run.
