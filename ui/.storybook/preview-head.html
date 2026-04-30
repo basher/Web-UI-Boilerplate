@@ -6,15 +6,15 @@
 <!-- Baseline Status -->
 <script src="https://cdn.jsdelivr.net/npm/baseline-status@1/baseline-status.min.js" type="module"></script>
 
-<!-- Load CSS/JS that Parcel has bundled. In DEV mode, Storybook uses 'localhost:6006'. -->
+<!-- Load CSS/JS that Parcel has bundled. -->
 <script>
     const link = document.createElement('link');
     const script = document.createElement('script');
 
-    const cssPath = window.location.host === 'localhost:6006'
+    const cssPath = window.location.hostname === 'localhost'
         ? 'index.css'
         : 'build/ui/default/css/index.css';
-    const jsPath = window.location.host === 'localhost:6006'
+    const jsPath = window.location.hostname === 'localhost'
         ? 'index.js'
         : 'build/ui/default/javascript/index.js';
 
