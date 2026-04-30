@@ -31,6 +31,8 @@ const config = {
     },
 
     // Load CSS/JS that Parcel has bundled, using environment variables.
+    // TODO: temporarily comment out because Vitest doesn't load any CSS/JS.
+    /*
     previewHead: (head) => `
         ${head}
         ${
@@ -40,5 +42,6 @@ const config = {
             `
         }
     `,
+    */
 };
 export default config;
