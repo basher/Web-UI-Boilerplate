@@ -14,8 +14,10 @@
     --color-accent-red: oklch(48.29% 0.0892 26.34);
     --color-accent-yellow: oklch(82.25% 0.0892 96.1742);
     --color-accent-blue: oklch(71.69% 0.0892 226.5552);
+
     /**
-     * @tokens-end
+     * @tokens Typography
+     * @presenter FontFamily
      */
     --font-family: robotomedium;
     --font-family-title: robotoregular;

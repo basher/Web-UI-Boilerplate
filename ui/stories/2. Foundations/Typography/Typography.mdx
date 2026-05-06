@@ -1,9 +1,16 @@
 import { Meta } from '@storybook/addon-docs/blocks';
+import { DesignTokenDocBlock } from 'storybook-design-token';
+
 import * as Typography from './Typography.stories';
 
 <Meta of={Typography} />
 
-# Fluid responsive typography
+# Typography design tokens
+> NOTE: The font families below are **NOT** being updated by [Storybook Design Token addon](https://github.com/UX-and-I/storybook-design-token) when switching between themes, but component stories are updated.
+
+<DesignTokenDocBlock categoryName="Typography" maxHeight={800} viewType="table" />
+
+## Fluid responsive typography
 
 - [Fluid typography](https://piccalil.li/tutorial/fluid-typography-with-css-clamp) has been implemented by leveraging the [CSS clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp) function, resulting in
     - minimal usage of `font-size` declarations,
@@ -17,10 +24,6 @@ body { font-size: var(--font-size-body); }
 maps to:
 ```
 :root { --font-size-body: var(--type-step-0); }
-```
-which equates to:
-```
-:root { --type-step-0: clamp(1rem, 0.875rem + 0.4167vw, 1.25rem); }
 ```
 
 ## Prose content (e.g. from CMS editor)
