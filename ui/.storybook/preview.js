@@ -79,6 +79,12 @@ const preview = {
             return `${linkCSS}${Story()}`;
         },
     ],
+
+    // storybook-design-token addon parameters.
+    designToken: {
+        viewType: 'table',
+        tabs: ['Colors'],
+    }
 };
 
 export default preview;

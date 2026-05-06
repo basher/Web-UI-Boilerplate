@@ -22,7 +22,8 @@ const config = {
         },
         '@etchteam/storybook-addon-status',
         '@vueless/storybook-dark-mode',
-        '@storybook/addon-vitest'
+        '@storybook/addon-vitest',
+        'storybook-design-token'
     ],
 
     framework: {

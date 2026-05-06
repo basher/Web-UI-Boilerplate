@@ -1,14 +1,15 @@
-import { Meta, Canvas } from '@storybook/addon-docs/blocks';
-import * as Colours from './Colours.stories';
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DesignTokenDocBlock } from 'storybook-design-token';
 
-<Meta of={Colours} />
+<Meta title="Foundations/Colours" />
 
 # Colour palette / swatch
+> NOTE: The colours in the swatch below are **NOT** being updated by [Storybook Design Token addon](https://github.com/UX-and-I/storybook-design-token) when switching between themes, but component stories are updated.
 
-<Canvas of={Colours.Colours} />
+<DesignTokenDocBlock categoryName="Colors" maxHeight={500} viewType="table" />
 
 ## Dark mode
-- Colours will be updated automatically if the operating system preference for `dark mode` is selected. This triggers the CSS `prefers-color-scheme: dark` media query and/or `light-dark()` function.
+- Colours in the component stories will be updated automatically if the operating system preference for `dark mode` is selected. This triggers the CSS `prefers-color-scheme: dark` media query and/or `light-dark()` function.
 - Specific dark mode colour tokens can also be defined in `./ui/src/css/tokens.css`.
 
 ### Storybook dark mode addon
@@ -19,18 +20,18 @@ import * as Colours from './Colours.stories';
 ## Using `OKLCH()` to define colours
 > See [why OKLCH is better than HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) and [OKLCH color picker tool](https://oklch.com/#70,0.1,293,100).
 
-- For example, primitive tokens are declared like this:
+- For example, primitive tokens are declared like this (notice the use of [relative colors](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) to increase the **lightness** of `--color-brand-100`):
 ```
 :root {
-    /* rebeccapurple */
     --color-brand: oklch(44.03% 0.1603 303.37);
+    --color-brand-100: oklch(from var(--color-brand) calc(l + 0.3) c h);
 }
 ```
-- Semantic tokens are declared like this (notice the use of [relative colors](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) to increase the **lightness** of `--color-primary-100`):
+- Semantic tokens are declared like this:
 ```
 :root {
     --webui-color-primary-500: var(--color-brand);
-    --webui-color-primary-100: oklch(from var(--color-brand) calc(l + 0.2) c h);
+    --webui-color-primary-100: var(--color-brand-100);
 }
 ```
 ## Browser compatibility
