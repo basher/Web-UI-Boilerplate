@@ -12,8 +12,7 @@ webui-carousel {
 
     &:defined {
         .carousel__slide:not(.is-visible) {
-            filter: grayscale(60%);
-            opacity: 0.8;
+            filter: grayscale(80%);
         }
     }
 
