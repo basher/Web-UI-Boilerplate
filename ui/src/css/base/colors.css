@@ -6,23 +6,23 @@ Color settings.
 */
 :root {
     /* Theme brand color */
-    --webui-color-primary-500: var(--color-brand);
+    --webui-color-primary-500: var(--color-brand-500);
     --webui-color-primary-100: var(--color-brand-100);
 
     /* Neutral colors */
     --webui-color-neutral-900: var(--color-neutral-900);
     --webui-color-neutral-700: var(--color-neutral-700);
-    --webui-color-neutral-500: var(--color-neutral);
+    --webui-color-neutral-500: var(--color-neutral-500);
     --webui-color-neutral-300: var(--color-neutral-300);
     --webui-color-neutral-100: var(--color-neutral-100);
 
     /* Accent colors */
-    --webui-color-success-500: var(--color-accent-green);
+    --webui-color-success-500: var(--color-accent-green-500);
     --webui-color-success-100: var(--color-accent-green-100);
-    --webui-color-error-500: var(--color-accent-red);
+    --webui-color-error-500: var(--color-accent-red-500);
     --webui-color-error-100: var(--color-accent-red-100);
-    --webui-color-notify-500: var(--color-accent-yellow);
+    --webui-color-notify-500: var(--color-accent-yellow-500);
     --webui-color-notify-100: var(--color-accent-yellow-100);
-    --webui-color-focus-500: var(--color-accent-blue);
+    --webui-color-focus-500: var(--color-accent-blue-500);
     --webui-color-focus-100: var(--color-accent-blue-100);
 }

@@ -13,25 +13,37 @@ The comment blocks are used by the Storybook's https://github.com/UX-and-I/story
      * @tokens Colors
      * @presenter Color
      */
-    --color-brand: oklch(44.03% 0.1603 303.37); /* rebeccapurple */
-    --color-brand-100: oklch(from var(--color-brand) calc(l + 0.3) c h);
+    --color-brand-500: oklch(44.03% 0.1603 303.37); /* rebeccapurple */
+    --color-brand-100: oklch(from var(--color-brand-500) calc(l + 0.3) c h);
 
-    --color-neutral-900: oklch(from var(--color-neutral) calc(l - 0.45) c h);
-    --color-neutral-700: oklch(from var(--color-neutral) calc(l - 0.25) c h);
-    --color-neutral: oklch(59.82% 0 0);
-    --color-neutral-300: oklch(from var(--color-neutral) calc(l + 0.25) c h);
-    --color-neutral-100: oklch(from var(--color-neutral) calc(l + 0.38) c h);
-
-    --color-accent-green: oklch(75.14% 0.1603 142.55);
-    --color-accent-green-100: oklch(from var(--color-accent-green) l c h / 10%);
-    --color-accent-red: oklch(48.29% 0.1603 26.34);
-    --color-accent-red-100: oklch(from var(--color-accent-red) l c h / 10%);
-    --color-accent-yellow: oklch(82.25% 0.1603 96.1742);
-    --color-accent-yellow-100: oklch(
-        from var(--color-accent-yellow) l c h / 10%
+    --color-neutral-900: oklch(
+        from var(--color-neutral-500) calc(l - 0.45) c h
     );
-    --color-accent-blue: oklch(71.69% 0.1603 226.5552);
-    --color-accent-blue-100: oklch(from var(--color-accent-blue) l c h / 10%);
+    --color-neutral-700: oklch(
+        from var(--color-neutral-500) calc(l - 0.25) c h
+    );
+    --color-neutral-500: oklch(59.82% 0 0);
+    --color-neutral-300: oklch(
+        from var(--color-neutral-500) calc(l + 0.25) c h
+    );
+    --color-neutral-100: oklch(
+        from var(--color-neutral-500) calc(l + 0.38) c h
+    );
+
+    --color-accent-green-500: oklch(75.14% 0.1603 142.55);
+    --color-accent-green-100: oklch(
+        from var(--color-accent-green-500) l c h / 10%
+    );
+    --color-accent-red-500: oklch(48.29% 0.1603 26.34);
+    --color-accent-red-100: oklch(from var(--color-accent-red-500) l c h / 10%);
+    --color-accent-yellow-500: oklch(82.25% 0.1603 96.1742);
+    --color-accent-yellow-100: oklch(
+        from var(--color-accent-yellow-500) l c h / 10%
+    );
+    --color-accent-blue-500: oklch(71.69% 0.1603 226.5552);
+    --color-accent-blue-100: oklch(
+        from var(--color-accent-blue-500) l c h / 10%
+    );
 
     /**
      * @tokens Typography

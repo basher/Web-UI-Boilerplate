@@ -82,8 +82,7 @@ const preview = {
 
     // storybook-design-token addon parameters.
     designToken: {
-        viewType: 'table',
-        tabs: ['Colors', 'Typography', 'Spacing'],
+        disable: true,
     }
 };
 
