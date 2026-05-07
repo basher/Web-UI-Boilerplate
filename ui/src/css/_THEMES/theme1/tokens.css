@@ -13,7 +13,7 @@
     --color-accent-green-500: oklch(75.14% 0.0892 142.55);
     --color-accent-red-500: oklch(48.29% 0.0892 26.34);
     --color-accent-yellow-500: oklch(82.25% 0.0892 96.1742);
-    --color-accent-blue-500c: oklch(71.69% 0.0892 226.5552);
+    --color-accent-blue-500: oklch(71.69% 0.0892 226.5552);
 
     /**
      * @tokens Typography

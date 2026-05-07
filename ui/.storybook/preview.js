@@ -79,11 +79,6 @@ const preview = {
             return `${linkCSS}${Story()}`;
         },
     ],
-
-    // storybook-design-token addon parameters.
-    designToken: {
-        disable: true,
-    }
 };
 
 export default preview;
