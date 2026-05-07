@@ -5,10 +5,22 @@ import * as Typography from './Typography.stories';
 
 <Meta of={Typography} />
 
-# Typography design tokens
-> NOTE: The font families below are **NOT** being updated by [Storybook Design Token addon](https://github.com/UX-and-I/storybook-design-token) when switching between themes, but component stories are updated.
+# Typography
+## Design tokens
 
-<DesignTokenDocBlock categoryName="Typography" maxHeight={800} viewType="table" />
+### Font family
+<DesignTokenDocBlock categoryName="Font family" viewType="table" showSearch={false} />
+
+### Font size
+<DesignTokenDocBlock categoryName="Font size" viewType="table" showSearch={false} />
+
+### Line height
+<DesignTokenDocBlock categoryName="Line height" viewType="table" showSearch={false} />
+
+### Theme1 overrides
+> NOTE: The design tokens above are **NOT** being updated by [Storybook Design Token addon](https://github.com/UX-and-I/storybook-design-token) when switching between themes, but component stories are updated dynamcially. Therefore, theme1 overrides are documented below.
+
+<DesignTokenDocBlock categoryName="Theme1 override typography" viewType="table" showSearch={false} />
 
 ## Fluid responsive typography
 
@@ -19,11 +31,11 @@ import * as Typography from './Typography.stories';
 
 For example:
 ```
-body { font-size: var(--font-size-body); }
+body { font-size: var(--webui-font-size-body); }
 ```
 maps to:
 ```
-:root { --font-size-body: var(--type-step-0); }
+:root { --webui-font-size-body: var(--type-step-0); }
 ```
 
 ## Prose content (e.g. from CMS editor)

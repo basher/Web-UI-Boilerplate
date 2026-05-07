@@ -27,15 +27,15 @@ Config settings.
     --webui-active-scale: 0.975;
 
     /* Borders. */
-    --webui-border-width-s: 0.0625rem;
-    --webui-border-width-m: 0.125rem;
-    --webui-border-width-l: 0.25rem;
-    --webui-border-radius-s: 0.25rem;
+    --webui-border-width-s: var(--border-width-s);
+    --webui-border-width-m: var(--border-width-m);
+    --webui-border-width-l: var(--border-width-l);
+    --webui-border-radius-s: var(--border-radius-s);
 
     /* Icons. */
-    --webui-icon-size-s: 1rem;
-    --webui-icon-size-m: 1.5rem;
-    --webui-icon-size-l: 2rem;
+    --webui-icon-size-s: var(--icon-size-s);
+    --webui-icon-size-m: var(--icon-size-m);
+    --webui-icon-size-l: var(--icon-size-l);
 
     /* Animations. */
     --webui-animation-fast: 150ms;

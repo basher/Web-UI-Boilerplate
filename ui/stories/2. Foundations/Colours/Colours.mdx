@@ -3,10 +3,22 @@ import { DesignTokenDocBlock } from 'storybook-design-token';
 
 <Meta title="Foundations/Colours" />
 
-# Colour design tokens
-> NOTE: The colours in the swatch below are **NOT** being updated by [Storybook Design Token addon](https://github.com/UX-and-I/storybook-design-token) when switching between themes, but component stories are updated.
+# Colours
+## Design tokens
 
-<DesignTokenDocBlock categoryName="Colors" maxHeight={1500} viewType="table" />
+### Brand
+<DesignTokenDocBlock categoryName="Brand colours" viewType="table" showSearch={false} />
+
+### Neutral
+<DesignTokenDocBlock categoryName="Neutral colours" viewType="table" showSearch={false} />
+
+### Accent
+<DesignTokenDocBlock categoryName="Accent colours" viewType="table" showSearch={false} />
+
+### Theme1 overrides
+> NOTE: The design tokens above are **NOT** being updated by [Storybook Design Token addon](https://github.com/UX-and-I/storybook-design-token) when switching between themes, but component stories are updated dynamcially. Therefore, theme1 overrides are documented below.
+
+<DesignTokenDocBlock categoryName="Theme1 override colours" viewType="table" showSearch={false} />
 
 ## Dark mode
 - Colours in the component stories will be updated automatically if the operating system preference for `dark mode` is selected. This triggers the CSS `prefers-color-scheme: dark` media query and/or `light-dark()` function.
@@ -23,14 +35,14 @@ import { DesignTokenDocBlock } from 'storybook-design-token';
 - For example, primitive tokens are declared like this (notice the use of [relative colors](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) to increase the **lightness** of `--color-brand-100`):
 ```
 :root {
-    --color-brand: oklch(44.03% 0.1603 303.37);
-    --color-brand-100: oklch(from var(--color-brand) calc(l + 0.3) c h);
+    --color-brand-500: oklch(44.03% 0.1603 303.37);
+    --color-brand-100: oklch(from var(--color-brand-500) calc(l + 0.3) c h);
 }
 ```
 - Semantic tokens are declared like this:
 ```
 :root {
-    --webui-color-primary-500: var(--color-brand);
+    --webui-color-primary-500: var(--color-brand-500);
     --webui-color-primary-100: var(--color-brand-100);
 }
 ```

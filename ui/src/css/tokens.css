@@ -10,12 +10,16 @@ The comment blocks are used by the Storybook's https://github.com/UX-and-I/story
 */
 :root {
     /**
-     * @tokens Colors
-     * @presenter Color
-     */
+    * @tokens Brand colours
+    * @presenter Color
+    */
     --color-brand-500: oklch(44.03% 0.1603 303.37); /* rebeccapurple */
     --color-brand-100: oklch(from var(--color-brand-500) calc(l + 0.3) c h);
 
+    /**
+    * @tokens Neutral colours
+    * @presenter Color
+    */
     --color-neutral-900: oklch(
         from var(--color-neutral-500) calc(l - 0.45) c h
     );
@@ -30,6 +34,10 @@ The comment blocks are used by the Storybook's https://github.com/UX-and-I/story
         from var(--color-neutral-500) calc(l + 0.38) c h
     );
 
+    /**
+    * @tokens Accent colours
+    * @presenter Color
+    */
     --color-accent-green-500: oklch(75.14% 0.1603 142.55);
     --color-accent-green-100: oklch(
         from var(--color-accent-green-500) l c h / 10%
@@ -46,9 +54,9 @@ The comment blocks are used by the Storybook's https://github.com/UX-and-I/story
     );
 
     /**
-     * @tokens Typography
-     * @presenter FontFamily
-     */
+    * @tokens Font family
+    * @presenter FontFamily
+    */
     --font-fallback:
         -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
         Cantarell, 'Helvetica Neue', sans-serif;
@@ -58,12 +66,12 @@ The comment blocks are used by the Storybook's https://github.com/UX-and-I/story
         Menlo, Monaco, Consolas, 'Droid Sans Mono', 'Courier New', monospace;
 
     /**
-     * @tokens Typography
-     * @presenter FontSize
-     *
-     * Using fluid type scale.
-     * @link https://utopia.fyi/type/calculator?c=480,16,1.25,1440,20,1.333,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
-     */
+    * @tokens Font size
+    * @presenter FontSize
+    *
+    * Using fluid type scale.
+    * @link https://utopia.fyi/type/calculator?c=480,16,1.25,1440,20,1.333,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+    */
     --type-step--1: clamp(0.8rem, 0.7311rem + 0.2296vw, 0.9377rem);
     --type-step-0: clamp(1rem, 0.875rem + 0.4167vw, 1.25rem);
     --type-step-1: clamp(1.25rem, 1.0419rem + 0.6938vw, 1.6663rem);
@@ -74,17 +82,51 @@ The comment blocks are used by the Storybook's https://github.com/UX-and-I/story
     --type-step-6: clamp(3.8147rem, 2.2157rem + 5.3302vw, 7.0128rem);
 
     /**
-     * @tokens Spacing
-     * @presenter Spacing
-     *
-     * Using fluid space scale (One-up pairs).
-     * @link https://utopia.fyi/space/calculator?c=480,16,1.25,1440,20,1.333,6,1,&s=0.75|0.5,1.5|2|3,s-l&g=s,l,xl,12
-     */
+    * @tokens Line height
+    * @presenter LineHeight
+    */
+    --line-height-step-0: 1.5;
+    --line-height-step-1: 1.5;
+    --line-height-step-2: 1.3;
+    --line-height-step-3: 1.3;
+    --line-height-step-4: 1.2;
+    --line-height-step-5: 1.2;
+    --line-height-step-6: 1.2;
+
+    /**
+    * @tokens Spacing
+    * @presenter Spacing
+    *
+    * Using fluid space scale (One-up pairs).
+    * @link https://utopia.fyi/space/calculator?c=480,16,1.25,1440,20,1.333,6,1,&s=0.75|0.5,1.5|2|3,s-l&g=s,l,xl,12
+    */
     --space-2xs-xs: clamp(0.5rem, 0.2813rem + 0.7292vw, 0.9375rem);
     --space-xs-s: clamp(0.75rem, 0.5rem + 0.8333vw, 1.25rem);
     --space-s-m: clamp(1rem, 0.5625rem + 1.4583vw, 1.875rem);
     --space-m-l: clamp(1.5rem, 1rem + 1.6667vw, 2.5rem);
     --space-l-xl: clamp(2rem, 1.125rem + 2.9167vw, 3.75rem);
+
+    /**
+    * @tokens Borders
+    * @presenter Border
+    */
+    --border-width-s: 0.0625rem;
+    --border-width-m: 0.125rem;
+    --border-width-l: 0.25rem;
+
+    /**
+    * @tokens Borders
+    * @presenter BorderRadius
+    */
+    --border-radius-s: 0.25rem;
+
+    /**
+    * @tokens Icons
+    * @presenter Spacing
+    */
+    --icon-size-s: 1rem;
+    --icon-size-m: 1.5rem;
+    --icon-size-l: 2rem;
 }
 
 @media (prefers-color-scheme: dark) {
