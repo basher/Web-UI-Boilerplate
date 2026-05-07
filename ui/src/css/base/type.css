@@ -44,5 +44,5 @@ Font-face rules.
     --webui-line-height-xl: var(--line-height-step-6);
 
     /* Max line-length (aka measure) to improve readability of editorial content */
-    --webui-type-max-line-length: 65ch;
+    --webui-type-max-line-length: var(--type-max-line-length);
 }

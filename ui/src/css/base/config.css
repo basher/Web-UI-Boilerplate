@@ -5,7 +5,7 @@ Config settings.
 */
 :root {
     /* Layout. */
-    --webui-site-max-width: null;
+    --webui-site-max-width: var(--site-max-width);
 
     /* Spacing and gutters. Use for margin|padding, and gap in flex|grid layouts. */
     --webui-gutter-xs: var(--space-2xs-xs);
@@ -18,19 +18,20 @@ Config settings.
         - Uses transparent outline so high contrast mode works.
         - See https://css-tricks.com/the-focus-visible-trick/.
     */
-    --webui-focus-shadow: 0 0 0 var(--webui-border-width-l)
-        var(--webui-color-focus-500);
-    --webui-focus-outline: var(--webui-border-width-l) solid transparent;
+    --webui-focus-shadow: var(--focus-shadow);
+    --webui-focus-outline: var(--focus-outline);
 
     /* :hover and :active */
-    --webui-hover-opacity: 0.8;
-    --webui-active-scale: 0.975;
+    --webui-hover-opacity: var(--hover-opacity);
+    --webui-active-scale: var(--active-scale);
 
     /* Borders. */
     --webui-border-width-s: var(--border-width-s);
     --webui-border-width-m: var(--border-width-m);
     --webui-border-width-l: var(--border-width-l);
     --webui-border-radius-s: var(--border-radius-s);
+    --webui-border-radius-m: var(--border-radius-m);
+    --webui-border-radius-l: var(--border-radius-l);
 
     /* Icons. */
     --webui-icon-size-s: var(--icon-size-s);
@@ -38,9 +39,9 @@ Config settings.
     --webui-icon-size-l: var(--icon-size-l);
 
     /* Animations. */
-    --webui-animation-fast: 150ms;
-    --webui-animation-medium: 300ms;
-    --webui-animation-slow: 500ms;
+    --webui-animation-fast: var(--animation-fast);
+    --webui-animation-medium: var(--animation-medium);
+    --webui-animation-slow: var(--animation-slow);
 
     /* Miscellaneous. */
     --webui-media-aspect-ratio: 16/9;

@@ -108,7 +108,7 @@ The comment blocks are used by the Storybook's https://github.com/UX-and-I/story
 
     /**
     * @tokens Borders
-    * @presenter Border
+    * @presenter Spacing
     */
     --border-width-s: 0.0625rem;
     --border-width-m: 0.125rem;
@@ -119,6 +119,8 @@ The comment blocks are used by the Storybook's https://github.com/UX-and-I/story
     * @presenter BorderRadius
     */
     --border-radius-s: 0.25rem;
+    --border-radius-m: 0.5rem;
+    --border-radius-l: 1rem;
 
     /**
     * @tokens Icons
@@ -127,10 +129,44 @@ The comment blocks are used by the Storybook's https://github.com/UX-and-I/story
     --icon-size-s: 1rem;
     --icon-size-m: 1.5rem;
     --icon-size-l: 2rem;
+
+    /**
+    * @tokens Animation
+    */
+    --animation-fast: 150ms;
+    --animation-medium: 300ms;
+    --animation-slow: 500ms;
+
+    /**
+    * @tokens States
+    * @presenter Shadow
+    */
+    --focus-shadow: 0 0 0 var(--border-width-l) var(--color-accent-blue-500);
+
+    /**
+    * @tokens States
+    */
+    --focus-outline: var(--border-width-l) solid transparent;
+
+    /**
+    * @tokens States
+    */
+    --hover-opacity: 0.6;
+
+    /**
+    * @tokens States
+    */
+    --active-scale: 0.975;
+
+    /**
+    * @tokens Sizing maximum
+    */
+    --site-max-width: null;
+    --type-max-line-length: 65ch;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        /* Define dark mode colours here... */
+        /* Define dark mode colours here, if 'light-dark()' function doesn't provide adequate control over colours... */
     }
 }

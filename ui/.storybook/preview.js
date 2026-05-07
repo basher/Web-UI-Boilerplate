@@ -1,5 +1,6 @@
 /** @type { import('@storybook/html-vite').Preview } */
 import { themes } from 'storybook/theming';
+
 const preview = {
     parameters: {
         options: {
@@ -80,7 +81,7 @@ const preview = {
         },
     ],
 
-    // storybook-design-token addon parameters.
+    // Configure 'storybook-design-token' addon.
     designToken: {
         disable: true,
     }
