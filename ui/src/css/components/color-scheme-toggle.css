@@ -1,0 +1,11 @@
+.color-scheme-toggle {
+    /* Styles... */
+}
+
+html:has(.color-scheme-toggle [value='light']:checked) {
+    color-scheme: light;
+}
+
+html:has(.color-scheme-toggle [value='dark']:checked) {
+    color-scheme: dark;
+}

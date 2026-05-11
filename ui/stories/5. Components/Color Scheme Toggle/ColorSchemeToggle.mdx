@@ -1,0 +1,21 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as ColorSchemeToggle from './ColorSchemeToggle.stories';
+
+<Meta of={ColorSchemeToggle} />
+
+# Color Scheme Toggle
+- Simple CSS-only color scheme toggle component that uses the CSS `color-scheme` property.
+- The selected color scheme will not persist across page reloads.
+- See this [CSS Tricks article](https://css-tricks.com/come-to-the-light-dark-side/) for a detailed explanation.
+
+## Using `<select>`
+<Canvas of={ColorSchemeToggle.ColorSchemeToggleSelect} />
+
+## Using `<input type="radio">`
+<Canvas of={ColorSchemeToggle.ColorSchemeToggleRadio} />
+
+## Accessibility considerations
+- Off-black and off-white colors should be used for the dark and light color schemes, to reduce screen glare.
+
+## Browser compatibility
+<baseline-status featureId="color-scheme"></baseline-status>

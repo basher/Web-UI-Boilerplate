@@ -12,6 +12,7 @@
 }
 
 .sbdocs-a code {
+    /* stylelint-disable-next-line declaration-no-important */
     color: inherit !important;
 }
 
@@ -22,19 +23,19 @@
     [id='storybook-docs'] {
         color-scheme: light;
     }
-
-    [data-story-block='true'],
-    baseline-status {
-        color: initial;
-    }
 }
 
 @media (prefers-color-scheme: dark) {
     [id='storybook-docs'] {
         color-scheme: light;
     }
+}
 
-    [data-story-block='true'],
+[id='storybook-docs'] {
+    [data-story-block='true']:has(.color-scheme-toggle [value='dark']:checked) {
+        color-scheme: dark;
+    }
+
     baseline-status {
         color: initial;
     }

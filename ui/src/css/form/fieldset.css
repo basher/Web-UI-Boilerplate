@@ -1,5 +1,5 @@
 .fieldset {
-    --flex-gap: var(--webui-gutter-s);
+    --flex-gap: var(--webui-gutter-xs);
 
     flex-direction: column;
 }
