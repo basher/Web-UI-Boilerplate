@@ -340,6 +340,61 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/javascript/web-components/webui-color-scheme-toggle.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Class. Web component that progressively enhances the CSS-only color scheme toggle component.",
+          "name": "WebUIColorSchemeToggle",
+          "members": [
+            {
+              "kind": "field",
+              "name": "toggle",
+              "type": {
+                "text": "HTMLSelectElement | null"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleEvent",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "description": "Handle constructor() event listeners."
+            }
+          ],
+          "superclass": {
+            "name": "HTMLElement"
+          },
+          "tagName": "webui-color-scheme-toggle",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "webui-color-scheme-toggle",
+          "declaration": {
+            "name": "WebUIColorSchemeToggle",
+            "module": "src/javascript/web-components/webui-color-scheme-toggle.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "WebUIColorSchemeToggle",
+            "module": "src/javascript/web-components/webui-color-scheme-toggle.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/javascript/web-components/webui-disclosure.ts",
       "declarations": [
         {

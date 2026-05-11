@@ -1,6 +1,7 @@
 // Web Components.
 import WebUIAjaxLoader from './web-components/webui-ajax-loader';
 import WebUICarousel from './web-components/webui-carousel';
+import WebUIColorSchemeToggle from './web-components/webui-color-scheme-toggle';
 import WebUIDisclosure from './web-components/webui-disclosure';
 import WebUIFetchHtml from './web-components/webui-fetch-html';
 import WebUIFormValidate from './web-components/webui-form-validate';
@@ -25,6 +26,12 @@ export const uiInit = (): void => {
     }
     if (!customElements.get('webui-carousel')) {
         customElements.define('webui-carousel', WebUICarousel);
+    }
+    if (!customElements.get('webui-color-scheme-toggle')) {
+        customElements.define(
+            'webui-color-scheme-toggle',
+            WebUIColorSchemeToggle,
+        );
     }
     if (!customElements.get('webui-disclosure')) {
         customElements.define('webui-disclosure', WebUIDisclosure);

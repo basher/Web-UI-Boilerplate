@@ -1,5 +1,6 @@
 @import 'webui-ajax-loader';
 @import 'webui-carousel';
+@import 'webui-color-scheme-toggle';
 @import 'webui-disclosure';
 @import 'webui-fetch-html';
 @import 'webui-make-clickable';
