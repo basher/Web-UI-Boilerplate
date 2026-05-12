@@ -1,6 +1,9 @@
 select,
 ::picker(select) {
     appearance: base-select;
+
+    /* Bump line-height so that shadow root elements are not clipped. */
+    line-height: 1.05;
 }
 
 select {
