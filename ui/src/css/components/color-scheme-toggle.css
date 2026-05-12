@@ -9,3 +9,9 @@ html:has(.color-scheme-toggle [value='light']:checked) {
 html:has(.color-scheme-toggle [value='dark']:checked) {
     color-scheme: dark;
 }
+
+body:has(.color-scheme-toggle) {
+    transition:
+        background-color var(--webui-animation-slow),
+        color var(--webui-animation-slow);
+}
