@@ -16,9 +16,15 @@
     color: inherit !important;
 }
 
-/* In dark mode, force Storybook docs to use light mode so they're legible. */
+/*
+    In dark mode (either via Storybook toolbar button or user preference):
+    1. Force Storybook docs to always use light mode so they're legible.
+    2. Ensure all stories use dark mode, except color scheme toggle components.
+*/
 .dark {
-    color-scheme: dark;
+    &:not(:has(.color-scheme-toggle)) {
+        color-scheme: dark;
+    }
 
     [id='storybook-docs'] {
         color-scheme: light;
