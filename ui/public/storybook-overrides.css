@@ -18,6 +18,8 @@
 
 /* In dark mode, force Storybook docs to use light mode so they're legible. */
 .dark {
+    color-scheme: dark;
+
     [id='storybook-docs'] {
         color-scheme: light;
     }
