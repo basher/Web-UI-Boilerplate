@@ -14,6 +14,10 @@ on:
   # Allows workflow to be run manually from the Actions tab on GitHub.
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: ./ui
+
 jobs:
   chromatic:
     name: Run Chromatic
@@ -31,7 +35,6 @@ jobs:
           cache-dependency-path: 'ui/npm-shrinkwrap.json'
       - name: Install dependencies
         run: |
-          cd ui
           npm install
           npm run bundle-all-themes
       - name: Run Chromatic
