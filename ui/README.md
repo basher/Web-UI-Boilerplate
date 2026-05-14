@@ -107,6 +107,9 @@ Storybook has the following accessibility testing tools:
 
 > NOTE: There is a [Github issue for Vitest](https://github.com/storybookjs/storybook/issues/34613), and  another [issue for Storybook addon-a11y](https://github.com/storybookjs/storybook/issues/34647).
 
+### Visual regression testing
+- Using the [Chromatic](https://storybook.js.org/docs/writing-tests/visual-testing) Storybook addon.
+
 ## Custom Elements Manifest
 - The `npm start` command has been modified to include `cem-analyze`.
 - This results in updates to the manifest JSON file whenever the web components' TypeScript code is changed.

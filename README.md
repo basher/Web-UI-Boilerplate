@@ -46,14 +46,16 @@ In order to use the bundled CSS/JavaScript in `localhost`, both `npm run start:t
 However, these can be concatenated together into a single background task so that the Storybook application doesn't need to be actually loaded in the browser.
 
 ## Build and publish Storybook
+### Locally
 From `ui` directory:
 - `npm run publish-storybook` - Runs Parcel build (using the `default` theme) to bundle CSS/JS in the `public` folder, which then gets copied to `storybook-static` folder.
 - `npx http-server ./storybook-static` - Test production build on local server.
 
 > NOTE: ALL themes are actually bundled, but only the default theme is rendered in Storybook when it first loads.
 
-### Publish using GitHub pages
-- Uses the workflow defined in `.github/workflows/static.yml`.
+### Publish live using GitHub Pages & Chromatic
+> NOTE: The `npm run chromatic` NPM script will only work in the CI/CD pipeline because it needs a `--project-token` which is only defined in the Github repo settings.
+- CI/CD workflow is defined in `.github/workflows/chromatic.yml`.
 - Live Storybook URL = https://basher.github.io/Web-UI-Boilerplate/
 
 ## Complete UI setup instructions
