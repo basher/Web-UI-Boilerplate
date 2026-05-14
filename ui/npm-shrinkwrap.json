@@ -1,12 +1,12 @@
 {
   "name": "web-ui-boilerplate",
-  "version": "6.6.6",
+  "version": "6.7.0",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "web-ui-boilerplate",
-      "version": "6.6.6",
+      "version": "6.7.0",
       "license": "ISC",
       "dependencies": {
         "invokers-polyfill": "^0.5.7",
@@ -14,6 +14,7 @@
       },
       "devDependencies": {
         "@babel/eslint-parser": "^7.28.5",
+        "@chromatic-com/storybook": "^5.2.1",
         "@custom-elements-manifest/analyzer": "^0.11.0",
         "@etchteam/storybook-addon-status": "^8.0.0",
         "@storybook/addon-a11y": "^10.3.5",
@@ -27,6 +28,7 @@
         "@vitest/browser-playwright": "^4.1.5",
         "@vitest/coverage-v8": "^4.1.5",
         "@vueless/storybook-dark-mode": "^10.0.4",
+        "chromatic": "^16.10.0",
         "colors": "^1.4.0",
         "cross-env": "^7.0.3",
         "cross-var-no-babel": "^1.2.0",
@@ -416,6 +418,55 @@
       "license": "MIT",
       "dependencies": {
         "@keyv/serialize": "^1.1.1"
+      }
+    },
+    "node_modules/@chromatic-com/storybook": {
+      "version": "5.2.1",
+      "resolved": "https://registry.npmjs.org/@chromatic-com/storybook/-/storybook-5.2.1.tgz",
+      "integrity": "sha512-z6I7NJk/0VngA64y5TNYaB4Hc2X8+90n4op6lBt9PvWk5TmIlFLDqdX33rlrwbNRkkYijVgA/wO04rVYXi5Mlg==",
+      "dev": true,
+      "license": "MIT",
+      "dependencies": {
+        "@neoconfetti/react": "^1.0.0",
+        "chromatic": "16.10.0",
+        "jsonfile": "^6.1.0",
+        "strip-ansi": "^7.1.0"
+      },
+      "engines": {
+        "node": ">=20.0.0",
+        "yarn": ">=1.22.18"
+      },
+      "peerDependencies": {
+        "storybook": "^0.0.0-0 || ^10.1.0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0 || ^10.4.0-0 || ^10.5.0-0 || ^10.6.0-0"
+      }
+    },
+    "node_modules/@chromatic-com/storybook/node_modules/ansi-regex": {
+      "version": "6.2.2",
+      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz",
+      "integrity": "sha512-Bq3SmSpyFHaWjPk8If9yc6svM8c56dB5BAtW4Qbw5jHTwwXXcTLoRMkpDJp6VL0XzlWaCHTXrkFURMYmD0sLqg==",
+      "dev": true,
+      "license": "MIT",
+      "engines": {
+        "node": ">=12"
+      },
+      "funding": {
+        "url": "https://github.com/chalk/ansi-regex?sponsor=1"
+      }
+    },
+    "node_modules/@chromatic-com/storybook/node_modules/strip-ansi": {
+      "version": "7.2.0",
+      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.2.0.tgz",
+      "integrity": "sha512-yDPMNjp4WyfYBkHnjIRLfca1i6KMyGCtsVgoKe/z1+6vukgaENdgGBZt+ZmKPc4gavvEZ5OgHfHdrazhgNyG7w==",
+      "dev": true,
+      "license": "MIT",
+      "dependencies": {
+        "ansi-regex": "^6.2.2"
+      },
+      "engines": {
+        "node": ">=12"
+      },
+      "funding": {
+        "url": "https://github.com/chalk/strip-ansi?sponsor=1"
       }
     },
     "node_modules/@csstools/css-parser-algorithms": {
@@ -1507,6 +1558,13 @@
         "@emnapi/core": "^1.7.1",
         "@emnapi/runtime": "^1.7.1"
       }
+    },
+    "node_modules/@neoconfetti/react": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/@neoconfetti/react/-/react-1.0.0.tgz",
+      "integrity": "sha512-klcSooChXXOzIm+SE5IISIAn3bYzYfPjbX7D7HoqZL84oAfgREeSg5vSIaSFH+DaGzzvImTyWe1OyrJ67vik4A==",
+      "dev": true,
+      "license": "MIT"
     },
     "node_modules/@nicolo-ribaudo/eslint-scope-5-internals": {
       "version": "5.1.1-v1",
@@ -6272,6 +6330,50 @@
         "fsevents": "~2.3.2"
       }
     },
+    "node_modules/chromatic": {
+      "version": "16.10.0",
+      "resolved": "https://registry.npmjs.org/chromatic/-/chromatic-16.10.0.tgz",
+      "integrity": "sha512-nFsztmnu7rFiGafUJgXvLUNpqmRylz92eNvzBoJNTKKQj4EQUyxznwnfpf1dTs7hXtWD8JwcH92jADydaHA1sw==",
+      "dev": true,
+      "license": "MIT",
+      "dependencies": {
+        "semver": "^7.3.5"
+      },
+      "bin": {
+        "chroma": "dist/bin.cjs",
+        "chromatic": "dist/bin.cjs",
+        "chromatic-cli": "dist/bin.cjs"
+      },
+      "peerDependencies": {
+        "@chromatic-com/cypress": "^0.*.* || ^1.0.0",
+        "@chromatic-com/playwright": "^0.*.* || ^1.0.0",
+        "@chromatic-com/vitest": "^0.*.* || ^1.0.0"
+      },
+      "peerDependenciesMeta": {
+        "@chromatic-com/cypress": {
+          "optional": true
+        },
+        "@chromatic-com/playwright": {
+          "optional": true
+        },
+        "@chromatic-com/vitest": {
+          "optional": true
+        }
+      }
+    },
+    "node_modules/chromatic/node_modules/semver": {
+      "version": "7.8.0",
+      "resolved": "https://registry.npmjs.org/semver/-/semver-7.8.0.tgz",
+      "integrity": "sha512-AcM7dV/5ul4EekoQ29Agm5vri8JNqRyj39o0qpX6vDF2GZrtutZl5RwgD1XnZjiTAfncsJhMI48QQH3sN87YNA==",
+      "dev": true,
+      "license": "ISC",
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "engines": {
+        "node": ">=10"
+      }
+    },
     "node_modules/chrome-trace-event": {
       "version": "1.0.4",
       "resolved": "https://registry.npmjs.org/chrome-trace-event/-/chrome-trace-event-1.0.4.tgz",
@@ -7856,9 +7958,9 @@
       "license": "MIT"
     },
     "node_modules/fast-uri": {
-      "version": "3.1.0",
-      "resolved": "https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.0.tgz",
-      "integrity": "sha512-iPeeDKJSWf4IEOasVVrknXpaBV0IApz/gp7S2bb7Z4Lljbl2MGJRqInZiUrQwV16cpzw/D3S5j5Julj/gT52AA==",
+      "version": "3.1.2",
+      "resolved": "https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.2.tgz",
+      "integrity": "sha512-rVjf7ArG3LTk+FS6Yw81V1DLuZl1bRbNrev6Tmd/9RaroeeRRJhAt7jg/6YFxbvAQXUCavSoZhPPj6oOx+5KjQ==",
       "dev": true,
       "funding": [
         {

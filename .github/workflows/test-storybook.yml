@@ -4,7 +4,7 @@ name: Test Storybook using GitHub Pages
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["Build and Publish Storybook using GitHub Pages"]
+    workflows: ["Build and Publish Storybook using GitHub Pages", "Chromatic"]
     types:
       - completed
 

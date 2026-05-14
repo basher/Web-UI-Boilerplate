@@ -24,6 +24,7 @@ const config = {
         '@vueless/storybook-dark-mode',
         '@storybook/addon-vitest',
         'storybook-design-token',
+        '@chromatic-com/storybook',
     ],
 
     framework: {

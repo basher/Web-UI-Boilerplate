@@ -2,7 +2,7 @@
   "name": "web-ui-boilerplate",
   "description": "UI boilerplate for websites & web apps using vanilla HTML/CSS/JavaScript, powered by Storybook, bundled by Parcel.",
   "author": "basher",
-  "version": "6.6.6",
+  "version": "6.7.0",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "build-storybook": "storybook build",
     "publish-storybook": "npm install && npm run bundle-all-themes && npm run build-storybook",
     "test-storybook": "vitest --project=storybook --run --no-cache",
+    "chromatic": "npm install && npm run bundle-all-themes && npx chromatic",
     "prepare": "cd .. && husky install ui/.husky",
     "cem-analyze": "cem analyze --config custom-elements-manifest.config.mjs"
   },
@@ -39,6 +40,7 @@
   ],
   "devDependencies": {
     "@babel/eslint-parser": "^7.28.5",
+    "@chromatic-com/storybook": "^5.2.1",
     "@custom-elements-manifest/analyzer": "^0.11.0",
     "@etchteam/storybook-addon-status": "^8.0.0",
     "@storybook/addon-a11y": "^10.3.5",
@@ -52,6 +54,7 @@
     "@vitest/browser-playwright": "^4.1.5",
     "@vitest/coverage-v8": "^4.1.5",
     "@vueless/storybook-dark-mode": "^10.0.4",
+    "chromatic": "^16.10.0",
     "colors": "^1.4.0",
     "cross-env": "^7.0.3",
     "cross-var-no-babel": "^1.2.0",
