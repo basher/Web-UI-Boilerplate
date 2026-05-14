@@ -1,4 +1,5 @@
-name: Test Storybook using GitHub Pages
+## Using Vitest
+name: Test Storybook
 
 # Only run when a deployment status is emitted
 on:
