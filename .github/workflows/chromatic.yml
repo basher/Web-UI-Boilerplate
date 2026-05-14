@@ -1,0 +1,40 @@
+name: "Chromatic"
+
+on:
+  push:
+    branches: [ 'master' ]
+    # Trigger the action only when files change in the folders defined here.
+    paths: [
+      'ui/stories/**',
+      'ui/src/**',
+      'ui/public/**',
+      'ui/.storybook/**',
+      'ui/scripts/**'
+    ]
+  # Allows workflow to be run manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+jobs:
+  chromatic:
+    name: Run Chromatic
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24.14.0
+          # Add dependency caching
+          cache: 'npm'
+          cache-dependency-path: 'ui/npm-shrinkwrap.json'
+      - name: Install dependencies
+        run: |
+          cd ui
+          npm install
+          npm run bundle-all-themes
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
