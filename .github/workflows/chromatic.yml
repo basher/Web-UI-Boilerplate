@@ -14,14 +14,13 @@ on:
   # Allows workflow to be run manually from the Actions tab on GitHub.
   workflow_dispatch:
 
-defaults:
-  run:
-    working-directory: ./ui
-
 jobs:
   chromatic:
     name: Run Chromatic
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./ui
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
