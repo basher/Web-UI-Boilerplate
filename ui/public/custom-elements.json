@@ -356,6 +356,14 @@
               "privacy": "private"
             },
             {
+              "kind": "field",
+              "name": "theme",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private"
+            },
+            {
               "kind": "method",
               "name": "handleEvent",
               "privacy": "public",
@@ -365,6 +373,44 @@
                 }
               },
               "description": "Handle constructor() event listeners."
+            },
+            {
+              "kind": "method",
+              "name": "getTheme",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "storedTheme",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Get color scheme from localStorage."
+            },
+            {
+              "kind": "method",
+              "name": "setTheme",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "changedTheme",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Set color scheme using localStorage."
             }
           ],
           "superclass": {
