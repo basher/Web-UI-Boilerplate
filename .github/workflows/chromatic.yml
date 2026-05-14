@@ -18,9 +18,6 @@ jobs:
   chromatic:
     name: Run Chromatic
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./ui
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
@@ -34,9 +31,11 @@ jobs:
           cache-dependency-path: 'ui/npm-shrinkwrap.json'
       - name: Install dependencies
         run: |
+          cd ui
           npm install
           npm run bundle-all-themes
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          working-directory: ./ui
