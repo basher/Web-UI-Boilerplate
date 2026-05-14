@@ -4,7 +4,7 @@ name: Test Storybook using GitHub Pages
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["Build and Publish Storybook using GitHub Pages", "Chromatic"]
+    workflows: ["Chromatic"]
     types:
       - completed
 
@@ -17,12 +17,12 @@ jobs:
       image: mcr.microsoft.com/playwright:v1.59.1-noble
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24.14.0
           # Add dependency caching
           cache: 'npm'
           cache-dependency-path: 'ui/npm-shrinkwrap.json'

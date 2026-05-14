@@ -1,3 +1,4 @@
+# Build and Publish Storybook using GitHub Pages & Chromatic
 name: "Chromatic"
 
 on:
