@@ -46,8 +46,21 @@ import { DesignTokenDocBlock } from 'storybook-design-token';
     --webui-color-primary-100: var(--color-brand-100);
 }
 ```
+
+## Using `color-mix()` to mix colours
+- For example, `:visited` links are defined with [color-mix()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix):
+```
+:root {
+    --webui-visited-color: color-mix(
+        in oklch,
+        var(--color-accent-blue-500) 80%,
+        var(--webui-color-neutral-900) 20%
+    );
+}
+```
 ## Browser compatibility
 <baseline-status featureId="oklab"></baseline-status>
 <baseline-status featureId="relative-color"></baseline-status>
 <baseline-status featureId="color-scheme"></baseline-status>
 <baseline-status featureId="light-dark"></baseline-status>
+<baseline-status featureId="color-mix"></baseline-status>

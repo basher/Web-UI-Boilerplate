@@ -118,6 +118,10 @@ a:not([class]) {
     &:hover {
         text-decoration: none;
     }
+
+    &:visited {
+        color: var(--webui-visited-color);
+    }
 }
 
 :where(sub, sup) {

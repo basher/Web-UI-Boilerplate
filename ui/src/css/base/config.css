@@ -21,9 +21,14 @@ Config settings.
     --webui-focus-shadow: var(--focus-shadow);
     --webui-focus-outline: var(--focus-outline);
 
-    /* :hover and :active */
+    /* :hover, :active and :visited */
     --webui-hover-opacity: var(--hover-opacity);
     --webui-active-scale: var(--active-scale);
+    --webui-visited-color: color-mix(
+        in oklch,
+        var(--color-accent-blue-500) 80%,
+        var(--webui-color-neutral-900) 20%
+    );
 
     /* Borders. */
     --webui-border-width-s: var(--border-width-s);
