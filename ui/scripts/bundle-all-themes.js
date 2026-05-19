@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * Bundles all themes for use by Storybook.
  *
@@ -16,4 +17,5 @@ for (const [key] of Object.entries(themes)) {
 strNpm = strNpm.substring(0, strNpm.lastIndexOf('&&') - 1);
 
 // Console logging 'stdout' shows postbuild script logs.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 exec(strNpm, (error, stdout, stderr) => console.log(`STDOUT: ${stdout}`));

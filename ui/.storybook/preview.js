@@ -33,11 +33,19 @@ const preview = {
             context: 'body',
             config: {},
             options: {
-                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice', 'wcag22a', 'wcag22aa'],
+                runOnly: [
+                    'wcag2a',
+                    'wcag2aa',
+                    'wcag21a',
+                    'wcag21aa',
+                    'best-practice',
+                    'wcag22a',
+                    'wcag22aa',
+                ],
                 // TODO: Temporarily disable the following rules. CLI wrongly reports errors, whereas Storybook UI passes. See https://github.com/storybookjs/storybook/issues/34647
                 rules: {
                     'target-size': { enabled: false },
-                    'region': { enabled: false },
+                    region: { enabled: false },
                 },
             },
         },
@@ -68,6 +76,7 @@ const preview = {
     },
 
     decorators: [
+        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
         (Story, context) => {
             const stylesheet = `build/ui/${context.globals.theme}/css/index.css`;
 
@@ -84,7 +93,7 @@ const preview = {
     // Configure 'storybook-design-token' addon.
     designToken: {
         disable: true,
-    }
+    },
 };
 
 export default preview;

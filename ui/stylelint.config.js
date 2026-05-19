@@ -1,4 +1,5 @@
-{
+/** @type {import('stylelint').Config} */
+export default {
     "extends": [
         "stylelint-config-standard",
         "stylelint-prettier/recommended"
@@ -47,4 +48,4 @@
         "color-function-notation": "modern",
         "color-no-hex": true
     }
-}
+};

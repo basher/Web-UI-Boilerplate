@@ -62,5 +62,5 @@ From `ui` directory:
 - Please see the `README` in `ui` directory.
 
 ## Additional required files in project root directory
-- `.vscode/settings.json` defines the correct working directory for `.eslintignore` and `.stylelintrc`.
+- `.vscode/settings.json` defines the correct working directory for `Eslint` and `Stylelint`.
 - `.editorconfig` ensures all code uses the same indentation.

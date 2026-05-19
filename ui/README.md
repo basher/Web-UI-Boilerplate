@@ -26,15 +26,15 @@ This boilerplate provides lint configurations for both JavaScript and CSS.
     - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint).
     - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
 - Where appropriate, additional NPM packages have been installed according to the `parser`, `extends`, `plugins` and `rules` fields in these configs:
-    - `.eslintrc.cjs`
-    - `.stylelintrc`
-    - `.prettierrc`
+    - `eslint.config.js`
+    - `stylelint.config.js`
+    - `prettier.config.js`
 
 > NOTES:
 > - `Eslint` errors will only be shown in VSCode if you open VSCode from the project root directory, not a parent directory.
-> - In order for `.eslintignore` to work correctly, there's a custom `.vscode/settings.json` in the root directory which defines the correct working directory (i.e. `ui` sub-directory).
-> - `Postcss` has been installed as a `devDependency`, otherwise `stylelint` throws type errors due to its own postcss dependencies.
-> - The VSCode `stylelint` extension introduced changes that break the `stylelint v14` NPM package. To fix this, the following settings have been added in the custom VSCode `settings.json` file:
+> - In order for `Eslint` to work correctly, there's a custom `.vscode/settings.json` in the root directory which defines the correct working directory (i.e. `ui` sub-directory).
+> - `Postcss` has been installed as a `devDependency`, otherwise `Stylelint` throws type errors due to its own postcss dependencies.
+> - The VSCode `Stylelint` extension introduced changes that break the `Stylelint v14` NPM package. To fix this, the following settings have been added in the custom VSCode `settings.json` file:
 > ```
 > "css.validate": false,
 > "stylelint.enable": true,
@@ -72,9 +72,11 @@ Configured using `husky` to run `lint-staged` and `vitest` to ensure no linting 
     - `@typescript-eslint/parser` is also needed, due to TypeScript usage.
     - Parcel leverages the `browserslist` config in `package.json` to determine what level of transpilation to perform.
 
+> NOTE: `Eslint v10` is not currently supported by a stable version of `@babel/eslint-parser`, so the `rc.2` version has been installed instead. See [Github issue](https://github.com/babel/babel/issues/17951).
+
 ### TypeScript
 - Parcel [automatically transpiles TypeScript](https://parceljs.org/languages/typescript/).
-    - The `typescript` NPM package is required for `ESLint` and `Prettier` to work together.
+    - The `Typescript` NPM package is required for `ESLint` and `Prettier` to work together.
     - A `tsconfig.json` is needed, even if it's empty. Otherwise, TypeScript errors/warnings are not displayed in the editor.
 
 ### Polyfills
