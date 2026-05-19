@@ -73,12 +73,12 @@ a {
 }
 
 :where(table, figure, pre) {
+    break-inside: avoid;
     margin-block-end: 10pt;
-    page-break-inside: avoid;
 }
 
 :where(h1, h2, h3, h4, h5, h6) {
-    page-break-after: avoid;
+    break-after: avoid;
 }
 
 p {

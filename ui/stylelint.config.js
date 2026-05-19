@@ -1,51 +1,42 @@
 /** @type {import('stylelint').Config} */
 export default {
-    "extends": [
-        "stylelint-config-standard",
-        "stylelint-prettier/recommended"
-    ],
-    "plugins": [
-        "stylelint-prettier",
-        "stylelint-order"
-    ],
-    "rules": {
-        "declaration-no-important": true,
-        "max-nesting-depth": 3,
-        "no-invalid-position-at-import-rule": null,
-        "order/order": [
-            "custom-properties",
-            "dollar-variables",
-            "at-rules",
-            "declarations",
-            "rules"
+    extends: ['stylelint-config-standard', 'stylelint-prettier/recommended'],
+    plugins: ['stylelint-prettier', 'stylelint-order'],
+    rules: {
+        'declaration-no-important': true,
+        'max-nesting-depth': 3,
+        'no-invalid-position-at-import-rule': null,
+        'order/order': [
+            'custom-properties',
+            'dollar-variables',
+            'at-rules',
+            'declarations',
+            'rules',
         ],
-        "order/properties-alphabetical-order": [
-            true,
-            { "severity": "warning" }
-        ],
-        "prettier/prettier": [
+        'order/properties-alphabetical-order': [true, { severity: 'warning' }],
+        'prettier/prettier': [
             true,
             {
-                "endOfLine": "auto"
-            }
+                endOfLine: 'auto',
+            },
         ],
-        "selector-max-id": 0,
-        "comment-empty-line-before": [
-            "always",
+        'selector-max-id': 0,
+        'comment-empty-line-before': [
+            'always',
             {
-                "ignore": ["after-comment", "stylelint-commands"],
-                "except": ["first-nested"]
-            }
+                ignore: ['after-comment', 'stylelint-commands'],
+                except: ['first-nested'],
+            },
         ],
-        "import-notation": "string",
-        "hue-degree-notation": "number",
-        "selector-class-pattern": null,
-        "value-keyword-case": null,
-        "custom-property-pattern": null,
-        "declaration-block-no-redundant-longhand-properties": null,
-        "selector-not-notation": null,
-        "function-disallowed-list": ["rgba", "hsla", "rgb", "hsl"],
-        "color-function-notation": "modern",
-        "color-no-hex": true
-    }
+        'import-notation': 'string',
+        'hue-degree-notation': 'number',
+        'selector-class-pattern': null,
+        'value-keyword-case': null,
+        'custom-property-pattern': null,
+        'declaration-block-no-redundant-longhand-properties': null,
+        'selector-not-notation': null,
+        'function-disallowed-list': ['rgba', 'hsla', 'rgb', 'hsl'],
+        'color-function-notation': 'modern',
+        'color-no-hex': true,
+    },
 };
