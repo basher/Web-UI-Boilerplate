@@ -1,5 +1,5 @@
-.search {
-    :where(.form, .form__field) {
+search {
+    :is(.form, .form__field) {
         align-items: center;
         flex-direction: row;
     }

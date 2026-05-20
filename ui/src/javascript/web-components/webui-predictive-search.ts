@@ -11,14 +11,14 @@ import searchResults from '../templates/search-results';
 class WebUIPredictiveSearch extends HTMLElement {
     private searchForm: HTMLFormElement | null;
     private searchInput: HTMLInputElement | null;
-    private liveRegion: HTMLParagraphElement | null;
+    private liveRegion: HTMLOutputElement | null;
 
     constructor() {
         super();
 
-        this.searchForm = this.querySelector('[role="search"]');
+        this.searchForm = this.querySelector('form');
         this.searchInput = this.querySelector('[type="search"]');
-        this.liveRegion = this.querySelector('[aria-live]');
+        this.liveRegion = this.querySelector('output');
 
         if (!this.dataset.fetchUrl || !this.searchForm || !this.searchInput)
             return;

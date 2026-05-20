@@ -1,6 +1,6 @@
 export const SearchHtml = () => /*html*/ `
-<div class="search">
-    <form class="form flex" role="search">
+<search>
+    <form class="form flex">
         <div class="form__field flex">
             <label for="search" class="label">Search</label>
             <input
@@ -15,12 +15,12 @@ export const SearchHtml = () => /*html*/ `
             Submit
         </button>
     </form>
-</div>
+</search>
 `;
 
 export const SearchDatalistHtml = () => /*html*/ `
-<div class="search">
-    <form class="form flex" role="search">
+<search>
+    <form class="form flex">
         <div class="form__field flex">
             <label for="search" class="label">Search</label>
             <input
@@ -47,5 +47,5 @@ export const SearchDatalistHtml = () => /*html*/ `
             Submit
         </button>
     </form>
-</div>
+</search>
 `;
