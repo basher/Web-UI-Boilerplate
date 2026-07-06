@@ -31,5 +31,14 @@ const config = {
         name: '@storybook/html-vite',
         options: {},
     },
+
+    // Load CSS/JS that Parcel has bundled, using environment variables.
+    previewHead: (head) => `
+        ${head}
+        ${`
+            <link href="${process.env.STORYBOOK_CSS_PATH}" rel="stylesheet" />
+            <script defer type="module" src="${process.env.STORYBOOK_JS_PATH}"></script>
+            `}
+    `,
 };
 export default config;
