@@ -41,8 +41,8 @@ From `ui` directory:
 - The `<link>` and `<script>` tags in `ui/.storybook/main.js` use placeholders, which reference environment variables defined in `ui/.env` files:
 
 ```
-<link href="%STORYBOOK_CSS_PATH%" rel="stylesheet" />
-<script defer src="%STORYBOOK_JS_PATH%"></script>
+<link href="${process.env.STORYBOOK_CSS_PATH}" rel="stylesheet" />
+<script defer type="module" src="${process.env.STORYBOOK_JS_PATH}"></script>
 ```
 
 ### DEVELOPMENT
