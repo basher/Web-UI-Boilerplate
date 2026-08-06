@@ -42,7 +42,7 @@ const preview = {
                     'wcag22a',
                     'wcag22aa',
                 ],
-                // TODO: Temporarily disable the following rules. CLI wrongly reports errors, whereas Storybook UI passes. See https://github.com/storybookjs/storybook/issues/34647
+                // TODO: Temporarily disable the following rules. CLI wrongly reports errors, whereas Storybook UI passes. See https://github.com/storybookjs/storybook/issues/34647. Need to bump Storybook + Vitest to latest versions to see if this is fixed.
                 rules: {
                     'target-size': { enabled: false },
                     region: { enabled: false },
