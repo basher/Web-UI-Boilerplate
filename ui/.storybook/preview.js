@@ -83,7 +83,9 @@ const preview = {
             // Only include theme CSS when running in published Storybook, using Vite environment variables.
             const linkCSS =
                 import.meta.env.MODE === 'production'
-                    ? `<link rel="stylesheet" href=${stylesheet} />`
+                    ? `
+<!-- Link correct CSS when Storybook theme switching addon is clicked. -->
+<link rel="stylesheet" href=${stylesheet} />`
                     : '';
 
             return `${linkCSS}${Story()}`;
