@@ -8,7 +8,10 @@ import * as ColorSchemeToggle from './ColorSchemeToggle.stories';
 - See this [CSS Tricks article](https://css-tricks.com/come-to-the-light-dark-side/) for a detailed explanation.
 - The selected color scheme will **not** persist across page reloads. Use the [`<webui-color-scheme-toggle>`](/docs/web-components-or-custom-elements-webui-color-scheme-toggle--docs) Web Component for this.
 
-> NOTE: To see `dark mode` in action, view the component story instead of this docs page, because Storybook docs have a forced `light mode` to ensure legibility.
+> NOTE:
+> - To see `dark mode` working properly, **view the component story instead of this docs page**.
+> - Storybook docs have a forced `light mode` to ensure legibility. This is defined in `./ui/.storybook/preview.js`.
+> - See bug https://github.com/storybookjs/storybook/issues/28849.
 
 ## Using `<select>`
 <Canvas of={ColorSchemeToggle.ColorSchemeToggleSelect} />

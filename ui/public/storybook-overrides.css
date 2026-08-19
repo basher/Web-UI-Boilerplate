@@ -15,36 +15,3 @@
     /* stylelint-disable-next-line declaration-no-important */
     color: inherit !important;
 }
-
-/*
-    In dark mode (either via Storybook toolbar button or user's browser preference):
-    1. Force Storybook docs pages to always use light color scheme so they're legible.
-    2. Ensure all stories use dark color scheme, except color scheme toggle component (which sets its own color scheme).
-*/
-.dark {
-    /* 1 */
-    [id='storybook-docs'] {
-        color-scheme: light;
-    }
-
-    /* 2 */
-    &:not(:has(.color-scheme-toggle)) {
-        color-scheme: dark;
-    }
-
-    [data-story-block='true'],
-    baseline-status {
-        color: initial;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    [id='storybook-docs'] {
-        color-scheme: light;
-    }
-
-    [data-story-block='true'],
-    baseline-status {
-        color: initial;
-    }
-}

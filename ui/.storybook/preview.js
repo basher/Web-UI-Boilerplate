@@ -18,6 +18,11 @@ const preview = {
             },
         },
 
+        // Force docs to always use light theme. See bug https://github.com/storybookjs/storybook/issues/28849.
+        docs: {
+            theme: themes.light,
+        },
+
         darkMode: {
             classTarget: 'html',
             stylePreview: true,
