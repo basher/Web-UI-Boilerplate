@@ -5,6 +5,7 @@
 .form__field {
     --flex-gap: var(--webui-gutter-xs);
 
+    align-items: flex-start; /* So field-sizing works in a flex context. */
     flex-direction: column;
 
     /* Native HTML5 validation, and errors rendered directly in HTML, or via JavaScript. */

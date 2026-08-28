@@ -4,6 +4,7 @@ import * as Input from './Input.stories';
 <Meta of={Input} />
 
 ## Text input
+- The CSS [field-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/field-sizing) property is used to set the width of the input based on its content.
 <Canvas of={Input.InputText} />
 
 ## Email input
@@ -13,3 +14,6 @@ import * as Input from './Input.stories';
 - Please note that the REGEX `pattern` is not accurate enough for production use. In reality, use the same pattern as the back-end validation.
 
 <Canvas of={Input.InputTel} />
+
+## Browser compatibility
+<baseline-status featureId="field-sizing"></baseline-status>

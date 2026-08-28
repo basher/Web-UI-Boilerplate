@@ -1,3 +1,8 @@
 .input {
-    /* Basic component styles are in "form.css". */
+    field-sizing: content;
+    min-inline-size: 20ch;
+
+    &[autocomplete^='bday'] {
+        min-inline-size: 10ch;
+    }
 }
