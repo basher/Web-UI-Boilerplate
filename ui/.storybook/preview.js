@@ -21,6 +21,9 @@ const preview = {
         // Force docs to always use light theme. See bug https://github.com/storybookjs/storybook/issues/28849.
         docs: {
             theme: themes.light,
+            source: {
+                excludeDecorators: true,
+            },
         },
 
         darkMode: {
@@ -89,7 +92,6 @@ const preview = {
             const linkCSS =
                 import.meta.env.MODE === 'production'
                     ? `
-<!-- Link correct CSS when Storybook theme switching addon is clicked. -->
 <link rel="stylesheet" href=${stylesheet} />`
                     : '';
 

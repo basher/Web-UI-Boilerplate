@@ -10,10 +10,8 @@ import * as Accordion from './Accordion.stories';
 <Canvas of={Accordion.Accordion} />
 
 ## Accessibility considerations
-- There are several articles cautioning against using `<details>`|`<summary>` for accordions. For example:
-    - [Scott O'Hara](https://www.scottohara.me//blog/2022/09/12/details-summary.html).
-    - [Dave Rupert](https://daverupert.com/2019/12/why-details-is-not-an-accordion/).
-- An alternative approach is to use the [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) Web Component.
+- This [article by Scott O'Hara](https://www.scottohara.me//blog/2022/09/12/details-summary.html) gives guidance on using `<details>` &amp; `<summary>` elements, as well as alternative approaches such as [ARIA disclosure widgets](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/).
+- This Storybook includes a [`<webui-disclosure>`](/docs/web-components-or-custom-elements-webui-disclosure--docs) Web Component, which uses the ARIA disclosure pattern.
 
 ## Browser compatibility
 <baseline-status featureId="details-content"></baseline-status>
