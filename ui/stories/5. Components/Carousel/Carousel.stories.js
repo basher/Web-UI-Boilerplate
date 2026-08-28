@@ -23,7 +23,7 @@ export default {
                 }
             }
         </style>
-        ${story()}</div>
+        ${story()}
     `],
 };
 

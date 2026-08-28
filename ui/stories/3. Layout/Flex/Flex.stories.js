@@ -63,7 +63,7 @@ export default {
                 padding: 1rem;
             }
         </style>
-        ${story()}</div>
+        ${story()}
     `],
 };
 export const Flex = {

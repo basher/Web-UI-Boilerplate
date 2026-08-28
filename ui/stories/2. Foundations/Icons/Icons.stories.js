@@ -25,7 +25,7 @@ export default {
                 grid-template-columns: repeat(auto-fit, 50px);
             }
         </style>
-        ${story()}</div>
+        ${story()}
     `],
 };
 

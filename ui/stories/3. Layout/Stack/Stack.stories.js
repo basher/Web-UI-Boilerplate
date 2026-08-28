@@ -26,7 +26,7 @@ export default {
                 border: 1px dashed hsl(51, 100%, 45%);
             }
         </style>
-        ${story()}</div>
+        ${story()}
     `],
 };
 

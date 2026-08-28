@@ -39,7 +39,7 @@ export default {
                 padding: 0;
             }
         </style>
-        ${story()}</div>
+        ${story()}
     `],
 };
 

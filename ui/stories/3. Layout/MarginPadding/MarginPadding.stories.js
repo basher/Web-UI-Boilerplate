@@ -58,7 +58,7 @@ export default {
                 margin: 0;
             }
         </style>
-        ${story()}</div>
+        ${story()}
     `],
 };
 
