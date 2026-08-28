@@ -1,18 +1,4 @@
-const style = /*html*/ `
-<style>
-    .carousel__slide {
-        background: hsl(51, 100%, 45%, 15%);
-        border: 1px dashed hsl(51, 100%, 45%);
-
-        > * {
-            padding: 2rem;
-        }
-    }
-</style>
-`;
-
 export const WebUICarouselHtml = (args) => /*html*/ `
-${style}
 <webui-carousel
     ${args.showSlideCount ? 'data-show-slide-count' : ''}
     ${args.showSlideCountPips ? 'data-show-slide-count-pips' : ''}

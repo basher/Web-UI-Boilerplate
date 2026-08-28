@@ -1,17 +1,4 @@
-const style = /*html*/ `
-<style>
-    .sb-show-main.sb-main-padded {
-        padding: 0;
-    }
-    .wrapper:not([class*="skin"]):not(.sbdocs-wrapper) {
-        background: hsl(51, 100%, 45%, 15%);
-        border: 1px dashed hsl(51, 100%, 45%);
-    }
-</style>
-`;
-
 export const WrapperHtml = (args) => /*html*/ `
-${style}
 <div ${args.turnParentIntoStack ? 'class="stack"' : ''}>
     <div class="wrapper">
         Wrapper (default)

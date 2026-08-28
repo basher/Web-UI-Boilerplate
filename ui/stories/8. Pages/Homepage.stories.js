@@ -8,6 +8,20 @@ export default {
         },
     },
     tags: ['pages'],
+    decorators: [(story) => /*html*/ `
+        <style>
+            .sb-show-main.sb-main-padded {
+                padding: 0;
+            }
+
+            header,
+            footer {
+                background: hsl(51, 100%, 45%, 15%);
+                border: 1px dashed hsl(51, 100%, 45%);
+            }
+        </style>
+        ${story()}</div>
+    `],
 };
 
 export const Homepage = {

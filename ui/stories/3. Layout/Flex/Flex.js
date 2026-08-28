@@ -1,15 +1,4 @@
-const style = /*html*/ `
-<style>
-    [class*='flex'] > * {
-        background: hsl(51, 100%, 45%, 15%);
-        border: 1px dashed hsl(51, 100%, 45%);
-        padding: 1rem;
-    }
-</style>
-`;
-
 export const FlexHtml = (args) => /*html*/ `
-${style}
 <div
     class="flex"
     ${args.alignItems ? `data-flex-align="${args.alignItems}"` : ''}

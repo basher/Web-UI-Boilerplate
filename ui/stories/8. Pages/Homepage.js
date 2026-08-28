@@ -1,19 +1,4 @@
-const style = /*html*/ `
-<style>
-    .sb-show-main.sb-main-padded {
-        padding: 0;
-    }
-
-    header,
-    footer {
-        background: hsl(51, 100%, 45%, 15%);
-        border: 1px dashed hsl(51, 100%, 45%);
-    }
-</style>
-`;
-
 export const HomepageHtml = () => /*html*/ `
-${style}
 <div class="page">
     <header class="header">
         <nav class="skiplinks" aria-label="skiplinks">

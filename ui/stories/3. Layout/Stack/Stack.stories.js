@@ -19,6 +19,15 @@ export default {
             },
         },
     },
+    decorators: [(story) => /*html*/ `
+        <style>
+            .stack > * {
+                background: hsl(51, 100%, 45%, 15%);
+                border: 1px dashed hsl(51, 100%, 45%);
+            }
+        </style>
+        ${story()}</div>
+    `],
 };
 
 export const Stack = {

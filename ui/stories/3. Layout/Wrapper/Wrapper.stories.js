@@ -57,6 +57,18 @@ export default {
             },
         },
     },
+    decorators: [(story) => /*html*/ `
+        <style>
+            .sb-show-main.sb-main-padded {
+                padding: 0;
+            }
+            .wrapper:not([class*="skin"]):not(.sbdocs-wrapper) {
+                background: hsl(51, 100%, 45%, 15%);
+                border: 1px dashed hsl(51, 100%, 45%);
+            }
+        </style>
+        ${story()}</div>
+    `],
 };
 
 export const Wrapper = {

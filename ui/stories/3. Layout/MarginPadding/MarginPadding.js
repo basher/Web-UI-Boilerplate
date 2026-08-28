@@ -1,19 +1,4 @@
-const style = /*html*/ `
-<style>
-    [class*="m-"],
-    [class*="p-"] {
-        background: hsl(51, 100%, 45%, 15%);
-        border: 1px dashed hsl(51, 100%, 45%);
-    }
-
-    [class*="m-"] ul {
-        margin: 0;
-    }
-</style>
-`;
-
 export const MarginPaddingHtml = (args) => /*html*/ `
-${style}
 <div class="\
  ${args.marginBlock && args.marginBlock !== '' ? `m-block-${args.marginBlock}` : 'm-block'}\
  ${args.marginInline && args.marginInline !== '' ? `m-inline-${args.marginInline}` : 'm-inline'}\

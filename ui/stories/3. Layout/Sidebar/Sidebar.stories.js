@@ -8,6 +8,15 @@ export default {
         },
     },
     tags: ['layout'],
+    decorators: [(story) => /*html*/ `
+        <style>
+            .sidebar {
+                background: hsl(51, 100%, 45%, 15%);
+                border: 1px dashed hsl(51, 100%, 45%);
+            }
+        </style>
+        ${story()}</div>
+    `],
 };
 
 export const Sidebar = {

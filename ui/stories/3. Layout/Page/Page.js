@@ -1,23 +1,4 @@
-const style = /*html*/ `
-<style>
-    .sb-show-main.sb-main-padded {
-        padding: 0;
-    }
-
-    header,
-    footer {
-        background: hsl(51, 100%, 45%, 15%);
-        border: 1px dashed hsl(51, 100%, 45%);
-    }
-
-    .page > * {
-        padding: 1rem;
-    }
-</style>
-`;
-
 export const PageHtml = () => /*html*/ `
-${style}
 <div class="page">
     <header class="header">
         Page <code>&lt;header&gt;</code>.<br>
@@ -34,7 +15,6 @@ ${style}
 `;
 
 export const PageSidebarHtml = () => /*html*/ `
-${style}
 <div class="page">
     <header class="header">
         Header.
@@ -58,7 +38,6 @@ ${style}
 `;
 
 export const PageSidebarRightHtml = () => /*html*/ `
-${style}
 <div class="page">
     <header class="header">
         Header.

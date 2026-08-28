@@ -1,13 +1,4 @@
-const style = /*html*/ `
-<style>
-    .grid {
-        grid-template-columns: repeat(auto-fit, 50px);
-    }
-</style>
-`;
-
 export const IconsHtml = (args) => /*html*/ `
-${style}
 <div class="grid">
 
     <svg

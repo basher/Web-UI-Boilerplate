@@ -19,6 +19,14 @@ export default {
             },
         },
     },
+    decorators: [(story) => /*html*/ `
+        <style>
+            .grid {
+                grid-template-columns: repeat(auto-fit, 50px);
+            }
+        </style>
+        ${story()}</div>
+    `],
 };
 
 export const Icons = {

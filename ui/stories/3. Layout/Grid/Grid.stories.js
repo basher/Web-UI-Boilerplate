@@ -25,6 +25,22 @@ export default {
             },
         },
     },
+    decorators: [(story) => /*html*/ `
+        <style>
+            [class*="grid"] > * {
+                background: hsl(51, 100%, 45%, 15%);
+                border: 1px dashed hsl(51, 100%, 45%);
+                padding: 1rem;
+            }
+
+            .grid-container > * {
+                background: none;
+                border: 0;
+                padding: 0;
+            }
+        </style>
+        ${story()}</div>
+    `],
 };
 
 export const Grid = {

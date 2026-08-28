@@ -59,7 +59,7 @@ Utilities.
 THEME overrides.
 ----------------------------------------------------------------------------
 */
-@import '_THEMES/theme1/index' layer(theme) screen;
+@import '_THEMES/default/index' layer(theme) screen;
 
 /*
 ----------------------------------------------------------------------------

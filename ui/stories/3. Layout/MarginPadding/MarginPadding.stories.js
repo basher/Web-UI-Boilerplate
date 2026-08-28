@@ -46,6 +46,20 @@ export default {
             },
         },
     },
+    decorators: [(story) => /*html*/ `
+        <style>
+            [class*="m-"],
+            [class*="p-"] {
+                background: hsl(51, 100%, 45%, 15%);
+                border: 1px dashed hsl(51, 100%, 45%);
+            }
+
+            [class*="m-"] ul {
+                margin: 0;
+            }
+        </style>
+        ${story()}</div>
+    `],
 };
 
 export const MarginPadding = {
