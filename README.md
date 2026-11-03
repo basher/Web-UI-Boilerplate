@@ -85,7 +85,7 @@ From `ui` directory:
 - Live Storybook URL = https://basher.github.io/Web-UI-Boilerplate/
 
 ## Complete UI setup instructions
-- Please see the `README` in `ui` directory.
+- Please see the [`README` in `ui` directory](https://github.com/basher/Web-UI-Boilerplate/blob/master/ui/README.md).
 
 ## Additional required files in project root directory
 - `.vscode/settings.json` defines the correct working directory for `Eslint` and `Stylelint`.
