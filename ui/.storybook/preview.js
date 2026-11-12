@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /** @type { import('@storybook/html-vite').Preview } */
 import { themes } from 'storybook/theming';
 
@@ -84,11 +85,9 @@ const preview = {
     },
 
     decorators: [
-        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
         (Story, context) => {
+            // Only include theme CSS when running in published Storybook, using Vite environment variables. Used by the theme switcher in the toolbar.
             const stylesheet = `build/ui/${context.globals.theme}/css/index.css`;
-
-            // Only include theme CSS when running in published Storybook, using Vite environment variables.
             const linkCSS =
                 import.meta.env.MODE === 'production'
                     ? `
